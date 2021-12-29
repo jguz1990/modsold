@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>media\models_X\Skinned\BackPacks\M_ShotgunShellBandolier.X</m_MaleModel>
+	<m_FemaleModel>media\models_X\Skinned\BackPacks\F_ShotgunShellBandolier.X</m_FemaleModel>
+	<m_GUID>7a83282c-7a1c-4afe-9220-ff5e53472ede</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Spine1</m_AttachBone>
+	<textureChoices>clothes\bag\ShotgunShellBandolier</textureChoices>
+</clothingItem>

@@ -1,0 +1,78 @@
+module CCJModel {
+	imports {
+		Base
+	}
+
+    /* -------------- Item Models --------------- */ 
+
+    model CAN1_ground 
+    {
+        mesh = WorldItems/CAN1_ground,
+        texture = WorldItems/CAN1_ground,
+        scale = 0.65,
+    }
+	
+	model CAN2_ground 
+    {
+        mesh = WorldItems/CAN2_ground,
+        texture = WorldItems/CAN2_ground,
+        scale = 0.5,
+    }
+	
+	model CAN3_ground 
+    {
+        mesh = WorldItems/CAN3_ground,
+        texture = WorldItems/CAN3_ground,
+        scale = 0.3,
+    }
+	
+	model CAN4_ground 
+    {
+        mesh = WorldItems/CAN4_ground,
+        texture = WorldItems/CAN4_ground,
+        scale = 0.5,
+    }
+	
+	model CAN5_ground 
+    {
+        mesh = WorldItems/CAN5_ground,
+        texture = WorldItems/CAN5_ground,
+        scale = 0.45,
+    }
+	
+	model CAN6_ground 
+    {
+        mesh = WorldItems/CAN6_ground,
+        texture = WorldItems/CAN6_ground,
+        scale = 0.5,
+    }
+	
+	model CAN7_ground 
+    {
+        mesh = WorldItems/CAN7_ground,
+        texture = WorldItems/CAN7_ground,
+        scale = 0.65,
+    }
+	
+	model CAN8_ground 
+    {
+        mesh = WorldItems/CAN8_ground,
+        texture = WorldItems/CAN8_ground,
+        scale = 0.5,
+    }
+	
+	model CAN9_ground 
+    {
+        mesh = WorldItems/CAN9_ground,
+        texture = WorldItems/CAN9_ground,
+        scale = 0.32,
+    }
+	
+	model CAN10_ground 
+    {
+        mesh = WorldItems/CAN10_ground,
+        texture = WorldItems/CAN10_ground,
+        scale = 0.35,
+    }
+
+}

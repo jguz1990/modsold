@@ -1,0 +1,84 @@
+module Base
+{
+	
+item MRE_Coffee
+	{
+		DisplayName					=	MRE Coffee Packet,
+		Icon 				= MRECoffee,
+		ReplaceOnUse 		= MRE_Coffee_Trash,
+		Type						=	Food,
+		HungerChange				=	-1,
+		UnhappyChange				=	20,
+		ThirstChange				=	+60,
+		FatigueChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0.75,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	4,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+	}
+
+item MRE_Coffee_Mug
+	{
+		DisplayName					=	MRE Coffee,
+		Icon						=	MugFulll,
+		Type						=	Food,
+		FatigueChange				=	-5,
+		UnhappyChange				=	-5,
+		ThirstChange				=	-20,
+		Carbohydrates				=	0.75,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	4,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	Mugl,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = Mug,
+	}
+	
+	/*
+	
+    item Mugfull
+	{
+		FatigueChange	=	-5,
+		HungerChange	=	-5,
+		Weight	=	1,
+		Type	=	Food,
+		UnhappyChange	=	-5,
+		ThirstChange	=	-50,
+		DisplayName	=	Hot Cuppa,
+		StressChange	=	-10,
+		ReplaceOnUse	=	Mugl,
+		Icon	=	MugFulll,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0.75,
+        Proteins = 0.12,
+        Lipids = 0,
+        Calories = 4,
+        CantBeFrozen = TRUE,
+        StaticModel = Mug,
+        EatType = Mug,
+	}	*/
+	
+    recipe Make Hot MRE Coffee
+    {
+        FullKettle=2,
+        destroy MRE_Coffee,
+        destroy Mugl,
+        Result:MRE_Coffee_Mug,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+
+    }
+	
+}
+

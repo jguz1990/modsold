@@ -1,0 +1,8 @@
+IG_UI_EN = {
+    IGUI_VehicleNamehmmwvpolice = "Police M1025",
+    IGUI_VehicleNamehmmwvblackopps = "M1025",
+    IGUI_VehicleNameblazerblackopps = "Chevalier Kobold",
+    IGUI_VehicleNamevanblackopps = "Van",
+    IGUI_VehicleNamem35a2blackopps = "M35A2",
+    IGUI_VehicleNamem151blackopps = "M151A2",
+}

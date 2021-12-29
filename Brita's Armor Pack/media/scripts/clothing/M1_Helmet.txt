@@ -1,0 +1,39 @@
+module Base
+{
+
+    item Hat_M1_Helmet
+	{
+	Type = Clothing,
+	DisplayName = M1 Helmet w/ Mitchell Camouflage,
+	ClothingItem = Hat_M1_Helmet,
+	BodyLocation = Hat,
+	Icon = Hat_M1_Helmet,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 90,
+	ScratchDefense = 90,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_M1_Helmet_Ori
+	{
+	Type = Clothing,
+	DisplayName = M1 Helmet,
+	ClothingItem = Hat_M1_Helmet_Ori,
+	BodyLocation = Hat,
+	Icon = Hat_M1_Helmet_Ori,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 90,
+	ScratchDefense = 90,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+}

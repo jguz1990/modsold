@@ -1,0 +1,271 @@
+module Base
+{
+    item Hat_PVS_5
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-5 Night Vision Goggles,
+	ClothingItem = Hat_PVS_5,
+	BodyLocation = Nose,
+	Icon = Hat_PVS_5,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_PVS_5_OFF
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-5 Night Vision Goggles Off,
+	ClothingItem = Hat_PVS_5_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_PVS_5,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_PVS15
+	{
+	Type = Clothing,
+	DisplayName = TES AN PVS-15 Night Vision,
+	ClothingItem = Hat_PVS15,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15_UP,
+        ClothingItemExtraOption = PVS15_NV_OFF,
+        clothingExtraSubmenu = PVS15_NV_ON,
+    }
+
+
+
+    item Hat_PVS15_UP
+	{
+	Type = Clothing,
+	DisplayName = TES AN PVS-15 Night Vision UP,
+	ClothingItem = Hat_PVS15_UP,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15,
+        ClothingItemExtraOption = PVS15_NV_ON,
+        clothingExtraSubmenu = PVS15_NV_OFF,
+    }
+
+
+
+    item Hat_Sam_NV
+	{
+	Type = Clothing,
+	DisplayName = Sam Fisher's Night Vision Goggles,
+	ClothingItem = Hat_Sam_NV,
+	BodyLocation = Nose,
+	Icon = Hat_Sam_NV,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Sam_NV_OFF,
+        ClothingItemExtraOption = Sam_NV_OFF,
+        clothingExtraSubmenu = Sam_NV_ON,
+    }
+
+
+
+    item Hat_Sam_NV_OFF
+	{
+	Type = Clothing,
+	DisplayName = Sam Fisher's Night Vision Goggles UP,
+	ClothingItem = Hat_Sam_NV_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_Sam_NV,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Sam_NV,
+        ClothingItemExtraOption = Sam_NV_ON,
+        clothingExtraSubmenu = Sam_NV_OFF,
+    }
+
+
+    item Hat_PVS15_ON
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-15 Night Vision Goggles,
+	ClothingItem = Hat_PVS15_ON,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15_OFF,
+        ClothingItemExtraOption = PVS15_OFF,
+        clothingExtraSubmenu = PVS15_ON,
+    }
+
+
+
+    item Hat_PVS15_OFF
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-15 Night Vision Goggles (OFF),
+	ClothingItem = Hat_PVS15_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15_ON,
+        ClothingItemExtraOption = PVS15_ON,
+        clothingExtraSubmenu = PVS15_OFF,
+    }
+
+
+    item Hat_PVS15_Harness_ON
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-15 Night Vision Goggles w/ Harness,
+	ClothingItem = Hat_PVS15_Harness_ON,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15_Harness,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15_Harness_OFF,
+        ClothingItemExtraOption = PVS15_Harness_OFF,
+        clothingExtraSubmenu = PVS15_Harness_ON,
+    }
+
+
+
+    item Hat_PVS15_Harness_OFF
+	{
+	Type = Clothing,
+	DisplayName = AN PVS-15 Night Vision Goggles w/ Harness (OFF),
+	ClothingItem = Hat_PVS15_Harness_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_PVS15_Harness,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_PVS15_Harness_ON,
+        ClothingItemExtraOption = PVS15_Harness_ON,
+        clothingExtraSubmenu = PVS15_Harness_OFF,
+    }
+
+	recipe Use PVS15_Harness			
+	{			
+		Hat_PVS15_OFF,		
+		Result : Hat_PVS15_Harness_OFF,			
+		Time : 50.0,			
+	}			
+	recipe Use PVS15_with_Mount			
+	{			
+		Hat_PVS15_Harness_OFF,		
+		Result : Hat_PVS15_OFF,			
+		Time : 50.0,		
+	}
+
+
+
+
+
+    item Hat_NV18_ON
+	{
+	Type = Clothing,
+	DisplayName = GPNVG-18 Night Vision Goggles,
+	ClothingItem = Hat_NV18_ON,
+	BodyLocation = Nose,
+	Icon = Hat_NV18,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_NV18_OFF,
+        ClothingItemExtraOption = NV18_OFF,
+        clothingExtraSubmenu = NV18_ON,
+    }
+
+
+
+    item Hat_NV18_OFF
+	{
+	Type = Clothing,
+	DisplayName = GPNVG-18 Night Vision Goggles (OFF),
+	ClothingItem = Hat_NV18_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_NV18,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_NV18_ON,
+        ClothingItemExtraOption = NV18_ON,
+        clothingExtraSubmenu = NV18_OFF,
+    }
+
+
+    item Hat_NV18_Harness_ON
+	{
+	Type = Clothing,
+	DisplayName = GPNVG-18 Night Vision Goggles w/ Harness,
+	ClothingItem = Hat_NV18_Harness_ON,
+	BodyLocation = Nose,
+	Icon = Hat_NV18_Harness,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_NV18_Harness_OFF,
+        ClothingItemExtraOption = NV18_Harness_OFF,
+        clothingExtraSubmenu = NV18_Harness_ON,
+    }
+
+
+
+    item Hat_NV18_Harness_OFF
+	{
+	Type = Clothing,
+	DisplayName = GPNVG-18 Night Vision Goggles w/ Harness (OFF),
+	ClothingItem = Hat_NV18_Harness_OFF,
+	BodyLocation = Nose,
+	Icon = Hat_NV18_Harness,
+        CanHaveHoles = false,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_NV18_Harness_ON,
+        ClothingItemExtraOption = NV18_Harness_ON,
+        clothingExtraSubmenu = NV18_Harness_OFF,
+    }
+
+	recipe Use NV18_Harness			
+	{			
+		Hat_NV18_OFF,		
+		Result : Hat_NV18_Harness_OFF,			
+		Time : 50.0,			
+	}			
+	recipe Use NV18_with_Mount			
+	{			
+		Hat_NV18_Harness_OFF,		
+		Result : Hat_NV18_OFF,		
+		Time : 50.0,		
+	}
+}

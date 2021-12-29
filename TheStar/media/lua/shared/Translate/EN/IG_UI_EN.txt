@@ -1,0 +1,4 @@
+IGUI_EN = {
+    IGUI_TheStar_AmmoCount = "%1 / %2",
+    IGUI_TheStar_AmmoCountChambered = "%1+%3 / %2",
+}

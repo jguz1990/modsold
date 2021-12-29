@@ -1,0 +1,11 @@
+module ItemTweaker
+{
+    /************************Normal************************/
+    item ItemTweakerDefaultItem
+    {
+        Weight	=	0.01,
+        Type	=	Normal,
+        /*DisplayName	=	Error,*//*no DisplayName: object is Hidden*/
+        Icon	=	Money,
+    }
+}

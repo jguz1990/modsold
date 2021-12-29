@@ -1,0 +1,68 @@
+module Base
+{
+
+recipe Paratrooper Potluck Pie
+	{
+		MRE_BeefStew_Hot;30,
+		MRE_Crackers;10,
+		MRE_Cheesespread;5,
+		Result 			: Paratrooper_Potluck_Pie,
+		Time 			: 50.0,
+		Category 		: Cooking,
+        	Sound:PutItemInBag,
+	}
+
+	
+item Paratrooper_Potluck_Pie
+	{
+		Weight			=	.65,
+		Icon			=	HCMREmealpreped,
+		DisplayName		=	Paratrooper Potluck Pie,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -45,
+	UnhappyChange			=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	47,
+		Proteins					=	42,
+		Lipids						=	31,
+		Calories					=	624,
+        /*GoodHot = true,
+        BadCold = true,*/
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+	
+
+recipe Peanut Butter Patrol Cookie
+	{
+		MRE_CookieChocCovered;5,
+		MRE_PeanutButter;5,
+		Result 			: Peanut_Butter_Patrol_Cookie,
+		Time 			: 50.0,
+		Category 		: Cooking,
+        	Sound:PutItemInBag,
+	}	
+	
+item Peanut_Butter_Patrol_Cookie
+	{
+		DisplayName					=	Peanut Butter Patrol Cookie,
+		Icon						=	MRECartonSide,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+		Type						=	Food,
+		HungerChange				=	-10,
+	UnhappyChange			=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	34.7,
+		Proteins					=	16,
+		Lipids						=	31,
+		Calories					=	546,
+		Weight						=	0.3,
+        StaticModel = MRE_small,
+	}
+
+}
+

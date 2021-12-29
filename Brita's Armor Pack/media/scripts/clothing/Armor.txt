@@ -1,0 +1,63 @@
+module Base
+{
+    item Armor_Defender
+    {
+        Type = Clothing,
+        DisplayName = Defender 2 Armor,
+        ClothingItem = Armor_Defender,
+        BodyLocation = TorsoExtra,
+        Weight	=	0.01,
+        Icon	=	Armor_Defender,
+        BloodLocation = ShirtNoSleeves,
+        RunSpeedModifier = 0.93,
+        CombatSpeedModifier = 0.95,
+        Insulation = 0.65,
+        WindResistance = 0.30,
+        BiteDefense = 100,
+        ScratchDefense = 100,
+        BulletDefense = 150,
+        NeckProtectionModifier = 0.5,
+    }
+
+
+
+    item Bag_Plate_Carrier
+    {
+        Type = Clothing,
+        DisplayName = Emerson Gear Tactical Plate Carrier,
+        ClothingItem = Bag_Plate_Carrier,
+        BodyLocation = TorsoExtra,
+        Weight	=	0.01,
+        Icon	=	Bag_Plate_Carrier,
+        BloodLocation = ShirtNoSleeves,
+        RunSpeedModifier = 0.93,
+        CombatSpeedModifier = 0.95,
+        Insulation = 0.35,
+        WindResistance = 0.30,
+        BiteDefense = 50,
+        ScratchDefense = 50,
+        BulletDefense = 100,
+        NeckProtectionModifier = 0.5,
+    }
+
+
+
+    item Armor_6B13
+    {
+        Type = Clothing,
+        DisplayName = Assault Bodyarmor 6B13,
+        ClothingItem = Armor_6B13,
+        BodyLocation = TorsoExtra,
+        Weight	=	0.01,
+        Icon	=	Armor_6B13,
+        BloodLocation = ShirtNoSleeves,
+        RunSpeedModifier = 0.93,
+        CombatSpeedModifier = 0.95,
+        Insulation = 0.65,
+        WindResistance = 0.30,
+        BiteDefense = 100,
+        ScratchDefense = 100,
+        BulletDefense = 150,
+        NeckProtectionModifier = 0.5,
+    }
+}

@@ -1,0 +1,17 @@
+module Base
+{
+
+    item SVDClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	7.62x54r SVD Magazine,
+	DisplayCategory	= 	GunMag,
+        Icon		=	SVDMag,
+        MaxAmmo		=	10,
+        AmmoType	=	Base.762x54rBullets,
+        StaticModel	=	GunMagazine,
+	GunType		=	SVD,
+    }
+}

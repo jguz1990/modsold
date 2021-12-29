@@ -1,0 +1,22 @@
+/*	This is for all NON-MAGAZINE weapons that will use Bayonet... For some reason
+	There needs to be a Magazine type or TOOLTIP will throw errors...
+	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item Fixed
+    {
+        CanStack	=	FALSE,			/* DOESNT MATTER NEVER SPAWN ACTUAL ITEM */
+        Weight		=	0.0,
+        Type		=	Normal,
+        DisplayName	=	Fixed Magazine,
+	DisplayCategory	=	FixedMag,
+        Icon		=	1903Mag,		/* DOESNT MATTER */
+        MaxAmmo 	=	0,
+        AmmoType 	=	Base.308Bullets,	/* DOESNT MATTER */
+        StaticModel 	=	GunMagazine,		/* DOESNT MATTER */
+	GunType		=	Multi_Gun,
+    }
+}

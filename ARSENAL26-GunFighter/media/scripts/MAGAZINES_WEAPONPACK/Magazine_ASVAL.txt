@@ -1,0 +1,17 @@
+module Base
+{
+
+    item ASVALClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	9x39mm Ext Magazine,
+	DisplayCategory =	GunMag,
+        Icon		=	ASVALMag,
+        MaxAmmo		=	20,
+        AmmoType	=	Base.Bullets9mm,
+        StaticModel	=	GunMagazine,
+	GunType		=	ASVAL,
+    }
+}

@@ -1,0 +1,3 @@
+Tooltip_PTBR = {
+    Tooltip_VehicleRecycling = "Desmontar um veículo ou um trailer com maçarico de propano lhe dará metais e materiais elétricos. <LINE> Maior habilidade em Metalworking mais itens virão.",
+}

@@ -1,0 +1,34 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item CP33Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	KEL-TEC CP33 Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	CP33Mag,
+        MaxAmmo 	=	33,
+        AmmoType 	=	Base.Bullets22,
+        StaticModel 	=	GunMagazine,
+	GunType		=	CP33, 
+   }
+
+    item CP33ExtClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	KEL-TEC CP33 Extended Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	CP33ExtMag,
+        MaxAmmo 	=	50,
+        AmmoType 	=	Base.Bullets22,
+        StaticModel 	=	GunMagazine,
+	GunType		=	CP33, 
+    }
+}

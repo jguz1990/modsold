@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\Clothes\Bob_PLB3</m_MaleModel>
+	<m_FemaleModel>Skinned\Clothes\Kate_PLB3</m_FemaleModel>
+	<m_GUID>bc9a2456-737a-4898-9fea-895ed1aa5121</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_BackPack</m_AttachBone>
+	<textureChoices>GunCaseB</textureChoices>
+</clothingItem>

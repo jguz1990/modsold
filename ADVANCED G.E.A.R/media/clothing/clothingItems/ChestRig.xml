@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>chestrigMAL</m_MaleModel>
+	<m_FemaleModel>chestrigFEM</m_FemaleModel>
+	<m_GUID>37fe2f93-762a-4da9-8438-d215fe9b870d</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Spine1</m_AttachBone>
+	<textureChoices>Webbing_Gray</textureChoices>
+	<textureChoices>Webbing_Green</textureChoices>
+	<textureChoices>Webbing_Tan</textureChoices>
+</clothingItem>

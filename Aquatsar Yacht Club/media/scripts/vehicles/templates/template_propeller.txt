@@ -1,0 +1,69 @@
+module Base
+{
+	template vehicle Propeller
+	{
+		part Propeller
+		{
+			category = MechanicalSystem,
+			area = SeatFrontLeft,
+			itemType = Aquatsar.BoatPropeller,
+			specificItem = false,
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Aquatsar.DivingMask,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+					2
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = secondary,
+					}
+				}
+				time = 2000,
+				skills = Mechanics:5,
+				recipes = Powerboats Mechanics,
+				test = Boats.InstallTest.Propeller,
+				complete = Boats.InstallComplete.Propeller,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Aquatsar.DivingMask,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+					2
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = secondary,
+					}
+				}
+				time = 2000,
+				skills = Mechanics:3,
+				recipes = Powerboats Mechanics,
+				test = Boats.UninstallTest.Propeller,
+				complete = Boats.UninstallComplete.Propeller,
+			}
+			lua
+			{
+				create = Boats.Create.Propeller,
+				update = Boats.Update.Propeller,
+			}
+		}
+	}
+}
+

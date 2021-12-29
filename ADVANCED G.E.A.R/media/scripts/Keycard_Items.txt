@@ -1,0 +1,16 @@
+module Base
+{
+
+	item LabKeycard
+	{
+		/*Type = Key,*/
+		Type = Normal,
+		Weight = 0.1,
+		DisplayName = Lab Keycard,
+		Icon = LabKeycard,
+		AttachmentType = Walkie,
+
+	}
+
+
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>TentKitM</m_MaleModel>
+	<m_FemaleModel>TentKitF</m_FemaleModel>
+	<m_GUID>c1615198-f34d-4b4e-b7c3-5f82a7986ca5</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AttachBone>Bip01_BackPack</m_AttachBone>
+	<textureChoices>TentKitGreen</textureChoices>
+</clothingItem>

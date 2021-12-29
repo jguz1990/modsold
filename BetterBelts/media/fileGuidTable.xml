@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+	
+	<files>
+	<path>media/clothing/clothingItems/QuiverB.xml</path>
+	<guid>13c94e4f-c887-4eff-89c8-08161952f532</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/Bag_AFAK_LHand.xml</path>
+	<guid>2d765bf5-1286-4ea0-b3d2-f458b1b57f42</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/Bag_AFAK_RHand.xml</path>
+	<guid>fd9bb447-8473-4db5-b8f0-8a532e8bdce7</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/AFAK.xml</path>
+	<guid>f43806b4-cff9-4d76-bea9-1de67ff961d5</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/ToolBoxB.xml</path>
+	<guid>00d8305a-938d-436c-8874-b6475e57011a</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/FirstAidKitB.xml</path>
+	<guid>4598eb3a-fcb9-4391-b755-98950691685e</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/LunchboxB.xml</path>
+	<guid>63f45477-7876-45f7-8295-353c0e9f111d</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/Lunchbox2B.xml</path>
+	<guid>876ca301-ac62-445c-bffb-22a371d1f12a</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/PistolCaseB.xml</path>
+	<guid>bc9a2456-737a-4898-9fea-895ed1aa5121</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/Hat_RebreatherB.xml</path>
+	<guid>2688a786-e982-41d4-9fe5-889b50268f50</guid>
+	</files>
+	<files>
+	<path>media/clothing/clothingItems/TentKitGreenB.xml</path>
+	<guid>c1615198-f34d-4b4e-b7c3-5f82a7986ca5</guid>
+	</files>
+
+	
+</fileGuidTable>

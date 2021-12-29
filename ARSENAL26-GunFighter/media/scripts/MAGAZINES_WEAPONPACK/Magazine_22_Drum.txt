@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 22Drum
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	22-LR Drum Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	22Drum,
+        MaxAmmo 	=	100,
+        AmmoType 	=	Base.Bullets22,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Blackhawk</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Blackhawk</m_FemaleModel>
+	<m_GUID>5cd42718-86f8-4f87-b507-9e3ea3a44fcc</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_Blackhawk</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Blackhawk2</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Blackhawk3</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Blackhawk4</textureChoices>	
+</clothingItem>

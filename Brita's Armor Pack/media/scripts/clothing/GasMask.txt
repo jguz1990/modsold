@@ -1,0 +1,68 @@
+module Base
+{
+
+    item Hat_MCU_GasMask
+	{
+	Type = Clothing,
+	DisplayName = MCU 2/P Gas Mask,
+	ClothingItem = Hat_MCU_GasMask,
+	BodyLocation = MaskEyes,
+	Icon = Hat_MCU_GasMask,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	ScratchDefense = 20,
+	Insulation = 0.75,
+	WaterResistance = 1.0,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_M45_GasMask
+	{
+	Type = Clothing,
+	DisplayName = M45 Gas Mask,
+	ClothingItem = Hat_M45_GasMask,
+	BodyLocation = MaskEyes,
+	Icon = Hat_M45_GasMask,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	ScratchDefense = 20,
+	Insulation = 0.75,
+	WaterResistance = 1.0,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_M50
+	{
+	Type = Clothing,
+	DisplayName = Avon Protection M50 Gas Mask,
+	ClothingItem = Hat_M50,
+	BodyLocation = MaskEyes,
+	Icon = Hat_M50,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	ScratchDefense = 20,
+	Insulation = 0.75,
+	WaterResistance = 1.0,
+        Weight	=	0.001,
+    }
+
+
+    item Hat_FM53
+	{
+	Type = Clothing,
+	DisplayName = Avon Protection FM53 Gas Mask,
+	ClothingItem = Hat_FM53,
+	BodyLocation = MaskEyes,
+	Icon = Hat_FM53,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	ScratchDefense = 20,
+	Insulation = 0.75,
+	WaterResistance = 1.0,
+        Weight	=	0.001,
+    }
+}

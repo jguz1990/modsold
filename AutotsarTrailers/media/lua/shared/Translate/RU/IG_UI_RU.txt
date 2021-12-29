@@ -1,0 +1,6 @@
+IG_UI_RU = {
+	IGUI_VehiclePartCatGenerator = "Генератор",
+	IGUI_VehiclePartEarthingOn = "Заземление",
+	IGUI_VehiclePartEarthingOff = "отключенный питающий провод",
+}
+

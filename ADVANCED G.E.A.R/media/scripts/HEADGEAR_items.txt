@@ -1,0 +1,57 @@
+module Base
+{
+    
+
+
+	
+ 	item SniperVeil
+	{
+		Type = Clothing,
+		DisplayName = Sniper Veil,
+		ClothingItem = SniperVeil,
+		/*BodyLocation = FullHat,*/
+		BodyLocation = MaskEyes,
+		BloodLocation = Head,
+		Icon = MeshMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+
+
+	
+	item BallisticMask
+	{
+		Type = Clothing,
+		DisplayName = Ballistic Mask,
+		ClothingItem = BallisticMask,
+		BodyLocation = MaskEyes,
+		Icon = BallisticMask,
+		CanHaveHoles = false,
+		BloodLocation = Head,
+        BiteDefense = 30,
+        ScratchDefense = 50,
+        ChanceToFall = 30,
+        Insulation = 0.25,
+        WindResistance = 0.55,
+        BulletDefense = 60,
+	}
+
+
+    item SkullHalfMask
+    {
+        Type = Clothing,
+        DisplayName = Skull Half-Mask,
+        ClothingItem = SkullHalfMask,
+        BodyLocation = Mask,
+        Icon=SkullMaskBandana,
+        CanHaveHoles = false,
+        ChanceToFall = 5,
+        Insulation = 0.10,
+    }
+
+
+
+}
+

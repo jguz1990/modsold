@@ -1,0 +1,10 @@
+module Base
+{
+
+	model IncendiaryGrenade
+	{
+		mesh = smokegrenade,
+		texture = incendiarygrenade,
+
+	}
+}

@@ -1,0 +1,22 @@
+ module Base
+{
+	item HandTorch
+    {
+        LightDistance	=	15,
+        Weight	=	0.01,
+        DisappearOnUse	=	FALSE,
+        Type	=	Drainable,
+        TorchCone	=	TRUE,
+        UseDelta	=	0.0004,
+        LightStrength	=	0.9,
+        DisplayName	=	Hand Torch,
+        ActivatedItem	=	TRUE,
+        Icon	=	Flashlight2,
+        MetalValue = 10,
+        cantBeConsolided = TRUE,
+        StaticModel = HandTorch,
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	AttachmentType = Torchb,
+    }
+}

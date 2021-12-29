@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_ZIP</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_ZIP</m_FemaleModel>
+	<m_GUID>7090c30c-8e3a-46bf-a730-b9966cd8d2ef</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_ZIP</textureChoices>
+	<textureChoices>clothes\Bag\Bag_ZIP2</textureChoices>
+	<textureChoices>clothes\Bag\Bag_ZIP3</textureChoices>	
+</clothingItem>

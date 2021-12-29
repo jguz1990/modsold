@@ -1,0 +1,4 @@
+ContextMenu_EN = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "Dismantle Vehicle",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "Dismantle Trailer",
+}

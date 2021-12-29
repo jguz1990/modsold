@@ -1,0 +1,6 @@
+ItemName_DE = {
+ItemName_BetLock.BobbyPin = "Haarklammer",
+ItemName_BetLock.HandmadeBobbyPin = "Selbstgemachte Haarklammer",
+ItemName_BetLock.LockpickingMag = "Schlossknacken für Dummköpfe",
+ItemName_BetLock.AlarmMag = "Alarmanlagen für Dummköpfe",
+}

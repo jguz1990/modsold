@@ -1,0 +1,12 @@
+Items_EN = {
+   	DisplayName_FBM_Str_1                = "Strength Building Guide Vol. 1: Beginner",
+	DisplayName_FBM_Str_2                = "Strength Building Guide Vol. 2: Intermediate",
+	DisplayName_FBM_Str_3                = "Strength Building Guide Vol. 3: Advanced",
+	DisplayName_FBM_Str_4                = "Strength Building Guide Vol. 4: Expert",
+	DisplayName_FBM_Str_5                = "Strength Building Guide Vol. 5: Master",
+	
+	DisplayName_FBM_Fit_1                = "Cardio Building Guide Vol. 1: Beginner",
+	DisplayName_FBM_Fit_2                = "Cardio Building Guide Vol. 2: Intermediate",
+	DisplayName_FBM_Fit_3                = "Cardio Building Guide Vol. 3: Advanced",
+	DisplayName_FBM_Fit_4                = "Cardio Building Guide Vol. 4: Expert",
+	DisplayName_FBM_Fit_5                = "Cardio Building Guide Vol. 5: Master",

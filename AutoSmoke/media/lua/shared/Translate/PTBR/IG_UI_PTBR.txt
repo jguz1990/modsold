@@ -1,0 +1,10 @@
+IGUI_PTBR = {
+    IGUI_AutoSmoke_Say_NoFire_1 = "Como eu posso fumar sem %1?",
+    IGUI_AutoSmoke_Say_NoFire_2 = "Não há nenhuma fumaça sem fogo",
+    IGUI_AutoSmoke_Say_NoFire_3 = "Huh? Eu tenho certeza que eu tinha %1",
+    IGUI_AutoSmoke_Say_NoFire_Lighter = "um isqueiro",
+    IGUI_AutoSmoke_Say_NoFire_Matches = "fósforos",
+    IGUI_AutoSmoke_Say_NoCigarettes_1 = "Sem cigarros, sem festa",
+    IGUI_AutoSmoke_Say_NoCigarettes_2 = "Eu tô sem cigarros...",
+    IGUI_AutoSmoke_Say_NoCigarettes_3 = "Alguém tem um cigarro?",
+}

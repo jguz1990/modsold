@@ -1,0 +1,21 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+
+    item 22ExtClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	22-LR Ext Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	22ExtMag,
+        MaxAmmo 	=	25,
+        AmmoType 	=	Base.Bullets22,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

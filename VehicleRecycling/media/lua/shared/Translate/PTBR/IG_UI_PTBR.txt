@@ -1,0 +1,4 @@
+IGUI_PTBR = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Você realmente quer desmontar este veículo?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Você realmente quer desmontar este trailer?",
+}

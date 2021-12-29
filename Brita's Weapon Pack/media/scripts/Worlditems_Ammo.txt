@@ -1,0 +1,154 @@
+module Base
+{
+
+	model WBox_4G
+	{
+		mesh = WorldItems/box1,
+		texture = WorldItems/4G,
+		scale = 0.01,
+	}
+	model WBox_10G
+	{
+		mesh = WorldItems/box1,
+		texture = WorldItems/10G,
+		scale = 0.01,
+	}
+	model WBox_20G
+	{
+		mesh = WorldItems/box1,
+		texture = WorldItems/20G,
+		scale = 0.01,
+	}
+	model WBox_410G
+	{
+		mesh = WorldItems/box1,
+		texture = WorldItems/410G,
+		scale = 0.01,
+	}
+	model WBox_12G
+	{
+		mesh = WorldItems/box1,
+		texture = WorldItems/12G,
+		scale = 0.01,
+	}
+	model WBox_50BMG
+	{
+		mesh = WorldItems/box2,
+		texture = WorldItems/50BMG,
+		scale = 0.01,
+	}
+	model WBox_50MAG			-- TEMP NEW AMMO TYPE
+	{
+		mesh = WorldItems/box2,
+		texture = WorldItems/50BMG,
+		scale = 0.01,
+	}
+	model WBox_4570
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/4570,
+		scale = 0.01,
+	}
+	model WBox_380
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/380,
+		scale = 0.01,
+	}
+	model WBox_357
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/357,
+		scale = 0.01,
+	}
+	model WBox_57
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/57,
+		scale = 0.01,
+	}
+	model WBox_44
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/44,
+		scale = 0.01,
+	}
+	model WBox_38
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/38,
+		scale = 0.01,
+	}
+	model WBox_22
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/22,
+		scale = 0.01,
+	}
+	model WBox_45LC
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/45LC,
+		scale = 0.01,
+	}
+	model WBox_45
+	{
+		mesh = WorldItems/box3,
+		texture = WorldItems/45,
+		scale = 0.01,
+	}
+	model WBox_223
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/223,
+		scale = 0.01,
+	}
+	model WBox_308
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/308,
+		scale = 0.01,
+	}
+	model WBox_545
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/545,
+		scale = 0.01,
+	}
+	model WBox_556
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/556,
+		scale = 0.01,
+	}
+	model WBox_762x39
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/762x39,
+		scale = 0.01,
+	}
+	model WBox_762x51
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/762x51,
+		scale = 0.01,
+	}
+	model WBox_762x54
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/762x54,
+		scale = 0.01,
+	}
+	model WBox_3006
+	{
+		mesh = WorldItems/box4,
+		texture = WorldItems/3006,
+		scale = 0.01,
+	}
+	model WBox_9
+	{
+		mesh = WorldItems/box5,
+		texture = WorldItems/9,
+		scale = 0.01,
+	}
+}

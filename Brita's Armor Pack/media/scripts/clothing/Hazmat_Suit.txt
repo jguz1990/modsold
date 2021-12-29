@@ -1,0 +1,19 @@
+module Base
+{
+
+    item Suit_Chempak
+    {
+        Type = Clothing,
+        DisplayName = Blauer XRT Gore Chempak CBRN Protective Suit,
+        ClothingItem = Suit_Chempak,
+        BodyLocation = Sweater,
+        Icon = Suit_Chempak,
+        BloodLocation = Trousers;Jumper,
+        RunSpeedModifier = 0.9,
+        ScratchDefense = 60,
+        BiteDefense = 60,
+        Insulation = 1,
+        WindResistance = 0.85,
+        WaterResistance = 0.80,
+    }
+}

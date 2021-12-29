@@ -1,0 +1,2 @@
+-- require "VehicleZoneDistribution"
+-- VehicleZoneDistribution.police.vehicles["Base.StepVanSwat"] = {index = -1, spawnChance = 5}

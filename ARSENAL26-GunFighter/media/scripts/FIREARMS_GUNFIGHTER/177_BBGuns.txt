@@ -1,0 +1,540 @@
+module Base	{
+					
+	item	UmarexSS	{	
+				
+	DisplayName                 	=	Umarex Steel Storm BB-Gun	,
+	Icon                        	=	UmarexSS,	
+	WeaponSprite                	=	UmarexSS,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	WeaponReloadType            	=	revolver,	
+	FireMode                    	=	[3]Burst,	
+	InsertAllBulletsReload      	=	TRUE,	
+	AttachmentType              	=	Holster,	
+	UseEndurance                	=	FALSE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	7.5	,
+	AimingPerkRangeModifier     	=	0.75	,
+	MinDamage                   	=	0.01	,
+	MaxDamage                   	=	0.01	,
+	CriticalChance              	=	0	,
+	CritDmgMultiplier            	=	0,	
+	AimingPerkCritModifier      	=	0,	
+	HitChance                   	=	54	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	15	,
+	MinAngle                     	=	0.950	,
+	AimingPerkMinAngleModifier  	=	0.000	,
+	ConditionMax                	=	50,	
+	ConditionLowerChanceOneIn   	=	60,	
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.08,	
+	AimingTime                  	=	16	,
+	ReloadTime                  	=	100,	
+	SwingTime                   	=	0	,
+	MinimumSwingTime            	=	0	,
+	SwingAmountBeforeImpact     	=	0,	
+	RecoilDelay                 	=	23	,
+	Weight                      	=	2.1	,
+	OAL				=	1.0	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.BB177,	
+	AmmoBox                     	=	BB177Box,	
+	MaxAmmo                     	=	250,	
+	ProjectileCount             	=	3,	
+	MaxHitCount                 	=	3,	
+	ShareDamage                 	=	FALSE,	
+	SplatNumber                 	=	1,	
+	SplatBloodOnNoDeath         	=	FALSE,	
+	PushBackMod                 	=	0,	
+	KnockBackOnNoDeath          	=	FALSE,	
+	KnockdownMod                	=	0,	
+	DoorDamage                  	=	1,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	SwingAnim                   	=	Handgun,	
+	MetalValue                  	=	30,	
+	SoundVolume                 	=	6,	
+	SoundRadius                 	=	6,	
+	SoundGain                   	=	1.5,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	[3]Burst_BB177,	
+	InsertAmmoSound             	=	BB177BulkLoad,	
+	RackSound                   	=	22LRrack,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,	
+	/* =========== ATTACHMENT DATA ============ */			
+	ModelWeaponPart = Light_Small         		Light_Small light light	,
+	ModelWeaponPart = Light_Large         		Light_Large light light	,
+	ModelWeaponPart = Laser_Green         		Laser_Green light light	,
+	ModelWeaponPart = Laser_Red            		Laser_Red light light	,
+	ModelWeaponPart = GhostRing            		GhostRing reddot reddot	,
+	ModelWeaponPart = Sight_MicroDot 		Sight_MicroDot reddot reddot	,
+	ModelWeaponPart = Sight_SRS       		Sight_SRS reddot reddot	,
+	ModelWeaponPart = Sight_EOTech      		Sight_EOTech reddot reddot	,
+	}			
+				
+	model UmarexSS			
+	{			
+		mesh = weapons/firearm/UmarexSS,		
+		texture = weapons/firearm/UmarexSS,		
+				
+		attachment light		
+		{		
+			offset = 0.0000 0.0900 0.0033,	
+			rotate = 0.0000 180.0000 0.0000,	
+		}		
+		attachment reddot		
+		{		
+			offset = 0.0000 0.0100 0.0045,	
+			rotate = 0.0000 180.0000 0.0000,	
+		}		
+	}			
+				
+	fixing Fix UmarexSS			
+	{			
+		Require : UmarexSS,		
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}
+
+
+
+
+	item	RWS_M34	{	
+				
+	DisplayName                 	=	RWS M34 Break Barrel BB Gun	,
+	Icon                        	=	RWS_M34,	
+	WeaponSprite                	=	RWS_M34,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	haveChamber                	=	FALSE,	
+	WeaponReloadType            	=	RWS_M34,	
+	FireMode                    	=	Single,	
+	AttachmentType              	=	Rifle,	
+	UseEndurance                	=	FALSE,	
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	11	,
+	AimingPerkRangeModifier     	=	3.1	,
+	MinDamage                   	=	0.03	,
+	MaxDamage                   	=	0.04	,
+	CriticalChance              	=	0	,
+	CritDmgMultiplier            	=	0,	
+	AimingPerkCritModifier      	=	0,	
+	HitChance                   	=	50	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	18	,
+	MinAngle                     	=	0.955	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50	,
+	ConditionLowerChanceOneIn   	=	60	,
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.04	,
+	AimingTime                  	=	23	,
+	ReloadTime                  	=	50,	
+	SwingTime                   	=	0.8	,
+	MinimumSwingTime            	=	0.8	,
+	SwingAmountBeforeImpact     	=	0,	
+	RecoilDelay                 	=	16	,
+	Weight                      	=	3.4	,
+	OAL				=	3.0	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.BB177,	
+	AmmoBox                     	=	BB177Box,	
+	MaxAmmo                     	=	1,	
+	ProjectileCount             	=	1,	
+	MaxHitCount                 	=	1,	
+	ShareDamage                 	=	FALSE,	
+	SplatNumber                 	=	1,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	0,	
+	DoorDamage                  	=	1,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	MetalValue                  	=	30,	
+	SoundVolume                 	=	6,	
+	SoundRadius                 	=	6,	
+	SoundGain                   	=	1.5,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	22LRshot,	
+	InsertAmmoSound             	=	DT11StormyShotgunInsertRound,	
+	EjectAmmoSound              	=	Stormy9mmClipEject,	
+	RackSound                   	=	R11-87stormyShotgunPump,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,	
+	/* =========== ATTACHMENT DATA ============ */			
+	ModelWeaponPart = ForeGrip           		ForeGrip foregrip foregrip	,
+	ModelWeaponPart = Carrier_12g          		Carrier_12g carrier carrier	,
+	ModelWeaponPart = Sling               		Sling_1 sling sling	,
+	ModelWeaponPart = Light_Small			Light_Small  side  side		,
+	ModelWeaponPart = Light_Large			Light_Large  side  side		,
+	ModelWeaponPart = Laser_Green	  		Laser_Green  side  side		,
+	ModelWeaponPart = Laser_Red	    		Laser_Red    side  side		,
+	ModelWeaponPart = Suppressor_Bottle		Suppressor_Bottle suppressor suppressor	,
+	ModelWeaponPart = GhostRing            		GhostRing reddot reddot	,
+	ModelWeaponPart = Sight_MicroDot 		Sight_MicroDot reddot reddot	,
+	ModelWeaponPart = Sight_RaceDot 		Sight_RaceDot scope scope	,
+	ModelWeaponPart = Sight_SRS       		Sight_SRS reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint       		Sight_Aimpoint  reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint_Dot       	Sight_Aimpoint_Dot  reddot reddot	,
+	ModelWeaponPart = Sight_Fiber_Shotgun 		Sight_Fiber_Shotgun scope scope	,
+	ModelWeaponPart = Sight_Mepro_M21      		Sight_Mepro_M21 reddot reddot	,
+	ModelWeaponPart = Sight_Mepro_MOR      		Sight_Mepro_MOR reddot reddot	,
+	ModelWeaponPart = Sight_UH1      		Sight_UH1 reddot reddot	,
+	ModelWeaponPart = Sight_C79			Sight_C79 scope scope	,
+	ModelWeaponPart = Sight_SUSAT			Sight_SUSAT scope scope	,
+	ModelWeaponPart = Sight_Raven			Sight_Raven scope scope	,
+	ModelWeaponPart = Sight_G28_Scope		Sight_G28_Scope scope scope	,
+	ModelWeaponPart = Sight_EOTech      		Sight_EOTech reddot reddot	,
+	ModelWeaponPart = Sight_3xEOTech		Sight_3xEOTech scope scope	,
+	ModelWeaponPart = Sight_4xACOG    		Sight_4xACOG scope scope	,
+	ModelWeaponPart = Sight_6xELCAN  		Sight_6xELCAN scope scope	,
+	ModelWeaponPart = Scope_1-4x         		Scope_1-4x scope scope	,
+	ModelWeaponPart = Scope_20x           		Scope_20x scope scope	,
+	ModelWeaponPart = Sight_KOBRA        		Sight_KOBRA scope2 scope2	,
+	ModelWeaponPart = Scope_4xPSO            	Scope_4xPSO scope2 scope2	,
+	ModelWeaponPart = Scope_12xPSO    		Scope_12xPSO scope2 scope2	,
+	ModelWeaponPart = Sight_Thermal   		Sight_Thermal scope scope	,
+	ModelWeaponPart = Sight_Thermal_AK   		Sight_Thermal_AK scope2 scope2	,
+	ModelWeaponPart = Sight_ACRO      		Sight_ACRO reddot reddot	,
+	ModelWeaponPart = Sight_MRO      		Sight_MRO reddot reddot	,
+	ModelWeaponPart = Sight_SRO      		Sight_SRO reddot reddot	,
+	ModelWeaponPart = Sight_Nikon      		Sight_Nikon reddot reddot	,
+	ModelWeaponPart = Sight_M8      		Sight_M8 scope scope	,
+	ModelWeaponPart = Sight_VX3      		Sight_VX3 scope scope	,
+	ModelWeaponPart = Sight_1P63        		Sight_1P63 scope2 scope2	,
+	ModelWeaponPart = Sight_Brownells      		Sight_Brownells scope scope	,
+	ModelWeaponPart = Sight_L2      		Sight_L2 scope scope	,
+	ModelWeaponPart = Sight_LUX      		Sight_LUX scope scope	,
+	ModelWeaponPart = Sight_Malcom      		Sight_Malcom scope scope	,
+	ModelWeaponPart = Sight_NO32      		Sight_NO32 scope2 scope2	,
+	ModelWeaponPart = Sight_PKAS      		Sight_PKAS scope scope	,
+	ModelWeaponPart = Sight_PU        		Sight_PU scope2 scope2	,
+	ModelWeaponPart = Sight_PVS4      		Sight_PVS4 scope scope	,
+	ModelWeaponPart = Sight_XPS      		Sight_XPS reddot reddot	,
+	ModelWeaponPart = Laser_DVAL	    		Laser_DVAL    side  side		,
+	ModelWeaponPart = Laser_PEQ15	    		Laser_PEQ15    side  side		,
+	ModelWeaponPart = Grip_Magpul          		Grip_Magpul foregrip foregrip	,
+	ModelWeaponPart = Grip_MLOK           		Grip_MLOK foregrip foregrip	,
+	ModelWeaponPart = Grip_TG           		Grip_TG foregrip foregrip	,
+	}			
+
+	model RWS_M34_OPEN
+	{
+		mesh = weapons/firearm/RWS_M34_OPEN,
+		texture = weapons/firearm/RWS_M34,
+
+		attachment foregrip		
+		{		
+			offset = 0.0000 0.0453 -0.0060,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment side		
+		{		
+			offset = -0.0050 0.1540 0.0058,	
+			rotate = 0.0000 90.0000 0.0000,	
+		}		
+		attachment suppressor		
+		{		
+			offset = 0.0000 0.3280 0.0140,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+/*		attachment muzzle		
+		{		
+			offset = 0.0000 0.0000 0.0000,	
+			rotate = -90.0000 0.0000 0.0000,	
+		}						*/
+		attachment reddot		
+		{		
+			offset = 0.0000 0.1140 -0.0210,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope		
+		{		
+			offset = 0.0000 0.0472 -0.0202,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope2		
+		{		
+			offset = -0.0020 0.0454 -0.0070,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}
+	}
+				
+	model RWS_M34
+	{			
+		mesh = weapons/firearm/RWS_M34,
+		texture = weapons/firearm/RWS_M34,
+				
+		attachment foregrip		
+		{		
+			offset = 0.0000 0.0453 -0.0060,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment side		
+		{		
+			offset = -0.0050 0.1540 0.0058,	
+			rotate = 0.0000 90.0000 0.0000,	
+		}		
+		attachment suppressor		
+		{		
+			offset = 0.0000 0.3280 0.0140,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+/*		attachment muzzle		
+		{		
+			offset = 0.0000 0.0000 0.0000,	
+			rotate = -90.0000 0.0000 0.0000,	
+		}						*/
+		attachment reddot		
+		{		
+			offset = 0.0000 0.1140 -0.0210,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope		
+		{		
+			offset = 0.0000 0.0472 -0.0202,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope2		
+		{		
+			offset = -0.0020 0.0454 -0.0070,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+	}			
+				
+	fixing Fix RWS_M34
+	{			
+		Require : RWS_M34,
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}
+
+
+
+	item	Benjamin_M397	{
+				
+	DisplayName                 	=	Benjamin M397 Pump BB Gun	,
+	Icon                        	=	Benjamin_M397,
+	WeaponSprite                	=	Benjamin_M397,
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	haveChamber                	=	FALSE,	
+	WeaponReloadType            	=	Benjamin_M397,
+	FireMode                    	=	Single,	
+	AttachmentType              	=	Rifle,	
+	UseEndurance                	=	FALSE,	
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	10	,
+	AimingPerkRangeModifier     	=	3	,
+	MinDamage                   	=	0.02	,
+	MaxDamage                   	=	0.03	,
+	CriticalChance              	=	0	,
+	CritDmgMultiplier            	=	0,	
+	AimingPerkCritModifier      	=	0,	
+	HitChance                   	=	48	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	18	,
+	MinAngle                     	=	0.950	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50	,
+	ConditionLowerChanceOneIn   	=	60	,
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.04	,
+	AimingTime                  	=	23	,
+	ReloadTime                  	=	50,	
+	SwingTime                   	=	0.8	,
+	MinimumSwingTime            	=	0.8	,
+	SwingAmountBeforeImpact     	=	0,	
+	RecoilDelay                 	=	16	,
+	Weight                      	=	2.8	,
+	OAL				=	2.4	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.BB177,	
+	AmmoBox                     	=	BB177Box,	
+	MaxAmmo                     	=	1,	
+	ProjectileCount             	=	1,	
+	MaxHitCount                 	=	1,	
+	ShareDamage                 	=	FALSE,	
+	SplatNumber                 	=	1,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	0,	
+	DoorDamage                  	=	1,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	MetalValue                  	=	30,	
+	SoundVolume                 	=	6,	
+	SoundRadius                 	=	6,	
+	SoundGain                   	=	1.5,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	22LRshot,	
+	InsertAmmoSound             	=	DT11StormyShotgunInsertRound,	
+	EjectAmmoSound              	=	Stormy9mmClipEject,	
+	RackSound                   	=	R11-87stormyShotgunPump,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,	
+	/* =========== ATTACHMENT DATA ============ */			
+	ModelWeaponPart = ForeGrip           		ForeGrip foregrip foregrip	,
+	ModelWeaponPart = Carrier_12g          		Carrier_12g carrier carrier	,
+	ModelWeaponPart = Sling               		Sling_1 sling sling	,
+	ModelWeaponPart = Light_Small			Light_Small  side  side		,
+	ModelWeaponPart = Light_Large			Light_Large  side  side		,
+	ModelWeaponPart = Laser_Green	  		Laser_Green  side  side		,
+	ModelWeaponPart = Laser_Red	    		Laser_Red    side  side		,
+	ModelWeaponPart = Suppressor_Bottle		Suppressor_Bottle suppressor suppressor	,
+	ModelWeaponPart = GhostRing            		GhostRing reddot reddot	,
+	ModelWeaponPart = Sight_MicroDot 		Sight_MicroDot reddot reddot	,
+	ModelWeaponPart = Sight_RaceDot 		Sight_RaceDot scope scope	,
+	ModelWeaponPart = Sight_SRS       		Sight_SRS reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint       		Sight_Aimpoint  reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint_Dot       	Sight_Aimpoint_Dot  reddot reddot	,
+	ModelWeaponPart = Sight_Fiber_Shotgun 		Sight_Fiber_Shotgun scope scope	,
+	ModelWeaponPart = Sight_Mepro_M21      		Sight_Mepro_M21 reddot reddot	,
+	ModelWeaponPart = Sight_Mepro_MOR      		Sight_Mepro_MOR reddot reddot	,
+	ModelWeaponPart = Sight_UH1      		Sight_UH1 reddot reddot	,
+	ModelWeaponPart = Sight_C79			Sight_C79 scope scope	,
+	ModelWeaponPart = Sight_SUSAT			Sight_SUSAT scope scope	,
+	ModelWeaponPart = Sight_Raven			Sight_Raven scope scope	,
+	ModelWeaponPart = Sight_G28_Scope		Sight_G28_Scope scope scope	,
+	ModelWeaponPart = Sight_EOTech      		Sight_EOTech reddot reddot	,
+	ModelWeaponPart = Sight_3xEOTech		Sight_3xEOTech scope scope	,
+	ModelWeaponPart = Sight_4xACOG    		Sight_4xACOG scope scope	,
+	ModelWeaponPart = Sight_6xELCAN  		Sight_6xELCAN scope scope	,
+	ModelWeaponPart = Scope_1-4x         		Scope_1-4x scope scope	,
+	ModelWeaponPart = Scope_20x           		Scope_20x scope scope	,
+	ModelWeaponPart = Sight_KOBRA        		Sight_KOBRA scope2 scope2	,
+	ModelWeaponPart = Scope_4xPSO            	Scope_4xPSO scope2 scope2	,
+	ModelWeaponPart = Scope_12xPSO    		Scope_12xPSO scope2 scope2	,
+	ModelWeaponPart = Sight_Thermal   		Sight_Thermal scope scope	,
+	ModelWeaponPart = Sight_Thermal_AK   		Sight_Thermal_AK scope2 scope2	,
+	ModelWeaponPart = Sight_ACRO      		Sight_ACRO reddot reddot	,
+	ModelWeaponPart = Sight_MRO      		Sight_MRO reddot reddot	,
+	ModelWeaponPart = Sight_SRO      		Sight_SRO reddot reddot	,
+	ModelWeaponPart = Sight_Nikon      		Sight_Nikon reddot reddot	,
+	ModelWeaponPart = Sight_M8      		Sight_M8 scope scope	,
+	ModelWeaponPart = Sight_VX3      		Sight_VX3 scope scope	,
+	ModelWeaponPart = Sight_1P63        		Sight_1P63 scope2 scope2	,
+	ModelWeaponPart = Sight_Brownells      		Sight_Brownells scope scope	,
+	ModelWeaponPart = Sight_L2      		Sight_L2 scope scope	,
+	ModelWeaponPart = Sight_LUX      		Sight_LUX scope scope	,
+	ModelWeaponPart = Sight_Malcom      		Sight_Malcom scope scope	,
+	ModelWeaponPart = Sight_NO32      		Sight_NO32 scope2 scope2	,
+	ModelWeaponPart = Sight_PKAS      		Sight_PKAS scope scope	,
+	ModelWeaponPart = Sight_PU        		Sight_PU scope2 scope2	,
+	ModelWeaponPart = Sight_PVS4      		Sight_PVS4 scope scope	,
+	ModelWeaponPart = Sight_XPS      		Sight_XPS reddot reddot	,
+	ModelWeaponPart = Laser_DVAL	    		Laser_DVAL    side  side		,
+	ModelWeaponPart = Laser_PEQ15	    		Laser_PEQ15    side  side		,
+	ModelWeaponPart = Grip_Magpul          		Grip_Magpul foregrip foregrip	,
+	ModelWeaponPart = Grip_MLOK           		Grip_MLOK foregrip foregrip	,
+	ModelWeaponPart = Grip_TG           		Grip_TG foregrip foregrip	,
+	}			
+
+	model Benjamin_M397_OPEN
+	{
+		mesh = weapons/firearm/Benjamin_M397_OPEN,
+		texture = weapons/firearm/Benjamin_M397,
+
+		attachment foregrip		
+		{		
+			offset = 0.0000 0.0690 -0.0098,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment side		
+		{		
+			offset = -0.0050 0.1060 0.0058,	
+			rotate = 0.0000 90.0000 0.0000,	
+		}		
+		attachment suppressor		
+		{		
+			offset = 0.0000 0.3360 0.0163,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+/*		attachment muzzle		
+		{		
+			offset = 0.0000 0.0000 0.0000,	
+			rotate = -90.0000 0.0000 0.0000,	
+		}						*/
+		attachment reddot		
+		{		
+			offset = 0.0000 0.1390 -0.0178,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope		
+		{		
+			offset = 0.0000 0.0458 -0.0130,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope2		
+		{		
+			offset = -0.0020 0.0446 -0.0105,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}
+	}
+
+	model Benjamin_M397
+	{			
+		mesh = weapons/firearm/Benjamin_M397,
+		texture = weapons/firearm/Benjamin_M397,
+				
+		attachment foregrip		
+		{		
+			offset = 0.0000 0.0690 -0.0098,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment side		
+		{		
+			offset = -0.0050 0.1060 0.0058,	
+			rotate = 0.0000 90.0000 0.0000,	
+		}		
+		attachment suppressor		
+		{		
+			offset = 0.0000 0.3360 0.0163,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+/*		attachment muzzle		
+		{		
+			offset = 0.0000 0.0000 0.0000,	
+			rotate = -90.0000 0.0000 0.0000,	
+		}						*/
+		attachment reddot		
+		{		
+			offset = 0.0000 0.1390 -0.0178,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope		
+		{		
+			offset = 0.0000 0.0458 -0.0130,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope2		
+		{		
+			offset = -0.0020 0.0446 -0.0105,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+	}			
+				
+	fixing Fix Benjamin_M397
+	{			
+		Require : Benjamin_M397,
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}			
+}

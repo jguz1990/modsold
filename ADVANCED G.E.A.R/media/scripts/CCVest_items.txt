@@ -1,0 +1,19 @@
+module Base
+{
+    
+  item CCVest
+    {
+        Type = Clothing,
+        DisplayName = Sheepdog Concealed Carry Vest,
+        ClothingItem = CCVest,
+        BodyLocation = TorsoExtra,
+        Icon = Huntingvest_Grey,
+        IconsForTexture =  Huntingvest_Grey;Huntingvest_Green;CCVest2,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.90,
+        WindResistance = 0.80,
+        AttachmentsProvided = CCVest,
+    }
+
+}
+

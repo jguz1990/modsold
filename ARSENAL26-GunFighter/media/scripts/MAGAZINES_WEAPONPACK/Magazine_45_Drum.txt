@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 45Drum
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	45-ACP Drum Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	45Drum,
+        MaxAmmo 	=	40,
+        AmmoType 	=	Base.Bullets45,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

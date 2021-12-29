@@ -1,0 +1,3 @@
+Recipe_PL = {
+Recipe_Create_BobbyPin = "Zrób wytrych"
+}

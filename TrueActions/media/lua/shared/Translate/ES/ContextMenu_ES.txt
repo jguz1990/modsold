@@ -1,0 +1,5 @@
+ContextMenu_ES = {
+	ContextMenu_Sit = "Sentarse",
+	ContextMenu_Lie = "Acostarse",
+	ContextMenu_OnSleep = "Acostarse para dormir",
+}

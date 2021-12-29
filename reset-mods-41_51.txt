@@ -1,0 +1,1 @@
+If this file does not exist, default.txt will be reset to empty (no mods active).

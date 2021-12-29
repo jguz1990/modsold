@@ -1,0 +1,154 @@
+module HBM
+{
+imports
+	{
+		Base
+	}
+
+/* STRENGTH */
+
+
+	item BookStrength1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Str_1,
+        Icon	=	FBStr,
+        SkillTrained = Strength,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+	item BookStrength2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Str_2,
+        Icon	=	FBStr,
+        SkillTrained = Strength,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookStrength3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Str_3,
+        Icon	=	FBStr,
+        SkillTrained = Strength,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookStrength4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Str_4,
+        Icon	=	FBStr,
+        SkillTrained = Strength,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookStrength5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Str_5,
+        Icon	=	FBStr,
+        SkillTrained = Strength,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+/* FITNESS */
+
+
+	item BookFitness1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Fit_1,
+        Icon	=	FBFit,
+        SkillTrained = Fitness,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+	item BookFitness2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Fit_2,
+        Icon	=	FBFit,
+        SkillTrained = Fitness,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookFitness3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Fit_3,
+        Icon	=	FBFit,
+        SkillTrained = Fitness,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookFitness4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Fit_4,
+        Icon	=	FBFit,
+        SkillTrained = Fitness,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+	
+		item BookFitness5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.01,
+        Type	=	Literature,
+        DisplayName	=	FBM_Fit_5,
+        Icon	=	FBFit,
+        SkillTrained = Fitness,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+}

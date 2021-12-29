@@ -1,0 +1,223 @@
+module Base
+{
+	model ATA_Bus_Roof_Barrel_1
+	{
+		mesh = vehicles/ATA_Bus_parts|Barrel_1,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_Barrel_2
+	{
+		mesh = vehicles/ATA_Bus_parts|Barrel_2,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_Box
+	{
+		mesh = vehicles/ATA_Bus_parts|Box,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	
+	model ATA_Bus_Roof_Fench
+	{
+		mesh = vehicles/ATA_Bus_parts|Fench,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_GasCan_1
+	{
+		mesh = vehicles/ATA_Bus_parts|GasCan_1,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_GasCan_2
+	{
+		mesh = vehicles/ATA_Bus_parts|GasCan_2,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_Pipes
+	{
+		mesh = vehicles/ATA_Bus_parts|Pipes,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_Pipes1
+	{
+		mesh = vehicles/ATA_Bus_parts|Pipes1,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_Pipes2
+	{
+		mesh = vehicles/ATA_Bus_parts|Pipes2,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+		
+	model ATA_Bus_Roof_Tent
+	{
+		mesh = vehicles/ATA_Bus_parts|Tent,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Roof_TentBox
+	{
+		mesh = vehicles/ATA_Bus_parts|TentBox,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	
+	template vehicle ATA_Bus_Roof
+	{
+		template = ATAInteractiveTrunk/part/ATAInteractiveTrunkRoofRack,
+		part ATAInteractiveTrunkRoofRack
+		{
+			area = RoofRack,
+			itemType = Autotsar.ATA_Bus_Roof_Rack,
+			model MetalDrum1
+			{
+				file = ATA_Bus_Roof_Barrel_1,
+			}
+			model MetalDrum2
+			{
+				file = ATA_Bus_Roof_Barrel_2,
+			}
+			model Fench
+			{
+				file = ATA_Bus_Roof_Fench,
+			}
+			model GasCan1
+			{
+				file = ATA_Bus_Roof_GasCan_1,
+			}
+			model GasCan2
+			{
+				file = ATA_Bus_Roof_GasCan_2,
+			}
+			model Pipe
+			{
+				file = ATA_Bus_Roof_Pipes,
+			}
+			model Pipes1
+			{
+				file = ATA_Bus_Roof_Pipes1,
+			}
+			model Pipes2
+			{
+				file = ATA_Bus_Roof_Pipes2,
+			}
+			model Tarp
+			{
+				file = ATA_Bus_Roof_Tent,
+			}
+			model TentBox
+			{
+				file = ATA_Bus_Roof_TentBox,
+			}
+			
+			table interactiveItems 
+			{
+				Base = Fench,
+				fullness
+				{
+					1 = TentBox,
+				}
+				MetalDrum
+				{
+					1 = MetalDrum1,
+					2 = MetalDrum2,
+				}
+				PetrolCan#EmptyPetrolCan
+				{
+					1 = GasCan1,
+					2 = GasCan2,
+				}
+				Tarp
+				{
+					1 = Tarp,
+				}
+				Pipe#MetalPipe#LeadPipe
+				{
+					1 = Pipe,
+					2 = Pipes1,
+					3 = Pipes2,
+				}
+			}
+		}
+		part ATARoofRackToolbox
+		{
+			model Default
+			{
+				file = ATA_Bus_Roof_Box,
+			}
+
+			area = RoofRack,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Roof_Box_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				/* FIXME: This should be "ContainerAccess.Trunk" */
+				test = Vehicles.ContainerAccess.TruckBedOpen,
+			}
+			
+			table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 1000,
+				recipes = Basic Tuning,
+				requireInstalled = ATAInteractiveTrunkRoofRack,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.DefaultModel,
+            }
+            table uninstall
+            {
+                requireEmpty = true,
+				items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 1000,
+				recipes = Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.DefaultModel,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+			}
+		}
+	}
+}

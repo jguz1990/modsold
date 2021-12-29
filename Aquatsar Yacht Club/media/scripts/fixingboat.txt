@@ -1,0 +1,20 @@
+module Base
+{
+	fixing Fix BoatPropeller Welding
+	{
+	   Require : BoatPropeller,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+       Fixer : SheetMetal; MetalWelding=2,
+       Fixer : SmallSheetMetal=2; MetalWelding=2,
+	}
+	
+    fixing Fix ManualStarter
+	{
+	   Require : ManualStarter,
+	   GlobalItem : ElectronicsScrap=1,
+	   ConditionModifier : 1.2,
+       Fixer : Wire; Electricity=4,
+       Fixer : Radio.ElectricWire; Electricity=4,
+	}
+}

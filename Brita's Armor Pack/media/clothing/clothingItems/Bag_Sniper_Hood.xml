@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Sniper_Hood</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Sniper_Hood</m_FemaleModel>
+	<m_GUID>abbe1f42-738d-4ba8-9c92-a7fec28bea12</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_HatCategory>Group04</m_HatCategory>
+	<m_MasksFolder>media/textures/Clothes/Hat/Masks</m_MasksFolder>
+	<textureChoices>clothes\Bag\Bag_Sniper_Hood</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Sniper_Hood2</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Sniper_Hood3</textureChoices>	
+</clothingItem>

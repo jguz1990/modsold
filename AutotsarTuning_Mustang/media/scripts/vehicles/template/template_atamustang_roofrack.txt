@@ -1,0 +1,165 @@
+module Base
+{
+	model ATAMustangRoofrack
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_trunk,
+		texture = Vehicles/ATA_Mustang_items,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangRoofBag1
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_bag1,
+		texture = DuffelBagBlue,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangRoofBag2
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_bag2,
+		texture = DuffelBagGreen,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangRoofBag3
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_bag3,
+		texture = DuffelBagWhite,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangRoofCase1
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_case1,
+		texture = clothes/bag/Suitcase,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangRoofCase2
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_case2,
+		texture = clothes/bag/Suitcase,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangCooler
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_Cooler,
+		texture = clothes/bag/Cooler,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangGasCan1
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_GasCan1,
+		texture = GasCan,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangGasCan2
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_GasCan2,
+		texture = GasCan,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangGasCan3
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_GasCan3,
+		texture = GasCan,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	model ATAMustangGuitarCase
+	{
+		mesh = vehicles/ATA_Mustang_model|Roof_guitar,
+		texture = clothes/bag/ClassicGuitarCase,
+		shader = vehiclewheel,
+		scale = 0.02,
+	}
+	
+	template vehicle ATAMustang_RoofRack
+	{
+		template = ATAInteractiveTrunk/part/ATAInteractiveTrunkRoofRack,
+		part ATAInteractiveTrunkRoofRack
+		{
+			area = ATARoof,
+			itemType = Autotsar.ATAMustangRoofRackItem,
+			model ATAMustangRoofrack
+			{
+				file = ATAMustangRoofrack,
+			}
+			model ATAMustangRoofBag1
+			{
+				file = ATAMustangRoofBag1,
+			}
+			model ATAMustangRoofBag2
+			{
+				file = ATAMustangRoofBag2,
+			}
+			model ATAMustangRoofBag3
+			{
+				file = ATAMustangRoofBag3,
+			}
+			model ATAMustangRoofCase1
+			{
+				file = ATAMustangRoofCase1,
+			}
+			model ATAMustangRoofCase2
+			{
+				file = ATAMustangRoofCase2,
+			}
+			model ATAMustangCooler
+			{
+				file = ATAMustangCooler,
+			}
+			model ATAMustangGasCan1
+			{
+				file = ATAMustangGasCan1,
+			}
+			model ATAMustangGasCan2
+			{
+				file = ATAMustangGasCan2,
+			}
+			model ATAMustangGasCan3
+			{
+				file = ATAMustangGasCan3,
+			}
+			model ATAMustangGuitarCase
+			{
+				file = ATAMustangGuitarCase,
+			}
+			
+			table interactiveItems 
+			{
+				Base = ATAMustangRoofrack,
+				fullness
+				{
+					1 = ATAMustangRoofBag1,
+					2 = ATAMustangRoofBag2,
+					3 = ATAMustangRoofBag3,
+				}
+				Suitcase
+				{
+					1 = ATAMustangRoofCase1,
+					2 = ATAMustangRoofCase2,
+				}
+				Cooler
+				{
+					1 = ATAMustangCooler,
+				}
+				
+				PetrolCan#EmptyPetrolCan
+				{
+					1 = ATAMustangGasCan1,
+					2 = ATAMustangGasCan2,
+					3 = ATAMustangGasCan3,
+				}
+				Guitarcase
+				{
+					1 = ATAMustangGuitarCase,
+				}
+			}
+		}
+	}
+}

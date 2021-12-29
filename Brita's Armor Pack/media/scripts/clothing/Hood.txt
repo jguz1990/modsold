@@ -1,0 +1,17 @@
+module Base
+{
+    item Bag_Sniper_Hood
+    {
+        Type = Clothing,
+        DisplayName = Sniper Viper Hood,
+        ClothingItem = Bag_Sniper_Hood,
+        BodyLocation = Necklace_Long,
+        Weight	=	0.01,
+        Icon	=	Bag_Sniper_Hood,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 1,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+    }
+}

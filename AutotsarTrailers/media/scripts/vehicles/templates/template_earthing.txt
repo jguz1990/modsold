@@ -1,0 +1,68 @@
+module Base
+{
+    template vehicle Earthing
+    {
+		part EarthingOn
+		{
+			lua
+			{
+				init = Trailers.Init.EarthingOn,
+				create = Trailers.Create.EarthingOn,
+				update = Trailers.Update.EarthingOn,
+			}
+		}
+		
+		part EarthingOff
+		{
+			lua
+			{
+				create = Trailers.Create.EarthingOff,
+			}
+		}
+		
+		part Earthing*
+		{
+			area = Engine,
+			/**/
+			category = nodisplay,
+			specificItem = false,
+			mechanicRequireKey = false,
+			itemType = Base.LightBulb,
+			
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+
+				time = 100,
+				test = Vehicles.InstallTest.Default,
+			}
+
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+
+				time = 100,
+				test = Vehicles.UninstallTest.Default,
+			}
+		}
+	}
+}
+

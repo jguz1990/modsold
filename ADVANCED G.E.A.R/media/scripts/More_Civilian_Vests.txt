@@ -1,0 +1,53 @@
+module Base
+{
+ 
+    item Vest_BulletEMS
+    {
+        Type = Clothing,
+        DisplayName = EMS Bulletproof Vest,
+        ClothingItem = Vest_BulletEMS,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestEMS,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.6,
+        WindResistance = 0.25,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+        AttachmentsProvided = ChestRigRight,
+	Tooltip = A ballistic vest. Able to absorb various types of impact damage. Used by various organizations around the world.,
+    }
+
+    item Vest_BulletFire
+    {
+        Type = Clothing,
+        DisplayName = Fire Dept. Bulletproof Vest,
+        ClothingItem = Vest_BulletFire,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestFire,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.6,
+        WindResistance = 0.25,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+        AttachmentsProvided = ChestRigRight,
+	Tooltip = A ballistic vest. Able to absorb various types of impact damage. Used by various organizations around the world.,
+    }  
+   
+    item Vest_BulletPress
+    {
+        Type = Clothing,
+        DisplayName = Press Bulletproof Vest,
+        ClothingItem = Vest_BulletPress,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestPress,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.6,
+        WindResistance = 0.25,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+	Tooltip = An armored vest of the 3rd class of protection for the journalists working in combat zones.,
+    }
+}

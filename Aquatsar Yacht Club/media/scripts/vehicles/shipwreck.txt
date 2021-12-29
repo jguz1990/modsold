@@ -1,0 +1,76 @@
+module Base
+{
+	model BoatSailingYacht_shipwreck_body
+	{
+		mesh = boats/Shipwreck_SailingBoat,
+        shader = vehicle,
+        static = TRUE,
+        scale = 0.0011,
+	}
+	vehicle BoatSailingYacht_shipwreckland
+	{
+		model
+		{
+			file = BoatSailingYacht_shipwreck_body,
+			scale = 8.0000,
+			offset = 0.0000 0.0000 0.0000,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_1,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_2,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_3,
+		}
+
+		textureShadow = Shadows/SailingYacht_shipwreck_shadow,
+		shadowExtents = 0.7100 1.1838,
+		shadowOffset = 0.1538 0.0313,
+		
+		mass = 5000,
+		extents = 0.3425 0.1375 0.9975,
+		physicsChassisShape = 0.3425 0.1450 0.9975,
+		centerOfMassOffset = -0.0288 0.0725 0.0575,
+	}
+	vehicle BoatSailingYacht_shipwreckwater
+	{
+		model
+		{
+			file = BoatSailingYacht_shipwreck_body,
+			scale = 8.0000,
+			offset = 0.0000 0.0000 0.0000,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_1,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_2,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_shipwreck_3,
+		}
+		
+		textureShadow = Shadows/SailingYacht_shipwreck_shadow,
+		shadowExtents = 0.7100 1.1838,
+		shadowOffset = 0.1538 0.0313,
+		
+		mass = 5000,
+		extents = 0.7025 0.1625 1.1850,
+		physicsChassisShape = 0.7025 0.1625 1.1850,
+		centerOfMassOffset = 0.1325 0.3350 0.0313,
+	}
+}

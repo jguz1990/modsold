@@ -1,0 +1,67 @@
+module Base
+{
+	model ragerbaseballbat
+	{
+		mesh = weapons/2handed/ragerbaseballbat,
+                                        texture = weapons/2handed/ragerbaseballbattexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model ragerbaseballbatnailmod
+	{
+		mesh = weapons/2handed/ragerbaseballbatnailmod,
+                                        texture = weapons/2handed/ragerbaseballbatnailmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+	
+	model ragerbaseballbatbarbedmod
+	{
+		mesh = weapons/2handed/ragerbaseballbatbarbedmod,
+                                        texture = weapons/2handed/ragerbaseballbatbarbedmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model ragerbaseballbataxemod
+	{
+		mesh = weapons/2handed/ragerbaseballbataxemod,
+                                        texture = weapons/2handed/ragerbaseballbataxemodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model ragerbaseballbatheavymod
+	{
+		mesh = weapons/2handed/ragerbaseballbatheavymod,
+                                        texture = weapons/2handed/ragerbaseballbatheavymodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+}

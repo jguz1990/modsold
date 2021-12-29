@@ -1,0 +1,5 @@
+name=Brita's Weapon Pack
+id=Brita
+poster=preview.png
+description=New weapons added
+require=Arsenal(26)GunFighter

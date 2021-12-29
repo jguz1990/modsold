@@ -1,0 +1,45 @@
+module Base
+{
+  
+
+
+sound Beep1
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Beep1.ogg,
+		}
+	}
+	sound Beep2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Beep2.ogg,
+		}
+	}
+	sound Key1
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/key1.ogg,
+		}
+		/*clip
+		{
+			file = media/sound/key2.ogg,
+		}*/
+	}
+	sound Key2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/key2.ogg,
+		}
+	}
+
+
+}
+

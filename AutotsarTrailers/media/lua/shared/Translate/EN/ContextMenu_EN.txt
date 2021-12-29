@@ -1,0 +1,7 @@
+ContextMenu_EN = {
+	ContextMenu_Close_trunk = "Close trunk",
+	ContextMenu_Open_trunk = "Open trunk",
+	ContextMenu_TrailerSpotlightOn = "Turn Spotlights on",
+	ContextMenu_TrailerSpotlightOff = "Turn Spotlights off",
+	ContextMenu_Turn_On_Generator = "Start generator",
+}

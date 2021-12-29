@@ -1,0 +1,5 @@
+IG_UI_DE = {
+	IGUI_VehiclePartCatGenerator = "Generator",
+	IGUI_VehiclePartEarthingOn = "Erdung",
+	IGUI_VehiclePartEarthingOff = "Netzkabel abgezogen",
+}

@@ -1,0 +1,7 @@
+UI_EN = {
+    UI_VehicleRecycling_OverrideBurnt = "Dismantle Burnt Vehicles",
+    UI_VehicleRecycling_OverrideSmashed = "Dismantle Smashed Vehicles",
+    UI_VehicleRecycling_Override_Tooltip = "Overrides vanilla "Dismantle Car Wreck" action",
+    UI_VehicleRecycling_DropJunk = "Drop Items From Containers",
+    UI_VehicleRecycling_DropJunk_Tooltip = "Drop items from the vehicle's trunk, glove box, seats.",
+}

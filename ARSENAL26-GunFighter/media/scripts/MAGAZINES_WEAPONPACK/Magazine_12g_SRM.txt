@@ -1,0 +1,46 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item SRM1208_Cylinder
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	SRM1208 12g Cylinder,
+	DisplayCategory	=	GunMag,
+        Icon		=	SRM1208_Cylinder,
+        MaxAmmo 	=	8,
+        AmmoType 	=	Base.ShotgunShells,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+    item SRM1212_Cylinder
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	SRM1212 12g Cylinder,
+	DisplayCategory	=	GunMag,
+        Icon		=	SRM1212_Cylinder,
+        MaxAmmo 	=	12,
+        AmmoType 	=	Base.ShotgunShells,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+    item SRM1216_Cylinder
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	SRM1216 12g Cylinder,
+	DisplayCategory	=	GunMag,
+        Icon		=	SRM1216_Cylinder,
+        MaxAmmo 	=	16,
+        AmmoType 	=	Base.ShotgunShells,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

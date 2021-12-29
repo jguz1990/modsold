@@ -1,0 +1,65 @@
+module Base
+{
+	item Gloves_FingerlessGloves
+	{
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		DisplayName = Fingerless Gloves,
+		ClothingItem = Gloves_FingerlessGloves,
+		BodyLocation = Hands,
+		BloodLocation = Hands,
+		Icon = GlovesFingerlessWhite,
+		Weight = 0.1,
+        Insulation = 0.25,
+        WindResistance = 0.3,
+		FabricType = Cotton,
+		WorldStaticModel = Gloves_Ground,
+	}
+	
+	item Gloves_Surgical
+	{
+	    DisplayCategory = Accessory,
+		Type = Clothing,
+		DisplayName = Surgical Gloves,
+		ClothingItem = Gloves_Surgical,
+		BodyLocation = Hands,
+		BloodLocation = Hands,
+		Icon = GlovesSurgical,
+		Weight = 0.1,
+        Insulation = 0.25,
+        WindResistance = 0.3,
+		FabricType = Denim,
+        WorldStaticModel = Gloves_Ground,
+	}
+	
+    item Gloves_BoxingRed
+	{
+		Type = Clothing,
+		DisplayName = Boxing Gloves,
+		ClothingItem = Gloves_BoxingRed,
+		BodyLocation = Hands,
+		BloodLocation = Hands,
+		Icon = BoxingGloves_Red,
+		Weight = 0.1,
+        Insulation = 0.25,
+        WindResistance = 0.3,
+		FabricType = Leather,
+        WorldStaticModel = BoxingGlovesRed_Ground,
+	}
+    item Gloves_BoxingBlue
+	{
+		Type = Clothing,
+		DisplayName = Boxing Gloves,
+		ClothingItem = Gloves_BoxingBlue,
+		BodyLocation = Hands,
+		BloodLocation = Hands,
+		Icon = BoxingGloves_Blue,
+		Weight = 0.1,
+        Insulation = 0.25,
+        WindResistance = 0.3,
+		FabricType = Leather,
+        WorldStaticModel = BoxingGlovesBlue_Ground,
+	}	
+
+
+}

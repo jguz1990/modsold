@@ -1,0 +1,51 @@
+module Base
+{
+
+   item RemoteCraftedV1
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V1 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   7,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+        StaticModel = WalkieTalkieMakeshift2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+
+    item RemoteCraftedV2
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V2 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   11,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+        StaticModel = WalkieTalkieMakeshift2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+
+    item RemoteCraftedV3
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V3 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   15,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+        StaticModel = WalkieTalkieMakeshift2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+}

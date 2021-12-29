@@ -1,0 +1,60 @@
+module Base
+{
+    imports    
+    {
+		Base
+	}
+
+	item PushDagger
+	{
+		MaxRange	=	0.5,
+		WeaponSprite	=	PushDagger,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		ConditionLowerChanceOneIn	=	2,
+		Weight	=	0.2,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	50,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		DisplayName	=	PushDagger,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	PushDagger,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   1,
+        EnduranceMod = 0.5,
+        MetalValue = 10,
+        CriticalChance	=	25,
+        CritDmgMultiplier = 4,
+        MinDamage	=	0.2,
+        MaxDamage	=	0.7,
+		WeaponLength = 0.16,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+		AttachmentType = Knife,
+        Tags = CutPlant,
+	}
+
+	model PushDagger
+	{
+		mesh = weapons/1handed/PushDagger,
+	}
+}

@@ -1,0 +1,40 @@
+module Base
+{
+
+	item Bolt_Bear
+	{
+		Count		=	5,
+		Weight		=	0.010,
+		Type		=	Normal,
+		DisplayCategory =	Ammo,
+		DisplayName	=	BearX Carbon Crossbow Bolt,
+		Icon		=	Bolt_Bear,
+		MetalValue 	=	1,
+	}
+	item Bolt_Bear_Pack
+	{
+		Weight		=	0.65,
+		Type		=	Normal,
+		DisplayName	=	Pack of BearX Carbon Cossbow Bolts,
+		DisplayCategory	=	Ammo,
+		Icon		=	Bolt_Bear_Pack,
+		MetalValue 	=	30,
+	}
+
+	recipe Open Pack Bolt_Bear_Pack
+	{
+		Bolt_Bear_Pack,
+		Result:Bolt_Bear=10,
+		Category:Firearm,
+		Sound:PutItemInBag,
+		Time:5.0,
+	}
+	recipe Place Bolt_Bear_Pack in Pack
+	{
+		Bolt_Bear=50,
+		Result:Bolt_Bear_Pack,
+		Category:Firearm,
+		Sound:PutItemInBag,
+		Time:5.0,
+	}
+}

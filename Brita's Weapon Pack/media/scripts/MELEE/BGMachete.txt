@@ -1,0 +1,55 @@
+module Base
+{
+    imports    
+    {
+		Base
+	}
+
+	item BGMachete
+	{
+        MaxRange	=	1.23,
+        WeaponSprite	=	BGMachete,
+        MinAngle	=	0.7,
+        Type	=	Weapon,
+        HitFloorSound	=	BladeHit,
+		ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	LongBlade,
+        ConditionLowerChanceOneIn	=	25,
+        Weight	=	2,
+        SplatNumber	=	2,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	13,
+        MaxHitCount	=	2,
+        DoorDamage	=	10,
+        SwingAnim	=	Bat,
+        DisplayName	=	BGMachete,
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	2,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	BGMachete,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   10,
+        CriticalChance	=	20,
+        CritDmgMultiplier = 5,
+        MinDamage	=	2,
+        MaxDamage	=	3,
+        BaseSpeed = 1,
+        WeaponLength = 0.3,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+		AttachmentType = Knife,
+        Tags = CutPlant,
+	}
+
+
+	model BGMachete
+	{
+		mesh = weapons/1handed/BGMachete,
+	}
+}

@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item SIX12_Cylinder
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	SIX12 12g Cylinder,
+	DisplayCategory	=	GunMag,
+        Icon		=	SIX12_Cylinder,
+        MaxAmmo 	=	6,
+        AmmoType 	=	Base.ShotgunShells,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

@@ -1,0 +1,4 @@
+ContextMenu_TR = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "Aracý sök",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "Römorku sök",
+}

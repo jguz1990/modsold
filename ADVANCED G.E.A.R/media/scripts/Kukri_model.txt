@@ -1,0 +1,13 @@
+module Base
+{
+	model Kukri
+	{
+		mesh = Weapons/1Handed/kukri,
+
+		attachment world
+		{
+			offset = 0.0000 0.1400 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}

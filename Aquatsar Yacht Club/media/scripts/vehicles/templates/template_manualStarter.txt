@@ -1,0 +1,55 @@
+module Base
+{
+	template vehicle ManualStarter
+	{
+		part ManualStarter
+		{
+			category = MechanicalSystem,
+			area = SeatFrontLeft,
+			itemType = Aquatsar.ManualStarter,
+			specificItem = false,
+			mechanicRequireKey = false,
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = secondary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:1,
+				recipes = Powerboats Mechanics,
+				test = CommonTemplates.InstallTest.PartNotInCabin,
+				complete = Boats.InstallComplete.ManualStarter,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = secondary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:1,
+				recipes = Powerboats Mechanics,
+				test = CommonTemplates.UninstallTest.PartNotInCabin,
+				complete = Boats.UninstallComplete.ManualStarter,
+			}
+			lua
+			{
+				create = Boats.Create.ManualStarter,
+			}
+		}
+	}
+}
+

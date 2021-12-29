@@ -1,0 +1,153 @@
+module Base
+{
+
+    item Hat_Maska
+	{
+	Type = Clothing,
+	DisplayName = Rys-T Helmet,
+	ClothingItem = Hat_Maska,
+	BodyLocation = Hat,
+	Icon = Hat_Maska,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 120,
+	ScratchDefense = 120,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_Killa
+	{
+	Type = Clothing,
+	DisplayName = Maska 1Sch Killa Helmet ,
+	ClothingItem = Hat_Killa,
+	BodyLocation = Hat,
+	Icon = Hat_Killa,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 120,
+	ScratchDefense = 120,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_Maska_Visor
+	{
+	Type = Clothing,
+	DisplayName = Altyn Helmet Visor,
+	ClothingItem = Hat_Maska_Visor,
+	BodyLocation = Ears,
+	Icon = Hat_Maska_Visor,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Maska_Visor_UP,
+        ClothingItemExtraOption = Visor_OFF,
+        clothingExtraSubmenu = Visor_ON,
+    }
+
+
+
+    item Hat_Maska_Visor2
+	{
+	Type = Clothing,
+	DisplayName = MASKA-1 SCH Helmet Visor,
+	ClothingItem = Hat_Maska_Visor2,
+	BodyLocation = Ears,
+	Icon = Hat_Maska_Visor2,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Maska_Visor2_UP,
+        ClothingItemExtraOption = Visor2_OFF,
+        clothingExtraSubmenu = Visor2_ON,
+    }
+
+
+
+    item Hat_Maska_Visor_UP
+	{
+	Type = Clothing,
+	DisplayName = Altyn Helmet Visor UP,
+	ClothingItem = Hat_Maska_Visor_UP,
+	BodyLocation = Ears,
+	Icon = Hat_Maska_Visor,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Maska_Visor,
+        ClothingItemExtraOption = Visor_ON,
+        clothingExtraSubmenu = Visor_OFF,
+    }
+
+
+
+    item Hat_Maska_Visor2_UP
+	{
+	Type = Clothing,
+	DisplayName = MASKA-1 SCH Helmet Visor UP,
+	ClothingItem = Hat_Maska_Visor2_UP,
+	BodyLocation = Ears,
+	Icon = Hat_Maska_Visor2,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Maska_Visor2,
+        ClothingItemExtraOption = Visor2_ON,
+        clothingExtraSubmenu = Visor2_OFF,
+    }
+
+
+
+    item Hat_Killa_Visor
+	{
+	Type = Clothing,
+	DisplayName = Maska 1Sch Killa Helmet Visor,
+	ClothingItem = Hat_Killa_Visor,
+	BodyLocation = Ears,
+	Icon = Hat_Killa_Visor,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Killa_Visor_UP,
+        ClothingItemExtraOption = Killa_Visor_OFF,
+        clothingExtraSubmenu = Killa_Visor_ON,
+    }
+
+
+
+    item Hat_Killa_Visor_UP
+	{
+	Type = Clothing,
+	DisplayName = Maska 1Sch Killa Helmet Visor UP,
+	ClothingItem = Hat_Killa_Visor_UP,
+	BodyLocation = Ears,
+	Icon = Hat_Killa_Visor,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 20,
+	ScratchDefense = 20,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Killa_Visor,
+        ClothingItemExtraOption = Killa_Visor_ON,
+        clothingExtraSubmenu = Killa_Visor_OFF,
+    }
+}

@@ -1,0 +1,92 @@
+module Base
+{
+    item Bag_D3M
+    {
+        Type = Container,
+        DisplayName = D3M Chest Rig,
+        ClothingItem = Bag_D3M,
+        Icon	=	Bag_D3M,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_D3M_Loose,
+        ClothingItemExtraOption = D3M_Loose,
+        clothingExtraSubmenu = Bag_D3M,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+
+
+
+    item Bag_D3M_Loose
+    {
+        Type = Container,
+        DisplayName = D3M Chest Rig (Loose),
+        ClothingItem = Bag_D3M_Loose,
+        Icon	=	Bag_D3M,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_D3M,
+        ClothingItemExtraOption = D3M (Tight),
+        clothingExtraSubmenu = Bag_D3M_Loose,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+
+
+
+    item Bag_Blackhawk
+    {
+        Type = Container,
+        DisplayName = Blackhawk Commando Chest Harness,
+        ClothingItem = Bag_Blackhawk,
+        Icon	=	Bag_Blackhawk,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_Blackhawk_Loose,
+        ClothingItemExtraOption = Blackhawk_Loose,
+        clothingExtraSubmenu = Bag_Blackhawk,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+
+
+
+    item Bag_Blackhawk_Loose
+    {
+        Type = Container,
+        DisplayName = Blackhawk Commando Chest Harness (Loose),
+        ClothingItem = Bag_Blackhawk_Loose,
+        Icon	=	Bag_Blackhawk,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_Blackhawk,
+        ClothingItemExtraOption = Blackhawk (Tight),
+        clothingExtraSubmenu = Bag_Blackhawk_Loose,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+}

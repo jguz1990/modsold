@@ -1,0 +1,54 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+
+		attachment calf_sheath
+		{
+			offset = -0.0400 0.0600 -0.0100,
+			rotate = 0.0000 2.0000 -100.0000,
+			bone = Bip01_R_Calf,
+		}
+
+		attachment rifle_back2
+		{
+			offset = 0.0080 0.1020 0.0610,
+			rotate = -124.0000 191.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment blade_back2
+		{
+			offset = -0.0020 0.1190 0.1550,
+			rotate = -121.0000 180.0000 0.0000,
+			bone = Bip01_BackPack,
+		}		
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+
+		attachment calf_sheath
+		{
+			offset = -0.0400 0.0600 -0.0100,
+			rotate = 0.0000 2.0000 -100.0000,
+			bone = Bip01_R_Calf,
+		}
+
+		attachment rifle_back2
+		{
+			offset = 0.0080 0.1020 0.0610,
+			rotate = -124.0000 191.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment blade_back2
+		{
+			offset = -0.0020 0.1190 0.1550,
+			rotate = -121.0000 180.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	}
+}

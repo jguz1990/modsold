@@ -1,0 +1,35 @@
+module Base
+{
+	recipe Make Holster
+    {
+        keep Needle,
+	keep Scissors,
+	Belt2,
+	LeatherStrips=4,
+        Thread=5,
+
+        Result:HolsterSimple,
+	SkillRequired:Tailoring=1,
+        Time:200,
+    }
+
+recipe Make Belt
+    {
+        keep Needle,
+	keep Scissors,
+	LeatherStrips=3,
+        Thread=4,
+        Result:Belt2,
+	SkillRequired:Tailoring=1,
+        Time:230,
+    }
+
+recipe Rip Belt
+    {
+	keep Scissors,
+	Belt2/Belt3/Belt4,
+        Result:LeatherStrips=2,
+        Time:60,
+	
+    }
+}

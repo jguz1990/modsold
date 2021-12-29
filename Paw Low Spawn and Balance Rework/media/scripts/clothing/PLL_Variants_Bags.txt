@@ -1,0 +1,200 @@
+module Base
+{
+
+    item MVest_Black
+    {
+        Type = Container,
+        DisplayName = Carrier Vest (Tight),
+        ClothingItem = MVest_Black,
+        BodyLocation = TorsoRig2,
+        BloodLocation = ShirtNoSleeves,
+        Icon = CarrierRig2,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = MVest2_Black,
+        ClothingItemExtraOption = loosen,
+        clothingExtraSubmenu = WearIt,
+        CanBeEquipped = TorsoRig2,
+        OpenSound   =   velcro1,
+        CloseSound   =   cloth2,
+        PutInSound   =   PutItemInBag,
+    }
+
+    item MVest2_Black
+    {
+        Type = Container,
+        DisplayName = Carrier Vest (Loose),
+        ClothingItem = MVest2_Black,
+        BodyLocation = TorsoRig2,
+        BloodLocation = ShirtNoSleeves,
+        Icon = CarrierRig2,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = MVest_Black,
+        ClothingItemExtraOption = tighten,
+        clothingExtraSubmenu = WearIt,
+        CanBeEquipped = TorsoRig2,
+        OpenSound   =   velcro1,
+        CloseSound   =   cloth2,
+        PutInSound   =   PutItemInBag,
+    }
+
+
+    item MVest_Military
+    {
+        Type = Container,
+        DisplayName = Carrier Vest (Tight),
+        ClothingItem = MVest_Military,
+        BodyLocation = TorsoRig2,
+        BloodLocation = ShirtNoSleeves,
+        IconsForTexture = CarrierRig;CarrierRig3,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = MVest2_Military,
+        ClothingItemExtraOption = loosen,
+        clothingExtraSubmenu = WearIt,
+        CanBeEquipped = TorsoRig2,
+        OpenSound   =   velcro1,
+        CloseSound   =   cloth2,
+        PutInSound   =   PutItemInBag,
+    }
+
+    item MVest2_Military
+    {
+        Type = Container,
+        DisplayName = Carrier Vest (Loose),
+        ClothingItem = MVest2_Military,
+        BodyLocation = TorsoRig2,
+        BloodLocation = ShirtNoSleeves,
+        IconsForTexture = CarrierRig;CarrierRig3,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = MVest_Military,
+        ClothingItemExtraOption = tighten,
+        clothingExtraSubmenu = WearIt,
+        CanBeEquipped = TorsoRig2,
+        OpenSound   =   velcro1,
+        CloseSound   =   cloth2,
+        PutInSound   =   PutItemInBag,
+    }
+
+    item TacticalWaistBagBack_Black
+    {
+        Type = Container,
+        DisplayName = Large Tactical Waist Bag (Back),
+        ClothingItem = TacticalWaistBagBack_Black,
+        BodyLocation = waistbags,
+        BloodLocation = Trousers,
+        Icon = TWBag,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = TacticalWaistBagFront_Black,
+        ClothingItemExtraOption = FannyPack_WearFront,
+        clothingExtraSubmenu = FannyPack_WearBack,
+        CanBeEquipped = waistbags,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.94,
+    }
+
+    item TacticalWaistBagFront_Black
+    {
+        Type = Container,
+        DisplayName = Large Tactical Waist Bag (Front),
+        ClothingItem = TacticalWaistBagFront_Black,
+        BodyLocation = waistbagsf,
+        BloodLocation = Trousers,
+        Icon = TWBag,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = TacticalWaistBagBack_Black,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        CanBeEquipped = waistbagsf,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.94,
+    }
+
+  
+
+    item TacticalWaistBagBack_Military
+    {
+        Type = Container,
+        DisplayName = Large Tactical Waist Bag (Back),
+        ClothingItem = TacticalWaistBagBack_Military,
+        BodyLocation = waistbags,
+        BloodLocation = Trousers,
+        Icon = TWBag3,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = TacticalWaistBagFront_Military,
+        ClothingItemExtraOption = FannyPack_WearFront,
+        clothingExtraSubmenu = FannyPack_WearBack,
+        CanBeEquipped = waistbags,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.94,
+    }
+
+    item TacticalWaistBagFront_Military
+    {
+        Type = Container,
+        DisplayName = Large Tactical Waist Bag (Front),
+        ClothingItem = TacticalWaistBagFront_Military,
+        BodyLocation = waistbagsf,
+        BloodLocation = Trousers,
+        Icon = TWBag3,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = TacticalWaistBagBack_Military,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        CanBeEquipped = waistbagsf,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.94,
+    }
+
+    item RogueWaistBag_Black
+    {
+        Type = Container,
+        DisplayName = Rogue Waist Bag,
+        ClothingItem = RogueWaistBag_Black,
+        BodyLocation = waistbagsComplete,
+        BloodLocation = Trousers,
+        Icon = RWBag2,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = RogueWaistBag,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        CanBeEquipped = waistbags,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.90,
+    }
+    item RogueWaistBag_Military
+    {
+        Type = Container,
+        DisplayName = Rogue Waist Bag,
+        ClothingItem = RogueWaistBag_Military,
+        BodyLocation = waistbagsComplete,
+        BloodLocation = Trousers,
+        Icon = RWBag,
+        WeightReduction	=	100,
+	    Capacity	=	20,
+        ClothingItemExtra = RogueWaistBag,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        CanBeEquipped = waistbags,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        RunSpeedModifier = 0.90,
+    }
+
+}

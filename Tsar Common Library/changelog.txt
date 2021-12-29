@@ -1,0 +1,212 @@
+https://theindiestone.com/forums/index.php?/topic/42925-how-to-fix-updated-mods-in-build-41-multiplayer/
+
+v.1.23
+2021-12-12
+
+Исправлены переводы. 
+Добавлена проверка скиллов механика при установке тюнингованных запчастей.
+
+Fixed translations. 
+Added mechanic's skills check when installing tuned parts.
+
+-------------------
+v.1.23dev8
+2021-12-12
+
+Убраны все общие предметы для тюнинга.
+Улучшены переводы на русском и английском.
+
+Removed all common items for tuning.
+Improved translations in Russian and English.
+
+-------------------
+v.1.23dev7
+2021-12-12
+
+Все ATA переводы перенесены в этот мод.
+Исправлены ошибки в скриптах.
+Переименованы некоторые функции.
+
+All ATA translations transferred to this mod.
+Fixed errors in scripts.
+Renamed some functions.
+
+-------------------
+v.1.23dev6
+2021-12-11
+
+Добавлена функции для установки разных дисков на авто.
+Исправлены ошибки связанные со спавном предметов (обновление игры 41.60).
+Исправлены ошибки связанные с бампером.
+Добавлены шаблоны кенгурятника.
+
+Added functions for installing different rims on vehicle.
+Fixed errors with items spawning (game update 41.60).
+Fixed bumper bugs.
+Added bullbar templates.
+
+-------------------
+v.1.23dev5
+2021-12-07
+
+Улучшены функции отвечающие за отображение нескольких 3д-моделей для запчастей.
+Добавлена таблица устанавливающая шанс появления запчасти при спавне автомобиля.
+
+Improved functions responsible for the display of multiple 3D-models for parts.
+Added a table that sets the chance of appearance of the part when the vehicle is spawned.
+
+-------------------
+v.1.23dev4
+2021-12-06
+
+Добавлены шаблоны для спойлеров и широких арок.
+
+Added templates for spoilers and wide fenders.
+
+-------------------
+v.1.23dev3
+2021-12-05
+
+Добавлен код для анимирования открытия защитной решетки на окнах.
+
+Added code to animate the opening of the protection on the windows.
+
+-------------------
+v.1.23dev2
+2021-12-04
+
+Изменена логика отображения нескольких 3д-моделей для запчастей.
+Исправлены ошибки оставшиеся после переименования lua-таблиц.
+
+Changed the logic of displaying multiple 3D models for parts.
+Fixed errors left after renaming lua-tables.
+
+-------------------
+v.1.23dev1
+2021-12-04
+
+Переименованы файлы шаблонов для тюнинга.
+Изменены имена некоторых lua-таблиц.
+
+Renamed template files for tuning.
+Changed names of some lua-tables.
+
+-------------------
+v.1.22
+
+Обновлены иконки и модель журнала по тюнингу (спасибо djvirus).
+Исправлены названия журналов. 
+
+Updated icons and magazine models (thanks to djvirus).
+Fixed magazine names. 
+-------------------
+v.1.21
+
+Исправлены ошибка возникающая при чтении журнала.
+
+Fixed an error that occurs when reading the tuning magazine.
+
+-------------------
+v.1.20.1
+
+Bugfix.
+-------------------
+v.1.20
+
+Исправлен немецкий перевод. Спасибо Laudern.
+Исправлены ошибки возникающие в версии мода 1.19 при использовании старого сохранения.
+Заблокированы неиспользуемые рецепты.
+
+
+Fixed German translation. Thanks Laudern.
+Fixed errors occurring in the version 1.19 when using the old save.
+Unused recipes are locked.
+-------------------
+v.1.19
+
+Исправлена скорость порчи продуктов в морозилке.
+
+Fixed speed of food spoilage in the freezer.
+-------------------
+v.1.18
+
+Исправлена ошибка связанная с разморозкой продуктов.
+Исправлено ошибка пункта радиального меню для морозильника.
+
+Fixed a bug related to defrosting food.
+Fixed a radial menu bug for the freezer.
+-------------------
+v.1.17
+
+Исправлена работа морозильной камеры.
+
+Fixed the work of the freezer.
+-------------------
+v.1.16
+
+Добавлен испанский перевод.
+
+Added Spanish translation.
+
+Thanks Siowar.
+-------------------
+v.1.15
+
+Исправлена ошибка связанная с фонарями для крыши.
+
+Fixed a roof light bug.
+-------------------
+v.1.14
+
+Исправлен английский перевод.
+
+Corrected English translation.
+
+-------------------
+v.1.13
+
+Исправлен ошибка связанная с отсутствием положительного эффекта во время сна на матрасе или в палатке.
+
+Fixed a bug related to the lack of positive effect when sleeping on a mattress or in a tent.
+-------------------
+v.1.12
+
+Исправлены опечатки в файлах с переводами.
+
+Corrected misprints in the translation files.
+-------------------
+v.1.11
+
+Исправлена ошибка связанная с невозможностью установки запасного колеса.
+
+Fixed a bug related to the inability to install a spare wheel.
+-------------------
+v.1.09
+
+Исправлены ошибки связанные с работой холодильника.
+Добавлены функции и скрипты для создания тюнингованных автомобилей.
+
+Fixed errors related to the work of the refrigerator.
+Added functions and scripts for creating tuned cars.
+-------------------
+v.1.08 …
+
+Fixed issue with boat key.
+Added message about losing items while swimming.
+Fixed a bug with the type of spare parts.
+-------------------
+v.1.07
+
+Исправлены ошибки возникающие при заправке цистерны из бензоколонки.
+Исправлены ошибки связанные с появление пустого контекстного меню.
+
+Fixed errors that occurred when refueling a tank from a gas station.
+Fixed errors related to the appearance of an empty context menu.
+-------------------
+v.1.06
+
+Исправлена ошибка связанная со сном в версии PZ 41.51.
+
+Fixed a sleep bug in the PZ 41.51 version.
+-------------------
+v.1.05 …

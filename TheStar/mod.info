@@ -1,0 +1,8 @@
+name=Weapon Condition Indicator [41.61+]
+description=Shows condition (durability) of a weapon attached to the hotbar (back, belt, holster, etc.) or equipped in the primary hand.
+id=TheStar
+poster=logo.png
+icon=logo_mini.png
+versionMin=41.61
+pzversion=41.61
+modversion=1.6.4

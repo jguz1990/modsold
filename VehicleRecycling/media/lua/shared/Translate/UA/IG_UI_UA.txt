@@ -1,0 +1,4 @@
+IGUI_UA = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Ви справді хочете розібрати цей автомобіль?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Ви справді хочете розібрати цей причіп?",
+}

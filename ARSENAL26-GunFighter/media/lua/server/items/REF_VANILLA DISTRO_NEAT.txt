@@ -1,0 +1,102 @@
+--[[
+
+    gunstore
+         counter
+                GunStoreCounter
+                StoreCounterCleaning
+                StoreCounterBags
+        displaycase
+                GunStoreDisplayCase
+        locker
+                GunStoreShelf
+                GunStoreAmmunition
+        metal_shelves
+                GunStoreShelf
+                GunStoreAmmunition
+        shelves
+                GunStoreShelf
+                GunStoreAmmunition
+        shelvesmag
+                GunStoreMagazineRack
+
+
+    gunstorestorage
+        crate
+                GunStoreAmmunition
+                GunStoreDisplayCase
+        locker
+                GunStoreShelf
+                GunStoreAmmunition
+        metal_shelves
+                GunStoreShelf
+                GunStoreAmmunition
+        shelves
+                GunStoreShelf
+                GunStoreAmmunition
+
+
+    policestorage
+        locker
+                PoliceStorageGuns
+                PoliceStorageOutfit
+        metal_shelves
+                PoliceStorageGuns
+
+
+    armystorage
+        locker
+                ArmyStorageGuns
+                ArmyStorageOutfit
+        metal_shelves
+                ArmyStorageGuns
+                ArmyStorageElectronics
+    
+
+    armysurplus
+        counter
+                ArmySurplusHeadwear
+                StoreCounterCleaning
+                StoreCounterBags
+        shelves
+                ArmySurplusOutfit
+                ArmySurplusBackpacks
+                CampingStoreGear
+                ArmyStorageElectronics
+        metal_shelves
+                ArmySurplusOutfit
+                ArmySurplusBackpacks
+                CampingStoreGear
+                ArmyStorageElectronics
+        clothingrack
+                ArmySurplusOutfit
+
+
+
+    hunting
+        clothingrack
+                CampingStoreClothes
+        counter
+                StoreCounterCleaning
+                StoreCounterBags
+                CampingStoreBooks
+                CampingStoreLegwear
+                CampingStoreBackpacks
+                CampingStoreGear
+                FishingStoreGear
+        displaycase
+                GunStoreDisplayCase
+        locker
+                GunStoreDisplayCase
+                GunStoreAmmunition
+        metal_shelves
+                GunStoreShelf
+                GunStoreAmmunition
+        shelvesmag
+                GunStoreMagazineRack
+
+
+    security
+        locker
+                PoliceStorageGuns
+
+]]

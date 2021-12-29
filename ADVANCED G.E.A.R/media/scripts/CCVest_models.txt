@@ -1,0 +1,29 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+
+		
+		attachment CCVest
+		{
+			offset = -0.09 0.003 0.0,
+			rotate = -90.0000 0.0000 0.0000,
+			bone = Bip01_BackPack,
+		}		
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		
+		attachment CCVest
+		{
+			offset = -0.09 0.003 0.0,
+			rotate = -90.0000 0.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	}
+}

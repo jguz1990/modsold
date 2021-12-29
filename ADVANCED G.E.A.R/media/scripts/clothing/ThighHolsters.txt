@@ -1,0 +1,28 @@
+module Base
+{
+
+
+    item ThighHolsterSimple
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Holster,
+        Icon	=	GunHolster,
+        BodyLocation = BeltExtra,
+        ClothingItem = ThighHolster,
+        AttachmentsProvided = HolsterRight,
+    }
+
+    item ThighHolsterDouble
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Double Holster,
+        Icon	=	GunHolsterDouble,
+        BodyLocation = BeltExtra,
+        ClothingItem = ThighHolsterDouble,
+        AttachmentsProvided = HolsterLeft;HolsterRight,
+    }
+
+
+}

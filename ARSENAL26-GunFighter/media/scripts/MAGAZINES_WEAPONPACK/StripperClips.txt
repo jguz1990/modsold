@@ -1,0 +1,93 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item SKSClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	7.62x39mm Stripper Clip,
+	DisplayCategory	=	GunMag,
+        Icon		=	SKSClip,
+        MaxAmmo 	=	10,
+        AmmoType 	=	Base.762x39Bullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+
+    item 1903Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	3006 Stripper Clip,
+	DisplayCategory	=	GunMag,
+        Icon		=	1903Clip,
+        MaxAmmo 	=	5,
+        AmmoType 	=	Base.3006Bullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+
+    item MosinClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	7.62x54r Stripper Clip,
+	DisplayCategory	=	GunMag,
+        Icon		=	1903Clip,
+        MaxAmmo 	=	5,
+        AmmoType 	=	Base.762x54rBullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+
+    item 308StrClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	308 Stripper Clip,
+	DisplayCategory	=	GunMag,
+        Icon		=	1903Clip,
+        MaxAmmo 	=	5,
+        AmmoType 	=	Base.308Bullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+
+/*********************** FUNCTIONS ************************/
+
+	recipe Use 30-06 Rounds
+	{
+		MosinClip/308StrClip,
+		Result		:1903Clip,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+	recipe Use 7.62x54r Rounds
+	{
+		1903Clip/308StrClip,
+		Result		:MosinClip,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+	recipe Use 308 Rounds
+	{
+		1903Clip/MosinClip,
+		Result		:308StrClip,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+
+}

@@ -1,0 +1,15 @@
+module Base
+{
+	model CDplayer
+	{
+		mesh = WorldItems/CDplayer,
+        texture = CDPlayer,
+        scale = 0.4,
+	
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 27.0000 -89.0000,
+		}
+	}
+}

@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 308Belt
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	308 Box Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	M60Mag,
+        MaxAmmo 	=	100,
+        AmmoType 	=	Base.308Bullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

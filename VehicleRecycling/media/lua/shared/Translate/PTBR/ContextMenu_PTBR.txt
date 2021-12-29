@@ -1,0 +1,4 @@
+ContextMenu_PTBR = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "Desmontar Veículo",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "Desmontar Trailer",
+}

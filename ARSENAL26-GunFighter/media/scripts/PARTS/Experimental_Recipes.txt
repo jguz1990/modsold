@@ -1,0 +1,211 @@
+module Base
+{
+/*************************/
+/**	SOLVENT TRAP	**/
+/*************************/
+	recipe Make Solvent Trap
+	{
+		Base.SolventTrap_Adapter,
+		Base.Oil_Filter,
+		Result:Base.Suppressor_Oil,
+		Category:Firearm,
+		Sound:SolventTrap_Adapter,
+		Time:100.0,
+	}
+
+/*************************/
+/**	MIX AMMO	**/
+/*************************/
+	recipe Mix 223 & 556
+	{
+		Base.223Bullets,
+		Result:Base.556Bullets,
+		Category:Firearm,
+		Sound:TransAmmo,
+		Time:10.0,
+	}
+	recipe Mix 556 & 223
+	{
+		Base.556Bullets,
+		Result:Base.223Bullets,
+		Category:Firearm,
+		Sound:TransAmmo,
+		Time:10.0,
+	}
+
+/*************************/
+/**	MINIGUN CAN	**/
+/*************************/
+	recipe Use AmmoCan as 5.56x45mm Minigun Magazine
+	{
+		AmmoCan50_EMPTY/AmmoCan50_223/AmmoCan50_556/AmmoCan50_762x39/AmmoCan50_308/AmmoCan50_762x51/AmmoCan50_762x54r/AmmoCan50_3006/AmmoCan50_50/AmmoCan50_410/AmmoCan50_20/AmmoCan50_12/AmmoCan50_10/AmmoCan50_4/AmmoCan50_MIX/AmmoCan50_SHOT/AmmoCan50_HE/AmmoCan50_INC,
+	/*	556Belt=1,		*/
+		Result	:556MiniCan,
+		Category:Firearm,
+		Sound	:StormyM249ClipLoad,
+		Time	:80.0,
+		OnTest	:EmptyCan_Test,	
+	}
+
+	recipe Use AmmoCan as .308 Minigun Magazine
+	{
+		AmmoCan50_EMPTY/AmmoCan50_223/AmmoCan50_556/AmmoCan50_762x39/AmmoCan50_308/AmmoCan50_762x51/AmmoCan50_762x54r/AmmoCan50_3006/AmmoCan50_50/AmmoCan50_410/AmmoCan50_20/AmmoCan50_12/AmmoCan50_10/AmmoCan50_4/AmmoCan50_MIX/AmmoCan50_SHOT/AmmoCan50_HE/AmmoCan50_INC,
+	/*	556Belt=1,		*/
+		Result	:308MiniCan,
+		Category:Firearm,
+		Sound	:StormyM249ClipLoad,
+		Time	:80.0,
+		OnTest	:EmptyCan_Test,	
+	}
+
+	recipe Use AmmoCan as .50-BMG Minigun Magazine
+	{
+		AmmoCan50_EMPTY/AmmoCan50_223/AmmoCan50_556/AmmoCan50_762x39/AmmoCan50_308/AmmoCan50_762x51/AmmoCan50_762x54r/AmmoCan50_3006/AmmoCan50_50/AmmoCan50_410/AmmoCan50_20/AmmoCan50_12/AmmoCan50_10/AmmoCan50_4/AmmoCan50_MIX/AmmoCan50_SHOT/AmmoCan50_HE/AmmoCan50_INC,
+	/*	556Belt=1,		*/
+		Result	:50MiniCan,
+		Category:Firearm,
+		Sound	:StormyM249ClipLoad,
+		Time	:80.0,
+		OnTest	:EmptyCan_Test,	
+	}
+
+	recipe Use Minigun Magazine as AmmoCan
+	{
+		556MiniCan/308MiniCan/50MiniCan,
+	/*	556Belt=1,		*/
+		Result	:AmmoCan50_EMPTY,
+		Category:Firearm,
+		Sound	:StormyM249ClipLoad,
+		Time	:80.0,
+		OnTest	:EmptyMag_Test,
+	}
+
+
+/*************************/
+/**	DIY SUPPRESSOR	**/
+/*************************/
+	recipe Craft Pop Bottle Suppressor
+	{
+		PopBottleEmpty,
+		DuctTape=2,
+		Result:Suppressor_Bottle,
+		Category:Firearm,
+		Sound : PZ_DuctTape,
+		Time:100.0,
+	}
+
+
+/*************************/
+/**	CHOKE SET	**/
+/*************************/
+	recipe Combine Dbl-Barrel Choke Set
+	{
+		Choke_Full=2,
+		Result:Choke_Full_Dbl,
+		Category:Firearm,
+		Time:20.0,
+	}
+
+	recipe Separate Dbl-Barrel Choke Set
+	{
+		Choke_Full_Dbl,
+		Result:Choke_Full=2,
+		Category:Firearm,
+		Time:20.0,
+	}
+
+
+/*************************/
+/**	MAG EXTENSION	**/
+/*************************/
+	recipe Install CP33 (+17)Magbase
+	{			
+		CP33Clip,
+		CP33_17MagBase,
+		Result : CP33ExtClip,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 50.0,
+		OnTest : MagBase_Test,
+	}
+
+
+/*************************/
+/**	TC BARRELS	**/
+/*************************/
+	recipe	Install 308 Barrel
+	{			
+		Thompson_Center_3006/Thompson_Center_4570,
+		Barrel_308,
+		Result : Thompson_Center_308,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+	recipe	Install 3006 Barrel
+	{			
+		Thompson_Center_308/Thompson_Center_4570,
+		Barrel_3006,
+		Result : Thompson_Center_3006,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+	recipe	Install 4570 Barrel
+	{			
+		Thompson_Center_3006/Thompson_Center_308,
+		Barrel_4570,
+		Result : Thompson_Center_4570,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+
+
+/*************************/
+/**	NEF BARRELS	**/
+/*************************/
+	recipe	Install 45LC Barrel
+	{			
+		NEF_Handi_38/NEF_Handi_357/NEF_Handi_38_Sawed/NEF_Handi_357_Sawed,
+		Barrel_45LC,
+		Result : NEF_Handi_45LC,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+	recipe	Install 357 Barrel
+	{			
+		NEF_Handi_45LC/NEF_Handi_410/NEF_Handi_45LC_Sawed/NEF_Handi_410_Sawed,
+		Barrel_357,
+		Result : NEF_Handi_357,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+	recipe	Install 45LC Short Barrel
+	{			
+		NEF_Handi_38/NEF_Handi_357/NEF_Handi_38_Sawed/NEF_Handi_357_Sawed,
+		Barrel_45LC_Short,
+		Result : NEF_Handi_45LC_Sawed,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+	recipe	Install 357 Short Barrel
+	{			
+		NEF_Handi_45LC/NEF_Handi_410/NEF_Handi_45LC_Sawed/NEF_Handi_410_Sawed,
+		Barrel_357_Short,
+		Result : NEF_Handi_357_Sawed,
+		Category:Firearm,
+		Sound : StormyM1ClipLoad,
+		Time : 200.0,
+		OnCreate : Swap_Barrel,
+	}
+}	

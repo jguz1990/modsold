@@ -1,0 +1,18 @@
+/******************** ATTACHMENT MODELS **********************
+	EXPERIMENTAL STUFF
+**************************************************************/
+
+module Base
+{
+	model Standard_Mag_556MiniCan
+	{
+		mesh = AmmoCan50,
+		texture = AmmoCan50,
+	}
+
+	model Standard_Mag_Rocket
+	{
+		mesh = weapons/parts/Standard_Mag_Rocket,
+		texture = weapons/firearm/Grey,
+	}
+}	

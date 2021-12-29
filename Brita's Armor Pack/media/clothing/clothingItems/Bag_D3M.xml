@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_D3M</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_D3M</m_FemaleModel>
+	<m_GUID>a99c72e2-baa3-4273-93dd-c6ab5e455460</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_D3M</textureChoices>
+	<textureChoices>clothes\Bag\Bag_D3M2</textureChoices>
+	<textureChoices>clothes\Bag\Bag_D3M3</textureChoices>	
+</clothingItem>

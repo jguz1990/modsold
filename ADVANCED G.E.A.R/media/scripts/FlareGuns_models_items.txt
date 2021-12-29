@@ -1,0 +1,16 @@
+module Base
+{
+	
+	model FlareGun
+	{
+		mesh = FlareGun,
+		/*mesh = Weapons/Firearm/Handgun,*/
+		texture = FlareGun,
+
+		attachment muzzle
+		{
+			offset = 0.0000 0.1150 -0.0250,
+			rotate = -90.0000 0.0000 0.0000,
+		}
+	}
+}

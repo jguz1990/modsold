@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="UnloadDblBarrel.xml">
+	<m_Name>UnloadThompson_Center</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>Thompson_Center</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>Thompson_Center_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

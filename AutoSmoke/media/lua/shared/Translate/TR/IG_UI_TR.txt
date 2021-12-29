@@ -1,0 +1,10 @@
+IG_UI_TR = {
+    IGUI_AutoSmoke_Say_NoFire_1 = "%1 olmadan nasýl sigara yakabilirim ki ?",
+    IGUI_AutoSmoke_Say_NoFire_2 = "Sanýrým üstümde hiç %1 kalmamýþ.",
+    IGUI_AutoSmoke_Say_NoFire_3 = "Ateþ yoksa sigara da yok.",
+    IGUI_AutoSmoke_Say_NoFire_Lighter = "Çakmak",
+    IGUI_AutoSmoke_Say_NoFire_Matches = "Kibrit",
+    IGUI_AutoSmoke_Say_NoCigarettes_1 = "Sigaramýz yok ama dertlerimiz var...",
+    IGUI_AutoSmoke_Say_NoCigarettes_2 = "Sigaram bitti...",
+    IGUI_AutoSmoke_Say_NoCigarettes_3 = "Sigarasý olan var mý ?",
+}

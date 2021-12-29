@@ -1,0 +1,6 @@
+Recipe_RU = {
+/************ Autotsar Tuning Atelier - Mustang ************/
+	Recipe_Cut_ATAMustangHoodItem = "Разрезать Капот (Ford Mustang)",
+	Recipe_Cut_ATAMustangFendersWideItem = "Разрезать Широкие арки (Ford Mustang)",
+	Recipe_Cut_ATAMustangSkirtsSideItem = "Разрезать Юбки боковых порогов (Ford Mustang)",
+}

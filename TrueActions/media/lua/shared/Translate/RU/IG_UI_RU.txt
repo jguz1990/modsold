@@ -1,0 +1,13 @@
+IGUI_RU = {
+	IGUI_PlayerText_TRUEA_cant_lie = "Сейчас опасно ложиться.",
+	IGUI_PlayerText_TRUEA_cant_sit = "Сейчас опасно садиться.",
+	IGUI_PlayerText_TRUEA_need_come_closer = "Нужно подойти ближе.",
+	IGUI_PlayerText_TRUEA_bed_away_wall = "Нужно освободить проход до кровати.",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_Sit_1 = "Что ты тут расселся?",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_Lie_1 = "Ты чего тут разлегся?",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_2 = "Отдохнул? Теперь моя очередь.",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_3 = "Уступите мне, пожалуйста, место.",
+	IGUI_PlayerText_TRUEA_dont_push_1 = "Зачем ты толкаешься?",
+	IGUI_PlayerText_TRUEA_dont_push_2 = "Не толкайся!",
+	IGUI_PlayerText_TRUEA_dont_push_3 = "Дай мне отдохнуть!",
+}

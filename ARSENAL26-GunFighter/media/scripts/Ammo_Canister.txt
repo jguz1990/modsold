@@ -1,0 +1,1005 @@
+module Base
+{
+
+/****************************************************************/
+/*		SMALL 30-CALIBER AMMO CANISTER			*/
+/****************************************************************/
+	item AmmoCan30_22		/*	MAX 8 X 100rnd BOX @ 0.5WT = 800	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (22-LR),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_57		/*	MAX 8 X 50rnd BOX @ 0.5WT = 400		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (5.7x28mm),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_380		/*	MAX 10 X 50rnd BOX @ 0.4WT = 500	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (380-ACP),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_9		/*	MAX 8 X 50rnd BOX @ 0.5WT = 400		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (9x19mm),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_38		/*	MAX 6 X 50rnd BOX @ 0.6WT = 300		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (38-SPC),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_357		/*	MAX 6 X 50rnd BOX @ 0.65WT = 300	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (357-MAG),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_45		/*	MAX 6 X 50rnd BOX @ 0.65WT = 300	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (45-ACP),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_45LC		/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (45-LC),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_44		/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (44-MAG),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_4570		/*	MAX 7 X 20rnd BOX @ 0.52WT = 140	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (44-MAG),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_50MAG		/*	MAX 7 X 20rnd BOX @ 0.52WT = 140	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (50-MAG),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+	item AmmoCan30_MIX		/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	4,
+		DisplayName		=	Ammo Small Canister (Mixed Handgun Ammo),
+		Icon			=	AmmoCan30,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_AmmoCan30,
+		StaticModel		=	AmmoCan30,
+		ReplaceInSecondHand	=	Bag_AmmoCan30_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan30_RHand holdingbagright,
+	}
+
+/****************************************************************/
+/*		MEDIUM 50-CALIBER AMMO CANISTER			*/
+/****************************************************************/
+	item AmmoCan50_EMPTY		/*	FOR REVERT FROM MINIGUN		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (EMPTY),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_223		/*	MAX 26 X 20rnd BOX @ 0.3WT = 520	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (223-REM),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_556		/*	MAX 26 X 20rnd BOX @ 0.3WT = 520	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (5.56x45mm NATO),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_545x39		/*	MAX 20 X 20rnd BOX @ 0.4WT = 400	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (5.45x39mm),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_762x39		/*	MAX 20 X 20rnd BOX @ 0.4WT = 400	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (7.62x39mm),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_308		/*	MAX 16 X 20rnd BOX @ 0.5WT = 320	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (308-WIN),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_762x51		/*	MAX 16 X 20rnd BOX @ 0.5WT = 320	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (7.62x51mm NATO),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_762x54r		/*	MAX 14 X 20rnd BOX @ 0.54WT = 280	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (7.62x54mm-R),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_3006		/*	MAX 14 X 20rnd BOX @ 0.56WT = 280	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (30-06 SPRG),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_50		/*	MAX 16 X 10rnd BOX @ 0.5WT = 160	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (50-BMG),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_410		/*	MAX 12 X 25rnd BOX @ 0.65WT = 300	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (410g Shotgun Shells),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_20		/*	MAX 11 X 25rnd BOX @ 0.7WT = 275	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (20g Shotgun Shells),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_12		/*	MAX 10 X 25rnd BOX @ 0.75WT = 250	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (12g Shotgun Shells),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_10		/*	MAX 10 X 25rnd BOX @ 0.8WT = 250	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (10g Shotgun Shells),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_4		/*	MAX 12 X 10rnd BOX @ 0.65WT = 120	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (4g Shotgun Shells),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_MIX		/*	MAX 12 X 25rnd BOX @ 0.625WT = 300	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (Mixed Rifle Ammo),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_SHOT		/*	MAX 12 X 25rnd BOX @ 0.625WT = 300	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (Mixed Shotgun Ammo),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_HE		/*	MAX 32 X 1 @ 0.25WT = 32	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (40mm Explosive),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+	item AmmoCan50_INC		/*	MAX 32 X 1 @ 0.25WT = 32	*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Ammo Medium Canister (40mm Incendiary),
+		Icon			=	AmmoCan50,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	AmmoCan50,
+		WorldStaticModel	=	W_AmmoCan50,
+		ReplaceInSecondHand	=	Bag_AmmoCan50_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_AmmoCan50_RHand holdingbagright,
+	}
+
+
+/****************************************************************/
+/*		POLYMER CANISTER				*/
+/****************************************************************/
+	item PolyCan_Red_SPASClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Red),
+		Icon			=	PolyCan_Red,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Red,
+		WorldStaticModel	=	W_PolyCan_Red,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Red_12gDrum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Red),
+		Icon			=	PolyCan_Red,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Red,
+		WorldStaticModel	=	W_PolyCan_Red,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Red_38Speed	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Red),
+		Icon			=	PolyCan_Red,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Red,
+		WorldStaticModel	=	W_PolyCan_Red,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Red_44Speed	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Red),
+		Icon			=	PolyCan_Red,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Red,
+		WorldStaticModel	=	W_PolyCan_Red,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+
+	item PolyCan_Blue_9mmClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_9mmExtClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_9mmDrum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_45DSClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_45DSExtClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_45Drum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_45Clip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Blue_45ExtClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Blue),
+		Icon			=	PolyCan_Blue,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Blue,
+		WorldStaticModel	=	W_PolyCan_Blue,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+
+
+	item PolyCan_Brown_556Clip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Brown_556Drum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Brown_AKClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Brown_762Drum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Brown_545StdClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Brown_545Drum	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Brown),
+		Icon			=	PolyCan_Brown,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Brown,
+		WorldStaticModel	=	W_PolyCan_Brown,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+
+
+
+	item PolyCan_Beige_308StdClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_308ExtClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_BMG		/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_K11		/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		StaticModel		=	PolyCan_Beige,
+
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_SVDClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_M1Clip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_SKSClip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+	item PolyCan_Beige_1903Clip	/*	MAX 5 X 50rnd BOX @ 0.7WT = 250		*/
+	{
+		WeightReduction		=	100,
+		Weight			=	0.01,
+		Type			=	Container,
+		Capacity		=	2,
+		DisplayName		=	Polymer Canister (Beige),
+		Icon			=	PolyCan_Beige,
+	        OpenSound		=	OpenBag,
+        	CloseSound		=	CloseBag,
+	        PutInSound		=	PutItemInBag,
+		StaticModel		=	PolyCan_Beige,
+		WorldStaticModel	=	W_PolyCan_Beige,
+		ReplaceInSecondHand	=	Bag_PolyCan_LHand holdingbagleft,
+	        ReplaceInPrimaryHand	=	Bag_PolyCan_RHand holdingbagright,
+	}
+
+	model AmmoCan30
+	{
+		mesh = AmmoCan30,
+		texture = Clothes/Bag/AmmoCan30,
+	}
+	model AmmoCan50
+	{
+		mesh = AmmoCan50,
+		texture = Clothes/Bag/AmmoCan50,
+	}
+	model PolyCan_Beige
+	{
+		mesh = PolyCan,
+		texture = Clothes/Bag/Polycan_Beige,
+	}
+	model PolyCan_Blue
+	{
+		mesh = PolyCan,
+		texture = Clothes/Bag/Polycan_Blue,
+	}
+	model PolyCan_Brown
+	{
+		mesh = PolyCan,
+		texture = Clothes/Bag/Polycan_Brown,
+	}
+	model PolyCan_Red
+	{
+		mesh = PolyCan,
+		texture = Clothes/Bag/Polycan_Red,
+	}
+
+
+	model W_AmmoCan30
+	{
+		mesh = WorldItems/W_AmmoCan30,
+		texture = Clothes/Bag/AmmoCan30,
+		scale = 0.1,
+	}
+	model W_AmmoCan50
+	{
+		mesh = WorldItems/W_AmmoCan50,
+		texture = Clothes/Bag/AmmoCan50,
+		scale = 0.1,
+	}
+	model W_PolyCan_Beige
+	{
+		mesh = WorldItems/W_PolyCan,
+		texture = Clothes/Bag/PolyCan_Beige,
+		scale = 0.1,
+	}
+	model W_PolyCan_Blue
+	{
+		mesh = WorldItems/W_PolyCan,
+		texture = Clothes/Bag/PolyCan_Blue,
+		scale = 0.1,
+	}
+	model W_PolyCan_Brown
+	{
+		mesh = WorldItems/W_PolyCan,
+		texture = Clothes/Bag/PolyCan_Brown,
+		scale = 0.1,
+	}
+	model W_PolyCan_Red
+	{
+		mesh = WorldItems/W_PolyCan,
+		texture = Clothes/Bag/PolyCan_Red,
+		scale = 0.1,
+	}
+
+}

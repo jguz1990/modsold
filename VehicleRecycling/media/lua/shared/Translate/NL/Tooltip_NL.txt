@@ -1,0 +1,3 @@
+Tooltip_EN = {
+    Tooltip_VehicleRecycling = "Demonteren van een voertuig of trailer met een propaan fakkel zal metaal en elektrisch materiaal opleveren. <LINE> Een hoger metaalbewerkings niveau levert meer bruikbare onderdelen op.",
+}

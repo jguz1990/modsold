@@ -1,0 +1,20 @@
+module Base
+{
+
+    item Hat_Gentex_Helmet
+	{
+	Type = Clothing,
+	DisplayName = Gentex Combat Vehicle Crewmans Helmet,
+	ClothingItem = Hat_Gentex_Helmet,
+	BodyLocation = Hat,
+	Icon = Hat_Gentex_Helmet,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 110,
+	ScratchDefense = 110,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+}

@@ -1,0 +1,32 @@
+module Base
+{
+    
+
+	item IncendiaryGrenade
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+		SwingAnim	=	Throw,
+        WeaponSprite = IncendiaryGrenade,
+        UseSelf	=	TRUE,
+        DisplayName	=	Incendiary Grenade,
+        SwingTime	=	1,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	IncendiaryGrenade,
+        FirePower  =   97,
+        FireRange  =   6,
+        ExplosionSound  =   SmallExplosion,
+        /*SmokeRange  =   5,*/
+	AttachmentType = Gear,
+        TriggerExplosionTimer   =   50,
+    }
+
+
+}
+

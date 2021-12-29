@@ -1,0 +1,88 @@
+module Base
+{
+
+	item AmmoStrap_Bullets
+	{/*
+        	ClothingItemExtra = AmmoStrap_Bullets,
+       		ClothingItemExtraOption = Wear_AmmoStrap,*/
+		Type = Container,
+		DisplayName = Bullets Ammo Strap,
+		ClothingItem = AmmoStrap_Bullets,
+        	WeightReduction	=	100,
+        	Capacity	=	20,
+        	BodyLocation = AmmoStrap,
+        	CanBeEquipped = AmmoStrap,
+		Icon = AmmoStrap,
+		Tooltip = Tooltip_AmmoStrap,
+		 AcceptItemFunction = Accept_Bullets,
+     ClothingItemExtra = BulletBandolier,
+        ClothingItemExtraOption = ChangeSide,
+        ClothingExtraSubmenu =  Wear_AmmoStrap,
+	}
+
+	item AmmoStrap_Shells
+	{
+        /*	ClothingItemExtra = AmmoStrap_Shells,
+        	ClothingItemExtraOption = Wear_AmmoStrap,*/
+		Type = Container,
+		DisplayName = Shells Ammo Strap,
+		ClothingItem = AmmoStrap_Shells,
+       		WeightReduction	=	100,
+        	Capacity	=	20,
+        	BodyLocation = AmmoStrap,
+        	CanBeEquipped = AmmoStrap,
+		Icon = AmmoStrap,
+		Tooltip = Tooltip_AmmoStrap,
+		 AcceptItemFunction = Accept_Shells,
+
+     ClothingItemExtra = ShotgunShellBandolier,
+        ClothingItemExtraOption = ChangeSide,
+        ClothingExtraSubmenu =  Wear_AmmoStrap,
+
+
+	}
+item ShotgunShellBandolier
+	{
+        	/*ClothingItemExtra = ShotgunShellBandolier2,
+        	ClothingItemExtraOption = Wear_AmmoStrap,*/
+
+        ClothingItemExtra = AmmoStrap_Shells,
+        ClothingItemExtraOption = ChangeSide,
+        ClothingExtraSubmenu = Wear_AmmoStrap,
+
+
+
+		Type = Container,
+		DisplayName = Shells Ammo Strap (reversed),
+        ClothingItem = ShotgunShellBandolier,
+       		WeightReduction	=	100,
+        	Capacity	=	20,
+        	BodyLocation = Bandolier,
+        	CanBeEquipped = Bandolier,
+		Icon = AmmoStrap,
+		Tooltip = Tooltip_AmmoStrap,
+		 AcceptItemFunction = Accept_Shells,
+	}
+item BulletBandolier
+	{
+        	/*ClothingItemExtra = ShotgunShellBandolier2,
+        	ClothingItemExtraOption = Wear_AmmoStrap,*/
+
+        ClothingItemExtra = AmmoStrap_Bullets,
+        ClothingItemExtraOption = ChangeSide,
+        ClothingExtraSubmenu = Wear_AmmoStrap,
+
+
+
+		Type = Container,
+		DisplayName = Bullets Ammo Strap (reversed),
+        ClothingItem = BulletBandolier,
+       		WeightReduction	=	100,
+        	Capacity	=	20,
+        	BodyLocation = Bandolier,
+        	CanBeEquipped = Bandolier,
+		Icon = AmmoStrap,
+		Tooltip = Tooltip_AmmoStrap,
+		 AcceptItemFunction = Accept_Bullets,
+	}
+}

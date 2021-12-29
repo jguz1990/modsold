@@ -1,0 +1,79 @@
+module Base
+{
+
+
+       recipe Add Short Modification
+    {
+       akiermachete,
+       keep [Recipe.GetItemTypes.Saw],		 
+        SkillRequired:Maintenance=1,
+        Result:akiermacheteshortmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Ergonomic Mod
+    {
+       akiermachete,
+       Plank=2,
+       LeatherStrips=2,
+       SmallSheetMetal=1,
+       Screws=2,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:akiermacheteergonomicmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+
+       recipe Remove Ergonomic Modification
+    {
+       akiermacheteergonomicmod,
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+        	    fixing Fix Akier Machete
+	{
+		Require 	: akiermachete,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+        	    fixing Fix Akier Machete (Short Mod)
+	{
+		Require 	: akiermacheteshortmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+
+        	    fixing Fix Akier Machete (Ergonomic Mod)
+	{
+		Require 	: akiermacheteergonomictmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+}

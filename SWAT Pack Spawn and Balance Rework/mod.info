@@ -1,0 +1,5 @@
+name=Swatpack Spawn and Balance Rework
+id=Swatpack_Rework
+require=Swatpack
+description=Adds new tactical gear to the game.
+poster=poster.png

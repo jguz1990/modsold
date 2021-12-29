@@ -1,0 +1,32 @@
+module Base
+{
+     item Hat_Sordin
+	{
+	Type = Clothing,
+	DisplayName = Z Tactical Sordin Headset,
+	ClothingItem = Hat_Sordin,
+	BodyLocation = Ears,
+	Icon = Hat_Sordin,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+
+
+
+     item Hat_Astrocom
+	{
+	Type = Clothing,
+	DisplayName = Astrocom Military Headset,
+	ClothingItem = Hat_Astrocom,
+	BodyLocation = Ears,
+	Icon = Hat_Astrocom,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+}

@@ -1,0 +1,32 @@
+module Base
+{
+	item Cleaning
+	{
+		Weight		= 0.2,
+		Type		= Drainable,
+		UseWhileEquipped= FALSE,
+		UseDelta	= 0.125,		/* EIGHT USES */
+		DisplayName	= Gun Cleaning Kit,
+		DisplayCategory	= GunClean,
+		Icon		= cleaning,
+	/*	UseWorldItem	= TRUE,		*/
+	/*	ScaleWorldIcon	= 2.0,		*/
+	/*	WeightEmpty	= 0.1,		*/
+	/*	WorldStaticModel= ,		*/
+	}
+
+	item WD
+	{
+		Weight		= 0.2,
+		Type		= Drainable,
+		UseWhileEquipped= FALSE,
+		UseDelta	= 0.1,			/* TEN USES */
+		DisplayName	= WD40,
+		DisplayCategory	= GunClean,
+		Icon		= WD,
+	/*	UseWorldItem	= TRUE,		*/
+	/*	ScaleWorldIcon	= 2.0,		*/
+	/*	WeightEmpty	= 0.1,		*/
+	/*	WorldStaticModel= ,		*/
+	}
+}

@@ -1,0 +1,1705 @@
+module Base
+{
+
+	recipe Heat MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_PorkwithRiceinBBQSauce_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_CornedBeefHash,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_CornedBeefHash_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenStew,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_ChickenStew_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_OmeletwithHam,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_OmeletwithHam_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_SpaghettiwithMeatSauce_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenalaKing,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_ChickenalaKing_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_BeefStew,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_BeefStew_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_HamSlice,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_HamSlice_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_MeatballswithTomatoSauce_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_TunawithNoodles,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_TunawithNoodles_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenwithRice,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_ChickenwithRice_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam,
+		MRE_FlamelessRationHeater,
+		Water=1,
+		Result:MRE_EscallopedPotatoeswithHam_Heating,
+		Time:50.0,
+		Category:Cooking,
+		Sound:GetWater,
+		OnCreate:StartMRE,
+		}
+
+
+
+	
+item MRE_PorkwithRiceinBBQSauce
+	{
+		DisplayName					=	MRE Meal (Pork with Rice in BBQ Sauce),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	21.9,
+		Proteins					=	32,
+		Lipids						=	25,
+		Calories					=	443,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_CornedBeefHash
+	{
+		DisplayName					=	MRE Meal (Corned Beef Hash),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	23.3,
+		Proteins					=	29,
+		Lipids						=	14,
+		Calories					=	330,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_ChickenStew
+	{
+		DisplayName					=	MRE Meal (Chicken Stew),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.2,
+		Proteins					=	19,
+		Lipids						=	10,
+		Calories					=	250,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_OmeletwithHam
+	{
+		DisplayName					=	MRE Meal (Omelet with Ham),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	3.4,
+		Proteins					=	23,
+		Lipids						=	13,
+		Calories					=	221,
+		Weight						=	0.35,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_SpaghettiwithMeatSauce
+	{
+		DisplayName					=	MRE Meal (Spaghetti with Meat Sauce),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.5,
+		Proteins					=	23,
+		Lipids						=	7,
+		Calories					=	241,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_ChickenalaKing
+	{
+		DisplayName					=	MRE Meal (Chicken a la King),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	7.7,
+		Proteins					=	23,
+		Lipids						=	30,
+		Calories					=	14.4,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_BeefStew
+	{
+		DisplayName					=	MRE Meal (Beef Stew),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	13.4,
+		Proteins					=	31,
+		Lipids						=	10,
+		Calories					=	267,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_HamSlice
+	{
+		DisplayName					=	MRE Meal (Ham Slice),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0,
+		Proteins					=	26,
+		Lipids						=	5,
+		Calories					=	153,
+		Weight						=	0.25,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_MeatballswithTomatoSauce
+	{
+		DisplayName					=	MRE Meal (Meatballs with Tomato Sauce),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.5,
+		Proteins					=	33,
+		Lipids						=	15,
+		Calories					=	376,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_TunawithNoodles
+	{
+		DisplayName					=	MRE Meal (Tuna with Noodles),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.7,
+		Proteins					=	26,
+		Lipids						=	9,
+		Calories					=	255,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_ChickenwithRice
+	{
+		DisplayName					=	MRE Meal (Chicken with Rice),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.1,
+		Proteins					=	31,
+		Lipids						=	11,
+		Calories					=	289,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item MRE_EscallopedPotatoeswithHam
+	{
+		DisplayName					=	MRE Meal (Escalloped Potatoes with Ham),
+		Icon 				= MRE_Carton2,
+		Type						=	Food,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	15.9,
+		Proteins					=	24,
+		Lipids						=	8,
+		Calories					=	234,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+
+
+	recipe Open MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce,
+		Result:MRE_PorkwithRiceinBBQSauce_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_CornedBeefHash,
+		Result:MRE_CornedBeefHash_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenStew,
+		Result:MRE_ChickenStew_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_OmeletwithHam,
+		Result:MRE_OmeletwithHam_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce,
+		Result:MRE_SpaghettiwithMeatSauce_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenalaKing,
+		Result:MRE_ChickenalaKing_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_BeefStew,
+		Result:MRE_BeefStew_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_HamSlice,
+		Result:MRE_HamSlice_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce,
+		Result:MRE_MeatballswithTomatoSauce_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_TunawithNoodles,
+		Result:MRE_TunawithNoodles_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenwithRice,
+		Result:MRE_ChickenwithRice_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam,
+		Result:MRE_EscallopedPotatoeswithHam_Open,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:PutItemInBag,
+		}
+
+	
+item MRE_PorkwithRiceinBBQSauce_Open
+	{
+		DisplayName					=	MRE Pork with Rice in BBQ Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	21.9,
+		Proteins					=	32,
+		Lipids						=	25,
+		Calories					=	443,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_CornedBeefHash_Open
+	{
+		DisplayName					=	MRE Corned Beef Hash,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	23.3,
+		Proteins					=	30,
+		Lipids						=	14,
+		Calories					=	330,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenStew_Open
+	{
+		DisplayName					=	MRE Chicken Stew,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.2,
+		Proteins					=	19,
+		Lipids						=	10,
+		Calories					=	250,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_OmeletwithHam_Open
+	{
+		DisplayName					=	MRE Omelet with Ham,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	3.4,
+		Proteins					=	23,
+		Lipids						=	13,
+		Calories					=	221,
+		Weight						=	0.35,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_SpaghettiwithMeatSauce_Open
+	{
+		DisplayName					=	MRE Spaghetti with Meat Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.5,
+		Proteins					=	23,
+		Lipids						=	7,
+		Calories					=	241,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenalaKing_Open
+	{
+		DisplayName					=	MRE Chicken a la King,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	7.7,
+		Proteins					=	23,
+		Lipids						=	30,
+		Calories					=	14,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_BeefStew_Open
+	{
+		DisplayName					=	MRE Beef Stew,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	13.4,
+		Proteins					=	31,
+		Lipids						=	10,
+		Calories					=	267,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_HamSlice_Open
+	{
+		DisplayName					=	MRE Ham Slice,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0,
+		Proteins					=	26,
+		Lipids						=	5,
+		Calories					=	153,
+		Weight						=	0.25,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        StaticModel = MRE_small,
+	}
+
+item MRE_MeatballswithTomatoSauce_Open
+	{
+		DisplayName					=	MRE Meatballs with Tomato Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.5,
+		Proteins					=	33,
+		Lipids						=	15,
+		Calories					=	376,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_TunawithNoodles_Open
+	{
+		DisplayName					=	MRE Tuna with Noodles,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.7,
+		Proteins					=	26,
+		Lipids						=	9,
+		Calories					=	255,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenwithRice_Open
+	{
+		DisplayName					=	MRE Chicken with Rice,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.1,
+		Proteins					=	31,
+		Lipids						=	11,
+		Calories					=	289,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_EscallopedPotatoeswithHam_Open
+	{
+		DisplayName					=	MRE Escalloped Potatoes with Ham,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		OnEat				= OnEat_MRE,
+		Type						=	Food,
+		UnhappyChange 		= +10,
+		BoredomChange 		= +10,
+		HungerChange 		= -25,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	15.9,
+		Proteins					=	24,
+		Lipids						=	8,
+		Calories					=	234,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+		OnEat				= OnEat_MRE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+
+item MRE_PorkwithRiceinBBQSauce_Hot
+	{
+		DisplayName					=	MRE Pork with Rice in BBQ Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	21.9,
+		Proteins					=	32,
+		Lipids						=	25,
+		Calories					=	443,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_CornedBeefHash_Hot
+	{
+		DisplayName					=	MRE Corned Beef Hash,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	23.3,
+		Proteins					=	30,
+		Lipids						=	14,
+		Calories					=	330,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenStew_Hot
+	{
+		DisplayName					=	MRE Chicken Stew,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.2,
+		Proteins					=	19,
+		Lipids						=	10,
+		Calories					=	250,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_OmeletwithHam_Hot
+	{
+		DisplayName					=	MRE Omelet with Ham,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	3.4,
+		Proteins					=	23,
+		Lipids						=	13,
+		Calories					=	221,
+		Weight						=	0.35,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_SpaghettiwithMeatSauce_Hot
+	{
+		DisplayName					=	MRE Spaghetti with Meat Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.5,
+		Proteins					=	23,
+		Lipids						=	7,
+		Calories					=	241,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenalaKing_Hot
+	{
+		DisplayName					=	MRE Chicken a la King,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	7.7,
+		Proteins					=	23,
+		Lipids						=	30,
+		Calories					=	14,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_BeefStew_Hot
+	{
+		DisplayName					=	MRE Beef Stew,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	13.4,
+		Proteins					=	31,
+		Lipids						=	10,
+		Calories					=	267,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_HamSlice_Hot
+	{
+		DisplayName					=	MRE Ham Slice,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0,
+		Proteins					=	26,
+		Lipids						=	5,
+		Calories					=	153,
+		Weight						=	0.25,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        StaticModel = MRE_small,
+	}
+
+item MRE_MeatballswithTomatoSauce_Hot
+	{
+		DisplayName					=	MRE Meatballs with Tomato Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.5,
+		Proteins					=	33,
+		Lipids						=	15,
+		Calories					=	376,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_TunawithNoodles_Hot
+	{
+		DisplayName					=	MRE Tuna with Noodles,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.7,
+		Proteins					=	26,
+		Lipids						=	9,
+		Calories					=	255,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenwithRice_Hot
+	{
+		DisplayName					=	MRE Chicken with Rice,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.1,
+		Proteins					=	31,
+		Lipids						=	11,
+		Calories					=	289,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_EscallopedPotatoeswithHam_Hot
+	{
+		DisplayName					=	MRE Escalloped Potatoes with Ham,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	15.9,
+		Proteins					=	24,
+		Lipids						=	8,
+		Calories					=	234,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+
+
+
+
+
+
+
+
+item MRE_PorkwithRiceinBBQSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Pork with Rice in BBQ Sauce with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	21.9,
+		Proteins					=	32,
+		Lipids						=	25,
+		Calories					=	443,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_CornedBeefHash_Hot_HotSauce
+	{
+		DisplayName					=	MRE Corned Beef Hash with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	23.3,
+		Proteins					=	30,
+		Lipids						=	14,
+		Calories					=	330,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenStew_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken Stew with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.2,
+		Proteins					=	19,
+		Lipids						=	10,
+		Calories					=	250,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_OmeletwithHam_Hot_HotSauce
+	{
+		DisplayName					=	MRE Omelet with Ham and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	3.4,
+		Proteins					=	23,
+		Lipids						=	13,
+		Calories					=	221,
+		Weight						=	0.35,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_SpaghettiwithMeatSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Spaghetti with Meat Sauce and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.5,
+		Proteins					=	23,
+		Lipids						=	7,
+		Calories					=	241,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenalaKing_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken a la King with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	7.7,
+		Proteins					=	23,
+		Lipids						=	30,
+		Calories					=	14,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_BeefStew_Hot_HotSauce
+	{
+		DisplayName					=	MRE Beef Stew with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	13.4,
+		Proteins					=	31,
+		Lipids						=	10,
+		Calories					=	267,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_HamSlice_Hot_HotSauce
+	{
+		DisplayName					=	MRE Ham Slice with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0,
+		Proteins					=	26,
+		Lipids						=	5,
+		Calories					=	153,
+		Weight						=	0.25,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        StaticModel = MRE_small,
+	}
+
+item MRE_MeatballswithTomatoSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Meatballs with Tomato Sauce and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.5,
+		Proteins					=	33,
+		Lipids						=	15,
+		Calories					=	376,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_TunawithNoodles_Hot_HotSauce
+	{
+		DisplayName					=	MRE Tuna with Noodles and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.7,
+		Proteins					=	26,
+		Lipids						=	9,
+		Calories					=	255,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_ChickenwithRice_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken with Rice and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.1,
+		Proteins					=	31,
+		Lipids						=	11,
+		Calories					=	289,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_EscallopedPotatoeswithHam_Hot_HotSauce
+	{
+		DisplayName					=	MRE Escalloped Potatoes with Ham and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	15.9,
+		Proteins					=	24,
+		Lipids						=	8,
+		Calories					=	234,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+
+
+
+item MRE_PorkwithRiceinBBQSauce_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Pork with Rice in BBQ Sauce),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_PorkwithRiceinBBQSauce_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_CornedBeefHash_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Corned Beef Hash),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_CornedBeefHash_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_ChickenStew_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Chicken Stew),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_ChickenStew_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_OmeletwithHam_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Omelet with Ham),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_OmeletwithHam_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_SpaghettiwithMeatSauce_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Spaghetti with Meat Sauce),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_SpaghettiwithMeatSauce_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_ChickenalaKing_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Chicken a la King),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_ChickenalaKing_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_BeefStew_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Beef Stew),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_BeefStew_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_HamSlice_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Ham Slice),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_HamSlice_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_MeatballswithTomatoSauce_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Meatballs with Tomato Sauce),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_MeatballswithTomatoSauce_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_TunawithNoodles_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Tuna with Noodles),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_TunawithNoodles_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_ChickenwithRice_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Chicken with Rice),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_ChickenwithRice_Finished,
+		/*Type						=	Food,*/
+	}
+
+item MRE_EscallopedPotatoeswithHam_Heating
+	{
+		DisplayName					=	Heating MRE Meal (Escalloped Potatoes with Ham),
+		Icon 				= MREHeatingsmoke,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		/*Weight						=	100,*/
+		Weight						=	0.55,
+        Wet                 =           TRUE,
+        WetCooldown         =           2500,
+        ItemWhenDry         =           Base.MRE_EscallopedPotatoeswithHam_Finished,
+		/*Type						=	Food,*/
+	}
+
+
+
+
+item MRE_PorkwithRiceinBBQSauce_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Pork with Rice in BBQ Sauce),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_CornedBeefHash_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Corned Beef Hash),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_ChickenStew_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Chicken Stew),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_OmeletwithHam_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Omelet with Ham),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.45,
+		Type						=	Food,
+	}
+
+item MRE_SpaghettiwithMeatSauce_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Spaghetti with Meat Sauce),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_ChickenalaKing_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Chicken a la King),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_BeefStew_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Beef Stew),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_HamSlice_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Ham Slice),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.35,
+		Type						=	Food,
+	}
+
+item MRE_MeatballswithTomatoSauce_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Meatballs with Tomato Sauce),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_TunawithNoodles_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Tuna with Noodles),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_ChickenwithRice_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Chicken with Rice),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+item MRE_EscallopedPotatoeswithHam_Finished
+	{
+		DisplayName					=	Finished MRE Meal (Escalloped Potatoes with Ham),
+		Icon 				= MREHeating,
+		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
+		Weight						=	0.55,
+		Type						=	Food,
+	}
+
+
+	recipe Get MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce_Finished,
+		Result:MRE_PorkwithRiceinBBQSauce_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_CornedBeefHash_Finished,
+		Result:MRE_CornedBeefHash_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenStew_Finished,
+		Result:MRE_ChickenStew_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_OmeletwithHam_Finished,
+		Result:MRE_OmeletwithHam_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce_Finished,
+		Result:MRE_SpaghettiwithMeatSauce_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenalaKing_Finished,
+		Result:MRE_ChickenalaKing_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_BeefStew_Finished,
+		Result:MRE_BeefStew_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_HamSlice_Finished,
+		Result:MRE_HamSlice_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce_Finished,
+		Result:MRE_MeatballswithTomatoSauce_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_TunawithNoodles_Finished,
+		Result:MRE_TunawithNoodles_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenwithRice_Finished,
+		Result:MRE_ChickenwithRice_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam_Finished,
+		Result:MRE_EscallopedPotatoeswithHam_Hot,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:PutItemInBag,
+		}
+
+	
+}
+

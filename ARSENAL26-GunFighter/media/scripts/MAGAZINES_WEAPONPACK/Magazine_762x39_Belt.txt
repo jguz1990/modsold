@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 762x39Belt
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	7.62x39 Box Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	M60Mag,
+        MaxAmmo 	=	100,
+        AmmoType 	=	Base.762x39Bullets,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

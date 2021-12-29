@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>static\clothes\m_M50</m_MaleModel>
+	<m_FemaleModel>static\clothes\f_M50</m_FemaleModel>
+	<m_GUID>d35edc27-abc4-4524-95f3-505bb7245f53</m_GUID>
+	<m_Static>true</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Head</m_AttachBone>
+	<m_HatCategory>nobeard</m_HatCategory>
+	<m_MasksFolder>media/textures/Clothes/Hat/Masks</m_MasksFolder>
+	<textureChoices>clothes\hat\Hat_M50_1</textureChoices>
+	<textureChoices>clothes\hat\Hat_M50_2</textureChoices>
+	<textureChoices>clothes\hat\Hat_M50_3</textureChoices>	
+</clothingItem>

@@ -1,0 +1,88 @@
+module Base
+{
+    item Bag_Tactical_Belt_Front
+    {
+        Type = Container,
+        DisplayName = Fairwin Tactical Belt (Front),
+        ClothingItem = Bag_Tactical_Belt_Front,
+       CanBeEquipped = FannyPackFront,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Tactical_Belt,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = TorsoExtra,
+        RunSpeedModifier = 0.94,
+       ClothingItemExtra = Bag_Tactical_Belt_Back,
+        ClothingItemExtraOption = Tactical_Belt_WearBack,
+        clothingExtraSubmenu = Tactical_Belt_WearFront,
+    }
+
+
+
+    item Bag_Tactical_Belt_Back
+    {
+        Type = Container,
+        DisplayName = Fairwin Tactical Belt (Back),
+        ClothingItem = Bag_Tactical_Belt_Back,
+        CanBeEquipped = FannyPackBack, 
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Tactical_Belt,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = TorsoExtra,
+        RunSpeedModifier = 0.94,
+       ClothingItemExtra = Bag_Tactical_Belt_Front,
+        ClothingItemExtraOption = Tactical_Belt_WearFront,
+        clothingExtraSubmenu = Tactical_Belt_WearBack,
+    }
+
+
+
+    item Bag_Duty_Belt_Front
+    {
+        Type = Container,
+        DisplayName = Police Duty Belt (Front),
+        ClothingItem = Bag_Duty_Belt_Front,
+       CanBeEquipped = FannyPackFront,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Duty_Belt,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = TorsoExtra,
+        RunSpeedModifier = 0.94,
+       ClothingItemExtra = Bag_Duty_Belt_Back,
+        ClothingItemExtraOption = Duty_Belt_WearBack,
+        clothingExtraSubmenu = Duty_Belt_WearFront,
+    }
+
+
+
+    item Bag_Duty_Belt_Back
+    {
+        Type = Container,
+        DisplayName = Police Duty Belt (Back),
+        ClothingItem = Bag_Duty_Belt_Back,
+        CanBeEquipped = FannyPackBack, 
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Duty_Belt,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = TorsoExtra,
+        RunSpeedModifier = 0.94,
+       ClothingItemExtra = Bag_Duty_Belt_Front,
+        ClothingItemExtraOption = Duty_Belt_WearFront,
+        clothingExtraSubmenu = Duty_Belt_WearBack,
+    }
+}

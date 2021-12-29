@@ -1,0 +1,117 @@
+module Base
+{
+    item Gorka_Jacket
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Jacket,
+        ClothingItem = Gorka_Jacket,
+        BodyLocation = Jacket,
+        BloodLocation = Jumper,
+        Icon = Gorka_Jacket,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        Weight	=	0.001,
+        FabricType = Denim,
+    }
+
+
+
+    item Gorka_Jacket2
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Jacket w/ Summer Camo,
+        ClothingItem = Gorka_Jacket2,
+        BodyLocation = Jacket,
+        BloodLocation = Jumper,
+        Icon = Gorka_Jacket2,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        Weight	=	0.001,
+        FabricType = Denim,
+    }
+
+
+
+    item Gorka_Jacket3
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Jacket w/ Autumn Camo,
+        ClothingItem = Gorka_Jacket3,
+        BodyLocation = Jacket,
+        BloodLocation = Jumper,
+        Icon = Gorka_Jacket3,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        Weight	=	0.001,
+        FabricType = Denim,
+    }
+
+
+
+    item Gorka_Pants
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Pants,
+        ClothingItem = Gorka_Pants,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+        Icon = Gorka_Pants,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        FabricType = Denim,
+    }
+
+
+
+    item Gorka_Pants2
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Pants w/ Summer Camo,
+        ClothingItem = Gorka_Pants2,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+        Icon = Gorka_Pants2,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        FabricType = Denim,
+    }
+
+
+
+    item Gorka_Pants3
+    {
+        Type = Clothing,
+        DisplayName = Bars Gorka 4 Pants w/ Autumn Camo,
+        ClothingItem = Gorka_Pants3,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+        Icon = Gorka_Pants3,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        FabricType = Denim,
+    }
+ }

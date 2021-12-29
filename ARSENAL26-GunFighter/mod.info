@@ -1,0 +1,5 @@
+name=Arsenal(26) GunFighter
+id=Arsenal(26)GunFighter
+poster=preview.png
+description=Adds Option enabled Firearm Functions and Mechanics.
+require=modoptions

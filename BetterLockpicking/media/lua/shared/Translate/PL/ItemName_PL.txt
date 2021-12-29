@@ -1,0 +1,6 @@
+ItemName_PL = {
+ItemName_BetLock.BobbyPin = "Wytrych",
+ItemName_BetLock.HandmadeBobbyPin = "Wytrych w³asnej roboty",
+ItemName_BetLock.LockpickingMag = "Czasopismo 'Otwieranie zamków dla opornych'",
+ItemName_BetLock.AlarmMag = "Czasopismo 'Alarmy dla opornych'",
+}

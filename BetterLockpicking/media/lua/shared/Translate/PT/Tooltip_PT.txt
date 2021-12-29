@@ -1,0 +1,5 @@
+Tooltip_PT = {
+Tooltip_BetLock_BobbyPin = "Item para arrombamento. Também é necessária uma chave de fenda e deve ser aprendida na revista de arrombamento",
+Tooltip_BetLock_LockpickingMag = "Revista para aprender a abrir fechaduras. Você pode arrombar: portas, janelas, veículos grampo de cabelo ou pé de cabra",
+Tooltip_BetLock_AlarmMag = "Revista para aprender sobre alarmes. Você pode verificar o alarme do veículo / casa"
+}

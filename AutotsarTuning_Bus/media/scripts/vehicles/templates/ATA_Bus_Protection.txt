@@ -1,0 +1,436 @@
+module Base
+{
+	model ATA_Bus_Protection_door
+	{
+		mesh = vehicles/ATA_Bus_parts|Door,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_door_rear
+	{
+		mesh = vehicles/ATA_Bus_parts|Door_rear,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_wheels
+	{
+		mesh = vehicles/ATA_Bus_parts|Protection_wheel,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_windows_front
+	{
+		mesh = vehicles/ATA_Bus_parts|Protection_windows_front,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_windows_right
+	{
+		mesh = vehicles/ATA_Bus_parts|Protection_windows_right,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_windows_left_light
+	{
+		mesh = vehicles/ATA_Bus_parts|Protection_windows_left_light,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ATA_Bus_Protection_windows_left_full
+	{
+		mesh = vehicles/ATA_Bus_parts|Protection_windows_left_full,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	
+	template vehicle ATA_Bus_Protection
+	{
+		part DoorProtection
+		{
+			model Default
+			{
+				file = ATA_Bus_Protection_door,
+			}
+			area = SeatFrontRight,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_door_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			table install
+            {
+				requireInstalled = WindowFrontRight,
+                items
+                {
+                    1
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		part DoorRearProtection
+		{
+			area = TruckBed,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_door_rear_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_door_rear,
+			}
+			table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		part WheelsProtection
+		{
+			area = TireRearRight,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_wheels_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_wheels,
+			}
+			table install
+            {
+				requireInstalled = TireRearLeft;TireRearRight,
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		part WindowsFrontProtection
+		{
+			area = Engine,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_windows_front_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_windows_front,
+			}
+			table install
+            {
+				requireInstalled = Windshield,
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		
+		part WindowsRightProtection
+		{
+			area = SeatFrontRight,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_windows_right_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_windows_right,
+			}
+			table install
+            {
+				requireInstalled = WindowMiddleRight;WindowRearRight,
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		
+		part WindowsLeftLiteProtection
+		{
+			area = SeatFrontLeft,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_windows_left_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_windows_left_light,
+			}
+			table install
+            {
+				requireInstalled = WindowFrontLeft,
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+		
+		part WindowsLeftFullProtection
+		{
+			area = SeatFrontLeft,
+			category = tuning,
+			specificItem = false,
+			itemType = Autotsar.ATA_Bus_Protection_windows_left_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			model Default
+			{
+				file = ATA_Bus_Protection_windows_left_full,
+			}
+			table install
+            {
+				requireInstalled = WindowFrontLeft;WindowMiddleLeft;WindowRearLeft,
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.InstallTest.Default,
+				complete = ATATuning.InstallComplete.CommonProtection,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+ 						equip = primary,
+                   }
+                }
+				time = 2000,
+				recipes = Advanced Mechanics;Basic Tuning,
+				test = Vehicles.UninstallTest.Default,
+				complete = ATATuning.UninstallComplete.CommonProtection,
+            }
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+	}
+}

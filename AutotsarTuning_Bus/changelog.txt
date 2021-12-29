@@ -1,0 +1,98 @@
+v.1.10
+20211212
+
+Предметы и рецепты перенесены в отдельные файлы.
+Исправлена ошибки с кенгурятниками.
+Переводы перенесены в Tsar's Common Library.
+
+Items and recipes have been moved to separate files.
+Fixed bugs with bullbars.
+Fixed translations.
+
+-------------------
+v.1.10dev2
+20211211
+
+Обновлен шаблон кенгурятника.
+
+Updated bullbar template.
+
+-------------------
+v.1.10dev1
+
+Выполнена оптимизация мода в связи с обновлением общей библиотеки.
+
+The mod has been optimized due to an update of the common library.
+-------------------
+
+v.1.09
+
+Обновлены иконки и модель журнала по тюнингу (спасибо djvirus).
+
+Updated icons and magazine models (thanks to djvirus).
+
+-------------------
+v.1.08
+
+Изменена кодировка испанского перевода.
+Исправлены ошибки в скриптах автобусов.
+Исправлена ошибка возникающая при чтении журнала по тюнингу.
+Возвращено заднее стекло для автобусов.
+
+Changed the encoding of the Spanish translation.
+Fixed errors in bus scripts.
+Fixed an error that occurs when reading the tuning magazine.
+Rear window for buses has been returned.
+
+-------------------
+v.1.07
+
+Добавлен испанский перевод (спасибо Siowar).
+
+Added Spanish translation (thanks Siowar).
+-------------------
+v.1.06
+
+Исправлены ошибки возникающие со школьным и тюремным автобусами.
+
+Fixed bugs with school and prison buses.
+
+-------------------
+v.1.05
+
+Добавлена возможность выходить из автобуса с любых сидений.
+Улучшен спавн журналов для тюнинга.
+Исправлены мелкие баги.
+Функций и скрипты для тюнинга выделены в отдельную библиотеку.
+
+Added the ability to get off the bus from any seat.
+Improved spawn of tuning magazines.
+Minor bugs fixed.
+Functions and scripts for tuning have been moved to Tsar's library.
+
+-------------------
+v.1.04
+
+Исправлены проблемы со звуками автобусов.
+
+Fixed problems with bus sounds.
+-------------------
+v.1.03
+
+Улучшены характеристики двигателя.
+Изменено расположение фаркопа.
+
+Improved engine performance.
+The location of the towbar has been changed.
+-------------------
+v.1.02
+
+Исправлен рецепт крафта ящика для инструментов.
+Изменены списки предметов для крафта обвеса.
+Исправлены ошибки связанные с состоянием защищаемых узлов (колеса больше не отваливаются, запчасти двигателя больше не размножаются).
+Улучшена подвеска автобусов.
+
+Fixed recipe for crafting toolbox.
+Changed the lists of items for crafting body kit.
+Fixed errors related to protected parts (wheels no longer fall off, engine parts no longer multiply).
+Improved bus suspension.

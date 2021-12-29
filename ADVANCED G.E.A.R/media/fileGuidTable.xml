@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+	<path>media/clothing/clothingItems/ChestRig.xml</path>
+	<guid>37fe2f93-762a-4da9-8438-d215fe9b870d</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Webbing.xml</path>
+	<guid>be75db90-05f9-4676-95d5-b25d501ccab3</guid>
+	</files>		
+	
+
+
+	<files>
+	<path>media/clothing/clothingItems/WebbingLoose.xml</path>
+	<guid>67c44229-682a-4b58-99cb-1db47489e726</guid>
+	</files>
+
+
+
+	<files>
+		<path>media/clothing/clothingItems/Webbing_Black.xml</path>
+		<guid>e5d4f2ac-7679-4a43-9179-f330109c24e0</guid>
+	</files>
+
+
+	<files>
+		<path>media/clothing/clothingItems/Bag_ALICEpack2.xml</path>
+		<guid>8b3f943c-e903-431b-bf8d-8f2eb86c9ef2</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_ALICEpack_Army2.xml</path>
+		<guid>e5e131ff-bc65-4b94-9bc1-b70e8f99e682</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_BigHikingBag2.xml</path>
+		<guid>d1146e1e-1e80-4344-bfe0-2be1e93e0222</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Bag_HikingBag2.xml</path>
+		<guid>0eb60cd5-ed6a-4806-ac60-376c77af64c2</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Bag_SchoolBag2.xml</path>
+		<guid>1bba5b1a-c6c6-4af7-ab69-43f583007152</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_SurvivorBag2.xml</path>
+		<guid>c2d9211a-a0c5-475d-8fa6-681a8b809f22</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/SniperVeil.xml</path>
+		<guid>ea63b274-a05e-4704-a815-c976211a3784</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/BallisticMask.xml</path>
+		<guid>a3800028-d6b9-4539-a9ff-fb35de3a2743</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/SkullHalfMask.xml</path>
+		<guid>00e72829-65cc-445c-a883-84803143609a</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/BackRig.xml</path>
+		<guid>33c36e39-58eb-47ab-87de-b93328304639</guid>
+	</files>
+
+	
+	<files>
+		<path>media/clothing/clothingItems/AssaultBoots.xml</path>
+		<guid>5b09767d-2a5d-49e9-a6d9-c88adbd50de7</guid>
+	</files>
+	
+	<files>
+		<path>media/clothing/clothingItems/AssaultBootsDesert.xml</path>
+		<guid>98e3727b-ab76-446d-b719-4d1a3f108396</guid>
+	</files>
+
+	
+	<files>
+		<path>media/clothing/clothingItems/Vest_BulletEMS.xml</path>
+		<guid>18d39436-5efd-4fa0-8686-fdccb44b5c9c</guid>
+	</files>	
+
+	<files>
+		<path>media/clothing/clothingItems/Vest_BulletFire.xml</path>
+		<guid>9c216c9f-f03f-415c-83f3-448cc73ed6ee</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Vest_BulletPress.xml</path>
+		<guid>2ebbeb8a-4f29-49d0-abbe-db3c518cb8a9</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/CCVest.xml</path>
+		<guid>f895219c-24c9-47cf-8b25-b510c7f9f24f</guid>
+	</files>
+
+
+	<files>
+	<path>media/clothing/clothingItems/ShotgunShellBandolier.xml</path>
+	<guid>7a83282c-7a1c-4afe-9220-ff5e53472ede</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/BulletBandolier.xml</path>
+	<guid>d1b22dd8-7ae3-483a-b41d-88fa19dfedfa</guid>
+	</files>
+
+
+
+
+
+</fileGuidTable>

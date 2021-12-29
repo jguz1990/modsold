@@ -1,0 +1,66 @@
+module Base
+{
+    
+    item CalfSheath
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Calf Sheath,
+        Icon	=	CalfSheath,
+        BodyLocation = CalfSheath,
+       /* ClothingItem = Holster,*/
+        ClothingItem = CalfSheath,
+        AttachmentsProvided = CalfSheath,
+        ColorRed = 254,
+        ColorGreen = 254,
+        ColorBlue = 254,
+    }
+	item BackRig
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Back Rig,
+        IconsForTexture = ChestRig_Gray;ChestRig_Green;ChestRig_Tan,
+        BodyLocation = Back,
+        ClothingItem = BackRig,
+        AttachmentsProvided = Back2,
+        ColorRed = 254,
+        ColorGreen = 254,
+        ColorBlue = 254,
+    } 
+
+	
+	recipe Make Calf Sheath
+    {
+	Belt2,
+	LeatherStrips/LeatherStripsDirty,
+	Thread, 
+        DuctTape/Scotchtape,
+        keep KitchenKnife/HuntingKnife/Scissors,
+        keep Needle,
+        /*NeedToBeLearn:true,*/
+        Result:CalfSheath,
+        Time:300.0,
+        Category:Survivalist,
+      	SkillRequired:Tailoring=2,
+    }
+
+	
+	recipe Make Back Rig
+    {
+	Belt2=3,
+	LeatherStrips/LeatherStripsDirty,
+	LeatherStrips/LeatherStripsDirty,
+	LeatherStrips/LeatherStripsDirty,
+	Thread=3, 
+        DuctTape/Scotchtape=3,
+        keep KitchenKnife/HuntingKnife/Scissors,
+        keep Needle,
+        /*NeedToBeLearn:true,*/
+        Result:BackRig,
+        Time:900.0,
+        Category:Survivalist,
+      	SkillRequired:Tailoring=4,
+    }
+}
+

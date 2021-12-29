@@ -1,0 +1,210 @@
+module Base
+{
+item MRE_Side
+	{
+		DisplayName 		= MRE Side Meal,
+		Weight 				= 0.4,
+		Type 				= Food,
+		Icon 				= MRE_Carton_Side2,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+		FoodType 			= NoExplicit,
+		Packaged 			= TRUE,
+		CantBeFrozen 		= TRUE,
+	}
+	recipe Rehydrate Fruit
+		{
+		Water=1,
+		MRE_Freezedriedfruit,
+		Result:MRE_Fruit,
+		Time:25.0,
+		Category:Cooking,
+		Sound:GetWater,
+		}
+
+item MRE_Applesauce
+	{
+		DisplayName					=	MRE Applesauce Pouch,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-10,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	25.1,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	130,
+		Weight 				= 0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_Freezedriedfruit
+	{
+		DisplayName					=	MRE Dehydrated Fruit,
+		Icon						=	MREEnvelopeSide,
+		Type						=	Food,
+		HungerChange				=	-5,
+		ThirstChange				=	+5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	14.2,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	120,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Pouch_Trash,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_Fruit
+	{
+		DisplayName					=	MRE Rehydrated Fruit,
+		Icon						=	MREEnvelopeSide,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	14.2,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	120,
+		Weight						=	0.6,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Pouch_Trash,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		ReplaceOnUse 		= MRE_Side_Pouch_Trash,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_PotatoesAuGrautin
+	{
+		DisplayName					=	MRE Potatoes Au Grautin,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-10,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	16.8,
+		Proteins					=	4,
+		Lipids						=	8,
+		Calories					=	200,
+		Weight						=	0.4,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}
+
+item MRE_OatmealCookieBar
+	{
+		DisplayName					=	MRE Oatmeal Cookie Bar,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	29.3,
+		Proteins					=	6,
+		Lipids						=	11,
+		Calories					=	241,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        StaticModel = MRE_small,
+	}
+
+
+item MRE_PoundCake
+	{
+		DisplayName					=	MRE Pound Cake,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	45.5,
+		Proteins					=	7,
+		Lipids						=	22,
+		Calories					=	412,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        StaticModel = MRE_small,
+	}
+
+
+
+item MRE_BrownieChocCovered
+	{
+		DisplayName					=	MRE Chocolate Covered Brownie,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.0,
+		Proteins					=	4,
+		Lipids						=	16,
+		Calories					=	267,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        StaticModel = MRE_small,
+	}
+
+
+item MRE_CookieChocCovered
+	{
+		DisplayName					=	MRE Chocolate Covered Cookie,
+		Icon						=	MRE_Carton_Side2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.0,
+		Proteins					=	3,
+		Lipids						=	12,
+		Calories					=	290,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+        StaticModel = MRE_small,
+	}
+	
+item MRE_ChowMeinNoodles
+	{
+		DisplayName 		= MRE Chow Mein Noodles,
+		HungerChange 		= -10,
+		Weight 				= 0.2,
+		Type 				= Food,
+		Icon 				= MRE_Carton_Side2,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+		FoodType 			= NoExplicit,
+		Carbohydrates 		= 72,
+		Proteins 			= 8,
+		Lipids 				= 15,
+		Calories 			= 475,
+		Packaged 			= TRUE,
+		CantBeFrozen 		= TRUE,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+	}		
+	
+item MRE_PotatoSticks
+	{
+		DisplayName 		= MRE Potato Sticks,
+		HungerChange 		= -10,
+		Weight 				= 0.2,
+		Type 				= Food,
+		Icon 				= MRE_Carton_Side2,
+		ReplaceOnUse 		= MRE_Side_Carton_Trash,
+		FoodType 			= NoExplicit,
+		Carbohydrates 		= 16,
+		Proteins 			= 2,
+		Lipids 				= 11,
+		Calories 			= 160,
+		Packaged 			= TRUE,
+		CantBeFrozen 		= TRUE,
+        StaticModel = MRE_small,
+	}
+
+}
+

@@ -1,0 +1,6 @@
+ItemName_ES = {
+    ItemName_BetLock.BobbyPin = "Horquilla",
+    ItemName_BetLock.HandmadeBobbyPin = "Horquilla casera",
+    ItemName_BetLock.LockpickingMag = "Ganzúas para principiantes",
+    ItemName_BetLock.AlarmMag = "Alarmas para principiantes",
+}

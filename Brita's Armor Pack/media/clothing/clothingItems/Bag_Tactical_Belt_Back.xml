@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Tactical_Belt_Back</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Tactical_Belt_Back</m_FemaleModel>
+	<m_GUID>10415735-225e-46d9-b558-d44c829a379b</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_Tactical_Belt</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Tactical_Belt2</textureChoices>	
+	<textureChoices>clothes\Bag\Bag_Tactical_Belt3</textureChoices>	
+</clothingItem>

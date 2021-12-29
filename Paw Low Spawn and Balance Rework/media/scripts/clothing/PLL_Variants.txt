@@ -1,0 +1,131 @@
+module Base
+{
+	item strapchest_Black
+    {
+        Type = Clothing,
+        DisplayName = Torso Rig (Loose),
+        ClothingItem = strapchest_Black,
+        BodyLocation = TorsoRig,
+		ClothingItemExtra = strapchest2_Black,
+        ClothingItemExtraOption = tighten,
+        Icon = TorsoRig,
+		AttachmentsProvided = ChestRig;ChestRigRight,
+		CanHaveHoles = false,
+        Weight = 0.01,
+    }
+
+	item strapchest2_Black
+    {
+        Type = Clothing,
+        DisplayName = Torso Rig (Tight),
+        ClothingItem = strapchest2_Black,
+        BodyLocation = TorsoRig,
+		ClothingItemExtra = strapchest_Black,
+        ClothingItemExtraOption = loosen,
+        Icon = TorsoRig,
+		AttachmentsProvided = ChestRig;ChestRigRight,
+		CanHaveHoles = false,
+        Weight = 0.01,
+    }
+	item strapchest_Military
+    {
+        Type = Clothing,
+        DisplayName = Torso Rig (Loose),
+        ClothingItem = strapchest_Military,
+        BodyLocation = TorsoRig,
+		ClothingItemExtra = strapchest2_Military,
+        ClothingItemExtraOption = tighten,
+        IconsForTexture = TorsoRig;TorsoRig2,
+		AttachmentsProvided = ChestRig;ChestRigRight,
+		CanHaveHoles = false,
+        Weight = 0.01,
+    }
+
+	item strapchest2_Military
+    {
+        Type = Clothing,
+        DisplayName = Torso Rig (Tight),
+        ClothingItem = strapchest2_Military,
+        BodyLocation = TorsoRig,
+		ClothingItemExtra = strapchest_Military,
+        ClothingItemExtraOption = loosen,
+        IconsForTexture = TorsoRig;TorsoRig2,
+		AttachmentsProvided = ChestRig;ChestRigRight,
+		CanHaveHoles = false,
+        Weight = 0.01,
+    }
+  
+  
+
+	item Vest_RogueVest_Black
+    {
+        Type = Clothing,
+        DisplayName = Rogue Vest,
+        ClothingItem = Vest_RogueVest_Black,
+        BodyLocation = TorsoExtra,
+        Icon = RogueVest2,
+        BloodLocation = ShirtNoSleeves,
+        BiteDefense = 40,
+        ScratchDefense = 65,
+        Insulation = 0.55,
+        WindResistance = 0.50,
+        Weight = 0.01,
+	BulletDefense = 100,
+	WorldStaticModel = BulletVest_Ground,
+
+    }
+	item Vest_RogueVest_Military
+    {
+        Type = Clothing,
+        DisplayName = Rogue Vest,
+        ClothingItem = Vest_RogueVest_Military,
+        BodyLocation = TorsoExtra,
+        Icon = RogueVest,
+        BloodLocation = ShirtNoSleeves,
+        BiteDefense = 40,
+        ScratchDefense = 65,
+        Insulation = 0.55,
+        WindResistance = 0.50,
+        Weight = 0.01,
+	BulletDefense = 100,
+	WorldStaticModel = BulletVest_Ground,
+
+    }
+
+	item Vest_WitchyCarrier_Military
+    {
+        Type = Clothing,
+        DisplayName = Flak Vest,
+        ClothingItem = Vest_WitchyCarrier_Military,
+        BodyLocation = TorsoExtra,
+        Icon = WCV2,
+        BloodLocation = ShirtNoSleeves,
+        BiteDefense = 25,
+        ScratchDefense = 45,
+        Insulation = 0.2,
+        WindResistance = 0.2,
+        Weight = 0.01,
+	BulletDefense = 100,
+	WorldStaticModel = BulletVest_Ground,
+
+    }
+
+	item Vest_WitchyCarrier_Black
+    {
+        Type = Clothing,
+        DisplayName = Flak Vest,
+        ClothingItem = Vest_WitchyCarrier_Black,
+        BodyLocation = TorsoExtra,
+        Icon = WCV,
+        BloodLocation = ShirtNoSleeves,
+        BiteDefense = 25,
+        ScratchDefense = 45,
+        Insulation = 0.2,
+        WindResistance = 0.2,
+        Weight = 0.01,
+	BulletDefense = 100,
+	WorldStaticModel = BulletVest_Ground,
+    }
+
+
+}

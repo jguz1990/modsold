@@ -1,0 +1,5 @@
+Tooltip_PL = {
+Tooltip_BetLock_BobbyPin = "U¿ywany do otwierania zamków. Wymaga jeszcze œrubokrêta i przeczytania czasopisma o otwieraniu zamków.",
+Tooltip_BetLock_LockpickingMag = "Czasopismo z instrukcjami dotycz¹cymi otwierania zamków. Przeczytanie umo¿liwi otwieranie zamków w drzwiach, oknach i pojazdach za pomoc¹ wytrychu i œrubokrêta oraz ³omu.",
+Tooltip_BetLock_AlarmMag = "Czasopismo z instrukcjami dotycz¹cymi alarmów. Przeczytanie umo¿liwi wykrywanie alarmów budynków i pojazdów."
+}

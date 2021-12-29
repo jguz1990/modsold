@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="UnloadDblBarrel.xml">
+	<m_Name>UnloadNEF_Handi</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>NEF_Handi</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>NEF_Handi_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

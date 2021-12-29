@@ -1,0 +1,48 @@
+module Base
+{
+    item Hat_Beret_Tactical
+	{
+	Type = Clothing,
+	DisplayName = Military Beret w/ Headset,
+	ClothingItem = Hat_Beret_Tactical,
+	BodyLocation = Hat,
+	Icon = Hat_Beret_Tactical,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight = 0.8,
+    }
+
+
+
+    item Hat_Beret_Tactical_Only
+	{
+	Type = Clothing,
+	DisplayName = Military Beret,
+	ClothingItem = Hat_Beret_Tactical_Only,
+	BodyLocation = Hat,
+	Icon = Hat_Beret_Tactical_Only,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight = 0.5,
+    }
+
+
+
+    item Hat_Beret_Tactical_Headset
+	{
+	Type = Clothing,
+	DisplayName = Military Headset,
+	ClothingItem = Hat_Beret_Tactical_Headset,
+	BodyLocation = Ears,
+	Icon = Hat_Beret_Tactical_Headset,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight = 0.3,
+    }
+}

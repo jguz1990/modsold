@@ -1,0 +1,152 @@
+module Base
+{
+    	recipe Make Hook
+    {
+        Wire=2,
+	Screws=2,
+
+        Result:HookB,
+	SkillRequired:MetalWelding=2,
+	OnGiveXP:Give10MWXP,
+        Time:250,
+    }
+	
+
+	recipe Hooked First Aid Kit
+    {
+        HookB,
+	FirstAidKit,
+
+        Result:FirstAidKitB,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+
+
+	recipe Hooked Advanced First Aid Kit
+    {
+        HookB,
+	AFAK,
+
+        Result:AFAKB,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+	recipe Hooked ToolBox
+    {
+        HookB,
+	Toolbox,
+
+        Result:ToolBoxB,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+	recipe Hooked Lunchbox
+    {
+        HookB,
+	Lunchbox,
+
+        Result:LunchboxB,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+	recipe Hooked Lunchbox
+    {
+        HookB,
+	Lunchbox2,
+
+        Result:Lunchbox2B,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+	recipe Reclaim Hook from First Aid Kit
+    {
+        FirstAidKitB,
+
+        Result:FirstAidKit,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+    }
+
+	recipe Reclaim Hook from Advanced First Aid Kit
+    {
+        AFAKB,
+
+        Result:AFAK,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+    }
+	
+	recipe Reclaim Hook from Toolbox
+    {
+        ToolBoxB,
+
+        Result:Toolbox,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+    }
+
+	recipe Reclaim Hook from Lunchbox
+    {
+        LunchboxB,
+
+        Result:Lunchbox,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+     }	
+
+	recipe Reclaim Hook from Lunchbox
+    {
+        Lunchbox2B,
+
+        Result:Lunchbox2,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+     }	
+
+	recipe Make Quiver
+    {
+        HookB,
+	LeatherStrips=4,
+	Thread=4,
+	keep Scissors,
+	keep Needle,
+
+
+        Result:QuiverB,
+	Category:Survivalist,
+	SkillRequired:Tailoring=1,
+        Time:350,
+    }
+
+	recipe Hooked Pistol Case
+    {
+        HookB,
+	PistolCase1/PistolCase2/PistolCase3,
+
+        Result:PistolCase1B,
+        Time:20,
+	OnCreate:Empty_KIT,
+    }
+
+	recipe Reclaim Hook from Pistol Case
+    {
+        PistolCase1B,
+
+        Result:PistolCase1,
+	OnCreate:RecoverHook_OnCreate,
+        Time:20,
+	OnCreate:Empty_KITH,
+     }	
+
+}	

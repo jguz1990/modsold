@@ -1,0 +1,260 @@
+module Autotsar
+{
+	imports
+	{
+		Base
+	}
+	model ATAJeepBumper1World
+	{
+		mesh = WorldItems/ATA_Bumper1,
+		texture = Vehicles/ATA_Jeep_items,
+		scale = 0.04,
+	}
+	
+	item AtTuningMagJeep /* Спавн */ 
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Autotsar Tuning Universe,
+        Icon	=	ATATuningMagUniverseIcon,
+        TeachedRecipes  =   Basic Tuning;Make ATAJeepBumper4Item;Make ATAJeepProtectionWindowItem;Make ATAJeepProtectionWindowFrontItem;Make ATAJeepProtectionWindowRearItem;Make ATAJeepRoofBaseItem;Make ATAJeepInteractiveTrunkRoofRackItem;Make ATAJeepInteractiveTrunkWheelRackItem,
+        ReplaceOnUse    =   AtTuningMagJeep,
+        Tooltip = Tooltip_item_AtTuningMagJeep,
+        StaticModel = Autotsar.ATATuningMagUniverse_Reading,
+        WorldStaticModel = Autotsar.ATATuningMagUniverse_Ground,
+    }
+	
+	item ATAJeepBumper1Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepBumper1Item,
+        Icon	=	ATAJeepBumper1Item,
+		ConditionMax = 100,
+		ChanceToSpawnDamaged = 25,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepBumper1World,
+	}
+	model ATAJeepBumper2World
+	{
+		mesh = WorldItems/ATA_Bumper2,
+		texture = Vehicles/ATA_Jeep_items,
+		scale = 0.04,
+	}
+	item ATAJeepBumper2Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepBumper2Item,
+        Icon	=	ATAJeepBumper2Item,
+		ConditionMax = 100,
+		ChanceToSpawnDamaged = 25,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepBumper2World,
+	}
+	model ATAJeepBumper3World
+	{
+		mesh = WorldItems/ATA_Bumper3,
+		texture = Vehicles/ATA_Jeep_items,
+		scale = 0.04,
+	}
+	item ATAJeepBumper3Item /* Спавн */
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepBumper3Item,
+        Icon	=	ATAJeepBumper3Item,
+		ConditionMax = 100,
+		ChanceToSpawnDamaged = 95,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = EngineDoor;HeadlightLeft;HeadlightRight,
+		WorldStaticModel = Autotsar.ATAJeepBumper3World,
+	}
+	model ATAJeepBumper4World
+	{
+		mesh = WorldItems/ATA_Bumper4,
+		texture = Vehicles/ATA_Jeep_items,
+		scale = 0.04,
+	}
+	item ATAJeepBumper4Item /* Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepBumper4Item,
+        Icon	=	ATAJeepBumper4Item,
+		ConditionMax = 100,
+		ChanceToSpawnDamaged = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = EngineDoor;HeadlightLeft;HeadlightRight,
+		WorldStaticModel = Autotsar.ATAJeepBumper4World,
+	}
+	
+	model ATAJeepProtectionWindowWorld
+	{
+		mesh = WorldItems/ATA_WindowsArmor,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+
+	item ATAJeepProtectionWindowItem /* Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	ATAProtectionWindowItem,
+        Icon	=	ATAProtectionWindowItem,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepProtectionWindowWorld,
+	}
+	
+	model ATAJeepProtectionWindowFrontItemWorld
+	{
+		mesh = WorldItems/ATA_FrontWindowArmor,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+	
+	item ATAJeepProtectionWindowFrontItem /* Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	ATAProtectionWindowFrontItem,
+        Icon	=	ATAProtectionWindowFrontItem,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepProtectionWindowFrontItemWorld,
+	}
+	item ATAJeepProtectionWindowRearItem /* Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	ATAJeepProtectionWindowRearItem,
+        Icon	=	ATAProtectionWindowFrontItem,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepProtectionWindowWorld,
+	}
+	
+	model ATAJeepRoofBaseWorld
+	{
+		mesh = WorldItems/ATA_Cage,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+	item ATAJeepRoofBaseItem /* Спавн + Крафт */
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= ATARoofBaseItem,
+        Icon	=	ATARoofBaseItem,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATARoofBaseWorld,
+	}
+	
+	model ATAJeepInteractiveTrunkRoofRackWorld
+	{
+		mesh = WorldItems/ATA_RoofTrunk,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+	item ATAJeepInteractiveTrunkRoofRackItem /* Спавн + Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= Roof Rack,
+        Icon	=	ATAInteractiveTrunkRoofRackItem,
+        MaxCapacity = 150,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepInteractiveTrunkRoofRackWorld,
+	}
+	
+	model ATAJeepInteractiveTrunkWheelRackWorld
+	{
+		mesh = WorldItems/ATA_RearTrunk,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+
+	item ATAJeepInteractiveTrunkWheelRackItem /* Спавн + Крафт */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= Wheel Rack,
+        Icon	=	ATAInteractiveTrunkWheelRackItem,
+        Maxcapacity = 150,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepInteractiveTrunkWheelRackWorld,
+	}
+	
+	model ATAJeepRoofTentWorld
+	{
+		mesh = WorldItems/ATA_PalatkaClosed,
+		texture = WorldItems/ATA_Common_palatka,
+		scale = 0.04,
+	}
+	
+	item ATAJeepRoofTentItem /* Спавн */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepRoofTentItem,
+        Icon	=	ATARoofTentItem,
+        ChanceToSpawnDamaged = 25,
+		MaxCapacity = 150,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepRoofTentWorld,
+	}
+	
+	model ATAJeepSnorkelWorld
+	{
+		mesh = WorldItems/ATA_Airtube,
+		texture = WorldItems/ATA_Common_items,
+		scale = 0.04,
+	}
+	
+	item ATAJeepSnorkelItem /* Спавн */ 
+	{
+		DisplayCategory = Tuning,
+		Weight	=	2.0,
+        Type	=	Normal,
+        DisplayName	= ATAJeepSnorkelItem,
+        Icon	=	ATASnorkelItem,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		WorldStaticModel = Autotsar.ATAJeepSnorkelWorld,
+	}
+	
+}

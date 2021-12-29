@@ -1,0 +1,20 @@
+module Base
+{
+	model GasMask
+    {
+        mesh = GasMask,
+    }
+
+	model pouch
+    {
+        mesh = pouch,
+    }
+
+	model pouchmed
+    {
+        mesh = pouch,
+        texture = pouchmed,
+    }
+
+
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_ST53_Set</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_ST53_Set</m_FemaleModel>
+	<m_GUID>c6362e3b-2d14-450c-9c87-c1ed7d39920a</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_ST53_Set</textureChoices>
+</clothingItem>

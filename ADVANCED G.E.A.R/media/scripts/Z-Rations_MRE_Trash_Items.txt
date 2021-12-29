@@ -1,0 +1,81 @@
+module Base
+{
+item MRE_Pouch_Trash
+	{
+		DisplayName = Plastic Packaging,
+		Icon 		= MREPackageTrash,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Drink_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MREdrinkmixpackage3,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Cocoa_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MREChockyTrash,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Coffee_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MRECoffeeTrash,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Crackers_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MRECrackersTrash,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Spread_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MREspreadpackageTrash2,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}	
+item MRE_Meal_Pouch_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MREEnvelopeTrash2,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Meal_Carton_Trash
+	{
+		DisplayName = Cardboard Packaging,
+		Icon 		= MRECarton,
+		Weight 		= 0.1,
+		Type 		= Normal,
+	}
+item MRE_Side_Pouch_Trash
+	{
+		DisplayName 		= Plastic Packaging,
+		Icon 		= MREEnvelopeSideTrash,
+		Weight 		= 0.01,
+		Type 		= Normal,
+	}
+item MRE_Side_Carton_Trash
+	{
+		DisplayName 		= Cardboard Packaging,
+		Icon 		= MRECartonSide,
+		Weight 		= 0.1,
+		Type 		= Normal,
+	}
+	
+item MRE_FlamelessRationHeater_Trash
+	{
+		DisplayName = Expended Flameless Ration Heater,
+		Icon 		= MREHeaterTrash2,
+		Weight 		= 0.1,
+		Type 		= Normal,
+	}	
+}

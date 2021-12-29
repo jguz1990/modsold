@@ -1,0 +1,32 @@
+
+module Base
+
+{
+
+
+	item IntelFolder
+	{
+		DisplayName = Folder With Intel,
+		Icon			= intel_folder_1,
+        Type	=	Literature,
+        TeachedRecipes  =   Make Intel Center,
+        ReplaceOnUse    =   IntelFolder,
+        StaticModel = IntelFolder,
+	}
+
+
+	item BlackwebDiskette
+	{
+		Icon			= diskette,
+		Weight          	= 0.1,
+		DisplayName		= BLVCKW3B Diskette,
+	}
+
+	model IntelFolder
+	{
+		mesh = Magazine,
+		texture = IntelFolder,
+	}
+
+
+}

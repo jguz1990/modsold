@@ -1,0 +1,11 @@
+module Base
+{
+	
+  texture = Clothes/Bag/Purse,
+    }
+    model GarbageBag
+    {
+        mesh = GarbageBag,
+        texture = Clothes/Bag/GarbageBag,
+    }
+}

@@ -1,0 +1,4 @@
+ContextMenu_CN = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "拆除车辆",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "拆除拖车",
+}

@@ -1,0 +1,5 @@
+name=Better Lockpicking
+poster=poster.png
+id=betterLockpicking
+require=ProfessionFrameworkB41Patch
+description=Lockicking mod with mini games. Adds lockpicking by bobbypin and crowbar, check alarm and better hotwire.

@@ -1,0 +1,4 @@
+ContextMenu_RU = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "Розібрати автомобіль",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "Розібрати причіп",
+}

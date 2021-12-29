@@ -1,0 +1,4 @@
+IGUI_CN = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "你确定需要拆除这辆车？",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "你确定需要拆除这辆拖车？",
+}

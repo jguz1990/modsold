@@ -1,0 +1,5 @@
+Tooltip_DE = {
+Tooltip_BetLock_BobbyPin = "Gegenstand zum Schlossknacken. Benötigt einen Schraubendreher und muss mit einem Magazin erlernt werden",
+Tooltip_BetLock_LockpickingMag = "Schlossknacker Magazin. Lerne wie man Türen, Fenster und Fahrzeuge mit einer Haarklammer oder einer Brechstange knackt.",
+Tooltip_BetLock_AlarmMag = "Alarmanlagen Magazin. Lerne wie man erkennt, ob ein Fahrzeug oder Gebäude eine Alarmanlage besitzt."
+}

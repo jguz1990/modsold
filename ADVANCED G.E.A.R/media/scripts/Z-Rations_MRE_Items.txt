@@ -1,0 +1,117 @@
+module Base
+{
+    model MRE
+    {
+        mesh = mreclosed,
+        texture = mre,
+    }    
+
+    model MRE_open
+    {
+        mesh = mre,
+        texture = mre,
+    }  
+    model MRE_small
+    {
+        mesh = mreSm,
+        texture = mreSm,
+    }   
+    model crackerss
+    {
+        mesh = crackernom,
+        texture = crackerss,
+    }   
+	
+recipe Unbox MREs
+    {
+		MRE_Box,
+		Result:MRE=12,
+		Time:25.0,
+		Category:Cooking,
+        Sound:PutItemInBag,
+		OnCreate:OpenMREBox,
+    }	
+recipe Box MREs
+    {
+		MRE=12,
+		Small_Cardboard_Box,
+		Scotchtape=1,
+		Result:MRE_Box,
+		Time:25.0,
+		Category:Cooking,
+        Sound:PutItemInBag,
+    }	
+recipe Unstack MRE Cartons
+    {
+		MRE_Stack,
+		Result:MRE_Box=4,
+		Time:25.0,
+		Category:Cooking,
+        Sound:PutItemInBag,
+    }	
+recipe Stack MRE Cartons
+    {
+		MRE_Box=4,
+		Result:MRE_Stack,
+		Time:25.0,
+		Category:Cooking,
+        Sound:PutItemInBag,
+    }
+
+recipe Open MRE
+	{
+		MRE,
+		Result 			: MRE_Pouch_Trash,
+		OnCreate		: OpenMRE,
+		Time 			: 25.0,
+		Category 		: Cooking,
+        Sound:PutItemInBag,
+	}
+	
+item Small_Cardboard_Box
+	{
+		Weight			=	1,
+		Icon			=	Small_Cardboard_Box,
+		DisplayName		=	Small Cardboard Box,
+		Type			= Moveable,
+		WorldObjectSprite	= smallcardboardbox_01_0,
+	}
+	
+item MRE_Box
+	{
+		Weight			=	10,
+		Icon			=	MRE_Box,
+		DisplayName		=	MRE Carton,
+		Type			= Moveable,
+		WorldObjectSprite	= zre_01_0,
+	}	
+item MRE_Stack
+	{
+		Weight			=	40,
+		Icon			=	MRE_Stack,
+		DisplayName		=	MRE Carton Stack,
+		Type			= Moveable,
+		WorldObjectSprite	= zre_02_0,
+	}	
+	
+item MRE
+	{
+		DisplayName 		= MRE,
+		Type 				= Food,
+		Weight 				= 1,
+		Icon 				= MREPackage,
+		FoodType 			= NoExplicit,
+		Packaged 			= TRUE,
+		CantBeFrozen 		= TRUE,
+	}
+
+item MRE_FlamelessRationHeater
+	{
+		DisplayName					=	MRE Flameless Ration Heater,
+		Icon						=	MRE_Heater,
+		Weight						=	0.05,
+		DisplayCategory 			=	Item,
+		/*ReplaceOnUse 		= MRE_FlamelessRationHeater_Trash,*/
+	}
+}
+

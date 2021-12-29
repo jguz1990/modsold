@@ -1,0 +1,10 @@
+IGUI_RU = {
+    IGUI_AutoSmoke_Say_NoFire_1 = "Как прикурить без %1?",
+    IGUI_AutoSmoke_Say_NoFire_2 = "Не бывает дыма без огня",
+    IGUI_AutoSmoke_Say_NoFire_3 = "У меня нет %1",
+    IGUI_AutoSmoke_Say_NoFire_Lighter = "зажигалки",
+    IGUI_AutoSmoke_Say_NoFire_Matches = "спичек",
+    IGUI_AutoSmoke_Say_NoCigarettes_1 = "Полцарства за пачку сигарет!",
+    IGUI_AutoSmoke_Say_NoCigarettes_2 = "Опять сигареты кончились...",
+    IGUI_AutoSmoke_Say_NoCigarettes_3 = "Закурить не найдётся?",
+}

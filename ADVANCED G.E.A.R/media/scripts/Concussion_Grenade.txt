@@ -1,0 +1,60 @@
+module Base
+{
+    
+
+
+
+    item ConcussionGrenade
+    {
+        MaxRange	=	10,
+		KnockdownMod	=	2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+		SwingAnim	=	Throw,
+        WeaponSprite = ConcussionGrenade,
+        UseSelf	=	TRUE,
+        DisplayName	=	Concussion Grenade,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Football,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	10,
+        MaxHitCount	=	0,
+        Icon	=	ConcussionGrenade,
+        TriggerExplosionTimer   =   50,
+        ExtraDamage  =   50,
+        ExplosionRange  =   3,
+        ExplosionSound  =   SmallExplosion,
+	AttachmentType = Gear,
+    }
+
+
+    item StunGrenade
+    {
+        MaxRange	=	10,
+		KnockdownMod	=	5,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+		SwingAnim	=	Throw,
+        WeaponSprite = Molotov,
+        UseSelf	=	TRUE,
+        DisplayName	=	Stun Grenade,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Football,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	Football,
+        TriggerExplosionTimer   =   50,
+        ExtraDamage  =   0.1,
+        ExplosionRange  =   3,
+        ExplosionSound  =   SmallExplosion,
+	AlwaysKnockdown = TRUE,
+	AttachmentType = Gear,
+    }
+
+}
+

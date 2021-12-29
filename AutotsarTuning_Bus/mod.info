@@ -1,0 +1,7 @@
+name=Autotsar Tuning Atelier - Bus v.1.10
+poster=poster.png
+id=ATA_Bus
+versionMin=41.51
+require=tsarslib
+description=---
+url=

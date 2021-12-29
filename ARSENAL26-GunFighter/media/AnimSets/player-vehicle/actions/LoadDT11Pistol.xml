@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="LoadDblBarrel.xml">
+	<m_Name>LoadDT11_Sawed</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>DT11_Sawed</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>DT11_Sawed_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

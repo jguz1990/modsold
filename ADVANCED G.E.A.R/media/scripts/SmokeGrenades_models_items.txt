@@ -1,0 +1,14 @@
+module Base
+{
+	
+	model SmokeGrenade
+	{
+		mesh = smokegrenade,
+	attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+	}
+}

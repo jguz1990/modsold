@@ -1,0 +1,17 @@
+module Base
+{
+
+    item 545StdClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	5.45x39mm Magazine,
+	DisplayCategory	= 	GunMag,
+        Icon		=	AKMag,
+        MaxAmmo 	=	30,
+        AmmoType 	=	Base.545x39Bullets,
+        StaticModel	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

@@ -1,0 +1,112 @@
+module Base
+{
+	
+    item FlareGun
+    {
+        ImpactSound	=	null,
+        MaxRange	=	6,
+        WeaponSprite	=	FlareGun,
+
+        /*WeaponSprite	=	Revolver_Short,*/
+        SoundVolume	=	25,
+        MinAngle	=	0.95,
+        Type	=	Weapon,
+        MinimumSwingTime	=	0.5,
+        ToHitModifier	=	1.5,
+        NPCSoundBoost	=	1.5,
+        /*KnockBackOnNoDeath	=	TRUE,*/
+        Ranged	=	TRUE,
+        SwingAmountBeforeImpact	=	0,
+        ProjectileCount	=	1,
+        ConditionLowerChanceOneIn	=	60,
+        Weight	=	2,
+        /*SplatNumber	=	3,*/
+        /*PushBackMod	=	0.3,*/
+        SubCategory	=	Firearm,
+        ConditionMax	=	10,
+        ShareDamage	=	FALSE,
+        MaxHitCount	=	1,
+        IsAimedFirearm	=	TRUE,
+        DoorDamage	=	5,
+        UseEndurance	=	FALSE,
+        SwingAnim	=	Handgun,
+        DisplayName	=	Flare Gun,
+        MinRange	=	0.61,
+        SwingTime	=	0.5,
+        MultipleHitConditionAffected	=	FALSE,
+        SoundRadius	=	30,
+        MinDamage	=	0,
+        MaxDamage	=	0,
+        /*SplatSize	=	3,*/
+        /*KnockdownMod	=	2,*/
+        /*SplatBloodOnNoDeath	=	TRUE,*/
+        Icon	=	FlareGun,
+        RunAnim	=	Run_Weapon2,
+        /*CriticalChance	=	20,*/
+        /*CritDmgMultiplier = 4,*/
+        /*AimingPerkCritModifier = 10,*/
+        AimingPerkRangeModifier = 1.5,
+        HitChance = 65,
+        AimingPerkHitChanceModifier = 8,
+        AimingPerkMinAngleModifier = 0.05,
+        RecoilDelay = 10,
+        SoundGain = 1.5,
+        ReloadTime = 30,
+        AimingTime = 10,
+        BreakSound  =   BreakMetalItem,
+        MetalValue = 30,
+        AmmoBox = FlareCartridgeBox,
+        MaxAmmo = 1,
+		SwingSound	=	FirearmShotgun,
+        InsertAmmoSound = StormyShotgunInsertRound,
+        EjectAmmoSound = Stormy9mmClipEject,
+        RackSound = stormyShotgunPump,
+        AmmoType = Base.FlareCartridge,
+        /*WeaponReloadType = revolver,*/	
+        WeaponReloadType = shotgun,
+        JamGunChance = 0,
+        haveChamber = FALSE,
+        AttachmentType = Holster,
+    }
+
+
+	item FlareCartridge
+	{
+/*		Count = 6,*/
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	TRUE,
+		Type	=	Normal,
+		DisplayCategory = Ammo,
+		DisplayName	=	Flare Cartridge,
+		Icon	=	ShotgunAmmo,
+		MetalValue = 1,
+	}
+
+    item FlareCartridgeBox
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	Box of Flare Cartridges,
+        DisplayCategory = Ammo,
+        Icon	=	ShotgunAmmoBox,
+        MetalValue = 24,
+    }
+    recipe Open Box of Flare Cartridges
+    {
+        FlareCartridgeBox,
+
+/*        Result:FlareCartridge=4,*/
+        Result:FlareCartridge=6,
+        Sound:PutItemInBag,
+        Time:5.0,
+    }
+
+    recipe Place Flare Cartridges in Box
+    {
+/*        FlareCartridge=24,*/
+        FlareCartridge=6,
+        Result:FlareCartridgeBox,
+        Sound:PutItemInBag,
+        Time:5.0,
+    }
+}

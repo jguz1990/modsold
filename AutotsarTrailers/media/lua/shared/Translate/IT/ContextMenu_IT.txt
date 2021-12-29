@@ -1,0 +1,7 @@
+ContextMenu_IT = {
+	ContextMenu_Close_trunk = "Chiudere il bagagliaio",
+	ContextMenu_Open_trunk = "Aprire il bagagliaio",
+	ContextMenu_TrailerSpotlightOn = "Accendere i fari",
+	ContextMenu_TrailerSpotlightOff = "Spegnere i fari",
+	ContextMenu_Turn_On_Generator = "Avviare il generatore",
+}

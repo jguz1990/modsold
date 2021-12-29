@@ -1,0 +1,3 @@
+Tooltip_PL = {
+    Tooltip_VehicleRecycling = "Demonta¿ pojazdu lub przyczepy przy pomocy palnika gazowego dostarczy czêœci metalowych i elektrycznych. <LINE> Wy¿sza umiejêtnoœæ spawania zapewni wiêcej czêœci z demonta¿u.",
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>webbingLooseM</m_MaleModel>
+	<m_FemaleModel>webbingLooseF</m_FemaleModel>
+	<m_GUID>67c44229-682a-4b58-99cb-1db47489e726</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>Webbing_Gray</textureChoices>
+	<textureChoices>Webbing_Green</textureChoices>
+	<textureChoices>Webbing_Tan</textureChoices>
+</clothingItem>

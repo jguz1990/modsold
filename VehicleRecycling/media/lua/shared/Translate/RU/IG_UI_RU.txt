@@ -1,0 +1,4 @@
+IGUI_RU = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "¬ы точно хотите разобрать этот автомобиль?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "¬ы точно хотите разобрать этот прицеп?",
+}

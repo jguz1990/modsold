@@ -1,0 +1,8 @@
+name=ADVANCED G.E.A.R.
+poster=poster.png
+id=ADVANCEDGEAR
+require=GEARBASIC,GEARCORE,PlayerTraps,ItemTweakerAPI
+description= ARMAGEDDON DESTRUCTION VIOLENCE ACCESSORIES NEW CARNAGE EXTREME DEVICES
+url=
+pack=zre
+tiledef=zre 833

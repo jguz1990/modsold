@@ -1,0 +1,49 @@
+module Base
+{
+ 
+   
+	item AssaultBoots
+	{
+		Type = Clothing,
+		DisplayName = Assault Boots,
+		ClothingItem = AssaultBoots,
+		BodyLocation = Shoes,
+		BloodLocation = Shoes,
+		Icon = AssaultBoots,
+		StompPower = 2.5,
+		ConditionLowerChanceOneIn = 20,
+        ConditionMax = 30,
+        RunSpeedModifier = 0.9,
+        RemoveOnBroken = false,
+        ScratchDefense = 100,
+        BiteDefense = 100,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.8,
+        AttachmentsProvided = CalfSheath,
+	Tooltip = Designed to be worn by soldiers during combat. They provide the grip and stability for a rugged environment and contain a sheath for storing a combat knife.,
+	}
+	item AssaultBootsDesert
+	{
+		Type = Clothing,
+		DisplayName = Assault Desert Boots,
+		ClothingItem = AssaultBootsDesert,
+		BodyLocation = Shoes,
+		BloodLocation = Shoes,
+		Icon = AssaultBootsDesert,
+		StompPower = 2.5,
+		ConditionLowerChanceOneIn = 20,
+        ConditionMax = 30,
+        RunSpeedModifier = 0.9,
+        RemoveOnBroken = false,
+        ScratchDefense = 100,
+        BiteDefense = 100,
+        Insulation = 0.5,
+        WindResistance = 0.60,
+        WaterResistance = 0.5,
+        AttachmentsProvided = CalfSheath,
+	Tooltip = Designed to be worn by soldiers during combat. They provide the grip and stability for a rugged environment and contain a sheath for storing a combat knife.,
+	}
+
+   
+}

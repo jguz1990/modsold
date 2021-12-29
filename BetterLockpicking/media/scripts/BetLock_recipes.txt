@@ -1,0 +1,17 @@
+module BetLock
+{
+	imports
+	{
+		Base
+	}
+
+	recipe Create BobbyPin
+	{
+		keep Screwdriver,
+		Paperclip= 1,
+		Result: HandmadeBobbyPin= 1,
+		Time: 40.0,
+		Category: Survivalist,
+		NeedToBeLearn: true,
+	}
+}

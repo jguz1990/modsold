@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="LoadDblBarrel.xml">
+	<m_Name>LoadBenjamin_M397</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>Benjamin_M397</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>Benjamin_M397_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

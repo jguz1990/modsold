@@ -1,0 +1,3 @@
+Recipe_ES = {
+    Recipe_Create_BobbyPin = "Fabricar horquilla"
+}

@@ -1,0 +1,39 @@
+ItemName_EN = {
+    ItemName_Base.DoubleBarrelShotgun		= "H&R Dbl-Barrel Shotgun",
+    ItemName_Base.DoubleBarrelShotgunSawnoff	= "H&R Dbl-Barrel Shotgun (Sawed_Off)",
+    ItemName_Base.Shotgun			= "H&R Pardner Pump-Shotgun",
+    ItemName_Base.ShotgunSawnoff		= "H&R Pardner Pump-Shotgun (Sawed-Off)",
+
+    ItemName_Base.Colt_Service45		= "Colt New Service Revolver (45-LC)",
+
+    ItemName_Base.Bullets9mm		= "9x19mm Round"
+    ItemName_Base.Bullets38		= "38-SPC Round"
+    ItemName_Base.Bullets45		= "45-ACP Round"
+    ItemName_Base.Bullets44		= "44-MAG Round"
+    ItemName_Base.223Bullets		= "223-REM Round"
+    ItemName_Base.556Bullets		= "5.56x45mm Round"
+    ItemName_Base.308Bullets		= "308-WIN Round"
+    ItemName_Base.ShotgunShells		= "12g Shotgun Shell"
+
+    ItemName_Base.Bullets9mmBox		= "Box of 9x19mm Rounds",
+    ItemName_Base.Bullets38Box		= "Box of 38-SPC Rounds",
+    ItemName_Base.Bullets45Box		= "Box of 45-ACP Rounds",
+    ItemName_Base.Bullets44Box		= "Box of 44-MAG Rounds",
+    ItemName_Base.223Box		= "Box of 223-REM Rounds",
+    ItemName_Base.556Box		= "Box of 5.56x45mm Rounds",
+    ItemName_Base.308Box		= "Box of 308-WIN Rounds",
+    ItemName_Base.ShotgunShellsBox	= "Box of 12g Shotgun Shells",
+
+    ItemName_Base.9mmClip		= "9x19mm Dbl-Stack Magazine",
+    ItemName_Base.45Clip		= "45-ACP Sgl-Stack Magazine",
+    ItemName_Base.44Clip		= "44-MAG Sgl-Stack Magazine",
+    ItemName_Base.223Clip		= "223-REM Hunting Magazine",
+    ItemName_Base.556Clip		= "5.56x45mm STANAG Magazine",
+    ItemName_Base.308Clip		= "308-WIN Hunting Magazine",
+
+
+    ItemName_Base.308BulletsMold	= "308-NATO Bullet Mold",
+    ItemName_Base.223BulletsMold	= "223-REM Bullet Mold",
+    ItemName_Base.9mmBulletsMold	= "9x19mm Bullet Mold",
+    ItemName_Base.ShotgunShellsMold	= "12g Shotgun Shells Mold",
+}

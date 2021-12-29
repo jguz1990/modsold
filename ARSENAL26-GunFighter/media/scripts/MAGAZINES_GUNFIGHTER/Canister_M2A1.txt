@@ -1,0 +1,76 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+	item Bag_M2A1
+	{
+	        Type			= Container,
+        	DisplayName 		= M2A1 Fuel Tank,
+	        ClothingItem		= Bag_M2A1,
+        	Icon			= Bag_M2A1,
+	        Weight			= 3,
+		CanBeEquipped		= Back,	
+		WeightReduction		= 0,
+		Capacity		= -10,		/* WORKS TO BLOCK ITEMS FROM GOING IN */
+	        OpenSound		= OverFill,
+        	CloseSound		= OverFill,
+	        PutInSound		= OverFill,
+        	BloodLocation		= Bag,
+	        RunSpeedModifier	= 0.90,
+        	CanHaveHoles		= false,
+	        AttachmentReplacement	= Bag,
+	}
+
+
+	item M2A1_Can
+	{
+	        CanStack	=	FALSE,
+        	Weight		=	0.1,
+	        Type		=	Normal,
+        	DisplayName	=	M2A1 Canister,
+		DisplayCategory	=	GunMag,
+        	Icon		=	M2A1_Can,
+	        MaxAmmo 	=	50,
+        	AmmoType 	=	Base.FlameFuel,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+
+	item M2A1_Tank
+	{
+	        CanStack	=	FALSE,
+        	Weight		=	1.8,
+	        Type		=	Normal,
+        	DisplayName	=	M2A1 Tank,
+		DisplayCategory	=	GunMag,
+        	Icon		=	M2A1_Tank,
+	        MaxAmmo 	=	100,
+        	AmmoType 	=	Base.FlameFuel,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+
+/*********************** FUNCTIONS ************************/
+
+	recipe Doff M2A1 Fuel-Tank
+	{
+		M2A1_Tank,
+		Result		:M2A1_Tank,
+		Category	:Firearm,
+		Time		:50.0,
+		Sound		:StormyM1ClipLoad,
+		OnTest 		:DOFF_M2A1_Tank_Test,
+		OnCreate	:DOFF_M2A1_Tank,
+	}
+	recipe Don M2A1 Fuel-Tank
+	{
+		M2A1_Tank,
+		Result		:M2A1_Tank,
+		Category	:Firearm,
+		Time		:50.0,
+		Sound		:StormyM1ClipLoad,
+		OnTest 		:DON_M2A1_Tank_Test,
+		OnCreate	:DON_M2A1_Tank,
+	}
+}

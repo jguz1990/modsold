@@ -1,0 +1,10 @@
+Recipe_RU = {
+	-- 
+	Recipe_Extract_Tire_Tube = "Извлечь камеру из шины",
+	Recipe_Flatten_Tire_Tube = "Сдуть камеру",
+	Recipe_Inflate_Tire_Tube = "Надуть камеру",
+	Recipe_Powerboats_Mechanics = "Механика моторных лодок",
+	Recipe_Sailboats_Mechanics = "Механика парусников",
+	Recipe_Performance_Boat_Mechanics = "Профессиональный ремонт лодок",
+	Recipe_Swimming = "Лучшая техника плавания",
+}

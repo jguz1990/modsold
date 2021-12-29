@@ -1,0 +1,31 @@
+module Base
+{
+	model Vehicles_ATA_Bus
+	{
+		mesh = vehicles/ATA_Bus,
+		shader = vehicle_norandom_multiuv,
+		invertX = FALSE,
+		scale = 0.01,
+	}
+	model Vehicles_ATA_Bus_nolightbar
+	{
+		mesh = vehicles/ATA_Bus_nolightbar,
+		shader = vehicle_norandom_multiuv,
+		invertX = FALSE,
+		scale = 0.01,
+	}
+	model ATA_Bus_WheelFront
+	{
+		mesh = vehicles/ATA_Bus_wheel_forward,
+		texture = Vehicles/ATA_BusWheel,
+		shader = vehiclewheel,
+		scale = 0.009,
+	}
+	model ATA_Bus_WheelRear
+	{
+		mesh = vehicles/ATA_Bus_wheel_rear,
+		texture = Vehicles/ATA_BusWheel,
+		shader = vehiclewheel,
+		scale = 0.009,
+	}
+}

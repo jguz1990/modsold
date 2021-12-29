@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\Clothes\Bob_WitchyVest2</m_MaleModel>
+	<m_FemaleModel>Skinned\Clothes\Kate_WitchyVest2</m_FemaleModel>
+	<m_GUID>427f6ffc-422c-4532-90e4-c5eb109270b8</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Spine1</m_AttachBone>
+	<textureChoices>clothes\Bulletvest\Vest_WitchyCarrier20</textureChoices>
+</clothingItem>

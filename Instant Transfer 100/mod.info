@@ -1,0 +1,7 @@
+description=Transfer time of all items should now be (almost) instant for everything, regardless of the Dextrous and All Thumbs traits.
+id=POETInstantTransfer100
+name=[POET] Instant Transfer Everything
+poster=Instant100.png
+
+modversion=1.0.0
+pzversion=41.50

@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 9mmExtClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	9x19mm Dbl-Stack Ext Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	9mmExtMag,
+        MaxAmmo 	=	30,
+        AmmoType 	=	Base.Bullets9mm,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

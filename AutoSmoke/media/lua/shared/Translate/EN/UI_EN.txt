@@ -1,0 +1,20 @@
+UI_EN = {
+    -- Key bindings
+    UI_optionscreen_binding_NF Smoke = "Smoke",
+    -- Options
+    UI_AutoSmoke_AutoSmoking = "Auto Smoking",
+    UI_AutoSmoke_CharacterSpeaks = "Character Speaks",
+    UI_AutoSmoke_CharacterSpeaks_Tooltip = "Your character will say something if he doesn't have cigarettes or matches/lighter.",
+    UI_AutoSmoke_Mod_ButtsToAshtray = "Put Butts In Ashtray [%1]",
+    UI_AutoSmoke_Mod_ButtsToAshtray_Tooltip = "If your character has an ashtray in the main inventory or nearby, he will put cigarette butts in it after smoking.",
+    UI_AutoSmoke_Mod_ThrowAwayButts = "Throw Away Cigarette Butts [%1]",
+    UI_AutoSmoke_Mod_ThrowAwayButts_Tooltip = "Don't be a pig, find a trash can! Or a corpse...<br>Your character will throw away cigarette butts after smoking.",
+    UI_AutoSmoke_Mod_RemoveButts = "Remove Butts [%1]",
+    UI_AutoSmoke_Mod_RemoveButts_Tooltip = "Cigarette butts will not appear after smoking a cigarette.",
+    UI_AutoSmoke_Mod_SmokeButts = "Smoke Cigarette Butts [%1]",
+    UI_AutoSmoke_Mod_SmokeButts_Tooltip = "If nothing else is available, then your character will smoke a cigarette butt (if any).",
+    UI_AutoSmoke_Mod_ReversePriority = "Reverse Choice Priority [%1]",
+    UI_AutoSmoke_Mod_ReversePriority_Tooltip = "Default: Homemade / Homemade Filter / Regular / Light / Menthol / Gold",
+    UI_AutoSmoke_Mod_GumOnly = "Chew Nicotine Gum Only [%1]",
+    UI_AutoSmoke_Mod_GumOnly_Tooltip = "Your character will only chew nicotine gum, regardless of whether he has cigarettes. He won't smoke even if he doesn't have gum.",
+}

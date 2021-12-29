@@ -1,0 +1,21 @@
+TheStar = TheStar or {}
+TheStar.Options = TheStar.Options or {}
+
+TheStar.Options.equippedItemOnly = false
+TheStar.Options.showIcon = true
+TheStar.Options.iconType = 1
+TheStar.Options.equippedItemIconPosition = 2
+TheStar.Options.showProgressBar = true
+TheStar.Options.progressVertical = true
+TheStar.Options.progressBarOpacity = 0.2
+TheStar.Options.progressBarOpacityEquipped = 0.4
+TheStar.Options.progressMulticolor = true
+TheStar.Options.showOverheadNotification = true
+TheStar.Options.overheadNotificationCondition = 0.999
+TheStar.Options.blinkOnConditionDrop = true
+TheStar.Options.blinkCondition = 0.999
+TheStar.Options.showAmmoCountHotbar = true
+TheStar.Options.showAmmoCountEquippedItem = true
+TheStar.Options.showAmmoCountInventory = true
+TheStar.Options.showBatteryChargeHotbar = true
+TheStar.Options.showBatteryChargeEquippedItem = true

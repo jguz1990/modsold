@@ -1,0 +1,3 @@
+Tooltip_TR = {
+    Tooltip_VehicleRecycling = "Bir aracýn veya römorkun propan meþale ile sökülmesi, metal ve elektrik malzemeleri saðlayacaktýr. <LINE> Daha yüksek Metal Ýþleme becerisi, daha fazla kullanýlabilir malzeme saðlayacaktýr.",
+}

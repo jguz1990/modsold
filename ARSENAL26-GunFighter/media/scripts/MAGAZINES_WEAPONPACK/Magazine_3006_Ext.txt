@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 3006ExtClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+       	DisplayName	=	3006-SPG Magazine,
+       	DisplayCategory =	GunMag,
+        Icon		=	308ExtMag,
+       	MaxAmmo 	=	20,
+        AmmoType 	=	Base.3006Bullets,
+       	StaticModel 	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

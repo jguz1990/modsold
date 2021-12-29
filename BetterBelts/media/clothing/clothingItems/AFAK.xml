@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\Clothes\Bob_AFAK</m_MaleModel>
+	<m_FemaleModel>Skinned\Clothes\Kate_AFAK</m_FemaleModel>
+	<m_GUID>f43806b4-cff9-4d76-bea9-1de67ff961d5</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_BackPack</m_AttachBone>
+	<textureChoices>AFAK</textureChoices>
+</clothingItem>

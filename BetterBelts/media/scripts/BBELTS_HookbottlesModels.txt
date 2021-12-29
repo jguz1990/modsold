@@ -1,0 +1,59 @@
+module Base
+{
+	
+	
+	model HookedWaterBottleEmptyOrange
+	{
+		mesh = HookedWaterBottleOrange,
+	}  
+
+	model HookedWaterBottleFullOrange
+	{
+		mesh = HookedWaterBottleOrange,
+	}
+
+	
+	model HookedWaterBottleEmptyYellow
+	{
+		mesh = HookedWaterBottleYellow,
+	}
+
+	model HookedWaterBottleFullYellow
+	{
+		mesh = HookedWaterBottleYellow,
+	}
+
+		
+	model HookedWaterBottleEmptyGreen
+	{
+		mesh = HookedWaterBottleGreen,
+	}
+
+	model HookedWaterBottleFullGreen
+	{
+		mesh = HookedWaterBottleGreen,
+	}
+
+
+	model HookedWaterBottleEmptyPurple
+	{
+		mesh = HookedWaterBottlePurple,
+	}
+
+	model HookedWaterBottleFullPurplePurple
+	{
+		mesh = HookedWaterBottlePurplePurple,
+	}
+
+
+	model HookedWaterBottleEmptyRed
+	{
+		mesh = HookedWaterBottleRed,
+	}
+
+	model HookedWaterBottleFullRed
+	{
+		mesh = HookedWaterBottleRed,
+	}
+}
+	

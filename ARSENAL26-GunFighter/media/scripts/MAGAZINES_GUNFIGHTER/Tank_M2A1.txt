@@ -1,0 +1,27 @@
+/*
+
+module Base
+{
+   item Bag_M2
+    {
+        Type = Container,
+        DisplayName 		= M2-2 Flamethrower Comprising Tank Backpack,
+        ClothingItem		= Bag_M2,
+        CanBeEquipped		= Back,
+        WeightReduction		= 0,
+        Weight			= 4,
+        Capacity		= 0,
+        Icon			= Bag_M2,
+        OpenSound		= OverFill,
+        CloseSound		= OverFill,
+        PutInSound		= OverFill,
+        BloodLocation		= Bag,
+        RunSpeedModifier	= 0.90,
+        CanHaveHoles		= false,
+        AttachmentReplacement	= Bag,
+        ReplaceInSecondHand	= Bag_ALICEpack_LHand holdingbagleft,
+        ReplaceInPrimaryHand	= Bag_ALICEpack_RHand holdingbagright,
+    }
+}
+
+*/

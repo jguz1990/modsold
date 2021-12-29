@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\Clothes\Bob_ToolBoxB</m_MaleModel>
+	<m_FemaleModel>Skinned\Clothes\Kate_ToolBoxB</m_FemaleModel>
+	<m_GUID>00d8305a-938d-436c-8874-b6475e57011a</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AttachBone>Bip01_BackPack</m_AttachBone>
+	<textureChoices>ToolBoxB</textureChoices>
+</clothingItem>

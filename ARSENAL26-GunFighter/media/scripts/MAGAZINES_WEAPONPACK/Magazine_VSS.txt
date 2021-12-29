@@ -1,0 +1,17 @@
+module Base
+{
+
+    item VSSClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	9x39mm Magazine,
+	DisplayCategory	= 	GunMag,
+        Icon		=	VSSMag,
+        MaxAmmo		=	10,
+        AmmoType	=	Base.Bullets9mm,
+        StaticModel	=	GunMagazine,
+	GunType		=	VSS,
+    }
+}

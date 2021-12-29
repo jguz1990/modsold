@@ -1,0 +1,7 @@
+Tooltip_EN = {
+	Tooltip_item_BoatMechanic = "Boat type",
+	Tooltip_BoatDashboard_SpeedValueButton = "Change units of measurement",
+	Tooltip_Boat_LowBattery = "Low battery level",
+	Tooltip_item_BoatMag = "Instructive manual containing diagrams and common maintenance<br>tasks for popular boat models.", 
+	Tooltip_item_SwimMag = "Мagazine about the most effective swimming methods. Interview with the best swimmers in the country.<br>Reviews of swimming trunks, caps and goggles.", 
+}

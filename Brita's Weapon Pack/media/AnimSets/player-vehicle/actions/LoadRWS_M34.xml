@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="LoadDblBarrel.xml">
+	<m_Name>LoadRWS_M34</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>RWS_M34</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>RWS_M34_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

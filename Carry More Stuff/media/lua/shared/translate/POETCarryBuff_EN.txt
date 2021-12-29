@@ -1,0 +1,6 @@
+ItemName_EN = {
+    ItemName_Base.PoetBag_Front = "The Packpack (Front)",
+    ItemName_Base.PoetBag_Back = "The Packpack (Back)",
+    ItemName_Base.BagOfHolding_Front = "The Bag Of Holding (Front)",
+    ItemName_Base.BagOfHolding_Back = "The Bag Of Holding (Back)",
+}

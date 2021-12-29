@@ -1,0 +1,347 @@
+module Base	{
+					
+	item	XM214	{	
+				
+	DisplayName                 	=	XM-214 Minigun,
+	Icon                        	=	XM214,	
+	WeaponSprite                	=	XM214,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	WeaponReloadType            	=	boltaction,	
+	FireMode                    	=	[6]Rotary,
+/*	FireMode                    	=	Auto,		ALLOWS RECOIL BUT WE DONT WANT THAT ANYWAYS	*/
+	AttachmentType              	=	Rifle,	
+/*	UseEndurance                	=	TRUE,		DONT DO SHIT	*/
+/*	EnduranceMod			=	0.2,		DONT DO SHIT	*/
+/*	BaseSpeed			=	0.5,		DONT DO SHIT	*/
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	25	,
+	AimingPerkRangeModifier     	=	4.5	,
+	MinDamage                   	=	1.9	,
+	MaxDamage                   	=	2.5	,
+	CriticalChance              	=	25	,
+	CritDmgMultiplier            	=	4,	
+	AimingPerkCritModifier      	=	10,	
+	HitChance                   	=	15	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	13	,
+	MinAngle                     	=	0.950	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50,	
+	ConditionLowerChanceOneIn   	=	80,	
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.08,	
+	AimingTime                  	=	10,
+	ReloadTime                  	=	25,	
+	SwingTime                   	=	0,
+	MinimumSwingTime            	=	0,
+	SwingAmountBeforeImpact     	=	1.0,	/* SIMULATE BURST DELAY */
+	RecoilDelay                 	=	0,
+	Weight                      	=	9.2,	/* 28 lbs*/
+	OAL				=	1.9	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.556Bullets,	
+	AmmoBox                     	=	556Box,	
+	MaxAmmo                     	=	520,	
+	MagazineType                	=	Base.556MiniCan,	
+	ProjectileCount             	=	6,	
+	MaxHitCount                 	=	3,	
+	PiercingBullets             	=	FALSE,	/* DISABLES MAXHITCOUNT */
+	ShareDamage                 	=	FALSE,	
+	SplatSize                   	=	3,	
+	SplatNumber                 	=	3,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0.4,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	4,	
+	DoorDamage                  	=	36,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	IdleAnim                    	=	Idle_Weapon2,	
+	SwingAnim                   	=	Rifle,	
+	MetalValue                  	=	65,	
+	SoundVolume                 	=	100,	
+	SoundRadius                 	=	90,	
+	SoundGain                   	=	1,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	MinigunShot,	
+	InsertAmmoSound             	=	StormyM249ClipLoad,	
+	EjectAmmoSound              	=	StormyM249ClipEject,	
+	RackSound                   	=	M249Rack,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,
+	/* =========== TRANSFORM VARIABLES =========== */
+	/* =========== ATTACHMENT DATA ============ */
+	ModelWeaponPart = Light_Small         		Light_Small light light	,
+	ModelWeaponPart = Light_Large         		Light_Large light light	,
+	ModelWeaponPart = Laser_Green         		Laser_Green light light	,
+	ModelWeaponPart = Laser_Red            		Laser_Red light light	,
+	ModelWeaponPart = Standard_Mag          	AmmoCan50 mag mag,
+	}			
+
+				
+	model XM214			
+	{			
+		mesh = weapons/firearm/XM214,		
+		texture = weapons/firearm/XM214,
+
+		attachment light
+		{
+			offset = 0.0000 0.0085 0.0180,
+			rotate = 0.0000 180.0000 0.0000,
+		}
+		attachment muzzle
+		{
+			offset = 0.0000 0.5760 -0.0810,
+			rotate = -90.0000 0.0000 0.0000,
+		}
+		attachment mag
+		{
+			offset = 0.0220 0.0515 -0.1440,
+			rotate = 0.0000 0.0000 90.000,
+		}		
+	}			
+				
+	fixing Fix XM214			
+	{			
+		Require : XM214,		
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}
+
+
+	item	GAU17	{	
+				
+	DisplayName                 	=	General Electric GAU-17 Minigun,
+	Icon                        	=	GAU17,	
+	WeaponSprite                	=	GAU17,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	WeaponReloadType            	=	boltaction,	
+	FireMode                    	=	[6]Rotary,
+/*	FireMode                    	=	Auto,		ALLOWS RECOIL BUT WE DONT WANT THAT ANYWAYS	*/
+	AttachmentType              	=	Rifle,	
+/*	UseEndurance                	=	TRUE,		DONT DO SHIT	*/
+/*	EnduranceMod			=	0.2,		DONT DO SHIT	*/
+/*	BaseSpeed			=	0.5,		DONT DO SHIT	*/
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	34	,
+	AimingPerkRangeModifier     	=	4.5	,
+	MinDamage                   	=	3	,
+	MaxDamage                   	=	4	,
+	CriticalChance              	=	40	,
+	CritDmgMultiplier            	=	4,	
+	AimingPerkCritModifier      	=	10,	
+	HitChance                   	=	15	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	13	,
+	MinAngle                     	=	0.950	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50,	
+	ConditionLowerChanceOneIn   	=	80,	
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.08,	
+	AimingTime                  	=	10,
+	ReloadTime                  	=	25,	
+	SwingTime                   	=	0,
+	MinimumSwingTime            	=	0,
+	SwingAmountBeforeImpact     	=	1.0,	/* SIMULATE BURST DELAY */
+	RecoilDelay                 	=	0,
+	Weight                      	=	12.2,	/* 35 lb*/
+	OAL				=	2.1	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.308Bullets,	
+	AmmoBox                     	=	308Box,	
+	MaxAmmo                     	=	320,	/* 8 divided by 0.025 */
+	MagazineType                	=	Base.308MiniCan,	
+	ProjectileCount             	=	6,	
+	MaxHitCount                 	=	3,	
+	PiercingBullets             	=	FALSE,	/* DISABLES MAXHITCOUNT */
+	ShareDamage                 	=	FALSE,	
+	SplatSize                   	=	4,	
+	SplatNumber                 	=	4,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0.6,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	6,	
+	DoorDamage                  	=	48,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	IdleAnim                    	=	Idle_Weapon2,	
+	SwingAnim                   	=	Rifle,	
+	MetalValue                  	=	65,	
+	SoundVolume                 	=	120,	
+	SoundRadius                 	=	120,	
+	SoundGain                   	=	1,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	MinigunShot,	
+	InsertAmmoSound             	=	StormyM249ClipLoad,	
+	EjectAmmoSound              	=	StormyM249ClipEject,	
+	RackSound                   	=	M249Rack,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,
+	/* =========== TRANSFORM VARIABLES =========== */
+	/* =========== ATTACHMENT DATA ============ */
+	ModelWeaponPart = Light_Small         		Light_Small light light	,
+	ModelWeaponPart = Light_Large         		Light_Large light light	,
+	ModelWeaponPart = Laser_Green         		Laser_Green light light	,
+	ModelWeaponPart = Laser_Red            		Laser_Red light light	,
+	ModelWeaponPart = Standard_Mag          	AmmoCan50 mag mag,
+	}			
+
+				
+	model GAU17	
+	{			
+		mesh = weapons/firearm/M134,	/* NEED NEW MODEL */
+		texture = weapons/firearm/M134,
+
+		attachment light
+		{
+			offset = 0.0000 0.0085 0.0180,
+			rotate = 0.0000 180.0000 0.0000,
+		}
+		attachment muzzle
+		{
+			offset = 0.0000 0.5760 -0.0810,
+			rotate = -90.0000 0.0000 0.0000,
+		}
+		attachment mag
+		{
+			offset = 0.0220 0.0515 -0.1440,
+			rotate = 0.0000 0.0000 90.000,
+		}		
+	}			
+				
+	fixing Fix GAU17
+	{			
+		Require : GAU17,
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}
+
+
+	item	GAU19	{	
+				
+	DisplayName                 	=	General Electric GAU-19 Minigun,
+	Icon                        	=	GAU19,	
+	WeaponSprite                	=	GAU19,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	WeaponReloadType            	=	boltaction,	
+	FireMode                    	=	[6]Rotary,
+/*	FireMode                    	=	Auto,		ALLOWS RECOIL BUT WE DONT WANT THAT ANYWAYS	*/
+	AttachmentType              	=	Rifle,	
+/*	UseEndurance                	=	TRUE,		DONT DO SHIT	*/
+/*	EnduranceMod			=	0.2,		DONT DO SHIT	*/
+/*	BaseSpeed			=	0.5,		DONT DO SHIT	*/
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	42	,
+	AimingPerkRangeModifier     	=	4.5	,
+	MinDamage                   	=	4.5	,
+	MaxDamage                   	=	7	,
+	CriticalChance              	=	50	,
+	CritDmgMultiplier            	=	2,	
+	AimingPerkCritModifier      	=	10,	
+	HitChance                   	=	15	,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	13	,
+	MinAngle                     	=	0.950	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50,	
+	ConditionLowerChanceOneIn   	=	80,	
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.08,	
+	AimingTime                  	=	10,
+	ReloadTime                  	=	25,	
+	SwingTime                   	=	0,
+	MinimumSwingTime            	=	0,
+	SwingAmountBeforeImpact     	=	1.0,	/* SIMULATE BURST DELAY */
+	RecoilDelay                 	=	0,
+	Weight                      	=	12.2,	/* 35 lb*/
+	OAL				=	2.4	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.50BMGBullets,	
+	AmmoBox                     	=	50BMGBox,	
+	MaxAmmo                     	=	160,	/* 8 divided by 0.05 */
+	MagazineType                	=	Base.50MiniCan,	
+	ProjectileCount             	=	6,	
+	MaxHitCount                 	=	3,	
+	PiercingBullets             	=	FALSE,	/* DISABLES MAXHITCOUNT */
+	ShareDamage                 	=	FALSE,	
+	SplatSize                   	=	5,	
+	SplatNumber                 	=	5,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0.8,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	8,	
+	DoorDamage                  	=	60,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	IdleAnim                    	=	Idle_Weapon2,	
+	SwingAnim                   	=	Rifle,	
+	MetalValue                  	=	65,	
+	SoundVolume                 	=	200,	
+	SoundRadius                 	=	200,	
+	SoundGain                   	=	1,	
+	NPCSoundBoost               	=	1.5,	
+	SwingSound                  	=	MinigunShot,	
+	InsertAmmoSound             	=	StormyM249ClipLoad,	
+	EjectAmmoSound              	=	StormyM249ClipEject,	
+	RackSound                   	=	M249Rack,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,
+	/* =========== TRANSFORM VARIABLES =========== */
+	/* =========== ATTACHMENT DATA ============ */
+	ModelWeaponPart = Light_Small         		Light_Small light light	,
+	ModelWeaponPart = Light_Large         		Light_Large light light	,
+	ModelWeaponPart = Laser_Green         		Laser_Green light light	,
+	ModelWeaponPart = Laser_Red            		Laser_Red light light	,
+	ModelWeaponPart = Standard_Mag          	AmmoCan50 mag mag,
+	}			
+
+				
+	model GAU19
+	{			
+		mesh = weapons/firearm/M134,	/* NEED NEW MODEL */
+		texture = weapons/firearm/M134,
+
+		attachment light
+		{
+			offset = 0.0000 0.0085 0.0180,
+			rotate = 0.0000 180.0000 0.0000,
+		}
+		attachment muzzle
+		{
+			offset = 0.0000 0.5760 -0.0810,
+			rotate = -90.0000 0.0000 0.0000,
+		}
+		attachment mag
+		{
+			offset = 0.0220 0.0515 -0.1440,
+			rotate = 0.0000 0.0000 90.000,
+		}		
+	}			
+				
+	fixing Fix GAU19
+	{			
+		Require : GAU19,
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}
+
+}

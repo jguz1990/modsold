@@ -1,0 +1,21 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item ASHClip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	ASH (50-Mag) Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	308ExtMag,
+        MaxAmmo 	=	20,
+        AmmoType 	=	Base.Bullets50MAG,
+        StaticModel 	=	GunMagazine,
+	GunType		=	Ash, 
+   }
+
+}

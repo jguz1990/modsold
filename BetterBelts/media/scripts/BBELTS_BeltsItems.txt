@@ -1,0 +1,39 @@
+module Base
+{	
+	item Belt3
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Belt+1,
+        Icon	=	Belt,
+        BodyLocation = Belt,
+        ClothingItem = Belt,
+        AttachmentsProvided = SmallBeltLeft;SmallBeltRight;FrontBeltR,
+    }
+
+	item Belt4
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Belt+2,
+        Icon	=	Belt,
+        BodyLocation = Belt,
+        ClothingItem = Belt,
+        AttachmentsProvided = SmallBeltLeft;SmallBeltRight;FrontBeltL;FrontBeltR,
+    }
+
+	item HolsterSimpleL
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Holster Left,
+        Icon	=	GunHolster,
+        BodyLocation = BeltExtraHL,
+        ClothingItem = Holster,
+        AttachmentsProvided = HolsterLeft,
+    }
+ }
+
+
+
+

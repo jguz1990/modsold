@@ -1,0 +1,556 @@
+module Base
+{
+
+/****************************************************************/
+/*		WEAPON CONTAINERS				*/
+/****************************************************************/
+	item CCW_Purse
+		{
+	        WeightReduction	=	100,
+        	Weight		=	0.01,
+	        Type		=	Container,
+        	Capacity	=	10,
+	        DisplayName	=	Purse,
+        	Icon		=	Purse,
+	        WorldStaticModel=	Purse_Ground,
+	        OpenSound	=	OpenBag,
+        	CloseSound	=	CloseBag,
+	        PutInSound	=	PutItemInBag,
+		ReplaceInSecondHand =	Bag_Purse_LHand holdingbagleft,
+	        ReplaceInPrimaryHand =	Bag_Purse_RHand holdingbagright,
+		}
+	item CCW_FannyPack
+		{
+	        WeightReduction	=	100,
+        	ClothingItemExtra = Bag_FannyPackBack,
+	        ClothingItemExtraOption = FannyPack_WearBack,
+        	clothingExtraSubmenu = FannyPack_WearFront,
+	        Weight		=	0.01,
+        	Type		=	Container,
+	        Capacity	=	10,
+        	DisplayName	=	Fanny Pack (Front),
+	        Icon		=	FannyPack,
+		WorldStaticModel=	FannyPack_Ground,
+        	OpenSound	=	OpenBag,
+	        CloseSound	=	CloseBag,
+        	PutInSound	=	PutItemInBag,
+	        BodyLocation	=	FannyPackFront,
+        	ClothingItem	=	Bag_FannyPackFront,
+	        CanBeEquipped	=	FannyPackFront,
+        	RunSpeedModifier=	0.97,
+		}
+    item Case_Small1
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-22LR),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small2
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-380),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small3
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-9mm),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small4
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-38/357),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small5
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-45SS),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small6
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-45DS),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Small7
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (Sml-44),
+        Icon		=	Case_Small,
+	StaticModel	=	Case_Small,
+	WorldStaticModel=	W_Case_Small,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Small_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Small_RHand holdingbagright,
+    }
+    item Case_Medium1
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-380),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Medium2
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-9mm),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Medium3
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-45DS),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Medium4
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-556),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Medium5
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-762x39),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Medium6
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	20,
+        DisplayName	=	Gun Case (Med-12g),
+        Icon		=	Case_Medium,
+	StaticModel	=	Case_Medium,
+	WorldStaticModel=	W_Case_Medium,
+	OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        MetalValue 	=	15,
+        ReplaceInSecondHand =	Case_Medium_LHand holdingbagleft,
+        ReplaceInPrimaryHand =	Case_Medium_RHand holdingbagright,
+    }
+    item Case_Large1
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-Mix),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large2
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-545x39),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large3
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-556),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large4
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-762x39),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large5
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-308),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large6
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-12g),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+    item Case_Large7
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	25,
+        DisplayName	=	Gun Case (Lrg-12g Auto),
+        Icon		=	Case_Large,
+	StaticModel	=	Case_Large,
+	WorldStaticModel=	W_Case_Large,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Large_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Large_RHand holdingbagright,
+    }
+
+    item Case_Cute
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	15,
+        DisplayName	=	Gun Case (22LR),
+        Icon		=	Case_Cute,
+	StaticModel	=	Case_Cute,
+	WorldStaticModel=	W_Case_Cute,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Cute_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Cute_RHand holdingbagright,
+    }
+
+    item Case_Heavy1
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	40,
+        DisplayName	=	Gun Case (Hvy-Gren),
+        Icon		=	Case_Heavy,
+	StaticModel	=	Case_Heavy,
+	WorldStaticModel=	W_Case_Heavy,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Heavy_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Heavy_RHand holdingbagright,
+    }
+    item Case_Heavy2
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	40,
+        DisplayName	=	Gun Case (Hvy-556LMG),
+        Icon		=	Case_Heavy,
+	StaticModel	=	Case_Heavy,
+	WorldStaticModel=	W_Case_Heavy,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Heavy_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Heavy_RHand holdingbagright,
+    }
+    item Case_Heavy3
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	40,
+        DisplayName	=	Gun Case (Hvy-308LMG),
+        Icon		=	Case_Heavy,
+	StaticModel	=	Case_Heavy,
+	WorldStaticModel=	W_Case_Heavy,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Heavy_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Heavy_RHand holdingbagright,
+    }
+    item Case_Heavy4
+    {
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Type		=	Container,
+        Capacity	=	40,
+        DisplayName	=	Gun Case (Hvy-BMG),
+        Icon		=	Case_Heavy,
+	StaticModel	=	Case_Heavy,
+	WorldStaticModel=	W_Case_Heavy,
+        OpenSound	=	OpenBag,
+       	CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Heavy_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Heavy_RHand holdingbagright,
+    }
+
+    item Bag_Police
+    {
+        Type		=	Container,
+        DisplayName	=	Police Bag,
+        ClothingItem	=	Bag_WeaponBag,
+        CanBeEquipped	=	Back,
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Capacity	=	60,
+        Icon		=	Duffelbag,
+        WorldStaticModel=	DuffelBag_Ground,
+        OpenSound	=	OpenBag,
+        CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        RunSpeedModifier =	0.95,
+        CanHaveHoles	=	false,
+        ReplaceInSecondHand =	Bag_DuffelBag_LHandTINT holdingbagleft,
+        ReplaceInPrimaryHand =	Bag_DuffelBag_RHandTINT holdingbagright,
+    }
+
+    item Bag_Bugout
+    {
+        Type		=	Container,
+        DisplayName	=	Bugout Bag,
+        ClothingItem	=	Bag_WeaponBag,
+        CanBeEquipped	=	Back,
+        WeightReduction	=	100,
+        Weight		=	0.01,
+        Capacity	=	60,
+        Icon		=	Duffelbag,
+        WorldStaticModel=	DuffelBag_Ground,
+        OpenSound	=	OpenBag,
+        CloseSound	=	CloseBag,
+        PutInSound	=	PutItemInBag,
+        RunSpeedModifier =	0.95,
+        CanHaveHoles	=	false,
+        ReplaceInSecondHand =	Bag_DuffelBag_LHandTINT holdingbagleft,
+        ReplaceInPrimaryHand =	Bag_DuffelBag_RHandTINT holdingbagright,
+    }
+
+
+	model Case_Small
+	{
+		mesh = Case_Small,
+		texture = Clothes/Bag/Case_Small,
+	}
+	model Case_Medium
+	{
+		mesh = Case_Medium,
+		texture = Clothes/Bag/Case_Medium,
+	}
+	model Case_Large
+	{
+		mesh = Case_Large,
+		texture = Clothes/Bag/Case_Large,
+	}
+	model Case_Heavy
+	{
+		mesh = Case_Heavy,
+		texture = Clothes/Bag/Case_Heavy,
+	}
+	model Case_Cute
+	{
+		mesh = Case_Cute,
+		texture = Clothes/Bag/Case_Cute,
+	}
+
+
+	model W_Case_Small
+	{
+		mesh = WorldItems/W_Case_Small,
+		texture = Clothes/Bag/Case_Small,
+		scale = 0.1,
+	}
+	model W_Case_Medium
+	{
+		mesh = WorldItems/W_Case_Medium,
+		texture = Clothes/Bag/Case_Medium,
+		scale = 0.1,
+	}
+	model W_Case_Large
+	{
+		mesh = WorldItems/W_Case_Large,
+		texture = Clothes/Bag/Case_Large,
+		scale = 0.1,
+	}
+	model W_Case_Heavy
+	{
+		mesh = WorldItems/W_Case_Heavy,
+		texture = Clothes/Bag/Case_Heavy,
+		scale = 0.1,
+	}
+	model W_Case_Cute
+	{
+		mesh = WorldItems/W_Case_Cute,
+		texture = Clothes/Bag/Case_Cute,
+		scale = 0.1,
+	}
+}

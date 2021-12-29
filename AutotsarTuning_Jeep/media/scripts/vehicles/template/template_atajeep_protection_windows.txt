@@ -1,0 +1,173 @@
+module Base
+{
+		
+	model ATA_Jeep_ProtectionWindowFrontLeft
+	{
+		mesh = vehicles/ATA_Jeep_base|armor_wleft,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_ProtectionWindowFrontRight
+	{
+		mesh = vehicles/ATA_Jeep_base|armor_wright,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_ProtectionWindowRearLeft
+	{
+		mesh = vehicles/ATA_Jeep_base|armor_wmiddleleft,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_ProtectionWindowRearRight
+	{
+		mesh = vehicles/ATA_Jeep_base|armor_wmiddleright,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_ProtectionWindowFront
+	{
+		mesh = vehicles/ATA_Jeep_base|shield_windshield,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_ProtectionWindowRear
+	{
+		mesh = vehicles/ATA_Jeep_base|armor_wback,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	template vehicle ATA_Jeep_Template_ProtectionWindows
+	{
+		template = ATAProtection/part/ATAProtectionWindowFrontLeft,
+		part ATAProtectionWindowFrontLeft
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowFrontLeft,
+			}
+		}
+		template = Window/part/WindowFrontLeft,
+		part WindowFrontLeft
+		{
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowFrontLeft,
+			}
+		}
+		
+		template = ATAProtection/part/ATAProtectionWindowFrontRight,
+		part ATAProtectionWindowFrontRight
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowFrontRight,
+			}
+		}
+		template = Window/part/WindowFrontRight,
+		part WindowFrontRight
+		{
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowFrontRight,
+			}
+		}
+		
+		template = ATAProtection/part/ATAProtectionWindowRearLeft,
+		part ATAProtectionWindowRearLeft
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowRearLeft,
+			}
+		}
+		template = Window/part/WindowRearLeft,
+		part WindowRearLeft
+		{
+			table install
+			{
+				requireInstalled =,
+			}
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowRearLeft,
+			}
+		}
+		
+		
+		template = ATAProtection/part/ATAProtectionWindowRearRight,
+		part ATAProtectionWindowRearRight
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowRearRight,
+			}
+		}
+		template = Window/part/WindowRearRight,
+		part WindowRearRight
+		{
+			table install
+			{
+				requireInstalled =,
+			}
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowRearRight,
+			}
+		}
+
+		part Window*
+		{
+			table uninstall
+			{
+				complete = ATATuning.UninstallComplete.Window,
+			}
+		}
+		
+		template = ATAProtection/part/ATAProtectionWindowFront,
+		part ATAProtectionWindowFront
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowFrontItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowFront,
+			}
+		}
+		template = Windshield/part/Windshield,
+		part Windshield
+		{
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowFront,
+			}
+		}
+		template = ATAProtection/part/ATAProtectionWindowRear,
+		part ATAProtectionWindowRear
+		{
+			itemType = Autotsar.ATAJeepProtectionWindowRearItem,
+			model Default
+			{
+				file = ATA_Jeep_ProtectionWindowRear,
+			}
+		}
+		template = Windshield/part/WindshieldRear,
+		part WindshieldRear
+		{
+			table uninstall
+            {
+				requireUninstalled = ATAProtectionWindowRear,
+			}
+		}
+	}
+}

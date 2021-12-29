@@ -1,0 +1,6 @@
+ItemName_TR = {
+ItemName_BetLock.BobbyPin = "Bobby pimi",
+ItemName_BetLock.HandmadeBobbyPin = "El yapimi bobby pimi",
+ItemName_BetLock.LockpickingMag = "Kilit kirma dergisi",
+ItemName_BetLock.AlarmMag = "Alarm ve güvenlik dergisi",
+}

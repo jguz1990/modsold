@@ -1,0 +1,4 @@
+IGUI_CS = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Opravdu chcete demontovat toto vozidlo?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Opravdu chcete demontovat tento pøívìs?",
+}

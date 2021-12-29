@@ -1,0 +1,164 @@
+module Base
+{
+	recipe Apply Jelly
+		{
+		MRE_Crackers;10,
+		MRE_Jelly;5,
+		Result:MRE_Crackers_Jelly,
+		Time:50,
+		Category:Cooking,
+		OnCreate:SpreadMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Apply Peanut Butter
+		{
+		MRE_Crackers;10,
+		MRE_PeanutButter;5,
+		Result:MRE_Crackers_PeanutButter,
+		Time:50,
+		Category:Cooking,
+		OnCreate:SpreadMRE,
+        Sound:PutItemInBag,
+		}
+
+	recipe Apply Cheese spread
+		{
+		MRE_Crackers;10,
+		MRE_Cheesespread;5,
+		Result:MRE_Crackers_Cheesespread,
+		Time:50,
+		Category:Cooking,
+		OnCreate:SpreadMRE,
+        Sound:PutItemInBag,
+		}
+item MRE_Crackers
+	{
+		DisplayName					=	MRE Crackers,
+		Icon 				= MRE_Crackers,
+		ReplaceOnUse 		= MRE_Crackers_Trash,
+		Type						=	Food,
+		HungerChange				=	-10,
+		ThirstChange				=	+5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	33,
+		Proteins					=	4,
+		Lipids						=	6,
+		Calories					=	199,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+        StaticModel = crackerss,
+	}
+
+
+item MRE_Crackers_Jelly
+	{
+		DisplayName					=	MRE Crackers with Jelly,
+		Icon						=	crackertriojellyred,
+		/*ReplaceOnUse 		= MRE_Crackers_Trash,*/
+		Type						=	Food,
+		HungerChange				=	-15,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	51,
+		Proteins					=	5,
+		Lipids						=	6,
+		Calories					=	274,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+        StaticModel = crackerss,
+	}
+
+
+item MRE_Crackers_PeanutButter
+	{
+		DisplayName					=	MRE Crackers with Peanut Butter,
+		Icon						=	crackertriopeanubutter,
+		/*ReplaceOnUse 		= MRE_Crackers_Trash,*/
+		Type						=	Food,
+		HungerChange				=	-15,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	41,
+		Proteins					=	17,
+		Lipids						=	25,
+		Calories					=	455,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+        StaticModel = crackerss,
+	}
+
+
+item MRE_Crackers_Cheesespread
+	{
+		DisplayName					=	MRE Crackers with Cheese spread,
+		Icon						=	crackertriospread,
+		/*ReplaceOnUse 		= MRE_Crackers_Trash,*/
+		Type						=	Food,
+		HungerChange				=	-15,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	34,
+		Proteins					=	10,
+		Lipids						=	21,
+		Calories					=	368,
+		Weight						=	0.2,
+		Packaged					=	TRUE,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+        StaticModel = crackerss,
+	}
+
+
+item MRE_Jelly
+	{
+		DisplayName					=	MRE Jelly,
+		Icon						=	MREspreadpackage2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	18,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	75,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Spread_Trash,
+	}
+
+
+item MRE_PeanutButter
+	{
+		DisplayName					=	MRE Peanut Butter,
+		Icon						=	MREspreadpackage2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	8.7,
+		Proteins					=	13,
+		Lipids						=	19,
+		Calories					=	256,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Spread_Trash,
+	}
+
+item MRE_Cheesespread
+	{
+		DisplayName					=	MRE Cheese spread,
+		Icon						=	MREspreadpackage2,
+		Type						=	Food,
+		HungerChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	1.1,
+		Proteins					=	6,
+		Lipids						=	16,
+		Calories					=	169,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+		ReplaceOnUse 		= MRE_Spread_Trash,
+		/*ReplaceOnUse 		= MRE_Meal_Pouch_Trash,*/
+	}	
+}
+

@@ -1,0 +1,21 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+
+module Base
+{
+
+    item 380Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	380-ACP Sgl-Stack Magazine,
+	DisplayCategory =	GunMag,
+        Icon		=	380Mag,
+        MaxAmmo 	=	7,
+        AmmoType	=	Base.Bullets380,
+        StaticModel	=	GunMagazine,
+	GunType		=	Multi_Gun,
+    }
+}

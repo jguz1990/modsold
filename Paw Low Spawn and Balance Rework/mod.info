@@ -1,0 +1,5 @@
+name=Paw Low Spawn and Balance Rework
+id=PLLoot_Rework
+require=PLLoot
+description=Adds new tactical gear to the game.
+poster=poster.png

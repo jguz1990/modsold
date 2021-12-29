@@ -1,0 +1,194 @@
+module Autotsar
+{
+	imports
+	{
+		Base
+	}
+	
+	model AtTuningMagBus_Ground
+	{
+		mesh = other/AtTuningMagBus_Ground,
+		texture = other/AtTuningMagBusTexture,
+		scale = 0.01,
+	} 
+	model AtTuningMagBus_Reading
+	{
+		mesh = Magazine,
+		texture = other/AtTuningMagBusTextureHand,
+		scale = 1,
+	}
+	
+	item AtTuningMagBus
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	AT Tuning - Bus,
+        Icon	=	AtTuningMagBusIcon,
+        TeachedRecipes  =   Basic Tuning;Make ATABusKengur1Item;Make ATABusRoofRack;Make ATABusRoofBoxItem;Make ATABusProtectionDoorItem;Make ATABusProtectionDoorRearItem;Make ATABusProtectionWheelsItem;Make ATABusProtectionWindowsFrontItem;Make ATABusProtectionWindowsRightItem;Make ATABusProtectionWindowsLeftItem,
+        ReplaceOnUse    =   AtTuningMagBus,
+		Tooltip = Tooltip_item_AtTuningMagBus,
+        StaticModel = Autotsar.AtTuningMagBus_Reading,
+		WorldStaticModel = Autotsar.AtTuningMagBus_Ground,
+    }
+	
+	item ATA_Bus_Roof_Rack
+	{
+		DisplayCategory = Tuning,
+		Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	= Roof Rack,
+        Icon	=	ATARoofRack,
+        MaxCapacity = 250,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+	}
+	item ATA_Bus_Roof_Box_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	= Roof Box,
+        Icon	=	BusToolbox,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+        MaxCapacity = 150,
+        ConditionAffectsCapacity = false,
+        ChanceToSpawnDamaged = 10,
+		Tooltip = Tooltip_item_tuning,
+	}
+	item Bullbar2Blueprint
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	AT Tuning - Bullbar2,
+        Icon	=	Notebook,
+        TeachedRecipes  =   Make ATABusKengur2Item,
+        ReplaceOnUse    =   AtTuningMagBus,
+		Tooltip = Tooltip_item_kengur,
+        WorldStaticModel = EmptyNotebook,
+    }
+	item Bullbar3Blueprint
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	AT Tuning - Bullbar3,
+        Icon	=	Notebook,
+        TeachedRecipes  =   Make ATABusKengur3Item,
+        ReplaceOnUse    =   AtTuningMagBus,
+		Tooltip = Tooltip_item_kengur,
+        WorldStaticModel = EmptyNotebook,
+    }
+	
+	item ATA_Bus_Kengur_1_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= Kengur,
+        Icon	=	ATAKengur1,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		ataProtection = EngineDoor,
+		Tooltip = Tooltip_item_tuning,
+	}
+	item ATA_Bus_Kengur_2_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	= Kengur,
+        Icon	=	ATAKengur2,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		ataProtection = EngineDoor;TireFrontLeft;TireFrontRight,
+		Tooltip = Tooltip_item_tuning,
+	}
+	item ATA_Bus_Kengur_3_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	= Kengur,
+        Icon	=	ATAKengur3,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		ataProtection = EngineDoor;Engine;GasTank;TireFrontLeft;TireFrontRight,
+		Tooltip = Tooltip_item_tuning,
+	}
+	
+	item ATA_Bus_Protection_door_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Protection door,
+        Icon	=	ATADoorProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = WindowFrontRight;DoorFrontRight,
+	}
+	item ATA_Bus_Protection_door_rear_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Protection door rear,
+        Icon	=	ATADoorRearProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = WindshieldRear;TruckBed,
+	}
+	item ATA_Bus_Protection_wheels_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Protection wheels,
+        Icon	=	ATAWheelProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = TireRearLeft;TireRearRight,
+	}
+	item ATA_Bus_Protection_windows_front_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Protection windows front,
+        Icon	=	ATAWindowFrontProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = Windshield,
+	}
+	item ATA_Bus_Protection_windows_right_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Protection windows right,
+        Icon	=	ATAWindowProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = WindowRearRight;WindowMiddleRight,
+	}
+	item ATA_Bus_Protection_windows_left_Item
+	{
+		DisplayCategory = Tuning,
+		Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	= Protection windows left light,
+        Icon	=	ATAWindowProtection,
+		ConditionMax = 100,
+        MechanicsItem = TRUE,
+		Tooltip = Tooltip_item_tuning,
+		ataProtection = WindowRearLeft;WindowMiddleLeft;WindowFrontLeft,
+	}
+}

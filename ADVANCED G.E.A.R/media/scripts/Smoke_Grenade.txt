@@ -1,0 +1,30 @@
+module Base
+{
+    
+
+	item SmokeGrenade
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+		SwingAnim	=	Throw,
+        WeaponSprite = SmokeGrenade,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Grenade,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	SmokeGrenade,
+        TriggerExplosionTimer   =   50,
+        SmokeRange  =   5,
+        /*ExplosionSound  =   BlowTorch,*/
+	AttachmentType = Gear,
+    }
+
+
+}
+

@@ -1,0 +1,57 @@
+module Base
+{
+	model ShotgunSawnOff2
+	{
+		mesh = Weapons/Firearm/ShotgunDoubleBarrelSawn,
+	texture = Weapons/Firearm/ShotgunDoubleBarrelSAWN,
+
+
+		
+		attachment muzzle
+		{
+			offset = 0.0000 -0.3200 0.0300,
+			rotate = 90.0000 0.0000 0.0000,
+		}
+	}
+/*
+	model ShotgunDoubleBarrel_OPEN
+    {
+        mesh = Weapons/Firearm/ShotgunDoubleBarrelSawn_OPEN,
+	texture = Weapons/Firearm/ShotgunDoubleBarrelSAWNOPEN,
+    }
+
+	model ShotgunDoubleBarrelOLD_OPEN
+    {
+        mesh = Weapons/Firearm/ShotgunDoubleBarrel_OPEN,
+    }
+
+	model ShotgunDoubleBarrelSAWN_OPEN
+    {
+        mesh = Weapons/Firearm/ShotgunDoubleBarrelSawn_OPEN,
+	texture = Weapons/Firearm/ShotgunDoubleBarrelSAWNOPEN,
+    }
+*/
+	model ObrezH
+    {
+        mesh = Weapons/Firearm/ObrezH,
+	texture = Weapons/Firearm/HuntingRifleSAWN,
+
+		
+		attachment muzzle
+		{
+			offset = 0.0000 0.3300 0.0300,
+			rotate = 90.0000 180.0000 0.0000,
+		}
+    }
+	model ObrezV
+    {
+        mesh = Weapons/Firearm/ObrezV,
+	texture = Weapons/Firearm/VarmintRifleSAWN,
+		
+		attachment muzzle
+		{
+			offset = 0.0000 0.3300 0.0300,
+			rotate = 90.0000 180.0000 0.0000,
+		}
+    }
+}

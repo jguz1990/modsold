@@ -1,0 +1,7 @@
+description=All carry bags and containers can now carry a bit more and don't have a movement speed penalty.
+id=POETCarryBuff
+name=[POET] Carry More Stuff
+poster=carrybuff.png
+
+modversion=1.2.0
+pzversion=41.50

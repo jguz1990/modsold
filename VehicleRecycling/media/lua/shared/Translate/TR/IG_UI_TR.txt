@@ -1,0 +1,4 @@
+IGUI_TR = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Bu arabayý gerçekten sökmek istiyor musunuz?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Bu römorku gerçekten sökmek istiyor musun?",
+}

@@ -1,0 +1,46 @@
+module Base
+{
+    item Bag_Smersh_Vest
+    {
+        Type = Container,
+        DisplayName = Smersh Vest,
+        ClothingItem = Bag_Smersh_Vest,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Smersh_Vest,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_Smersh_Vest_Loose,
+        ClothingItemExtraOption = Smersh_Vest_Loose,
+        clothingExtraSubmenu = Bag_Smersh_Vest,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+
+
+
+    item Bag_Smersh_Vest_Loose
+    {
+        Type = Container,
+        DisplayName = Smersh Vest (Loose),
+        ClothingItem = Bag_Smersh_Vest_Loose,
+        WeightReduction	=	100,
+        Weight	=	0.01,
+        Capacity	=	20,
+        Icon	=	Bag_Smersh_Vest,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.94,
+        BodyLocation = Tail,
+        BloodLocation = ShirtNoSleeves,
+        ClothingItemExtra = Bag_Smersh_Vest,
+        ClothingItemExtraOption = Smersh_Vest (Tight),
+        clothingExtraSubmenu = Bag_Smersh_Vest_Loose,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+    }
+}

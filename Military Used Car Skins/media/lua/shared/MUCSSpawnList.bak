@@ -1,0 +1,19 @@
+--if VehicleZoneDistribution then
+    -- Police Zones
+    VehicleZoneDistribution.police.vehicles["Base.hmmwvpolice"] = {index = -1, spawnChance = 200};
+    VehicleZoneDistribution.police.vehicles["Base.hmmwvblackopps"] = {index = -1, spawnChance = 100};
+    VehicleZoneDistribution.police.vehicles["Base.blazerblackops"] = {index = -1, spawnChance = 100};
+    VehicleZoneDistribution.police.vehicles["Base.m35a2blackopps"] = {index = -1, spawnChance = 100};
+    -- Ranger Zones
+    VehicleZoneDistribution.ranger.vehicles["Base.hmmwvblackopps"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.ranger.vehicles["Base.blazerblackops"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.ranger.vehicles["Base.m35a2blackopps"] = {index = -1, spawnChance = 1};
+    -- Ambulance Zones
+    VehicleZoneDistribution.ambulance.vehicles["Base.hmmwvblackopps"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.ambulance.vehicles["Base.blazerblackops"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.ambulance.vehicles["Base.m35a2blackopps"] = {index = -1, spawnChance = 1};
+    -- Farm Zones
+    VehicleZoneDistribution.farm.vehicles["Base.hmmwvblackopps"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.farm.vehicles["Base.blazerblackops"] = {index = -1, spawnChance = 1};
+    VehicleZoneDistribution.farm.vehicles["Base.m35a2blackopps"] = {index = -1, spawnChance = 1};
+--end

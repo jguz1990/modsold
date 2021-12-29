@@ -1,0 +1,21 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+
+module Base
+{
+
+    item 38Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	38-SPC Sgl-Stack Magazine,
+	DisplayCategory =	GunMag,
+        Icon		=	45Mag,
+        MaxAmmo 	=	7,
+        AmmoType	=	Base.Bullets38,
+        StaticModel	=	GunMagazine,
+	GunType		=	M5238,
+    }
+}

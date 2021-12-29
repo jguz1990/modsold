@@ -1,0 +1,59 @@
+/************************************************/
+/*	THIS MAG CAN USE 2 AMMO TYPES		*/
+/************************************************/
+
+module Base
+{
+
+	item K11HEClip
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	Grenade Magazine (Explosive),
+		DisplayCategory	= 	GunMag,
+        	Icon		=	K14Mag,
+	        MaxAmmo 	=	5,
+        	AmmoType 	=	Base.40HERound,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	K11_HE,
+	}
+	item K11INCClip
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	Grenade Magazine (Incendiary),
+		DisplayCategory	= 	GunMag,
+        	Icon		=	K14Mag,
+	        MaxAmmo 	=	5,
+        	AmmoType 	=	Base.40INCRound,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	K11_INC,
+	}
+
+
+
+
+
+/*********************** FUNCTIONS ************************/
+
+	recipe Use Explosive Caliber Rounds
+	{
+		K11INCClip,
+		Result		:K11HEClip,
+		Category	:Firearm,
+		Time		:10.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+	recipe Use Incendiary Caliber Rounds
+	{
+		K11HEClip,
+		Result		:K11INCClip,
+		Category	:Firearm,
+		Time		:10.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+}

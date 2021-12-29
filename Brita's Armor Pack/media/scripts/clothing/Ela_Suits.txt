@@ -1,0 +1,94 @@
+module Base
+{
+    item Ela_Jacket
+    {
+        Type = Clothing,
+        DisplayName = Ela Jacket,
+        ClothingItem = Ela_Jacket,
+        BodyLocation = Sweater,
+        BloodLocation = Jumper,
+        Icon = Ela_Jacket,
+        BiteDefense = 30,
+        ScratchDefense = 50,
+        Insulation = 0.20,
+        WindResistance = 0.60,
+        WaterResistance = 030,
+        FabricType = Denim,
+        WaterResistance = 0.2,
+        Weight	=	0.001,
+
+    }
+
+
+
+    item Ela_Pants
+    {
+        Type = Clothing,
+        DisplayName = Ela Pants,
+        ClothingItem = Ela_Pants,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+        Icon = Ela_Pants,
+        ScratchDefense = 10,
+        Insulation = 0.20,
+        WindResistance = 0.60,
+        WaterResistance = 030,
+        FabricType = Denim,
+    }
+
+
+
+    item Hat_Ela_Hat
+	{
+	Type = Clothing,
+	DisplayName = Ela Tactical Cap w/ Headset,
+	ClothingItem = Hat_Ela_Hat,
+	BodyLocation = Hat,
+	Icon = Hat_Ela_Hat,
+	BloodLocation = Head,
+		CanHaveHoles = false,
+		ChanceToFall = 50,
+		Insulation = 0.10,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Ela_Hat_Only,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+    }
+
+
+
+    item Hat_Ela_Hat_Only
+	{
+	Type = Clothing,
+	DisplayName = Ela Tactical Cap,
+	ClothingItem = Hat_Ela_Hat_Only,
+	BodyLocation = Hat,
+	Icon = Hat_Ela_Hat_Only,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+		CanHaveHoles = false,
+		ChanceToFall = 50,
+		Insulation = 0.10,
+        Weight	=	0.001,
+        ClothingItemExtra = Hat_Ela_Hat,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+    }
+
+
+
+    item Hat_Ela_Headset
+	{
+	Type = Clothing,
+	DisplayName = Ela Headset,
+	ClothingItem = Hat_Ela_Headset,
+	BodyLocation = Ears,
+	Icon = Hat_Ela_Headset,
+        CanHaveHoles = false,
+        ChanceToFall = 50,
+        Insulation = 0.3,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+
+ }

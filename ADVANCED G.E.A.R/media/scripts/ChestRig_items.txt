@@ -1,0 +1,81 @@
+module Base
+{
+    
+    item ChestRig
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Chest Rig,
+        IconsForTexture = ChestRig_Gray;ChestRig_Green;ChestRig_Tan,
+        BodyLocation = TorsoRig,
+        ClothingItem = ChestRig,
+        AttachmentsProvided = ChestRig,
+    }
+    item Webbing
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Tight),
+        IconsForTexture = Webbing_Gray;Webbing_Green;Webbing_Tan,
+        BodyLocation = TorsoRig,
+        ClothingItem = Webbing,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = WebbingLoose,
+        ClothingItemExtraOption = WearLoose,
+        ClothingExtraSubmenu = WearTight,
+    }
+    item WebbingLoose
+    {
+        Weight	=	0.01,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Loose),
+        IconsForTexture = Webbing_Gray;Webbing_Green;Webbing_Tan,
+        BodyLocation = TorsoRig,
+        ClothingItem = WebbingLoose,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = Webbing,
+        ClothingItemExtraOption = WearTight,
+        ClothingExtraSubmenu = WearLoose,
+    }
+ 
+
+	
+	recipe Make Chest Rig
+    {
+	Belt2=2,
+	LeatherStrips/LeatherStripsDirty,
+	LeatherStrips/LeatherStripsDirty,
+	Thread=2, 
+        DuctTape/Scotchtape=2,
+        keep KitchenKnife/HuntingKnife/Scissors,
+        keep Needle,
+        /*NeedToBeLearn:true,*/
+        Result:ChestRig,
+        Time:600.0,
+        Category:Survivalist,
+      	SkillRequired:Tailoring=3,
+    }
+
+
+
+
+
+
+	recipe Make Webbing
+    {
+	Belt2=3,
+	LeatherStrips/LeatherStripsDirty,
+	LeatherStrips/LeatherStripsDirty,
+	LeatherStrips/LeatherStripsDirty,
+	Thread=3, 
+        DuctTape/Scotchtape=3,
+        keep KitchenKnife/HuntingKnife/Scissors,
+        keep Needle,
+        /*NeedToBeLearn:true,*/
+        Result:Webbing,
+        Time:900.0,
+        Category:Survivalist,
+      	SkillRequired:Tailoring=4,
+    }
+}
+

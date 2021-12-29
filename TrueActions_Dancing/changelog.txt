@@ -1,0 +1,32 @@
+
+
+-------------------
+v.1.04
+
+Исправлено название журналов № 9 и 45.
+Исправлен рецепт миски с хлопьями Kosmotsars.
+
+Corrected the name of magazines #9 and #45.
+Corrected Kosmotsars cereal bowl recipe.
+
+-------------------
+v.1.03
+
+Добавлен французкий перевод (спасибо Xianah).
+
+Added French translation (thanks Xianah).
+-------------------
+v.1.02
+
+Исправлена опечатка в английском переводе.
+
+Corrected a typo in the English translation.
+-------------------
+v.1.01
+
+Добавлены новые танцы (1 журнал, 4 карточки).
+
+Added new dances (1 magazine, 4 cards).
+-------------------
+v.1.0
+Release

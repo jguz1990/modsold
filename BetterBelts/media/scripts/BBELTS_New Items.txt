@@ -1,0 +1,160 @@
+module Base
+{		
+	
+
+	item HookB
+	{
+		Weight	=	0.01,
+		Type	=	Normal,
+		DisplayName	=	Hook,
+		Icon	=	HookB,
+	}
+
+	
+
+	item HookedWaterBottleEmptyOrange
+	{
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Hooked Water Bottle Empty,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullOrange,
+		Icon	=	HookedWaterBottleOrange,
+		AttachmentType = Bottleb,
+			}
+
+
+	item HookedWaterBottleFullOrange
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Hooked Water Bottle,
+		ReplaceOnDeplete	=	HookedWaterBottleEmptyOrange,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullOrange,
+		Icon	=	HookedWaterBottleOrange,
+		StaticModel = HookedWaterBottleOrange,
+		AttachmentType = Bottleb,
+	}	
+
+	item HookedWaterBottleEmptyYellow
+	{
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Hooked Water Bottle Empty,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullYellow,
+		Icon	=	HookedWaterBottleYellow,
+		StaticModel = HookedWaterBottleYellow,
+		AttachmentType = Bottleb,
+	}
+
+
+	item HookedWaterBottleFullYellow
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Hooked Water Bottle,
+		ReplaceOnDeplete	=	HookedWaterBottleEmptyYellow,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullYellow,
+		Icon	=	HookedWaterBottleYellow,
+		StaticModel = HookedWaterBottleYellow,
+		AttachmentType = Bottleb,
+	}
+
+	item HookedWaterBottleEmptyGreen
+	{
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Hooked Water Bottle Empty,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullGreen,
+		Icon	=	HookedWaterBottleGreen,
+		StaticModel = HookedWaterBottleGreen,
+		AttachmentType = Bottleb,
+	}
+
+
+	item HookedWaterBottleFullGreen
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Hooked Water Bottle,
+		ReplaceOnDeplete	=	HookedWaterBottleEmptyGreen,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullGreen,
+		Icon	=	HookedWaterBottleGreen,
+		StaticModel = HookedWaterBottleGreen,
+		AttachmentType = Bottleb,
+	}	
+
+	item HookedWaterBottleEmptyPurple
+	{
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Hooked Water Bottle Empty,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullPurple,
+		Icon	=	HookedWaterBottlePurple,
+		StaticModel = HookedWaterBottlePurple,
+		AttachmentType = Bottleb,
+	}
+
+
+	item HookedWaterBottleFullPurple
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Hooked Water Bottle,
+		ReplaceOnDeplete	=	HookedWaterBottleEmptyPurple,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullPurple,
+		Icon	=	HookedWaterBottlePurple,
+		StaticModel = HookedWaterBottlePurple,
+		AttachmentType = Bottleb,
+	}
+
+	item HookedWaterBottleEmptyRed
+	{
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Hooked Water Bottle Empty,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullRed,
+		Icon	=	HookedWaterBottleRed,
+		StaticModel = HookedWaterBottleRed,
+		AttachmentType = Bottleb,
+	}
+
+
+	item HookedWaterBottleFullRed
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.01,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Hooked Water Bottle,
+		ReplaceOnDeplete	=	HookedWaterBottleEmptyRed,
+		ReplaceOnUseOn	=	WaterSource-HookedWaterBottleFullRed,
+		Icon	=	HookedWaterBottleRed,
+		StaticModel = HookedWaterBottleRed,
+		AttachmentType = Bottleb,
+	}
+	
+	
+}

@@ -1,0 +1,8 @@
+ContextMenu_EN = {
+    ContextMenu_Wear_AmmoStrap = "Wear Ammo Strap",	
+    ContextMenu_WearTight = "Wear Tight",
+    ContextMenu_WearLoose = "Wear Loose",
+    ContextMenu_Wear_Bandolier = "Wear Bandolier",
+    ContextMenu_ChangeSide = "Change Side",
+    ContextMenu_WearVest = "Wear",
+} 

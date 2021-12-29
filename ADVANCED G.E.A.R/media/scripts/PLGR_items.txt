@@ -1,0 +1,122 @@
+module Base
+{
+  
+
+    item PLGR
+    {
+        /*LightDistance	=	15,
+        LightStrength	=	2.75,
+        TorchCone	=	TRUE,*/
+
+		LightDistance	=	0,
+		TorchCone	=	FALSE,
+		LightStrength	=	0.1,
+
+
+        Type	=	Drainable,
+        Weight	=	2.75,
+        DisappearOnUse	=	FALSE,
+        UseDelta	=	0.0004,
+        DisplayName	=	PLGR "plugger",
+        ActivatedItem	=	TRUE,
+        Icon	=	PLGR,
+        cantBeConsolided = TRUE,
+	Tooltip 	=	A ruggedized hand-held single-frequency GPS receiver fielded by the United States Armed Forces.,
+        StaticModel = Gadget1,
+        AttachmentType = Walkie,
+	ReceiveGPS = TRUE,
+	WayPoint = TRUE,
+	primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+/*
+   recipe Insert Battery Into PLGR
+   {
+     PLGR,
+     destroy Battery,
+     Result:PLGR,
+     Time:30,
+     OnTest:TestPLGRBatteryInsert,
+     OnCreate:CreatePLGRBatteryInsert,
+       AnimNode:Disassemble,
+       Prop2:WalkieTalkieTactical,
+	/*RemoveResultItem:true,*/
+   }
+*/
+
+
+
+   recipe Set Waypoint to Current Coordinates
+   {
+     keep PLGR,
+     Result:PLGR,
+     Time:50,
+	OnTest:SetWaypointTest,
+     OnCreate:LockWaypoint,
+	/*Sound:Beep1,*/
+	Prop2:Gadget1,
+     /*AnimNode:Disassemble,*/
+		RemoveResultItem:true,
+   }
+   recipe Wipe Waypoint Data
+   {
+	keep PLGR,
+	Result:PLGR,
+	Time:250,
+	Sound:Beep1,
+	OnTest:WipeWaypointTest1,
+	OnCreate:WipeWaypoint1,
+	Prop2:Gadget1,
+     /*AnimNode:Disassemble,*/
+	RemoveResultItem:true,
+   }
+
+
+   recipe Insert Battery Into PLGR
+   {
+     destroy PLGR,
+     destroy Battery,
+     Result:PLGR,
+     Time:30,
+     OnTest:TestPLGRBatteryInsert,
+     OnCreate:CreatePLGRBatteryInsert,
+       AnimNode:Disassemble,
+	Prop2:Gadget1,
+   }
+  recipe Remove Battery From PLGR
+   {
+     keep PLGR,
+     Result:Battery,
+     Time:30,
+     OnTest:Recipe.OnTest.TorchBatteryRemoval,
+     OnCreate:PLGRBatteryRemoval,
+       AnimNode:Disassemble,
+	Prop2:Gadget1,
+   }
+
+
+
+    recipe Dismantle PLGR
+    {
+       destroy PLGR,
+       keep Screwdriver/Multitool,
+       NoBrokenItems:true,
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnCreate:DismantlePLGR,
+       OnGiveXP:Recipe.OnGiveXP.DismantleRadio,
+       Category:Electrical,
+       AnimNode:Disassemble,
+       Prop1:Screwdriver,
+	Prop2:Gadget1,
+    }
+model Gadget1
+    {
+        mesh = Gadget1,
+        texture =Gadget1b,
+    }
+
+
+
+}
+

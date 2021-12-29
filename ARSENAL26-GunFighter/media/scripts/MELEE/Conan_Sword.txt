@@ -1,0 +1,195 @@
+/*
+CONAN-SWORD HAS DIFFERENT STATS DEPENDING ON GRIP OPTION USED
+Heavy	- Most Damage, Uses Most Endurance, Can Hit 2, Slowest, Fast Wear, Knocks Down
+Sword	- Mid Damage, Uses Mid Endurance, Can Hit 1, Mid Speed, Mid Wear
+Spear	- Least Damage, Least Endurance, Hit 1, Fastest, Slow Wear
+
+COMPARED TO WAR-SWORD, CONAN-SWORD IS HEAVIER, SLOWER, & USES MORE ENDURANCE.
+BUT DOES MORE DAMAGE. IT HAS GREATER CLOSE REACH, BUT LESS HEAVY AND SPEAR REACH.
+*/
+
+
+module Base
+{
+
+	item Conan_Sword
+	{
+        DisplayName		=	Conan Sword,
+        Icon			=	Conan_Sword,
+        WeaponSprite		=	Conan_Sword_A,
+        Type			=	Weapon,
+        Categories		=	LongBlade,
+        SubCategory		=	Swinging,
+	AttachmentType		=	BigBlade,
+/*	CantAttackWithLowestEndurance =	TRUE,		*/
+	EnduranceMod		=	3,
+        TwoHandWeapon		=	TRUE,
+	/* ============ PERFORMANCE DATA ============== */
+        MinRange		=	0.61,
+        MaxRange		=	1.2,
+        MinDamage		=	6.8,
+        MaxDamage		=	9,
+        CriticalChance		=	35,
+        CritDmgMultiplier 	=	10,
+        MinAngle		=	0.8,
+        HitAngleMod		=	-30,
+        ConditionMax		=	50,
+        ConditionLowerChanceOneIn =	20,	/* MORE LIKELY */
+        SwingTime		=	2,
+        MinimumSwingTime	=	2,
+        SwingAmountBeforeImpact	=	0.03,
+        BaseSpeed		=	0.8,
+        WeaponLength		=	0.36,
+        Weight			=	3.72,
+	/* ============ IMPACT DATA =================== */
+	MaxHitCount		=	2,
+	PushBackMod		=	1,
+	KnockdownMod		=	3,
+	KnockBackOnNoDeath 	=	TRUE,
+	AlwaysKnockdown		=	TRUE,
+	SplatNumber		=	4,
+	SplatBloodOnNoDeath	=	TRUE,
+	DamageCategory		=	Slash,
+	DamageMakeHole		=	TRUE,
+	TreeDamage  		=	20,
+	DoorDamage		=	20,
+	/* ============ ANIMATION & SOUND ============= */
+        RunAnim			=	Run_Weapon2,
+        SwingAnim		=	Heavy,
+/*	CloseKillMove		=	Jaw_Stab,	*/
+	MetalValue		=	100,
+        BreakSound  		=	BreakMetalItem,
+        HitFloorSound		=	BladeHit,
+	ImpactSound		=	BladeHit,
+	HitSound		=	BladeHit,
+	/* =========== TRANSFORM VARIABLES =========== */
+	SpearGrip		=	Base.Conan_Sword_C,
+	CloseGrip		=	Base.Conan_Sword_B,
+	}
+
+	item Conan_Sword_B
+	{
+        DisplayName		=	Conan Sword,
+        Icon			=	Conan_Sword,
+        WeaponSprite		=	Conan_Sword_B,
+        Type			=	Weapon,
+        Categories		=	LongBlade,
+        SubCategory		=	Swinging,
+	AttachmentType		=	BigBlade,
+/*	CantAttackWithLowestEndurance =	TRUE,		*/
+	EnduranceMod		=	1.5,
+        TwoHandWeapon		=	TRUE,
+	/* ============ PERFORMANCE DATA ============== */
+        MinRange		=	0.61,
+        MaxRange		=	1.1,
+        MinDamage		=	5.2,
+        MaxDamage		=	7,
+        CriticalChance		=	30,
+        CritDmgMultiplier 	=	10,
+        MinAngle		=	0.5,
+        HitAngleMod		=	-30,
+        ConditionMax		=	50,
+        ConditionLowerChanceOneIn =	25,
+        SwingTime		=	2,
+        MinimumSwingTime	=	2,
+        SwingAmountBeforeImpact	=	0.02,
+        BaseSpeed		=	0.8,
+        WeaponLength		=	0.36,
+        Weight			=	3.72,
+	/* ============ IMPACT DATA =================== */
+	MaxHitCount		=	1,
+	PushBackMod		=	0.4,
+	KnockdownMod		=	2,
+	KnockBackOnNoDeath 	=	TRUE,
+/*	AlwaysKnockdown		=	TRUE,	*/
+	SplatNumber		=	2,
+	SplatBloodOnNoDeath	=	TRUE,
+	DamageCategory		=	Slash,
+	DamageMakeHole		=	TRUE,
+	TreeDamage  		=	10,
+	DoorDamage		=	10,
+	/* ============ ANIMATION & SOUND ============= */
+        RunAnim			=	Run_Weapon2,
+        SwingAnim		=	Bat,
+/*	CloseKillMove		=	Jaw_Stab,	*/
+	MetalValue		=	100,
+        BreakSound  		=	BreakMetalItem,
+        HitFloorSound		=	BladeHit,
+	ImpactSound		=	BladeHit,
+	HitSound		=	BladeHit,
+	/* =========== TRANSFORM VARIABLES =========== */
+	SpearGrip		=	Base.Conan_Sword_C,
+	WideGrip		=	Base.Conan_Sword,
+	}
+
+	item Conan_Sword_C
+	{
+        DisplayName		=	Conan Sword,
+        Icon			=	Conan_Sword,
+        WeaponSprite		=	Conan_Sword_C,
+        Type			=	Weapon,
+        Categories		=	Spear,
+        SubCategory		=	Spear,
+	AttachmentType		=	BigBlade,
+/*	CantAttackWithLowestEndurance =	TRUE,		*/
+	EnduranceMod		=	1,
+        TwoHandWeapon		=	TRUE,
+	/* ============ PERFORMANCE DATA ============== */
+        MinRange		=	0.61,
+        MaxRange		=	1.2,
+        MinDamage		=	3.75,
+        MaxDamage		=	5,
+        CriticalChance		=	25,
+        CritDmgMultiplier 	=	10,
+        MinAngle		=	0.8,
+        HitAngleMod		=	-30,
+        ConditionMax		=	50,
+        ConditionLowerChanceOneIn =	30,	/* LESS LIKELY */
+        SwingTime		=	2,
+        MinimumSwingTime	=	2,
+        SwingAmountBeforeImpact	=	0.02,
+        BaseSpeed		=	0.8,
+        WeaponLength		=	0.36,
+        Weight			=	3.72,
+	/* ============ IMPACT DATA =================== */
+	MaxHitCount		=	1,
+	PushBackMod		=	0.2,
+	KnockdownMod		=	0,
+	KnockBackOnNoDeath 	=	TRUE,
+/*	AlwaysKnockdown		=	TRUE,	*/
+	SplatNumber		=	2,
+	SplatBloodOnNoDeath	=	TRUE,
+	DamageCategory		=	Slash,
+	DamageMakeHole		=	TRUE,
+	TreeDamage  		=	5,
+	DoorDamage		=	5,
+	/* ============ ANIMATION & SOUND ============= */
+        RunAnim			=	Run_Weapon2,
+        SwingAnim		=	Spear,
+/*	CloseKillMove		=	Jaw_Stab,	*/
+	MetalValue		=	100,
+        BreakSound  		=	BreakMetalItem,
+        HitFloorSound		=	BladeHit,
+	ImpactSound		=	BladeHit,
+	HitSound		=	BladeHit,
+	/* =========== TRANSFORM VARIABLES =========== */
+	CloseGrip		=	Base.Conan_Sword_B,
+	WideGrip		=	Base.Conan_Sword,
+	}
+
+	model Conan_Sword_A
+	{
+		mesh = weapons/2handed/Conan_Sword_A,
+		texture = Weapons/2handed/Conan_Sword,
+	}
+	model Conan_Sword_B
+	{
+		mesh = weapons/2handed/Conan_Sword_B,
+		texture = Weapons/2handed/Conan_Sword,
+	}
+	model Conan_Sword_C
+	{
+		mesh = weapons/2handed/Conan_Sword_C,
+		texture = Weapons/2handed/Conan_Sword,
+	}
+}

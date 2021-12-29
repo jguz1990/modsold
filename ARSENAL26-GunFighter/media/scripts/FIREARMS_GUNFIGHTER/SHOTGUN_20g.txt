@@ -1,0 +1,209 @@
+module Base	{
+
+	item	10855_Silver	{	
+				
+	DisplayName                 	=	Benelli Montefeltro Silver (20g)	,
+	Icon                        	=	10855_Silver,	
+	WeaponSprite                	=	10855_Silver,	
+	Type                        	=	Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	isAimedHandWeapon           	=	TRUE,	
+	WeaponReloadType            	=	shotgun,	
+	AttachmentType              	=	Rifle,	
+	UseEndurance                	=	FALSE,	
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,	
+	/* ============ PERFORMANCE DATA ============= */			
+	MinRange                    	=	0.61	,
+	MaxRange                    	=	13	,
+	RangeFalloff                	=	TRUE,	
+	AimingPerkRangeModifier     	=	0.5	,
+	MinDamage                   	=	1.4	,
+	MaxDamage                   	=	1.8	,
+	CriticalChance              	=	45	,
+	CritDmgMultiplier            	=	2,	
+	AimingPerkCritModifier      	=	3,	
+	AimingMod                   	=	2,	
+	HitChance                   	=	67	,
+	AimingPerkHitChanceModifier 	=	11	,
+	MinAngle                     	=	0.915	,
+	AngleFalloff                	=	TRUE,	
+	ConditionMax                	=	70	,
+	ConditionLowerChanceOneIn   	=	56	,
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.07	,
+	AimingTime                  	=	23	,
+	ReloadTime                  	=	25,	
+	SwingTime                   	=	0.5	,
+	MinimumSwingTime            	=	0.5	,
+	RecoilDelay                 	=	38	,
+	Weight                      	=	2.8	,
+	OAL				=	3.2	,
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.20gShotgunShells,	
+	AmmoBox                     	=	20gShotgunShellsBox,	
+	MaxAmmo                     	=	4,	
+	ProjectileCount             	=	4,	
+	MaxHitCount                 	=	3,	
+	ShareDamage                 	=	FALSE,	
+	SplatNumber                 	=	5,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0.8,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	8,	
+	DoorDamage                  	=	16,	
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	MetalValue                  	=	45,	
+	SoundVolume                 	=	70,	
+	SoundRadius                 	=	70,	
+	SoundGain                   	=	2,	
+	SwingSound                  	=	1014shot,	
+	InsertAmmoSound             	=	M1897StormyShotgunInsertRound,	
+	EjectAmmoSound              	=	Stormy9mmClipEject,	
+	RackSound                   	=	M1897stormyShotgunPump,	
+	ShellFallSound              	=	ShotgunShellHitGround,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,	
+	/* =========== ATTACHMENT DATA ============ */			
+	ModelWeaponPart = Launcher             		Launcher launcher launcher,
+	ModelWeaponPart = Bipod               		Bipod bipod bipod	,
+	ModelWeaponPart = ForeGrip           		ForeGrip foregrip foregrip	,
+	ModelWeaponPart = Carrier_12g          		Carrier_12g carrier carrier	,
+	ModelWeaponPart = AmmoBelt           		AmmoBelt sling sling	,
+	ModelWeaponPart = Sling               		Sling_1 sling sling	,
+	ModelWeaponPart = Light_Small			Light_Small  side  side		,
+	ModelWeaponPart = Light_Large			Light_Large  side  side		,
+	ModelWeaponPart = Laser_Green	  		Laser_Green  side  side		,
+	ModelWeaponPart = Laser_Red	    		Laser_Red    side  side		,
+	ModelWeaponPart = Suppressor_Pistol		Suppressor_Pistol suppressor suppressor	,
+	ModelWeaponPart = Suppressor_Rifle		Suppressor_Rifle suppressor suppressor	,
+	ModelWeaponPart = Suppressor_Oil		Suppressor_Oil suppressor suppressor	,
+	ModelWeaponPart = Suppressor_Bottle		Suppressor_Bottle suppressor suppressor	,
+	ModelWeaponPart = Suppressor_Shotgun		Suppressor_Shotgun 	suppressor suppressor	,
+	ModelWeaponPart = Suppressor_BMG		Suppressor_BMG suppressor suppressor	,
+	ModelWeaponPart = Bayonet_M4        		Bayonet_M4 bayonet bayonet	,
+	ModelWeaponPart = Bayonet_AK        		Bayonet_AK bayonet bayonet	,
+	ModelWeaponPart = Bayonet_M1917    		Bayonet_M1917 bayonet bayonet	,
+	ModelWeaponPart = RecoilPad            		RecoilPad pad pad	,
+	ModelWeaponPart = MuzzleBrake    		MuzzleBrake suppressor suppressor	,
+	ModelWeaponPart = Compensator     		MuzzleBrake suppressor suppressor	,
+	ModelWeaponPart = GhostRing            		GhostRing reddot reddot	,
+	ModelWeaponPart = Sight_MicroDot 		Sight_MicroDot reddot reddot	,
+	ModelWeaponPart = Sight_RaceDot 		Sight_RaceDot scope scope	,
+	ModelWeaponPart = Sight_SRS       		Sight_SRS reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint       		Sight_Aimpoint  reddot reddot	,
+	ModelWeaponPart = Sight_Aimpoint_Dot       		Sight_Aimpoint_Dot  reddot reddot	,
+	ModelWeaponPart = Sight_Fiber_Shotgun 		Sight_Fiber_Shotgun scope scope	,
+	ModelWeaponPart = Sight_Mepro_M21      		Sight_Mepro_M21 reddot reddot	,
+	ModelWeaponPart = Sight_Mepro_MOR      		Sight_Mepro_MOR reddot reddot	,
+	ModelWeaponPart = Sight_UH1      		Sight_UH1 reddot reddot	,
+	ModelWeaponPart = Sight_C79		Sight_C79 scope scope	,
+	ModelWeaponPart = Sight_SUSAT		Sight_SUSAT scope scope	,
+	ModelWeaponPart = Sight_Raven		Sight_Raven scope scope	,
+	ModelWeaponPart = Sight_G28_Scope		Sight_G28_Scope scope scope	,
+	ModelWeaponPart = Sight_EOTech      		Sight_EOTech reddot reddot	,
+	ModelWeaponPart = Sight_3xEOTech		Sight_3xEOTech scope scope	,
+	ModelWeaponPart = Sight_4xACOG    		Sight_4xACOG scope scope	,
+	ModelWeaponPart = Sight_6xELCAN  		Sight_6xELCAN scope scope	,
+	ModelWeaponPart = Scope_1-4x         		Scope_1-4x scope scope	,
+	ModelWeaponPart = Scope_20x           		Scope_20x scope scope	,
+	ModelWeaponPart = Sight_KOBRA        		Sight_KOBRA scope2 scope2	,
+	ModelWeaponPart = Scope_4xPSO            	Scope_4xPSO scope2 scope2	,
+	ModelWeaponPart = Scope_12xPSO    		Scope_12xPSO scope2 scope2	,
+	ModelWeaponPart = Sight_Thermal   		Sight_Thermal scope scope	,
+	ModelWeaponPart = Sight_Thermal_AK   		Sight_Thermal_AK scope2 scope2	,
+	ModelWeaponPart = Sight_ACRO      		Sight_ACRO reddot reddot	,
+	ModelWeaponPart = Sight_MRO      		Sight_MRO reddot reddot	,
+	ModelWeaponPart = Sight_SRO      		Sight_SRO reddot reddot	,
+	ModelWeaponPart = Sight_Nikon      		Sight_Nikon reddot reddot	,
+	ModelWeaponPart = Sight_M8      		Sight_M8 scope scope	,
+	ModelWeaponPart = Sight_VX3      		Sight_VX3 scope scope	,
+	ModelWeaponPart = Sight_1P63        		Sight_1P63 scope2 scope2	,
+	ModelWeaponPart = Sight_Brownells      		Sight_Brownells scope scope	,
+	ModelWeaponPart = Sight_L2      		Sight_L2 scope scope	,
+	ModelWeaponPart = Sight_LUX      		Sight_LUX scope scope	,
+	ModelWeaponPart = Sight_Malcom      		Sight_Malcom scope scope	,
+	ModelWeaponPart = Sight_NO32      		Sight_NO32 scope2 scope2	,
+	ModelWeaponPart = Sight_PKAS      		Sight_PKAS scope scope	,
+	ModelWeaponPart = Sight_PU        		Sight_PU scope2 scope2	,
+	ModelWeaponPart = Sight_PVS4      		Sight_PVS4 scope scope	,
+	ModelWeaponPart = Sight_XPS      		Sight_XPS reddot reddot	,
+	ModelWeaponPart = Laser_DVAL	    		Laser_DVAL    side  side		,
+	ModelWeaponPart = Laser_PEQ15	    		Laser_PEQ15    side  side		,
+	ModelWeaponPart = Grip_Magpul           		Grip_Magpul foregrip foregrip	,
+	ModelWeaponPart = Grip_MLOK           		Grip_MLOK foregrip foregrip	,
+	ModelWeaponPart = Grip_TG           		Grip_TG foregrip foregrip	,
+	}			
+				
+	model 10855_Silver			
+	{			
+		mesh = weapons/firearm/10855_Silver,		
+		texture = weapons/firearm/10855_Silver,		
+				
+		attachment bipod		
+		{		
+			offset = 0.0000 0.0487 -0.0160,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}
+		attachment foregrip		
+		{		
+			offset = 0.0000 0.0435 -0.0159,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment carrier		
+		{		
+			offset = 0.0000 0.0306 -0.0109,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment light		
+		{		
+			offset = 0.0000 0.2676 0.0012,	
+			rotate = 0.0000 -90.0000 0.0000,
+		}
+		attachment side		
+		{		
+			offset = 0.0000 0.2676 0.0012,	
+			rotate = 0.0000 -90.0000 0.0000,
+		}		
+		attachment suppressor		
+		{		
+			offset = 0.0000 0.5223 0.0125,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment muzzle		
+		{		
+			offset = 0.0000 0.5505 0.0125,	
+			rotate = -90.0000 0.0000 0.0000,	
+		}		
+		attachment reddot		
+		{		
+			offset = 0.0000 0.0833 -0.0193,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+		attachment scope		
+		{		
+			offset = 0.0000 0.0711 -0.0193,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}	
+		attachment scope2		
+		{		
+			offset = 0.0000 0.0294 -0.0183,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}
+		attachment pad		
+		{		
+			offset = 0.0000 0.0000 0.0000,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+	}			
+				
+	fixing Fix 10855_Silver			
+	{			
+		Require : 10855_Silver,		
+		Fixer : Cleaning=1,		
+		Fixer : WD=1,		
+	}			
+}

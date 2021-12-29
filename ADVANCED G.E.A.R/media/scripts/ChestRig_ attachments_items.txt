@@ -1,0 +1,190 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+
+		
+	
+		attachment chest_rig_mag_left
+		{
+			offset = 0.1700 0.0600 0.0550,
+			rotate = 75.0000 0.0000 70.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_mag_right
+		{
+			offset = 0.1700 -0.0600 0.0550,
+			rotate = 105.0000 0.0000 70.0000,
+			bone = Bip01_Spine,
+		}
+				
+		
+		attachment chest_rig
+		{
+			offset = 0.1675 0.0700 0.0600,
+			rotate = 67.5000 0.0000 90.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_knife
+		{
+			offset = 0.0300 0.0600 0.1000,
+			rotate = 67.5000 0.0000 -105.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_gear
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 180.0000 67.5000 -60.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_gear_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 180.0000 90.0000 30.0000,
+			bone = Bip01_Spine,
+		}
+
+
+		attachment chest_light
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 180.0000 90.0000 -30.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_light_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 180.0000 90.0000 30.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_walkie
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 90.0000 -180.0000 120.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_walkie_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 90.0000 -180.0000 120.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_bottle
+		{
+			offset = 0.1000 0.0600 0.0600,
+			rotate = 75.0000 0.0000 -90.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_bottle_right
+		{
+			offset = 0.1000 -0.0600 0.0600,
+			rotate = 105.0000 0.0000 -90.0000,
+			bone = Bip01_Spine,
+		}
+	
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		
+	
+		attachment chest_rig_mag_left
+		{
+			offset = 0.1700 0.0600 0.0550,
+			rotate = 75.0000 0.0000 70.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_mag_right
+		{
+			offset = 0.1700 -0.0600 0.0550,
+			rotate = 105.0000 0.0000 70.0000,
+			bone = Bip01_Spine,
+		}
+		
+		attachment chest_rig
+		{
+			offset = 0.1675 0.0700 0.0600,
+			rotate = 67.5000 0.0000 90.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_knife
+		{
+			offset = 0.0300 0.0600 0.1000,
+			rotate = 67.5000 0.0000 -105.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_gear
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 180.0000 67.5000 -60.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_gear_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 180.0000 90.0000 30.0000,
+			bone = Bip01_Spine,
+		}
+		attachment chest_light
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 180.0000 90.0000 -30.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_light_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 180.0000 90.0000 30.0000,
+			bone = Bip01_Spine,
+		}
+
+
+		attachment chest_rig_walkie
+		{
+			offset = 0.1700 0.0600 0.0600,
+			rotate = 90.0000 -180.0000 120.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_walkie_right
+		{
+			offset = 0.1700 -0.0600 0.0600,
+			rotate = 90.0000 -180.0000 120.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_bottle
+		{
+			offset = 0.1000 0.0600 0.0600,
+			rotate = 75.0000 0.0000 -90.0000,
+			bone = Bip01_Spine,
+		}
+
+		attachment chest_rig_bottle_right
+		{
+			offset = 0.1000 -0.0600 0.0600,
+			rotate = 105.0000 0.0000 -90.0000,
+			bone = Bip01_Spine,
+		}
+	
+
+	}
+}

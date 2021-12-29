@@ -1,0 +1,3 @@
+Tooltip_ES = {
+    Tooltip_VehicleRecycling = "Desmontar un vehículo o remolque con el soplete de propano proporcionará metal y materiales eléctricos. <LINE> Una habilidad superior en metalurgia recuperará más materiales útiles.",
+}

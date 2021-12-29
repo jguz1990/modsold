@@ -1,0 +1,34 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 57Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	5.7x28mm Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	57Mag,
+        MaxAmmo 	=	20,
+        AmmoType 	=	Base.Bullets57,
+        StaticModel 	=	GunMagazine,
+	GunType		=	FN_57,
+    }
+
+    item P90Clip
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	5.7x28mm P90 Magazine,
+	DisplayCategory	=	GunMag,
+        Icon		=	P90Mag,
+        MaxAmmo 	=	50,
+        AmmoType 	=	Base.Bullets57,
+        StaticModel 	=	GunMagazine,
+	GunType		=	FN_P90,
+    }
+}

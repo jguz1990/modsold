@@ -1,0 +1,183 @@
+module Base
+{
+
+	item SAK
+	{
+		
+		Tags = Screwdriver;CanOpener;Corkscrew,
+		MaxRange	=	0.9,
+		WeaponSprite	=	swissarmyknife,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		ConditionLowerChanceOneIn	=	2,
+		Weight	=	0.2,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		DisplayName	=	Swiss Army Knife,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	SAK,
+		/*Icon	=	Leatherdad,*/
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   1,
+        EnduranceMod = 0.5,
+        MetalValue = 10,
+        CriticalChance	=	25,
+        CritDmgMultiplier = 4,
+        MinDamage	=	0.1,
+        MaxDamage	=	0.4,
+		WeaponLength = 0.19,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+		/*AttachmentType = Knife,*/
+		Tooltip = A pocketknife with a can opener and small screwdriver.
+		
+ 	}
+
+
+
+	item Multitool
+	{
+		Tags = Screwdriver;CanOpener;Pliers;File,
+		MaxRange	=	0.9,
+		WeaponSprite	=	multitoolpliers,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		ConditionLowerChanceOneIn	=	2,
+		Weight	=	0.6,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		DisplayName	=	Leatherdad Multitool,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	Multitool,
+		/*Icon	=	Leatherdad,*/
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   1,
+        EnduranceMod = 0.5,
+        MetalValue = 10,
+        CriticalChance	=	25,
+        CritDmgMultiplier = 4,
+        MinDamage	=	0.3,
+        MaxDamage	=	0.7,
+		WeaponLength = 0.19,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+		/*AttachmentType = Knife,*/
+		Tooltip = A multitool with a can opener; file; knife; pliers; scissors and screwdriver.
+ 	}
+
+	item P38
+    {	
+		Tags = CanOpener,
+        Weight    		= 0.0,
+        Type    		= Key,
+        DisplayName         	= P38 Can Opener,
+        icon 			= P38_3,
+		Tooltip = A small military can opener that can fit on a keyring or dog tags; can also be used to clean your fingernails.
+	
+    }
+
+	item Leatherdad
+    {
+		StaticModel = multitoolclosed,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+        Weight    		= 0.6,
+        Type    		= Normal,
+        DisplayName         	= Leatherdad Multitool (folded),
+        icon 			= Leatherdad,
+	AttachmentType 		= Walkie,
+	Tooltip = A multitool with a can opener; knife; pliers; scissors and screwdriver. Unfold to use.
+    }
+
+
+
+    item P38DT
+	{
+		Tags = CanOpener,
+		Type = Clothing,
+		DisplayName = Dog tags with P38,
+		ClothingItem = Necklace_DogTag,
+		BodyLocation = Necklace,
+		Icon = Necklace_Dogtags,
+		Weight = 0.1,
+		Cosmetic = TRUE,
+		Tooltip = A P38 can opener hangs from these dog tags.	
+	}
+
+
+	recipe Unfold Leatherdad
+	{
+	   Leatherdad,
+	   OnCreate:Leatherdad_Folding,	   
+	   Result:Multitool,
+	   Time:20.0,
+	   OnGiveXP:NoXP_OnGiveXP,
+       		Prop1:multitoolclosed,
+	}
+	recipe Fold Up Leatherdad
+	{
+	   Multitool,
+	   OnCreate:Leatherdad_Folding,
+	   Result:Leatherdad,
+	   Time:20.0,
+	   OnGiveXP:NoXP_OnGiveXP,
+       		Prop1:multitoolpliers,
+	}
+	recipe Detach P38 From Dog Tags
+	{
+	   P38DT,
+	   OnCreate:Detach_P38,	   
+	   Result:P38,
+	   Time:20.0,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+	recipe Attach P38 To Dog Tags
+	{
+	   P38,
+		Necklace_DogTag,
+	   Result:P38DT,
+	   Time:20.0,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+}

@@ -1,0 +1,45 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item 556MiniCan
+    {
+        CanStack	=	FALSE,
+        Weight		=	2.0,			/* EMPTY WEIGHT SAME AS MED CAN*/
+        Type		=	Normal,
+        DisplayName	=	5.56x45mm-NATO Minigun Canister,
+	DisplayCategory	=	GunMag,
+        Icon		=	AmmoCan50,
+        MaxAmmo 	=	520,			/* 0.015 x 520 = 7.8wt SAME AS MED CAN*/
+        AmmoType 	=	Base.556Bullets,
+        StaticModel 	=	GunMagazine,
+    }
+
+    item 308MiniCan
+    {
+        CanStack	=	FALSE,
+        Weight		=	2.0,			/* EMPTY WEIGHT SAME AS MED CAN*/
+        Type		=	Normal,
+        DisplayName	=	.308-WIN Minigun Canister,
+	DisplayCategory	=	GunMag,
+        Icon		=	AmmoCan50,
+        MaxAmmo 	=	320,			/* 0.025 x 320 = 8wt SAME AS MED CAN*/
+        AmmoType 	=	Base.308Bullets,
+        StaticModel 	=	GunMagazine,
+    }
+
+    item 50MiniCan
+    {
+        CanStack	=	FALSE,
+        Weight		=	2.0,			/* EMPTY WEIGHT SAME AS MED CAN*/
+        Type		=	Normal,
+        DisplayName	=	.50-BMG Minigun Canister,
+	DisplayCategory	=	GunMag,
+        Icon		=	AmmoCan50,
+        MaxAmmo 	=	160,			/* 0.05 x 160 = 8wt SAME AS MED CAN*/
+        AmmoType 	=	Base.50BMGBullets,
+        StaticModel 	=	GunMagazine,
+    }
+}

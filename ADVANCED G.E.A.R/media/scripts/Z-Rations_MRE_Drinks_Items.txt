@@ -1,0 +1,319 @@
+module Base
+{
+recipe Make MRE Beverage
+	{
+		MRE_BevBasewithSugar,
+		WaterBottleEmpty,
+		Water=10,
+		Result 		:MRE_BevwithSugar_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	}
+recipe Make MRE Beverage
+	{
+		MRE_SugarFreeBevBase,
+		WaterBottleEmpty,
+		Water=10,
+		Result 		:MRE_SugarFreeBev_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	}
+recipe Make MRE Beverage
+	{
+		MRE_BevBasewithSugar,
+		WaterBottleFull,
+		Result 		:MRE_BevwithSugar_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+        	OnTest		: Clean_Water_Bottle_Full,
+	}
+recipe Make MRE Beverage
+	{
+		MRE_SugarFreeBevBase,
+		WaterBottleFull,
+		Result 		:MRE_SugarFreeBev_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+        	OnTest		: Clean_Water_Bottle_Full,
+	}
+/*
+recipe Make MRE Beverage
+	{
+		MRE_BevBasewithSugar,
+		WaterBottleFull,
+		Result 		:MRE_BevwithSugar_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+	}
+recipe Make MRE Beverage
+	{
+		MRE_SugarFreeBevBase,
+		WaterBottleFull,
+		Result 		:MRE_SugarFreeBev_WaterBottle,
+		OnCreate	: MRE_Drink,
+		Time 		: 50.0,
+		Category 	: Cooking,
+	}*/
+
+	
+item MRE_SugarFreeBev_WaterBottle
+	{
+	Weight				=	0.8,
+	Type				=	Food,
+	UseWhileEquipped		=	FALSE,	
+	UnhappyChange			=	-5,
+	ThirstChange			=	-70,
+		FatigueChange				=	-10,
+	DisplayName			=	MRE Sugar Free Beverage,
+	ReplaceOnUse			=	WaterBottleEmpty,
+		Icon	=	WaterBottle_Full,
+		StaticModel = WaterBottle,
+	CustomContextMenu 		= 	Drink,
+	FoodType			=	NoExplicit,
+		Carbohydrates				=	0.0,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	0,
+        CantBeFrozen 			= 	TRUE,
+		CustomEatSound = DrinkingFromBottle,
+	}		
+item MRE_BevwithSugar_WaterBottle
+	{
+	Weight				=	0.8,
+	Type				=	Food,
+	UseWhileEquipped		=	FALSE,
+	UnhappyChange			=	-5,
+	ThirstChange			=	-70,
+		FatigueChange				=	-15,
+	DisplayName			=	MRE Beverage with Sugar,
+	ReplaceOnUse			=	WaterBottleEmpty,
+		Icon	=	WaterBottle_Full,
+		StaticModel = WaterBottle,
+	CustomContextMenu 		= 	Drink,
+	FoodType			=	NoExplicit,
+		Carbohydrates				=	28,
+		Proteins					=	2,
+		Lipids						=	3,
+		Calories					=	150,
+        CantBeFrozen 			= 	TRUE,
+		CustomEatSound = DrinkingFromBottle,
+	}	
+	
+	
+item MRE_Cocoa
+	{
+		DisplayName					=	MRE Cocoa Packet,
+		Icon 				= MREChocky,
+		ReplaceOnUse 		= MRE_Cocoa_Trash,
+		Type						=	Food,
+		HungerChange				=	-1,
+		ThirstChange				=	+5,
+		FatigueChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	29.0,
+		Proteins					=	3,
+		Lipids						=	7,
+		Calories					=	192,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+	}
+
+
+item MRE_Cocoa_Mug
+	{
+		DisplayName					=	MRE Cocoa,
+		Icon						=	MugFulll,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-5,
+		Carbohydrates				=	29.0,
+		Proteins					=	3,
+		Lipids						=	7,
+		Calories					=	192,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	Mugl,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = Mug,
+	}
+
+
+item MRE_BevBasewithSugar
+	{
+		DisplayName					=	MRE Beverage Base with Sugar,
+		Icon 				= MREdrinkmixpackage2,
+		ReplaceOnUse 		= MRE_Drink_Trash,
+		Type						=	Food,
+		HungerChange				=	-1,
+		ThirstChange				=	+5,
+		FatigueChange				=	-5,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	28.1,
+		Proteins					=	2,
+		Lipids						=	3,
+		Calories					=	150,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+	}
+
+
+item MRE_BevwithSugar_Mug
+	{
+		DisplayName					=	MRE Beverage with Sugar,
+		Icon						=	MugFulll,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-5,
+		Carbohydrates				=	28.1,
+		Proteins					=	2,
+		Lipids						=	3,
+		Calories					=	150,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	Mugl,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = Mug,
+	}
+
+
+item MRE_SugarFreeBevBase
+	{
+		DisplayName					=	MRE Sugar Free Beverage Base,
+		Icon 				= MREdrinkmixpackage2,
+		ReplaceOnUse 		= MRE_Drink_Trash,
+		Type						=	Food,
+		HungerChange				=	-1,
+		ThirstChange				=	+5,
+		FatigueChange				=	0,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0.0,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	0,
+		Weight						=	0.1,
+		Packaged					=	TRUE,
+	}
+
+
+item MRE_SugarFreeBev_Mug
+	{
+		DisplayName					=	MRE Sugar Free Beverage,
+		Icon						=	MugFulll,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-0,
+		Carbohydrates				=	0.0,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	0,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	Mugl,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = Mug,
+	}
+
+    recipe Make Hot MRE Cocoa
+    {
+        FullKettle=2,
+		MRE_Cocoa,
+        destroy Mugl,
+        Result:MRE_Cocoa_Mug,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+
+    }
+/*
+	recipe Make MRE Cocoa
+		{
+		Water=2,
+		Mugl,
+		MRE_Cocoa,
+		Result:MRE_Cocoa_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		}
+*/
+	recipe Make MRE Beverage
+		{
+		Water=2,
+		Mugl,
+		MRE_BevBasewithSugar,
+		Result:MRE_BevwithSugar_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+		}
+
+	recipe Make MRE Beverage
+		{
+		Water=2,
+		Mugl,
+		MRE_SugarFreeBevBase,
+		Result:MRE_SugarFreeBev_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+		}
+
+/*
+	recipe Make Cocoa
+		{
+		WaterMug,
+		MRE_Cocoa,
+		Result:MRE_Cocoa_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		}
+*/
+	recipe Make MRE Beverage
+		{
+		WaterMug,
+		MRE_BevBasewithSugar,
+		Result:MRE_BevwithSugar_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+		}
+
+	recipe Make MRE Beverage
+		{
+		WaterMug,
+		MRE_SugarFreeBevBase,
+		Result:MRE_SugarFreeBev_Mug,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+		}
+	
+}
+

@@ -1,0 +1,5 @@
+Tooltip_TR = {
+Tooltip_BetLock_BobbyPin = "Kilit kırmak için gereken pim. Kişinin ayrıca kilit kırmayı bilmesi, ve bir tornavidaya sahip olması gereklidir",
+Tooltip_BetLock_LockpickingMag = "Magazine for learn lockpicking. You will can lockpick doors, windows, vehicles by bobbyPin or crowbar",
+Tooltip_BetLock_AlarmMag = "Magazine for learn alarms. You will can check alarm of vehicle/house"
+}

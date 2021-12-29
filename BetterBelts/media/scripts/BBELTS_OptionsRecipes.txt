@@ -1,0 +1,42 @@
+module Base
+{
+	recipe Belt+1
+    {
+        Belt2/Belt4,
+
+        Result:Belt3,
+        Time:5,
+    }
+
+	recipe Belt+2
+    {
+        Belt2/Belt3,
+
+        Result:Belt4,
+        Time:5,
+    }
+	
+	recipe Belt
+    {
+        Belt3/Belt4,
+
+        Result:Belt2,
+        Time:5,
+    }
+
+	recipe Left Holster
+    {
+        HolsterSimple,
+
+        Result:HolsterSimpleL,
+        Time:5,
+    }
+ 
+    {
+        HolsterSimpleL,
+
+        Result:HolsterSimple,
+        Time:5,
+    }
+
+}

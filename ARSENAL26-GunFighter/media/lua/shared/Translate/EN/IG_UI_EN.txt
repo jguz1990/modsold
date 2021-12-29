@@ -1,0 +1,11 @@
+IGUI_EN = {
+    IGUI_ItemCat_AmmoBox = "Ammo Box",
+    IGUI_ItemCat_GunMag = "Gun Mag",
+    IGUI_ItemCat_FixedMag = "Fixed Mag",
+    IGUI_ItemCat_GunClean = "Gun Cleaning",
+    IGUI_ItemCat_WeaponConversion = "Weapon Part",
+
+    IGUI_Sandbox_worldOptions = "GunFighter Options",
+}
+
+

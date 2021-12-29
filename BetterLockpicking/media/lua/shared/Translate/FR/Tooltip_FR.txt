@@ -1,0 +1,5 @@
+Tooltip_FR = {
+Tooltip_BetLock_BobbyPin = "Utilisé pour le crochetage. Besoin également d'un tourneris et d'avoir lu le crochetage pour les nuls",
+Tooltip_BetLock_LockpickingMag = "Magazine pour apprendre le crochetage. Vous apprendrez à ouvrir les serrures des portes, des fenêtres, des véhicules en utilisant une pince à cheveux ou un pied de biche",
+Tooltip_BetLock_AlarmMag = " Magazine pour apprendre le fonctionnement des alarmes. Vous pourrez vérifier la présence d'alarme dans un véhicule ou dans une maison"
+}

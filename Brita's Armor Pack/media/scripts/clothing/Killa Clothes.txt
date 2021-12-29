@@ -1,0 +1,38 @@
+module Base
+{
+    item Killa_Jacket
+    {
+        Type = Clothing,
+        DisplayName = Adidas Killa Jacket,
+        ClothingItem = Killa_Jacket,
+        BodyLocation = Jacket,
+        BloodLocation = Jumper,
+        Icon = Killa_Jacket,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        Weight	=	0.001,
+        FabricType = Denim,
+    }
+
+
+    item Killa_Pants
+    {
+        Type = Clothing,
+        DisplayName = Adidas Killa Pants,
+        ClothingItem = Killa_Pants,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+        Icon = Killa_Pants,
+        BiteDefense = 30,
+        ScratchDefense = 30,
+        Insulation = 0.30,
+        WindResistance = 0.80,
+        WaterResistance = 0.60,
+        FabricType = Denim,
+    }
+}

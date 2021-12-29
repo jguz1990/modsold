@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\Clothes\Bob_Quiver</m_MaleModel>
+	<m_FemaleModel>Skinned\Clothes\Kate_Quiver</m_FemaleModel>
+	<m_GUID>13c94e4f-c887-4eff-89c8-08161952f532</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_BackPack</m_AttachBone>
+	<textureChoices>Quiver</textureChoices>
+</clothingItem>

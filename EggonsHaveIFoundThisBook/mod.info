@@ -1,0 +1,4 @@
+name=Eggon's Have I Found This Book???
+poster=poster.png
+require=eggonsModdingUtils
+id=eggonsHaveIFoundThisBook

@@ -1,0 +1,132 @@
+- All remaining vanilla recipes added.
+- Outdoorsman trait by being outside, depending on rain, snow, wind, fog and thunderstorm.
+- Cats Eyes trait by being awake in the night.
+- Increased the kills for the traits by kills.
+- Rework of the All Thumbs/Dextrous and Organized/Disorganized traits.
+
+
+23/06/2021 to 19/07/2021
+- Outdoorsman and Cats Eyes counter increased to make them harder to be obtained. Also Cats Eyes can now be lost.
+- Added compatibility with Superb/Subpar Survivors and current saves.
+- The traits by Perk Levels were changed from == to >= to make it compatible with current savegames.
+- Insomniac is now obtained at 0.45 or more of Hunger instead of 0.60 or more.
+- Need More Sleep is now obtained at 50 or more of Boredom instead of 75 or more.
+- Removing smoker removes the stressFromCigarettes and set it to 0 but set the common stress to 0.95.
+- New trait - Bloodlust. The stress, unhappyness and boredom increase as the time passes(similar to Smoker, since the last zombie killed there's a period of about 10 hours before the moods start to increase). Killing zombies reduce the three of them.
+- Flimsy and Frail reworked, now works with specific values: -2 and -5 instead of percentage.
+- Rework of the traits gained by kills so depending on the starting traits the amount of kills will be different.
+- Fixed a bug that removed Dextrous and Organized when selected in the character creation.
+- Fast Reader and Slow reader are no longer obtainable/removable by perk Level. A rework for those traits will be included in the future.
+- Very Underweight and Athletic are no longer excluyent as it is now included in the vanilla update 41.51.
+- Dextrous/All Thumbs and Organized/Disorganized traits system was rollbacked to the previous system that increased the counter when the animation was on going as it was more "Fair" (the counter no longer decreases now).
+- New Trait - Amateur Electrician - Simply act as Herborist but with Generators recipe.
+- New Traits - Pluviophile/Pluviophobia - The unhappyness and stress increases/decreases by being in the rain.
+- Fixed a bug for Outdoorsman Trait that was not calculating correctly.
+- The Hungry level was included as an extra condition to obtain "Need Less Sleep".
+
+11/08/2021 to 14/08/2021
+- Outdoorsman trait threshold increased from 150000 to 200000
+- Increased the rate the values for All Thumbs/Dextrous and Disorganized/Organized 
+
+26/08/2021 to 16/09/2021
+- Removed "Bloodlust" Trait from being obtained by kills, it now can only be obtained if picked in the Character creation.
+- Bloodlust threshold to start affecting increased from 7000 to 9000.
+- Bloodlust and Pluviophile traits now also reduce the "Stress by cigarettes".
+- Cats Eyes and Outdoorsman traits can no longer be lost. 
+- Outdoorsman trait threshold increased from 200000 to 300000 and it now only increases if outside during rain, thunderstorm, wind, fog or snow.
+- The next traits can now be obtained (They won't have any affect like: XP Bonuses, an extra level, etc) as they do when picked during the character creation BUT the new forage system uses them to get positive bonuses: Cook, Hunter, Hiker, Former Scout, Gardener.
+- Added a Halo Note when a Trait is added/removed. If the text is green something good happened, if the text is red something bad happened.
+- The increasing rate for All Thumbs/Dextrous was increased from 0.05/0.07/0.09 to 0.06/0.08/0.1
+- The increasing rate for Organized/Disorganized was increased from 0.05/0.07/0.09 to 0.07/0.09/0.2
+- Fixed a small error in the increasing rate for Cats Eyes. It should be easier to obtain now.
+- Flimsy and Frail were reworked (again) due to a bug. Now both traits affects in the Strength stat reducing it. Flimsy by one and Frail by two. The Strength is recovered once the weight is recovered.
+- Thick Skinned and Thin Skinned are now part of the weight system and can be obtained/removed based on your weight condition. As a consequence both traits were removed from the character creation.
+
+24/09/2021 to 30/9/2021
+- Bloodlust and Smoker traits reworked to work with different Events using EveryHours and OnZombieDead
+- New Trait: Alcoholic. It can be lost or gained during the gameplay. After 48 hours without drinking the effects will start. Stress, Sadness, Headaches, Fatigue and Poison can affect your character.
+- Axeman is now obtained at Lv7 of Axes instead of Lv4
+
+17/10/2021 to 27/10/2021
+- Code refactor in general to make the code more organized. 
+- Alcoholic Poison is now affected by Weak Stomach/Iron Gut and Prone To Illness/Resilient. Negative traits makes the poison stronger and positive traits makes the poison weaker.
+On the other side Lucky and Unlucky will also affect how fast/slow the trait is obtained/removed by having chances of extra increasing/decreasing the progress.
+- Smoker progress of removing it is now affect by Lucky and Unlucky, having chances of increasing/decreasing progress.
+- New Trait: Sportman. Strength and Fitness are leveled up faster. 
+- New Trait: Anorexy. Fatigue and Endurance is slowly reduced. When eating, sadness, stress and poison are increased. If 65Kg or more while having the trait, unhapyness and stress increases.
+- Being Overloaded have a very low chance of generate a fracture in legs / arms / groin or lower torso. This chance is increased if the player is Overloaded while being Flimsy, Frail, Anorexy or a combination.
+
+11/11/2021 to 12/11/2021 
+- Major code refactor in the files of the mod to reuse code, make it simpler and optimize it.
+
+15/11/2021 TO 15/11/2021
+- Fixed lua errors for NPC Mod when an NPC spawn.
+
+15/11/2021 to 19/11/2021
+- "Sportman" renamed to "Prodigy".
+- New trait: "Active". Spending energy makes you happier.
+- New trait: "Sedentary". Doing exercise will give you boredom. Also wasting energy will give you pain.
+Both Active and Sedentary traits are Dynamic which means that you can go from Sedentary to nothing to Active and viceversa.
+- Vanilla trait cost rebalanced. 
+- Professions rebalanced.
+
+20/11/2021 to 26/11/2021
+- Former Scout now gives +1 Trapping instead of First Aid (Obtainable at Lv2 Foraging and Lv2 Trapping)
+- Hiker now gives +2 Foraging instead of +1 (Obtainable at Lv4 Foraging and Lv2 Trapping)
+- Being unarmed now also gives little Strength and Fitness XP if "Prodigy" trait is set.
+- Kills system totally reworked, it now works based on RNG, which means that there are going to be players that removes/obtain traits sooner that others.
+
+On Steam, Update 8 Dec 2021:
+A) Anorexy trait:
+   1) Removed the Poison given by being in Hunger Lv1 or Hunger Lv0 (no Hunger).
+   2) Reduced the chances and amount of poison genered by the Food Eaten moodlets:
+      - Food Eaten Lv1: Chance increased from 5 to 8 / Random poison reduced from 25 to to 10
+      - Food Eaten Lv2: Chance increased from 4 to 7 / Random poison reduced from 30 to to 15
+      - Food Eaten Lv3: Chance increased from 3 to 6 / Random poison reduced from 35 to to 20
+      - Food Eaten Lv4: Chance increased from 2 to 5 / Random poison reduced from 25 to to 25
+   3) As the poison was reduced, the Fatigue and Endurance loss from the trait was a little bit increase.
+B) Prodigy trait:
+   1) Buffed a little bit the Strength and Fitness obtained from Fighting and Chopping Trees
+C) Brave trait:
+   1) The trait cannot be obtained while Agoraphobic or Claustrophobic are present
+D) Agoraphobic/Claustrophobic traits:
+   1) If one of the trait is present, after killing a zombie a roll of 15 happens, if the roll is 0, then the internal value that handles when those traits can be removed, increases.
+E) Doing exercise may now help to remove faster the Smoker, Alcoholic and Anorexic traits if present.
+F) The Rain Traits (Pluviophile and Pluviophobia) are now affected by the intensity of the rain. The effects will be stronger or weaker based on this.
+
+On Steam, Update 10 Dec 2021:
+Researching the Lua error that happened in the MP I found another "Issue" (actually, not an issue but the code was not clean so I refactored it a little bit) with a function and changed the code of it (it works exactly the same).
+Testing the changes this time I didn't faced the lua error in MP so it was probably a mod incompatibility and not something Dynamic Traits itself made.
+
+On Steam, Update 11 Dec 2021:
+Changed the event OnWeaponSwing to OnWeaponSwingHitPoint to solved the multiplayer lua error that was occuring, hope it fixes it forever.
+
+On Steam, Update 17 Dec 2021: 
+Fixed the issue where the Professions where not having the changes applied after a player dies and tries to create a new character in the same world.
+
+On Steam, Update 21 Dec 2021:
+A) Carpenter Profession:
+   - Now has "Handy" trait as a Free trait.
+   - The Profession Cost changed from +4 to 0.
+B) DTMain function now calls the existingGamesInitializations function. (Code refactor only)
+C) The Base range for Kill traits was decreased to the values it was initially. 
+   - Base range number if started with Cowardly:
+      - Cowardly: Changed from 3000 to 2000
+      - Hemophobic: changed from 4000 to 3000
+      - Brave: changed from 5000 to 4000
+      - Desensitized changed from 7000 to 6000
+   - Base range number if started with Brave:
+      - Brave: changed from 4000 to 3000
+   - Base range number if started without traits:
+      - Hemophobic: changed from 3000 to 2000
+      - Brave: changed from 4000 to 3000
+      - Desensitized: changed from 6000 to 5000
+D) Electrician Profession:
+   - The Profession Cost changed from -6 to 0.
+   - The Profession starts with "Amateur Electrician" (it already did because of the Electronic levels but now the trait is not pickable, just to ensure no one waste points on that.)
+E) Physically Active and Sedentary now require more time to be obtained/removed.
+
+Not on Steam yet:
+A) Prodigy trait:
+   - Cost reduced from 8 to 6.
+B) New Trait: Nightmares. When sleeping there are possibilities of waking up with Extreme Panic, Stress and Wetness. The only way to remove it is by obtaining Desensitized. Not available for MP.

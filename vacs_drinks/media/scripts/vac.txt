@@ -1,0 +1,769 @@
+module VDK
+{
+	imports
+	{
+		Base
+	}
+
+	item VAC_Can_Budlight
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-15,
+		ThirstChange	=	-13,
+		DisplayName	=	Bud Light,
+		ReplaceOnUse	= VAC_Budlight_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_Budlight_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 7,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 110,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Budlight,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Budlight_Ground,
+	}
+
+	item VAC_Budlight_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Bud Light,
+		Icon	=	Can_Budlight_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Budlight_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Budweiser
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-17,
+		ThirstChange	=	-13,
+		DisplayName	=	Budweiser,
+		ReplaceOnUse	= VAC_Budweiser_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_Budweiser_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 11,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 145,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Budweiser,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Budweiser_Ground,
+	}
+
+	item VAC_Budweiser_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Budweiser,
+		Icon	=	Can_Budweiser_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Budweiser_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_CoorsLight
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-7,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-15,
+		ThirstChange	=	-13,
+		DisplayName	=	Coors Light,
+		ReplaceOnUse	= VAC_CoorsLight_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_CoorsLight_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 5,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 104,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_CoorsLight,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_CoorsLight_Ground,
+	}
+
+	item VAC_CoorsLight_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty CoorsLight,
+		Icon	=	Can_CoorsLight_Icon,
+		MetalValue = 10,
+		WorldStaticModel = CoorsLight_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_CoronaExtra
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-16,
+		ThirstChange	=	-13,
+		DisplayName	=	Corona Extra,
+		ReplaceOnUse	= VAC_CoronaExtra_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_CoronaExtra_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 14,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 148,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_CoronaExtra,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_CoronaExtra_Ground,
+	}
+
+	item VAC_CoronaExtra_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Corona Extra,
+		Icon	=	Can_CoronaExtra_Icon,
+		MetalValue = 10,
+		WorldStaticModel = CoronaExtra_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Heineken
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-17,
+		ThirstChange	=	-13,
+		DisplayName	=	Heineken,
+		ReplaceOnUse	= VAC_Heineken_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_Heineken_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 11,
+		Proteins = 2,
+		Lipids = 0,
+		Calories = 149,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Heineken,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Heineken_Ground,
+	}
+
+	item VAC_Heineken_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Heineken,
+		Icon	=	Can_Heineken_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Heineken_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_MillerLite
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-7,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-15,
+		ThirstChange	=	-13,
+		DisplayName	=	Miller Lite,
+		ReplaceOnUse	= VAC_MillerLite_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_MillerLite_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 3,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 96,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_MillerLite,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_MillerLite_Ground,
+	}
+
+	item VAC_MillerLite_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Miller Lite,
+		Icon	=	Can_MillerLite_Icon,
+		MetalValue = 10,
+		WorldStaticModel = MillerLite_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Modelo
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-15,
+		ThirstChange	=	-13,
+		DisplayName	=	Modelo,
+		ReplaceOnUse	= VAC_Modelo_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_Modelo_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 13,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 143,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Modelo,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Modelo_Ground,
+	}
+
+	item VAC_Modelo_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Modelo,
+		Icon	=	Can_Modelo_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Modelo_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_BlueRibbon
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-23,
+		ThirstChange	=	-13,
+		DisplayName	=	Blue Ribbon,
+		ReplaceOnUse	= VAC_BlueRibbon_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_BlueRibbon_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 12,
+		Proteins = 1,
+		Lipids = 0,
+		Calories = 142,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_BlueRibbon,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_BlueRibbon_Ground,
+	}
+
+	item VAC_BlueRibbon_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Blue Ribbon,
+		Icon	=	Can_BlueRibbon_Icon,
+		MetalValue = 10,
+		WorldStaticModel = BlueRibbon_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_BlueMoon
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-12,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-18,
+		ThirstChange	=	-13,
+		DisplayName	=	Blue Moon,
+		ReplaceOnUse	= VAC_BlueMoon_BeerCanEmpty,
+		Alcoholic	=	TRUE,
+		Icon	=	Can_BlueMoon_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 14,
+		Proteins = 2,
+		Lipids = 0,
+		Calories = 168,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_BlueMoon,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_BlueMoon_Ground,
+	}
+
+	item VAC_BlueMoon_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Blue Moon,
+		Icon	=	Can_BlueMoon_Icon,
+		MetalValue = 10,
+		WorldStaticModel = BlueMoon_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_CocaCola
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	= Coca-Cola,
+		ReplaceOnUse	= VAC_CocaCola_BeerCanEmpty,
+		Icon	=	Can_CocaCola_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 39,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 140,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_CocaCola,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_CocaCola_Ground,
+	}
+
+	item VAC_CocaCola_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Coca-Cola,
+		Icon	=	Can_CocaCola_Icon,
+		MetalValue = 10,
+		WorldStaticModel = CocaCola_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Burn
+	{
+		DisplayCategory = Food,
+		FatigueChange = -10,
+		HungerChange	=	-11,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-16,
+		ThirstChange	=	-60,
+		DisplayName	=	Burn,
+		ReplaceOnUse	= VAC_Burn_BeerCanEmpty,
+		Icon	=	Can_Burn_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 47,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 198,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Burn,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Burn_Ground,
+	}
+
+	item VAC_Burn_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Burn,
+		Icon	=	Can_Burn_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Burn_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Monster
+	{
+		DisplayCategory = Food,
+		FatigueChange = -12,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-12,
+		ThirstChange	=	-60,
+		DisplayName	=	Monster,
+		ReplaceOnUse	= VAC_Monster_BeerCanEmpty,
+		Icon	=	Can_Monster_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 40,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 150,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Monster,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Monster_Ground,
+	}
+
+	item VAC_Monster_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Monster,
+		Icon	=	Can_Monster_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Monster_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Nos
+	{
+		DisplayCategory = Food,
+		FatigueChange = -12,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-12,
+		ThirstChange	=	-60,
+		DisplayName	=	Nos,
+		ReplaceOnUse	= VAC_Nos_BeerCanEmpty,
+		Icon	=	Can_Nos_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 40,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 150,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Nos,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Nos_Ground,
+	}
+
+	item VAC_Nos_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Nos,
+		Icon	=	Can_Nos_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Nos_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_RedBull
+	{
+		DisplayCategory = Food,
+		FatigueChange = -11,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-12,
+		ThirstChange	=	-60,
+		DisplayName	=	Red Bull,
+		ReplaceOnUse	= VAC_RedBull_BeerCanEmpty,
+		Icon	=	Can_RedBull_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 40,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 160,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_RedBull,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_RedBull_Ground,
+	}
+
+	item VAC_RedBull_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty RedBull,
+		Icon	=	Can_RedBull_Icon,
+		MetalValue = 10,
+		WorldStaticModel = RedBull_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Rockstar
+	{
+		DisplayCategory = Food,
+		FatigueChange = -12,
+		HungerChange	=	-12,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-17,
+		ThirstChange	=	-60,
+		DisplayName	= Rockstar,
+		ReplaceOnUse	= VAC_Rockstar_BeerCanEmpty,
+		Icon	=	Can_Rockstar_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 46,
+		Proteins = 1,
+		Lipids = 1,
+		Calories = 216,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Rockstar,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Rockstar_Ground,
+	}
+
+	item VAC_Rockstar_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Rockstar,
+		Icon	=	Can_Rockstar_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Rockstar_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Pepsi
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	= Pepsi,
+		ReplaceOnUse	= VAC_Pepsi_BeerCanEmpty,
+		Icon	=	Can_Pepsi_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 41,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 150,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Pepsi,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Pepsi_Ground,
+	}
+
+	item VAC_Pepsi_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Pepsi,
+		Icon	=	Can_Pepsi_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Pepsi_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_DietCoke
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-6,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-8,
+		ThirstChange	=	-60,
+		DisplayName	= Diet Coke,
+		ReplaceOnUse	= VAC_DietCoke_BeerCanEmpty,
+		Icon	=	Can_DietCoke_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 0,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 0,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_DietCoke,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_DietCoke_Ground,
+	}
+
+	item VAC_DietCoke_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Diet Coke,
+		Icon	=	Can_DietCoke_Icon,
+		MetalValue = 10,
+		WorldStaticModel = DietCoke_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_DrPepper
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	= Dr. Pepper,
+		ReplaceOnUse	= VAC_DrPepper_BeerCanEmpty,
+		Icon	=	Can_DrPepper_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 40,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 150,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_DrPepper,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_DrPepper_Ground,
+	}
+
+	item VAC_DrPepper_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Dr. Pepper,
+		Icon	=	Can_DrPepper_Icon,
+		MetalValue = 10,
+		WorldStaticModel = DrPepper_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_MountainDew
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-9,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-12,
+		ThirstChange	=	-60,
+		DisplayName	= Mountain Dew,
+		ReplaceOnUse	= VAC_MountainDew_BeerCanEmpty,
+		Icon	=	Can_MountainDew_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 46,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 170,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_MountainDew,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_MountainDew_Ground,
+	}
+
+	item VAC_MountainDew_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Mountain Dew,
+		Icon	=	Can_MountainDew_Icon,
+		MetalValue = 10,
+		WorldStaticModel = MountainDew_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Sprite
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	= Sprite,
+		ReplaceOnUse	= VAC_Sprite_BeerCanEmpty,
+		Icon	=	Can_Sprite_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 38,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 140,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Sprite,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Sprite_Ground,
+	}
+
+	item VAC_Sprite_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Sprite,
+		Icon	=	Can_Sprite_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Sprite_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_DietPepsi
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-6,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-8,
+		ThirstChange	=	-60,
+		DisplayName	= Diet Pepsi,
+		ReplaceOnUse	= VAC_DietPepsi_BeerCanEmpty,
+		Icon	=	Can_DietPepsi_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 0,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 0,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_DietPepsi,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_DietPepsi_Ground,
+	}
+
+	item VAC_DietPepsi_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Diet Pepsi,
+		Icon	=	Can_DietPepsi_Icon,
+		MetalValue = 10,
+		WorldStaticModel = DietPepsi_BeerCanEmptyWorld,
+	}
+
+	item VAC_Can_Fanta
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-9,
+		Weight	=	0.3,
+		Type	=	Food,
+		UnhappyChange	=	-11,
+		ThirstChange	=	-60,
+		DisplayName	= Fanta,
+		ReplaceOnUse	= VAC_Fanta_BeerCanEmpty,
+		Icon	=	Can_Fanta_Icon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		Carbohydrates = 44,
+		Proteins = 0,
+		Lipids = 0,
+		Calories = 160,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+		StaticModel = BeerCan_Fanta,
+		EatType = popcan,
+		WorldStaticModel = BeerCan_Fanta_Ground,
+	}
+
+	item VAC_Fanta_BeerCanEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Fanta,
+		Icon	=	Can_Fanta_Icon,
+		MetalValue = 10,
+		WorldStaticModel = Fanta_BeerCanEmptyWorld,
+	}
+}

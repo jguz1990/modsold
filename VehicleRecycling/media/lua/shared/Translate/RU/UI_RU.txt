@@ -1,0 +1,7 @@
+UI_RU = {
+    UI_VehicleRecycling_OverrideBurnt = "Разбирать сгоревший транспорт",
+    UI_VehicleRecycling_OverrideSmashed = "Разбирать разбитый транспорт",
+    UI_VehicleRecycling_Override_Tooltip = "Заменяет ванильное действие "Разобрать обломки автомобиля"",
+    UI_VehicleRecycling_DropJunk = "Оставлять вещи из контейнеров",
+    UI_VehicleRecycling_DropJunk_Tooltip = "Оставлять вещи из багажника, бардачка, сидений.",
+}

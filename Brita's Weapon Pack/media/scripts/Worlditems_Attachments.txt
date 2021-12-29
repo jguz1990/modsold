@@ -1,0 +1,406 @@
+module Base
+{
+
+	model W_Scope_1-4x
+	{
+		mesh = WorldItems/W_Scope_1-4x,
+		texture = weapons/parts/Scope_1-4x,
+		scale = 0.01,
+	}
+	model W_Scope_4xPSO
+	{
+		mesh = WorldItems/W_Scope_4xPSO,
+		texture = weapons/parts/Scope_4xPSO,
+		scale = 0.01,
+	}
+	model W_Scope_12xPSO
+	{
+		mesh = WorldItems/W_Scope_12xPSO,
+		texture = weapons/parts/Scope_12xPSO,
+		scale = 0.01,
+	}
+	model W_Scope_20x
+	{
+		mesh = WorldItems/W_Scope_20x,
+		texture = weapons/parts/Scope_20x,
+		scale = 0.01,
+	}
+	model W_Sight_1P63
+	{
+		mesh = WorldItems/W_Sight_1P63,
+		texture = weapons/parts/Sight_1P63,
+		scale = 0.01,
+	}
+	model W_Sight_3xEOTech
+	{
+		mesh = WorldItems/W_Sight_3xEOTech,
+		texture = weapons/parts/Sight_3xEOTech,
+		scale = 0.01,
+	}
+	model W_Sight_4xACOG
+	{
+		mesh = WorldItems/W_Sight_4xACOG,
+		texture = weapons/parts/Sight_4xACOG,
+		scale = 0.01,
+	}
+	model W_Sight_6xELCAN
+	{
+		mesh = WorldItems/W_Sight_6xELCAN,
+		texture = weapons/parts/Sight_6xELCAN,
+		scale = 0.01,
+	}
+	model W_Sight_ACRO
+	{
+		mesh = WorldItems/W_Sight_ACRO,
+		texture = weapons/parts/Sight_ACRO,
+		scale = 0.01,
+	}
+	model W_Sight_Aimpoint
+	{
+		mesh = WorldItems/W_Sight_Aimpoint,
+		texture = weapons/parts/Sight_Aimpoint,
+		scale = 0.01,
+	}
+	model W_Sight_Aimpoint_Dot
+	{
+		mesh = WorldItems/W_Sight_Aimpoint_Dot,
+		texture = weapons/parts/Sight_Aimpoint_Dot,
+		scale = 0.01,
+	}
+	model W_Sight_Brownells
+	{
+		mesh = WorldItems/W_Sight_Brownells,
+		texture = weapons/parts/Sight_Brownells,
+		scale = 0.01,
+	}
+	model W_Sight_C79
+	{
+		mesh = WorldItems/W_Sight_C79,
+		texture = weapons/parts/Sight_C79,
+		scale = 0.01,
+	}
+	model W_Sight_EOTech
+	{
+		mesh = WorldItems/W_Sight_EOTech,
+		texture = weapons/parts/Sight_EOTech,
+		scale = 0.01,
+	}
+	model W_Sight_Fiber_Shotgun
+	{
+		mesh = WorldItems/W_Sight_Fiber_Shotgun,
+		texture = weapons/parts/Sight_Fiber_Shotgun,
+		scale = 0.01,
+	}
+	model W_Sight_G28_Scope
+	{
+		mesh = WorldItems/W_Sight_G28_Scope,
+		texture = weapons/parts/Sight_G28_Scope,
+		scale = 0.01,
+	}
+	model W_Sight_KOBRA
+	{
+		mesh = WorldItems/W_Sight_KOBRA,
+		texture = weapons/parts/Sight_KOBRA,
+		scale = 0.01,
+	}
+	model W_Sight_L2
+	{
+		mesh = WorldItems/W_Sight_L2,
+		texture = weapons/parts/Sight_L2,
+		scale = 0.01,
+	}
+	model W_Sight_LUX
+	{
+		mesh = WorldItems/W_Sight_LUX,
+		texture = weapons/parts/Sight_LUX,
+		scale = 0.01,
+	}
+	model W_Sight_M8
+	{
+		mesh = WorldItems/W_Sight_M8,
+		texture = weapons/parts/Sight_M8,
+		scale = 0.01,
+	}
+	model W_Sight_Malcom
+	{
+		mesh = WorldItems/W_Sight_Malcom,
+		texture = weapons/parts/Sight_Malcom,
+		scale = 0.01,
+	}
+	model W_Sight_Mepro_M21
+	{
+		mesh = WorldItems/W_Sight_Mepro_M21,
+		texture = weapons/parts/Sight_Mepro_M21,
+		scale = 0.01,
+	}
+	model W_Sight_Mepro_MOR
+	{
+		mesh = WorldItems/W_Sight_Mepro_MOR,
+		texture = weapons/parts/Sight_Mepro_MOR,
+		scale = 0.01,
+	}
+	model W_Sight_MicroDot
+	{
+		mesh = WorldItems/W_Sight_MicroDot,
+		texture = weapons/parts/Sight_MicroDot,
+		scale = 0.01,
+	}
+	model W_Sight_MRO
+	{
+		mesh = WorldItems/W_Sight_MRO,
+		texture = weapons/parts/Sight_MRO,
+		scale = 0.01,
+	}
+	model W_Sight_Nikon
+	{
+		mesh = WorldItems/W_Sight_Nikon,
+		texture = weapons/parts/Sight_Nikon,
+		scale = 0.01,
+	}
+	model W_Sight_NO32
+	{
+		mesh = WorldItems/W_Sight_NO32,
+		texture = weapons/parts/Sight_NO32,
+		scale = 0.01,
+	}
+	model W_Sight_PKAS
+	{
+		mesh = WorldItems/W_Sight_PKAS,
+		texture = weapons/parts/Sight_PKAS,
+		scale = 0.01,
+	}
+	model W_Sight_PU
+	{
+		mesh = WorldItems/W_Sight_PU,
+		texture = weapons/parts/Sight_PU,
+		scale = 0.01,
+	}
+	model W_Sight_PVS4
+	{
+		mesh = WorldItems/W_Sight_PVS4,
+		texture = weapons/parts/Sight_PVS4,
+		scale = 0.01,
+	}
+	model W_Sight_RaceDot
+	{
+		mesh = WorldItems/W_Sight_RaceDot,
+		texture = weapons/parts/Sight_RaceDot,
+		scale = 0.01,
+	}
+	model W_Sight_Raven
+	{
+		mesh = WorldItems/W_Sight_Raven,
+		texture = weapons/parts/Sight_Raven,
+		scale = 0.01,
+	}
+	model W_Sight_SRO
+	{
+		mesh = WorldItems/W_Sight_SRO,
+		texture = weapons/parts/Sight_SRO,
+		scale = 0.01,
+	}
+	model W_Sight_SRS
+	{
+		mesh = WorldItems/W_Sight_SRS,
+		texture = weapons/parts/Sight_SRS,
+		scale = 0.01,
+	}
+	model W_Sight_SUSAT
+	{
+		mesh = WorldItems/W_Sight_SUSAT,
+		texture = weapons/parts/Sight_SUSAT,
+		scale = 0.01,
+	}
+	model W_Sight_Thermal
+	{
+		mesh = WorldItems/W_Sight_Thermal,
+		texture = weapons/parts/Sight_Thermal,
+		scale = 0.01,
+	}
+	model W_Sight_Thermal_AK
+	{
+		mesh = WorldItems/W_Sight_Thermal_AK,
+		texture = weapons/parts/Sight_Thermal_AK,
+		scale = 0.01,
+	}
+	model W_Sight_UH1
+	{
+		mesh = WorldItems/W_Sight_UH1,
+		texture = weapons/parts/Sight_UH1,
+		scale = 0.01,
+	}
+	model W_Sight_XPS
+	{
+		mesh = WorldItems/W_Sight_XPS,
+		texture = weapons/parts/Sight_XPS,
+		scale = 0.01,
+	}
+	model W_Sight_VX3
+	{
+		mesh = WorldItems/W_Sight_VX3,
+		texture = weapons/parts/Sight_VX3,
+		scale = 0.01,
+	}
+
+
+
+
+
+	model W_Bipod
+	{
+		mesh = WorldItems/W_Bipod,
+		texture = weapons/parts/Bipod,
+		scale = 0.01,
+	}
+	model W_Carrier_12g
+	{
+		mesh = WorldItems/W_Carrier_12g,
+		texture = weapons/parts/Carrier_12g,
+		scale = 0.01,
+	}
+	model W_Choke_Full
+	{
+		mesh = WorldItems/W_Choke_Full,
+		texture = weapons/parts/Choke_Full,
+		scale = 0.01,
+	}
+	model W_Choke_Full_Dbl
+	{
+		mesh = WorldItems/W_Choke_Full_Dbl,
+		texture = weapons/parts/Choke_Full_Dbl,
+		scale = 0.01,
+	}
+	model W_Compensator
+	{
+		mesh = WorldItems/W_Compensator,
+		texture = weapons/parts/Compensator,
+		scale = 0.01,
+	}
+	model W_ForeGrip
+	{
+		mesh = WorldItems/W_ForeGrip,
+		texture = weapons/parts/ForeGrip,
+		scale = 0.01,
+	}
+	model W_Grip_Magpul
+	{
+		mesh = WorldItems/W_Grip_Magpul,
+		texture = weapons/parts/Grip_Magpul,
+		scale = 0.01,
+	}
+	model W_Grip_MLOK
+	{
+		mesh = WorldItems/W_Grip_MLOK,
+		texture = weapons/parts/Grip_MLOK,
+		scale = 0.01,
+	}
+	model W_Grip_TG
+	{
+		mesh = WorldItems/W_Grip_TG,
+		texture = weapons/parts/Grip_TG,
+		scale = 0.01,
+	}
+	model W_Laser_DVAL
+	{
+		mesh = WorldItems/W_Laser_DVAL,
+		texture = weapons/parts/Laser_DVAL,
+		scale = 0.01,
+	}
+	model W_Laser_Green
+	{
+		mesh = WorldItems/W_Laser_Green,
+		texture = weapons/parts/Laser_Green,
+		scale = 0.01,
+	}
+	model W_Laser_PEQ15
+	{
+		mesh = WorldItems/W_Laser_PEQ15,
+		texture = weapons/parts/Laser_PEQ15,
+		scale = 0.01,
+	}
+	model W_Laser_Red
+	{
+		mesh = WorldItems/W_Laser_Red,
+		texture = weapons/parts/Laser_Red,
+		scale = 0.01,
+	}
+	model W_Launcher
+	{
+		mesh = WorldItems/W_Launcher,
+		texture = weapons/parts/Launcher,
+		scale = 0.01,
+	}
+	model W_Light_Large
+	{
+		mesh = WorldItems/W_Light_Large,
+		texture = weapons/parts/Light_Large,
+		scale = 0.01,
+	}
+	model W_Light_Small
+	{
+		mesh = WorldItems/W_Light_Small,
+		texture = weapons/parts/Light_Small,
+		scale = 0.01,
+	}
+	model W_MuzzleBrake
+	{
+		mesh = WorldItems/W_MuzzleBrake,
+		texture = weapons/parts/MuzzleBrake,
+		scale = 0.01,
+	}
+	model W_Suppressor_BMG
+	{
+		mesh = WorldItems/W_Suppressor_BMG,
+		texture = weapons/parts/Suppressor_BMG,
+		scale = 0.01,
+	}
+	model W_Suppressor_Bottle
+	{
+		mesh = WorldItems/W_Suppressor_Bottle,
+		texture = weapons/parts/Suppressor_Bottle,
+		scale = 0.01,
+	}
+	model W_Suppressor_Oil
+	{
+		mesh = WorldItems/W_Suppressor_Oil,
+		texture = weapons/parts/Suppressor_Oil,
+		scale = 0.01,
+	}
+	model W_Suppressor_Pistol
+	{
+		mesh = WorldItems/W_Suppressor_Pistol,
+		texture = weapons/parts/Suppressor_Pistol,
+		scale = 0.01,
+	}
+	model W_Suppressor_Rifle
+	{
+		mesh = WorldItems/W_Suppressor_Rifle,
+		texture = weapons/parts/Suppressor_Rifle,
+		scale = 0.01,
+	}
+	model W_Suppressor_Shotgun
+	{
+		mesh = WorldItems/W_Suppressor_Shotgun,
+		texture = weapons/parts/Suppressor_Shotgun,
+		scale = 0.01,
+	}
+	model W_Bayonet_1917
+	{
+		mesh = WorldItems/W_Bayonet_1917,
+		texture = weapons/parts/Bayonet_M1917,
+		scale = 0.01,
+	}
+	model W_Bayonet_AK
+	{
+		mesh = WorldItems/W_Bayonet_AK,
+		texture = weapons/parts/Bayonet_AK,
+		scale = 0.01,
+	}
+	model W_Bayonet_M4
+	{
+		mesh = WorldItems/W_Bayonet_M4,
+		texture = weapons/parts/Bayonet_M4,
+		scale = 0.01,
+	}
+
+}

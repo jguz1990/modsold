@@ -1,0 +1,258 @@
+module Base
+{
+    item Vest_Waistcoat
+    {
+        Type = Container,
+        DisplayName = Waistcoat,
+        ClothingItem = Vest_Waistcoat,
+        Icon = Vest_Black,
+        FabricType = Cotton,
+	CanBeEquipped = TorsoExtra,
+	BodyLocation = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+	/*	ClothingItem = Vest_Waistcoat,
+        ClothingExtraSubmenu =  Wear_Vest,*/
+	
+        /*clothingExtraSubmenu = FannyPack_WearFront,*/
+        ClothingItemExtra = Vest_Waistcoat,
+        ClothingItemExtraOption = WearVest,
+    }
+    item Vest_Waistcoat_GigaMart
+    {
+        Type = Container,
+        DisplayName = GigaMart Waistcoat,
+        ClothingItem = Vest_Waistcoat_GigaMart,
+        Icon = Vest_DarkBlue,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.40,
+        WindResistance = 0.20,
+        FabricType = Cotton,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        ClothingItemExtra = Vest_Waistcoat_GigaMart,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }
+/*	item Vest_Hunting_Grey
+    {
+        Type = Container,
+        DisplayName = Grey Hunting Vest,
+        ClothingItem = Vest_Hunting_Grey,
+        Icon = Huntingvest_Grey,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.90,
+        WindResistance = 0.80,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        MaxAmmo = 12,
+        AmmoType = Base.ShotgunShells,
+        ClothingItemExtra = Vest_Hunting_Grey,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }*/
+    item Vest_Hunting_Orange
+    {
+        Type = Container,
+        DisplayName = Orange Hunting Vest,
+        ClothingItem = Vest_Hunting_Orange,
+        Icon = Huntingvest_Orange,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.75,
+        WindResistance = 0.75,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        MaxAmmo = 12,
+        AmmoType = Base.ShotgunShells,
+        ClothingItemExtra = Vest_Hunting_Orange,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }
+    item Vest_Hunting_Camo
+    {
+        Type = Container,
+        DisplayName = Camo Hunting Vest,
+        ClothingItem = Vest_Hunting_Camo,
+        Icon = Huntingvest_Camo,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.8,
+        WindResistance = 0.65,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        MaxAmmo = 12,
+        AmmoType = Base.ShotgunShells,
+        ClothingItemExtra = Vest_Hunting_Camo,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }
+    item Vest_Hunting_CamoGreen
+    {
+        Type = Container,
+        DisplayName = Green Camo Hunting Vest,
+        ClothingItem = Vest_Hunting_CamoGreen,
+        Icon = Huntingvest_Camo,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.70,
+        WindResistance = 0.80,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        MaxAmmo = 12,
+        AmmoType = Base.ShotgunShells,
+        ClothingItemExtra = Vest_Hunting_CamoGreen,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }
+
+
+	item Vest_Hunting_Grey
+    {
+        Type = Container,
+        DisplayName = Grey Hunting Vest,
+        ClothingItem = Vest_Hunting_Grey,
+        BodyLocation = TorsoExtra,
+        Icon = Huntingvest_Grey,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.90,
+        WindResistance = 0.80,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        MaxAmmo = 12,
+        AmmoType = Base.ShotgunShells,
+        ClothingItemExtra = Vest_Hunting_Grey,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    }
+
+
+    item Vest_Foreman
+    {
+        Type = Container,
+        DisplayName = Foreman Vest,
+        ClothingItem = Vest_Foreman,
+        Icon = ForemanVest,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.70,
+        WindResistance = 0.55,
+	CanBeEquipped = TorsoExtra,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        ClothingItemExtra = Vest_Foreman,
+        ClothingItemExtraOption = WearVest,
+	BodyLocation = TorsoExtra,
+    } 
+/*
+	item Fanny_Pack_Blue
+    {
+        Weight	=	0.01,
+        Type	=	Container,
+        DisplayName	=	Fanny Pack,
+        Icon	=	FannyPack_Blue,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        clothingExtraSubmenu = FannyPack_WearFront,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        RunSpeedModifier = 0.97,
+
+        ClothingItemExtra = ,
+        ClothingItemExtraOption = ,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+    }   
+
+	item Fanny_Pack_Green
+    {
+        Weight	=	0.01,
+        Type	=	Container,
+        DisplayName	=	Fanny Pack,
+        Icon	=	FannyPack_Green,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        clothingExtraSubmenu = FannyPack_WearFront,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        RunSpeedModifier = 0.97,
+
+        ClothingItemExtra = ,
+        ClothingItemExtraOption = ,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+    } 
+
+	item Fanny_Pack_Pink
+    {
+        Weight	=	0.01,
+        Type	=	Container,
+        DisplayName	=	Fanny Pack,
+        Icon	=	FannyPack_Pink,
+       /* BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        clothingExtraSubmenu = FannyPack_WearFront,*/
+	WeightReduction	=	100,
+	Capacity	=	20,
+        RunSpeedModifier = 0.97,
+
+        ClothingItemExtra = ,
+        ClothingItemExtraOption = ,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+    } 
+
+	item Fanny_Pack_Red
+    {
+        Weight	=	0.01,
+        Type	=	Container,
+        DisplayName	=	Fanny Pack,
+        Icon	=	FannyPack_Red,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        clothingExtraSubmenu = FannyPack_WearFront,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        RunSpeedModifier = 0.97,
+
+        ClothingItemExtra = ,
+        ClothingItemExtraOption = ,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+    } 
+
+	item Fanny_Pack_Teal
+    {
+        Weight	=	0.01,
+        Type	=	Container,
+        DisplayName	=	Fanny Pack,
+        Icon	=	FannyPack_Teal,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        clothingExtraSubmenu = FannyPack_WearFront,
+	WeightReduction	=	100,
+	Capacity	=	20,
+        RunSpeedModifier = 0.97,
+
+        ClothingItemExtra = ,
+        ClothingItemExtraOption = ,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+    }*/
+}

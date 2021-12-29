@@ -1,0 +1,6 @@
+Recipe_EN = {
+	/************ Autotsar Tuning Atelier - Mustang ************/
+	Recipe_Cut_ATAMustangHoodItem = "Cut Hood (Ford Mustang)",
+	Recipe_Cut_ATAMustangFendersWideItem = "Cut Fenders (Ford Mustang)",
+	Recipe_Cut_ATAMustangSkirtsSideItem = "Cut Skirts (Ford Mustang)",
+}

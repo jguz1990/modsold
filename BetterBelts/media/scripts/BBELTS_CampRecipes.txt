@@ -1,0 +1,19 @@
+module Base
+{
+    	recipe Unroll Sleeping Bag
+    {
+	       
+	SleepingBagBBRPurple,
+        Result: SleepingBagBBUPurplesleepin,
+	CanBeDoneFromFloor:true,
+        Time:50,
+    }
+
+	recipe Roll Sleeping Bag
+    {
+        SleepingBagBBUPurplesleepin,
+        Result:SleepingBagBBRPurple,
+	CanBeDoneFromFloor:true,
+        Time:250,
+    }
+}

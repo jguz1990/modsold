@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Smersh_Vest</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Smersh_Vest</m_FemaleModel>
+	<m_GUID>ae2387f6-a43b-4e8f-b005-d3e133e90920</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_Smersh_Vest</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Smersh_Vest2</textureChoices>
+	<textureChoices>clothes\Bag\Bag_Smersh_Vest3</textureChoices>	
+</clothingItem>

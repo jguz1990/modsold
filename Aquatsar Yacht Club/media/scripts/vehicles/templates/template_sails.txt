@@ -1,0 +1,119 @@
+module Base
+{
+	model BSY_Boom
+	{
+		mesh = boats/SailingBoat|Boom,
+		shader = vehicle_norandom_multiuv,
+		scale = 0.0011,
+	}
+	model BSY_SailCover
+	{
+		mesh = boats/SailingBoat|SailCover,
+		shader = vehicle_norandom_multiuv,
+		scale = 0.0011,
+	}
+	model BSY_SailLeft
+	{
+		mesh = boats/SailingBoat|SailLeft,
+		shader = vehicle_norandom_multiuv,
+		scale = 0.0011,
+	}
+	model BSY_SailRight
+	{
+		mesh = boats/SailingBoat|SailRight,
+		shader = vehicle_norandom_multiuv,
+		scale = 0.0011,
+	}
+	
+	template vehicle Sails
+	{
+		part Sails
+		{
+			model Boom
+			{
+				file = BSY_Boom,
+			}
+			model SailCover
+			{
+				file = BSY_SailCover,
+			}
+			model SailLeft
+			{
+				file = BSY_SailLeft,
+			}
+			model SailRight
+			{
+				file = BSY_SailRight,
+			}
+			category = MechanicalSystem,
+			area = SeatFrontLeft,
+			itemType = Aquatsar.Sails,
+			specificItem = false,
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 3000,
+				skills = Mechanics:5,
+				recipes = Sailboats Mechanics,
+				test = Boats.InstallTest.Sails,
+				complete = Boats.InstallComplete.Sails,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 3000,
+				skills = Mechanics:3,
+				recipes = Sailboats Mechanics,
+				test = Boats.UninstallTest.Sails,
+				complete = Boats.UninstallComplete.Sails,
+			}
+			lua
+			{
+				create = Boats.Create.Sails,
+				init = Boats.Init.Sails,
+			}
+		}
+		
+		/* For boat with set sails
+		part Sails 
+		{
+			lua
+			{
+				create = Boats.Create.Sails,
+				init = Boats.Init.SailsSet,
+				update = Boats.Update.SailsSet,
+			}
+		}
+		*/
+		
+		/* For boat with removed sails
+		part Sails 
+		{
+			lua
+			{
+				create = Boats.Create.Sails,
+				init = Boats.Init.SailsRemoved,
+			}
+		}
+		*/
+	}
+}
+

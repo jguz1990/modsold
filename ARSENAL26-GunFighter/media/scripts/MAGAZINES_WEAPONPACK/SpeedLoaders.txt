@@ -1,0 +1,101 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+	item 38Speed
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	38-SPC SpeedLoader,
+		DisplayCategory	=	GunMag,
+        	Icon		=	38Speed,
+	        MaxAmmo 	=	6,
+        	AmmoType 	=	Base.Bullets38,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+	item 357Speed
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	357-MAG SpeedLoader,
+		DisplayCategory	=	GunMag,
+        	Icon		=	38Speed,
+	        MaxAmmo 	=	6,
+        	AmmoType 	=	Base.Bullets357,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+
+	item 44Speed
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	44-MAG SpeedLoader,
+		DisplayCategory	=	GunMag,
+        	Icon		=	44Speed,
+	        MaxAmmo 	=	6,
+        	AmmoType 	=	Base.Bullets44,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+	item 45LCSpeed
+	{
+	        CanStack	=	FALSE,
+        Weight		=	0.01,
+	        Type		=	Normal,
+        	DisplayName	=	45-LC SpeedLoader,
+		DisplayCategory	=	GunMag,
+        	Icon		=	44Speed,
+	        MaxAmmo 	=	6,
+        	AmmoType 	=	Base.Bullets45LC,
+	        StaticModel 	=	GunMagazine,
+		GunType		=	Multi_Gun,
+	}
+
+
+/*********************** FUNCTIONS ************************/
+
+	recipe Use 38-Special Rounds
+	{
+		357Speed,
+		Result		:38Speed,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+	recipe Use 357-Magnum Rounds
+	{
+		38Speed,
+		Result		:357Speed,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+
+	recipe Use 45-LongColt Rounds
+	{
+		44Speed,
+		Result		:45LCSpeed,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+	recipe Use 44-Magnum Rounds
+	{
+		45LCSpeed,
+		Result		:44Speed,
+		Category	:Firearm,
+		Time		:5.0,
+		Sound		:StormyM1ClipLoad,
+		OnCreate	:Caliber_MagType,
+	}
+}

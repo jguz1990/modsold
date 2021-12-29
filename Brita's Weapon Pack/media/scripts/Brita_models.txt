@@ -1,0 +1,768 @@
+/******************** ATTACHMENT MODELS **********************
+ALL PART MODELS SHOULD BE DEFINED HERE, PLEASE NOTE
+MODEL, MESH, AND TEXTURE NAMES ARE ALL IDENTICAL TO AVOID
+SYNTAX ERRORS...
+
+VANILLA MODELS ARE DEFINED AT THE BOTTOM FOR REFERENCE
+**************************************************************/
+
+module Base
+{
+	model Launcher
+	{
+		mesh = Weapons/parts/Launcher,
+		texture = Weapons/parts/Launcher,
+	}
+	model ForeGrip
+	{
+		mesh = Weapons/parts/ForeGrip,
+		texture = Weapons/parts/ForeGrip,
+	}
+	model Bipod
+	{
+		mesh = Weapons/parts/Bipod,
+		texture = Weapons/parts/Bipod,
+	}
+	model Carrier_12g
+	{
+		mesh = Weapons/parts/Carrier_12g,
+		texture = Weapons/parts/Carrier_12g,
+	}
+
+
+	model Light_Small
+	{
+		mesh = Weapons/parts/Light_Small,
+		texture = Weapons/parts/Light_Small,
+	}
+	model Light_Large
+	{
+		mesh = Weapons/parts/Light_Large,
+		texture = Weapons/parts/Light_Large,
+	}
+	model Laser_Green
+	{
+		mesh = Weapons/parts/Laser_Green,
+		texture = Weapons/parts/Laser_Green,
+	}
+	model Laser_Red
+	{
+		mesh = Weapons/parts/Laser_Red,
+		texture = Weapons/parts/Laser_Red,
+	}
+
+
+	model Suppressor_Pistol
+	{
+		mesh = Weapons/parts/Suppressor_Pistol,
+		texture = Weapons/parts/Suppressor_Pistol,
+	}
+	model Suppressor_Rifle
+	{
+		mesh = Weapons/parts/Suppressor_Rifle,
+		texture = Weapons/parts/Suppressor_Rifle,
+	}
+	model Suppressor_Shotgun
+	{
+		mesh = Weapons/parts/Suppressor_Shotgun,
+		texture = Weapons/parts/Suppressor_Shotgun,
+	}
+	model Suppressor_BMG
+	{
+		mesh = Weapons/parts/Suppressor_BMG,
+		texture = Weapons/parts/Suppressor_BMG,
+	}
+	model Suppressor_Oil
+	{
+		mesh = Weapons/parts/Suppressor_Oil,
+		texture = Weapons/parts/Suppressor_Oil,
+	}
+	model Suppressor_Bottle
+	{
+		mesh = Weapons/parts/Suppressor_Bottle,
+		texture = Weapons/parts/Suppressor_Bottle,
+	}
+
+	model Bayonet_AK
+	{
+		mesh = Weapons/parts/Bayonet_AK,
+		texture = Weapons/parts/Bayonet_AK,
+	}
+	model Bayonet_M1917
+	{
+		mesh = Weapons/parts/Bayonet_M1917,
+		texture = Weapons/parts/Bayonet_M1917,
+	}
+	model Bayonet_M4
+	{
+		mesh = Weapons/parts/Bayonet_M4,
+		texture = Weapons/parts/Bayonet_M4,
+	}
+
+	model Compensator
+	{
+		mesh = Weapons/parts/Compensator,
+		texture = Weapons/parts/Compensator,
+	}
+	model MuzzleBrake
+	{
+		mesh = Weapons/parts/MuzzleBrake,
+		texture = Weapons/parts/MuzzleBrake,
+	}
+	model Choke_Full
+	{
+		mesh = Weapons/parts/Choke_Full,
+		texture = Weapons/parts/Choke_Full,
+	}
+	model Choke_Full_Dbl
+	{
+		mesh = Weapons/parts/Choke_Full_Dbl,
+		texture = Weapons/parts/Choke_Full_Dbl,
+	}
+
+
+	model Sight_MicroDot
+	{
+		mesh = Weapons/parts/Sight_MicroDot,
+		texture = Weapons/parts/Sight_MicroDot,
+	}
+	model Sight_RaceDot
+	{
+		mesh = Weapons/parts/Sight_RaceDot,
+		texture = Weapons/parts/Sight_RaceDot,
+	}
+	model Sight_SRS
+	{
+		mesh = Weapons/parts/Sight_SRS,
+		texture = Weapons/parts/Sight_SRS,
+	}
+	model Sight_EOTech
+	{
+		mesh = Weapons/parts/Sight_EOTech,
+		texture = Weapons/parts/Sight_EOTech,
+	}
+	model Sight_3xEOTech
+	{
+		mesh = Weapons/parts/Sight_3xEOTech,
+		texture = Weapons/parts/Sight_3xEOTech,
+	}
+	model Sight_4xACOG
+	{
+		mesh = Weapons/parts/Sight_4xACOG,
+		texture = Weapons/parts/Sight_4xACOG,
+	}
+	model Sight_6xELCAN
+	{
+		mesh = Weapons/parts/Sight_6xELCAN,
+		texture = Weapons/parts/Sight_6xELCAN,
+	}
+	model Sight_KOBRA
+	{
+		mesh = Weapons/parts/Sight_KOBRA,
+		texture = Weapons/parts/Sight_KOBRA,
+	}
+	model Scope_4xPSO
+	{
+		mesh = Weapons/parts/Scope_4xPSO,
+		texture = Weapons/parts/Scope_4xPSO,
+	}
+	model Scope_12xPSO
+	{
+		mesh = Weapons/parts/Scope_12xPSO,
+		texture = Weapons/parts/Scope_12xPSO,
+	}
+	model Scope_1-4x
+	{
+		mesh = Weapons/parts/Scope_1-4x,
+		texture = Weapons/parts/Scope_1-4x,
+	}
+	model Scope_20x
+	{
+		mesh = Weapons/parts/Scope_20x,
+		texture = Weapons/parts/Scope_20x,
+	}
+	model Sight_Thermal
+	{
+		mesh = Weapons/parts/Sight_Thermal,
+		texture = Weapons/parts/Sight_Thermal,
+	}
+	model Sight_Thermal_AK
+	{
+		mesh = Weapons/parts/Sight_Thermal_AK,
+		texture = Weapons/parts/Sight_Thermal_AK,
+	}
+	model Sight_Aimpoint
+	{
+		mesh = Weapons/parts/Sight_Aimpoint,
+		texture = Weapons/parts/Sight_Aimpoint,
+	}
+	model Sight_Aimpoint_Dot
+	{
+		mesh = Weapons/parts/Sight_Aimpoint_Dot,
+		texture = Weapons/parts/Sight_Aimpoint_Dot,
+	}
+	model Sight_C79
+	{
+		mesh = Weapons/parts/Sight_C79,
+		texture = Weapons/parts/Sight_C79,
+	}
+	model Sight_Fiber_Shotgun
+	{
+		mesh = Weapons/parts/Sight_Fiber_Shotgun,
+		texture = Weapons/parts/Sight_Fiber_Shotgun,
+	}
+	model Sight_G28_Scope
+	{
+		mesh = Weapons/parts/Sight_G28_Scope,
+		texture = Weapons/parts/Sight_G28_Scope,
+	}
+	model Sight_Mepro_M21
+	{
+		mesh = Weapons/parts/Sight_Mepro_M21,
+		texture = Weapons/parts/Sight_Mepro_M21,
+	}
+	model Sight_Mepro_MOR
+	{
+		mesh = Weapons/parts/Sight_Mepro_MOR,
+		texture = Weapons/parts/Sight_Mepro_MOR,
+	}
+	model Sight_Raven
+	{
+		mesh = Weapons/parts/Sight_Raven,
+		texture = Weapons/parts/Sight_Raven,
+	}
+	model Sight_SUSAT
+	{
+		mesh = Weapons/parts/Sight_SUSAT,
+		texture = Weapons/parts/Sight_SUSAT,
+	}
+	model Sight_UH1
+	{
+		mesh = Weapons/parts/Sight_UH1,
+		texture = Weapons/parts/Sight_UH1,
+	}
+	model Sight_ACRO
+	{
+		mesh = Weapons/parts/Sight_ACRO,
+		texture = Weapons/parts/Sight_ACRO,
+	}
+	model Sight_M8
+	{
+		mesh = Weapons/parts/Sight_M8,
+		texture = Weapons/parts/Sight_M8,
+	}
+	model Sight_MRO
+	{
+		mesh = Weapons/parts/Sight_MRO,
+		texture = Weapons/parts/Sight_MRO,
+	}
+	model Sight_Nikon
+	{
+		mesh = Weapons/parts/Sight_Nikon,
+		texture = Weapons/parts/Sight_Nikon,
+	}
+	model Sight_SRO
+	{
+		mesh = Weapons/parts/Sight_SRO,
+		texture = Weapons/parts/Sight_SRO,
+	}
+	model Sight_VX3
+	{
+		mesh = Weapons/parts/Sight_VX3,
+		texture = Weapons/parts/Sight_VX3,
+	}
+	model Grip_Magpul
+	{
+		mesh = Weapons/parts/Grip_Magpul,
+		texture = Weapons/parts/Grip_Magpul,
+	}
+	model Grip_MLOK
+	{
+		mesh = Weapons/parts/Grip_MLOK,
+		texture = Weapons/parts/Grip_MLOK,
+	}
+	model Grip_TG
+	{
+		mesh = Weapons/parts/Grip_TG,
+		texture = Weapons/parts/Grip_TG,
+	}
+	model Laser_DVAL
+	{
+		mesh = Weapons/parts/Laser_DVAL,
+		texture = Weapons/parts/Laser_DVAL,
+	}
+	model Laser_PEQ15
+	{
+		mesh = Weapons/parts/Laser_PEQ15,
+		texture = Weapons/parts/Laser_PEQ15,
+	}
+	model Sight_1P63
+	{
+		mesh = Weapons/parts/Sight_1P63,
+		texture = Weapons/parts/Sight_1P63,
+	}
+	model Sight_Brownells
+	{
+		mesh = Weapons/parts/Sight_Brownells,
+		texture = Weapons/parts/Sight_Brownells,
+	}
+	model Sight_L2
+	{
+		mesh = Weapons/parts/Sight_L2,
+		texture = Weapons/parts/Sight_L2,
+	}
+	model Sight_LUX
+	{
+		mesh = Weapons/parts/Sight_LUX,
+		texture = Weapons/parts/Sight_LUX,
+	}
+	model Sight_Malcom
+	{
+		mesh = Weapons/parts/Sight_Malcom,
+		texture = Weapons/parts/Sight_Malcom,
+	}
+	model Sight_NO32
+	{
+		mesh = Weapons/parts/Sight_NO32,
+		texture = Weapons/parts/Sight_NO32,
+	}
+	model Sight_PKAS
+	{
+		mesh = Weapons/parts/Sight_PKAS,
+		texture = Weapons/parts/Sight_PKAS,
+	}
+	model Sight_PU
+	{
+		mesh = Weapons/parts/Sight_PU,
+		texture = Weapons/parts/Sight_PU,
+	}
+	model Sight_PVS4
+	{
+		mesh = Weapons/parts/Sight_PVS4,
+		texture = Weapons/parts/Sight_PVS4,
+	}
+	model Sight_XPS
+	{
+		mesh = Weapons/parts/Sight_XPS,
+		texture = Weapons/parts/Sight_XPS,
+	}
+
+/*************************/
+/**	556 MAGS	**/
+/*************************/
+	model Standard_Mag_556
+	{
+		mesh = Weapons/parts/Standard_Mag_556,
+		texture = Weapons/parts/Standard_Mag_556,
+	}
+	model Drum_Mag_556
+	{
+		mesh = Weapons/parts/Drum_Mag_556,
+		texture = Weapons/parts/Drum_Mag_556,
+	}
+	model Standard_Mag_223
+	{
+		mesh = Weapons/parts/Standard_Mag_223,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_223
+	{
+		mesh = Weapons/parts/Extended_Mag_223,
+		texture = Weapons/parts/Grey,
+	}
+
+/*************************/
+/**	762 MAGS	**/
+/*************************/
+	model Standard_Mag_762
+	{
+		mesh = Weapons/parts/Standard_Mag_762,
+		texture = Weapons/parts/Standard_Mag_762,
+	}
+	model Drum_Mag_762
+	{
+		mesh = Weapons/parts/Drum_Mag_762,
+		texture = Weapons/parts/Drum_Mag_762,
+	}
+
+/*************************/
+/**	9mm MAGS	**/
+/*************************/
+	model Extended_Mag_9
+	{
+		mesh = Weapons/parts/Extended_Mag_9,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_Glock
+	{
+		mesh = Weapons/parts/Extended_Mag_Glock,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_Beretta
+	{
+		mesh = Weapons/parts/Extended_Mag_Beretta,
+		texture = Weapons/parts/Grey,
+	}
+	model Drum_Mag_9
+	{
+		mesh = Weapons/parts/Drum_Mag_9,
+		texture = Weapons/parts/Drum_Mag_9,
+	}
+
+/*************************/
+/**	45ACP MAGS	**/
+/*************************/
+	model Extended_Mag_1911
+	{
+		mesh = Weapons/parts/Extended_Mag_1911,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_45
+	{
+		mesh = Weapons/parts/Extended_Mag_45,
+		texture = Weapons/parts/Grey,
+	}
+	model Drum_Mag_45
+	{
+		mesh = Weapons/parts/Drum_Mag_45,
+		texture = Weapons/parts/Drum_Mag_45,
+	}
+
+/*************************/
+/**	12g MAGS	**/
+/*************************/
+	model Standard_Mag_12
+	{
+		mesh = Weapons/parts/Standard_Mag_12,
+		texture = Weapons/parts/Standard_Mag_12,
+	}
+	model Drum_Mag_12
+	{
+		mesh = Weapons/parts/Drum_Mag_12,
+		texture = Weapons/parts/Drum_Mag_12,
+	}
+
+/*************************/
+/**	22LR MAGS	**/
+/*************************/
+	model Standard_Mag_22
+	{
+		mesh = Weapons/parts/Standard_Mag_22,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_22
+	{
+		mesh = Weapons/parts/Extended_Mag_22,
+		texture = Weapons/parts/Grey,
+	}
+	model Drum_Mag_22
+	{
+		mesh = Weapons/parts/Drum_Mag_22,
+		texture = Weapons/parts/Drum_Mag_45,
+	}
+	model Extended_Mag_CP33
+	{
+		mesh = Weapons/parts/Extended_Mag_CP33,
+		texture = Weapons/parts/Grey,
+	}
+
+/*************************/
+/**	5.7x29mm MAGS	**/
+/*************************/
+	model Standard_Mag_P90
+	{
+		mesh = Weapons/parts/Standard_Mag_P90,
+		texture = Weapons/firearm/FN_P90,
+	}
+
+/*************************/
+/**	UNIQUE MAGS	**/
+/*************************/
+	model Standard_Mag_MP5
+	{
+		mesh = Weapons/parts/Standard_Mag_MP5,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_MP5
+	{
+		mesh = Weapons/parts/Extended_Mag_MP5,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_MAC10
+	{
+		mesh = Weapons/parts/Standard_Mag_MAC10,
+		texture = Weapons/parts/Standard_Mag_MAC10,
+	}
+	model Extended_Mag_MAC10
+	{
+		mesh = Weapons/parts/Extended_Mag_MAC10,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_M1Carbine
+	{
+		mesh = Weapons/parts/Standard_Mag_M1Carbine,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_M1Carbine
+	{
+		mesh = Weapons/parts/Extended_Mag_M1Carbine,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_AUG9
+	{
+		mesh = Weapons/parts/Extended_Mag_AUG9,
+		texture = Weapons/parts/Grey,
+	}
+	model Extended_Mag_SUB2000
+	{
+		mesh = Weapons/parts/Extended_Mag_SUB2000,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_FAL
+	{
+		mesh = Weapons/parts/Standard_Mag_FAL,
+		texture = Weapons/parts/Standard_Mag_FAL,
+	}
+	model Standard_Mag_G28
+	{
+		mesh = Weapons/parts/Standard_Mag_G28,
+		texture = Weapons/parts/Standard_Mag_G28,
+	}
+	model Standard_Mag_SCAR
+	{
+		mesh = Weapons/parts/Standard_Mag_SCAR,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_K14
+	{
+		mesh = Weapons/parts/Standard_Mag_K14,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_M82
+	{
+		mesh = Weapons/parts/Standard_Mag_M82,
+		texture = Weapons/parts/Standard_Mag_M82,
+	}
+	model Standard_Mag_9x39
+	{
+		mesh = Weapons/parts/Standard_Mag_9x39,
+		texture = Weapons/parts/Mag_9x39,
+	}
+	model Extended_Mag_9x39
+	{
+		mesh = Weapons/parts/Extended_Mag_9x39,
+		texture = Weapons/parts/Mag_9x39ext,
+	}
+	model Standard_Mag_M249
+	{
+		mesh = Weapons/parts/Standard_Mag_M249,
+		texture = Weapons/parts/M249MAG,
+	}
+	model Standard_Mag_M240
+	{
+		mesh = Weapons/parts/Standard_Mag_M240,
+		texture = Weapons/parts/M240MAG,
+	}
+	model Standard_Mag_G21LMG
+	{
+		mesh = Weapons/parts/Standard_Mag_G21LMG,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_T64
+	{
+		mesh = Weapons/parts/Standard_Mag_T64,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_SKSFixed
+	{
+		mesh = Weapons/parts/Standard_Mag_SKSFixed,
+		texture = Weapons/parts/Grey,
+	}
+	model Drum_Mag_American
+	{
+		mesh = Weapons/parts/Drum_Mag_American,
+		texture = Weapons/parts/Drum_Mag_American,
+	}
+	model Drum_Thompson
+	{
+		mesh = Weapons/parts/Drum_Thompson,
+		texture = Weapons/parts/Drum_Thompson,
+	}
+	model Mag_Invisible
+	{
+		mesh = Weapons/parts/Mag_Invisible,
+		texture = Weapons/parts/Grey,
+	}
+	model Mag_MG42
+	{
+		mesh = Weapons/parts/Mag_MG42,
+		texture = Weapons/parts/MG42,
+	}
+	model Standard_Mag_545
+	{
+		mesh = Weapons/parts/Standard_Mag_545,
+		texture = Weapons/parts/545MAG,
+	}
+	model Standard_Mag_Saiga
+	{
+		mesh = Weapons/parts/Standard_Mag_Saiga,
+		texture = Weapons/parts/SaigaMAG,
+	}
+	model Standard_Mag_Galil
+	{
+		mesh = Weapons/parts/Standard_Mag_Galil,
+		texture = Weapons/parts/MAG_Galil,
+	}
+	model Standard_Mag_M60
+	{
+		mesh = Weapons/parts/Standard_Mag_M60,
+		texture = Weapons/parts/M60MAG,
+	}
+	model Standard_Mag_RPD
+	{
+		mesh = Weapons/parts/Standard_Mag_RPD,
+		texture = Weapons/parts/Mag_RPD,
+	}
+	model Standard_Mag_SIX12
+	{
+		mesh = Weapons/parts/Standard_Mag_SIX12,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_M1208
+	{
+		mesh = Weapons/parts/Standard_Mag_M1208,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_M1212
+	{
+		mesh = Weapons/parts/Standard_Mag_M1212,
+		texture = Weapons/parts/Grey,
+	}
+	model Standard_Mag_M1216
+	{
+		mesh = Weapons/parts/Standard_Mag_M1216,
+		texture = Weapons/parts/Grey,
+	}
+	model Drum_Mag_545
+	{
+		mesh = Weapons/parts/Drum_Mag_545,
+		texture = Weapons/firearm/AK308,
+	}
+	model Standard_Mag_AK12
+	{
+		mesh = Weapons/parts/Standard_Mag_AK12,
+		texture = Weapons/firearm/AK308,
+	}
+	model Standard_Mag_AK308
+	{
+		mesh = Weapons/parts/Standard_Mag_AK308,
+		texture = Weapons/firearm/AK308,
+	}
+	model Standard_Mag_MCX
+	{
+		mesh = Weapons/parts/Standard_Mag_MCX,
+		texture = Weapons/firearm/MCX_Spear,
+	}
+	model Standard_Mag_Ash
+	{
+		mesh = Weapons/parts/Standard_Mag_Ash,
+		texture = Weapons/firearm/Ash,
+	}
+	model Standard_Mag_M134
+	{
+		mesh = Weapons/parts/Standard_Mag_M134,
+		texture = Weapons/firearm/M134,
+	}
+	model Standard_Mag_PKM
+	{
+		mesh = Weapons/parts/Standard_Mag_PKM,
+		texture = Weapons/firearm/PKM,
+	}
+
+
+/*************************/
+/**	VANILLA PARTS	**/
+/*************************/
+
+/*	model GunLight
+	{
+		mesh = Weapons/parts/Handgun_Light,
+	}
+	model Laser
+	{
+		mesh = Weapons/parts/Handgun_Laser,
+	}
+	model IronSight
+	{
+		mesh = Weapons/parts/Rifle_IronSights,
+	}
+	model x2Scope
+	{
+	        mesh = Weapons/parts/Rifle_2XScope,
+        	texture = Weapons/parts/Rifle_12XScope,
+	}
+	model x4Scope
+	{
+	        mesh = Weapons/parts/Rifle_4XScope,
+        	texture = Weapons/parts/Rifle_12XScope,
+	}
+	model x8Scope
+	{
+	        mesh = Weapons/parts/Rifle_8XScope,
+        	texture = Weapons/parts/Rifle_12XScope,
+	}
+	model x12Scope
+	{
+	        mesh = Weapons/parts/Rifle_12XScope,
+        	texture = Weapons/parts/Rifle_12XScope,
+	}
+	model ChokeTube
+	{
+		mesh = Weapons/parts/Shotgun_Choke,
+	}
+	model RecoilPad
+	{
+		mesh = Weapons/parts/Rifle_RecoilPad,
+	}
+*/
+
+
+
+
+/*************************/
+/**	PART RECIPES	**/
+/*************************/
+
+/*
+	recipe Mount on Side
+	{
+		Light_Small_Bottom,
+		Result : Light_Small_Side,
+		Sound : StormyM1ClipLoad,
+		Time : 10.0,
+	}
+	recipe Mount on Side
+	{
+		Light_Large_Bottom,
+		Result : Light_Large_Side,
+		Sound : StormyM1ClipLoad,
+		Time : 10.0,
+	}
+	recipe Mount on Bottom
+	{
+		Light_Small_Side,
+		Result : Light_Small_Bottom,
+		Sound : StormyM1ClipLoad,
+		Time : 10.0,
+	}
+	recipe Mount on Bottom
+	{
+		Light_Large_Side,
+		Result : Light_Large_Bottom,
+		Sound : StormyM1ClipLoad,
+		Time : 10.0,
+	}
+*/
+
+
+}	

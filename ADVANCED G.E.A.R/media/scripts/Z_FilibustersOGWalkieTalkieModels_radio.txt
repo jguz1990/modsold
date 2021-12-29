@@ -1,0 +1,179 @@
+module Radio
+{
+	imports
+    	{
+             Base,
+    	}
+
+/****************************** walkietalkies *******************************/
+
+	item WalkieTalkie1
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkieBudget,
+		Weight          	= 1.0,
+
+		DisplayName		= Toys-R-Mine Walkie Talkie,
+        
+		UseDelta		= 0.007, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 750,
+		MicRange		= 5,
+		BaseVolumeRange		= 8,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 75000,
+		MaxChannel		= 150000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_16,
+		Tooltip = Tooltip_item_Radio,
+		StaticModel = WalkieTalkieToy2,
+		AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+	item WalkieTalkie2
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkieCivilian,
+		Weight          	= 1.5,
+
+		DisplayName		= ValuTech Walkie Talkie,
+        
+		UseDelta		= 0.008, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 2000,
+		MicRange		= 5,
+		BaseVolumeRange		= 10,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 50000,
+		MaxChannel		= 200000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_24,
+		Tooltip = Tooltip_item_Radio,
+        StaticModel = WalkieTalkieValue2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+	item WalkieTalkie3
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkieCivilian2,
+		Weight          	= 2.0,
+
+		DisplayName		= Premium Tech. Walkie Talkie,
+        
+		UseDelta		= 0.009, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 4000,
+		MicRange		= 5,
+		BaseVolumeRange		= 12,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 25000,
+		MaxChannel		= 300000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_32,
+		Tooltip = Tooltip_item_Radio,
+        StaticModel = WalkieTalkiePremium2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+	item WalkieTalkie4
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkiePolice,
+		Weight          	= 2.5,
+
+		DisplayName		= Tactical Walkie Talkie,
+        
+		UseDelta		= 0.010, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 8000,
+		MicRange		= 5,
+		BaseVolumeRange		= 14,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 10000,
+		MaxChannel		= 500000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_40,
+		Tooltip = Tooltip_item_Radio,
+        StaticModel = WalkieTalkieTactical2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+	item WalkieTalkie5
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkieMilitary,
+		Weight          	= 3.0,
+
+		DisplayName		= US Army Walkie Talkie,
+        
+		UseDelta		= 0.014, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 16000,
+		MicRange		= 5,
+		BaseVolumeRange		= 16,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 200,
+		MaxChannel		= 1000000,
+		UsesBattery		= TRUE,
+		IsHighTier		= TRUE,
+		WorldObjectSprite	= appliances_com_01_48,
+		Tooltip = Tooltip_item_Radio,
+        StaticModel = WalkieTalkieUSArmy2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+	item WalkieTalkieMakeShift
+	{
+		Type			= Radio,
+		Icon			= WalkieTalkieBudget,
+		Weight          	= 1.0,
+
+		DisplayName		= Makeshift Walkie Talkie,
+
+		UseDelta		= 0.007,
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 1000,
+		MicRange		= 5,
+		BaseVolumeRange		= 8,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 75000,
+		MaxChannel		= 150000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_64,
+		Tooltip = Tooltip_item_Radio,
+        StaticModel = WalkieTalkieMakeshift2,
+        AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+
+}

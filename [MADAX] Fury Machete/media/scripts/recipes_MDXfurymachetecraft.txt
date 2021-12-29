@@ -1,0 +1,165 @@
+module Base
+{
+
+       recipe Add Bleed Modification 
+    {
+       furymachete,
+       SmallSheetMetal=4,
+       Screws=6,
+       BlowTorch=50,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:furymachetebleedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Add Pierce Modification 
+    {
+       furymachete,
+       SmallSheetMetal=2,
+       Screws=4,
+       BlowTorch=30,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:furymachetepiercemod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Add Ergonomic Modification
+    {
+       furymachete,
+       Plank=2,
+       LeatherStrips=3,
+       keep [Recipe.GetItemTypes.Saw],		 
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:furymacheteergonomicmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Add Light Modification
+    {
+       furymachete,
+       Plank=1,
+       LeatherStrips=4,
+       keep [Recipe.GetItemTypes.Saw],		 
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:furymachetelightmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Remove Bleed Modification 
+    {
+       furymachetebleedmod,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        Result:furymachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+       recipe Remove Pierce Modification 
+    {
+       furymachetepiercemod,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        Result:furymachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Remove Ergonomic Modification
+    {
+       furymacheteergonomicmod,
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:furymachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Remove Light Modification
+    {
+       furymachetelightmod,
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:furymachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+
+
+    	    fixing Fix Fury Machete
+	{
+		Require 	: furymachete,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+    	    fixing Fix Fury Machete (Bleed Mod)
+	{
+		Require 	: furymachetebleedmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+    	    fixing Fix Fury Machete (Pierce Mod)
+	{
+		Require 	: furymachetepiercemod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+       	    fixing Fix Fury Machete (Ergonomic Mod)
+	{
+		Require 	: furymacheteergonomicmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+       	    fixing Fix Fury Machete (Light Mod)
+	{
+		Require 	: furymachetelightmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+}

@@ -1,0 +1,42 @@
+module Base
+{
+ 
+	item CeramicPlate
+{
+	DisplayName = Ceramic Armor Plate,
+	Icon = CeramicArmorPlate,
+	
+}    
+	item KevlarPlate
+{
+	DisplayName = Kevlar Armor Plate,
+	Icon = KevlarArmorPlate,
+	
+}  
+   
+	item TitaniumPlate
+{
+	DisplayName = Titanium Armor Plate,
+	Icon = TitaniumArmorPlate,
+	
+} 
+ 
+   recipe Replace Bulletproof Vest Armor Plate
+   {
+       /*Vest_BulletArmy/Vest_BulletCivilian/Vest_BulletPolice,*/
+	keep [Recipe.GetItemTypes.Is_BulletproofVest],
+      CeramicPlate/KevlarPlate/TitaniumPlate,
+		Thread=5,
+		keep Needle,
+     	Result:Vest_BulletArmy,
+        RemoveResultItem:true,
+        Time:500.0,
+     	OnCreate:Repair_BulletproofVest,
+     	OnTest:Can_Repair_BulletproofVest,
+        Tooltip: Vests must have a hole but not be completely broken to be repaired.,
+	Sound:PutItemInBag,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+   }
+   
+}

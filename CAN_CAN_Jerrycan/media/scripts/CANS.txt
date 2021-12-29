@@ -1,0 +1,414 @@
+module Base {
+
+	item EmptyJerrycan
+    {
+		DisplayCategory     = WaterContainer,
+        Weight	            = 0.9,
+		CanStoreWater		= TRUE,
+        Type	            = Normal,
+        DisplayName 	    = Empty Jerrycan,
+		RainFactor          = 0.005,
+        Icon	            = CAN_1,
+		ReplaceOnUseOn      = WaterSource-WaterJerrycan,
+        StaticModel         = CAN1,
+		WorldStaticModel    = CCJModel.CAN1_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN1_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN1_R holdingbagright,
+		Tags                = CustomFuelContainer; Petrol_Base_Jerrycan,
+    }
+
+	item WaterJerrycan
+	{
+		DisplayCategory     = Water,
+		Weight				= 15,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		ReplaceOnUseOn		= WaterSource-WaterJerrycan
+		UseDelta			= 0.125,
+		DisplayName			= Water Jerrycan,
+		Icon				= CAN_1,
+		IsCookable          = FALSE,
+		RainFactor          = 0.005,
+		ReplaceOnDeplete	= EmptyJerrycan,
+		StaticModel 		= CAN1,
+		WorldStaticModel    = CCJModel.CAN1_ground,
+        ReplaceInSecondHand = CAN1_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN1_R holdingbagright,
+		EatType             = Pot,
+	}	
+
+	item Jerrycan
+	{
+		DisplayCategory 	= VehicleMaintenance,
+		Weight				= 20,
+		Type				= Drainable,
+		cantBeConsolided    = TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.125,
+		DisplayName			= Jerrycan,
+		Icon				= CAN_1,
+		ReplaceOnDeplete	= EmptyJerrycan,
+		StaticModel 		= CAN1,
+		WorldStaticModel    = CCJModel.CAN1_ground,
+        ReplaceInSecondHand = CAN1_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN1_R holdingbagright,
+		Tags                = CustomFuelContainer; Empty_Base_EmptyJerrycan,
+	}
+
+	item EmptyCAN3
+    {
+        Weight	            = 0.2,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN3,
+        DisplayName 	    = Empty Plastic Jerrycan,
+        Icon	            = CAN_3,
+        StaticModel         = CAN3,
+		WorldStaticModel    = CCJModel.CAN3_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN3_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN3_R holdingbagright,
+    }
+
+	item FullCAN3
+	{
+		Weight				= 5.1,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.09,
+		DisplayName			= Plastic Jerrycan,
+		Icon				= CAN_3,
+		ReplaceOnDeplete	= EmptyCAN3,
+		StaticModel 		= CAN3,
+		WorldStaticModel    = CCJModel.CAN3_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN3,
+        ReplaceInSecondHand = CAN3_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN3_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN4
+    {
+        Weight	            = 0.8,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN4,
+        DisplayName 	    = Empty Big Plastic Jerrycan,
+        Icon	            = CAN_4,
+        StaticModel         = CAN4,
+		WorldStaticModel    = CCJModel.CAN4_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN4_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN4_R holdingbagright,
+    }
+
+	item FullCAN4
+	{
+		Weight				= 32,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= Big Plastic Jerrycan,
+		Icon				= CAN_4,
+		ReplaceOnDeplete	= EmptyCAN4,
+		StaticModel 		= CAN4,
+		WorldStaticModel    = CCJModel.CAN4_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN4,
+        ReplaceInSecondHand = CAN4_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN4_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN5
+    {
+        Weight	            = 0.2,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN5,
+        DisplayName 	    = Empty Red Plastic Jerrycan,
+        Icon	            = CAN_5,
+        StaticModel         = CAN5,
+		WorldStaticModel    = CCJModel.CAN5_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN5_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN5_R holdingbagright,
+    }
+
+    item FullCAN5
+	{
+		Weight				= 8,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= Red Plastic Jerrycan,
+		Icon				= CAN_5,
+		ReplaceOnDeplete	= EmptyCAN5,
+		StaticModel 		= CAN5,
+		WorldStaticModel    = CCJModel.CAN5_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		=	WaterSource-FullCAN5,
+        ReplaceInSecondHand = CAN5_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN5_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN2
+    {
+        Weight	            = 1.2,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN2,
+        DisplayName 	    = Empty Bag Plastic Jerrycan,
+        Icon	            = CAN_2,
+        StaticModel         = CAN2,
+		WorldStaticModel    = CCJModel.CAN2_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN2_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN2_R holdingbagright,
+
+        CanBeEquipped = Back,
+        BloodLocation = Bag,
+        RunSpeedModifier = 0.90,
+        AttachmentReplacement = Bag,
+        ClothingItem = CAN2,
+
+    }
+
+    item FullCAN2
+	{
+		Weight				= 45,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= Bag Plastic Jerrycan,
+		Icon				= CAN_2,
+		ReplaceOnDeplete	= EmptyCAN2,
+		StaticModel 		= CAN2,
+		WorldStaticModel    = CCJModel.CAN2_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		=	WaterSource-FullCAN2,
+        ReplaceInSecondHand = CAN2_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN2_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+        CanBeEquipped 		= Back,
+        BloodLocation 		= Bag,
+        RunSpeedModifier 	= 0.90,
+        AttachmentReplacement = Bag,
+        ClothingItem 		= CAN2,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN6
+    {
+        Weight	            = 0.2,
+        CanStoreWater		= TRUE, 
+       Type	            	= Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN6,
+        DisplayName 	    = Empty beige Plastic Jerrycan,
+        Icon	            = CAN_6,
+        StaticModel         = CAN6,
+		WorldStaticModel    = CCJModel.CAN6_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN6_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN6_R holdingbagright,
+    }
+
+    item FullCAN6
+	{
+		Weight				= 12,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= beige Plastic Jerrycan,
+		Icon				= CAN_6,
+		ReplaceOnDeplete	= EmptyCAN6,
+		StaticModel 		= CAN6,
+		WorldStaticModel    = CCJModel.CAN6_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN6,
+        ReplaceInSecondHand = CAN6_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN6_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN7
+    {
+        Weight	            = 1.5,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN7,
+        DisplayName 	    = Empty beige Plastic can,
+        Icon	            = CAN_7,
+        StaticModel         = CAN7,
+		WorldStaticModel    = CCJModel.CAN7_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN7_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN7_R holdingbagright,
+    }
+
+    item FullCAN7
+	{
+		Weight				= 45,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= beige Plastic can,
+		Icon				= CAN_7,
+		ReplaceOnDeplete	= EmptyCAN7,
+		StaticModel 		= CAN7,
+		WorldStaticModel    = CCJModel.CAN7_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN7,
+        ReplaceInSecondHand = CAN7_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN7_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN8
+    {
+        Weight	            = 0.4,
+        CanStoreWater		= TRUE, 
+       Type	            	= Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN8,
+        DisplayName 	    = Empty Thermos,
+        Icon	            = CAN_8,
+        StaticModel         = CAN8,
+		WorldStaticModel    = CCJModel.CAN8_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN8_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN8_R holdingbagright,
+    }
+
+    item FullCAN8
+	{
+		Weight				= 4,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= Thermos,
+		Icon				= CAN_8,
+		ReplaceOnDeplete	= EmptyCAN8,
+		StaticModel 		= CAN8,
+		WorldStaticModel    = CCJModel.CAN8_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.1,
+		ReplaceOnUseOn		= WaterSource-FullCAN8,
+        ReplaceInSecondHand = CAN8_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN8_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN9
+    {
+        Weight	            = 0.2,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN9,
+        DisplayName 	    = Empty Red Plastic Jerrycan 2,
+        Icon	            = CAN_9,
+        StaticModel         = CAN9,
+		WorldStaticModel    = CCJModel.CAN9_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN9_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN9_R holdingbagright,
+    }
+
+    item FullCAN9
+	{
+		Weight				= 6,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= Red Plastic Jerrycan 2,
+		Icon				= CAN_9,
+		ReplaceOnDeplete	= EmptyCAN9,
+		StaticModel 		= CAN9,
+		WorldStaticModel    = CCJModel.CAN9_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN9,
+        ReplaceInSecondHand = CAN9_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN9_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+
+	item EmptyCAN10
+    {
+        Weight	            = 0.6,
+        CanStoreWater		= TRUE, 
+		Type	            = Normal,
+        ReplaceOnUseOn		= WaterSource-FullCAN10,
+        DisplayName 	    = Empty White Plastic Jerrycan,
+        Icon	            = CAN_10,
+        StaticModel         = CAN10,
+		WorldStaticModel    = CCJModel.CAN10_ground,
+        SurvivalGear        = TRUE,
+        ReplaceInSecondHand = CAN10_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN10_R holdingbagright,
+    }
+	
+    item FullCAN10
+	{
+		Weight				= 20,
+		Type				= Drainable,
+		IsWaterSource		= TRUE,
+		CanStoreWater		= TRUE,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.01,
+		DisplayName			= White Plastic Jerrycan,
+		Icon				= CAN_10,
+		ReplaceOnDeplete	= EmptyCAN10,
+		StaticModel 		= CAN10,
+		WorldStaticModel    = CCJModel.CAN10_ground,
+		IsCookable          = FALSE,
+		RainFactor          = 0.05,
+		ReplaceOnUseOn		= WaterSource-FullCAN10,
+        ReplaceInSecondHand = CAN10_L holdingbagleft,
+        ReplaceInPrimaryHand = CAN10_R holdingbagright,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottle,
+		EatType             = Pot,
+	}
+}

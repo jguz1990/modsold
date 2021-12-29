@@ -1,0 +1,230 @@
+SWATPACK MOD for 41.5X+!
+[img]https://2.bp.blogspot.com/-0zBOnD2RMn8/WUIjoEj-6gI/AAAAAAAIJys/tkH_t4EouLgpnXirrPdvs9Kxzg9TFQ88wCLcBGAs/s1600/AW447956_05.gif[/img]
+
+UPDATE 13/9 for 41.53++
+-Priest in Prison Bug Fixed
+-Trunk Loot of StepVanSwat, RiotTruck, BankTruck, and SwatTruck Fixed
+-SwatGasMask Bald Character Fixed
+-linux fileguidtable fixed
+-Multiplayer 41.53+ Ready
+-SwatVest now bulletprotection
+
+UPDATE 30/4 for 41.50+
+-Co2 Riot Shotgun all damage nerfed
+-Co2 SHORT Riot Shotgun max range nerfed, min range damage buffed
+-Swatpack Guns can be usen in One Hand
+-Shields can be used with One hand guns like pistol, or Co2 shotguns at same time.
+
+UPDATE 29/4 for 41.50+
+-added Blood and Damages Overlays on vehicles 
+-Swat/armoredTruck wheels texture reworked
+
+UPDATE 28/4 for 41.50+
+- Errors showed by lost car fixed
+- Added SwatTruck Vehicle
+- Added Armored Truck Transport Vehicle
+
+UPDATE 26/4 for 41.50+
+- Vehicles of old swatpack versions in saves are fixed
+- compatibility with mods Tested: 
+eris_minimap ,  Filibuster Rhymes used Cars BETA, Fashion Montage (New version) , Cheat Menu, Double Trunk, Let Me Think, Scrap Armor.
+
+UPDATE 21/4 for 41.50+
+-RiotTruck and Swat van can use Trailers
+UPDATED 20/4 for 41.50+
+
+-all vehicles work again
+-cloths working without any external files edit
+-revomed mp5 due there are already in other mods
+-new swat puch, Neck protection, and swat Helment (can be open or closed and their vary stats)
+-swat van have 6 seats now.
+-Shields Working Again
+
+Content:
+Vehicles:
+Anti Riot Truck (the trunk is in the middle of the vehicle, not in the rear)
+Step Van Swat
+Swat Truck
+Armored Transport Truck
+-------------------------------------------------------------------------------------------------
+Swat and Riot vehicles spawn in Police Stations Parking
+Items are lotable in Police Stations inside of his warehouse. The Swat Van contains swat items and the Riot Truck contains Riot Items.
+-------------------------------------------------------------------------------------------------
+Clothes:
+Riot Helmet
+Riot Boots
+Riot Gloves
+Swat helmet
+AntiBomb helmet
+AntiRiot Armor Suit Part 1
+AntiBomb Armor Suit Part 2
+Swat Bulletproof Vest
+Swat combat pants
+Swat tactical jacket
+Swat Balaclava
+Swat gloggles
+Swat Gas Mask
+Swat Knee Pads
+Swat Elbow Pads
+Swat Gloves
+Swat Tactical Boots
+Swat Neck (created by Kit TY)
+Swat Leg Pouch (created by Kit TY)
+Swat Riot Helmet (can be open and closed and varies stats wich open have 80bite-80 scrach and in closed mode have 100/100  (created by Kit TY)
+
+
+Shields:
+To use the shields you must select "Equip Shield" option. not will work if you use "equip in secondary hand" option)
+
+Swat Shield
+Police Riot Shield
+
+Weapons:
+Riot Shotgun
+Co2 Riot Short Shotgun
+Swat Mp5 machinegun (DISABLE DUE exist in another mods)
+
+Items:
+Rubber Shells (for riot shotguns)
+Rubber Shells Box ((for riot shotguns)
+9mm Mp5 Magazine
+Swat Stun Grenades
+Swat Frag Grenades
+Swat Smoke Grenades
+
+Bags:
+Police Bag
+Big Swat Bag
+
+[img]https://i.imgur.com/p7Fv1Z6.gif[/img]
+
+-----------------------------------------------------------------------------------------------
+[img]https://media1.tenor.com/images/43400ea64031c1d3e4bebb49e438a551/tenor.gif[/img]
+
+if you found bug Report in Thread:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2091564445
+Comments in bugs report that are not bug will be deleted from these thread for better organization
+
+do you have a question or doubt? Read This First
+https://steamcommunity.com/workshop/filedetails/discussion/2091564445/2248931052757240764/
+
+
+Workshop ID: 2091564445
+Mod ID: Swatpack
+
+
+
+
+--------------------------
+SPANISH
+--------------------------
+
+
+SWATPACK MOD Para la version 41.50+
+[img]https://2.bp.blogspot.com/-0zBOnD2RMn8/WUIjoEj-6gI/AAAAAAAIJys/tkH_t4EouLgpnXirrPdvs9Kxzg9TFQ88wCLcBGAs/s1600/AW447956_05.gif[/img]
+
+Gracias Especiales a Johnny Dollar y a KIT TY  por mantener vivo el mod mientras no pude actualizarlo
+
+UPDATE 30/4 for 41.50+
+-Co2 Riot Shotgun Daño Reducido
+-Co2 SHORT Riot Shotgun Daño Maximo rango reducido, daño al minimo rango ampliado
+-Armas del Swatpack Ahora se pueden usar en una sola mano (Escopeta Co2 , escopeta recortada co2 y swat mp5)
+-Los Escudos ahora pueden usarse con pistolas de una mano al mismo tiempo o las armas swat como las escopetas.
+
+UPDATE 29/4 for 41.50+
+-added Blood and Damages Overlays on vehicles 
+-las texturas de las ruedas del camion swat/blindado fueron rediseñadas
+
+UPDATE 28/4 for 41.50+
+- Errores de vehiculos arreglados
+- Agregado vehiculo Camion Swat
+- Agregado vehiculo Camion blindado de Transporte
+
+UPDATE 26/4 for 41.50+
+- Los vehiculos del swatpack en viejos saves anteriores a la nueva version 41.50 ya estan arreglados
+
+- Compatibilidad con mods probadas: 
+eris_minimap ,  Filibuster Rhymes used Cars BETA, Fashion Montage (New version) , Cheat Menu, Double Trunk, Let Me Think, Scrap Armor.
+
+UPDATE 21/4 for 41.50+
+-Camion antivandalico y Swat Van ahora pueden usar Trailers
+
+UPDATED 20/4 Para 41.50+
+
+-Los vehiculos vuelven a funcionar
+-Las Vestimentas funcionan sin tener que editar codigo externo nunca mas
+- Se removio el arma mp5 ya que existe en otros mods de armas.
+-Nuevo items Swat: Pouch, Neck protection y Swat riot Helmet (Este puede ser cerrado o abierto manualmente y varian sus stats al hacerlo)
+-la van swat ahora tiene 6 asientos
+-los escudos funcionan nuevamente
+
+Contenido:
+Vehiculos:
+Anti Riot Truck (El baul se encuentra en la mitad del vehiculo, no en la parte trasera)
+Step Van Swat
+Camion Swat
+Camion Blindado de Transporte
+--------------------------------------------------------------------------------------------------------------
+Vehiculos swat y antivandalicos aparecen en los estacionamientos de las estaciones de policia.
+Los items son looteables en los almacenes de las estaciones de policia. Tambien aparecen items en la swat van y el camion antivandalico.
+--------------------------------------------------------------------------------------------------------------
+Vestimentas:
+Riot Helmet
+Riot Boots
+Riot Gloves
+Swat helmet
+AntiBomb helmet
+AntiRiot Armor Suit Part 1
+AntiBomb Armor Suit Part 2
+Swat Bulletproof Vest
+Swat combat pants
+Swat tactical jacket
+Swat Balaclava
+Swat gloggles
+Swat Gas Mask
+Swat Knee Pads
+Swat Elbow Pads
+Swat Gloves
+Swat Tactical Boots
+Swat Neck  (created by Kit TY)
+Swat Leg Pouch  (created by Kit TY)
+Swat Riot Helmet (puede ser cerrado o abierto manualmente y varian sus stats al hacerlo. Mientras este abierto tiene 80bite-80 scrach y cuando esta cerrado 100/100  (created by Kit TY)
+
+
+Escudos:
+Para usar los escudos deben seleccionar  "Equip Shield". no funcionaran si usan equipar en segunda mano.
+
+Swat Shield
+Police Riot Shield
+
+Armas:
+Riot Shotgun
+Co2 Riot Short Shotgun
+Swat Mp5 machinegun (deshabilitado ya que existe en otros mods)
+
+Items:
+Rubber Shells (for riot shotguns)
+Rubber Shells Box (for riot shotguns)
+9mm Mp5 Magazine
+Swat Stun Grenades
+Swat Frag Grenades
+Swat Smoke Grenades
+
+Mochilas:
+Police Bag
+Big Swat Bag
+
+[img]https://i.imgur.com/p7Fv1Z6.gif[/img]
+
+-----------------------------------------------------------------------------------------------
+[img]https://media1.tenor.com/images/43400ea64031c1d3e4bebb49e438a551/tenor.gif[/img]
+
+Si encontaste un bug , reportalo en el Thread:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2091564445
+Comentarios en bugs que no no sean bug seran eliminados para mantener la organizacion
+
+Tienes una pregunta o duda? LEE esto Primero
+https://steamcommunity.com/workshop/filedetails/discussion/2091564445/2248931052757240764/
+
+Workshop ID: 2091564445
+Mod ID: Swatpack

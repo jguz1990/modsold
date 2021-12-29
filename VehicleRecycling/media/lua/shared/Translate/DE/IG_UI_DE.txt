@@ -1,0 +1,4 @@
+IGUI_DE = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Bist du sicher, dass du dieses Fahrzeug zerlegen möchtest?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Bist du sicher, dass du diesen Anhänger zerlegen möchtest?",
+}

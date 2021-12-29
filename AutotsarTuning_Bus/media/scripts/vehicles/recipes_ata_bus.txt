@@ -1,0 +1,149 @@
+module Autotsar
+{
+	imports
+	{
+		Base
+	}
+	
+	recipe Make ATABusRoofRack
+    {
+       MetalPipe=16,
+       BlowTorch=32,
+       keep WeldingMask,
+       Result:ATA_Bus_Roof_Rack,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=5,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	
+	recipe Make ATABusRoofBoxItem
+    {
+       SheetMetal=11,
+       BlowTorch=22,
+       keep WeldingMask,
+       Result:ATA_Bus_Roof_Box_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=7,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	
+	recipe Make ATABusKengur1Item
+    {
+       MetalPipe=10,
+       BlowTorch=21,
+       keep WeldingMask,
+       Result:ATA_Bus_Kengur_1_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=4,
+	   OnCreate:Recipe.OnCreate.Bullbar2Blueprint,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Make ATABusKengur2Item
+    {
+       MetalPipe=19,
+       BlowTorch=33,
+       keep WeldingMask,
+       Result:ATA_Bus_Kengur_2_Item,
+       Time:550.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=6,
+	   OnCreate:Recipe.OnCreate.Bullbar3Blueprint,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Make ATABusKengur3Item
+    {
+       MetalPipe=5,
+       SheetMetal=16,
+       BlowTorch=50,
+       keep WeldingMask,
+       Result:ATA_Bus_Kengur_3_Item,
+       Time:850.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=9,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	
+	recipe Make ATABusProtectionDoorItem
+    {
+       MetalPipe=4,
+       SheetMetal=13,
+       BlowTorch=34,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_door_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=7,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	
+	recipe Make ATABusProtectionDoorRearItem
+    {
+       SheetMetal=15,
+       BlowTorch=30,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_door_rear_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=7,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	
+	recipe Make ATABusProtectionWheelsItem
+    {
+       MetalPipe=10,
+       BlowTorch=20,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_wheels_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=4,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Make ATABusProtectionWindowsFrontItem
+    {
+       MetalPipe=8,
+       BlowTorch=16,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_windows_front_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Make ATABusProtectionWindowsRightItem
+    {
+       MetalPipe=15,
+       BlowTorch=30,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_windows_right_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Make ATABusProtectionWindowsLeftItem
+    {
+       MetalPipe=18,
+       BlowTorch=36,
+       keep WeldingMask,
+       Result:ATA_Bus_Protection_windows_left_Item,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+}

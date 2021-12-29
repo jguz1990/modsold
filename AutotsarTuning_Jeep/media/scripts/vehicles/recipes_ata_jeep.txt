@@ -1,0 +1,243 @@
+module Autotsar
+{
+	imports
+	{
+		Base
+	}
+
+	recipe Cut ATAJeepBumper1Item
+    {
+		ATAJeepBumper1Item=1,
+		BlowTorch=21,
+		keep WeldingMask,
+		Result:SmallSheetMetal=8,
+		Time:350.0,
+		Category:Tuning,
+		SkillRequired:MetalWelding=2,
+		OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		NeedToBeLearn:false,
+    }
+	recipe Cut ATAJeepBumper2Item
+    {
+       ATAJeepBumper2Item=1,
+       BlowTorch=21,
+       keep WeldingMask,
+       Result:MetalPipe=4,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:false,
+    }
+	recipe Cut ATAJeepBumper3Item 
+    {
+       ATAJeepBumper3Item=1,
+       BlowTorch=21,
+       keep WeldingMask,
+       Result:MetalPipe=6,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:false,
+    }
+	recipe Make ATAJeepBumper4Item
+    {
+       MetalPipe=5,
+	   SmallSheetMetal=6,
+	   SheetMetal=4,
+	   MetalBar=2,
+       BlowTorch=34,
+       keep WeldingMask,
+       Result:ATAJeepBumper4Item,
+       Time:650.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=8,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+	recipe Cut ATAJeepBumper4Item
+    {
+       ATAJeepBumper4Item=1,
+       BlowTorch=34,
+       keep WeldingMask,
+       Result:SmallSheetMetal=8,
+       Time:650.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAJeepBumper4Item,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:false,
+    }
+
+	recipe Make ATAJeepProtectionWindowItem
+    {
+       MetalBar=10,
+       BlowTorch=20,
+       keep WeldingMask,
+       Result:ATAJeepProtectionWindowItem,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:true,
+    }
+
+	recipe Cut ATAJeepProtectionWindowItem
+    {
+       ATAJeepProtectionWindowItem=1,
+       BlowTorch=20,
+       keep WeldingMask,
+       Result:MetalPipe=5,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:false,
+    }
+
+	recipe Make ATAJeepProtectionWindowFrontItem
+	{
+	   MetalPipe=2,
+	   SheetMetal=3,
+	   SmallSheetMetal=4,
+	   MetalBar=4,
+	   Screws=8,
+	   BlowTorch=26,
+	   keep WeldingMask,
+	   keep Screwdriver,
+	   Result:ATAJeepProtectionWindowFrontItem,
+	   Time:650.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=4,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Cut ATAJeepProtectionWindowFrontItem
+	{
+	   ATAJeepProtectionWindowFrontItem=1,
+	   BlowTorch=26,
+	   keep WeldingMask,
+	   keep Screwdriver,
+	   Result:SmallSheetMetal=4,
+	   Time:650.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAProtectionWindowFrontItem,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	   NeedToBeLearn:false,
+	}
+	
+	recipe Make ATAJeepProtectionWindowRearItem
+    {
+       MetalBar=15,
+       BlowTorch=30,
+       keep WeldingMask,
+       Result:ATAJeepProtectionWindowRearItem,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:true,
+    }
+
+	recipe Cut ATAJeepProtectionWindowRearItem
+    {
+       ATAJeepProtectionWindowRearItem=1,
+       BlowTorch=20,
+       keep WeldingMask,
+       Result:MetalPipe=7,
+       Time:350.0,
+       Category:Tuning,
+       SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:false,
+    }
+	
+	recipe Make ATAJeepRoofBaseItem
+	{
+	   MetalPipe=8,
+	   BlowTorch=16,
+	   keep WeldingMask,
+	   Result:ATAJeepRoofBaseItem,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=4,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+	   NeedToBeLearn:true,
+	}
+	
+	recipe Cut ATAJeepRoofBaseItem
+	{
+	   ATAJeepRoofBaseItem=1,
+	   BlowTorch=16,
+	   keep WeldingMask,
+	   Result:MetalPipe=4,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=2,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	   NeedToBeLearn:false,
+	}
+	
+	recipe Make ATAJeepInteractiveTrunkRoofRackItem
+	{
+	   MetalPipe=12,
+	   MetalBar=4,
+	   BlowTorch=32,
+	   keep WeldingMask,
+	   Result:ATAJeepInteractiveTrunkRoofRackItem,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=5,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+	   NeedToBeLearn:true,
+	}
+	
+	recipe Cut ATAJeepInteractiveTrunkRoofRackItem
+	{
+	   ATAJeepInteractiveTrunkRoofRackItem=1,
+	   BlowTorch=32,
+	   keep WeldingMask,
+	   Result:MetalPipe=8,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=2,
+	   OnCreate:Recipe.OnCreate.CutATAUnusableMetal,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	   NeedToBeLearn:false,
+	}
+	
+	recipe Make ATAJeepInteractiveTrunkWheelRackItem
+	{
+	   MetalPipe=4,
+	   MetalBar=4,
+	   BlowTorch=16,
+	   keep WeldingMask,
+	   Result:ATAJeepInteractiveTrunkWheelRackItem,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=3,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+	   NeedToBeLearn:true,
+	}
+	
+	recipe Cut ATAJeepInteractiveTrunkWheelRackItem
+	{
+	   ATAJeepInteractiveTrunkWheelRackItem=1,
+	   BlowTorch=16,
+	   keep WeldingMask,
+	   Result:MetalPipe=4,
+	   Time:350.0,
+	   Category:Tuning,
+	   SkillRequired:MetalWelding=2,
+	   OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	   NeedToBeLearn:false,
+	}
+}

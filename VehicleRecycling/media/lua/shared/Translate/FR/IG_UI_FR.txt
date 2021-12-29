@@ -1,0 +1,4 @@
+IGUI_FR = {
+    IGUI_VehicleRecycling_ConfirmDialog_Vehicle = "Voulez-vous vraiment démanteler ce véhicule ?",
+    IGUI_VehicleRecycling_ConfirmDialog_Trailer = "Voulez-vous vraiment démanteler cette remorque ?",
+}

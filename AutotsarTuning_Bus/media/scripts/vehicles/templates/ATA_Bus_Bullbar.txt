@@ -1,0 +1,59 @@
+module Base
+{
+	model ATA_Bus_Kengur_1
+	{
+		mesh = vehicles/ATA_Bus_parts|Kengur_1,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+		
+	model ATA_Bus_Kengur_2
+	{
+		mesh = vehicles/ATA_Bus_parts|Kengur_2,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	
+	model ATA_Bus_Kengur_3
+	{
+		mesh = vehicles/ATA_Bus_parts|Kengur_3,
+		texture = Vehicles/ATA_Bus_parts,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	
+	template vehicle ATA_Bus_Bullbar
+	{
+		template = ATABullbars/part/ATABullbar,
+		part ATABullbar
+		{
+			model Bullbar1
+			{
+				file = ATA_Bus_Kengur_1,
+			}
+			model Bullbar2
+			{
+				file = ATA_Bus_Kengur_2,
+			}
+			model Bullbar3
+			{
+				file = ATA_Bus_Kengur_3,
+			}
+			table ataModels 
+			{
+				ATA_Bus_Kengur_1_Item = Bullbar1,
+				ATA_Bus_Kengur_2_Item = Bullbar2,
+				ATA_Bus_Kengur_3_Item = Bullbar3,
+			}
+			itemType = Autotsar.ATA_Bus_Kengur_1_Item;Autotsar.ATA_Bus_Kengur_1_Item;Autotsar.ATA_Bus_Kengur_1_Item,
+			lua
+			{
+				create = ATATuning.Create.Chance0,
+				init = ATATuning.Init.DefaultModel,
+				update = ATATuning.Update.CommonProtection,
+			}
+		}
+	}
+}

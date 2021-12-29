@@ -1,0 +1,49 @@
+module BetLock
+{
+	imports
+	{
+		Base
+	}
+
+	item BobbyPin
+	{
+		Weight = 0.001,
+		Type = Normal,
+		DisplayName = BobbyPin,
+		Icon = BobbyPin,
+		Tooltip = Tooltip_BetLock_BobbyPin
+	}
+
+	item HandmadeBobbyPin
+	{
+		Weight = 0.001,
+		Type = Normal,
+		DisplayName = Handmade BobbyPin,
+		Icon = HandmadeBobbyPin,
+		Tooltip = Tooltip_BetLock_BobbyPin
+	}
+
+	item LockpickingMag
+	{
+		Weight = 0.01,
+		Type = Literature,
+		DisplayName = Lockpicking for dummies,
+		Icon = lockpicking_magazine,
+		TeachedRecipes = Lockpicking;Create BobbyPin,
+		ReplaceOnUse = LockpickingMag,
+		StaticModel = Magazine,
+		Tooltip = Tooltip_BetLock_LockpickingMag
+	}
+
+	item AlarmMag
+	{
+		Weight = 0.01,
+		Type = Literature,
+		DisplayName = Alarm for dummies,
+		Icon = alarm_magazine,
+		TeachedRecipes = Alarm check,
+		ReplaceOnUse = AlarmMag,
+		StaticModel = Magazine,
+		Tooltip = Tooltip_BetLock_AlarmMag
+	}
+}

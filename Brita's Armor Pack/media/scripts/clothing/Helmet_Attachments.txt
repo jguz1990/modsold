@@ -1,0 +1,30 @@
+module Base
+{
+    item Hat_Face_Shield
+	{
+	Type = Clothing,
+	DisplayName = Helmet Face Shield,
+	ClothingItem = Hat_Face_Shield,
+	BodyLocation = Ears,
+	Icon = Hat_Face_Shield,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+	BiteDefense = 10,
+	ScratchDefense = 10,
+        Weight	=	0.001,
+    }
+
+
+
+    item Hat_Helmet_Headset
+	{
+	Type = Clothing,
+	DisplayName = Helmet Headset,
+	ClothingItem = Hat_Helmet_Headset,
+	BodyLocation = EarTop,
+	Icon = Hat_Helmet_Headset,
+        CanHaveHoles = false,
+        BloodLocation = Head,
+        Weight	=	0.001,
+    }
+}

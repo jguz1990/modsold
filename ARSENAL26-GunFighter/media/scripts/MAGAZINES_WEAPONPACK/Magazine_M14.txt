@@ -1,0 +1,20 @@
+/*	These have been replaced to fix... DisplayCategory = GunMag,	ARSENAL[26] */
+
+
+module Base
+{
+
+    item M14Clip		-- THIS IS NOT REALLY USED... 308StdMag COVERS ALL 20 ROUND 308 MAG
+    {
+        CanStack	=	FALSE,
+        Weight		=	0.01,
+        Type		=	Normal,
+        DisplayName	=	308 M14 Magazine,
+	DisplayCategory	= 	GunMag,
+        Icon		=	M14Mag,
+        MaxAmmo 	=	20,
+        AmmoType 	=	Base.308Bullets,
+        StaticModel	=	GunMagazine,
+	GunType		=	M14,
+    }
+}

@@ -1,0 +1,11 @@
+ContextMenu_EN = 
+{
+	ContextMenu_FireMode_Short	= "Close",
+	ContextMenu_FireMode_Medium	= "Medium",
+	ContextMenu_FireMode_Long	= "Long",
+	ContextMenu_FireMode_[2]Burst	= "[2]Burst",
+	ContextMenu_FireMode_[3]Burst	= "[3]Burst",
+	ContextMenu_FireMode_[3]Rotary	= "[3]Rotary",
+	ContextMenu_FireMode_[6]Rotary	= "[6]Rotary",
+
+}

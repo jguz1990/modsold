@@ -1,0 +1,5 @@
+IG_UI_IT = {
+	IGUI_VehiclePartCatGenerator = "Generatore",
+	IGUI_VehiclePartEarthingOn = "Cavo elettrico connesso",
+	IGUI_VehiclePartEarthingOff ="Cavo elettrico disconnesso",
+}

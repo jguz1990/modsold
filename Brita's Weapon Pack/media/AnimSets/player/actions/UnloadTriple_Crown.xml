@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="UnloadDblBarrel.xml">
+	<m_Name>UnloadTriple_Crown</m_Name>
+	<m_Conditions />
+	<m_Conditions>
+		<m_StringValue>Triple_Crown</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Events />
+	<m_Events />
+	<m_Events>
+		<m_ParameterValue>Triple_Crown_OPEN</m_ParameterValue>
+	</m_Events>
+</animNode>

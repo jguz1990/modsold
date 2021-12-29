@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\BackPacks\Bag_AFAK_RHand</m_MaleModel>
+	<m_FemaleModel>Skinned\BackPacks\Bag_AFAK_RHand</m_FemaleModel>
+	<m_GUID>fd9bb447-8473-4db5-b8f0-8a532e8bdce7</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_R_Hand</m_AttachBone>
+	<textureChoices>AFAK</textureChoices>
+</clothingItem>

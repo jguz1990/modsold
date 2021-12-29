@@ -1,0 +1,20 @@
+module Base
+{
+
+    item Hat_FAST_Opscore
+	{
+	Type = Clothing,
+	DisplayName = Ops-Core FAST Ballistic Helmet,
+	ClothingItem = Hat_FAST_Opscore,
+	BodyLocation = Hat,
+	Icon = Hat_Opscore_FAST,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 100,
+	ScratchDefense = 100,
+	ChanceToFall = 5,
+	Insulation = 0.45,
+	WaterResistance = 0.40,
+        Weight	=	0.001,
+    }
+}

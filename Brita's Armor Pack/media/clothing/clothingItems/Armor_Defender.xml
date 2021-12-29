@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Defender</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Defender</m_FemaleModel>
+	<m_GUID>8f7ba88a-3bd6-4fcc-a8c5-8a32d078358d</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Armor_Defender</textureChoices>
+	<textureChoices>clothes\Armor_Defender2</textureChoices>
+	<textureChoices>clothes\Armor_Defender3</textureChoices>	
+</clothingItem>

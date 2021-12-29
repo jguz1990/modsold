@@ -1,0 +1,164 @@
+module Base
+{
+	model ATA_Jeep_wheelrack
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack,
+		texture = Vehicles/ATA_Jeep_items,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	model ATA_Jeep_Cooler
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_Cooler_Ground,
+		texture = clothes/bag/Cooler,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	model ATA_Jeep_BigHikingBag
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_backpack,
+		texture = bighikingbagblue,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	model ATA_Jeep_Carjack
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_Carjack,
+		texture = WorldItems/CarJack,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	model ATA_Jeep_Extinguisher
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_Extinguisher,
+		texture = WorldItems/Extinguisher,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_GasCan
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_GasCan,
+		texture = GasCan,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_RadioRed
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_Radio,
+		texture = WorldItems/RadioRed,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_RadioBlack
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_Radio,
+		texture = WorldItems/RadioBlack,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	model ATA_Jeep_TirePump
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_TirePump,
+		texture = WorldItems/TirePump,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	model ATA_Jeep_ToolBox
+	{
+		mesh = vehicles/ATA_Jeep_base|wheelrack_ToolBox_Ground,
+		texture = clothes/bag/ToolBox,
+		shader = vehiclewheel,
+		scale = 0.03,
+	}
+	
+	template vehicle ATA_Jeep_Template_WheelRack
+	{
+		template = ATAInteractiveTrunk/part/ATAInteractiveTrunkWheelRack,
+		part ATAInteractiveTrunkWheelRack
+		{
+			itemType = Autotsar.ATAJeepInteractiveTrunkWheelRackItem,
+			table interactiveItems 
+			{
+				Base = WheelRack,
+				fullness
+				{
+					1 = Cooler,
+				}
+				Bag_BigHikingBag#Bag_NormalHikingBag
+				{
+					1 = BigHikingBag,
+				}
+				Jack
+				{
+					1 = Jack,
+				}
+				Extinguisher
+				{
+					1 = Extinguisher,
+				}
+				PetrolCan#EmptyPetrolCan
+				{
+					1 = GasCan,
+				}
+				Radio.RadioBlack#Radio.RadioRed
+				{
+					1 = Radio,
+				}
+				Bag_JanitorToolbox
+				{
+					1 = ToolBox,
+				}
+				TirePump
+				{
+					1 = TirePump,
+				}
+			}
+			model WheelRack
+			{
+				file = ATA_Jeep_wheelrack,
+			}
+			model Cooler
+			{
+				file = ATA_Jeep_Cooler,
+			}
+			model BigHikingBag
+			{
+				file = ATA_Jeep_BigHikingBag,
+			}
+			model Jack
+			{
+				file = ATA_Jeep_Carjack,
+			}
+			model Extinguisher
+			{
+				file = ATA_Jeep_Extinguisher,
+			}
+			model GasCan
+			{
+				file = ATA_Jeep_GasCan,
+			}
+			model Radio
+			{
+				file = ATA_Jeep_RadioBlack,
+			}
+			model TirePump
+			{
+				file = ATA_Jeep_TirePump,
+			}
+			model ToolBox
+			{
+				file = ATA_Jeep_ToolBox,
+			}
+			table install
+            {
+                requireInstalled = ATASpareWheel,
+				requireUninstalled = ,
+			}
+		}
+	}
+}

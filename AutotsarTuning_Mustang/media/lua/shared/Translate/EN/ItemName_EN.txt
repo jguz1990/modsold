@@ -1,0 +1,4 @@
+ItemName_EN = {
+	/************ Autotsar Tuning Atelier - Mustang ************/
+	ItemName_Autotsar.ATAMustangHood4Item3 = "Ford Mustang - Mongoose Hood",
+}

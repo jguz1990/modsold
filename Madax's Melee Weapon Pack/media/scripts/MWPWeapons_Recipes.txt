@@ -1,0 +1,63 @@
+module MWPWeapons
+{
+	imports
+	{
+		Base,
+	}
+
+    recipe Make Korek Machete
+    {
+        TreeBranch/Plank/WoodenStick,
+        SmallSheetMetal=3,
+        RippedSheets/Twine/RippedSheetsDirty,
+		Screws=5,
+		LeatherStrips=4,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:MetalWelding=4,
+        OnGiveXP 		: Give30MWXP,
+        Result:korekmachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+    }
+
+    recipe Make Reaver Cleaver
+    {
+		SheetMetal=2,
+		WoodenStick/Plank/TreeBranch,
+		Screws=5,
+		LeatherStrips=4,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:MetalWelding=5,
+        OnGiveXP : Give30MWXP,
+        Result:reavercleaver,
+        Sound:PutItemInBag,
+        Time:2500.0,
+        Category:Weapons,
+}
+
+
+	        recipe Make Improvised Cold Steel Spear
+	{
+		SheetMetal=2,
+                SmallSheetMetal=3,
+		WoodenStick/Plank/TreeBranch,
+		Screws=6,
+		LeatherStrips=2,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:MetalWelding=6,
+        OnGiveXP : Give30MWXP,
+        Result:coldsteelspear,
+        Sound:PutItemInBag,
+        Time:3500.0,
+        Category:Weapons,
+	}
+	
+
+}

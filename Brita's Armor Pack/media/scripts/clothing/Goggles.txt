@@ -1,0 +1,82 @@
+module Base
+{
+    item Glasses_X1000
+	{
+	Type = Clothing,
+	DisplayName = Bolle Tactical X1000 Goggles,
+	ClothingItem = Glasses_X1000,
+	BodyLocation = Eyes,
+	Icon = Glasses_X1000,
+	Cosmetic = TRUE,
+	ScratchDefense = 5,
+        Weight	=	0.001,
+        ClothingItemExtra = Glasses_X1000_OFF,
+        ClothingItemExtraOption = X1000_OFF,
+        clothingExtraSubmenu = X1000_ON,
+    }
+
+
+
+    item Glasses_X1000_OFF
+	{
+	Type = Clothing,
+	DisplayName = Bolle Tactical X1000 Goggles OFF,
+	ClothingItem = Glasses_X1000_OFF,
+	BodyLocation = Eyes,
+	Icon = Glasses_X1000,
+	Cosmetic = TRUE,
+	ScratchDefense = 5,
+        Weight	=	0.001,
+        ClothingItemExtra = Glasses_X1000,
+        ClothingItemExtraOption = X1000_ON,
+        clothingExtraSubmenu = X1000_OFF,
+    }
+
+
+
+    item Glasses_Napier
+	{
+	Type = Clothing,
+	DisplayName = Napier SR-Ricochet Shooting Glasses,
+	ClothingItem = Glasses_Napier,
+	BodyLocation = Eyes,
+	Icon = Glasses_Napier,
+	Cosmetic = TRUE,
+	ScratchDefense = 5,
+        Weight	=	0.001,
+    }
+
+
+
+    item Glasses_Crewman_Goggles
+	{
+	Type = Clothing,
+	DisplayName = Tank Crewman Goggles,
+	ClothingItem = Glasses_Crewman_Goggles,
+	BodyLocation = Eyes,
+	Icon = Glasses_Crewman_Goggles,
+	Cosmetic = TRUE,
+	ScratchDefense = 5,
+        Weight	=	0.001,
+        ClothingItemExtra = Glasses_Crewman_Goggles_OFF,
+        ClothingItemExtraOption = Crewman_Goggles_OFF,
+        clothingExtraSubmenu = Crewman_Goggles_ON,
+    }
+
+
+
+    item Glasses_Crewman_Goggles_OFF
+	{
+	Type = Clothing,
+	DisplayName = Tank Crewman Goggles OFF,
+	ClothingItem = Glasses_Crewman_Goggles_OFF,
+	BodyLocation = Eyes,
+	Icon = Glasses_Crewman_Goggles,
+	Cosmetic = TRUE,
+	ScratchDefense = 5,
+        Weight	=	0.001,
+        ClothingItemExtra = Glasses_Crewman_Goggles,
+        ClothingItemExtraOption = Crewman_Goggles_ON,
+        clothingExtraSubmenu = Crewman_Goggles_OFF,
+    }
+}

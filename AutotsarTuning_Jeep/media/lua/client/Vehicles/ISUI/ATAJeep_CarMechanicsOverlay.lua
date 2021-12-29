@@ -1,0 +1,20 @@
+ISCarMechanicsOverlay.CarList["Base.ATAJeepArcher"] = {imgPrefix = "atajeep_", x=10,y=0};
+ISCarMechanicsOverlay.CarList["Base.ATAJeepRubicon"] = {imgPrefix = "atajeep_", x=10,y=0};
+ISCarMechanicsOverlay.CarList["Base.ATAJeepClassic"] = {imgPrefix = "atajeep_", x=10,y=0};
+
+ISCarMechanicsOverlay.PartList["DoorFrontLeft"].vehicles["atajeep_"] = {x=71,y=244,x2=81,y2=304};
+ISCarMechanicsOverlay.PartList["DoorFrontRight"].vehicles["atajeep_"] = {x=210,y=244,x2=220,y2=304};
+ISCarMechanicsOverlay.PartList["DoorRearLeft"].vehicles["atajeep_"] = {x=71,y=304,x2=81,y2=364};
+ISCarMechanicsOverlay.PartList["DoorRearRight"].vehicles["atajeep_"] = {x=210,y=304,x2=220,y2=364};
+ISCarMechanicsOverlay.PartList["EngineDoor"].vehicles["atajeep_"] = {x=86,y=148,x2=205,y2=220};
+ISCarMechanicsOverlay.PartList["TireFrontLeft"].vehicles["atajeep_"] = {x=67,y=182,x2=73,y2=238};
+ISCarMechanicsOverlay.PartList["TireFrontRight"].vehicles["atajeep_"] = {x=218,y=182,x2=224,y2=238};
+ISCarMechanicsOverlay.PartList["TireRearLeft"].vehicles["atajeep_"] = {x=68,y=368,x2=74,y2=426};
+ISCarMechanicsOverlay.PartList["TireRearRight"].vehicles["atajeep_"] = {x=217,y=368,x2=223,y2=426};
+ISCarMechanicsOverlay.PartList["WindowFrontLeft"].vehicles["atajeep_"] = {x=81,y=244,x2=91,y2=304};
+ISCarMechanicsOverlay.PartList["WindowFrontRight"].vehicles["atajeep_"] = {x=200,y=244,x2=210,y2=304};
+ISCarMechanicsOverlay.PartList["WindowRearLeft"].vehicles["atajeep_"] = {x=81,y=304,x2=91,y2=364};
+ISCarMechanicsOverlay.PartList["WindowRearRight"].vehicles["atajeep_"] = {x=200,y=304,x2=210,y2=364};
+ISCarMechanicsOverlay.PartList["WindshieldRear"].vehicles["atajeep_"] = {x=92,y=435,x2=199,y2=446};
+ISCarMechanicsOverlay.PartList["Windshield"].vehicles["atajeep_"] = {x=97,y=222,x2=194,y2=263};
+ISCarMechanicsOverlay.PartList["TruckBed"].vehicles["atajeep_"] = {x=92,y=447,x2=199,y2=458};

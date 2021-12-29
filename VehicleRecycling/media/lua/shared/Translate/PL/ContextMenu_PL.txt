@@ -1,0 +1,4 @@
+ContextMenu_PL = {
+    ContextMenu_VehicleRecycling_RemoveVehicle = "Rozmontuj pojazd",
+    ContextMenu_VehicleRecycling_RemoveTrailer = "Rozmontuj przyczepê",
+}

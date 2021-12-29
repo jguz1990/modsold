@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>static\clothes\m_NV18_OFF</m_MaleModel>
+	<m_FemaleModel>static\clothes\f_NV18_OFF</m_FemaleModel>
+	<m_GUID>c907f3d0-c873-42b3-b919-3a49c7f6a30d</m_GUID>
+	<m_Static>true</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Head</m_AttachBone>
+	<m_HatCategory>Group04</m_HatCategory>
+	<m_MasksFolder>media/textures/Clothes/Hat/Masks</m_MasksFolder>
+	<textureChoices>clothes\hat\Hat_NV18</textureChoices>
+</clothingItem>

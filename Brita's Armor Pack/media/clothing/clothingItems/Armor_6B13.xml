@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_6B13</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_6B13</m_FemaleModel>
+	<m_GUID>ecf09feb-05d1-4c80-b62b-8f597a63ff1e</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Armor_6B13</textureChoices>
+	<textureChoices>clothes\Armor_6B132</textureChoices>
+	<textureChoices>clothes\Armor_6B133</textureChoices>
+	<textureChoices>clothes\Armor_6B134</textureChoices>	
+</clothingItem>

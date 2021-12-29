@@ -1,0 +1,13 @@
+IG_UI_ES = {
+	IGUI_VehicleNameTrailerFirst = "Autotsar GNV 250",
+	IGUI_VehicleNameTrailerSecond = "Autotsar GNV 500",
+	IGUI_VehicleNameTrailerHome = "Autotsar iLYA-1990",
+	IGUI_VehicleNameTrailerHomeHartman = "Autotsar iLYA-1990 «Hartman»",
+	IGUI_VehicleNameTrailerHomeExplorer = "Autotsar iLYA-1990 «Explorer»",
+	IGUI_VehicleNameTrailerKbac = "Autotsar KBAC",
+	IGUI_VehicleNameTrailerGenerator = "Autotsar GENA-220",
+
+	IGUI_VehiclePartCatGenerator = "Generador",
+	IGUI_VehiclePartEarthingOn = "Cable de alimentación conectado",
+	IGUI_VehiclePartEarthingOff = "Cable de alimentación desconectado",
+}

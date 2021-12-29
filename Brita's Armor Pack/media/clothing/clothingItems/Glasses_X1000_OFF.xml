@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>static\clothes\m_Glasses_X1000_OFF</m_MaleModel>
+	<m_FemaleModel>static\clothes\f_Glasses_X1000_OFF</m_FemaleModel>
+	<m_GUID>a4f7f5b6-23f5-45f0-9487-d8f833c915cd</m_GUID>
+	<m_Static>true</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone>Bip01_Head</m_AttachBone>
+	<m_MasksFolder>none</m_MasksFolder>
+	<textureChoices>clothes\hat\Glasses_X1000</textureChoices>
+	<textureChoices>clothes\hat\Glasses_X10002</textureChoices>	
+	<textureChoices>clothes\hat\Glasses_X10003</textureChoices>	
+	<textureChoices>clothes\hat\Glasses_X10004</textureChoices>		
+</clothingItem>

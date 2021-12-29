@@ -1,0 +1,213 @@
+--[[
+
+    armystorage = {
+        locker = {
+            procedural = true,
+            procList = {
+                {name="ArmyStorageGuns", min=0, max=99, forceForTiles="furniture_storage_02_8;furniture_storage_02_9;furniture_storage_02_10;furniture_storage_02_11"},
+                {name="ArmyStorageOutfit", min=0, max=99, forceForTiles="furniture_storage_02_4;furniture_storage_02_5;furniture_storage_02_6;furniture_storage_02_7"},
+            },
+            dontSpawnAmmo = true,
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="ArmyStorageGuns", min=0, max=99, weightChance=100},
+                {name="ArmyStorageElectronics", min=0, max=1, weightChance=20},
+            },
+            dontSpawnAmmo = true,
+        }
+    },
+    
+    armysurplus = {
+        isShop = true,
+        counter = {
+            procedural = true,
+            procList = {
+                {name="ArmySurplusHeadwear", min=0, max=4, weightChance=100},
+                {name="StoreCounterCleaning", min=0, max=99, forceForTiles="location_shop_accessories_01_0;location_shop_accessories_01_1;location_shop_accessories_01_2;location_shop_accessories_01_3;location_shop_accessories_01_20;location_shop_accessories_01_21;location_shop_accessories_01_22;location_shop_accessories_01_23;fixtures_sinks_01_0;fixtures_sinks_01_1;fixtures_sinks_01_2;fixtures_sinks_01_3;fixtures_sinks_01_4;fixtures_sinks_01_5;fixtures_sinks_01_6;fixtures_sinks_01_7;fixtures_sinks_01_8;fixtures_sinks_01_9;fixtures_sinks_01_10;fixtures_sinks_01_11;fixtures_sinks_01_16;fixtures_sinks_01_17;fixtures_sinks_01_18;fixtures_sinks_01_19"},
+                {name="StoreCounterBags", min=0, max=1, weightChance=100},
+            }
+        },
+        shelves = {
+            procedural = true,
+            procList = {
+                {name="ArmySurplusOutfit", min=0, max=4, weightChance=100},
+                {name="ArmySurplusBackpacks", min=0, max=4, weightChance=40},
+                {name="CampingStoreGear", min=0, max=4, weightChance=100},
+                {name="ArmyStorageElectronics", min=0, max=1, weightChance=10},
+            }
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="ArmySurplusOutfit", min=0, max=4, weightChance=100},
+                {name="ArmySurplusBackpacks", min=0, max=4, weightChance=40},
+                {name="CampingStoreGear", min=0, max=4, weightChance=100},
+                {name="ArmyStorageElectronics", min=0, max=1, weightChance=10},
+            }
+        },
+        clothingrack = {
+            procedural = true,
+            procList = {
+                {name="ArmySurplusOutfit", min=0, max=99},
+            }
+        }
+    },
+
+    gunstore = {
+        isShop = true,
+        counter = {
+            procedural = true,
+            procList = {
+                {name="GunStoreCounter", min=0, max=99},
+                {name="StoreCounterCleaning", min=0, max=99, forceForTiles="location_shop_accessories_01_0;location_shop_accessories_01_1;location_shop_accessories_01_2;location_shop_accessories_01_3;location_shop_accessories_01_20;location_shop_accessories_01_21;location_shop_accessories_01_22;location_shop_accessories_01_23;fixtures_sinks_01_0;fixtures_sinks_01_1;fixtures_sinks_01_2;fixtures_sinks_01_3;fixtures_sinks_01_4;fixtures_sinks_01_5;fixtures_sinks_01_6;fixtures_sinks_01_7;fixtures_sinks_01_8;fixtures_sinks_01_9;fixtures_sinks_01_10;fixtures_sinks_01_11;fixtures_sinks_01_16;fixtures_sinks_01_17;fixtures_sinks_01_18;fixtures_sinks_01_19"},
+                {name="StoreCounterBags", min=0, max=1, weightChance=10},
+            }
+        },
+        displaycase = {
+            procedural = true,
+            procList = {
+                {name="GunStoreDisplayCase", min=0, max=99},
+            },
+            dontSpawnAmmo = true,
+        },
+        locker = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=20},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=100},
+            }
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=100},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=40},
+            }
+        },
+        shelves = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=100},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=40},
+            }
+        },
+        shelvesmag = {
+            procedural = true,
+            procList = {
+                {name="GunStoreMagazineRack", min=0, max=99},
+            }  
+        }
+    },
+    
+    gunstorestorage = {
+        isShop = true,
+        crate = {
+            procedural = true,
+            procList = {
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=100},
+                {name="GunStoreDisplayCase", min=0, max=99, weightChance=20},
+            },
+            dontSpawnAmmo = true,
+        },
+        locker = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=20},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=100},
+            }
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=100},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=20},
+            }
+        },
+        shelves = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=100},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=20},
+            }
+        }
+    },
+
+    hunting = {
+        isShop = true,
+        clothingrack = {
+            procedural = true,
+            procList = {
+                {name="CampingStoreClothes", min=0, max=99},
+            }
+        },
+        counter = {
+            procedural = true,
+            procList = {
+                {name="StoreCounterCleaning", min=0, max=99, forceForTiles="location_shop_accessories_01_0;location_shop_accessories_01_1;location_shop_accessories_01_2;location_shop_accessories_01_3;location_shop_accessories_01_20;location_shop_accessories_01_21;location_shop_accessories_01_22;location_shop_accessories_01_23;fixtures_sinks_01_0;fixtures_sinks_01_1;fixtures_sinks_01_2;fixtures_sinks_01_3;fixtures_sinks_01_4;fixtures_sinks_01_5;fixtures_sinks_01_6;fixtures_sinks_01_7;fixtures_sinks_01_8;fixtures_sinks_01_9;fixtures_sinks_01_10;fixtures_sinks_01_11;fixtures_sinks_01_16;fixtures_sinks_01_17;fixtures_sinks_01_18;fixtures_sinks_01_19"},
+                {name="StoreCounterBags", min=0, max=1, weightChance=10},
+                {name="CampingStoreBooks", min=0, max=4, weightChance=80},
+                {name="CampingStoreLegwear", min=0, max=2, weightChance=60},
+                {name="CampingStoreBackpacks", min=0, max=2, weightChance=40},
+                {name="CampingStoreGear", min=0, max=4, weightChance=100},
+                {name="FishingStoreGear", min=0, max=2, weightChance=20},
+            }
+        },
+        displaycase = {
+            procedural = true,
+            procList = {
+                {name="GunStoreDisplayCase", min=0, max=99},
+            },
+            dontSpawnAmmo = true,
+        },
+        locker = {
+            procedural = true,
+            procList = {
+                {name="GunStoreDisplayCase", min=0, max=99, weightChance=20},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=100},
+            }
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="GunStoreShelf", min=0, max=99, weightChance=100},
+                {name="GunStoreAmmunition", min=0, max=99, weightChance=40},
+            }
+        },
+        shelvesmag = {
+            procedural = true,
+            procList = {
+                {name="GunStoreMagazineRack", min=0, max=99},
+            }  
+        }
+    },
+    
+    policestorage = {
+        locker = {
+            procedural = true,
+            procList = {
+                {name="PoliceStorageGuns", min=0, max=99, forceForTiles="furniture_storage_02_8;furniture_storage_02_9;furniture_storage_02_10;furniture_storage_02_11"},
+                {name="PoliceStorageOutfit", min=0, max=99, forceForTiles="furniture_storage_02_4;furniture_storage_02_5;furniture_storage_02_6;furniture_storage_02_7"},
+            },
+            dontSpawnAmmo = true,
+        },
+        metal_shelves = {
+            procedural = true,
+            procList = {
+                {name="PoliceStorageGuns", min=0, max=99, weightChance=100},
+            },
+            dontSpawnAmmo = true,
+        }
+    },
+
+    security = {
+        locker = {
+            procedural = true,
+            procList = {
+                {name="PoliceStorageGuns", min=0, max=99},
+            },
+            dontSpawnAmmo = true,
+        }
+    },
+]]

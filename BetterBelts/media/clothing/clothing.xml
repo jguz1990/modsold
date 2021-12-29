@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<outfitManager>
+	<m_MaleOutfits>
+		<m_Name>Survivalist02</m_Name>
+		<m_Guid>6cae056f-bb00-4e5c-9788-6f0311b7f3f0</m_Guid>
+		<m_items>
+			<itemGUID>227cb2d5-05a5-44ed-872d-ac4ca16e80bc</itemGUID>
+			<subItems>
+				<itemGUID>09bc4da2-6038-4575-985b-c27b8dbfef6c</itemGUID>
+			</subItems>
+		</m_items>
+		<m_items>
+			<itemGUID>623c97c5-49f2-4763-bafb-549a881d6495</itemGUID>
+		</m_items>
+		<m_items>
+			<probability>0.8</probability>
+			<itemGUID>2688a786-e982-41d4-9fe5-889b50268f50</itemGUID>
+		</m_items>
+		<m_items>
+			<itemGUID>ebea15c8-99b3-4e20-905b-d22cf82b8217</itemGUID>
+			<subItems>
+				<itemGUID>aaf3194d-6e6f-454f-a690-cbca734165bc</itemGUID>
+			</subItems>
+		</m_items>
+		<m_items>
+			<itemGUID>c2d9211a-a0c5-475d-8fa6-681a8b809f26</itemGUID>
+		</m_items>
+		<m_items>
+			<probability>0.3</probability>
+			<itemGUID>5fc22466-2942-4ba1-8c33-2a8528b73021</itemGUID>
+			<subItems>
+				<itemGUID>ce1a8520-7120-432e-8a3a-aa7b3094f0bb</itemGUID>
+			</subItems>
+			<subItems>
+				<itemGUID>c7cc655b-284a-4087-85a6-d7c116385fb0</itemGUID>
+			</subItems>
+			<subItems>
+				<itemGUID>0383956a-3fbd-4001-9749-69e2ba70b134</itemGUID>
+			</subItems>
+		</m_items>
+	</m_MaleOutfits>
+</outfitManager>

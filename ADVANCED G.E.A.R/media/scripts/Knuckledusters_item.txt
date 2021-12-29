@@ -1,0 +1,48 @@
+module Base
+{
+  
+	item Knuckleduster
+	{
+	Weight	=	0.2,
+        WeaponSprite	=	null,
+	DisplayName	=	Knuckleduster,
+	Icon	=	Knuckleduster,
+	MetalValue = 30,
+	MaxRange	=	1.2,
+        MinAngle	=	0.1,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2.5,
+        KnockBackOnNoDeath	=	TRUE,
+        SwingAmountBeforeImpact	=	0.1,
+        Categories	=	Unarmed;SmallBlunt,
+        ConditionLowerChanceOneIn	=	70,
+        SplatNumber	=	1,
+        PushBackMod	=	0.5,
+        SubCategory	=	Swinging,
+        ConditionMax	=	15,
+        MaxHitCount	=	1,
+        DoorDamage	=	1,
+        SwingAnim	=	Bat,
+        SwingTime	=	2.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   0,
+        CriticalChance	=	30,
+        CritDmgMultiplier = 2,
+        MinDamage	=	0.2,
+        MaxDamage	=	0.7,
+        BaseSpeed = 1,
+        WeaponLength = 0.0,
+        MinRange	=	0.61,
+	}
+
+   fixing Fix Knuckleduster
+    {
+       Require : Knuckleduster,
+
+       Fixer : DuctTape=2,
+       Fixer : Scotchtape=3,
+    }
+
+}

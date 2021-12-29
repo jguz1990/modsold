@@ -1,0 +1,5 @@
+Tooltip_ES = {
+    Tooltip_BetLock_BobbyPin = "Objeto para forzar cerraduras. Se necesita también un destornillador y debes aprender a forzar cerraduras con la revista",
+    Tooltip_BetLock_LockpickingMag = "Revista para aprender a forzar cerraduras. Podrás forzar puertas, ventanas y vehículos con una horquilla o una palanca",
+    Tooltip_BetLock_AlarmMag = "Revista para detectar las alarmas. Podrás comprobar la alarma del vehículo/casa"
+}

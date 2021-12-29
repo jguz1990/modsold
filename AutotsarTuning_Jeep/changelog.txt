@@ -1,0 +1,74 @@
+-------------------
+v.1.10
+
+Переводы перенесены в Tsar's Common Library.
+Добавлены уникальные запчасти для Джипа.
+Исправлены ошибки и изменена структура скриптов.
+
+Translations moved to Tsar's Common Library.
+Added unique parts for Jeep.
+Fixed bugs and changed script structure.
+
+-------------------
+v.1.09
+
+Улучшен спавн дополнительных модов.
+Изменена кодировка испанского перевода.
+Исправлена ошибка возникающая при чтении журнала по тюнингу.
+
+Improved spawn additional mods.
+Changed encoding of Spanish translation.
+Fixed an error that occurs when reading tuning magazine.
+
+-------------------
+v.1.08
+
+Для модов на дополнительный спавн добавлена проверка, что основной мод включен.
+Добавлен спавн x10.
+
+For additional spawn mods, added a check that the main mod is enabled.
+Added spawn x10.
+-------------------
+v.1.07
+
+Добавлен испанский перевод (спасибо Siowar).
+Улучшен спавн.
+
+Added Spanish translation (thanks Siowar).
+Improved spawn.
+-------------------
+v.1.06
+
+Починен кондиционер.
+
+The air conditioner was repaired.
+-------------------
+v.1.05
+
+Добавлены моды для увеличения шанса спавна автомобиля.
+
+Added mods to increase car spawn chance.
+-------------------
+v.1.04
+
+Исправлена ранее неработающая печка.
+
+Fixed a previously non-functioning heater.
+-------------------
+v.1.03
+
+Исправлены опечатки в файлах с переводами.
+
+Corrected misprints in the translation files.
+-------------------
+v.1.02
+
+Bugfix.
+-------------------
+v.1.01
+
+Увеличен шанс спавна автомобиля.
+
+Increased chance of vehicle spawning.
+-------------------
+v.1.00

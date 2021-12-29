@@ -1,0 +1,9 @@
+Recipe_EN = {
+	Recipe_Extract_Tire_Tube = "Extract Tire Tube",
+	Recipe_Flatten_Tire_Tube = "Flatten Tire Tube",
+	Recipe_Inflate_Tire_Tube = "Inflate Tire Tube",
+	Recipe_Powerboats_Mechanics = "Powerboats Mechanics",
+	Recipe_Sailboats_Mechanics = "Sailboats Mechanics",
+	Recipe_Performance_Boat_Mechanics = "Performance Boat Mechanics",
+	Recipe_Swimming = "Best Swimming Technique",
+}

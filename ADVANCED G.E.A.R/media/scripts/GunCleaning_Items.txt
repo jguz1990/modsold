@@ -1,0 +1,262 @@
+/**        ORMtnMan's Real Gun Mod       **/
+
+module Base
+{   
+
+    item WD40
+    {
+        Weight          =   0.3,
+        Type            =   Drainable,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.5,
+        DisplayName     =   WD40,
+        Icon            =   RepWD40,
+	ReplaceOnDeplete = WD40Empty,
+    }
+
+    item Brushkit
+    {
+        Weight          =   0.5,
+        Type            =   Drainable,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.1,
+        DisplayName     =   Gun Brush Kit,
+        Icon            =   RepBrushkit,
+	ReplaceOnDeplete = BrushkitEmpty,
+	AttachmentType = Gear,
+	StaticModel = pouch,
+    }
+
+    item Maintkit
+    {
+        Weight          =   1,
+        Type            =   Drainable,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.04,
+        DisplayName     =   Gun Maintenance Kit,
+        Icon            =   RepMaintkit,
+	ReplaceOnDeplete = MaintkitEmpty,
+	AttachmentType = Gear,
+	StaticModel = pouch,
+    }
+
+    item WD40Empty
+    {
+        Weight          =   0.3,
+        Type            =   Normal,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.5,
+        DisplayName     =   Empty WD40,
+        Icon            =   RepWD40,
+    }
+
+    item BrushkitEmpty
+    {
+        Weight          =   0.5,
+        Type            =   Normal,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.1,
+        DisplayName     =   Empty Gun Brush Kit,
+        Icon            =   RepBrushkit,
+    }
+
+    item MaintkitEmpty
+    {
+        Weight          =   1,
+        Type            =   Normal,
+        UseWhileEquipped    =   FALSE,
+        UseDelta        =   0.04,
+        DisplayName     =   Empty Gun Maintenance Kit,
+        Icon            =   RepMaintkit,
+    }
+
+
+	recipe Clean Assault Rifle
+	{
+	   AssaultRifle2,
+	   RippedSheets,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   SkillRequired:Reloading=5,
+	
+	   Result:AssaultRifle2,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Assault Rifle
+	{
+	   AssaultRifle,
+	   RippedSheets,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   SkillRequired:Reloading=5,
+	
+	   Result:AssaultRifle,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+
+	recipe Clean Pistol
+	{
+	   Pistol3,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:Pistol3,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Pistol
+	{
+	   Pistol2,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:Pistol2,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+
+	recipe Clean Pistol
+	{
+	   Pistol,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:Pistol,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Revolver
+	{
+	   Revolver_Short,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=2,	
+
+	   Result:Revolver_Short,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Revolver
+	{
+	   Revolver,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=2,	
+
+	   Result:Revolver,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Revolver
+	{
+	   Revolver_Long,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=2,	
+
+	   Result:Revolver_Long,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Rifle
+	{
+	   VarmintRifle,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:VarmintRifle,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Rifle
+	{
+	   HuntingRifle,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:HuntingRifle,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Shotgun
+	{
+	   DoubleBarrelShotgun,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=1,	
+
+	   Result:DoubleBarrelShotgun,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Shotgun
+	{
+	   Shotgun,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=2,	
+
+	   Result:Shotgun,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+
+	recipe Clean Shotgun
+	{
+	   ShotgunSawnoff,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=2,	
+
+	   Result:ShotgunSawnoff,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+
+
+
+}

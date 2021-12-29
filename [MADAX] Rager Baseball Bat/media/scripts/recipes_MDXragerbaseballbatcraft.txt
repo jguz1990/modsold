@@ -1,0 +1,164 @@
+module Base
+{
+
+       recipe Add Nail Mod
+    {
+       ragerbaseballbat,
+       Nails=150,
+       keep [Recipe.GetItemTypes.Hammer],
+        Result:ragerbaseballbatnailmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Barbed Mod
+    {
+       ragerbaseballbat,
+       BarbedWire=4,
+       Screws=10,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbatbarbedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Heavy Mod
+    {
+       ragerbaseballbat,
+       MetalPipe=4,
+       ScrapMetal=10,
+       WeldingRods=10,
+       BlowTorch=25,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbatheavymod,
+        SkillRequired:Maintenance=1,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Axe Mod
+    {
+       ragerbaseballbat,
+       SmallSheetMetal=3,
+       WeldingRods=5,
+       BlowTorch=50,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbataxemod,
+        SkillRequired:Maintenance=3,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Nail Mod
+    {
+       ragerbaseballbatnailmod,
+       keep [Recipe.GetItemTypes.Hammer],
+        Result:ragerbaseballbat,
+        Sound:PutItemInBag,
+        Time:1000.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Barbed Mod
+    {
+       ragerbaseballbatbarbedmod,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbat,
+        Sound:PutItemInBag,
+        Time:1000.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Axe Mod
+    {
+       ragerbaseballbataxemod,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbat,
+        Sound:PutItemInBag,
+        Time:1000.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Heavy Mod
+    {
+       ragerbaseballbatheavymod,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ragerbaseballbat,
+        Sound:PutItemInBag,
+        Time:1000.0,
+        Category:Weapons,
+     }
+
+
+            	    fixing Fix Rager Baseball Bat
+	{
+		Require 	: ragerbaseballbat,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Rager Baseball Bat (Nail Mod)
+	{
+		Require 	: ragerbaseballbatnailmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Rager Baseball Bat (Barbed Mod)
+	{
+		Require 	: ragerbaseballbatbarbedmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Rager Baseball Bat (Axe Mod)
+	{
+		Require 	: ragerbaseballbataxemod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Rager Baseball Bat (Heavy Mod)
+	{
+		Require 	: ragerbaseballbatheavymod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+}

@@ -1,0 +1,3 @@
+Tooltip_FR = {
+    Tooltip_VehicleRecycling = "Démanteler un véhicule ou une remorque avec une torche à propane produit des matériaux métalliques et électriques. <LINE> Un niveau plus élevé de travail du métal permet de récupérer plus de matériaux utilisables.",
+}

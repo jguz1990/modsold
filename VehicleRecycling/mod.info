@@ -1,0 +1,7 @@
+name=Vehicle Recycling
+poster=poster.png
+id=VehicleRecycling
+description=Want to trade-in your car for a new one? There is a little bit of a problem here. Utilization programs are not a thing yet and car dealerships are closed due to technical reasons. Looks like salvage and steel companies don't work too. Broken and useless cars are starting to clog up space around you... <LINE> <LINE> We have a solution! Grab your Propane Torch and Welding Mask and become a post-apocalyptic vehicle recycler!
+versionMin=41.56
+pzversion=41.56
+modversion=1.3.4

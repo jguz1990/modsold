@@ -1,0 +1,393 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+		
+	
+		attachment schoolbag_gear
+		{
+			offset = 0.0620 0.0000 -0.0350,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment schoolbag_gas
+		{
+			offset = 0.0620 0.0000 -0.0350,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment schoolbag_walkie
+		{
+			offset = 0.0620 0.0000 -0.0400,
+			rotate = 90.0000 0.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment schoolbag_bottle
+		{
+			offset = 0.0620 0.0000 -0.0700,
+			rotate = 90.0000 180.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_gear
+		{
+			offset = 0.0890 0.0000 -0.0000,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment hikingbag_gas
+		{
+			offset = 0.0890 0.0000 -0.0000,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_walkie
+		{
+			offset = 0.0890 0.0000 -0.0000,
+			rotate = 90.0000 0.0000 -5.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_bottle
+		{
+			offset = 0.0910 0.0000 -0.0700,
+			rotate = 90.0000 180.0000 5.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_gear
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 0.0000 5.0000 90.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool1
+		{
+			offset = 0.0300 0.1000 -0.1000,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool2
+		{
+			offset = 0.0300 0.1000 0.1000,
+			rotate = 270.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool3
+		{
+			offset = 0.0300 0.1000 0.0500,
+			rotate = -90.0000 90.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_left_walkie
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 95.0000 90.0000 -5.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_left_bottle
+		{
+			offset = 0.0300 0.0920 -0.0000,
+			rotate = 95.0000 270.0000 5.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment alicepack_gas
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie
+		{
+			offset = 0.1320 0.0000 -0.1000,
+			rotate = 90.0000 0.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag
+		{
+			offset = 0.1270 0.0000 -0.0700,
+			rotate = 90.0000 0.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle
+		{
+			offset = 0.1320 0.0000 -0.1000,
+			rotate = 90.0000 180.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear_right
+		{
+			offset = 0.1120 -0.1000 -0.0400,
+			rotate = 0.0000 10.0000 -30.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie_right
+		{
+			offset = 0.1020 -0.1000 -0.1000,
+			rotate = 90.0000 -30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag_right
+		{
+			offset = 0.0970 -0.1000 -0.0700,
+			rotate = 90.0000 -30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle_right
+		{
+			offset = 0.1120 -0.1000 -0.1000,
+			rotate = 90.0000 150.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear_left
+		{
+			offset = 0.1120 0.1000 -0.0400,
+			rotate = 0.0000 10.0000 30.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie_left
+		{
+			offset = 0.1020 0.1000 -0.1000,
+			rotate = 90.0000 30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag_left
+		{
+			offset = 0.0970 0.1000 -0.0700,
+			rotate = 90.0000 30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle_left
+		{
+			offset = 0.1120 0.1000 -0.1000,
+			rotate = 90.0000 210.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		
+	
+		attachment schoolbag_gear
+		{
+			offset = 0.0920 0.0000 -0.0350,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment schoolbag_gas
+		{
+			offset = 0.0920 0.0000 -0.0350,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment schoolbag_walkie
+		{
+			offset = 0.0920 0.0000 -0.0400,
+			rotate = 90.0000 0.0000 -5.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment schoolbag_bottle
+		{
+			offset = 0.0940 0.0000 -0.0700,
+			rotate = 90.0000 180.0000 5.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_gear
+		{
+			offset = 0.1190 0.0000 -0.0000,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment hikingbag_gas
+		{
+			offset = 0.1190 0.0000 -0.0000,
+			rotate = 0.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_walkie
+		{
+			offset = 0.1190 0.0000 -0.0000,
+			rotate = 90.0000 0.0000 -5.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_bottle
+		{
+			offset = 0.1210 0.0000 -0.0700,
+			rotate = 90.0000 180.0000 5.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_gear
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 0.0000 5.0000 90.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool1
+		{
+			offset = 0.0300 0.1000 -0.1000,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool2
+		{
+			offset = 0.0300 0.1000 0.1000,
+			rotate = 270.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment hikingbag_left_tool3
+		{
+			offset = 0.0300 0.1000 0.0500,
+			rotate = -90.0000 90.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_left_walkie
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 95.0000 90.0000 -5.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment hikingbag_left_bottle
+		{
+			offset = 0.0300 0.0920 -0.0000,
+			rotate = 95.0000 270.0000 5.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment alicepack_gas
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 0.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie
+		{
+			offset = 0.1320 0.0000 -0.1000,
+			rotate = 90.0000 0.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag
+		{
+			offset = 0.1320 0.0000 -0.0700,
+			rotate = 90.0000 0.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle
+		{
+			offset = 0.1320 0.0000 -0.1000,
+			rotate = 90.0000 180.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear_right
+		{
+			offset = 0.1120 -0.1000 -0.0400,
+			rotate = 0.0000 10.0000 -30.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie_right
+		{
+			offset = 0.1020 -0.1000 -0.1000,
+			rotate = 90.0000 -30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag_right
+		{
+			offset = 0.1020 -0.1000 -0.0700,
+			rotate = 90.0000 -30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle_right
+		{
+			offset = 0.1120 -0.1000 -0.1000,
+			rotate = 90.0000 150.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+		attachment alicepack_gear_left
+		{
+			offset = 0.1120 0.1000 -0.0400,
+			rotate = 0.0000 10.0000 30.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_walkie_left
+		{
+			offset = 0.1020 0.1000 -0.1000,
+			rotate = 90.0000 30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_mag_left
+		{
+			offset = 0.1020 0.1000 -0.0700,
+			rotate = 90.0000 30.0000 -10.0000,
+			bone = Bip01_BackPack,
+		}
+
+		attachment alicepack_bottle_left
+		{
+			offset = 0.1120 0.1000 -0.1000,
+			rotate = 90.0000 210.0000 10.0000,
+			bone = Bip01_BackPack,
+		}
+	
+	
+	
+
+	}
+}

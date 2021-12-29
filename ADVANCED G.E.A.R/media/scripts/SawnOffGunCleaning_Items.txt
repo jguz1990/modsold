@@ -1,0 +1,49 @@
+module Base
+{   
+
+
+	recipe Clean Rifle
+	{
+	   VarmintRifleSawnOff,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:VarmintRifleSawnOff,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Rifle
+	{
+	   HuntingRifleSawnOff,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=4,	
+
+	   Result:HuntingRifleSawnOff,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+	recipe Clean Shotgun
+	{
+	   DoubleBarrelShotgunSawnOff,
+	  /* WD40/Brushkit/Maintkit,*/
+	Brushkit/Maintkit,
+	   RippedSheets,
+	   SkillRequired:Reloading=1,	
+
+	   Result:DoubleBarrelShotgunSawnOff,
+	   Time:200.0,
+	   OnCreate:GunCleaning_OnCreate,
+	   Category:Firearms,
+	}
+
+
+
+}

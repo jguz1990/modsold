@@ -1,0 +1,109 @@
+module Base
+{
+	
+
+model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+		
+
+/*
+		attachment walkie_belt_right
+		{
+			offset = 0.000 -0.1110 -0.0260,
+			rotate = 0.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment walkie_belt_left
+		{
+			offset = 0.000 0.1090 -0.0340,
+			rotate = 0.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+*/
+		attachment gear_belt_right
+		{
+			offset = 0.000 -0.1110 -0.0260,
+			rotate = 0.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment gear_belt_left
+		{
+			offset = 0.000 0.1090 -0.0340,
+			rotate = 0.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		
+	/*
+
+		attachment walkie_belt_right
+		{
+			offset = 0.000 -0.1110 -0.0260,
+			rotate = 0.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment walkie_belt_left
+		{
+			offset = 0.000 0.1090 -0.0340,
+			rotate = 0.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+*/
+		attachment gear_belt_right
+		{
+			offset = 0.000 -0.1110 -0.0260,
+			rotate = 0.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment gear_belt_left
+		{
+			offset = 0.000 0.1090 -0.0340,
+			rotate = 0.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+
+	}
+
+	model WalkieTalkieToy2
+    {
+        mesh = walkietalkietoy,
+        texture = walkietalkietoy,
+    }
+	model WalkieTalkieValue2
+    {
+        mesh = walkietalkiecivilian,
+        texture = walkietalkievalue,
+    }
+    model WalkieTalkiePremium2
+    {
+        mesh = walkietalkiecivilian,
+        texture = walkietalkiepremium,
+    }
+    model WalkieTalkieTactical2
+    {
+        mesh = walkietalkietactical,
+        texture = walkietalkietactical,
+    }
+    model WalkieTalkieMakeshift2
+    {
+        mesh = walkietalkiemakeshift,
+        texture = walkietalkiemakeshift,
+    }
+    model WalkieTalkieUSArmy2
+    {
+        mesh = walkietalkietactical,
+        texture = walkietalkiemilitary,
+    }
+}

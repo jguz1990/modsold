@@ -1,0 +1,76 @@
+module Base
+{
+	model furymachete
+	{
+		mesh = weapons/1handed/furymachete,
+                                        texture = weapons/1handed/furymachetetexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+
+	model furymachetebleedmod
+	{
+		mesh = weapons/1handed/furymachetebleedmod,
+                                        texture = weapons/1handed/furymachetebleedmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+
+
+	model furymachetepiercemod
+	{
+		mesh = weapons/1handed/furymachetepiercemod,
+                                        texture = weapons/1handed/furymachetepiercemodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+
+
+
+	model furymacheteergonomicmod
+	{
+		mesh = weapons/1handed/furymacheteergonomicmod,
+                                        texture = weapons/1handed/furymacheteergonomicmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+
+
+	model furymachetelightmod
+	{
+		mesh = weapons/1handed/furymachetelightmod,
+                                        texture = weapons/1handed/furymachetelightmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+	
+}

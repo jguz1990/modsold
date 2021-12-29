@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\backpacks\m_Duty_Belt_Back</m_MaleModel>
+	<m_FemaleModel>skinned\backpacks\f_Duty_Belt_Back</m_FemaleModel>
+	<m_GUID>585fc307-04a2-4858-9b58-e17fff37ed09</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\Bag\Bag_Duty_Belt</textureChoices>
+</clothingItem>

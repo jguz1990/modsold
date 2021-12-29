@@ -1,0 +1,56 @@
+module Base
+{
+    imports    
+    {
+		Base
+	}
+
+    item DingDong
+	{
+		MaxRange	=	1.35,
+		WeaponSprite	=	DingDong,
+		MinAngle	=	0.8,
+		Type	=	Weapon,
+		MinimumSwingTime	=	4,
+		EnduranceMod	=	4,
+		KnockBackOnNoDeath	=	TRUE,
+		SwingAmountBeforeImpact	=	0.04,
+		Categories	=	Blunt,
+		ConditionLowerChanceOneIn	=	40,
+		Weight	=	5.8,
+		SplatNumber	=	3,
+		PushBackMod	=	1,
+		SubCategory	=	Swinging,
+		ConditionMax	=	50,
+		MaxHitCount	=	3,
+		DoorDamage	=	60,
+		IdleAnim	=	Idle_Weapon2,
+		CantAttackWithLowestEndurance	=	FALSE,
+		SwingAnim	=	Heavy,
+		DisplayName	=	Gerber Ding-Dong Breaching Tool,
+		MinRange	=	0.7,
+		SwingTime	=	2,
+		DoorHitSound	=	SledgehammerHitDoor,
+		KnockdownMod	=	3,
+		SplatBloodOnNoDeath	=	FALSE,
+		Icon	=	DingDong,
+		RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        BreakSound  =   BreakWoodItem,
+        TreeDamage  =   10,
+        MinDamage	=	2.5,
+        MaxDamage	=	3.5,
+        MetalValue = 120,
+        AlwaysKnockdown = TRUE,
+        CritDmgMultiplier = 2,
+        BaseSpeed = 0.9,
+      	WeaponLength = 0.65,
+      	RequiresEquippedBothHands = TRUE,
+      	AttachmentType = BigBlade,
+	}
+
+	model DingDong
+	{
+		mesh = weapons/2handed/DingDong,
+	}
+}

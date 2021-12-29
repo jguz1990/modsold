@@ -1,0 +1,43 @@
+module Base
+{
+	model akiermachete
+	{
+		mesh = weapons/1handed/akiermachete,
+                                        texture = weapons/1handed/akiermachetetexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model akiermacheteshortmod
+	{
+		mesh = weapons/1handed/akiermacheteshortmod,
+                                        texture = weapons/1handed/akiermacheteshortmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model akiermacheteergonomicmod
+	{
+		mesh = weapons/1handed/akiermacheteergonomicmod,
+                                        texture = weapons/1handed/akiermacheteergonomicmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	
+}

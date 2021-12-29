@@ -1,0 +1,10 @@
+IGUI_IT = {
+    IGUI_AutoSmoke_Say_NoFire_1 = "Come posso fumare senza %1?",
+    IGUI_AutoSmoke_Say_NoFire_2 = "Non si fuma senza fuoco",
+    IGUI_AutoSmoke_Say_NoFire_3 = "Huh? Ero sicuro di avere %1",
+    IGUI_AutoSmoke_Say_NoFire_Lighter = "un accendino",
+    IGUI_AutoSmoke_Say_NoFire_Matches = "fiammiferi",
+    IGUI_AutoSmoke_Say_NoCigarettes_1 = "Niente sigarette niente festa",
+    IGUI_AutoSmoke_Say_NoCigarettes_2 = "Ho finito le sigarette...",
+    IGUI_AutoSmoke_Say_NoCigarettes_3 = "Qualcuno ha una sigaretta?",
+}

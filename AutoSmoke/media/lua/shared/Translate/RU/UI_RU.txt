@@ -1,0 +1,20 @@
+UI_RU = {
+    -- Key bindings
+    UI_optionscreen_binding_NF Smoke = "Курить",
+    -- Options
+    UI_AutoSmoke_AutoSmoking = "Авто курение",
+    UI_AutoSmoke_CharacterSpeaks = "Персонаж говорит",
+    UI_AutoSmoke_CharacterSpeaks_Tooltip = "Ваш персонаж скажет что-нибудь, если у него нет сигарет или зажигалок/спичек.",
+    UI_AutoSmoke_Mod_ButtsToAshtray = "Класть окурки в пепельницу [%1]",
+    UI_AutoSmoke_Mod_ButtsToAshtray_Tooltip = "Если у вашего персонажа есть пепельница в основном инвентаре или поблизости, он будет класть в неё окурки после курения.",
+    UI_AutoSmoke_Mod_ThrowAwayButts = "Выбрасывать окурки [%1]",
+    UI_AutoSmoke_Mod_ThrowAwayButts_Tooltip = "Не будь свиньёй, найди мусорку! Или труп...<br>Ваш персонаж будет выбрасывать окурки после выкуривания сигарет.",
+    UI_AutoSmoke_Mod_RemoveButts = "Удалять окурки [%1]",
+    UI_AutoSmoke_Mod_RemoveButts_Tooltip = "Окурки не появятся после выкуривания сигареты.",
+    UI_AutoSmoke_Mod_SmokeButts = "Курить окурки [%1]",
+    UI_AutoSmoke_Mod_SmokeButts_Tooltip = "Если ничего другого нет, то ваш персонаж будет курить окурки (если есть).",
+    UI_AutoSmoke_Mod_ReversePriority = "Обратный приоритет выбора [%1]",
+    UI_AutoSmoke_Mod_ReversePriority_Tooltip = "По умолчанию: самокрутка / самокрутка с фильтром / обычная / лёгкая / с ментолом / золотая",
+    UI_AutoSmoke_Mod_GumOnly = "Только никотиновая жвачка [%1]",
+    UI_AutoSmoke_Mod_GumOnly_Tooltip = "Ваш персонаж будет жевать только никотиновую жвачку, независимо от того, есть ли у него сигареты. Если нет жвачки, то курить он всё равно не будет.",
+}
