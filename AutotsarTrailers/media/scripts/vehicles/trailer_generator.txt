@@ -171,6 +171,7 @@ module Base
 		area Engine
 		{
 			xywh = 0.0000 -0.2500 1.5000 0.4778,
+			
 		}
 
 		template = Battery,
@@ -187,9 +188,22 @@ module Base
 		{
 			category = Generator,
 			mechanicRequireKey = false,
+			lua
+			{
+				create = Vehicles.Create.Engine,
+				update = Trailers.Update.GeneratorEngine,
+				checkEngine = Vehicles.CheckEngine.Engine,
+			}
 		}
 
 		template = BatteryCharger,
+		/* TEMP */
+		lua
+		{
+			create = CommonTemplates.Create.BatteryCharger,
+			update = Trailers.Update.BatteryCharger,
+		}
+
 		template = Headlight/part/HeadlightLeft,
 		template = Headlight/part/HeadlightRight,
 

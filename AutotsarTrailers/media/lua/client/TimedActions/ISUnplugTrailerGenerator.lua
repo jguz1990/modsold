@@ -11,16 +11,17 @@ function ISUnplugTrailerGenerator:isValid()
 end
 
 function ISUnplugTrailerGenerator:waitToStart()
-	self.character:faceThisObject(self.generator)
+	self.character:faceThisObject(self.trailer)
 	return self.character:shouldBeTurning()
 end
 
 function ISUnplugTrailerGenerator:update()
-	self.character:faceThisObject(self.generator)
+	self.character:faceThisObject(self.trailer)
 end
 
 function ISUnplugTrailerGenerator:start()
-	self.generator = self.trailer:getModData()["generatorObject"]
+	-- print("ISUnplugTrailerGenerator")
+	-- self.generator = self.trailer:getModData()["generatorObject"]
 	self:setActionAnim("Loot")
 	self.character:SetVariable("LootPosition", "Low")
 end
@@ -30,15 +31,8 @@ function ISUnplugTrailerGenerator:stop()
 end
 
 function ISUnplugTrailerGenerator:perform()
-	local genId = string.format("%05d", self.generator:getX()) .. string.format("%05d", self.generator:getY())
-    self.generator:setConnected(false);
-	self.generator:remove()
-	self.trailer:setMass(1000)
-	self.trailer:getModData()["generatorObject"] = nil
-	-- self.trailer:getPartById("EarthingOff"):setInventoryItem(InventoryItemFactory.CreateItem("Base.LightBulb"))
-	self.trailer:getPartById("EarthingOn"):setInventoryItem(nil)
-	-- TrailerGeneratorList[self.trailer] = nil
-    -- needed to remove from queue / start next.
+	-- self.trailer:setMass(1000)
+	sendClientCommand(self.character, 'trailer', 'deleteGenerator', {trailer = self.trailer:getId(), })
 	ISBaseTimedAction.perform(self);
 end
 

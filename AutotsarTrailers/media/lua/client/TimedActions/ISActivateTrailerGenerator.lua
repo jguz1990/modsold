@@ -38,12 +38,13 @@ function ISActivateTrailerGenerator:perform()
 	if self.generator:getCondition() < 1 or self.generator:getFuel() <= 0 or self.activate and self.generator:getCondition() <= 50 and ZombRand(3) == 0 then
 		self.generator:failToStart()
 	else
-		self.generator:setActivated(self.activate)
-		if self.activate then
-			self.trailer:engineDoRunning()
-		else
-			self.trailer:shutOff()
-		end	
+		-- self.generator:setActivated(self.activate)
+		sendClientCommand(self.character, 'trailer', 'startGeneratorEngine', {trailer=self.trailer:getId(), activate = self.activate})
+		-- if self.activate then
+			-- self.trailer:engineDoRunning()
+		-- else
+			-- self.trailer:shutOff()
+		-- end	
 	end
 
     -- needed to remove from queue / start next.

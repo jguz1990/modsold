@@ -1,6 +1,17 @@
 module Base
 {
-    template vehicle Earthing
+    item TsarEarthing
+    {
+        DisplayCategory = Electronics,
+        Weight	=	9000,
+        Type	=	Normal,
+        DisplayName	=	Light Bulb,
+        Icon	=	LightBulb,
+        ConditionMax = 100,
+        WorldStaticModel = LightBulb,
+    }
+	
+	template vehicle Earthing
     {
 		part EarthingOn
 		{
@@ -27,41 +38,7 @@ module Base
 			category = nodisplay,
 			specificItem = false,
 			mechanicRequireKey = false,
-			itemType = Base.LightBulb,
-			
-			table install
-			{
-				items
-				{
-					1
-					{
-						type = Base.Screwdriver,
-						count = 1,
-						keep = true,
-						equip = primary,
-					}
-				}
-
-				time = 100,
-				test = Vehicles.InstallTest.Default,
-			}
-
-			table uninstall
-			{
-				items
-				{
-					1
-					{
-						type = Base.Screwdriver,
-						count = 1,
-						keep = true,
-						equip = primary,
-					}
-				}
-
-				time = 100,
-				test = Vehicles.UninstallTest.Default,
-			}
+			itemType = Base.TsarEarthing,
 		}
 	}
 }

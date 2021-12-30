@@ -13,73 +13,149 @@ Trailers.UninstallTest = {}
 Trailers.Update = {}
 Trailers.Use = {}
 
-function Trailers.Update.GeneratorGasTank(trailer, part, elapsedMinutes)
-	-- print("Trailers.Update.GeneratorGasTank")
-	Vehicles.Update.GasTank(trailer, part, elapsedMinutes)
-	local amount = part:getContainerContentAmount()
-	if elapsedMinutes > 0 and amount > 0 and trailer:isEngineRunning() then
-		if trailer:getModData()["generatorObject"] then
-			trailer:getModData()["generatorObject"]:setFuel(amount/part:getContainerCapacity() * 100)
+-- Перенести в общую библиотеку
+function Trailers.Update.BatteryCharger(trailer, part, elapsedMinutes)
+	-- print("CommonTemplates.Update.BatteryCharger")
+	if part:getInventoryItem() then
+		local chargeOld = part:getInventoryItem():getUsedDelta()
+		print(chargeOld)
+		local charge = chargeOld
+		-- Running the engine charges the battery
+		if elapsedMinutes > 0 and trailer:isEngineRunning() then
+			charge = math.min(charge + elapsedMinutes * 0.001, 1.0)
 		end
-	end
-	if trailer:getModData()["generatorObject"] then
-		trailer:getModData()["generatorObject"]:setCondition(trailer:getPartById("Engine"):getCondition())
-		if trailer:getPartById("Engine"):getCondition() < 1 then
-			trailer:getModData()["generatorObject"]:setActivated(false)
+		if charge ~= chargeOld then
+			part:getInventoryItem():setUsedDelta(charge)
+			if VehicleUtils.compareFloats(chargeOld, charge, 2) then
+				trailer:transmitPartUsedDelta(part)
+			end
 		end
 	end
 end
 
-function Trailers.UninstallComplete.GeneratorGasTank(trailer, part, item)
-	-- print("Trailers.UninstallComplete.GeneratorGasTank")
-	if trailer:getModData()["generatorObject"] then
-		trailer:getModData()["generatorObject"]:setFuel(0.0)
-		trailer:getModData()["generatorObject"]:setActivated(false)
-	end
-end
-
-function Trailers.SearchGenerator(trailer, dx, dy)
-	local square = trailer:getSquare()
-	if square == nil then return end
-	-- print("Trailers.SearchGenerator")
-	for y=square:getY() - dy, square:getY() + dy do
-		for x=square:getX() - dx, square:getX() + dx do
-            local square2 = getCell():getGridSquare(x, y, 0)
-			if square2 ~= nil then
-				-- print("Square ", x, " ", y)
-				local sqGen = square2:getGenerator()
-				if sqGen and sqGen:isConnected() then
-					-- print(sqGen:getSprite():getName())
-				-- and sqGen:getSprite() == "appliances_misc_01_10" then
-					return sqGen
+function Trailers.Update.GeneratorEngine(vehicle, part, elapsedMinutes)
+	-- print("Trailers.Update.GeneratorEngine")
+	Vehicles.Update.Engine(vehicle, part, elapsedMinutes)
+	local earthing = vehicle:getPartById("EarthingOn")
+	if earthing and earthing:getModData().generatorID then
+		if not vehicle:getModData()["generatorObject"] then
+			vehicle:getModData()["generatorObject"] = Trailers.SearchGenerator(vehicle, earthing)
+		end
+		if vehicle:getModData()["generatorObject"] then
+			if vehicle:isEngineRunning() then
+				vehicle:getModData()["generatorObject"]:setActivated(true)
+				vehicle:getModData()["generatorObject"]:getModData().generatorTimer = 5
+				vehicle:updateParts();
+			else
+				vehicle:getModData()["generatorObject"]:setActivated(false)
+				if vehicle:getModData()["generatorObject"]:getModData().generatorTimer and 
+						vehicle:getModData()["generatorObject"]:getModData().generatorTimer > 0 then
+					vehicle:getModData()["generatorObject"]:getModData().generatorTimer = vehicle:getModData()["generatorObject"]:getModData().generatorTimer - 1
+					vehicle:updateParts();
 				end
 			end
 		end
 	end
 end
 
-function Trailers.Init.EarthingOn (trailer, part)
-	-- print("Trailers.Init.EarthingOn")
-	-- print(trailer)
-	-- print(trailer:getScript():getName())
-	if not part:getLight() then
-		CommonTemplates.createActivePart(part)
+function Trailers.SearchGenerator(trailer, earthing)
+	if trailer and earthing and earthing:getModData().generatorID then
+		local sqr = trailer:getSquare()
+		local strCoord = string.match(earthing:getModData().generatorID, '%d*[-]%d*[-]%d*')
+		if strCoord then
+			local i = string.find(strCoord, "-")
+			local x = tonumber(string.sub(strCoord, 1, i-1))
+			strCoord = string.sub(strCoord, i+1)
+			i = string.find(strCoord, "-")
+			local y = tonumber(string.sub(strCoord, 1, i-1))
+			local z = tonumber(string.sub(strCoord, i+1))
+			local sqr = getSquare(x, y, z)
+			for i=1,sqr:getObjects():size() do
+				local generator = sqr:getObjects():get(i-1)
+				if instanceof( generator, "IsoGenerator") then
+					-- trailer:setMass(1000)
+					return generator
+				end
+			end
+		end
 	end
+	return nil
+end
+
+function Trailers.Update.GasTankFix(trailer, part, elapsedMinutes)
+	local invItem = part:getInventoryItem();
+	if not invItem then return; end
+	local amount = part:getContainerContentAmount()
+	if elapsedMinutes > 0 and amount > 0 and trailer:isEngineRunning() then
+		local amountOld = amount
+		local gasMultiplier = 90000;
+		local qualityMultiplier = ((100 - trailer:getEngineQuality()) / 200) + 1;
+		speedMultiplier = 800;
+		gasMultiplier = (gasMultiplier / qualityMultiplier) * 3;
+		local newAmount = (speedMultiplier / gasMultiplier) * SandboxVars.CarGasConsumption;
+		newAmount =  newAmount * (1000/2500.0);
+		amount = amount - elapsedMinutes * newAmount;
+		if part:getCondition() < 70 then
+			if ZombRand(part:getCondition() * 2) == 0 then
+				amount = amount - 0.01;
+			end
+		end
+		part:setContainerContentAmount(amount, false, true);
+		amount = part:getContainerContentAmount();
+		local precision = (amount < 0.5) and 2 or 1
+		if VehicleUtils.compareFloats(amountOld, amount, precision) then
+			trailer:transmitPartModData(part)
+		end
+	end
+end
+
+function Trailers.Update.GeneratorGasTank(trailer, part, elapsedMinutes)
+	-- print("Trailers.Update.GeneratorGasTank")
+	Trailers.Update.GasTankFix(trailer, part, elapsedMinutes)
+	local earthing = trailer:getPartById("EarthingOn")
+	if earthing and earthing:getModData().generatorID then
+		if not trailer:getModData()["generatorObject"] then
+			trailer:getModData()["generatorObject"] = Trailers.SearchGenerator(trailer, earthing)
+		end
+		if trailer:getModData()["generatorObject"] then
+			local amount = part:getContainerContentAmount()
+			if elapsedMinutes > 0 and amount > 0 and trailer:isEngineRunning() then
+				if trailer:getModData()["generatorObject"] then
+					trailer:getModData()["generatorObject"]:setFuel(amount/part:getContainerCapacity() * 100)
+				end
+			end
+			if trailer:getModData()["generatorObject"] then
+				trailer:getModData()["generatorObject"]:setCondition(trailer:getPartById("Engine"):getCondition())
+				if trailer:getPartById("Engine"):getCondition() < 1 then
+					trailer:getModData()["generatorObject"]:setActivated(false)
+				end
+			end
+		end
+	end
+end
+
+function Trailers.UninstallComplete.GeneratorGasTank(trailer, part, item)
+	-- print("Trailers.UninstallComplete.GeneratorGasTank")
+	local earthing = trailer:getPartById("EarthingOn")
+	if earthing and earthing:getModData().generatorID then
+		if not trailer:getModData()["generatorObject"] then
+			trailer:getModData()["generatorObject"] = Trailers.SearchGenerator(trailer, earthing)
+		end
+		if trailer:getModData()["generatorObject"] then
+			trailer:getModData()["generatorObject"]:setFuel(0.0)
+			trailer:getModData()["generatorObject"]:setActivated(false)
+		end
+	end
+end
+
+function Trailers.Init.EarthingOn (trailer, part)
 	if part:getInventoryItem() then
-		local gen = Trailers.SearchGenerator(trailer, 2, 2)
+		local gen = Trailers.SearchGenerator(trailer, part)
 		if gen then
-			-- print("AUTOTSAR: Generator found!")
-			trailer:setMass(10000)
-			part:setLightActive(true)
-			-- print("AUTOTSAR: ", trailer:getMass())
 			trailer:getModData()["generatorObject"] = gen
 		else
-			-- print("AUTOTSAR: Generator NOT found!")
-			trailer:setMass(1000)
-			part:setLightActive(false)
 			trailer:getModData()["generatorObject"] = nil
 			local item = part:getInventoryItem()
-			-- trailer:getPartById("EarthingOff"):setInventoryItem(item)
 			trailer:getPartById("EarthingOn"):setInventoryItem(nil)
 		end
 	end
@@ -87,36 +163,19 @@ end
 
 function Trailers.Update.EarthingOn (trailer, part, elapsedMinutes)
 	-- print("Trailers.Update.EarthingOn")
-	if trailer:getModData()["generatorObject"] then
+	-- if trailer:getModData()["generatorObject"] then
 		-- print(trailer:getMass())
-		if trailer:getMass() < 9000 then
-			trailer:setMass(10000)
-			part:setLightActive(false)
-		end
-	end
+		-- if trailer:getMass() < 9000 then
+			-- trailer:setMass(10000)
+			-- part:setLightActive(true)
+		-- end
+	-- end
 end
 
 function Trailers.Create.EarthingOn(trailer, part)
 	-- print("Trailers.Create.EarthingOn")
-	local item = VehicleUtils.createPartInventoryItem(part);
-	CommonTemplates.createActivePart(part)
-	part:setInventoryItem(nil)
-end
-
--- function Trailers.Create.EarthingOff(trailer, part)
-	-- print("Trailers.Create.EarthingOff")
 	-- local item = VehicleUtils.createPartInventoryItem(part);
-	-- part:setInventoryItem(item)
--- end
-
--- function Trailers.Update.Earthing(trailer, part)
-
--- end
-
--- function Trailers.Update.GeneratorEngine(trailer, part, elapsedMinutes)
--- print("Trailers.Update.GeneratorEngine")
-	-- Vehicles.Update.Engine(trailer, part, elapsedMinutes)
-	-- if trailer:getModData()["generatorObject"] then
-		-- trailer:getModData()["generatorObject"]:setCondition(part:getCondition())
-	-- end
--- end
+	-- CommonTemplates.createActivePart(part)
+	part:setInventoryItem(nil)
+	
+end
