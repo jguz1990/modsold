@@ -61,6 +61,15 @@ mods
 	mod = MDXakiermachete,
 	mod = Swatpack_Rework,
 	mod = Swatpack,
+	mod = 2558749083,
+	mod = BigNoiseTrap,
+	mod = ExerciseWithGear,
+	mod = FuelAPI,
+	mod = improvedbuildmenu41,
+	mod = RemoteCraftedV4,
+	mod = MoreBuild,
+	mod = SlingModFix,
+	mod = CCFastReadx100,
 }
 
 maps

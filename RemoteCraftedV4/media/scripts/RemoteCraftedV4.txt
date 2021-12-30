@@ -1,0 +1,31 @@
+module Base
+{
+  
+ item RemoteCraftedV4
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V4 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   250,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+        WorldStaticModel = RemoteController,
+        
+    }
+	
+	recipe Make RemoteCraftedV4
+    {
+       RemoteCraftedV3,	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       ElectronicsScrap=4,
+       Glue=2,
+       WalkieTalkie1/WalkieTalkie2/WalkieTalkie3/WalkieTalkie4/WalkieTalkie5,
+
+       Result:RemoteCraftedV4,
+       SkillRequired:Electricity=8,
+       Time:50.0,
+       Category:Electrical,
+    }
+}

@@ -1,0 +1,6 @@
+ContextMenu_EN = {
+    ContextMenu_SlingStyle1 = "Sling Position 1",
+    ContextMenu_SlingStyle2 = "Sling Position 2",
+    ContextMenu_SlingStyle3 = "Sling Position 3",
+    ContextMenu_SlingStyle4 = "Sling Position 4",
+} 

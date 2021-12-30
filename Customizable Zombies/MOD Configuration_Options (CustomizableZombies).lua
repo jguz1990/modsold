@@ -4,7 +4,7 @@ local multiRefObjects = {
 } -- multiRefObjects
 local obj1 = {
 	["FakeDead"] = {
-		["ChanceToSpawn"] = 20;
+		["ChanceToSpawn"] = 0;
 		["HPMultiplier"] = 1000;
 	};
 	["Crawler"] = {
@@ -12,19 +12,19 @@ local obj1 = {
 		["HPMultiplier"] = 1000;
 	};
 	["Shambler"] = {
-		["ChanceToSpawn"] = 470;
+		["ChanceToSpawn"] = 350;
 		["HPMultiplier"] = 1000;
 	};
 	["FastShambler"] = {
-		["ChanceToSpawn"] = 470;
+		["ChanceToSpawn"] = 500;
 		["HPMultiplier"] = 1000;
 	};
 	["Runner"] = {
-		["ChanceToSpawn"] = 10;
+		["ChanceToSpawn"] = 100;
 		["HPMultiplier"] = 1000;
 	};
 	["Preset"] = {
-		["PresetNum"] = 3;
+		["PresetNum"] = 1;
 	};
 	["Version"] = "2.3.0";
 }

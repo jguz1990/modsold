@@ -1,0 +1,64 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+
+		attachment rifle_sling
+		{
+			offset = 0.1400 -0.0300 0.0900,
+			rotate = 280.0000 025.0000 85.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling2
+		{
+			offset = 0.0200 -0.0300 0.0900,
+			rotate = 280.0000 145.0000 85.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling3
+		{
+			offset = 0.0200 -0.0300 0.0900,
+			rotate = 280.0000 075.0000 65.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling4
+		{
+			offset = 0.0800 0.0050 -0.1100,
+			rotate = 100.0000 020.0000 95.0000,
+			bone = Bip01_Spine,
+		}
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+
+		attachment rifle_sling
+		{
+			offset = 0.1400 -0.0300 0.0900,
+			rotate = 280.0000 025.0000 85.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling2
+		{
+			offset = 0.0200 -0.0300 0.0900,
+			rotate = 280.0000 145.0000 85.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling3
+		{
+			offset = 0.0200 -0.0300 0.0900,
+			rotate = 280.0000 075.0000 65.0000,
+			bone = Bip01_Spine,
+		}
+		attachment rifle_sling4
+		{
+			offset = 0.0800 0.0050 -0.1100,
+			rotate = 100.0000 020.0000 95.0000,
+			bone = Bip01_Spine,
+		}
+	}
+
+}

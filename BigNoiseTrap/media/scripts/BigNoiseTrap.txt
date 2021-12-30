@@ -1,0 +1,42 @@
+module Base
+{
+  
+ item BigNoiseTrap
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+		SwingAnim	=	Throw,
+        WeaponSprite = Molotov,
+        UseSelf	=	TRUE,
+        DisplayName	=	Big Remote Noise Generator,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	6.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   1000,
+        NoiseDuration = 120,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        CanBeRemote = TRUE,
+        ExplosionSound  =   HouseAlarm,
+        WorldStaticModel = NoiseMakerSensor,
+        
+    }
+	
+	recipe Make BigNoiseGenerator
+    {
+       keep Base.Screwdriver,
+	   Base.CarBattery1/Base.CarBattery2/Base.CarBattery3,
+	   NoiseTrapRemote=1,
+	   ElectronicsScrap=1,
+	   Category:Electrical,
+       Result:BigNoiseTrap,   
+	          
+       Time:90.0,
+    }
+}
