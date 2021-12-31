@@ -27,7 +27,7 @@ module BetLock
 	{
 		Weight = 0.01,
 		Type = Literature,
-		DisplayName = Lockpicking for dummies,
+		DisplayName = Lockpicking for Dummies,
 		Icon = lockpicking_magazine,
 		TeachedRecipes = Lockpicking;Create BobbyPin,
 		ReplaceOnUse = LockpickingMag,
@@ -39,7 +39,7 @@ module BetLock
 	{
 		Weight = 0.01,
 		Type = Literature,
-		DisplayName = Alarm for dummies,
+		DisplayName = Alarm for Dummies,
 		Icon = alarm_magazine,
 		TeachedRecipes = Alarm check,
 		ReplaceOnUse = AlarmMag,
