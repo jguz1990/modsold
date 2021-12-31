@@ -71,12 +71,12 @@ DTBaseGameCharacterDetails.DoTraits = function()
     formerscout:addXPBoost(Perks.PlantScavenging, 1)
 	local baseball = TraitFactory.addTrait("BaseballPlayer", getText("UI_trait_PlaysBaseball"), 4, getText("UI_trait_PlaysBaseballDesc"), false);
 	baseball:addXPBoost(Perks.Blunt, 1)
-	local backpacker = TraitFactory.addTrait("Hiker", getText("UI_trait_Hiker"), 5, getText("UI_trait_HikerDesc"), false);
-	backpacker:addXPBoost(Perks.PlantScavenging, 2)
-	backpacker:addXPBoost(Perks.Trapping, 1)
-    backpacker:getFreeRecipes():add("Make Stick Trap");
-    backpacker:getFreeRecipes():add("Make Snare Trap");
-    backpacker:getFreeRecipes():add("Make Wooden Cage Trap");
+	local hiker = TraitFactory.addTrait("Hiker", getText("UI_trait_Hiker"), 5, getText("UI_trait_HikerDesc"), false);
+	hiker:addXPBoost(Perks.PlantScavenging, 2)
+	hiker:addXPBoost(Perks.Trapping, 1)
+    hiker:getFreeRecipes():add("Make Stick Trap");
+    hiker:getFreeRecipes():add("Make Snare Trap");
+    hiker:getFreeRecipes():add("Make Wooden Cage Trap");
 	local hunter = TraitFactory.addTrait("Hunter", getText("UI_trait_Hunter"), 6, getText("UI_trait_HunterDesc"), false);
 	hunter:addXPBoost(Perks.Aiming, 1)
 	hunter:addXPBoost(Perks.Trapping, 1)

@@ -70,7 +70,7 @@ mods
 	mod = MoreBuild,
 	mod = SlingModFix,
 	mod = CCFastReadx100,
-	mod = ChangeSandBox,
+	mod = BackpackerTrait,
 }
 
 maps
