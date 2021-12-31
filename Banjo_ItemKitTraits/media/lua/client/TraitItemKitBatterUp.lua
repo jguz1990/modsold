@@ -6,7 +6,7 @@ end
 
 local function initBatterupStuff(player, square)
 	if player:HasTrait("BatterUp") then
-		player:getInventory():AddItem("Base.BaseballBat");
+		player:getInventory():AddItem("Base.ragerbaseballbat");
 	end
 end
 

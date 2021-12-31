@@ -6,15 +6,14 @@ end
 
 local function initBugoutbagStuff(player, square)
 	if player:HasTrait("BugoutBag") then
-	        local bugoutbag_bag = player:getInventory():AddItem("Base.Bag_SurvivorBag");
+	        local bugoutbag_bag = player:getInventory():AddItem("Base.Bag_SSO");
 	        bugoutbag_bag:getItemContainer():AddItem("Base.HandTorch");
 	        bugoutbag_bag:getItemContainer():AddItem("Base.Battery");
-	        bugoutbag_bag:getItemContainer():AddItem("Base.WaterBottleFull");
-	        bugoutbag_bag:getItemContainer():AddItem("Base.TinOpener");
+	        bugoutbag_bag:getItemContainer():AddItem("Base.HookedWaterBottleFullGreen");
 	        bugoutbag_bag:getItemContainer():AddItem("Base.Matches");
-	        bugoutbag_bag:getItemContainer():AddItem("Base.BeefJerky");
-	        bugoutbag_bag:getItemContainer():AddItem("Base.TinnedBeans");
-	        bugoutbag_bag:getItemContainer():AddItem("Base.HuntingKnife");
+	        bugoutbag_bag:getItemContainer():AddItem("Base.MRE");
+	        bugoutbag_bag:getItemContainer():AddItem("Base.MRE");
+	        bugoutbag_bag:getItemContainer():AddItem("MWPWeapons.khkcombatknife");
 	end
 end
 

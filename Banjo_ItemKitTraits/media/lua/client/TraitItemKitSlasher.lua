@@ -6,7 +6,7 @@ end
 
 local function initSlasherStuff(player, square)
 	if player:HasTrait("Slasher") then
-		player:getInventory():AddItem("Base.Machete");
+		player:getInventory():AddItem("Base.akiermachete");
 	end
 end
 
