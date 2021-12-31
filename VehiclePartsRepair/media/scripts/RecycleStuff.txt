@@ -1,0 +1,71 @@
+module AutoRepair {
+    imports
+    {
+        Base
+    }
+		recipe Recycle Car Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   EngineDoor1/EngineDoor2/EngineDoor3/TrunkDoor1/TrunkDoor2/TrunkDoor3,
+       Result:SheetMetal,
+	   OnCreate:DismantleStuff_OnCreate,
+       OnGiveXP:DismantleStuff_OnGiveXP,
+       Time:1000.0,
+	   Category:Welding,
+    }
+	
+		recipe Recycle Car Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3,
+       Result:SheetMetal,
+	   OnCreate:DismantleStuff_OnCreate,
+       OnGiveXP:DismantleStuff_OnGiveXP,
+       Time:1000.0,
+	   Category:Welding,
+    }
+	
+		recipe Recycle Car Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3,
+       Result:SmallSheetMetal,
+	   OnCreate:DismantleStuffSmall_OnCreate,
+       OnGiveXP:DismantleStuff_OnGiveXP,
+       Time:1000.0,
+	   Category:Welding,
+    }
+	
+		recipe Recycle Car Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   SmallGasTank1/SmallGasTank2/SmallGasTank3,
+       Result:SmallSheetMetal,
+	   OnCreate:DismantleStuffSmall_OnCreate,
+       OnGiveXP:DismantleStuff_OnGiveXP,
+       Time:1000.0,
+	   Category:Welding,
+    }
+	
+		recipe Recycle Car Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   NormalGasTank1/NormalGasTank2/NormalGasTank3/BigGasTank1/BigGasTank2/BigGasTank3,
+       Result:SheetMetal,
+	   OnCreate:DismantleStuff_OnCreate,
+       OnGiveXP:DismantleStuff_OnGiveXP,
+       Time:1000.0,
+	   Category:Welding,
+    }
+	
+}

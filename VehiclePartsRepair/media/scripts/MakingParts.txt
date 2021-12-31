@@ -1,0 +1,43 @@
+module AutoRepair {
+    imports
+    {
+        Base
+    }
+	    recipe Make Spare Engine Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   ScrapMetal=4,
+	   ElectronicsScrap=1,
+Category:Welding,
+       Result:EngineParts,
+       Time:350.0,
+    }
+	
+	    recipe Make Spare Engine Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=8,
+	   keep WeldingMask,
+	   SheetMetal,
+	   WeldingRods=2,
+	   ElectronicsScrap=1,
+Category:Welding,
+       Result:EngineParts,
+       Time:350.0,
+    }
+	
+	    recipe Make Spare Engine Parts
+    {
+	SkillRequired:MetalWelding=1,
+	   BlowTorch=4,
+	   keep WeldingMask,
+	   SmallSheetMetal=2,
+	   MetalPipe=1,
+	   ElectronicsScrap=1,
+Category:Welding,
+       Result:EngineParts,
+       Time:350.0,
+    }
+}

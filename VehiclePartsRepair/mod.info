@@ -1,0 +1,4 @@
+name=Vehicle Parts Repair
+poster=poster.png
+id=VehiclePartsRepair
+description=Added repair options for almost all vehicle parts! Also added option to create engine parts.
