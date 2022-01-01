@@ -44,5 +44,6 @@ IGUI_EN = {
 	IGUI_ItemCat_WepPart = "Weapon - Part",
 	IGUI_ItemCat_WepRange = "Weapon - Ranged",
 	IGUI_ItemCat_WepShield = "Weapon - Shield",
+	IGUI_ItemCat_zInvExp = "zInventoryExpansion",
 
 }

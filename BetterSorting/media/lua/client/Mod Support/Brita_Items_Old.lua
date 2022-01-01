@@ -35,7 +35,7 @@ TweakItem("Base.M1Clip","DisplayCategory","Ammo");
 TweakItem("Base.M21Clip","DisplayCategory","Ammo");
 TweakItem("Base.M249Clip","DisplayCategory","Ammo");
 TweakItem("Base.M60Clip","DisplayCategory","Ammo");
-TweakItem("Base.M82Clip","DisplayCategory","Ammo");
+TweakItem("Base.M82Clip","DisplayCategory","WepAmmoMag");
 TweakItem("Base.Pack1911Clip","DisplayCategory","Ammo");
 TweakItem("Base.Pack380Clip","DisplayCategory","Ammo");
 TweakItem("Base.Pack38Clip","DisplayCategory","Ammo");

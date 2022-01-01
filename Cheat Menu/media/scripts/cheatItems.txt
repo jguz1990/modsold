@@ -12,5 +12,6 @@ item CMInfiniteCarryweight
         Weight    	=    -999999,
         Type    	=    Normal,
         DisplayName    	=     |Infinite Carryweight|,
+		DisplayCategory =	zInvExp,
     }
 }

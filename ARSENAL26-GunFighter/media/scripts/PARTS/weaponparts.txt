@@ -4655,8 +4655,8 @@ module Base
         Icon = Carrier_12g,
         Weight = 0.2,
 		WorldStaticModel = W_Carrier_12g,				
-        WeightModifier = 0.2,
-        ReloadTimeModifier = -10,	/* RELOAD FASTER		*/
+        WeightModifier = 0.2, 
+        ReloadTimeModifier = -15,	/* RELOAD FASTER		*/
         MountOn = DoubleBarrelShotgun; DoubleBarrelShotgunSawnoff; Shotgun; ShotgunSawnoff;
 		Coachgun; Coachgun_Sawed; Coachgun_Pistol; DT11; DT11_Sawed; DT11_Pistol;
 		Shorty_Pistol; R11_87; M870; M1897;

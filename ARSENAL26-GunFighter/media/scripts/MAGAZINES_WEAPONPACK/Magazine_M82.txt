@@ -3,15 +3,15 @@ module Base
 
     item M82Clip
     {
-        CanStack	=	FALSE,
-        Weight		=	0.01,
-        Type		=	Normal,
-        DisplayName	=	50-BMG Magazine,
-	DisplayCategory	= 	GunMag,
-        Icon		=	M82Mag,
-        MaxAmmo		=	10,
-        AmmoType	=	Base.50BMGBullets,
-        StaticModel	=	GunMagazine,
-	GunType		=	Multi_Gun,
+        CanStack		=	FALSE,
+        Weight			=	0.01,
+        Type			=	Normal,
+        DisplayName		=	50-BMG Magazine,
+		DisplayCategory	=	GunMag,
+        Icon			=	M82Mag,
+        MaxAmmo			=	10,
+        AmmoType		=	Base.50BMGBullets,
+        StaticModel		=	GunMagazine,
+		GunType			=	Multi_Gun,
     }
 }

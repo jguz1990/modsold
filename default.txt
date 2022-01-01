@@ -74,6 +74,7 @@ mods
 	mod = DisableCarWear,
 	mod = eggonsWorthwileCars,
 	mod = VehiclePartsRepair,
+	mod = PropaneBomb,
 }
 
 maps

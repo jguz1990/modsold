@@ -859,6 +859,12 @@ CheatCoreCM.DoCarryweightCheat = function()
 		getPlayer():Say("Infinite Carryweight Enabled.")
 		getPlayer():getInventory():AddItem("cheatmenu.CMInfiniteCarryweight")
 		getPlayer():setMaxWeightBase( 999999 );
+--SWEETS CHANGES		
+	elseif 	getPlayer():HasTrait("backpacker") then
+		getPlayer():Say("Infinite Carryweight Disabled.")
+		getPlayer():getInventory():RemoveOneOf("CMInfiniteCarryweight")
+		getPlayer():setMaxWeightBase(8 * 1.5);
+--SWEETS CHANGES
 	else
 		getPlayer():Say("Infinite Carryweight Disabled.")
 		getPlayer():getInventory():RemoveOneOf("CMInfiniteCarryweight")
