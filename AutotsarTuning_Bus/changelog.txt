@@ -1,5 +1,16 @@
+v.1.11
+2021-12-19
+
+Возвращена возможность устанавливать любые кенгурятники.
+Исправлены текстуры автобусов.
+
+Returned the ability to install any kind of bullbars.
+Fixed bus textures.
+
+-------------------
+
 v.1.10
-20211212
+2021-12-12
 
 Предметы и рецепты перенесены в отдельные файлы.
 Исправлена ошибки с кенгурятниками.
@@ -10,14 +21,16 @@ Fixed bugs with bullbars.
 Fixed translations.
 
 -------------------
+
 v.1.10dev2
-20211211
+2021-12-11
 
 Обновлен шаблон кенгурятника.
 
 Updated bullbar template.
 
 -------------------
+
 v.1.10dev1
 
 Выполнена оптимизация мода в связи с обновлением общей библиотеки.
@@ -32,6 +45,7 @@ v.1.09
 Updated icons and magazine models (thanks to djvirus).
 
 -------------------
+
 v.1.08
 
 Изменена кодировка испанского перевода.
@@ -45,12 +59,14 @@ Fixed an error that occurs when reading the tuning magazine.
 Rear window for buses has been returned.
 
 -------------------
+
 v.1.07
 
 Добавлен испанский перевод (спасибо Siowar).
 
 Added Spanish translation (thanks Siowar).
 -------------------
+
 v.1.06
 
 Исправлены ошибки возникающие со школьным и тюремным автобусами.
@@ -58,6 +74,7 @@ v.1.06
 Fixed bugs with school and prison buses.
 
 -------------------
+
 v.1.05
 
 Добавлена возможность выходить из автобуса с любых сидений.
@@ -71,12 +88,14 @@ Minor bugs fixed.
 Functions and scripts for tuning have been moved to Tsar's library.
 
 -------------------
+
 v.1.04
 
 Исправлены проблемы со звуками автобусов.
 
 Fixed problems with bus sounds.
 -------------------
+
 v.1.03
 
 Улучшены характеристики двигателя.
@@ -85,6 +104,7 @@ v.1.03
 Improved engine performance.
 The location of the towbar has been changed.
 -------------------
+
 v.1.02
 
 Исправлен рецепт крафта ящика для инструментов.

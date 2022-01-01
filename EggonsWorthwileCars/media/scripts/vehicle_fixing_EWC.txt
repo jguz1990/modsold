@@ -1,0 +1,20 @@
+module Base
+{
+	fixing Fix Trunk WeldingEWC
+	{
+	   Require : Trunk25_1;Trunk25_2;Trunk25_3;Trunk35_1;Trunk35_2;Trunk35_3;Trunk45_1;Trunk45_2;Trunk45_3;Trunk50_1;Trunk50_2;Trunk50_3;Trunk55_1;Trunk55_2;Trunk55_3;Trunk60_1;Trunk60_2;Trunk60_3;Trunk70_1;Trunk70_2;Trunk70_3;Trunk110_1;Trunk110_2;Trunk110_3;Trunk150_1;Trunk150_2;Trunk150_3;Trunk210_1;Trunk210_2;Trunk210_3;Trunk300_1;Trunk300_2;Trunk300_3,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal; MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix Trunk EWC
+	{
+	   Require : Trunk25_1;Trunk25_2;Trunk25_3;Trunk35_1;Trunk35_2;Trunk35_3;Trunk45_1;Trunk45_2;Trunk45_3;Trunk50_1;Trunk50_2;Trunk50_3;Trunk55_1;Trunk55_2;Trunk55_3;Trunk60_1;Trunk60_2;Trunk60_3;Trunk70_1;Trunk70_2;Trunk70_3;Trunk110_1;Trunk110_2;Trunk110_3;Trunk150_1;Trunk150_2;Trunk150_3;Trunk210_1;Trunk210_2;Trunk210_3;Trunk300_1;Trunk300_2;Trunk300_3,
+	   ConditionModifier : 0.7,
+
+       Fixer : DuctTape=2;Mechanics=1,
+       Fixer : Glue=2;Mechanics=1,
+	}
+}

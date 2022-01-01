@@ -1,0 +1,172 @@
+module Base
+{
+    /* This intends to remove capacityAffectsCondition from vanilla trunks to make them compatible with EWC for mods using vanilla trunks instead of custom ones */
+    item SmallTrunk1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 40,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalTrunk1
+    {
+        Weight	=	35.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 55,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item BigTrunk1
+    {
+        Weight	=	40.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 70,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+
+    item VanSeatsTrunk2
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 50,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item SmallTrunk2
+    {
+        Weight	=	40.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 70,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalTrunk2
+    {
+        Weight	=	45.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 85,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item BigTrunk2
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 150,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+
+    item SmallTrunk3
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 30,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalTrunk3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 45,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item BigTrunk3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 50,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+
+    item TrailerTrunk1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 100,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+
+    item TrailerTrunk2
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Trailer Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 100,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+
+    item TrailerTrunk3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Trailer Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 100,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+        MechanicsItem = TRUE,
+    }
+}

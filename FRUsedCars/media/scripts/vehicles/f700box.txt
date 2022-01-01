@@ -212,7 +212,7 @@ module Base
 
 			container
 			{
-				capacity = 40,
+				capacity = 10,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 

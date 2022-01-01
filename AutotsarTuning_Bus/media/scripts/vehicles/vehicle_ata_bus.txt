@@ -4,7 +4,14 @@ module Base
 	{
 		template! = ATABus,
 		template = ATA_Bus_Protection/part/WindowsLeftLiteProtection,
-		
+		template = ATALightBars/part/ATALightBar,
+		part ATALightBar
+		{
+			model Default
+			{
+				file = Vehicles_ATA_Bus_Lightbar,
+			}
+		}
 		lightbar
 		{
 			soundSiren = VehicleSiren,
@@ -56,6 +63,14 @@ module Base
 			leftCol = 0;0;1,
 			rightCol = 0;0;1,
 		}
+		template = ATALightBars/part/ATALightBar,
+		part ATALightBar
+		{
+			model Default
+			{
+				file = Vehicles_ATA_Bus_Lightbar,
+			}
+		}
 		model
 		{
 			file = Vehicles_ATA_Bus,
@@ -83,7 +98,7 @@ module Base
 		template = ATA_Bus_Protection/part/DoorRearProtection,
 		model
 		{
-			file = Vehicles_ATA_Bus_nolightbar,
+			file = Vehicles_ATA_Bus,
 			scale = 1.8500,
 			offset = -0.0108 -0.0811 0.8054,
 		}
@@ -482,7 +497,7 @@ module Base
 			container
 			{
 				conditionAffectsCapacity = true,
-				capacity = 250,
+				capacity = 60,
 			}
 		}
 
@@ -492,7 +507,7 @@ module Base
 		{
 			container
 			{
-				capacity = 40,
+				capacity = 20,
 			}
 
 			table install
@@ -512,7 +527,7 @@ module Base
 		{
 			container
 			{
-				capacity = 40,
+				capacity = 5,
 			}
 		}
 

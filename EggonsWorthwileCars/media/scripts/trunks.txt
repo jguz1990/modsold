@@ -1,0 +1,548 @@
+module Base {
+    item Trunk25_1
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 25,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk25_2
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 25,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk25_3
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType = 3,
+        MaxCapacity = 25,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk35_1
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 35,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk35_2
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 35,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk35_3
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 35,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk41_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 41,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk41_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 41,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk41_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 41,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk42_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 42,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk42_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 42,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk42_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 42,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk43_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 43,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk43_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =  2,
+        MaxCapacity = 43,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk43_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 43,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk45_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 43,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk45_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 43,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk45_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 45,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk50_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 50,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk50_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 50,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk50_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 50,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk55_1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 55,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk55_2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 55,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk55_3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 55,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk60_1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 60,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk60_2
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =  2,
+        MaxCapacity = 60,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk60_3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType = 3,
+        MaxCapacity = 60,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk70_1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 70,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk70_2
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 70,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk70_3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 70,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk110_1
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Pickup Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 110,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk110_2
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Pickup Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 110,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk110_3
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Pickup Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 110,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk150_1
+    {
+        Weight	=	60.0,
+        Type	=	Normal,
+        DisplayName	=	Minivan Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 150,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk150_2
+    {
+        Weight	=	60.0,
+        Type	=	Normal,
+        DisplayName	=	Minivan Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 150,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk150_3
+    {
+        Weight	=	60.0,
+        Type	=	Normal,
+        DisplayName	=	Minivan Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 150,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk210_1
+    {
+        Weight	=	80.0,
+        Type	=	Normal,
+        DisplayName	=	Van Trunk,
+        Icon	=	CarTrunk,
+        VehicleType = 1,
+        MaxCapacity = 210,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk210_2
+    {
+        Weight	=	80.0,
+        Type	=	Normal,
+        DisplayName	=	Van Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 210,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk210_3
+    {
+        Weight	=	80.0,
+        Type	=	Normal,
+        DisplayName	=	Van Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 210,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk300_1
+    {
+        Weight	=	100.0,
+        Type	=	Normal,
+        DisplayName	=	Truck Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 300,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk300_2
+    {
+        Weight	=	100.0,
+        Type	=	Normal,
+        DisplayName	=	Truck Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 300,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+    item Trunk300_3
+    {
+        Weight	=	100.0,
+        Type	=	Normal,
+        DisplayName	=	Truck Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 300,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+}

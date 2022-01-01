@@ -47,7 +47,7 @@ module Base
 				ATA_Bus_Kengur_2_Item = Bullbar2,
 				ATA_Bus_Kengur_3_Item = Bullbar3,
 			}
-			itemType = Autotsar.ATA_Bus_Kengur_1_Item;Autotsar.ATA_Bus_Kengur_1_Item;Autotsar.ATA_Bus_Kengur_1_Item,
+			itemType = Autotsar.ATA_Bus_Kengur_1_Item;Autotsar.ATA_Bus_Kengur_2_Item;Autotsar.ATA_Bus_Kengur_3_Item,
 			lua
 			{
 				create = ATATuning.Create.Chance0,

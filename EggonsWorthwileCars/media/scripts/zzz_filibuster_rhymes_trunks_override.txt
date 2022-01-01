@@ -1,0 +1,316 @@
+module Base
+{
+/************************TRUNKS AKA DRAGON BALLZ PUN************************/
+					/*******Tiny Trunk*******/
+	item FRTinyTrunk1
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Tiny Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 30,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+    item FRTinyTrunk2
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Tiny Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 40,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+    item FRTinyTrunk3
+    {
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Tiny Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 20,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+	    item FRTinyTrunk8
+    {
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Tiny Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 30,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+					/*******Small Trunk*******/
+    item FRSmallTrunk1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 40,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+
+
+    item FRSmallTrunk2
+    {
+        Weight	=	40.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 70,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+
+
+    item FRSmallTrunk3
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 30,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+
+	    item FRSmallTrunk8
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	Small Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 40,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 30,
+    }
+
+					/*******Normal Trunk*******/
+    item FRNormalTrunk1
+    {
+        Weight	=	35.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 55,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+    item FRNormalTrunk2
+    {
+        Weight	=	45.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 85,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+    item FRNormalTrunk3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 45,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+
+
+	    item FRNormalTrunk8
+    {
+        Weight	=	35.0,
+        Type	=	Normal,
+        DisplayName	=	Standard Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 60,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+	}
+
+					/*******Big Trunk*******/
+    item FRBigTrunk1
+    {
+        Weight	=	40.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 70,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+    }
+    item FRBigTrunk2
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 90,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+    }
+
+    item FRBigTrunk3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 50,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+    }
+
+
+	    item FRBigTrunk8
+    {
+        Weight	=	50.0,
+        Type	=	Normal,
+        DisplayName	=	Big Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 100,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+	}
+
+					/*******Large Trunk*******/
+    item FRLargeTrunk1
+    {
+        Weight	=	45.0,
+        Type	=	Normal,
+        DisplayName	=	Large Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 90,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+    }
+    item FRLargeTrunk2
+    {
+        Weight	=	55.0,
+        Type	=	Normal,
+        DisplayName	=	Large Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 120,
+
+        ConditionMax = 200,
+        ChanceToSpawnDamaged = 10,
+    }
+    item FRLargeTrunk3
+    {
+        Weight	=	35.0,
+        Type	=	Normal,
+        DisplayName	=	Large Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 70,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 10,
+    }
+    item FRLargeTrunk8
+    {
+        Weight	=	55.0,
+        Type	=	Normal,
+        DisplayName	=	Large Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 140,
+
+        ConditionMax = 200,
+        ChanceToSpawnDamaged = 10,
+    }
+
+
+					/*******Cargo Trunk*******/
+	    item FRCargoTrunk1
+    {
+        Weight	=	90.0,
+        Type	=	Normal,
+        DisplayName	=	Cargo Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   1,
+        MaxCapacity = 200,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 100,
+    }
+    item FRCargoTrunk2
+    {
+        Weight	=	100.0,
+        Type	=	Normal,
+        DisplayName	=	Cargo Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   2,
+        MaxCapacity = 300,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+    item FRCargoTrunk3
+    {
+        Weight	=	80.0,
+        Type	=	Normal,
+        DisplayName	=	Cargo Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   3,
+        MaxCapacity = 150,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+
+
+    item FRCargoTrunk8
+    {
+        Weight	=	100.0,
+        Type	=	Normal,
+        DisplayName	=	Cargo Trunk,
+        Icon	=	CarTrunk,
+        VehicleType =   8,
+        MaxCapacity = 300,
+
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+    }
+
+}

@@ -238,7 +238,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 5,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 
@@ -546,7 +546,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 5,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 
@@ -868,7 +868,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 5,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 
@@ -1209,7 +1209,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 5,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 
@@ -1568,7 +1568,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 5,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 

@@ -2,18 +2,19 @@ module Base
 {
 	model Vehicles_ATA_Bus
 	{
-		mesh = vehicles/ATA_Bus,
+		mesh = vehicles/ATA_Bus|Body,
 		shader = vehicle_norandom_multiuv,
 		invertX = FALSE,
 		scale = 0.01,
 	}
-	model Vehicles_ATA_Bus_nolightbar
+	model Vehicles_ATA_Bus_Lightbar
 	{
-		mesh = vehicles/ATA_Bus_nolightbar,
+		mesh = vehicles/ATA_Bus|Lightbar,
 		shader = vehicle_norandom_multiuv,
 		invertX = FALSE,
 		scale = 0.01,
 	}
+	
 	model ATA_Bus_WheelFront
 	{
 		mesh = vehicles/ATA_Bus_wheel_forward,

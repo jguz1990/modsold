@@ -240,7 +240,7 @@ module Base
 		{
 			container
 			{
-				capacity = 40,
+				capacity = 20,
 			}
 
 			table install
@@ -261,7 +261,7 @@ module Base
 
 			container
 			{
-				capacity = 15,
+				capacity = 3,
 				test = Vehicles.ContainerAccess.GloveBox,
 			}
 
