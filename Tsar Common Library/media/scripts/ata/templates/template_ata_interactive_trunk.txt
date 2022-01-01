@@ -73,7 +73,7 @@ module Base
 			repairMechanic = true,
 			container
 			{
-				conditionAffectsCapacity = true,
+				conditionAffectsCapacity = false,
 				test = ATATuning.ContainerAccess.ATAInteractiveTrunk,
 			}
 			table install

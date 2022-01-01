@@ -8,7 +8,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   1,
         MaxCapacity = 461,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 80,
         MechanicsItem = TRUE,
@@ -22,7 +22,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   2,
         MaxCapacity = 461,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 80,
         MechanicsItem = TRUE,
@@ -36,7 +36,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   3,
         MaxCapacity = 461,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 80,
         MechanicsItem = TRUE,
@@ -51,7 +51,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   1,
         MaxCapacity = 1000,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
         MechanicsItem = TRUE,
@@ -65,7 +65,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   2,
         MaxCapacity = 1000,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
         MechanicsItem = TRUE,
@@ -79,7 +79,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   3,
         MaxCapacity = 1000,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
         MechanicsItem = TRUE,
@@ -107,7 +107,7 @@ module Base
 			{
 				test = Vehicles.ContainerAccess.GasTank,
 				contentType = Gasoline Storage,
-				conditionAffectsCapacity = true,
+				conditionAffectsCapacity = false,
 			}
 			
 			lua
@@ -127,7 +127,7 @@ module Base
 			{
 				test = Vehicles.ContainerAccess.GasTank,
 				contentType = Gasoline Storage,
-				conditionAffectsCapacity = true,
+				conditionAffectsCapacity = false,
 			}
 			
 			lua

@@ -12,7 +12,7 @@ module Base
 			{
 				test = Vehicles.ContainerAccess.GasTank,
 				contentType = Gasoline,
-				conditionAffectsCapacity = true,
+				conditionAffectsCapacity = false,
 			}
 			lua
 			{

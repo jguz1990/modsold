@@ -548,7 +548,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   8,
         MaxCapacity = 55,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
     }
@@ -561,7 +561,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   8,
         MaxCapacity = 65,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
     }
@@ -574,7 +574,7 @@ module Base
         Icon	=	CarGastank,
         VehicleType =   8,
         MaxCapacity = 75,
-        ConditionAffectsCapacity = true,
+        conditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 60,
     }

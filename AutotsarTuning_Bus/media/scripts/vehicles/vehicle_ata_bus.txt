@@ -496,7 +496,7 @@ module Base
 
 			container
 			{
-				conditionAffectsCapacity = true,
+				conditionAffectsCapacity = false,
 				capacity = 60,
 			}
 		}
