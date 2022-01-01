@@ -1766,10 +1766,10 @@ local function WeaponLightBeam()
 		if attacker:isAiming() then
 			weapon:setTorchCone(true)
 			if (string.find(stock:getType(), "Small")) then
-				weapon:setLightDistance(10)
+				weapon:setLightDistance(15)
 				weapon:setLightStrength(1.5)
 			elseif (string.find(stock:getType(), "Large")) then
-				weapon:setLightDistance(20)
+				weapon:setLightDistance(30)
 				weapon:setLightStrength(1)
 			end
 		else	weapon:setTorchCone(false)
