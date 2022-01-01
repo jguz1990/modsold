@@ -248,7 +248,7 @@ module Base
 		{
 			container
 			{
-				capacity = 20,
+				capacity = 50,
 			}
 
 			table install
@@ -267,7 +267,7 @@ module Base
         {
             container
             {
-                capacity = 5,
+                capacity = 20,
             }
         }
 

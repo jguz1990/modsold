@@ -51,7 +51,7 @@ module Base
 			repairMechanic = true,
 			container
 			{
-				capacity = 100,
+				capacity = 400,
 				conditionAffectsCapacity = false,
 				/* FIXME: This should be "ContainerAccess.TruckBed" */
 				test = Vehicles.ContainerAccess.TruckBedOpen,

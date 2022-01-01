@@ -9,7 +9,7 @@ module Base
         DisplayName	=	Tiny Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 30,
+        MaxCapacity = 120,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -21,7 +21,7 @@ module Base
         DisplayName	=	Tiny Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 40,
+        MaxCapacity = 160,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -33,7 +33,7 @@ module Base
         DisplayName	=	Tiny Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 20,
+        MaxCapacity = 80,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -45,7 +45,7 @@ module Base
         DisplayName	=	Tiny Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 30,
+        MaxCapacity = 120,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -58,7 +58,7 @@ module Base
         DisplayName	=	Small Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 40,
+        MaxCapacity = 160,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -72,7 +72,7 @@ module Base
         DisplayName	=	Small Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 70,
+        MaxCapacity = 280,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -86,7 +86,7 @@ module Base
         DisplayName	=	Small Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 30,
+        MaxCapacity = 120,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -99,7 +99,7 @@ module Base
         DisplayName	=	Small Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 40,
+        MaxCapacity = 160,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 30,
@@ -113,7 +113,7 @@ module Base
         DisplayName	=	Standard Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 55,
+        MaxCapacity = 220,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -125,7 +125,7 @@ module Base
         DisplayName	=	Standard Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 85,
+        MaxCapacity = 340,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -137,7 +137,7 @@ module Base
         DisplayName	=	Standard Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 45,
+        MaxCapacity = 180,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -151,7 +151,7 @@ module Base
         DisplayName	=	Standard Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 60,
+        MaxCapacity = 240,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -165,7 +165,7 @@ module Base
         DisplayName	=	Big Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 70,
+        MaxCapacity = 280,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -177,7 +177,7 @@ module Base
         DisplayName	=	Big Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 90,
+        MaxCapacity = 360,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -190,7 +190,7 @@ module Base
         DisplayName	=	Big Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 50,
+        MaxCapacity = 200,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -204,7 +204,7 @@ module Base
         DisplayName	=	Big Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 100,
+        MaxCapacity = 400,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -218,7 +218,7 @@ module Base
         DisplayName	=	Large Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 90,
+        MaxCapacity = 360,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -230,7 +230,7 @@ module Base
         DisplayName	=	Large Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 120,
+        MaxCapacity = 480,
 
         ConditionMax = 200,
         ChanceToSpawnDamaged = 10,
@@ -242,7 +242,7 @@ module Base
         DisplayName	=	Large Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 70,
+        MaxCapacity = 280,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 10,
@@ -254,7 +254,7 @@ module Base
         DisplayName	=	Large Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 140,
+        MaxCapacity = 560,
 
         ConditionMax = 200,
         ChanceToSpawnDamaged = 10,
@@ -269,7 +269,7 @@ module Base
         DisplayName	=	Cargo Trunk,
         Icon	=	CarTrunk,
         VehicleType =   1,
-        MaxCapacity = 200,
+        MaxCapacity = 800,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 100,
@@ -281,7 +281,7 @@ module Base
         DisplayName	=	Cargo Trunk,
         Icon	=	CarTrunk,
         VehicleType =   2,
-        MaxCapacity = 300,
+        MaxCapacity = 1000,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -293,7 +293,7 @@ module Base
         DisplayName	=	Cargo Trunk,
         Icon	=	CarTrunk,
         VehicleType =   3,
-        MaxCapacity = 150,
+        MaxCapacity = 600,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -307,7 +307,7 @@ module Base
         DisplayName	=	Cargo Trunk,
         Icon	=	CarTrunk,
         VehicleType =   8,
-        MaxCapacity = 300,
+        MaxCapacity = 1000,
 
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
