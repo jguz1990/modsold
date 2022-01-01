@@ -71,6 +71,9 @@ mods
 	mod = SlingModFix,
 	mod = CCFastReadx100,
 	mod = BackpackerTrait,
+	mod = DisableCarWear,
+	mod = eggonsWorthwileCars,
+	mod = VehiclePartsRepair,
 }
 
 maps
