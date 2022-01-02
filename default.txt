@@ -76,6 +76,7 @@ mods
 	mod = Brita,
 	mod = Brita_2,
 	mod = SimpleConvertToBrita,
+	mod = ModManager,
 }
 
 maps
