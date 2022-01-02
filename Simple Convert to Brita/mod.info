@@ -1,0 +1,7 @@
+name=Simple Convert to Brita
+poster=poster.png
+id=SimpleConvertToBrita
+description=This is just a simple mod to fix an annoying problem.
+description=
+description=(41.65)(26dec21)
+require=Arsenal(26)GunFighter,Brita

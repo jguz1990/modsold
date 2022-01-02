@@ -1,0 +1,108 @@
+module Base
+{
+	recipe Convert to Beretta M9
+		{
+			Pistol,
+			
+			Result:Base.M9,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to Colt 1911
+		{
+			Pistol2,
+			
+			Result:Base.Colt1911,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to IMI Desert Eagle
+		{
+			Pistol3,
+			
+			Result:Base.DEagle,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to Taurus 856
+		{
+			Revolver_Short,
+			
+			Result:Base.Taurus856,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to Colt Service 45
+		{
+			Revolver,
+			
+			Result:Base.Colt_Service45,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to S&W Model 29
+		{
+			Revolver_Long,
+			
+			Result:Base.M29_44,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to M16A2
+		{
+			AssaultRifle,
+			
+			Result:Base.M16A2,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to M14
+		{
+			AssaultRifle2,
+			
+			Result:Base.M14,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to Colt Winchester 1894
+		{
+			VarmintRifle,
+			
+			Result:Base.Win_1894,
+			Time:10.0,
+			Category:Firearms,
+		}
+
+	recipe Convert to M40
+		{
+			HuntingRifle,
+			
+			Result:Base.M40,
+			Time:10.0,
+			Category:Firearms,
+		}
+}
+
+/*				REFERENCE ONLY						*/
+/* Note: Vanilla Shotguns are integrated into Brita */
+
+/*	Pistol			"Base.M9",				*/
+/*	Pistol2			"Base.Colt1911",		*/
+/*	Pistol3			"Base.DEagle",			*/
+/*	Revolver_Short	"Base.Colt_Service38",	*/
+/*	Revolver		"Base.Colt_Service45",	*/
+/*	Revolver_Long	"Base.M29_44,			*/
+
+/*	AssaultRifle	"Base.M16A2",			*/
+/*	AssaultRifle2	"Base.M14",				*/
+
+/*	VarmintRifle	"Base.Win_1894",		*/
+/*	HuntingRifle	"Base.M40",				*/
