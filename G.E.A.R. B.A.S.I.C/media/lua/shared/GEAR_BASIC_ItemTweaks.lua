@@ -1,7 +1,6 @@
-
-
-
-
+if  getActivatedMods():contains("ItemTweakerAPI")  then
+require("ItemTweaker_Core");
+else  return  end
 
 
 TweakItem("Base.Bullets9mmBox", "StaticModel",  "pouch");
