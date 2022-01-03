@@ -16,7 +16,7 @@ module Base
 	item 9mmClip
 	{
 		CanStack	=	FALSE,
-		Weight		=	0.01,
+		Weight		=	0.001,
 		Type		=	Normal,
 		DisplayName	=	9x19mm Dbl-Stack Magazine,
         	DisplayCategory =	GunMag,
@@ -29,7 +29,7 @@ module Base
 	item 45Clip
 	{
 		CanStack	=	FALSE,
-		Weight		=	0.01,
+		Weight		=	0.001,
 		Type		=	Normal,
 		DisplayName	=	45-ACP Sgl-Stack Magazine,
         	DisplayCategory =	GunMag,
@@ -42,7 +42,7 @@ module Base
 	item 44Clip
 	{
 		CanStack	=	FALSE,
-		Weight		=	0.01,
+		Weight		=	0.001,
 		Type		=	Normal,
 		DisplayName	=	44-Mag Dbl-Stack Magazine,
         	DisplayCategory =	GunMag,
@@ -55,7 +55,7 @@ module Base
 	item 223Clip						-- USE NEW ITEM NAME FOR MINI 10's
 	{
 	        CanStack	=	FALSE,
-			Weight		=	0.01,
+			Weight		=	0.001,
 	        Type		=	Normal,
         	DisplayName	=	223-REM Hunting Magazine,
         	DisplayCategory =	GunMag,
@@ -68,7 +68,7 @@ module Base
 	item 556Clip
 	{
 		CanStack	=	FALSE,
-			Weight		=	0.01,
+			Weight		=	0.001,
 		Type		=	Normal,
 		DisplayName	=	5.56x45mm STANAG Magazine,
         	DisplayCategory =	GunMag,
@@ -81,7 +81,7 @@ module Base
 	item 308Clip						-- USE NEW ITEM NAME FOR NATO 20's
 	{
 	        CanStack	=	FALSE,
-			Weight		=	0.01,
+			Weight		=	0.001,
 	        Type		=	Normal,
         	DisplayName	=	308-WIN Hunting Magazine,
         	DisplayCategory =	GunMag,
@@ -99,7 +99,7 @@ module Base
 	item BB177
 	{
         	Count		=	5,
-	        Weight		=	0.001,
+	        Weight		=	0.0001,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
 	        DisplayName	=	.177 BB's,
@@ -139,7 +139,7 @@ module Base
 	item Bullets22
 	{
         	Count		=	5,
-	        Weight		=	0.001,
+	        Weight		=	0.0001,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
 	        DisplayName	=	22-LR Round,
@@ -148,7 +148,7 @@ module Base
 	}
 	item Bullets22Box		/* BOX OF 100 */
 	{
-	        Weight		=	0.05,
+	        Weight		=	0.005,
         	Type		=	Normal,
 	        DisplayName	=	Box of 22-LR Rounds,
 		DisplayCategory	=	Ammo,
@@ -180,7 +180,7 @@ module Base
 	item Bullets57
 	{
         	Count		=	5,
-	        Weight		=	0.001,		/* SAME AS 9mm */
+	        Weight		=	0.0001,		/* SAME AS 9mm */
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
 	        DisplayName	=	5.7x28mm Round,
@@ -189,7 +189,7 @@ module Base
 	}
 	item Bullets57Box
 	{
-	        Weight		=	0.05,		/* SAME AS 9mm */
+	        Weight		=	0.005,		/* SAME AS 9mm */
         	Type		=	Normal,
 	        DisplayName	=	Box of 5.7x28mm Rounds,
 		DisplayCategory	=	Ammo,
@@ -220,7 +220,7 @@ module Base
 	item Bullets380
 	{
         	Count		=	5,
-	        Weight		=	0.001,
+	        Weight		=	0.0001,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
 	        DisplayName	=	380-ACP Round,
@@ -229,7 +229,7 @@ module Base
 	}
 	item Bullets380Box
 	{
-	        Weight		=	0.05,
+	        Weight		=	0.005,
         	Type		=	Normal,
 	        DisplayName	=	Box of 380-ACP Rounds,
 		DisplayCategory	=	Ammo,
@@ -261,7 +261,7 @@ module Base
 	item Bullets9mm
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	9x19mm Round,
@@ -270,7 +270,7 @@ module Base
 	}
 	item Bullets9mmBox		/* BOX OF 50 */
 	{
-		Weight		=	0.05,
+		Weight		=	0.005,
 		Type		=	Normal,
 		DisplayName	=	Box of 9x19mm Rounds,
 		DisplayCategory	=	Ammo,
@@ -304,7 +304,7 @@ module Base
 	item Bullets38
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	38-SPC Round,
@@ -313,7 +313,7 @@ module Base
 	}
 	item Bullets38Box		/* BOX OF 50 */
 	{
-		Weight		=	0.05,
+		Weight		=	0.005,
 		Type		=	Normal,
 		DisplayName	=	Box of 38-SPC Rounds,
 		DisplayCategory	=	Ammo,
@@ -356,7 +356,7 @@ module Base
 	item Bullets357
 	{
         	Count		=	5,
-	        Weight		=	0.001,
+	        Weight		=	0.0001,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
 	        DisplayName	=	357-MAG Round,
@@ -365,7 +365,7 @@ module Base
 	}
 	item Bullets357Box
 	{
-	        Weight		=	0.05,
+	        Weight		=	0.005,
         	Type		=	Normal,
 	        DisplayName	=	Box of 357-MAG Rounds,
 		DisplayCategory	=	Ammo,
@@ -397,7 +397,7 @@ module Base
 	item Bullets45
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	45-ACP Round,
@@ -406,7 +406,7 @@ module Base
 	}
 	item Bullets45Box		/* BOX OF 50 */
 	{
-		Weight		=	0.05,
+		Weight		=	0.005,
 		Type		=	Normal,
 		DisplayName	=	Box of 45-ACP Rounds,
 		DisplayCategory	=	Ammo,
@@ -440,7 +440,7 @@ module Base
 	item Bullets45LC
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	45-LC Round,
@@ -449,7 +449,7 @@ module Base
 	}
 	item Bullets45LCBox		/* BOX OF 50 */
 	{
-		Weight		=	0.05,
+		Weight		=	0.005,
 		Type		=	Normal,
 		DisplayName	=	Box of 45-LC Rounds,
 		DisplayCategory	=	Ammo,
@@ -483,7 +483,7 @@ module Base
 	item Bullets44
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	44-MAG Round,
@@ -492,7 +492,7 @@ module Base
 	}
 	item Bullets44Box		/* BOX OF 50 */
 	{
-		Weight		=	0.05,
+		Weight		=	0.005,
 		Type		=	Normal,
 		DisplayName	=	Box of 44-MAG Rounds,
 		DisplayCategory	=	Ammo,
@@ -526,7 +526,7 @@ module Base
 	item Bullets4570
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	45-70 GOV Round,
@@ -535,7 +535,7 @@ module Base
 	}
 	item Bullets4570Box		/* BOX OF 20 */
 	{
-		Weight		=	0.02,
+		Weight		=	0.002,
 		Type		=	Normal,
 		DisplayName	=	Box of 45-70 GOV Rounds,
 		DisplayCategory	=	Ammo,
@@ -547,7 +547,7 @@ module Base
 	recipe Open Box of .45-70 GOV Bullets
 	{
 		Bullets4570Box,
-		Result:Bullets4570=4,
+		Result:Bullets4570=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -555,7 +555,7 @@ module Base
 	}
 	recipe Place .45-70 GOV Bullets in Box
 	{
-		Bullets4570=20,
+		Bullets4570=60,
 		Result:Bullets4570Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -569,7 +569,7 @@ module Base
 	item Bullets50MAG
 	{
 		Count		=	5,
-		Weight		=	0.002,
+		Weight		=	0.0002,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
 		DisplayName	=	.50 MAG Round,
@@ -578,7 +578,7 @@ module Base
 	}
 	item Bullets50MAGBox		/* BOX OF 20 */
 	{
-		Weight		=	0.04,
+		Weight		=	0.004,
 		Type		=	Normal,
 		DisplayName	=	Box of 50 MAG Rounds,
 		DisplayCategory	=	Ammo,
@@ -590,7 +590,7 @@ module Base
 	recipe Open Box of .50 MAG Bullets
 	{
 		Bullets50MAGBox,
-		Result:Bullets50MAG=4,
+		Result:Bullets50MAG=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -598,7 +598,7 @@ module Base
 	}
 	recipe Place .50 MAG Bullets in Box
 	{
-		Bullets50MAG=20,
+		Bullets50MAG=60,
 		Result:Bullets50MAGBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -612,7 +612,7 @@ module Base
 	item 410gShotgunShells			/* BOX OF 25 */
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		AlwaysWelcomeGift =	TRUE,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
@@ -622,7 +622,7 @@ module Base
 	}
 	item 410gShotgunShellsBox
 	{
-	        Weight		=	0.025,
+	        Weight		=	0.0025,
 	        Type		=	Normal,
         	DisplayName	=	Box of 410g Shotgun Shells,
 		DisplayCategory	=	Ammo,
@@ -634,7 +634,7 @@ module Base
 	recipe Open Box of 410g Shotgun Shells
 	{
 		410gShotgunShellsBox,
-		Result:410gShotgunShells=5,
+		Result:410gShotgunShells=15,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -642,7 +642,7 @@ module Base
 	}
 	recipe Place 410g Shotgun Shells in Box
 	{
-		410gShotgunShells=25,
+		410gShotgunShells=75,
 		Result:410gShotgunShellsBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -657,7 +657,7 @@ module Base
 	item 20gShotgunShells			/* BOX OF 25 */
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		AlwaysWelcomeGift =	TRUE,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
@@ -667,7 +667,7 @@ module Base
 	}
 	item 20gShotgunShellsBox
 	{
-	        Weight		=	0.025,
+	        Weight		=	0.0025,
 	        Type		=	Normal,
         	DisplayName	=	Box of 20g Shotgun Shells,
 		DisplayCategory	=	Ammo,
@@ -679,7 +679,7 @@ module Base
 	recipe Open Box of 20g Shotgun Shells
 	{
 		20gShotgunShellsBox,
-		Result:20gShotgunShells=5,
+		Result:20gShotgunShells=15,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -687,7 +687,7 @@ module Base
 	}
 	recipe Place 20g Shotgun Shells in Box
 	{
-		20gShotgunShells=25,
+		20gShotgunShells=75,
 		Result:20gShotgunShellsBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -701,7 +701,7 @@ module Base
 	item ShotgunShells			/* BOX OF 25 */
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		AlwaysWelcomeGift =	TRUE,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
@@ -711,7 +711,7 @@ module Base
 	}
 	item ShotgunShellsBox
 	{
-	        Weight		=	0.025,
+	        Weight		=	0.0025,
 	        Type		=	Normal,
         	DisplayName	=	Box of 12g Shotgun Shells,
 		DisplayCategory	=	Ammo,
@@ -723,7 +723,7 @@ module Base
 	recipe Open Box of Shotgun Shells
 	{
 		ShotgunShellsBox,
-		Result:ShotgunShells=5,
+		Result:ShotgunShells=15,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -731,7 +731,7 @@ module Base
 	}
 	recipe Place Shotgun Shells in Box
 	{
-		ShotgunShells=25,
+		ShotgunShells=75,
 		Result:ShotgunShellsBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -745,7 +745,7 @@ module Base
 	item 10gShotgunShells			/* BOX OF 25 */
 	{
 		Count		=	5,
-		Weight		=	0.001,
+		Weight		=	0.0001,
 		AlwaysWelcomeGift =	TRUE,
 		Type		=	Normal,
 		DisplayCategory =	Ammo,
@@ -755,7 +755,7 @@ module Base
 	}
 	item 10gShotgunShellsBox
 	{
-	        Weight		=	0.025,
+	        Weight		=	0.0025,
 	        Type		=	Normal,
         	DisplayName	=	Box of 10g Shotgun Shells,
 		DisplayCategory	=	Ammo,
@@ -767,7 +767,7 @@ module Base
 	recipe Open Box of 10g Shotgun Shells
 	{
 		10gShotgunShellsBox,
-		Result:10gShotgunShells=5,
+		Result:10gShotgunShells=15,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -775,7 +775,7 @@ module Base
 	}
 	recipe Place 10g Shotgun Shells in Box
 	{
-		10gShotgunShells=25,
+		10gShotgunShells=75,
 		Result:10gShotgunShellsBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -789,7 +789,7 @@ module Base
 	item 4gShotgunShells
 	{
         	Count		=	5,
-	        Weight		=	0.001,
+	        Weight		=	0.0001,
         	AlwaysWelcomeGift =	TRUE,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
@@ -799,7 +799,7 @@ module Base
 	}
 	item 4gShotgunShellsBox		/* BOX OF 10 */
 	{
-	        Weight		=	0.025,
+	        Weight		=	0.0025,
         	Type		=	Normal,
 	        DisplayName	=	Box of 4g Shotgun Shells,
 		DisplayCategory	=	Ammo,
@@ -811,14 +811,14 @@ module Base
 	recipe Open Box of 4g Shotgun Shells
 	{
         	4gShotgunShellsBox,
-	        Result:4gShotgunShells=2,
+	        Result:4gShotgunShells=6,
 		Category:Firearm,
         	Sound:PutItemInBag,
 	        Time:5.0,
 	}
 	recipe Place 4g Shotgun Shells in Box
 	{
-	        4gShotgunShells=10,
+	        4gShotgunShells=30,
 	        Result:4gShotgunShellsBox,
 		Category:Firearm,
         	Sound:PutItemInBag,
@@ -831,7 +831,7 @@ module Base
 	item 223Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	223-REM Round,
@@ -841,7 +841,7 @@ module Base
 	}
 	item 223Box			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
         	AlwaysWelcomeGift =	TRUE,
 	        Type		=	Normal,
         	DisplayName	=	Box of 223-REM Rounds,
@@ -854,7 +854,7 @@ module Base
 	recipe Open Box of .223 Ammo
 	{
 		223Box,
-		Result:223Bullets=4,
+		Result:223Bullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -862,7 +862,7 @@ module Base
 	}
 	recipe Place .223 Ammo in Box
 	{
-		223Bullets=20,
+		223Bullets=60,
 		Result:223Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -876,7 +876,7 @@ module Base
 	item 556Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	5.56x45mm Round,
@@ -886,7 +886,7 @@ module Base
 	}
 	item 556Box			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
 	        Type		=	Normal,
 	        DisplayName	=	Box of 5.56x45mm Rounds,
@@ -899,7 +899,7 @@ module Base
 	recipe Open Box of .556 Ammo
 	{
 		556Box,
-		Result:556Bullets=4,
+		Result:556Bullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -907,7 +907,7 @@ module Base
 	}
 	recipe Place .556 Ammo in Box
 	{
-		556Bullets=20,
+		556Bullets=60,
 		Result:556Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -921,7 +921,7 @@ module Base
 	item 545x39Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayCategory =	Ammo,
@@ -931,7 +931,7 @@ module Base
 	}
 	item 545x39Box
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 5.45x39mm Rounds,
@@ -944,14 +944,14 @@ module Base
 	recipe Open Box of 5.45x39 Rounds
 	{
 	        545x39Box,
-	        Result:545x39Bullets=4,
+	        Result:545x39Bullets=12,
 		Category:Firearm,
 	        Sound:PutItemInBag,
 	        Time:5.0,
 	}
 	recipe Place 5.45x39 Rounds in Box
 	{
-	        545x39Bullets=20,
+	        545x39Bullets=60,
 	        Result:545x39Box,
 		Category:Firearm,
         	Sound:PutItemInBag,
@@ -964,7 +964,7 @@ module Base
 	item 762x39Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayCategory =	Ammo,
@@ -974,7 +974,7 @@ module Base
 	}
 	item 762x39Box
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 7.62x39mm Rounds,
@@ -987,14 +987,14 @@ module Base
 	recipe Open Box of 7.62x39 Rounds
 	{
 	        762x39Box,
-	        Result:762x39Bullets=4,
+	        Result:762x39Bullets=12,
 		Category:Firearm,
 	        Sound:PutItemInBag,
 	        Time:5.0,
 	}
 	recipe Place 7.62x39 Rounds in Box
 	{
-	        762x39Bullets=20,
+	        762x39Bullets=60,
 	        Result:762x39Box,
 		Category:Firearm,
         	Sound:PutItemInBag,
@@ -1007,7 +1007,7 @@ module Base
 	item 308Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	308-WIN Round,
@@ -1017,7 +1017,7 @@ module Base
 	}
 	item 308Box			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 308-WIN Rounds,
@@ -1030,7 +1030,7 @@ module Base
 	recipe Open Box of .308 Ammo
 	{
 		308Box,
-		Result:308Bullets=4,
+		Result:308Bullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -1038,7 +1038,7 @@ module Base
 	}
 	recipe Place .308 Ammo in Box
 	{
-		308Bullets=20,
+		308Bullets=60,
 		Result:308Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -1052,7 +1052,7 @@ module Base
 	item 762x51Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	7.62x51mm-NATO Round,
@@ -1062,7 +1062,7 @@ module Base
 	}
 	item 762x51Box			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 7.62x51mm-NATO Rounds,
@@ -1075,7 +1075,7 @@ module Base
 	recipe Open Box of 7.62x51mm NATO Ammo
 	{
 		762x51Box,
-		Result:762x51Bullets=4,
+		Result:762x51Bullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -1083,7 +1083,7 @@ module Base
 	}
 	recipe Place 7.62x51mm NATO Ammo in Box
 	{
-		762x51Bullets=20,
+		762x51Bullets=60,
 		Result:762x51Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -1097,7 +1097,7 @@ module Base
 	item 762x54rBullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	7.62x54mm-R Round,
@@ -1107,7 +1107,7 @@ module Base
 	}
 	item 762x54rBox			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 7.62x54mm-R Rounds,
@@ -1120,7 +1120,7 @@ module Base
 	recipe Open Box of 7.62x54mm-Rimmed Ammo
 	{
 		762x54rBox,
-		Result:762x54rBullets=4,
+		Result:762x54rBullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -1128,7 +1128,7 @@ module Base
 	}
 	recipe Place 7.62x54mm-Rimmed Ammo in Box
 	{
-		762x54rBullets=20,
+		762x54rBullets=60,
 		Result:762x54rBox,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -1142,7 +1142,7 @@ module Base
 	item 3006Bullets
 	{
 	        Count		=	5,
-        	Weight		=	0.001,
+        	Weight		=	0.0001,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	30-06 SPRG Round,
@@ -1152,7 +1152,7 @@ module Base
 	}
 	item 3006Box			/* BOX OF 20 */
 	{
-	        Weight		=	0.06,
+	        Weight		=	0.006,
 	        AlwaysWelcomeGift =	TRUE,
         	Type		=	Normal,
 	        DisplayName	=	Box of 30-06 SPRG Rounds,
@@ -1165,7 +1165,7 @@ module Base
 	recipe Open Box of 30-06 SPRG Ammo
 	{
 		3006Box,
-		Result:3006Bullets=4,
+		Result:3006Bullets=12,
 		Category:Firearm,
 		Sound:PutItemInBag,
 		Time:5.0,
@@ -1173,7 +1173,7 @@ module Base
 	}
 	recipe Place 30-06 SPRG Ammo in Box
 	{
-		3006Bullets=20,
+		3006Bullets=60,
 		Result:3006Box,
 		Category:Firearm,
 		Sound:PutItemInBag,
@@ -1188,7 +1188,7 @@ module Base
 	item 50BMGBullets
 	{
         	Count		=	5,
-	        Weight		=	0.005,
+	        Weight		=	0.0005,
         	AlwaysWelcomeGift =	TRUE,
 	        Type		=	Normal,
         	DisplayCategory =	Ammo,
@@ -1198,7 +1198,7 @@ module Base
 	}
 	item 50BMGBox			/* BOX OF 10 */
 	{
-	        Weight		=	0.05,
+	        Weight		=	0.005,
         	Type		=	Normal,
 	        DisplayName	=	Box of 50-BMG Rounds,
 		DisplayCategory	=	Ammo,
@@ -1210,14 +1210,14 @@ module Base
 	recipe Open Box of .50-BMG Rounds
 	{
         	50BMGBox,
-	        Result:50BMGBullets=2,
+	        Result:50BMGBullets=6,
 		Category:Firearm,
         	Sound:PutItemInBag,
 	        Time:5.0,
 	}
 	recipe Place .50-BMG Rounds in Box
 	{
-	        50BMGBullets=10,
+	        50BMGBullets=30,
 	        Result:50BMGBox,
 		Category:Firearm,
         	Sound:PutItemInBag,
@@ -1265,7 +1265,7 @@ module Base
 	item FlameFuel
 	{
 		Count			=	1,
-		Weight			=	0.01,
+		Weight			=	0.001,
 		Type			=	Normal,
 		DisplayCategory 	=	Ammo,
 		DisplayName		=	Flame Thrower Fuel,
