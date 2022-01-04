@@ -1,0 +1,5 @@
+name=ExtraSauce QoL MP test
+id=esQoLMP
+require=modoptions
+poster=esqPreview.png
+description=MP test MP test MP test

@@ -1,8 +1,0 @@
-Tooltip_RU = {
-	-- Item tooltip
-	Tooltip_item_BoatMechanic = "Тип лодки",
-	Tooltip_BoatDashboard_SpeedValueButton = "Единицы измерения",
-	Tooltip_Boat_LowBattery = "Низкий уровень аккумулятора",
-	Tooltip_item_BoatMag = "Инструкция, содержащая диаграммы и общие задачи обслуживания для популярных моделей лодок.",
-	Tooltip_item_SwimMag = "Журнал о самых эффективных способах плавания. Интервью с лучшими плавцами страны.<br>Обзоры плавок, шапок и очков для плавания.", 
-}

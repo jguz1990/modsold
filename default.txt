@@ -17,7 +17,6 @@ mods
 	mod = GEARBASIC,
 	mod = GEARCORE,
 	mod = PlayerTraps,
-	mod = AquatsarYachtClub,
 	mod = tsarslib,
 	mod = Arsenal(26)GunFighter,
 	mod = AutoSmoke,
@@ -33,7 +32,6 @@ mods
 	mod = EasyConfigChucked,
 	mod = eggonsHaveIFoundThisBook,
 	mod = eggonsModdingUtils,
-	mod = ExtraSauceInstantConsolidate,
 	mod = FRUsedCarsNRN,
 	mod = FRUsedCars,
 	mod = MilitaryUsedCarSkins,
@@ -77,6 +75,8 @@ mods
 	mod = Brita_2,
 	mod = SimpleConvertToBrita,
 	mod = ModManager,
+	mod = esQoL,
+	mod = muldraughmilitarybase,
 }
 
 maps
