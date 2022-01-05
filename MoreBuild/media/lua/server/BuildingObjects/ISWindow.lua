@@ -1,8 +1,8 @@
 require 'TimedActions/ISBaseTimedAction'
 
-ISWindow = ISBuildingObject:derive('ISWindow')
+ISWindowObj = ISBuildingObject:derive('ISWindowObj')
 
-function ISWindow:create(x, y, z, north, sprite)
+function ISWindowObj:create(x, y, z, north, sprite)
   local cell = getWorld():getCell()
   local direction = nil
   self.sq = cell:getGridSquare(x, y, z)
@@ -22,7 +22,7 @@ function ISWindow:create(x, y, z, north, sprite)
   self.javaObject:transmitCompleteItemToServer()
 end
 
-function ISWindow:isValid(square)
+function ISWindowObj:isValid(square)
   local direction = nil
   for i = 0, square:getObjects():size() - 1 do
     local obj = square:getObjects():get(i)
@@ -40,10 +40,10 @@ function ISWindow:isValid(square)
   return ISMoveableSpriteProps:getWallForFacing(square, direction, 'WindowFrame')
 end
 
-function ISWindow:update()
+function ISWindowObj:update()
 end
 
-function ISWindow:stop()
+function ISWindowObj:stop()
   if self.sound then
     getSoundManager():StopSound(self.sound)
   end
@@ -51,14 +51,14 @@ function ISWindow:stop()
   ISBaseTimedAction.stop(self)
 end
 
-function ISWindow:start()
+function ISWindowObj:start()
 end
 
-function ISWindow:perform()
+function ISWindowObj:perform()
   ISBaseTimedAction.perform(self)
 end
 
-function ISWindow:new(sprite, northSprite, corner)
+function ISWindowObj:new(sprite, northSprite, corner)
   local o = {}
   setmetatable(o, self)
   self.__index = self
@@ -75,6 +75,6 @@ function ISWindow:new(sprite, northSprite, corner)
   return o
 end
 
-function ISWindow:render(x, y, z, square)
+function ISWindowObj:render(x, y, z, square)
   ISBuildingObject.render(self, x, y, z, square)
 end
