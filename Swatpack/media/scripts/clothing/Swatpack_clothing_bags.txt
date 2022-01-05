@@ -9,7 +9,7 @@ module Base
         BodyLocation = Belt421,
         Icon = SPouch,
         WeightReduction	=	100,
-	Capacity = 30,
+		Capacity = 30,
         ClothingItemExtra = SWATPouch,
         ClothingItemExtraOption = WearIt,
         CanBeEquipped = Belt421,
