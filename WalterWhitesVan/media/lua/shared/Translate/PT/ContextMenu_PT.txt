@@ -1,0 +1,4 @@
+ContextMenu_PT = {
+	ContextMenu_VehicleCoolerOn = "Ligar Refrigeração",
+	ContextMenu_VehicleCoolerOff = "Desligar Refrigeração",
+}

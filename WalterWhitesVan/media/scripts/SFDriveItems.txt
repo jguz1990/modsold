@@ -1,0 +1,55 @@
+module filcher
+{
+	imports
+	{
+		Base
+	}
+
+/************************Camper Van Parts************************/
+
+    item SFCarCounter
+    {
+        Weight	=	7.5,
+        Type	=	Normal,
+        DisplayName	=	Counter,
+        Icon	=	media/ui/Container_Cabinet,
+        MaxCapacity = 100,
+				ConditionMax = 100,
+    }
+
+    item SFCarFridge
+    {
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Fridge,
+        Icon	=	media/ui/Container_Fridge,
+        MaxCapacity = 100,
+				ConditionMax = 100,
+    }
+
+    item SFCarOven
+    {
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Oven,
+        Icon	=	media/ui/Container_Oven,
+        MaxCapacity = 20,
+				ConditionMax = 100,
+    }
+
+/************************Miscellaneous Items************************/
+
+
+    item CorpseToken
+	{
+		Weight	=	20.0,
+		Type	=	Normal,
+		DisplayName	=	Corpse,
+		Icon = media/ui/Container_DeadPerson_MaleZombie.png,
+		RequiresEquippedBothHands = true
+	}
+
+/************************Recipes - Miscellaneous************************/
+
+
+}

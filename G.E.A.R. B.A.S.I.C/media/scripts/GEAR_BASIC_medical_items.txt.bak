@@ -1,0 +1,66 @@
+module Base
+{
+   	item Bandaid
+	{
+		Type				=			Normal,
+		DisplayName			=			Adhesive Bandages,
+		Icon				=			Bandaid,
+		Weight				=			0.1,
+        CanBandage	=	true,
+        BandagePower    =   1.5,
+        Tooltip = Tooltip_UseOnHealthPanel,
+        Medical = TRUE,
+		AttachmentType = Gear,
+		StaticModel = pouchmed,
+	}
+
+	item Bandage
+	{
+		Count	=	1,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Normal,
+		DisplayName	=	Bandage,
+		ReplaceOnUse    =   BandageDirty,
+		Icon	=	Bandage,
+		CanBandage	=	true,
+		BandagePower    =   4,
+		Tooltip = Tooltip_UseOnHealthPanel,
+		Medical = TRUE,
+		AttachmentType = Gear,
+		StaticModel = pouchmed,
+	}
+
+    item AlcoholBandage
+    {
+        Count	=	1,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	true,
+        Type	=	Normal,
+        DisplayName	=	Sterilized Bandage,
+        ReplaceOnUse    =   BandageDirty,
+        Alcoholic	=	TRUE,
+        Icon	=	Bandage,
+        CanBandage	=	true,
+        BandagePower    =   4,
+        Tooltip = Tooltip_AlcoholBandage,
+        Medical = TRUE,
+		AttachmentType = Gear,
+		StaticModel = pouchmed,
+    } 
+
+   item SutureNeedle
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Suture Needle,
+		Icon	=	SutureNeedle,
+		MetalValue = 5,
+		Tooltip = Tooltip_SutureNeedle,
+		Medical = TRUE,
+		AttachmentType = Gear,
+		StaticModel = pouchmed,
+	}
+
+}
+

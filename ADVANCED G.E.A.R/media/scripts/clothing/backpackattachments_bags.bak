@@ -21,7 +21,8 @@ module Base
 
 	item Bag_Schoolbag_WithAttachment
     {
-        WeightReduction	=	100,        Weight = 0.001,
+        WeightReduction	=	60,
+        Weight	=	1,
         Type	=	Container,
         Capacity	=	15,
         DisplayName	=	School Bag with Attachment Point,
@@ -41,7 +42,8 @@ module Base
 
 	item Bag_Schoolbag_LHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	60,
+        Weight	=	1,
         Type	=	Container,
         Capacity	=	15,
         DisplayName	=	R School Bag,
@@ -60,7 +62,8 @@ module Base
     }
 	item Bag_Schoolbag_RHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	60,
+        Weight	=	1,
         Type	=	Container,
         Capacity	=	15,
         DisplayName	=	SR chool Bag,
@@ -116,7 +119,8 @@ module Base
 
     item Bag_NormalHikingBag_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag with Attachment Point,
@@ -136,7 +140,8 @@ module Base
 
 	item Bag_NormalHikingBag_LHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag,
@@ -154,7 +159,8 @@ module Base
     }
 	item Bag_NormalHikingBag_RHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag,
@@ -175,7 +181,8 @@ module Base
 
     item Bag_NormalHikingBag_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag with 2 Attachment Points,
@@ -196,7 +203,8 @@ module Base
 
 	item Bag_NormalHikingBag_LHand_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag,
@@ -214,7 +222,8 @@ module Base
     }
 	item Bag_NormalHikingBag_RHand_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	70,
+        Weight	=	1.2,
         Type	=	Container,
         Capacity	=	20,
         DisplayName	=	Hiking Bag,
@@ -268,7 +277,8 @@ module Base
     }
     item Bag_BigHikingBag_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	80,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag with Attachment Point,
@@ -288,7 +298,8 @@ module Base
 
 	item Bag_BigHikingBag_LHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	78,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag,
@@ -306,7 +317,8 @@ module Base
     }
 	item Bag_BigHikingBag_RHand_WithAttachment
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	78,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag,
@@ -325,7 +337,8 @@ module Base
 
     item Bag_BigHikingBag_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	80,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag with 2 Attachment Points,
@@ -345,7 +358,8 @@ module Base
 
 	item Bag_BigHikingBag_LHand_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	78,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag,
@@ -363,7 +377,8 @@ module Base
     }
 	item Bag_BigHikingBag_RHand_With2Attachments
     {
-        WeightReduction	=	100,        Weight	=	0.001,
+        WeightReduction	=	78,
+        Weight	=	1.5,
         Type	=	Container,
         Capacity	=	22,
         DisplayName	=	Big Hiking Bag,
@@ -385,7 +400,8 @@ module Base
         DisplayName = Backpack with Attachment Point,
         ClothingItem = Bag_SurvivorBag2,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -403,7 +419,8 @@ module Base
         DisplayName = Backpack with 2 Attachment Points,
         ClothingItem = Bag_SurvivorBag,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -421,7 +438,8 @@ module Base
         DisplayName = Backpack with 3 Attachment Points,
         ClothingItem = Bag_SurvivorBag,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -461,7 +479,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_LHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -482,7 +501,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_RHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -525,7 +545,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_LHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -546,7 +567,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_RHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -589,7 +611,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_LHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -610,7 +633,8 @@ module Base
         Type = Container,
         DisplayName = Large Backpack,
         ClothingItem = Bag_ALICEpack_RHand,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag,
         OpenSound   =   OpenBag,
@@ -655,7 +679,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_LHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,
@@ -675,7 +700,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_RHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,
@@ -719,7 +745,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_LHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,
@@ -739,7 +766,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_RHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,
@@ -784,7 +812,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_LHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,
@@ -804,7 +833,8 @@ module Base
         DisplayName = Military Backpack,
         ClothingItem = Bag_ALICEpack_Army_RHand,
         CanBeEquipped = Back,
-        WeightReduction	=	100,        Weight	=	2,
+        WeightReduction	=	90,
+        Weight	=	2,
         Capacity	=	30,
         Icon	=	AliceBag_Camo,
         OpenSound   =   OpenBag,

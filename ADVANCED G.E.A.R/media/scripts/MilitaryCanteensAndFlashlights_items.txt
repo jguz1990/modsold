@@ -80,6 +80,7 @@ module Base
 
 	item Canteenfull
     	{
+	    DisplayCategory = Water,
 		IsWaterSource		=	TRUE,
 		Weight			=	1.5,
 		CanStoreWater		=	TRUE,

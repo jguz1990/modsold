@@ -1,0 +1,19 @@
+IGUI_PTBR = {
+
+    IGUI_VehicleNameSFCamperVan = "Franklin Camper",
+    IGUI_VehicleNameSFHearse = "Chevalier Cerise Wagon",
+    IGUI_VehicleNameSFPickUpTruckArmy = "Dash Bulldriver",
+    IGUI_VehicleNameSFPickUpVanArmy = "Dash Bulldriver",
+    IGUI_VehicleNameSFStepVanMeat = "Chevalier Step Van",
+    IGUI_VehicleNameSFTruck = "LMC Endura",
+
+    IGUI_VehiclePartExtraTire = "Pneu Extra",
+    IGUI_VehiclePartGloveBoxCounter = "Armário",
+    IGUI_VehiclePartGloveBoxFridge = "Geladeira",
+    IGUI_VehiclePartGloveBoxOven = "Fogão",
+
+    IGUI_VehiclePartfridge = "Geladeira",
+    IGUI_VehiclePartstove = "Fogão",
+
+    IGUI_VehiclePartRoofrack = "Rack de Teto",
+}

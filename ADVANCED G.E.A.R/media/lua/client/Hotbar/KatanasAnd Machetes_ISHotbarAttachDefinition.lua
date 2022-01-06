@@ -37,7 +37,7 @@ local BackReplacement = {
 	replacement = {
 		BigWeapon = "Big Weapon On Back with Bag",
         BigBonk = "Big Blade On Back with Bag",
-		-- BigBlade = "Big Blade On Back with Bag",
+		BigBlade = "Big Blade On Back with Bag",
 		Racket = "Racket Back with Bag",
 		Shovel = "Shovel Back with Bag",
 		Guitar = "null",
@@ -45,6 +45,7 @@ local BackReplacement = {
 		Pan = "Pan On Back with Bag";
 		Rifle = "Rifle On Back with Bag",
 		Saucepan = "Saucepan Back with Bag",
+		SawnOff = "Rifle On Back with Bag",
 	}
 }
 table.insert(ISHotbarAttachDefinition.replacements, BackReplacement);

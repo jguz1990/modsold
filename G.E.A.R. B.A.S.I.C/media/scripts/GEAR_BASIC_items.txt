@@ -3,7 +3,7 @@ module Base
 	item MakeUp_GreenCamo
     {
         Type = Clothing,
-	Weight	=	0.01,
+	Weight	=	0.02,
         DisplayName = Green Camo Makeup,
         /*ClothingItem = MakeUp_GreenCamo,
         BodyLocation = MakeUp,*/
@@ -13,7 +13,7 @@ module Base
 	item MakeUp_GreenCamo2
     {
         Type = Clothing,
-	Weight	=	0.01,
+	Weight	=	0.02,
         DisplayName = Green Camo Makeup,
         /* ClothingItem = MakeUp_GreenCamo,
         BodyLocation = MakeUp,*/

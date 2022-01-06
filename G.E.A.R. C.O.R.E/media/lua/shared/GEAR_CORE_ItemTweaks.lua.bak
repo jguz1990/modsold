@@ -1,0 +1,25 @@
+Events.OnGameBoot.Add(function()
+	--if getActivatedMods():contains("ItemTweakerAPI") then
+	--require("ItemTweaker_Core");
+	--else return end
+
+	TweakItem("Base.Garbagebag","primaryAnimMask", "holdingPlasticBagRight");
+	TweakItem("Base.Garbagebag","secondaryAnimMask", "holdingPlasticBagLeft");
+	TweakItem("Base.Garbagebag","StaticModel", "GarbageBag");
+	
+	TweakItem("Base.Tote","primaryAnimMask", "holdingbagright");
+	TweakItem("Base.Tote","secondaryAnimMask", "holdingbagleft");
+	TweakItem("Base.Tote","StaticModel", "ToteBag");
+	
+	TweakItem("Base.Purse","primaryAnimMask", "holdingbagright");
+	TweakItem("Base.Purse","secondaryAnimMask", "holdingbagleft");
+	TweakItem("Base.Purse","StaticModel", "Purse");
+	
+	TweakItem("Base.EmptySandbag","primaryAnimMask", "holdingbagright");
+	TweakItem("Base.EmptySandbag","secondaryAnimMask", "holdingbagleft");
+	TweakItem("Base.EmptySandbag","StaticModel", "SandBag");
+	
+	TweakItem("Base.Plasticbag","primaryAnimMask", "holdingbagright");
+	TweakItem("Base.Plasticbag","secondaryAnimMask", "holdingbagleft");
+	TweakItem("Base.Plasticbag","StaticModel", "PlasticBag");
+end)

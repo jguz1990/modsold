@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <fileGuidTable>
 
+
+
+	<files>
+	<path>media/clothing/clothingItems/CalfSheath.xml</path>
+	<guid>76c2caff-b6c0-482e-a854-dc27259b77e7</guid>
+	</files>
+
 	<files>
 	<path>media/clothing/clothingItems/ChestRig.xml</path>
 	<guid>37fe2f93-762a-4da9-8438-d215fe9b870d</guid>
@@ -23,6 +30,23 @@
 	<files>
 		<path>media/clothing/clothingItems/Webbing_Black.xml</path>
 		<guid>e5d4f2ac-7679-4a43-9179-f330109c24e0</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Webbing_BlackLoose.xml</path>
+		<guid>ee9f5e38-9507-469f-b482-1c65b647da73</guid>
+	</files>
+	
+	
+
+	<files>
+		<path>media/clothing/clothingItems/Webbing_Military.xml</path>
+		<guid>21aee7b8-55c4-4c6f-9f26-58530055729e</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Webbing_MilitaryLoose.xml</path>
+		<guid>feec40e9-a4cb-43ec-bf05-ebd6371e3a0b</guid>
 	</files>
 
 

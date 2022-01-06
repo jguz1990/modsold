@@ -3,4 +3,3 @@ poster=poster.png
 id=GEARCORE
 description=GRAPHIC EQUIPMENT APPEARANCE RIG COMMON OPERATONS REGARDING EQUIPMENT
 url=
-require=ItemTweakerAPI

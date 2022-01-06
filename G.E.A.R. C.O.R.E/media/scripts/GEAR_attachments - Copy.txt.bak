@@ -1,0 +1,75 @@
+module Base
+{
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+		
+	
+		attachment gear_belt_right
+		{
+			offset = 0.000 -0.0910 -0.0660,
+			rotate = 40.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment gear_belt_left
+		{
+			offset = 0.000 0.0890 -0.0740,
+			rotate = -40.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment belt_right_upside
+		{
+			offset = 0.07400 -0.0770 -0.0610,
+			rotate = -120.0000 14.0000 80.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment belt_left_upside
+		{
+			offset = 0.0740 0.0810 -0.0610,
+			rotate = 124.0000 14.0000 109.0000,
+			bone = Bip01_Pelvis,
+		}
+
+
+	}
+
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		
+
+		attachment gear_belt_right
+		{
+			offset = 0.000 -0.0910 -0.0660,
+			rotate = 40.0000 90.0000 -90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment gear_belt_left
+		{
+			offset = 0.000 0.0890 -0.0740,
+			rotate = -40.0000 90.0000 90.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment belt_right_upside
+		{
+			offset = 0.0740 -0.0770 -0.0610,
+			rotate = -120.0000 14.0000 80.0000,
+			bone = Bip01_Pelvis,
+		}
+
+		attachment belt_left_upside
+		{
+			offset = 0.0740 0.0710 -0.0620,
+			rotate = 124.0000 14.0000 109.0000,
+			bone = Bip01_Pelvis,
+		}
+
+	
+	}
+}

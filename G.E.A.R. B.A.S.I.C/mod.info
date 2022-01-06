@@ -1,6 +1,6 @@
 name=G.E.A.R. B.A.S.I.C.
 poster=poster.png
 id=GEARBASIC
-require=GEARCORE,ItemTweakerAPI
+require=GEARCORE
 description=GRAPHIC EQUIPMENT APPEARANCE RIG BASIC ACCESSORIES SEEN IN CATASTROPHIES
 url=

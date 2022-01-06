@@ -16,6 +16,7 @@ module Base
         BulletDefense = 100,
         AttachmentsProvided = ChestRigRight,
 	Tooltip = A ballistic vest. Able to absorb various types of impact damage. Used by various organizations around the world.,
+        WorldStaticModel = BulletVest_Ground,
     }
 
     item Vest_BulletFire
@@ -33,6 +34,7 @@ module Base
         BulletDefense = 100,
         AttachmentsProvided = ChestRigRight,
 	Tooltip = A ballistic vest. Able to absorb various types of impact damage. Used by various organizations around the world.,
+        WorldStaticModel = BulletVest_Ground,
     }  
    
     item Vest_BulletPress
@@ -49,5 +51,6 @@ module Base
         ScratchDefense = 55,
         BulletDefense = 100,
 	Tooltip = An armored vest of the 3rd class of protection for the journalists working in combat zones.,
+        WorldStaticModel = BulletVest_Ground,
     }
 }

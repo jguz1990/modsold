@@ -1,0 +1,72 @@
+--***********************************************************
+--**                LEMMY/ROBERT JOHNSON                   **
+--***********************************************************
+
+require "ISUI/ISToolTip"
+
+ISInventoryPaneContextMenu.doWearClothingMenu = function(player, clothing, items, context)
+    local playerObj = getSpecificPlayer(player);
+    local allItemsName = "";
+    local previousBiteDefense = 0;
+    local previousScratchDefense = 0;
+    local previousCombatModifier = 0;
+    local wornItems = playerObj:getWornItems()
+    local bodyLocationGroup = wornItems:getBodyLocationGroup()
+    for i=1,wornItems:size() do
+        local wornItem = wornItems:get(i-1)
+        if (clothing:getBodyLocation() == wornItem:getLocation()) or bodyLocationGroup:isExclusive(clothing:getBodyLocation(), wornItem:getLocation()) and instanceof(wornItem, "InventoryContainer") then
+            allItemsName = allItemsName .. wornItem:getItem():getDisplayName() .. ", ";
+            previousBiteDefense = previousBiteDefense ;
+            previousScratchDefense = previousScratchDefense;
+            previousCombatModifier = previousCombatModifier ;
+			local playerNum = playerObj:getPlayerNum()
+            local pdata = getPlayerData(playerNum);
+            pdata.playerInventory:refreshBackpacks();			
+		elseif (clothing:getBodyLocation() == wornItem:getLocation()) or bodyLocationGroup:isExclusive(clothing:getBodyLocation(), wornItem:getLocation()) then		
+            allItemsName = allItemsName .. wornItem:getItem():getDisplayName() .. ", ";
+            previousBiteDefense = previousBiteDefense + wornItem:getItem():getBiteDefense();
+            previousScratchDefense = previousScratchDefense + wornItem:getItem():getScratchDefense();
+            previousCombatModifier = previousCombatModifier + wornItem:getItem():getCombatSpeedModifier();
+        end
+    end
+    local option = nil;
+    if allItemsName ~= "" then
+        option = context:addOption(getText("ContextMenu_ReplaceClothing", string.sub(allItemsName, 0, #allItemsName - 2), clothing:getDisplayName()), items, ISInventoryPaneContextMenu.onWearItems, player);
+    else
+        option = context:addOption(getText("ContextMenu_Wear"), items, ISInventoryPaneContextMenu.onWearItems, player);
+    end
+    
+    local tooltip = ISInventoryPaneContextMenu.addToolTip();
+    local newBiteDefense = clothing:getBiteDefense();
+    local newScratchDefense = clothing:getScratchDefense();
+    local newCombatModifier = clothing:getCombatSpeedModifier();
+    local rgb = " <RGB:0,1,0> " .. getText("Tooltip_BiteDefense") .. ": +";
+    
+    if newBiteDefense > 0 or newScratchDefense > 0 or previousBiteDefense > 0 or previousScratchDefense > 0 then
+        -- bite defense
+        if newBiteDefense > 0 or previousBiteDefense > 0 then
+            if previousBiteDefense > 0 and previousBiteDefense > newBiteDefense then
+                rgb = " <RGB:1,0,0> " .. getText("Tooltip_BiteDefense") .. ": ";
+            end
+            tooltip.description = rgb .. newBiteDefense-previousBiteDefense .. " <LINE> ";
+        end
+        
+        -- scratch defense
+        if newScratchDefense > 0 or previousScratchDefense > 0 then
+            rgb = " <RGB:0,1,0> " .. getText("Tooltip_ScratchDefense") .. ": +";
+            if previousScratchDefense > 0 and previousScratchDefense > newScratchDefense then
+                rgb = " <RGB:1,0,0> " .. getText("Tooltip_ScratchDefense") .. ": ";
+            end
+            tooltip.description = tooltip.description ..  rgb .. newScratchDefense-previousScratchDefense;
+        end
+    
+        -- combat speed -- TODO: Better calcul!
+--        rgb = " <RGB:0,1,0> " .. getText("Tooltip_CombatSpeed") .. ": +";
+--        if previousCombatModifier > 0 and previousCombatModifier > newCombatModifier then
+--            rgb = " <RGB:1,0,0> " .. getText("Tooltip_CombatSpeed") .. ": ";
+--        end
+--        tooltip.description = tooltip.description ..  rgb .. newCombatModifier-previousCombatModifier;
+--
+        option.toolTip = tooltip;
+    end
+end

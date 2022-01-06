@@ -9,28 +9,6 @@ TrolleyList = {
 
 local seatNameTable = {"SeatFrontLeft", "SeatFrontRight", "SeatMiddleLeft", "SeatMiddleRight", "SeatRearLeft", "SeatRearRight"}
 
-function ISContextMenu:updateOptionTrolley(id, name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10)
-	local option = self:allocOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
-	self.options[id] = option;
-	return option;
-end
-
-function ISContextMenu:removeOptionTrolley(option)
-	if option then
-		table.insert(self.optionPool, self.options[option.id])
-		self.options[option.id] =  nil;
-		for i = option.id, self.numOptions - 1 do
-			self.options[i] = self.options[i+1]
-			if self.options[i] then
-				self.options[i].id = i
-			end
-		end
-		self.numOptions = self.numOptions - 1;
-		self:calcHeight()
-	end
-end
-
-
 function onEquipTrolleyTick()
     local playersSum = getNumActivePlayers()
 	for playerNum = 0, playersSum - 1 do
@@ -93,31 +71,7 @@ function onEquipTrolleyTick()
 				end
 			end
 			
-			if playerObj:getVariableString("Weapon") ~= "trolley" then -- print(getPlayer():getVariableString("Weapon"))		
-				-- Задание переменной для анимации
-				local _item = playerObj:getPrimaryHandItem()
-				if _item and (_item:getScriptItem():getName() == "TrolleyContainer" or 
-							  _item:getScriptItem():getName() == "TrolleyContainer2" or 
-							  _item:getScriptItem():getName() == "CartContainer" or 
-							  _item:getScriptItem():getName() == "CartContainer2") then
-					playerObj:setVariable("Weapon", "trolley")
-				end
-				-- Разблокировка меню эмоций
-				if playerObj:getModData()["blockEmote"] or playerObj:getModData()["blockShout"] then
-					getCore():addKeyBinding("Emote", playerObj:getModData()["blockEmote"])
-					getCore():addKeyBinding("Shout", playerObj:getModData()["blockShout"])
-					playerObj:getModData()["blockEmote"] = nil
-					playerObj:getModData()["blockShout"] = nil
-				end
-			else
-				-- Удаление задвоенной тележки
-				local _item = playerObj:getPrimaryHandItem()
-				if _item and not (_item:getContainer() == playerObj:getInventory()) then
-					playerObj:setPrimaryHandItem(nil)
-					playerObj:setSecondaryHandItem(nil)
-				end
-				-- Выбрасывание тележки при столкновениях и пр.
-				-- print(playerObj:getCurrentState())
+			if playerObj:getVariableString("righthandmask") == "holdingtrolleyright" then
 				if not (playerObj:getCurrentState() == IdleState.instance() or 
 						playerObj:getCurrentState() == PlayerAimState.instance()) then
 					local sqr = playerObj:getSquare()
@@ -131,13 +85,6 @@ function onEquipTrolleyTick()
 					playerObj:setPrimaryHandItem(nil);
 					playerObj:setSecondaryHandItem(nil);
 					sqr:AddWorldInventoryItem(trol, 0, 0, 0);
-				end
-				-- Блокировка меню эмоций
-				if not playerObj:getModData()["blockEmote"] or not playerObj:getModData()["blockShout"] then
-					playerObj:getModData()["blockEmote"] = getCore():getKey("Emote")
-					playerObj:getModData()["blockShout"] = getCore():getKey("Shout")
-					getCore():addKeyBinding("Emote", nil)
-					getCore():addKeyBinding("Shout", nil)
 				end
 				-- Выбрасывание тележки в машине
 				if playerObj:getVehicle() then
@@ -158,32 +105,12 @@ function onEquipTrolleyTick()
 						sqr:AddWorldInventoryItem(trol, 0, 0, 0);
 					end
 				end
-				
 			end
 		end
 		-- print(playerObj:getCurrentState())
     end
 end
 
--- function addTrolleyButton(invPage, state)
-	-- if state == "buttonsAdded" then
-		-- local playerObj = getSpecificPlayer(invPage.player)
-		-- if invPage.onCharacter then
-			-- local it = playerObj:getInventory():getItems()
-			-- for i = 0, it:size()-1 do
-				-- local item = it:get(i)
-				-- if item:getType() == "Trolley" and playerObj:isEquipped(item) then
-					-- if item:getContainer() then
-						-- containerButton = invPage:addContainerButton(item:getContainer(), item:getTex(), item:getName(), item:getName())
-					-- end
-					-- if item:getRightClickContainer() then
-						-- containerButton = invPage:addContainerButton(item:getRightClickContainer(), item:getTex(), item:getName(), item:getName())
-					-- end
-				-- end
-			-- end	
-		-- end
-	-- end
--- end
 
 function ISWorldObjectContextMenu.getWorldObjectsOnSquares(squares, worldObjects)
 	for _,square in ipairs(squares) do
@@ -195,6 +122,31 @@ function ISWorldObjectContextMenu.getWorldObjectsOnSquares(squares, worldObjects
 	end
 end
 
+
+
+ISWorldObjectContextMenu.equipTrolley = function(playerObj, WItem)
+    if WItem:getSquare() and luautils.walkAdj(playerObj, WItem:getSquare()) then
+		if playerObj:getPrimaryHandItem() then
+			ISTimedActionQueue.add(ISUnequipAction:new(playerObj, playerObj:getPrimaryHandItem(), 50));
+		end
+		if playerObj:getSecondaryHandItem() and playerObj:getSecondaryHandItem() ~= playerObj:getPrimaryHandItem() then
+			ISTimedActionQueue.add(ISUnequipAction:new(playerObj, playerObj:getSecondaryHandItem(), 50));
+		end
+		-- local time = ISWorldObjectContextMenu.grabItemTime(playerObj, WItem)
+		ISTimedActionQueue.add(ISTakeTrolley:new(playerObj, WItem, 1))
+	end
+end
+
+local oldForceDropHeavyItem = isForceDropHeavyItem
+function isForceDropHeavyItem(item)
+	if item and (item:getFullType() == TrolleyList[1] or item:getFullType() == TrolleyList[2] or item:getFullType() == TrolleyList[3] or item:getFullType() == TrolleyList[4]) then
+		return true
+	else
+		return oldForceDropHeavyItem(item)
+	end
+end
+
+-- Позволяет подбирать полностью заполненную тележку
 function TrolleyOnFillWorldObjectContextMenu(player, context, worldobjects, test)
 	local playerObj = getSpecificPlayer(player)
 	local squares = {}
@@ -233,55 +185,40 @@ function TrolleyOnFillWorldObjectContextMenu(player, context, worldobjects, test
 			or (trolleyName == TrolleyList[3]) or (trolleyName == TrolleyList[4]) then
 			local old_option_update = context:getOptionFromName(getText("ContextMenu_Grab"))
 			if old_option_update then
-				context:updateOptionTrolley(old_option_update.id, getText("ContextMenu_GrabTrolley"), playerObj, ISWorldObjectContextMenu.equipTrolley, worldObject)
+				context:updateOptionTsar(old_option_update.id, getText("ContextMenu_GrabTrolley"), playerObj, ISWorldObjectContextMenu.equipTrolley, worldObject)
 				return
 			end				
 		end
 	end
 end
 
-ISWorldObjectContextMenu.equipTrolley = function(playerObj, WItem)
-    if WItem:getSquare() and luautils.walkAdj(playerObj, WItem:getSquare()) then
-		if playerObj:getPrimaryHandItem() then
-			ISTimedActionQueue.add(ISUnequipAction:new(playerObj, playerObj:getPrimaryHandItem(), 50));
-		end
-		if playerObj:getSecondaryHandItem() and playerObj:getSecondaryHandItem() ~= playerObj:getPrimaryHandItem() then
-			ISTimedActionQueue.add(ISUnequipAction:new(playerObj, playerObj:getSecondaryHandItem(), 50));
-		end
-		-- local time = ISWorldObjectContextMenu.grabItemTime(playerObj, WItem)
-		ISTimedActionQueue.add(ISTakeTrolley:new(playerObj, WItem, 1))
+-- Разрешает брать заполненные тележки в руки из инвентаря
+local function trolleyUpdateInventoryOptions(player, context, items)
+	local playerObj = getSpecificPlayer(player)
+	local item = items[1];
+	if not instanceof(items[1], "InventoryItem") then
+		item = items[1].items[1];
 	end
-end
-
-local oldForceDropHeavyItem = isForceDropHeavyItem
-function isForceDropHeavyItem(item)
 	if item and (item:getFullType() == TrolleyList[1] or item:getFullType() == TrolleyList[2] or item:getFullType() == TrolleyList[3] or item:getFullType() == TrolleyList[4]) then
-		return true
-	else
-		return oldForceDropHeavyItem(item)
+		if item:getWorldItem() then
+			local old_option_update = context:getOptionFromName(getText("ContextMenu_Equip_Two_Hands"))
+			if old_option_update then
+				context:updateOptionTsar(old_option_update.id, getText("ContextMenu_Equip_Two_Hands"), playerObj, ISWorldObjectContextMenu.equipTrolley, item:getWorldItem())
+				return
+			end	
+		end
 	end
 end
 
 local function trolleyBlockBuildOptions(player, context, worldobjects, test)
 	local playerObj = getSpecificPlayer(player)
-	if playerObj:getVariableString("Weapon") == "trolley" then
-		context:removeOptionTrolley(context:getOptionFromName(getText("ContextMenu_MetalWelding")))
-		context:removeOptionTrolley(context:getOptionFromName(getText("ContextMenu_Build")))
+	if playerObj:getVariableString("righthandmask") == "holdingtrolleyright" then
+		context:removeOptionTsar(context:getOptionFromName(getText("ContextMenu_MetalWelding")))
+		context:removeOptionTsar(context:getOptionFromName(getText("ContextMenu_Build")))
 	end
 end
 
 Events.OnFillWorldObjectContextMenu.Add(trolleyBlockBuildOptions)
-
-function onEquipTrolleyCallout(key)
-	playerObj = getSpecificPlayer(0)
-	if playerObj then
-		if playerObj:getVariableString("Weapon") == "trolley" and key == playerObj:getModData()["blockShout"] then
-			playerObj:Callout()
-		end
-	end
-end
-
+Events.OnFillInventoryObjectContextMenu.Add(trolleyUpdateInventoryOptions);
 Events.OnFillWorldObjectContextMenu.Add(TrolleyOnFillWorldObjectContextMenu);
 Events.OnTick.Add(onEquipTrolleyTick);
-Events.OnKeyPressed.Add(onEquipTrolleyCallout)
--- Events.OnRefreshInventoryWindowContainers.Add(addTrolleyButton);

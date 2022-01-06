@@ -1,0 +1,6 @@
+ContextMenu_EN = {
+	ContextMenu_VehicleCoolerOn = "Turn Refrigeration On",
+	ContextMenu_VehicleCoolerOff = "Turn Refrigeration Off",
+	ContextMenu_VehicleOvenOn = "Turn Oven On",
+	ContextMenu_VehicleOvenOff = "Turn Oven Off",
+}

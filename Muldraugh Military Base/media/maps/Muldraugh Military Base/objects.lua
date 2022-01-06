@@ -87,5 +87,17 @@ objects = {
   { name = "police", type = "ParkingStall", x = 9724, y = 10318, z = 0, width = 3, height = 5, properties = { Direction = "W", FaceDirection = true } },
   { name = "military", type = "ParkingStall", x = 9734, y = 10322, z = 0, width = 6, height = 4, properties = { Direction = "W", FaceDirection = true } },
   { name = "Army", type = "ZombiesType", x = 9634, y = 10293, z = 0, width = 155, height = 89 },
-  { name = "Army", type = "ZombiesType", x = 9636, y = 10224, z = 0, width = 89, height = 67 }
+  { name = "Army", type = "ZombiesType", x = 9636, y = 10224, z = 0, width = 89, height = 67 },
+  { name = "military", type = "ParkingStall", x = 9748, y = 10414, z = 0, width = 5, height = 6, properties = { Direction = "S", FaceDirection = true } },
+  { name = "military", type = "ParkingStall", x = 9755, y = 10414, z = 0, width = 5, height = 6, properties = { Direction = "S", FaceDirection = true } },
+  { name = "military", type = "ParkingStall", x = 9748, y = 10424, z = 0, width = 5, height = 6, properties = { Direction = "S", FaceDirection = true } },
+  { name = "military", type = "ParkingStall", x = 9755, y = 10424, z = 0, width = 5, height = 6, properties = { Direction = "S", FaceDirection = true } },
+  { name = "", type = "Forest", x = 9748, y = 10439, z = 0, width = 46, height = 39 },
+  { name = "", type = "Forest", x = 9770, y = 10392, z = 0, width = 24, height = 46 },
+  { name = "", type = "Forest", x = 9759, y = 10388, z = 0, width = 10, height = 21 },
+  { name = "", type = "Forest", x = 9798, y = 10465, z = 0, width = 60, height = 15 },
+  { name = "", type = "Forest", x = 9871, y = 10465, z = 0, width = 27, height = 13 },
+  { name = "", type = "TownZone", x = 9739, y = 10390, z = 0, width = 18, height = 15 },
+  { name = "", type = "TownZone", x = 9740, y = 10409, z = 0, width = 28, height = 26 },
+  { name = "", type = "TownZone", x = 9860, y = 10473, z = 0, width = 9, height = 8 }
 }

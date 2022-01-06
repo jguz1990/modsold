@@ -1,0 +1,9 @@
+<clothingItem>
+    <m_MaleModel></m_MaleModel>
+    <m_FemaleModel></m_FemaleModel>
+    <m_GUID>76c2caff-b6c0-482e-a854-dc27259b77e7</m_GUID>
+    <m_Static>false</m_Static>
+    <m_AllowRandomTint>false</m_AllowRandomTint>
+    <m_AttachBone></m_AttachBone>
+    <m_BaseTextures>emptyTexture</m_BaseTextures>
+</clothingItem>

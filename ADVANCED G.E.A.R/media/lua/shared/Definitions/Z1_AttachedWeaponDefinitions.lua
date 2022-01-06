@@ -1,30 +1,30 @@
--- define weapons to be attached to zombies when creating them
--- random knives inside their neck, spear in their stomach, meatcleaver in their back...
--- this is used in IsoZombie.addRandomAttachedWeapon()
+-- -- define weapons to be attached to zombies when creating them
+-- -- random knives inside their neck, spear in their stomach, meatcleaver in their back...
+-- -- this is used in IsoZombie.addRandomAttachedWeapon()
 
-AttachedWeaponDefinitions = AttachedWeaponDefinitions or {};
+-- AttachedWeaponDefinitions = AttachedWeaponDefinitions or {};
 
-AttachedWeaponDefinitions.chanceOfAttachedWeapon = 6; -- Global chance of having an attached weapon, if we pass this we gonna add randomly one from the list
+-- AttachedWeaponDefinitions.chanceOfAttachedWeapon = 6; -- Global chance of having an attached weapon, if we pass this we gonna add randomly one from the list
 
--- -- random weapon on police zombies holster
--- AttachedWeaponDefinitions.handgunHolster = {
-	-- id = "handgunHolster",
-	-- chance = 50,
-	-- outfit = {"Police", "PoliceState", "PoliceRiot", "PrisonGuard", "PrivateMilitia"},
-	-- weaponLocation =  {"Holster Right"},
-	-- bloodLocations = nil,
-	-- addHoles = false,
-	-- daySurvived = 0,
-	-- ensureItem = "Base.HolsterPLL",
-	-- weapons = {
-		-- "Base.Pistol",
-		-- "Base.Pistol2",
-		-- "Base.Pistol3",
-		-- "Base.Revolver",
-		-- "Base.Revolver_Long",
-		-- "Base.Revolver_Short",
-	-- },
--- }
+-- -- -- random weapon on police zombies holster
+-- -- AttachedWeaponDefinitions.handgunHolster = {
+	-- -- id = "handgunHolster",
+	-- -- chance = 50,
+	-- -- outfit = {"Police", "PoliceState", "PoliceRiot", "PrisonGuard", "PrivateMilitia"},
+	-- -- weaponLocation =  {"Holster Right"},
+	-- -- bloodLocations = nil,
+	-- -- addHoles = false,
+	-- -- daySurvived = 0,
+	-- -- ensureItem = "Base.HolsterPLL",
+	-- -- weapons = {
+		-- -- "Base.Pistol",
+		-- -- "Base.Pistol2",
+		-- -- "Base.Pistol3",
+		-- -- "Base.Revolver",
+		-- -- "Base.Revolver_Long",
+		-- -- "Base.Revolver_Short",
+	-- -- },
+-- -- }
 
 
 

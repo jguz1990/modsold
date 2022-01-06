@@ -2,136 +2,67 @@ module TMC
 {
 	imports {Base}
 	
-	model TrolleyModel
-	{
-		mesh = weapons/2handed/trolley|cart,
-		texture = weapons/2handed/trolley,
-		scale = 0.3,
-		invertX = true,
-		attachment world
-		{
-			offset = 0.0000 0.0000 0.0000,
-			rotate = 0.0000 90.0000 0.0000,
-		}
-	}
-	
-	model TrolleyModel2
-	{
-		mesh = weapons/2handed/trolley|cartWithBaggage,
-		texture = weapons/2handed/trolley,
-		scale = 0.3,
-		invertX = true,
-		attachment world
-		{
-			offset = 0.0000 0.0000 0.0000,
-			rotate = 0.0000 90.0000 0.0000,
-		}
-	}
-	
-	model CartModel
-	{
-		mesh = weapons/2handed/trolley|cart02,
-		texture = weapons/2handed/cart,
-		scale = 0.3,
-		invertX = true,
-		attachment world
-		{
-			offset = 0.0000 0.0000 0.0000,
-			rotate = 0.0000 90.0000 0.0000,
-		}
-	}
-	
-	model CartModel2
-	{
-		mesh = weapons/2handed/trolley|cart02WithBaggage,
-		texture = weapons/2handed/cart,
-		scale = 0.3,
-		invertX = true,
-		attachment world
-		{
-			offset = 0.0000 0.0000 0.0000,
-			rotate = 0.0000 90.0000 0.0000,
-		}
-	}
-
-	
-	
 	item TrolleyContainer
     {
-		WeightReduction	=	100,
-		Weight = 1,
-		RequiresEquippedBothHands = true,
-		Type	=	Container,
-		Capacity	=	500,
-		Icon = Trolley,
-		UseWorldItem = true,
-		ScaleWorldIcon = 0.47,
-		WorldStaticModel = TMC.TrolleyModel,
-		DisplayName	=	Trolley,
-        RunSpeedModifier = 0.8,
-		StaticModel = TMC.TrolleyModel,
-		WorldStaticModel = TMC.TrolleyModel,
-		ReplaceInPrimaryHand = TMC.TrolleyModel Trolley,
-		ReplaceInSecondHand = TMC.TrolleyModel Trolley,
-		EquippedNoSprint =	TRUE,
+		Weight 					= 1,
+		Type					= Container,
+		Capacity				= 500,
+		WeightReduction			= 100,
+		DisplayName				= Trolley,
+		Icon					= Trolley,
+		SurvivalGear			= TRUE,
+		EquippedNoSprint 		= FALSE,
+		RequiresEquippedBothHands = TRUE,
+		StaticModel         	= TrolleyModel,
+		WorldStaticModel 		= TrolleyModel,
+		ReplaceInPrimaryHand 	= Bag_TrolleyModel_RHand holdingtrolleyright,
     }
+	
 	item TrolleyContainer2
     {
-		WeightReduction	=	100,
-		Weight = 1,
-		RequiresEquippedBothHands = true,
-		Type	=	Container,
-		Capacity	=	500,
-		Icon = Trolley2,
-		UseWorldItem = true,
-		ScaleWorldIcon = 0.47,
-		WorldStaticModel = TMC.TrolleyModel2,
-		DisplayName	=	Trolley,
-        RunSpeedModifier = 0.8,
-		StaticModel = TMC.TrolleyModel2,
-		WorldStaticModel = TMC.TrolleyModel2,
-		ReplaceInPrimaryHand = TMC.TrolleyModel2 Trolley,
-		ReplaceInSecondHand = TMC.TrolleyModel2 Trolley,
-		EquippedNoSprint =	TRUE,
+		Weight 					= 1,
+		Type					= Container,
+		Capacity				= 500,
+		WeightReduction			= 100,
+		DisplayName				= Trolley,
+		Icon 					= Trolley2,
+		SurvivalGear        	= TRUE,
+		EquippedNoSprint 		= FALSE,
+		RequiresEquippedBothHands = TRUE,
+		StaticModel         	= TrolleyModelFull,
+		WorldStaticModel 		= TrolleyModelFull,
+		ReplaceInPrimaryHand 	= Bag_TrolleyModelFull_RHand holdingtrolleyright,
     }
 	
 	item CartContainer
     {
-		WeightReduction	=	100,
-		Weight = 1,
-		RequiresEquippedBothHands = true,
-		Type	=	Container,
-		Capacity	=	500,
-		Icon = TMCart,
-		UseWorldItem = true,
-		ScaleWorldIcon = 0.47,
-		WorldStaticModel = CartModel,
-		DisplayName	=	Cart,
-        RunSpeedModifier = 0.8,
-		StaticModel = TMC.CartModel,
-		WorldStaticModel = TMC.CartModel,
-		ReplaceInPrimaryHand = TMC.CartModel Trolley,
-		ReplaceInSecondHand = TMC.CartModel Trolley,
-		EquippedNoSprint =	TRUE,
-    }
-	item CartContainer2
-    {
-		WeightReduction	=	100,
-		Weight = 1,
-		RequiresEquippedBothHands = true,
-		Type	=	Container,
-		Capacity	=	500,
-		Icon = TMCart2,
-		UseWorldItem = true,
-		ScaleWorldIcon = 0.47,
-		WorldStaticModel = TMC.CartModel2,
-		DisplayName	=	Cart,
-        RunSpeedModifier = 0.8,
-		StaticModel = TMC.CartModel2,
-		WorldStaticModel = TMC.CartModel2,
-		ReplaceInPrimaryHand = TMC.CartModel2 Trolley,
-		ReplaceInSecondHand = TMC.CartModel2 Trolley,
-		EquippedNoSprint =	TRUE,
+		Weight 					= 1,
+		Type					= Container,
+		Capacity				= 500,
+		WeightReduction			= 100,
+		DisplayName				= Cart,
+		Icon 					= TMCart,
+		SurvivalGear        	= TRUE,
+		EquippedNoSprint 		= FALSE,
+		RequiresEquippedBothHands = TRUE,
+		StaticModel         	= CartModel,
+		WorldStaticModel 		= CartModel,
+		ReplaceInPrimaryHand 	= Bag_CartModel_RHand holdingtrolleyright,
     }
 	
+	item CartContainer2
+    {
+		Weight 					= 1,
+		Type					= Container,
+		Capacity				= 500,
+		WeightReduction			= 100,
+		DisplayName				= Cart,
+		Icon 					= TMCart2,
+		SurvivalGear        	= TRUE,
+		EquippedNoSprint 		= FALSE,
+		RequiresEquippedBothHands = TRUE,
+		StaticModel         	= CartModelFull,
+		WorldStaticModel 		= CartModelFull,
+		ReplaceInPrimaryHand 	= Bag_CartModelFull_RHand holdingtrolleyright,
+    }
 }

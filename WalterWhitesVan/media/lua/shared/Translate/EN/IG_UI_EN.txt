@@ -1,0 +1,14 @@
+IGUI_EN = {
+
+    IGUI_VehiclePartCounter = "Counter",
+    IGUI_VehiclePartCounter1 = "Counter",
+    IGUI_VehiclePartCounter2 = "Counter",
+    IGUI_VehiclePartCounter3 = "Counter",
+    IGUI_VehiclePartCounter4 = "Counter",
+    IGUI_VehiclePartFridge = "Fridge",
+    IGUI_VehiclePartOven = "Oven",
+    IGUI_VehiclePartTelevision = "Television",
+
+    IGUI_VehiclePartfridge = "Fridge",
+    IGUI_VehiclePartstove = "Oven",
+}

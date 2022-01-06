@@ -3,7 +3,7 @@ module Base
     
     item ChestRig
     {
-        Weight	=	0.01,
+        Weight	=	0.5,
         Type	=	Clothing,
         DisplayName	=	Chest Rig,
         IconsForTexture = ChestRig_Gray;ChestRig_Green;ChestRig_Tan,
@@ -13,7 +13,7 @@ module Base
     }
     item Webbing
     {
-        Weight	=	0.01,
+        Weight	=	0.5,
         Type	=	Clothing,
         DisplayName	=	Webbing (Tight),
         IconsForTexture = Webbing_Gray;Webbing_Green;Webbing_Tan,
@@ -26,7 +26,7 @@ module Base
     }
     item WebbingLoose
     {
-        Weight	=	0.01,
+        Weight	=	0.5,
         Type	=	Clothing,
         DisplayName	=	Webbing (Loose),
         IconsForTexture = Webbing_Gray;Webbing_Green;Webbing_Tan,
@@ -38,7 +38,60 @@ module Base
         ClothingExtraSubmenu = WearLoose,
     }
  
+    item Webbing_Military
+    {
+        Weight	=	0.5,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Tight),
+        IconsForTexture = Webbing_Green;Webbing_Tan,
+        BodyLocation = TorsoRig,
+        ClothingItem = Webbing_Military,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = Webbing_MilitaryLoose,
+        ClothingItemExtraOption = WearLoose,
+        ClothingExtraSubmenu = WearTight,
+    }
+    item Webbing_MilitaryLoose
+    {
+        Weight	=	0.5,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Loose),
+        IconsForTexture = Webbing_Green;Webbing_Tan,
+        BodyLocation = TorsoRig,
+        ClothingItem = Webbing_MilitaryLoose,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = WebbingMilitary,
+        ClothingItemExtraOption = WearTight,
+        ClothingExtraSubmenu = WearLoose,
+    }
 
+
+    item Webbing_Black
+    {
+        Weight	=	0.5,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Tight),
+        Icon = Webbing_Gray,
+        BodyLocation = TorsoRig,
+        ClothingItem = Webbing_Black,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = Webbing_BlackLoose,
+        ClothingItemExtraOption = WearLoose,
+        clothingExtraSubmenu = WearTight,
+    }
+    item Webbing_BlackLoose
+    {
+        Weight	=	0.5,
+        Type	=	Clothing,
+        DisplayName	=	Webbing (Loose),
+        Icon = Webbing_Gray,
+        BodyLocation = TorsoRig,
+        ClothingItem = Webbing_BlackLoose,
+        AttachmentsProvided = ChestRig;ChestRigRight,
+        ClothingItemExtra = Webbing_Black,
+        ClothingItemExtraOption = WearTight,
+        clothingExtraSubmenu = WearLoose,
+    }
 	
 	recipe Make Chest Rig
     {

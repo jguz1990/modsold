@@ -9,14 +9,15 @@ module Base
         FabricType = Cotton,
 	CanBeEquipped = TorsoExtra,
 	BodyLocation = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
 	/*	ClothingItem = Vest_Waistcoat,
         ClothingExtraSubmenu =  Wear_Vest,*/
 	
         /*clothingExtraSubmenu = FannyPack_WearFront,*/
         ClothingItemExtra = Vest_Waistcoat,
         ClothingItemExtraOption = WearVest,
+        WorldStaticModel = BulletVest_Ground,
     }
     item Vest_Waistcoat_GigaMart
     {
@@ -29,11 +30,12 @@ module Base
         WindResistance = 0.20,
         FabricType = Cotton,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         ClothingItemExtra = Vest_Waistcoat_GigaMart,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = BulletVest_Ground,
     }
 /*	item Vest_Hunting_Grey
     {
@@ -45,13 +47,14 @@ module Base
         Insulation = 0.90,
         WindResistance = 0.80,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         MaxAmmo = 12,
         AmmoType = Base.ShotgunShells,
         ClothingItemExtra = Vest_Hunting_Grey,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     }*/
     item Vest_Hunting_Orange
     {
@@ -63,13 +66,14 @@ module Base
         Insulation = 0.75,
         WindResistance = 0.75,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         MaxAmmo = 12,
         AmmoType = Base.ShotgunShells,
         ClothingItemExtra = Vest_Hunting_Orange,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     }
     item Vest_Hunting_Camo
     {
@@ -81,13 +85,14 @@ module Base
         Insulation = 0.8,
         WindResistance = 0.65,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         MaxAmmo = 12,
         AmmoType = Base.ShotgunShells,
         ClothingItemExtra = Vest_Hunting_Camo,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     }
     item Vest_Hunting_CamoGreen
     {
@@ -99,13 +104,14 @@ module Base
         Insulation = 0.70,
         WindResistance = 0.80,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         MaxAmmo = 12,
         AmmoType = Base.ShotgunShells,
         ClothingItemExtra = Vest_Hunting_CamoGreen,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     }
 
 
@@ -120,13 +126,14 @@ module Base
         Insulation = 0.90,
         WindResistance = 0.80,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         MaxAmmo = 12,
         AmmoType = Base.ShotgunShells,
         ClothingItemExtra = Vest_Hunting_Grey,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     }
 
 
@@ -140,24 +147,25 @@ module Base
         Insulation = 0.70,
         WindResistance = 0.55,
 	CanBeEquipped = TorsoExtra,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         ClothingItemExtra = Vest_Foreman,
         ClothingItemExtraOption = WearVest,
 	BodyLocation = TorsoExtra,
+        WorldStaticModel = HuntingVest_Ground,
     } 
 /*
 	item Fanny_Pack_Blue
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Container,
         DisplayName	=	Fanny Pack,
         Icon	=	FannyPack_Blue,
         BodyLocation = FannyPackFront,
         ClothingItem = Bag_FannyPackFront,
         clothingExtraSubmenu = FannyPack_WearFront,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         RunSpeedModifier = 0.97,
 
         ClothingItemExtra = ,
@@ -170,7 +178,7 @@ module Base
 
 	item Fanny_Pack_Green
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Container,
         DisplayName	=	Fanny Pack,
         Icon	=	FannyPack_Green,
@@ -178,8 +186,8 @@ module Base
         ClothingItem = Bag_FannyPackFront,
         CanBeEquipped = FannyPackFront,
         clothingExtraSubmenu = FannyPack_WearFront,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         RunSpeedModifier = 0.97,
 
         ClothingItemExtra = ,
@@ -192,7 +200,7 @@ module Base
 
 	item Fanny_Pack_Pink
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Container,
         DisplayName	=	Fanny Pack,
         Icon	=	FannyPack_Pink,
@@ -200,8 +208,8 @@ module Base
         ClothingItem = Bag_FannyPackFront,
         CanBeEquipped = FannyPackFront,
         clothingExtraSubmenu = FannyPack_WearFront,*/
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         RunSpeedModifier = 0.97,
 
         ClothingItemExtra = ,
@@ -214,7 +222,7 @@ module Base
 
 	item Fanny_Pack_Red
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Container,
         DisplayName	=	Fanny Pack,
         Icon	=	FannyPack_Red,
@@ -222,8 +230,8 @@ module Base
         ClothingItem = Bag_FannyPackFront,
         CanBeEquipped = FannyPackFront,
         clothingExtraSubmenu = FannyPack_WearFront,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         RunSpeedModifier = 0.97,
 
         ClothingItemExtra = ,
@@ -236,7 +244,7 @@ module Base
 
 	item Fanny_Pack_Teal
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Container,
         DisplayName	=	Fanny Pack,
         Icon	=	FannyPack_Teal,
@@ -244,8 +252,8 @@ module Base
         ClothingItem = Bag_FannyPackFront,
         CanBeEquipped = FannyPackFront,
         clothingExtraSubmenu = FannyPack_WearFront,
-	WeightReduction	=	100,
-	Capacity	=	20,
+	WeightReduction	=	90,
+	Capacity	=	2,
         RunSpeedModifier = 0.97,
 
         ClothingItemExtra = ,

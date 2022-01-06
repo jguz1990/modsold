@@ -1,0 +1,4 @@
+ContextMenu_PTBR = {
+	ContextMenu_VehicleCoolerOn = "Ligar Refrigeração",
+	ContextMenu_VehicleCoolerOff = "Desligar Refrigeração",
+}

@@ -1,0 +1,5 @@
+IGUI_FR = {
+
+    IGUI_VehicleNameCarHearse = "Chevalier Cerise Wagon",
+    IGUI_VehicleNameStepVanMeat = "Chevalier Step Van",
+}

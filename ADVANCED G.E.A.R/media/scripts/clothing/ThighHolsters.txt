@@ -4,7 +4,7 @@ module Base
 
     item ThighHolsterSimple
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Clothing,
         DisplayName	=	Holster,
         Icon	=	GunHolster,
@@ -15,7 +15,7 @@ module Base
 
     item ThighHolsterDouble
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Clothing,
         DisplayName	=	Double Holster,
         Icon	=	GunHolsterDouble,

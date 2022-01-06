@@ -1,0 +1,165 @@
+local GEARold_ISToolTipInv_render = ISToolTipInv.render
+
+function ISToolTipInv:render()
+	local data = self.item:getModData()
+	
+	if data and data.SewingMaterial then return false end
+	
+	-- if self.item
+	-- and instanceof( self.item, "Clothing")
+	-- and self.item:getBodyLocation() == "TorsoExtra"
+	-- and getSpecificPlayer(0):getWornItem("TorsoExtra")
+	-- and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra"), "InventoryContainer")
+	-- then
+		-- --print("VEST CONFLICT!!!!")
+		-- return false 
+	-- end	
+	if self.item
+	and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation()-- == "TorsoExtra"
+	and getSpecificPlayer(0):getWornItem(self.item:getBodyLocation())
+	and instanceof( getSpecificPlayer(0):getWornItem(self.item:getBodyLocation()), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if self.item
+	and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation() == "TorsoRig"
+	and getSpecificPlayer(0):getWornItem("TorsoRig2")
+	and instanceof( getSpecificPlayer(0):getWornItem("TorsoRig2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if self.item
+	and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation() == "TorsoExtra"
+	and getSpecificPlayer(0):getWornItem("TorsoExtra2")
+	and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if self.item
+	--and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation() == "TorsoExtra2"
+	and getSpecificPlayer(0):getWornItem("TorsoExtra")
+	--and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if self.item
+	--and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation() == "TorsoRig2"
+	and getSpecificPlayer(0):getWornItem("TorsoExtra2")
+	--and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if self.item
+	--and instanceof( self.item, "Clothing")
+	and self.item:getBodyLocation() == "TorsoExtra2"
+	and getSpecificPlayer(0):getWornItem("TorsoRig2")
+	--and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	
+	
+	if self.item
+	and instanceof( self.item, "Clothing")
+	and ( self.item:getBodyLocation() == "BeltExtra" or self.item:getBodyLocation() == "Belt419")
+	and getSpecificPlayer(0):getWornItem("Belt422")
+	and instanceof( getSpecificPlayer(0):getWornItem("Belt422"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	
+	if self.item
+	and instanceof( self.item, "Clothing")
+	and ( self.item:getBodyLocation() == "Belt420")
+	and getSpecificPlayer(0):getWornItem("Belt421")
+	and instanceof( getSpecificPlayer(0):getWornItem("Belt421"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end	
+	
+	
+	GEARold_ISToolTipInv_render(self)
+end
+
+
+
+local GEARold_ISInventoryPaneContextMenu_doWearClothingTooltip = ISInventoryPaneContextMenu.doWearClothingTooltip
+
+ISInventoryPaneContextMenu.doWearClothingTooltip = function(playerObj, newItem, currentItem, option)
+	local data = newItem:getModData()
+	
+	if data and data.SewingMaterial then return false end
+	
+	-- if newItem
+	-- and instanceof( newItem, "Clothing")
+	-- and newItem:getBodyLocation() == "TorsoExtra"
+	-- and getSpecificPlayer(0):getWornItem("TorsoExtra")
+	-- and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra"), "InventoryContainer")
+	-- then
+		-- --print("VEST CONFLICT!!!!")
+		-- return false 
+	-- end
+	if newItem
+	and instanceof( newItem, "Clothing")
+	and newItem:getBodyLocation()-- == "TorsoExtra"
+	and getSpecificPlayer(0):getWornItem(newItem:getBodyLocation())
+	and instanceof( getSpecificPlayer(0):getWornItem(newItem:getBodyLocation()), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if newItem
+	and instanceof( newItem, "Clothing")
+	and newItem:getBodyLocation() == "TorsoRig"
+	and getSpecificPlayer(0):getWornItem("TorsoRig2")
+	and instanceof( getSpecificPlayer(0):getWornItem("TorsoRig2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if newItem
+	and instanceof( newItem, "Clothing")
+	and newItem:getBodyLocation() == "TorsoExtra"
+	and getSpecificPlayer(0):getWornItem("TorsoExtra2")
+	and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if newItem
+	--and instanceof( newItem, "Clothing")
+	and newItem:getBodyLocation() == "TorsoExtra2"
+	and getSpecificPlayer(0):getWornItem("TorsoExtra")
+	--and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	if newItem
+	--and instanceof( newItem, "Clothing")
+	and newItem:getBodyLocation() == "TorsoExtra2"
+	and getSpecificPlayer(0):getWornItem("TorsoRig2")
+	--and instanceof( getSpecificPlayer(0):getWornItem("TorsoExtra2"), "InventoryContainer")
+	then
+		--print("VEST CONFLICT!!!!")
+		return false 
+	end
+	
+	GEARold_ISInventoryPaneContextMenu_doWearClothingTooltip(playerObj, newItem, currentItem, option)
+end
+
+
+

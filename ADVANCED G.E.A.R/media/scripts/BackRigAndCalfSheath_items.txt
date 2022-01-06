@@ -3,7 +3,7 @@ module Base
     
     item CalfSheath
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Clothing,
         DisplayName	=	Calf Sheath,
         Icon	=	CalfSheath,
@@ -17,7 +17,7 @@ module Base
     }
 	item BackRig
     {
-        Weight	=	0.01,
+        Weight	=	0.2,
         Type	=	Clothing,
         DisplayName	=	Back Rig,
         IconsForTexture = ChestRig_Gray;ChestRig_Green;ChestRig_Tan,

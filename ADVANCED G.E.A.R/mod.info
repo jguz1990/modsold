@@ -1,8 +1,10 @@
 name=ADVANCED G.E.A.R.
 poster=poster.png
 id=ADVANCEDGEAR
-require=GEARBASIC,GEARCORE,PlayerTraps,ItemTweakerAPI
+require=GEARBASIC,GEARCORE,PlayerTraps
 description= ARMAGEDDON DESTRUCTION VIOLENCE ACCESSORIES NEW CARNAGE EXTREME DEVICES
 url=
 pack=zre
+pack=camo_netting
 tiledef=zre 833
+tiledef=camo_netting 9871

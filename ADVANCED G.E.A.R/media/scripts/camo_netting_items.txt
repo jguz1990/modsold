@@ -1,0 +1,56 @@
+module Movables
+{
+    item camo_netting_0
+    {
+        Type			= Moveable,
+        Icon			= Camo_Netting,
+        Weight          	= 5,
+        DisplayName		= Camo Netting,
+        WorldObjectSprite	= camo_netting_0,
+    }
+	
+   
+
+}
+module Base
+{
+
+ recipe Craft Ghillie Suit Pants
+    {
+		Sound:Scissors,
+		Movables.camo_netting_0,
+		Thread=5,
+		Twine=5,
+		keep Needle,
+		keep Scissors,
+		Result:Ghillie_Trousers,
+		Time:1000.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }  	
+ recipe Craft Ghillie Suit Torso
+    {
+		Sound:Scissors,
+		Movables.camo_netting_0,
+		Thread=5,
+		Twine=5,
+		keep Needle,
+		keep Scissors,
+		Result:Ghillie_Top,
+		Time:1000.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }  	
+
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+
+}

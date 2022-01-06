@@ -1,0 +1,350 @@
+module Base
+{
+	template vehicle Fridge
+	{
+		part Counter1
+		{
+			area = Kitchen,
+		  specificItem = false,
+			itemType = filcher.SFCarCounter,
+			container
+			{
+				capacity = 100,
+				test = Vehicles.ContainerAccess.Counter,
+			}
+		    	table install
+      		{
+          		items
+          		{
+              			1
+              			{
+                  			type = Base.Screwdriver,
+                  			count = 1,
+                  			keep = true,
+												equip = primary,
+              			}
+          		}
+          		time = 300,
+          		skills = Mechanics:1,
+          		recipes = Basic Mechanics,
+          		test = Vehicles.InstallTest.Default,
+      		}
+      		table uninstall
+      		{
+          		items
+          		{
+              			1
+              			{
+                  		type = Base.Screwdriver,
+                  		count = 1,
+                  		keep = true,
+											equip = primary,
+              			}
+							}
+          	time = 300,
+          	skills = Mechanics:1,
+          	recipes = Basic Mechanics,
+          	test = Vehicles.UninstallTest.Default,
+      		}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+			part Counter2
+			{
+				area = Kitchen,
+			  specificItem = false,
+				itemType = filcher.SFCarCounter,
+				container
+				{
+					capacity = 100,
+					test = Vehicles.ContainerAccess.Counter,
+				}
+			    	table install
+	      		{
+	          		items
+	          		{
+	              			1
+	              			{
+	                  			type = Base.Screwdriver,
+	                  			count = 1,
+	                  			keep = true,
+													equip = primary,
+	              			}
+	          		}
+	          		time = 300,
+	          		skills = Mechanics:1,
+	          		recipes = Basic Mechanics,
+	          		test = Vehicles.InstallTest.Default,
+	      		}
+	      		table uninstall
+	      		{
+	          		items
+	          		{
+	              			1
+	              			{
+	                  		type = Base.Screwdriver,
+	                  		count = 1,
+	                  		keep = true,
+												equip = primary,
+	              			}
+								}
+	          	time = 300,
+	          	skills = Mechanics:1,
+	          	recipes = Basic Mechanics,
+	          	test = Vehicles.UninstallTest.Default,
+	      		}
+				lua
+				{
+					create = Vehicles.Create.Default,
+				}
+			}
+				part Counter3
+				{
+					area = Kitchen,
+				  specificItem = false,
+					itemType = filcher.SFCarCounter,
+					container
+					{
+						capacity = 100,
+						test = Vehicles.ContainerAccess.Counter,
+					}
+				    	table install
+		      		{
+		          		items
+		          		{
+		              			1
+		              			{
+		                  			type = Base.Screwdriver,
+		                  			count = 1,
+		                  			keep = true,
+														equip = primary,
+		              			}
+		          		}
+		          		time = 300,
+		          		skills = Mechanics:1,
+		          		recipes = Basic Mechanics,
+		          		test = Vehicles.InstallTest.Default,
+		      		}
+		      		table uninstall
+		      		{
+		          		items
+		          		{
+		              			1
+		              			{
+		                  		type = Base.Screwdriver,
+		                  		count = 1,
+		                  		keep = true,
+													equip = primary,
+		              			}
+									}
+		          	time = 300,
+		          	skills = Mechanics:1,
+		          	recipes = Basic Mechanics,
+		          	test = Vehicles.UninstallTest.Default,
+		      		}
+					lua
+					{
+						create = Vehicles.Create.Default,
+					}
+				}
+					part Counter4
+					{
+						area = Kitchen,
+					  specificItem = false,
+						itemType = filcher.SFCarCounter,
+						container
+						{
+							capacity = 100,
+							test = Vehicles.ContainerAccess.Counter,
+						}
+					    	table install
+			      		{
+			          		items
+			          		{
+			              			1
+			              			{
+			                  			type = Base.Screwdriver,
+			                  			count = 1,
+			                  			keep = true,
+															equip = primary,
+			              			}
+			          		}
+			          		time = 300,
+			          		skills = Mechanics:1,
+			          		recipes = Basic Mechanics,
+			          		test = Vehicles.InstallTest.Default,
+			      		}
+			      		table uninstall
+			      		{
+			          		items
+			          		{
+			              			1
+			              			{
+			                  		type = Base.Screwdriver,
+			                  		count = 1,
+			                  		keep = true,
+														equip = primary,
+			              			}
+										}
+			          	time = 300,
+			          	skills = Mechanics:1,
+			          	recipes = Basic Mechanics,
+			          	test = Vehicles.UninstallTest.Default,
+			      		}
+						lua
+						{
+							create = Vehicles.Create.Default,
+						}
+					}
+
+		part Oven
+		{
+			area = Kitchen,
+		  specificItem = false,
+			itemType = filcher.SFCarOven,
+			container
+			{
+				capacity = 20,
+				test = Vehicles.ContainerAccess.Counter,
+			}
+    	table install
+  		{
+      		items
+      		{
+          			1
+          			{
+              			type = Base.Screwdriver,
+              			count = 1,
+              			keep = true,
+										equip = primary,
+          			}
+      		}
+      		time = 300,
+      		skills = Mechanics:1,
+      		recipes = Basic Mechanics,
+      		test = Vehicles.InstallTest.Default,
+  		}
+  		table uninstall
+  		{
+      		items
+      		{
+          			1
+          			{
+              			type = Base.Screwdriver,
+              			count = 1,
+              			keep = true,
+										equip = primary,
+          			}
+      		}
+      		time = 300,
+      		skills = Mechanics:1,
+      		recipes = Basic Mechanics,
+      		test = Vehicles.UninstallTest.Default,
+  		}
+			lua
+			{
+				create = Vehicles.Create.Oven,
+				update = Vehicles.Update.Oven,
+			}
+		}
+
+		part Fridge
+		{
+			area = Kitchen,
+		  specificItem = false,
+			itemType = filcher.SFCarFridge,
+			container
+			{
+				capacity = 100,
+				test = Vehicles.ContainerAccess.Counter,
+			}
+		    	table install
+      		{
+          		items
+          		{
+              			1
+              			{
+                  		type = Base.Screwdriver,
+                  		count = 1,
+                  		keep = true,
+											equip = primary,
+              			}
+          		}
+          	time = 300,
+          	skills = Mechanics:1,
+          	recipes = Basic Mechanics,
+          	test = Vehicles.InstallTest.Default,
+      		}
+      		table uninstall
+      		{
+          		items
+          		{
+              			1
+              			{
+                  			type = Base.Screwdriver,
+                  			count = 1,
+                  			keep = true,
+												equip = primary,
+              			}
+          		}
+          		time = 300,
+          		skills = Mechanics:1,
+          		recipes = Basic Mechanics,
+          		test = Vehicles.UninstallTest.Default,
+      		}
+			lua
+			{
+				create = Vehicles.Create.Fridge,
+				update = Vehicles.Update.Fridge,
+			}
+		}
+
+		part Television
+		{
+			area = Kitchen,
+		  specificItem = false,
+			itemType = Radio.TvBlack;Radio.TvWideScreen,
+    	table install
+  		{
+      		items
+      		{
+          			1
+          			{
+              			type = Base.Screwdriver,
+              			count = 1,
+              			keep = true,
+										equip = primary,
+          			}
+      		}
+      		time = 300,
+      		skills = Mechanics:1,
+      		recipes = Basic Mechanics,
+      		test = Vehicles.InstallTest.Default,
+  		}
+  		table uninstall
+  		{
+      		items
+      		{
+          			1
+          			{
+              		type = Base.Screwdriver,
+              		count = 1,
+              		keep = true,
+									equip = primary,
+          			}
+					}
+      	time = 300,
+      	skills = Mechanics:1,
+      	recipes = Basic Mechanics,
+      	test = Vehicles.UninstallTest.Default,
+  		}
+			lua
+			{
+				create = Vehicles.Create.Television,
+				update = Vehicles.Update.Television,
+			}
+		}
+	}
+}

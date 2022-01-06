@@ -1,0 +1,182 @@
+module Base
+{
+
+    item Bullets9mmBox
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Box of 9mm Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	HandgunAmmoBox,
+        MetalValue = 30,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 9mmClip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	9mm Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 15,
+        AmmoType = Base.Bullets9mm,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+
+    item Bullets45Box
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Box of .45 Auto Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	HandgunAmmoBox,
+        MetalValue = 30,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 45Clip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	.45 Auto Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 7,
+        AmmoType = Base.Bullets45,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+
+    item Bullets44Box
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Box of .44 Magnum Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	HandgunAmmoBox,
+        MetalValue = 30,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 44Clip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	.44 Magnum Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 8,
+        AmmoType = Base.Bullets44,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+
+    item Bullets38Box
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Box of .38 Special Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	HandgunAmmoBox,
+        MetalValue = 30,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+
+    item ShotgunShellsBox
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Box of Shotgun Shells,
+        DisplayCategory = Ammo,
+        Icon	=	ShotgunAmmoBox,
+        MetalValue = 24,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 223Box
+    {
+        Weight	=	0.5,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Box of .223 Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	RifleAmmo223,
+        MetalValue = 40,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 223Clip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	.223 Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 3,
+        AmmoType = Base.223Bullets,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+
+    item 308Box
+    {
+        Weight	=	0.5,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Box of .308 Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	RifleAmmo308,
+        MetalValue = 40,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 308Clip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	.308 Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 3,
+        AmmoType = Base.308Bullets,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+
+    item 556Box
+    {
+        Weight	=	0.5,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Box of .556 Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	RifleAmmo308,
+        MetalValue = 40,
+        StaticModel = pouch,
+		AttachmentType = Gear,
+    }
+
+    item 556Clip
+    {
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	.556 Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 30,
+        AmmoType = Base.556Bullets,
+        StaticModel = GunMagazine,
+		AttachmentType = Mag,
+    }
+}
+

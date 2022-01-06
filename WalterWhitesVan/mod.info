@@ -1,0 +1,5 @@
+name=Walter White's RV (Filibuster Rhymes' Used Cars)
+id=WalterWhitesRV
+description=Making the RV the most OP vehicle in the game
+poster=poster.png
+require=FRUsedCars

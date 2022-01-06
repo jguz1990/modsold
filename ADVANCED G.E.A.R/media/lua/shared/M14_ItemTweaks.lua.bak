@@ -1,0 +1,29 @@
+Events.OnGameBoot.Add(function()
+	--if getActivatedMods():contains("ItemTweakerAPI") then
+	--require("ItemTweaker_Core");
+	--else return end
+
+	TweakItem("Base.AssaultRifle2","MinDamage", "2.2");
+	TweakItem("Base.AssaultRifle2","MaxDamage", "4.5");
+	TweakItem("Base.AssaultRifle2","CriticalChance", "25");
+	TweakItem("Base.AssaultRifle2","CritDmgMultiplier", "8");
+	TweakItem("Base.AssaultRifle2","AimingPerkCritModifier", "12");
+	
+	
+	
+end)
+
+function M14_OnWeaponHitCharacter(wielder, victim, weapon, damage)
+	--print("TEST")
+	if weapon:getType() == "AssaultRifle2" then
+		victim:setAvoidDamage(true)
+		damage2 = ZombRandFloat(2.2,4.5)
+		dmg = tostring(damage2)
+		--getPlayer():Say(dmg, 1.0, 0.0, 1.0, UIFont.Dialogue, 30.0, "radio")
+		victim:setHealth( victim:getHealth() - damage2 )
+		--victim:Say(tostring(dmg), 0.0, 1.0, 0.0, UIFont.Dialogue, 30.0, "radio")
+	end
+end
+
+
+Events.OnWeaponHitCharacter.Add(M14_OnWeaponHitCharacter)

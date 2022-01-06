@@ -1,6 +1,6 @@
 module Base
 {
-    item Jacket_Black
+   /* item Jacket_Black
     {
         Type = Clothing,
         DisplayName = Leather Jacket,
@@ -17,6 +17,6 @@ module Base
         WindResistance = 0.6,
         FabricType = Leather,
         WaterResistance = 0.4,
-        Weight = 0.01,
-    }
+        Weight = 2,
+    }*/
 }

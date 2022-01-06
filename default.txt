@@ -80,6 +80,8 @@ mods
 	mod = ExtraMapSymbols,
 	mod = ExtraMapSymbolsUI,
 	mod = SleepWithFriends,
+	mod = waterPipes,
+	mod = WalterWhitesRV,
 }
 
 maps

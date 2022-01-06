@@ -7,21 +7,21 @@ By Nolan Ritchie
 
 
 Drag = 0.024;
-Gravity = 0.025;
+Gravity = 1;
 
 local function smokePop(zombie, radius)
-	smoker = HandWeapon.new("Base", "SmokeBomb", "SmokeBomb", "Weapon")
-	smoker:setSmokeRange(radius)
-	smoker:setTriggerExplosionTimer(0)
-	smoker:setSensorRange(0)
-	smoker:setRemoteControlID(-1)
-	smoker:setExplosionRange(0)
-	smoker:setFireRange(0)
-	smoker:setNoiseRange(0)
-	if smoker == null then
-		print("NNNNNNNNNNNNNNNUUUUUUUUUUUUUULLLLLLLLLLL")
-	end
-	local smoker2 = IsoMolotovCocktail.new(zombie:getCell(), zombie:getX(), zombie:getY(), zombie:getZ(), 0, 0, smoker, zombie )
+	-- smoker = HandWeapon.new("Base", "SmokeBomb", "SmokeBomb", "Weapon")
+	--smoker:setSmokeRange(radius)
+	-- smoker:setTriggerExplosionTimer(0)
+	-- smoker:setSensorRange(0)
+	-- smoker:setRemoteControlID(-1)
+	-- smoker:setExplosionRange(0)
+	-- smoker:setFireRange(0)
+	-- smoker:setNoiseRange(0)
+	-- if smoker == null then
+		-- print("NNNNNNNNNNNNNNNUUUUUUUUUUUUUULLLLLLLLLLL")
+	-- end
+	-- local smoker2 = IsoMolotovCocktail.new(zombie:getCell(), zombie:getX(), zombie:getY(), zombie:getZ(), 0, 0, smoker, zombie )
 	--smokes = smokes + 1
 end
 
@@ -239,7 +239,7 @@ function HandleTrap(player, trap)
 	if(trap:getType() == "BearTrap") and (trap:getModData().isSet == true or trap:getWorldItem():getModData().isSet == true) then
 	
 		if(instanceof(player,"IsoZombie")) then
-			if player:getSpeedMod() > 0.50 then
+			if not player:isCrawling() then
 				player:toggleCrawling();
 			else
 				player:setHealth( player:getHealth() - ((ZombRand(25) + 40)/100) )
@@ -277,7 +277,7 @@ function HandleTrap(player, trap)
 	elseif (trap:getType() == "SpikeTrap") and (trap:getModData().isSet == true) then
 	
 		if(instanceof(player,"IsoZombie")) then
-			if player:getSpeedMod() > 0.50 then
+			if not player:isCrawling() then
 				if ZombRand(0,2) == 0 then 
 					player:toggleCrawling();
 				end
@@ -340,7 +340,7 @@ function HandleTrap(player, trap)
 		if (trap:getType() == "LandMine") then 
 			-- player:getCurrentSquare():explode();
 			ExplodeZombies(player:getCurrentSquare(),9); 
-			smokePop(player, 1)	
+			--smokePop(player, 1)	
 		end
 		if (trap:getType() == "LandMineBig") then 
 			ExplodeZombies(player:getCurrentSquare(),12); 
@@ -351,8 +351,11 @@ function HandleTrap(player, trap)
 			smokePop(player, 3)	
 		end
 		player:getCurrentSquare():transmitRemoveItemFromSquare(trap:getWorldItem());
-		trap:getWorldItem():removeFromSquare();				
-		getSoundManager():PlayWorldSound("explosion_landmine", false, getPlayer():getCurrentSquare(), 0.2, 60, 0.2, false) ;
+		trap:getWorldItem():removeFromSquare();	
+			player:getCurrentSquare():explode();
+		-- getSoundManager():PlayWorldSound("explosion_landmine", false, getPlayer():getCurrentSquare(), 0.2, 60, 0.2, false) ;	
+		-- getSoundManager():PlayWorldSound("explosion", false, getPlayer():getCurrentSquare(), 0.2, 60, 0.2, false) ;
+			getSoundManager():PlayWorldSound("PipeBombExplode", false, getPlayer():getCurrentSquare(), 0.2, 60, 0.2, false) ;
 		smokePop(player)
 	end
 end
@@ -480,8 +483,8 @@ local function ZombiePhysicsHandle(zombie)
 			zombie:getModData().dieonland = nil;
 			zombie:getModData().crawlonland = nil;
 			elseif(zombie:getModData().crawlonland == true) and (zombie:isFakeDead() == false) then 
-				if player:getSpeedMod() > 0.50 then
-					player:toggleCrawling();
+				if not zombie:isCrawling() then
+					zombie:toggleCrawling();
 				else
 					zombie:setFakeDead(true); 
 				end
