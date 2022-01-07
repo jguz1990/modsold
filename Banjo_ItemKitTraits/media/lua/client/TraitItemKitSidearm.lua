@@ -6,7 +6,7 @@ end
 
 local function initSidearmStuff(player, square)
 	if player:HasTrait("Sidearm") then
-		player:getInventory():AddItem("Base.Pistol");
+		player:getInventory():AddItem("Base.M9");
 		player:getInventory():AddItem("Base.9mmClip");
 		player:getInventory():AddItem("Base.9mmClip");
 		player:getInventory():AddItem("Base.Bullets9mmBox");

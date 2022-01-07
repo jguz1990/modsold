@@ -6,9 +6,9 @@ end
 
 local function initSniperStuff(player, square)
 	if player:HasTrait("Sniper") then
-		player:getInventory():AddItem("Base.AssaultRifle2");
-		player:getInventory():AddItem("Base.M14Clip");
-		player:getInventory():AddItem("Base.M14Clip");
+		player:getInventory():AddItem("Base.M14");
+		player:getInventory():AddItem("Base.308ExtClip");
+		player:getInventory():AddItem("Base.308ExtClip");
 		player:getInventory():AddItem("Base.308Box");
 	end
 end

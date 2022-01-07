@@ -15,6 +15,38 @@ local function initAmmostockpilerStuff(player, square)
 	        ammostockpiler_bag:getItemContainer():AddItem("Base.223Box");
 	        ammostockpiler_bag:getItemContainer():AddItem("Base.308Box");
 	        ammostockpiler_bag:getItemContainer():AddItem("Base.556Box");
+			ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets9mmBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets45Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets44Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets38Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.ShotgunShellsBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.223Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.308Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.556Box");
+			ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets9mmBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets45Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets44Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets38Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.ShotgunShellsBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.223Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.308Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.556Box");
+			ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets9mmBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets45Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets44Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets38Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.ShotgunShellsBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.223Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.308Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.556Box");
+			ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets9mmBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets45Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets44Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.Bullets38Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.ShotgunShellsBox");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.223Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.308Box");
+	        ammostockpiler_bag:getItemContainer():AddItem("Base.556Box");
 	end
 end
 

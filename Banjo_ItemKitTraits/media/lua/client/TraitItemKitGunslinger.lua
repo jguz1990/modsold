@@ -6,8 +6,8 @@ end
 
 local function initGunslingerStuff(player, square)
 	if player:HasTrait("Gunslinger") then
-		player:getInventory():AddItem("Base.Revolver");
-		player:getInventory():AddItem("Base.Bullets45Box");
+		player:getInventory():AddItem("Base.Colt_Navy_1851");
+		player:getInventory():AddItem("Base.Bullets357Box");
 	end
 end
 

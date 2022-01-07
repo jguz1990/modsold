@@ -6,7 +6,7 @@ end
 
 local function initActionheroStuff(player, square)
 	if player:HasTrait("ActionHero") then
-		player:getInventory():AddItem("Base.Pistol3");
+		player:getInventory():AddItem("Base.Automag");
 		player:getInventory():AddItem("Base.44Clip");
 		player:getInventory():AddItem("Base.44Clip");
 		player:getInventory():AddItem("Base.Bullets44Box");

@@ -6,9 +6,7 @@ end
 
 local function initRiflemanStuff(player, square)
 	if player:HasTrait("Rifleman") then
-		player:getInventory():AddItem("Base.HuntingRifle");
-		player:getInventory():AddItem("Base.308Clip");
-		player:getInventory():AddItem("Base.308Clip");
+		player:getInventory():AddItem("Base.Savage12");
 		player:getInventory():AddItem("Base.308Box");
 	end
 end
