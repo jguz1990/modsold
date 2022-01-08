@@ -1,32 +1,12 @@
 module Base
 {
-    model MRE
-    {
-        mesh = mreclosed,
-        texture = mre,
-    }    
-
-    model MRE_open
-    {
-        mesh = mre,
-        texture = mre,
-    }  
-    model MRE_small
-    {
-        mesh = mreSm,
-        texture = mreSm,
-    }   
-    model crackerss
-    {
-        mesh = crackernom,
-        texture = crackerss,
-    }   
+   
 	
 recipe Unbox MREs
     {
 		MRE_Box,
 		Result:MRE=12,
-		Time:25.0,
+		Time 			: 50.0,
 		Category:Cooking,
         Sound:PutItemInBag,
 		OnCreate:OpenMREBox,
@@ -37,7 +17,7 @@ recipe Box MREs
 		Small_Cardboard_Box,
 		Scotchtape=1,
 		Result:MRE_Box,
-		Time:25.0,
+		Time 			: 50.0,
 		Category:Cooking,
         Sound:PutItemInBag,
     }	
@@ -45,7 +25,7 @@ recipe Unstack MRE Cartons
     {
 		MRE_Stack,
 		Result:MRE_Box=4,
-		Time:25.0,
+		Time 			: 50.0,
 		Category:Cooking,
         Sound:PutItemInBag,
     }	
@@ -53,7 +33,7 @@ recipe Stack MRE Cartons
     {
 		MRE_Box=4,
 		Result:MRE_Stack,
-		Time:25.0,
+		Time 			: 50.0,
 		Category:Cooking,
         Sound:PutItemInBag,
     }
@@ -63,9 +43,10 @@ recipe Open MRE
 		MRE,
 		Result 			: MRE_Pouch_Trash,
 		OnCreate		: OpenMRE,
-		Time 			: 25.0,
+		Time 			: 50.0,
 		Category 		: Cooking,
         Sound:PutItemInBag,
+	   Prop2:MRE_closed,
 	}
 	
 item Small_Cardboard_Box
@@ -103,6 +84,8 @@ item MRE
 		FoodType 			= NoExplicit,
 		Packaged 			= TRUE,
 		CantBeFrozen 		= TRUE,
+        StaticModel = MRE_closed,
+        WorldStaticModel = MRE_closed_world,
 	}
 
 item MRE_FlamelessRationHeater
@@ -111,6 +94,7 @@ item MRE_FlamelessRationHeater
 		Icon						=	MRE_Heater,
 		Weight						=	0.05,
 		DisplayCategory 			=	Item,
+        WorldStaticModel = MRE_small_world,
 		/*ReplaceOnUse 		= MRE_FlamelessRationHeater_Trash,*/
 	}
 }

@@ -11,6 +11,12 @@ module Base
 			rotate = 0.0000 10.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment schoolbag_canteen
+		{
+			offset = 0.0920 0.0000 -0.0350,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment schoolbag_gas
 		{
 			offset = 0.0620 0.0000 -0.0350,
@@ -38,6 +44,12 @@ module Base
 			rotate = 0.0000 5.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment hikingbag_canteen
+		{
+			offset = 0.1190 0.0000 -0.0000,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment hikingbag_gas
 		{
 			offset = 0.0890 0.0000 -0.0000,
@@ -63,6 +75,12 @@ module Base
 		{
 			offset = 0.0300 0.0900 -0.0000,
 			rotate = 0.0000 5.0000 90.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment hikingbag_left_canteen
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 90.0000 90.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
 	
@@ -107,6 +125,12 @@ module Base
 			rotate = 0.0000 10.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment alicepack_canteen
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 90.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment alicepack_gas
 		{
 			offset = 0.1320 0.0000 -0.0400,
@@ -141,6 +165,12 @@ module Base
 			rotate = 0.0000 10.0000 -30.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment alicepack_canteen_right
+		{
+			offset = 0.1120 -0.1000 -0.0400,
+			rotate = 90.0000 0.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 
 		attachment alicepack_walkie_right
 		{
@@ -167,6 +197,12 @@ module Base
 		{
 			offset = 0.1120 0.1000 -0.0400,
 			rotate = 0.0000 10.0000 30.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment alicepack_canteen_left
+		{
+			offset = 0.1120 0.1000 -0.0400,
+			rotate = 90.0000 0.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
 
@@ -206,6 +242,12 @@ module Base
 			rotate = 0.0000 5.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment schoolbag_canteen
+		{
+			offset = 0.0920 0.0000 -0.0350,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment schoolbag_gas
 		{
 			offset = 0.0920 0.0000 -0.0350,
@@ -233,6 +275,12 @@ module Base
 			rotate = 0.0000 5.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment hikingbag_canteen
+		{
+			offset = 0.1190 0.0000 -0.0000,
+			rotate = 90.0000 5.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment hikingbag_gas
 		{
 			offset = 0.1190 0.0000 -0.0000,
@@ -258,6 +306,12 @@ module Base
 		{
 			offset = 0.0300 0.0900 -0.0000,
 			rotate = 0.0000 5.0000 90.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment hikingbag_left_canteen
+		{
+			offset = 0.0300 0.0900 -0.0000,
+			rotate = 90.0000 90.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
 	
@@ -302,6 +356,12 @@ module Base
 			rotate = 0.0000 10.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
+		attachment alicepack_canteen
+		{
+			offset = 0.1320 0.0000 -0.0400,
+			rotate = 90.0000 10.0000 0.0000,
+			bone = Bip01_BackPack,
+		}
 		attachment alicepack_gas
 		{
 			offset = 0.1320 0.0000 -0.0400,
@@ -335,6 +395,12 @@ module Base
 			offset = 0.1120 -0.1000 -0.0400,
 			rotate = 0.0000 10.0000 -30.0000,
 			bone = Bip01_BackPack,
+		}	
+		attachment alicepack_canteen_right
+		{
+			offset = 0.1120 -0.1000 -0.0400,
+			rotate = 90.0000 0.0000 0.0000,
+			bone = Bip01_BackPack,
 		}
 
 		attachment alicepack_walkie_right
@@ -362,6 +428,12 @@ module Base
 		{
 			offset = 0.1120 0.1000 -0.0400,
 			rotate = 0.0000 10.0000 30.0000,
+			bone = Bip01_BackPack,
+		}
+		attachment alicepack_canteen_left
+		{
+			offset = 0.1120 0.1000 -0.0400,
+			rotate = 90.0000 0.0000 0.0000,
 			bone = Bip01_BackPack,
 		}
 

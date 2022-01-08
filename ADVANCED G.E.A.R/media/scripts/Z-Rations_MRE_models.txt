@@ -1,0 +1,56 @@
+module Base
+{
+   	model MRE_closed
+    {
+        mesh = ZREs/mre_closed,
+        texture = mre,
+		scale = 0.01,
+    }   
+   	model MRE_closed_world
+    {
+        mesh = ZREs/mre_closed_world,
+        texture = mre,
+		scale = 0.01,
+    }   
+    model MRE_crackers
+    {
+        mesh = ZREs/mre_crackers,
+        texture = crackerss,
+		scale = 0.01,
+    }   
+    model MRE_crackers_world
+    {
+        mesh = ZREs/mre_crackers_world,
+        texture = crackerss,
+		scale = 0.01,
+    }   
+    model MRE_small
+    {
+        mesh = ZREs/mre_small,
+        texture = mreSm,
+		scale = 0.01,
+    }   
+    model MRE_small_world
+    {
+        mesh = ZREs/mre_small_world,
+        texture = mreSm,
+		scale = 0.01,
+    } 
+	
+    model MRE_open
+    {
+        mesh = ZREs/mre_open,
+        texture = mre,
+		scale = 0.01,
+    } 
+    model MRE_open_world
+    {
+        mesh = ZREs/mre_open_world,
+        texture = mre,
+		scale = 0.01,
+    } 
+	
+	
+	
+}
+

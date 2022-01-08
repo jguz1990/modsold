@@ -79,8 +79,8 @@ require "Items/ItemPicker"
 	table.insert(SuburbsDistributions.Bag_WeaponBag.items, 1)
 
 		
-	table.insert(VehicleDistributions.GloveBox.junk, "Base.PLGR")
-	table.insert(VehicleDistributions.GloveBox.junk, 0.01)	
+	table.insert(VehicleDistributions.GloveBox.items, "Base.PLGR")
+	table.insert(VehicleDistributions.GloveBox.items, 0.01)	
 		
 	table.insert(VehicleDistributions.HunterTruckBed.items, "Base.PLGR")
 	table.insert(VehicleDistributions.HunterTruckBed.items, 0.1)	

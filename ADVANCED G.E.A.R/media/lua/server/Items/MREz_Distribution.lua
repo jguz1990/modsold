@@ -138,8 +138,8 @@ table.insert(ProceduralDistributions.list["FirearmWeapons"].items, 15.0);
 table.insert(ProceduralDistributions.list["FirearmWeapons"].items, "Base.MRE_Box");
 table.insert(ProceduralDistributions.list["FirearmWeapons"].items, 15.0);
 
-	table.insert(VehicleDistributions["GloveBox"].junk, "Base.MRE");
-	table.insert(VehicleDistributions["GloveBox"].junk, 0.01);	
+	table.insert(VehicleDistributions["GloveBox"].items, "Base.MRE");
+	table.insert(VehicleDistributions["GloveBox"].items, 0.01);	
 	
 	table.insert(VehicleDistributions["HunterTruckBed"].items, "Base.MRE");
 	table.insert(VehicleDistributions["HunterTruckBed"].items, 10);

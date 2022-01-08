@@ -119,8 +119,8 @@ require "Items/ItemPicker"
 	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, "Base.Canteenfull");
 	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, 50);
 
-	table.insert(VehicleDistributions["GloveBox"].junk, "Base.Flashlight_Military");
-	table.insert(VehicleDistributions["GloveBox"].junk, 0.01);	
+	table.insert(VehicleDistributions["GloveBox"].items, "Base.Flashlight_Military");
+	table.insert(VehicleDistributions["GloveBox"].items, 0.01);	
 	
 	table.insert(VehicleDistributions["SurvivalistTruckBed"].items, "Base.Flashlight_Military");
 	table.insert(VehicleDistributions["SurvivalistTruckBed"].items, 1);

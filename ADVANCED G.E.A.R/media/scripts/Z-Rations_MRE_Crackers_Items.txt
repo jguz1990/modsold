@@ -9,6 +9,8 @@ module Base
 		Category:Cooking,
 		OnCreate:SpreadMRE,
         Sound:PutItemInBag,
+	   Prop1:Source=2,
+	   Prop2:Source=1,
 		}
 
 	recipe Apply Peanut Butter
@@ -20,6 +22,8 @@ module Base
 		Category:Cooking,
 		OnCreate:SpreadMRE,
         Sound:PutItemInBag,
+	   Prop1:Source=2,
+	   Prop2:Source=1,
 		}
 
 	recipe Apply Cheese spread
@@ -31,6 +35,8 @@ module Base
 		Category:Cooking,
 		OnCreate:SpreadMRE,
         Sound:PutItemInBag,
+	   Prop1:Source=2,
+	   Prop2:Source=1,
 		}
 item MRE_Crackers
 	{
@@ -47,7 +53,8 @@ item MRE_Crackers
 		Calories					=	199,
 		Weight						=	0.1,
 		Packaged					=	TRUE,
-        StaticModel = crackerss,
+        StaticModel = MRE_crackers,
+        WorldStaticModel = MRE_crackers_world,
 	}
 
 
@@ -67,7 +74,8 @@ item MRE_Crackers_Jelly
 		Packaged					=	TRUE,
 		DaysFresh			= 3,
 		DaysTotallyRotten	= 4,
-        StaticModel = crackerss,
+        StaticModel = MRE_crackers,
+        WorldStaticModel = MRE_crackers_world,
 	}
 
 
@@ -87,7 +95,8 @@ item MRE_Crackers_PeanutButter
 		Packaged					=	TRUE,
 		DaysFresh			= 3,
 		DaysTotallyRotten	= 4,
-        StaticModel = crackerss,
+        StaticModel = MRE_crackers,
+        WorldStaticModel = MRE_crackers_world,
 	}
 
 
@@ -107,7 +116,8 @@ item MRE_Crackers_Cheesespread
 		Packaged					=	TRUE,
 		DaysFresh			= 3,
 		DaysTotallyRotten	= 4,
-        StaticModel = crackerss,
+        StaticModel = MRE_crackers,
+        WorldStaticModel = MRE_crackers_world,
 	}
 
 
@@ -125,6 +135,8 @@ item MRE_Jelly
 		Weight						=	0.1,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
 	}
 
 
@@ -142,6 +154,8 @@ item MRE_PeanutButter
 		Weight						=	0.1,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
 	}
 
 item MRE_Cheesespread
@@ -159,6 +173,8 @@ item MRE_Cheesespread
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
 		/*ReplaceOnUse 		= MRE_Meal_Pouch_Trash,*/
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
 	}	
 }
 

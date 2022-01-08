@@ -10,6 +10,8 @@ item MRE_Side
 		FoodType 			= NoExplicit,
 		Packaged 			= TRUE,
 		CantBeFrozen 		= TRUE,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 	recipe Rehydrate Fruit
 		{
@@ -19,6 +21,8 @@ item MRE_Side
 		Time:25.0,
 		Category:Cooking,
 		Sound:GetWater,
+	   Prop1:Source=1,
+	   Prop2:Source=2,
 		}
 
 item MRE_Applesauce
@@ -36,7 +40,8 @@ item MRE_Applesauce
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
         EatType = 2hand,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 item MRE_Freezedriedfruit
@@ -55,7 +60,8 @@ item MRE_Freezedriedfruit
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Pouch_Trash,
         EatType = 2hand,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 item MRE_Fruit
@@ -76,7 +82,8 @@ item MRE_Fruit
 		DaysTotallyRotten	= 4,
 		ReplaceOnUse 		= MRE_Side_Pouch_Trash,
         EatType = 2hand,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 item MRE_PotatoesAuGrautin
@@ -94,7 +101,8 @@ item MRE_PotatoesAuGrautin
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
         EatType = 2hand,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 item MRE_OatmealCookieBar
@@ -111,7 +119,8 @@ item MRE_OatmealCookieBar
 		Weight						=	0.2,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 
@@ -129,7 +138,8 @@ item MRE_PoundCake
 		Weight						=	0.2,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 
@@ -148,7 +158,8 @@ item MRE_BrownieChocCovered
 		Weight						=	0.2,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 
@@ -166,7 +177,8 @@ item MRE_CookieChocCovered
 		Weight						=	0.2,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Side_Carton_Trash,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 	
 item MRE_ChowMeinNoodles
@@ -185,7 +197,8 @@ item MRE_ChowMeinNoodles
 		Packaged 			= TRUE,
 		CantBeFrozen 		= TRUE,
         EatType = 2hand,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}		
 	
 item MRE_PotatoSticks
@@ -203,7 +216,8 @@ item MRE_PotatoSticks
 		Calories 			= 160,
 		Packaged 			= TRUE,
 		CantBeFrozen 		= TRUE,
-        StaticModel = MRE_small,
+		StaticModel = MRE_small,
+		WorldStaticModel = MRE_small_world,
 	}
 
 }

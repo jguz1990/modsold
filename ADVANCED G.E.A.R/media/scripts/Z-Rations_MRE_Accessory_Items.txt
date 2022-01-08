@@ -18,6 +18,9 @@ item MRE_Coffee
 		Calories					=	4,
 		Weight						=	0.1,
 		Packaged					=	TRUE,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+        EvolvedRecipe   =   HotDrink:5;HotDrinkRed:5;HotDrinkWhite:5;HotDrinkSpiffo:5;HotDrinkTea:5,
 	}
 
 item MRE_Coffee_Mug
@@ -38,6 +41,47 @@ item MRE_Coffee_Mug
 		CustomContextMenu			=	Drink,
 		CustomEatSound				=	DrinkingFromBottle,
         StaticModel = Mug,
+        WorldStaticModel = Mug,
+	}
+item MRE_Coffee_Mug_Red
+	{
+		DisplayName					=	MRE Coffee,
+		Icon						=	MugRedFull,
+		Type						=	Food,
+		FatigueChange				=	-5,
+		UnhappyChange				=	-5,
+		ThirstChange				=	-20,
+		Carbohydrates				=	0.75,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	4,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugRed,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugRed,
+        WorldStaticModel = MugRed,
+	}
+item MRE_Coffee_Mug_White
+	{
+		DisplayName					=	MRE Coffee,
+		Icon						=	MugWhiteFull,
+		Type						=	Food,
+		FatigueChange				=	-5,
+		UnhappyChange				=	-5,
+		ThirstChange				=	-20,
+		Carbohydrates				=	0.75,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	4,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugWhite,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugWhite,
+        WorldStaticModel = MugWhite,
 	}
 	
 	/*
@@ -77,6 +121,40 @@ item MRE_Coffee_Mug
         Category:Cooking,
 		Sound:GetWater,
 		OnCreate	: MRE_Drink,
+	   Prop1:MRE_small,
+	   Prop2:Mug,
+
+    }	
+    recipe Make Hot MRE Coffee
+    {
+        FullKettle=2,
+        destroy MRE_Coffee,
+        destroy MugRed,
+        Result:MRE_Coffee_Mug_Red,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+	   Prop1:MRE_small,
+	   Prop2:MugRed,
+
+    }	
+    recipe Make Hot MRE Coffee
+    {
+        FullKettle=2,
+        destroy MRE_Coffee,
+        destroy MugWhite,
+        Result:MRE_Coffee_Mug_White,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+	   Prop1:MRE_small,
+	   Prop2:MugWhite,
 
     }
 	

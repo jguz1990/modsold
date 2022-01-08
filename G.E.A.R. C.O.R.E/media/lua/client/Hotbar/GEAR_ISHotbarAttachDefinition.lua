@@ -5,9 +5,11 @@ end
 local MOD_DATA = {
     SmallBeltLeft = {
         Gear = "Gear Belt Left", 
+        Canteen = "Canteen Belt Left",
     },
     SmallBeltRight = {
         Gear = "Gear Belt Right",
+        Canteen = "Canteen Belt Right",
     },
 }
 for _,t in pairs(ISHotbarAttachDefinition) do
