@@ -82,6 +82,10 @@ mods
 	mod = SleepWithFriends,
 	mod = waterPipes,
 	mod = WalterWhitesRV,
+	mod = lgd_antibodies,
+	mod = ClaimNonResidential,
+	mod = ExpandedHelicopterEvents,
+	mod = PSurvival,
 }
 
 maps
