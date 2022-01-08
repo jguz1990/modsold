@@ -1,0 +1,409 @@
+module PrimitiveSurvival
+{
+	item PS_BarkStrip
+	{
+		Weight 		= 0.01,
+		Type 		= Normal,
+		DisplayName 		= Bark Strip,
+		Icon 		= PSBarkStrips,
+	}
+	item PS_SmallRope
+	{
+		Weight 		= 0.1,
+		Type 		= Normal,
+		DisplayName 		= Small Rope,
+		Icon 		= Rope,
+	}
+	recipe Make Small Rope
+	{
+		PS_BarkStrip=10,
+		Result 		: PS_SmallRope,
+		Time 		: 100,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Bark Strip
+	{
+		TreeBranch=1,
+		keep FlintKnife/ButterKnife/HuntingKnife/KitchenKnife,
+		Result 		: PS_BarkStrip=4,
+		Time 		: 80,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Rope
+	{
+		PS_SmallRope=3,
+		Result 		: Rope,
+		Time 		: 1000,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Bark Strip
+	{
+		Twigs=1,
+		keep FlintKnife/ButterKnife/HuntingKnife/KitchenKnife,
+		Result 		: PS_BarkStrip,
+		Time 		: 20,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Chipped Stone
+	{
+		Stone,
+		keep Hammer/HammerStone,
+		Result 		: SharpedStone,
+		Time 		: 100,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Sack
+	{
+		Sheet=2,
+		Thread=2,
+		keep Needle,
+		keep Scissors,
+		SkillRequired 		: Tailoring=1,
+		Result 		: EmptySandbag,
+		Time 		: 300,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Tent Kit
+	{
+		PS_SmallRope=4,
+		Sheet=2,
+		WoodenStick=6,
+		Result 		: camping.CampingTentKit,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Twine
+	{
+		RippedSheets=4,
+		keep Scissors,
+		Result 		: Twine=1,
+		Time 		: 40,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Mop
+	{
+		WoodenStick=1,
+		RippedSheets=4,
+		DuctTape=1,
+		Result 		: Mop,
+		Time 		: 150,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Bath Towel
+	{
+		Sheet,
+		keep Scissors,
+		Result 		: BathTowel=2,
+		Time 		: 100,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Homemade Soap
+	{
+		Log=2,
+		Water=4,
+		Bacon/MuttonChop/PorkChop/Steak/Rabbitmeat/Smallanimalmeat/Smallbirdmeat,
+		NearItem 		: Campfire,
+		Result 		: Soap2,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Homemade Bat
+	{
+		Log,
+		keep FlintKnife/ButterKnife/HuntingKnife/KitchenKnife,
+		SkillRequired 		: Woodwork=4,
+		Result 		: BaseballBat,
+		Time 		: 1000,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	item PS_SheetBag
+	{
+		ClothingItem = Bag_SheetBag,
+		AttachmentReplacement = Bag,
+		BloodLocation = Bag,
+		Weight 		= 1.0,
+		WeightReduction 		= 45,
+		Type 		= Container,
+		Capacity 		= 15,
+		DisplayName 		= Sheet Backpack,
+		CanBeEquipped 		= Back,
+		OpenSound 		= OpenBag,
+		CloseSound 		= CloseBag,
+		PutInSound 		= PutItemInBag,
+		Icon 		= SheetBag,
+	}
+	item PS_PrimitiveBag
+	{
+		ClothingItem = Bag_PrimitiveBag,
+		AttachmentReplacement = Bag,
+		BloodLocation = Bag,
+		Weight 		= 0.8,
+		WeightReduction 		= 30,
+		Type 		= Container,
+		Capacity 		= 10,
+		DisplayName 		= Primitive Backpack,
+		CanBeEquipped 		= Back,
+		OpenSound 		= OpenBag,
+		CloseSound 		= CloseBag,
+		PutInSound 		= PutItemInBag,
+		Icon 		= PrimitiveBag,
+	}
+	recipe Make Primitive Backpack
+	{
+		Twigs=5,
+		PS_BarkStrip=4,
+		PS_SmallRope=2,
+		Category 		: Survivalist,
+		Result 		: PS_PrimitiveBag,
+		Time 		: 200,
+		CanBeDoneFromFloor 		: True,
+	}
+	recipe Make Sheet Backpack
+	{
+		Sheet,
+		PS_SmallRope=2,
+		Thread=2,
+		keep Needle,
+		keep Scissors,
+		Category 		: Survivalist,
+		Result 		: PS_SheetBag,
+		Time 		: 300,
+		CanBeDoneFromFloor 		: True,
+	}
+	recipe Make Thread
+	{
+		Twine=15,
+		Result 		: Thread=1,
+		Time 		: 150,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Sheet
+	{
+		RippedSheets=4,
+		Thread=2,
+		keep Needle,
+		Result 		: Sheet=1,
+		Time 		: 150,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log=2,
+		Water=4,
+		Salt,
+		Flour=2,
+		Vinegar=2,
+		NearItem 		: Campfire,
+		Result 		: Glue,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log=2,
+		Water=4,
+		Vinegar=2,
+		Corn=5,
+		NearItem 		: Campfire,
+		Result 		: Glue,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log=2,
+		Water=4,
+		Salt,
+		Cornflour,
+		Vinegar=2,
+		NearItem 		: Campfire,
+		Result 		: Glue,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Vinegar
+	{
+		keep Pot,
+		Log=2,
+		Water=5,
+		Corn=5,
+		NearItem 		: Campfire,
+		Result 		: Vinegar,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Make Vinegar
+	{
+		keep Pot,
+		Log=2,
+		Water=5,
+		Potato=3,
+		NearItem 		: Campfire,
+		Result 		: Vinegar,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	item PS_TwigsBundle
+	{
+		Weight 		= 0.2,
+		Type 		= Normal,
+		DisplayName 		= Twigs Bundle,
+		Icon 		= TwigsBundle,
+	}
+	item PS_BranchesBundle
+	{
+		Weight 		= 2.0,
+		Type 		= Normal,
+		DisplayName 		= Branches Bundle,
+		Icon 		= BranchesBundle,
+	}
+	recipe Bundle Twigs
+	{
+		Twigs=10,
+		PS_SmallRope=1,
+		Result 		: PS_TwigsBundle,
+		Time 		: 50,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Bundle Tree Branches
+	{
+		TreeBranch=10,
+		PS_SmallRope=2,
+		Result 		: PS_BranchesBundle,
+		Time 		: 100,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+	}
+	recipe Unbundle Twigs
+	{
+		PS_TwigsBundle=1,
+		Result 		: Twigs=10,
+		Time 		: 50,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		OnCreate 		: recipe_smallrope,
+	}
+	recipe Unbundle Tree Branches
+	{
+		PS_BranchesBundle=1,
+		Result 		: TreeBranch=10,
+		Time 		: 50,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		OnCreate 		: recipe_smallrope2,
+	}
+	recipe Make Stone Axe
+	{
+		Result 		: AxeStone,
+		PS_SmallRope=1,
+		TreeBranch=1,
+		SharpedStone=1,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		Time 		: 50,
+	}
+	recipe Make Stone Hammer
+	{
+		Result 		: HammerStone,
+		PS_SmallRope=1,
+		TreeBranch=1,
+		Stone=1,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		Time 		: 50,
+	}
+	recipe Make Stone Knife
+	{
+		Result 		: FlintKnife,
+		PS_SmallRope=1,
+		TreeBranch/Twigs,
+		SharpedStone=1,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		Time 		: 50,
+	}
+	recipe Make Stone Saw
+	{
+		Result 		: PS_SawStone,
+		PS_SmallRope=1,
+		TreeBranch=1,
+		SharpedStone=3,
+		keep FlintKnife,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Survivalist,
+		Time 		: 200,
+	}
+	item PS_SawStone
+	{
+		Weight 		= 2,
+		Type 		= Drainable,
+		DisplayName 		= Stone Saw,
+		Icon 		= SawStone,
+		UseDelta 		= 0.25,
+	}
+	recipe Saw Logs
+	{
+		Log=1,
+		PS_SawStone,
+		Result 		: Plank=2,
+		Time 		: 1000,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Carpentry,
+		Sound 		: Sawing,
+		AnimNode 		: SawLog,
+		OnGiveXP:Recipe.OnGiveXP.SawLogs,
+		Prop1:Hacksaw,
+		Prop2:Log,
+	}
+	recipe Make Sturdy Sticks
+	{
+		Plank=1,
+		PS_SawStone,
+		Result 		: WoodenStick=4,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Carpentry,
+		Sound 		: Sawing,
+		AnimNode 		: SawLog,
+		OnGiveXP:Recipe.OnGiveXP.SawLogs,
+		Prop1:Hacksaw,
+	}
+	recipe Make Snare Trap
+	{
+		Twine=2,
+		Plank=1,
+		PS_SawStone,
+		Result 		: TrapSnare,
+		Time 		: 500,
+		CanBeDoneFromFloor 		: True,
+		Category 		: Trapper,
+		Sound 		: Sawing,
+		AnimNode 		: SawLog,
+		OnGiveXP:Recipe.OnGiveXP.SawLogs,
+		Prop1:Hacksaw,
+		SkillRequired 		: Trapping=1,
+	}
+}

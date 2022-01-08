@@ -1,0 +1,9 @@
+ItemName_CN = {
+	ItemName_Base.Small_Rope = "小绳子",
+	ItemName_Base.Bark_Strip = "树皮",
+	ItemName_Base.Stone_Saw = "石锯",
+	ItemName_Base.Sheet_Backpack = "手工背包",
+	ItemName_Base.Primitive_Backpack = "原始背包",
+	ItemName_Base.Twigs_Bundle = "小树枝(10根)",
+	ItemName_Base.Branches_Bundle = "树枝(10根)",
+}

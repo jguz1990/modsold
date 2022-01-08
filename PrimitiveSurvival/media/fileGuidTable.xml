@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+		<path>media/clothing/clothingItems/Bag_SheetBag.xml</path>
+		<guid>02FAC1FC-60BC-4352-8652-4533C4C168DB</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_PrimitiveBag.xml</path>
+		<guid>af906991-bf78-43e6-b450-3e4e5c58a26a</guid>
+	</files>
+</fileGuidTable>
