@@ -1,7 +1,0 @@
-require "Items/SuburbsDistributions"
-require "Items/ProceduralDistributions"
-require "Items/VehicleDistributions"
-require "Items/ItemPicker"	
-
-   
-    SuburbsDistributions["firestorage"] =  SuburbsDistributions["all"] 
