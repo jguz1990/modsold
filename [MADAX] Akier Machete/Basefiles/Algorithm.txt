@@ -1,16 +1,5 @@
-                                                                                                 Akier Machete
-                                                                  ____________ __________|_________________________                                                                                                        
-                                                                 |                           |                                         |                          |                                                        
-                                                    x  Short Mod      Bleed Mod                         Barbed Mod         Ergo Mod
-                                                                 |                           |                                         |                              |                                                                                  
-                                                        Barbed   "       Ergo     "                             Ergo       "            Barbed  "                                                                                                 
-                                                              or                      and                                     and                          or                                                                                               
-                                                        Bleed    "     x  Short     "                      x    Short      "            Bleed   "                                                                                      
-                                                             and                                                                                               and
-                                                        Ergo    "                                                                                    x  Short    "
-
 ----------------------------Akier Machete-----------------------------------
-(work in progress)
+done
 
 -----------------------Akier Machete (Bleed Mod)------------------------
 (work in progress)
@@ -19,7 +8,7 @@
 (work in progress)
 
 ----------------------Akier Machete (Ergonomic Mod)------------------------
-(work in progress)
+done
 
 --------------------Akier Machete (Ergonomic&Bleed Mod)------------
 (work in progress)
@@ -28,7 +17,7 @@
 (work in progress)
 
 ---------------------Akier Machete (Short Mod)------------------
-(work in progress)
+done
 
 -----------------Akier Machete (Short&Bleed Mod)-------------
 (work in progress)
@@ -43,4 +32,4 @@
 (work in progress)
 
 -------------------Akier Machete (Ergonomic&Short Mod)------------
-(work in progress)
+done

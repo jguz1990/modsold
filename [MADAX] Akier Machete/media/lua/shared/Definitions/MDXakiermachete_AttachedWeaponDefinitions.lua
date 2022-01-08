@@ -29,7 +29,7 @@ AttachedWeaponDefinitions.weaponInStomach = {
 
 -- various melee weapon attached in back
 AttachedWeaponDefinitions.meleeInBack = {
-	chance = 50,
+	chance = 20,
 	outfit = {"Bandit"},
 	weaponLocation = {"Shovel Back"},
 	bloodLocations = nil,
@@ -42,7 +42,7 @@ AttachedWeaponDefinitions.meleeInBack = {
 
 -- more melee in back!
 AttachedWeaponDefinitions.melee2InBack = {
-	chance = 60,
+	chance = 10,
 	outfit = {"Bandit"},
 	weaponLocation = {"Big Weapon On Back"},
 	bloodLocations = nil,

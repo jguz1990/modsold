@@ -39,5 +39,18 @@ module Base
 
 	}
 
+	model akiermacheteergonomic&shortmod
+	{
+		mesh = weapons/1handed/akiermacheteergonomic&shortmod,
+                                        texture = weapons/1handed/akiermacheteergonomic&shortmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
 	
 }
