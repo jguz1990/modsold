@@ -737,3 +737,5 @@ TweakItem("Base.SackCarrots", "Weight", "0.01")
 TweakItem("Base.SackPotatoes", "Weight", "0.01")
 TweakItem("Base.SackOnions", "Weight", "0.01")
 TweakItem("Base.Paperclip", "Weight", "0.001")
+
+TweakItem("Base.PropaneTank", "UseDelta", "0.01")

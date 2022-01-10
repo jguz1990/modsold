@@ -10,7 +10,7 @@ module Base	{
 	Ranged                      	=	TRUE,	
 	IsAimedFirearm              	=	TRUE,	
 	WeaponReloadType            	=	boltaction,	
-	FireMode                    	=	[3]Burst,	
+	FireMode                    	=	Single,	
 	FireModePossibilities       	=	Single/[3]Burst,	
 	AttachmentType              	=	Rifle,	
 	UseEndurance                	=	FALSE,	

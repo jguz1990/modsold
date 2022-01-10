@@ -11,7 +11,7 @@ module Base	{
 	IsAimedFirearm              	=	TRUE,	
 	WeaponReloadType            	=	boltaction,	
 	FireMode                    	=	Single,	
-	FireModePossibilities       	=	Single/Auto,	
+	FireModePossibilities       	=	Auto/Single,	
 	AttachmentType              	=	Rifle,	
 	UseEndurance                	=	FALSE,	
 	TwoHandWeapon               	=	TRUE,	

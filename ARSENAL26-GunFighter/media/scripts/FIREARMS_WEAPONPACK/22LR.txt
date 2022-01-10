@@ -1862,7 +1862,7 @@ module Base	{
 	IsAimedFirearm              	=	TRUE,	
 	haveChamber                	=	FALSE,	
 	WeaponReloadType            	=	boltaction,	
-	FireMode                    	=	Auto,	
+	FireMode                    	=	Single,	
 	FireModePossibilities       	=	Auto/Single,	
 	AttachmentType              	=	Rifle,	
 	UseEndurance                	=	FALSE,	

@@ -264,7 +264,7 @@ module Base
         WeaponReloadType = boltaction,
         JamGunChance = 2,
         AttachmentType = Rifle,
-        FireMode = Auto,
+        FireMode = Single,
         FireModePossibilities = Auto/Single,
     }
 

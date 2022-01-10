@@ -225,7 +225,7 @@ function RecycleVehicleAction:perform()
     end
     -- Do after all metal items
     for _ = 1, metalScrap do
-        if self:checkDropItem("Base.ScrapMetal") then
+        if self:checkDropItem("Base.EngineParts") then
             totalXp = totalXp + 2
         else
             metalUnusable = metalUnusable + 1
@@ -233,7 +233,7 @@ function RecycleVehicleAction:perform()
     end
     metalUnusable = math.floor(metalUnusable * 0.5)
     for _ = 1, metalUnusable do
-        self:dropItem("Base.UnusableMetal")
+        self:dropItem("Base.ScrapMetal")
     end
 
     -- Tires
@@ -327,7 +327,7 @@ function RecycleVehicleAction:new(character, vehicle, propaneNeeded)
     o.propaneNeeded = propaneNeeded
     o.vArea = RecycleVehicle.Utils.getBaseArea(vehicle)
     o.weldingLvl = character:getPerkLevel(Perks.MetalWelding)
-    o.chance = 20 + o.weldingLvl * 7
+    o.chance = 20 + o.weldingLvl * 10
     o.maxTime = o.vArea * 60 - o.weldingLvl * o.vArea * 1.2
 
     if ISVehicleMechanics.cheat then

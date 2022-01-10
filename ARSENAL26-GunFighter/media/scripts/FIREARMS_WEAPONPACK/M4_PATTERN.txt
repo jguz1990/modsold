@@ -685,7 +685,7 @@ module Base	{
 	Ranged                      	=	TRUE,	
 	IsAimedFirearm              	=	TRUE,	
 	WeaponReloadType            	=	boltaction,	
-	FireMode                    	=	Auto,	
+	FireMode                    	=	Single,	
 	FireModePossibilities       	=	Auto/Single,	
 	AttachmentType              	=	Rifle,	
 	UseEndurance                	=	FALSE,	

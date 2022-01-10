@@ -71,7 +71,7 @@ function RecycleVehicle.UI.addOptionToMenuOutsideVehicle(player, context, vehicl
             if not (partId:find("Wind") or partId:find("Headlight") or partId:find("TruckBed")
                     or partId:find("GloveBox") or partId:find("Engine") or partId:find("Heater")
                     or partId:find("PassengerCompartment") or partId == "TrunkDoorWreck") then
-                propaneNeeded = propaneNeeded + 0.65
+                propaneNeeded = propaneNeeded / 3
             end
         end
     end
