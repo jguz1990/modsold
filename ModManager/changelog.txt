@@ -1,0 +1,50 @@
+## [v2.0.0] - 2022-01-11
+### Added
+- Mod load order.
+- 'About' popup window.
+- 'Changelog' popup window (will be displayed only after Mod Manager update).
+- 'Settings' popup window.
+- 'Warning' popup window (will be displayed when opening Mod Manager, loading presets or mods from save if some mods are not available (broken), forced enabled favorite mods, forced disabled hidden mods).
+- Keyboard navigation: TAB to switch between search and mod list.
+- French, Italian, Traditional Chinese translations (v1.1.0).
+
+### Changed
+- Presets save mods load order.
+- Moved saved presets to 'saved_modlists.txt'.
+- Buttons on filters panel are now image buttons.
+- Reset settings to defaults (too many incompatible changes).
+- Updated Chinese and German translations.
+- Under-the-hood: logic of mods activation (vanilla style).
+- Various UI improvements.
+
+### Fixed
+- Fixed incorrect location icon displayed for some mods.
+- Fixed last save option not being shown in presets options.
+- Fixed filters reset button not resetting filters to default immediately.
+
+## [v1.1.0] - 2021-12-28
+### Added
+- Location icons in mod list.
+- Keyboard navigation: SHIFT + ENTER or SPACE to favorite and CTRL + ENTER or SPACE to hide mods.
+- Brazilian Portuguese, Turkish translations.
+
+### Changed
+- Buttons on mod info panel are now image buttons.
+- Renamed window title to "MOD MANAGER".
+
+### Fixed
+- Fixed errors when trying to navigate through an empty list using hotkeys.
+- Fixed changes in mod list not being discarded after closing.
+- Fixed incorrect position of "Remove from favorites/hidden" button.
+- Fixed scrolling position of mod list not resetting after closing.
+- Fixed mod info panel height.
+
+## [v1.0.1] - 2021-12-27
+### Added
+- Simplified Chinese, German, Spanish, Polish translations.
+
+### Fixed
+- Fixed filters not being reset in some cases.
+
+## [v1.0.0] - 2021-12-26
+Initial release.

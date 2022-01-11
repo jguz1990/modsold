@@ -1,9 +1,9 @@
 name=Mod Manager
-description=Improved mods selection screen. <LINE> Original mod was created by Narrnika.
+description=Improved mods selection screen.
 id=ModManager
 poster=logo.png
 icon=logo-mini.png
 versionMin=41.65
-modVersion=1.1.0
+modVersion=2.0.0
 authors=NoctisFalco
 tags=Interface

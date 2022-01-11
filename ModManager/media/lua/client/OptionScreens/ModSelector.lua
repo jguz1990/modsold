@@ -8,111 +8,123 @@
 --- under any circumstances. This includes, but not limited to, uploading this mod to the Steam Workshop
 --- or any other site, distribution as part of another mod or modpack, distribution of modified versions.
 ---
---- This mod is based on NRK Mod Selector by Narrnika and uploaded with his permission.
---- Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2155197983
+--- This file is based on ModSelector.lua from NRK Mod Selector by Narrnika and used with his permission.
+--- Origin: https://steamcommunity.com/sharedfiles/filedetails/?id=2155197983
 ---
 
 require('luautils')
+require('ModManager')
+require('ModManagerUtils')
+require('UI/MMListBox')
+require('UI/MMPanelPresets')
 
-local FILE_SETTINGS = "modmanager.ini"
-local FILE_CUSTOM_TAGS = "saved_modtags.txt"
-local FILE_MOD_LIST = "saved_modlist.txt"
-
-local VERSION_SETTINGS = 1
-
-local LIST_FAVORITES = "modmanager-favorites"
-local LIST_HIDDEN = "modmanager-hidden"
-
-local ICON_DEFAULT = getTexture("media/ui/ModManager_IconDefault.png")
-local ICON_DEFAULT_GREY = getTexture("media/ui/ModManager_IconDefaultGrey.png")
-local ICON_MAP = getTexture("media/ui/ModManager_IconMap.png")
-local ICON_MAP_GREY = getTexture("media/ui/ModManager_IconMapGrey.png")
-local ICON_ACTIVE = getTexture("media/ui/ModManager_StatusEnabled.png")
-local ICON_REQUIRE = getTexture("media/ui/ModManager_StatusEnabledBy.png")
+local ICON_DEFAULT = getTexture("media/ui/MM_Icon_ModDefault.png")
+local ICON_DEFAULT_GREY = getTexture("media/ui/MM_Icon_ModDefaultGrey.png")
+local ICON_MAP = getTexture("media/ui/MM_Icon_ModMap.png")
+local ICON_MAP_GREY = getTexture("media/ui/MM_Icon_ModMapGrey.png")
+local ICON_ACTIVE = getTexture("media/ui/MM_Icon_StatusActive.png")
+local ICON_REQUIRED = getTexture("media/ui/MM_Icon_StatusRequired.png")
 local ICON_BROKEN = getTexture("media/ui/icon_broken.png")
 local ICON_FAVORITE = getTexture("media/ui/FavoriteStar.png")
 local ICON_MINUS = getTexture("media/ui/Moodle_internal_minus_red.png")
 local ICON_PLUS = getTexture("media/ui/Moodle_internal_plus_green.png")
-local ICON_STEAM = getTexture("media/ui/ModManager_LocationSteam.png")
-local ICON_FOLDER = getTexture("media/ui/ModManager_LocationMods.png")
-local ICON_FOLDER_W = getTexture("media/ui/ModManager_LocationWorkshop.png")
+local ICON_STEAM = getTexture("media/ui/MM_Icon_LocationSteam.png")
+local ICON_FOLDER = getTexture("media/ui/MM_Icon_LocationMods.png")
+local ICON_FOLDER_W = getTexture("media/ui/MM_Icon_LocationWorkshop.png")
 
 local FONT_HGT_TITLE = getTextManager():getFontHeight(UIFont.Title)
-local FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 local FONT_HGT_MEDIUM = getTextManager():getFontHeight(UIFont.Medium)
+local FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 
 local BUTTON_HGT = math.max(25, FONT_HGT_SMALL + 3 * 2)
 local BUTTON_WDH = 100
 local BUTTON_SQ = math.min(48, FONT_HGT_SMALL * 2 + 8)
-local BUTTON_SQ_IMG = BUTTON_SQ - 8
 local DX, DY = 8, 8
 
--- **********************************************
--- ModSelector
--- **********************************************
-
 ModSelector = ISPanelJoypad:derive("ModSelector")
+local ModListBox = MMListBox:derive("ModListBox")
+local ModPanelPoster = ISPanelJoypad:derive("ModPanelPoster")
+local ModPanelThumbnail = ISPanelJoypad:derive("ModPanelThumbnail")
+local ModPanelInfo = ISPanelJoypad:derive("ModPanelInfo")
+local ModPanelPresets = MMPanelPresets:derive("ModPanelPresets")
 
 function ModSelector:new(x, y, width, height)
     local o = ISPanelJoypad:new(x, y, width, height)
     ModSelector.instance = o
     setmetatable(o, self)
     self.__index = self
-    o.backgroundColor = { r = 0, g = 0, b = 0, a = 0.8 }
+    o.backgroundColor = { r = 0, g = 0, b = 0, a = 0.3 }
     o.borderColor = { r = 1, g = 1, b = 1, a = 0.2 }
     o.anchorLeft = true
     o.anchorRight = false
     o.anchorTop = true
     o.anchorBottom = false
-    o.selected = 1
-
     o.mapGroups = MapGroups.new()
-    o.mapConflicts = false
-    o.ignoreMapConflicts = false
-
-    o.customTags = {} -- {modId = {tag, tag, tag, ...}, modId = {tag, tag, tag, ...}, ...}
-    o.counters = {} -- see ModSelector:populateListBox()
-    --o.settings = {} -- see ModSelector:loadSettings()
-    --o.isNewGame = false/true -- when called from MainScreen.lua/NewGameScreen.lua
-    --o.loadGameFolder = folder -- when called from LoadGameScreen.lua
+    o.manager = ModManager:new()
+    o.counters = {} -- see ModSelector.populateListBox()
+    o.ignoreNextTabKey = false -- see ModSelector.onKeyPressed(key) and MMTextEntryList.onOtherKey(key)
+    --[[
+    o.activeModsCopy = ActiveMods -- copy of initially ActiveMods, see ModSelector:populateListBox()
+    o.isNewGame = false/true -- when called from MainScreen.lua or NewGameScreen.lua
+    o.loadGameFolder = folder -- when called from LoadGameScreen.lua
+    ]]
     return o
 end
 
 function ModSelector:create()
-    self:loadSettings()
+    self.backgroundColor = { r = 0, g = 0, b = 0, a = 0.95 }
 
     local halfW = (self.width - 3 * DX) / 2
     local halfH = (self.height - (FONT_HGT_TITLE + DY * 2 + BUTTON_HGT + DY * 2 + DY)) / 2
 
-    self.titleLabel = ISLabel:new(0, DY, FONT_HGT_TITLE, getText("UI_ModManager_Title"), 1, 1, 1, 1, UIFont.Title, true)
+    self.titleLabel = ISLabel:new(0, DY, FONT_HGT_TITLE, getText("UI_ModManager"):upper(), 1, 1, 1, 1, UIFont.Title, true)
     self.titleLabel:setX((self.width - self.titleLabel:getWidth()) / 2)
     self:addChild(self.titleLabel)
 
-    self.filterPanel = ModPanelFilter:new(DX, FONT_HGT_TITLE + DY * 2, halfW, BUTTON_HGT * 3 + DY * 4)
+    self.aboutButton = MMImageButton:new(
+            self.width - FONT_HGT_TITLE - DX, self.titleLabel:getY(),
+            FONT_HGT_TITLE, FONT_HGT_TITLE, self, self.onButtonClick
+    )
+    self.aboutButton.internal = "ABOUT"
+    self.aboutButton:setImage(getTexture("media/ui/MM_Button_About.png"))
+    self.aboutButton:setPadding(DX, DY)
+    self:addChild(self.aboutButton)
+
+    self.settingsButton = MMImageButton:new(
+            self.aboutButton:getX() - FONT_HGT_TITLE - DX, self.titleLabel:getY(),
+            FONT_HGT_TITLE, FONT_HGT_TITLE, self, self.onButtonClick
+    )
+    self.settingsButton.internal = "SETTINGS"
+    self.settingsButton:setImage(getTexture("media/ui/MM_Button_Settings.png"))
+    self.settingsButton:setPadding(DX, DY)
+    self:addChild(self.settingsButton)
+
+    self.filterPanel = MMPanelFilter:new(DX, FONT_HGT_TITLE + DY * 2, halfW, BUTTON_HGT * 3 + DY * 4)
+    self.filterPanel:setSettingsCategory(ModManager.SETTINGS_CLIENT)
     self:addChild(self.filterPanel)
 
-    self.listBox = ModListBox:new(DX, self.filterPanel:getBottom() + DY, halfW, halfH + halfH - self.filterPanel:getHeight())
+    self.listBox = ModListBox:new(DX, self.filterPanel:getBottom() + DY, halfW, halfH * 2 - self.filterPanel:getHeight())
+    self.listBox:setEmptyText(getText("UI_ModManager_List_Empty"))
     self:addChild(self.listBox)
 
-    self.infoPanel = ModPanelInfo:new(halfW + DX * 2, FONT_HGT_TITLE + DY * 2, halfW, halfH + halfH + DY)
+    self.infoPanel = ModPanelInfo:new(halfW + DX * 2, FONT_HGT_TITLE + DY * 2, halfW, halfH * 2 + DY)
     self:addChild(self.infoPanel)
     self.infoPanel:addScrollBars()
     self.infoPanel:setScrollChildren(true)
     self.infoPanel:initialise()
 
-    self.backButton = ISButton:new(
+    self.backButton = MMButton:new(
             DX, self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
-            getText("UI_btn_back"), self, ModSelector.onBack
+            getText("UI_ModManager_Button_Back"):upper(), self, self.onBack
     )
     self.backButton:setAnchorTop(false)
     self.backButton:setAnchorBottom(true)
     self.backButton:setWidthToTitle(BUTTON_WDH)
-    self.backButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
     self:addChild(self.backButton)
 
-    self.acceptButton = ISButton:new(
+    self.acceptButton = MMButton:new(
             self.width - (DX + BUTTON_WDH), self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
-            getText("UI_btn_accept"), self, ModSelector.onAccept
+            getText("UI_ModManager_Button_Accept"):upper(), self, self.onAccept
     )
     self.acceptButton:setAnchorLeft(false)
     self.acceptButton:setAnchorRight(true)
@@ -120,41 +132,73 @@ function ModSelector:create()
     self.acceptButton:setAnchorBottom(true)
     self.acceptButton:setWidthToTitle(BUTTON_WDH)
     self.acceptButton:setX(self.width - (DX + self.acceptButton:getWidth()))
-    self.acceptButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
     self:addChild(self.acceptButton)
 
-    self.modOrderButton = ISButton:new(
+    self.mapsOrderButton = MMButton:new(
             self.width - (DX + BUTTON_WDH), self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
-            getText("UI_mods_ModsOrder"), self, ModSelector.onModOrder
+            getText("UI_ModManager_Button_MapsOrder"), self, ModSelector.onButtonClick
     )
-    self.modOrderButton:setAnchorLeft(false)
-    self.modOrderButton:setAnchorRight(true)
-    self.modOrderButton:setAnchorTop(false)
-    self.modOrderButton:setAnchorBottom(true)
-    self.modOrderButton:setWidthToTitle(BUTTON_WDH)
-    self.modOrderButton:setX(self.acceptButton:getX() - (DX + self.modOrderButton:getWidth()))
-    self.modOrderButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self:addChild(self.modOrderButton)
+    self.mapsOrderButton.internal = "MAPS_ORDER"
+    self.mapsOrderButton:setAnchorLeft(false)
+    self.mapsOrderButton:setAnchorRight(true)
+    self.mapsOrderButton:setAnchorTop(false)
+    self.mapsOrderButton:setAnchorBottom(true)
+    self.mapsOrderButton:setWidthToTitle(BUTTON_WDH)
+    self.mapsOrderButton:setX(self.acceptButton:getX() - (DX + self.mapsOrderButton:getWidth()))
+    self:addChild(self.mapsOrderButton)
 
-    self.getModButton = ISButton:new(
-            self.width - (DX + BUTTON_WDH) * 2, self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
-            getText("UI_mods_GetModsHere"), self, ModSelector.onGetMods
+    self.modsOrderButton = MMButton:new(
+            self.width - (DX + BUTTON_WDH), self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
+            getText("UI_ModManager_LoadOrder"), self, ModSelector.onButtonClick
     )
-    self.getModButton:setAnchorLeft(false)
-    self.getModButton:setAnchorRight(true)
-    self.getModButton:setAnchorTop(false)
-    self.getModButton:setAnchorBottom(true)
-    self.getModButton:setWidthToTitle(BUTTON_WDH)
-    self.getModButton:setX(self.modOrderButton:getX() - (DX + self.getModButton:getWidth()))
-    self.getModButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
+    self.modsOrderButton.internal = "MODS_ORDER"
+    self.modsOrderButton:setAnchorLeft(false)
+    self.modsOrderButton:setAnchorRight(true)
+    self.modsOrderButton:setAnchorTop(false)
+    self.modsOrderButton:setAnchorBottom(true)
+    self.modsOrderButton:setWidthToTitle(BUTTON_WDH)
+    self.modsOrderButton:setX(self.mapsOrderButton:getX() - (DX + self.modsOrderButton:getWidth()))
+    self:addChild(self.modsOrderButton)
+
+    self.serverManagerButton = MMButton:new(
+            self.width - (DX + BUTTON_WDH), self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
+            getText("UI_ModManager_Button_Server"), self, ModSelector.onButtonClick
+    )
+    self.serverManagerButton.internal = "SERVER_MANAGER"
+    self.serverManagerButton:setAnchorLeft(false)
+    self.serverManagerButton:setAnchorRight(true)
+    self.serverManagerButton:setAnchorTop(false)
+    self.serverManagerButton:setAnchorBottom(true)
+    self.serverManagerButton:setWidthToTitle(BUTTON_WDH)
+    self.serverManagerButton:setX(self.modsOrderButton:getX() - (DX + self.serverManagerButton:getWidth()))
+    self:addChild(self.serverManagerButton)
+    if not getActivatedMods():contains("ModManagerServer") then
+        self.serverManagerButton:setEnable(false)
+        self.serverManagerButton.tooltip = "Coming: When It's Ready (c)"
+    end
+
+    self.getModsButton = MMButton:new(
+            self.width - (DX + BUTTON_WDH) * 2, self.height - (DY + BUTTON_HGT), BUTTON_WDH, BUTTON_HGT,
+            getText("UI_mods_GetModsHere"), self, ModSelector.onButtonClick
+    )
+    self.getModsButton.internal = "GET_MODS"
+    self.getModsButton:setAnchorLeft(false)
+    self.getModsButton:setAnchorRight(true)
+    self.getModsButton:setAnchorTop(false)
+    self.getModsButton:setAnchorBottom(true)
+    self.getModsButton:setWidthToTitle(BUTTON_WDH)
+    self.getModsButton:setX(self.serverManagerButton:getX() - (DX + self.getModsButton:getWidth()))
     local tooltip_text = getText("UI_mods_Explanation") .. Core.getMyDocumentFolder() .. getFileSeparator() .. "mods" .. getFileSeparator()
     if not getSteamModeActive() then tooltip_text = getText("UI_mods_WorkshopRequiresSteam") .. "\n" .. tooltip_text end
-    self.getModButton.tooltip = tooltip_text
-    self:addChild(self.getModButton)
+    self.getModsButton.tooltip = tooltip_text
+    self:addChild(self.getModsButton)
+    if self.manager.settings.client.showGetModsButton ~= nil then
+        self.getModsButton:setVisible(self.manager.settings.client.showGetModsButton)
+    end
 
     self.presetsPanel = ModPanelPresets:new(
             self.backButton:getRight() + DX, self.height - (DY + BUTTON_HGT),
-            self.getModButton:getX() - (self.backButton:getRight() + DX * 2), BUTTON_HGT
+            self.getModsButton:getX() - (self.backButton:getRight() + DX * 2), BUTTON_HGT
     )
     self.presetsPanel:setAnchorTop(false)
     self.presetsPanel:setAnchorBottom(true)
@@ -166,49 +210,61 @@ function ModSelector:onResolutionChange(oldW, oldH, newW, newH)
     local halfH = (self.height - (FONT_HGT_TITLE + DY * 2 + BUTTON_HGT + DY * 2 + DY)) / 2
 
     self.titleLabel:setX((self.width - self.titleLabel:getWidth()) / 2)
+    self.aboutButton:setX(self.width - FONT_HGT_TITLE - DX)
+    self.settingsButton:setX(self.aboutButton:getX() - FONT_HGT_TITLE - DX)
 
     self.filterPanel:setWidth(halfW)
-    self.filterPanel.filter:setWidth(halfW - BUTTON_WDH - 3 * DX)
-    self.filterPanel.order:setWidth(halfW - BUTTON_WDH - 3 * DX)
-    self.filterPanel.saveButton:setX(self.filterPanel.filter:getRight() + DX)
-    self.filterPanel.resetButton:setX(self.filterPanel.order:getRight() + DX)
-
-    self.filterPanel.search:setWidth(halfW - 2 * DX)
-    self.filterPanel.search:recalcChildren()
-    self.filterPanel.searchEntryBox:setHeight(self.filterPanel.search.height - 6)
+    self.filterPanel:onResolutionChange()
 
     self.listBox:setWidth(halfW)
     self.listBox.btn.x1 = halfW - self.listBox.btn.w1 - DX
     self.listBox.btn.x2 = self.listBox.btn.x1 + self.listBox.btn.w3 + DX
     self.listBox.btn.x3 = self.listBox.btn.x2 + self.listBox.btn.w3 + DX
-    self.listBox:setHeight(halfH + halfH - self.filterPanel:getHeight())
+    self.listBox:setHeight(halfH * 2 - self.filterPanel:getHeight())
 
     self.infoPanel:setX(halfW + DX * 2)
     self.infoPanel:setWidth(halfW)
     self.infoPanel:setY(FONT_HGT_TITLE + DY * 2)
-    self.infoPanel:setHeight(halfH + halfH + DY)
+    self.infoPanel:setHeight(halfH * 2 + DY)
     self.infoPanel.posterPanel:setWidth(self.infoPanel.width - self.infoPanel.scrollwidth + 1)
     self.infoPanel.posterPanel:setHeight((self.infoPanel.width - self.infoPanel.scrollwidth) * 9 / 16 + 2)
     self.infoPanel.thumbnailPanel:setY(self.infoPanel.posterPanel:getBottom() - 1)
     self.infoPanel.thumbnailPanel:setWidth(self.infoPanel.width - self.infoPanel.scrollwidth + 1)
     self.infoPanel.locationEntry:setWidth(self.infoPanel:getWidth() - (DX + self.infoPanel.scrollwidth) - (self.infoPanel.locationLabel:getRight() + DX))
     self.infoPanel.urlEntry:setWidth(self.infoPanel:getWidth() - (DX + self.infoPanel.scrollwidth) - (self.infoPanel.urlLabel:getRight() + DX))
+
     self.infoPanel.customTagsButton:setX(self.infoPanel:getRight() - DX - BUTTON_SQ - self.infoPanel.scrollwidth)
     self.infoPanel.customTagsButton:setY(self.infoPanel:getBottom() - DX - BUTTON_SQ - 1)
     self.infoPanel.workshopButton:setY(self.infoPanel:getBottom() - DX - BUTTON_SQ - 1)
     self.infoPanel.urlButton:setY(self.infoPanel:getBottom() - DX - BUTTON_SQ - 1)
 
-    self.presetsPanel:setWidth(self.getModButton:getX() - (self.backButton:getRight() + DX * 2))
+    self.presetsPanel:setWidth(self.getModsButton:getX() - (self.backButton:getRight() + DX * 2))
+
+    if self.modLoadOrderUI then
+        self.modLoadOrderUI:setVisible(false)
+        self.modLoadOrderUI:removeFromUIManager()
+        self.modLoadOrderUI = nil
+    end
+    if self.settingsUI then
+        self.settingsUI:setVisible(false)
+        self.settingsUI:removeFromUIManager()
+        self.settingsUI = nil
+    end
+
+    local mms = ServerModSelectorBeta and ServerModSelectorBeta.instance
+    if mms and mms.javaObject and instanceof(mms.javaObject, 'UIElement') then
+        mms:onResolutionChange(oldW, oldH, newW, newH)
+    end
 end
 
 function ModSelector:prerender()
-    self.modOrderButton.enable = self.mapConflicts
-    if self.modOrderUI and self.modOrderUI:isReallyVisible() then
-        self.modOrderButton.blinkBG = false
-        self.modOrderButton.tooltip = nil
+    self.mapsOrderButton:setEnable(self.mapConflicts)
+    if self.mapsOrderUI and self.mapsOrderUI:isReallyVisible() then
+        self.mapsOrderButton.blinkBG = false
+        self.mapsOrderButton.tooltip = nil
     else
-        self.modOrderButton.blinkBG = self.mapConflicts
-        self.modOrderButton.tooltip = self.mapConflicts and getText("UI_mods_ConflictDetected") or nil
+        self.mapsOrderButton.blinkBG = self.mapConflicts
+        self.mapsOrderButton.tooltip = self.mapConflicts and getText("UI_mods_ConflictDetected") or nil
     end
 
     ISPanelJoypad.prerender(self)
@@ -244,11 +300,11 @@ function ModSelector:populateListBox(directories, modsModified)
     self.listBox.indexById = {}
     for i, directory in ipairs(directories) do
         local modInfo = getModInfo(directory)
-        -- To avoid errors if the mod has already been removed
         if modInfo then
             local modId = modInfo:getId()
+            -- TODO: check load priority
             if not self.listBox.indexById[modId] then
-                self.listBox:addItem(modInfo:getName(), { modInfo = modInfo, storedIndex = ModTracker.indexOf(modId) })
+                self.listBox:addItem(modInfo:getName(), { modInfo = modInfo, indexRecent = self.manager:indexInRecent(modId) })
                 self.listBox.indexById[modId] = i
             end
         end
@@ -262,7 +318,7 @@ function ModSelector:populateListBox(directories, modsModified)
     self.counters = {
         workshop = 0,
         map = 0,
-        translate = 0,
+        translated = 0,
         available = 0,
         enabled = 0,
         favorites = 0,
@@ -273,47 +329,77 @@ function ModSelector:populateListBox(directories, modsModified)
     }
 
     self.presetsPanel:updateOptions()
+
     local favorList = {}
-    for _, modId in ipairs(self.presetsPanel.saveList[LIST_FAVORITES] or {}) do
+    for _, modId in ipairs(self.manager.presets.mmFavorites) do
         favorList[modId] = true
     end
     local hiddenList = {}
-    for _, modId in ipairs(self.presetsPanel.saveList[LIST_HIDDEN] or {}) do
+    for _, modId in ipairs(self.manager.presets.mmHidden) do
         hiddenList[modId] = true
     end
 
-    local activeMods = (self.loadGameFolder or self.isNewGame) and ActiveMods.getById("currentGame") or ActiveMods.getById("default")
+    local activeMods = self:getActiveMods()
+    if not modsModified then
+        -- Save activeMods to revert later if necessary
+        self.activeModsCopy = ActiveMods.getById("modManager")
+        self.activeModsCopy:copyFrom(activeMods)
+    end
+
+    -- Save mods to show a dialog
+    local warnBroken, warnFavs, warnHidden = {}, {}, {}
+
     for _, i in ipairs(self.listBox.items) do
-        local item, modId, dir = i.item, i.item.modInfo:getId(), i.item.modInfo:getDir()
+        local item, modId = i.item, i.item.modInfo:getId()
+
+        item.isAvailable = item.modInfo:isAvailable()
+        item.isActive = activeMods:isModActive(modId)
+        item.isFavorite = favorList[modId] or false
+        item.isHidden = hiddenList[modId] or false
+
+        if oldItems[modId] then
+            if item.isAvailable then item.isActive = oldItems[modId].isActive end
+            item.isFavorite = oldItems[modId].isFavorite
+            item.isHidden = oldItems[modId].isHidden
+        end
+
+        -- Populate dependents
+        self:readRequire(modId)
+
+        if item.isFavorite then
+            if not item.isActive and item.isAvailable then
+                item.isActive = true
+                activeMods:setModActive(modId, true)
+                table.insert(warnFavs, modId)
+            end
+            self.counters.favorites = self.counters.favorites + 1
+        end
+        if item.isHidden then
+            if item.isActive then
+                item.isActive = false
+                activeMods:setModActive(modId, false)
+                table.insert(warnHidden, modId)
+            end
+            self.counters.hidden = self.counters.hidden + 1
+        end
+        if item.isActive and not item.isAvailable then
+            item.isActive = false
+            activeMods:setModActive(modId, false)
+            --table.insert(warnBroken, modId)
+        end
+        if item.isActive then self.counters.enabled = self.counters.enabled + 1 end
+        if item.isAvailable then self.counters.available = self.counters.available + 1 end
 
         if item.modInfo:getWorkshopID() then self.counters.workshop = self.counters.workshop + 1 end
 
         item.modInfoExtra = self:readInfoExtra(modId)
         if item.modInfoExtra.maps then self.counters.map = self.counters.map + 1 end
 
-        local lang = Translator.getLanguage():name()
-        item.modInfoExtra.translate = fileExists(dir .. string.gsub("/media/lua/shared/Translate/" .. lang, "/", getFileSeparator()))
-        if item.modInfoExtra.translate then self.counters.translate = self.counters.translate + 1 end
-
-        if item.isAvailable == nil then item.isAvailable = self:checkRequire(modId) and item.modInfo:isAvailable() end
-        if item.isAvailable then
-            self.counters.available = self.counters.available + 1
-            --else
-            --    -- Remove broken mods from favorites?
-            --    favorList[modId] = false
-        end
-
-        item.isActive = activeMods:isModActive(modId)
-        if oldItems[modId] and item.isAvailable then item.isActive = oldItems[modId].isActive end
-        if item.isActive then self.counters.enabled = self.counters.enabled + 1 end
-
-        item.isFavorite = favorList[modId] or false
-        if oldItems[modId] then item.isFavorite = oldItems[modId].isFavorite end
-        if item.isFavorite then self.counters.favorites = self.counters.favorites + 1 end
-
-        item.isHidden = hiddenList[modId] or false
-        if oldItems[modId] then item.isHidden = oldItems[modId].isHidden end
-        if item.isHidden then self.counters.hidden = self.counters.hidden + 1 end
+        item.modInfoExtra.translated = fileExists(
+                i.item.modInfo:getDir() .. string.gsub("/media/lua/shared/Translate/" .. Translator.getLanguage():name(),
+                        "/", getFileSeparator())
+        )
+        if item.modInfoExtra.translated then self.counters.translated = self.counters.translated + 1 end
 
         for _, tag in ipairs(item.modInfoExtra.tags or {}) do
             self.counters.originalTags[tag] = (self.counters.originalTags[tag] or 0) + 1
@@ -323,29 +409,17 @@ function ModSelector:populateListBox(directories, modsModified)
         end
     end
 
-    -- Read custom tags
-    self.customTags = {}
-    local file = getFileReader(FILE_CUSTOM_TAGS, true)
-    local line = file:readLine()
-    while line ~= nil do
-        -- Split modId and tags (by first ":", no luautils.split)
-        local sep = string.find(line, ":")
-        local modId, tags = "", ""
-        if sep ~= nil then
-            modId = string.sub(line, 0, sep - 1)
-            tags = string.sub(line, sep + 1)
+    -- Count custom tags
+    for _, tags in pairs(self.manager.customTags) do
+        for _, tag in ipairs(tags) do
+            self.counters.customTags[tag] = (self.counters.customTags[tag] or 0) + 1
         end
-
-        if modId ~= "" and tags ~= "" then
-            self.customTags[modId] = luautils.split(tags, ",")
-            for _, tag in ipairs(self.customTags[modId]) do
-                self.counters.customTags[tag] = (self.counters.customTags[tag] or 0) + 1
-            end
-        end
-
-        line = file:readLine()
     end
-    file:close()
+
+    if modsModified then
+        -- To force update info panel
+        self.infoPanel.item = nil
+    end
 
     self.listBox:updateFilter()
     self.listBox.keyboardFocus = true
@@ -353,33 +427,26 @@ function ModSelector:populateListBox(directories, modsModified)
     -- Check for map conflicts
     self.mapGroups:createGroups(self:getActiveMods(), false)
     self.mapConflicts = self.mapGroups:checkMapConflicts()
+
+    self:showModsWarning(warnBroken, warnFavs, warnHidden)
 end
 
-function ModSelector:checkRequire(modId)
+function ModSelector:readRequire(modId)
     local requires = getModInfoByID(modId):getRequire()
     if requires and not requires:isEmpty() then
         for i = 0, requires:size() - 1 do
-            local requireId = requires:get(i)
-            local index = self.listBox.indexById[requireId]
-            if index == nil then
-                return false
-            else
-                local requireItem = self.listBox.items[index].item
-                if type(requireItem.dependents) == "table" then
-                    table.insert(requireItem.dependents, modId)
+            local requiredId = requires:get(i)
+            local index = self.listBox.indexById[requiredId]
+            if index ~= nil then
+                local requiredItem = self.listBox.items[index].item
+                if type(requiredItem.dependents) == "table" then
+                    table.insert(requiredItem.dependents, modId)
                 else
-                    requireItem.dependents = { modId }
-                end
-                if requireItem.isAvailable == nil then
-                    requireItem.isAvailable = self:checkRequire(requireId)
-                end
-                if requireItem.isAvailable == false then
-                    return false
+                    requiredItem.dependents = { modId }
                 end
             end
         end
     end
-    return true
 end
 
 function ModSelector:readInfoExtra(modId)
@@ -441,51 +508,166 @@ function ModSelector:getActiveMods()
     return ActiveMods.getById((self.loadGameFolder or self.isNewGame) and "currentGame" or "default")
 end
 
-function ModSelector:checkConflictsOnAccept()
+function ModSelector:doActiveRequest(item, doFavor)
+    local indexInVisibleList
+    if self.filterPanel.orderBy.selected[2] then
+        indexInVisibleList = self.listBox.items[self.listBox.selected].item.visibleIndex
+    end
+
+    self:doActive(item, doFavor)
+    self.listBox:updateFilter()
+
+    if indexInVisibleList and #self.listBox.visibleItems > 0 then
+        self.listBox.selected = self.listBox.visibleItems[indexInVisibleList]
+    end
+
+    self.mapGroups:createGroups(self:getActiveMods(), false)
+    self.mapConflicts = self.mapGroups:checkMapConflicts()
+end
+
+function ModSelector:doActive(item, doFavor)
+    if not item.isActive then
+        item.isActive = true
+        self.counters.enabled = self.counters.enabled + 1
+    end
+    if doFavor then
+        item.isFavorite = true
+        self.counters.favorites = self.counters.favorites + 1
+    end
+
+    self:getActiveMods():setModActive(item.modInfo:getId(), true)
+
+    local requires = item.modInfo:getRequire()
+    if requires and not requires:isEmpty() then
+        for i = 0, requires:size() - 1 do
+            self:doActive(self.listBox.items[self.listBox.indexById[requires:get(i)]].item, doFavor)
+        end
+    end
+end
+
+function ModSelector:doInactiveRequest(item, doHidden)
+    local indexInVisibleList
+    if self.filterPanel.orderBy.selected[2] then
+        indexInVisibleList = self.listBox.items[self.listBox.selected].item.visibleIndex
+    end
+
+    self:doInactive(item, doHidden)
+    self.listBox:updateFilter()
+
+    if indexInVisibleList and #self.listBox.visibleItems > 0 then
+        self.listBox.selected = self.listBox.visibleItems[indexInVisibleList]
+    end
+
+    self.mapGroups:createGroups(self:getActiveMods(), false)
+    self.mapConflicts = self.mapGroups:checkMapConflicts()
+end
+
+function ModSelector:doInactive(item, doHidden)
+    if item.isActive then
+        item.isActive = false
+        self.counters.enabled = self.counters.enabled - 1
+    end
+    if item.isFavorite then
+        self.counters.favorites = self.counters.favorites - 1
+        item.isFavorite = false
+    end
+    if doHidden then
+        self.counters.hidden = self.counters.hidden + 1
+        item.isHidden = true
+    end
+
+    self:getActiveMods():setModActive(item.modInfo:getId(), false)
+
+    for _, dependentId in ipairs(item.dependents or {}) do
+        self:doInactive(self.listBox.items[self.listBox.indexById[dependentId]].item)
+    end
+end
+
+function ModSelector:doUnhide(item)
+    self.counters.hidden = self.counters.hidden - 1
+    item.isHidden = false
+
+    self.listBox:updateFilter()
+end
+
+function ModSelector:onAccept()
+    if self.mapsOrderUI then
+        self.mapsOrderUI:removeFromUIManager()
+    end
+    self:setVisible(false)
+
     local activeMods = self:getActiveMods()
     -- Remove mod IDs for missing mods from ActiveMods.mods
     activeMods:checkMissingMods()
     -- Remove unused map directories from ActiveMods.mapOrder
     activeMods:checkMissingMaps()
 
-    -- Check map conflicts
-    self.mapGroups:createGroups(self:getActiveMods(), false)
-    self.mapConflicts = self.mapGroups:checkMapConflicts()
+    -- Temporarily store activeMods
+    local tempActiveMods = ActiveMods.getById("modManager")
+    tempActiveMods:copyFrom(activeMods)
 
-    if self.mapConflicts and not self.ignoreMapConflicts then
-        self:showModOrderUI(true)
-        return true
+    -- Apply favorites and hidden
+    self:applyInternalPresets()
+
+    -- Restore
+    activeMods = self:getActiveMods()
+    activeMods:copyFrom(tempActiveMods)
+    tempActiveMods:clear()
+
+    if self.loadGameFolder then
+        local saveFolder = self.loadGameFolder
+        self.loadGameFolder = nil
+        manipulateSavefile(saveFolder, "WriteModsDotTxt")
+
+        -- Setting 'currentGame' to 'default' in case other places forget to set it
+        -- before starting a game (DebugScenarios.lua, etc).
+        local defaultMods = ActiveMods.getById("default")
+        local currentMods = ActiveMods.getById("currentGame")
+        currentMods:copyFrom(defaultMods)
+
+        LoadGameScreen.instance:onSavefileModsChanged(saveFolder)
+        LoadGameScreen.instance:setVisible(true, self.joyfocus)
+
+        -- Reset filter
+        self.filterPanel:resetFilter()
+        return
     end
-    return false
-end
 
-function ModSelector:showModOrderUI(fromOnAccept)
-    self:setVisible(false)
+    if self.isNewGame then
+        NewGameScreen.instance:setVisible(true, self.joyfocus)
+    else
+        saveModsFile()
 
-    self.modOrderUI = ModOrderUI:new(0, 0, 700, 400)
-    self.modOrderUI:initialise()
-    local onSaveButton = function(target, button)
-        ModOrderUI.onClick(target, button)
-        if target.fromOnAccept then
-            ModSelector.instance.ignoreMapConflicts = true
-            ModSelector.instance:onAccept()
+        -- Setting 'currentGame' to 'default' in case other places forget to set it
+        -- before starting a game (DebugScenarios.lua, etc).
+        local defaultMods = ActiveMods.getById("default")
+        local currentMods = ActiveMods.getById("currentGame")
+        currentMods:copyFrom(defaultMods)
+
+        MainScreen.instance.bottomPanel:setVisible(true)
+        if self.joyfocus then
+            self.joyfocus.focus = MainScreen.instance
+            updateJoypadFocus(self.joyfocus)
         end
     end
-    self.modOrderUI.save.onclick = onSaveButton
-    self.modOrderUI.fromOnAccept = fromOnAccept
-    self.modOrderUI:addToUIManager()
+
+    if ActiveMods.requiresResetLua(activeMods) then
+        if self.isNewGame then
+            getCore():ResetLua("currentGame", "NewGameMods")
+        else
+            getCore():ResetLua("default", "modsChanged")
+        end
+    else
+        -- Reset filter
+        self.filterPanel:resetFilter()
+    end
 end
 
--- **********************************************
--- ModSelector: buttons callbacks
--- **********************************************
-
-function ModSelector:onAccept()
-    self:setVisible(false)
-
+-- Save favorites and hidden
+function ModSelector:applyInternalPresets()
     -- Hidden
     local oldHidden, newHidden = {}, {}
-    for _, modId in ipairs(self.presetsPanel.saveList[LIST_HIDDEN] or {}) do
+    for _, modId in ipairs(self.manager.presets.mmHidden) do
         oldHidden[modId] = true
     end
     for _, item in ipairs(self.listBox.items) do
@@ -504,7 +686,7 @@ function ModSelector:onAccept()
 
     -- Favorites
     local oldFavors, newFavors = {}, {}
-    for _, modId in ipairs(self.presetsPanel.saveList[LIST_FAVORITES] or {}) do
+    for _, modId in ipairs(self.manager.presets.mmFavorites) do
         oldFavors[modId] = true
     end
     for _, item in ipairs(self.listBox.items) do
@@ -521,124 +703,70 @@ function ModSelector:onAccept()
         if not oldFavors[modId] then table.insert(addFavors, modId) end
     end
 
+    -- At least one list has been changed
     if #addFavors + #delFavors + #addHidden + #delHidden > 0 then
-        -- At least one list has been changed
         -- Change mods list of saves
-        for _, folder in ipairs(getFullSaveDirectoryTable()) do
-            local modListChanged = false
+        if #addFavors + #addHidden > 0 then
+            for _, folder in ipairs(getFullSaveDirectoryTable()) do
+                -- Change mods only for other saves
+                if folder ~= self.loadGameFolder then
+                    local modListChanged = false
 
-            local info = getSaveInfo(folder)
-            local activeMods = info.activeMods or ActiveMods.getById("default")
-            ActiveMods.getById("currentGame"):copyFrom(activeMods)
-            -- Favorites
-            for _, modId in ipairs(addFavors) do
-                modListChanged = true
-                ActiveMods.getById("currentGame"):setModActive(modId, true)
-            end
-            -- Hidden
-            for _, modId in ipairs(addHidden) do
-                modListChanged = true
-                ActiveMods.getById("currentGame"):setModActive(modId, false)
-            end
-            if modListChanged then
-                manipulateSavefile(folder, "WriteModsDotTxt")
-                LoadGameScreen.instance:onSavefileModsChanged(folder)
+                    local info = getSaveInfo(folder)
+                    local activeModsInSave = info.activeMods or ActiveMods.getById("default")
+                    ActiveMods.getById("currentGame"):copyFrom(activeModsInSave)
+                    -- Favorites
+                    for _, modId in ipairs(addFavors) do
+                        modListChanged = true
+                        ActiveMods.getById("currentGame"):setModActive(modId, true)
+                    end
+                    -- Hidden
+                    for _, modId in ipairs(addHidden) do
+                        modListChanged = true
+                        ActiveMods.getById("currentGame"):setModActive(modId, false)
+                    end
+                    if modListChanged then
+                        manipulateSavefile(folder, "WriteModsDotTxt")
+                        LoadGameScreen.instance:onSavefileModsChanged(folder)
+                    end
+                end
             end
         end
 
         -- Change global mod list
-        -- Favorites
-        for _, modId in ipairs(addFavors) do
-            ActiveMods.getById("default"):setModActive(modId, true)
+        if self.isNewGame or self.loadGameFolder then
+            for _, modId in ipairs(addFavors) do
+                ActiveMods.getById("default"):setModActive(modId, true)
+            end
+            for _, modId in ipairs(addHidden) do
+                ActiveMods.getById("default"):setModActive(modId, false)
+            end
+            saveModsFile()
         end
-        -- Hidden
-        for _, modId in ipairs(addHidden) do
-            ActiveMods.getById("default"):setModActive(modId, false)
-        end
-        saveModsFile()
 
         -- Save new favorites list
-        self.presetsPanel.saveList[LIST_FAVORITES] = {}
+        self.manager.presets.mmFavorites = {}
         for modId, _ in pairs(newFavors) do
-            table.insert(self.presetsPanel.saveList[LIST_FAVORITES], modId)
+            table.insert(self.manager.presets.mmFavorites, modId)
         end
-        table.sort(self.presetsPanel.saveList[LIST_FAVORITES])
+        table.sort(self.manager.presets.mmFavorites)
         -- Save new hidden list
-        self.presetsPanel.saveList[LIST_HIDDEN] = {}
+        self.manager.presets.mmHidden = {}
         for modId, _ in pairs(newHidden) do
-            table.insert(self.presetsPanel.saveList[LIST_HIDDEN], modId)
+            table.insert(self.manager.presets.mmHidden, modId)
         end
-        table.sort(self.presetsPanel.saveList[LIST_HIDDEN])
-        self.presetsPanel:savePresets()
+        table.sort(self.manager.presets.mmHidden)
+        self.manager:savePresets()
     end
-
-    -- Accept for LoadGameScreen
-    if self.loadGameFolder then
-        local saveFolder = self.loadGameFolder
-        for _, item in ipairs(self.listBox.items) do
-            ActiveMods.getById("currentGame"):setModActive(item.item.modInfo:getId(), item.item.isActive)
-        end
-
-        if self:checkConflictsOnAccept() then return end
-        self.loadGameFolder = nil
-
-        manipulateSavefile(saveFolder, "WriteModsDotTxt")
-        LoadGameScreen.instance:onSavefileModsChanged(saveFolder)
-        LoadGameScreen.instance:setVisible(true, self.joyfocus)
-
-        -- Reset filter
-        self.filterPanel:resetFilter()
-        return
-    end
-
-    -- Accept for NewGameScreen
-    if self.isNewGame then
-        for _, item in ipairs(self.listBox.items) do
-            ActiveMods.getById("currentGame"):setModActive(item.item.modInfo:getId(), item.item.isActive)
-        end
-
-        if self:checkConflictsOnAccept() then return end
-        self.isNewGame = nil
-
-        NewGameScreen.instance:setVisible(true, self.joyfocus)
-        if ActiveMods.requiresResetLua(ActiveMods.getById("currentGame")) then
-            getCore():ResetLua("currentGame", "NewGameMods")
-        else
-            -- Reset filter
-            self.filterPanel:resetFilter()
-        end
-        return
-    end
-
-    -- Accept for MainScreen
-    for _, item in ipairs(self.listBox.items) do
-        ActiveMods.getById("default"):setModActive(item.item.modInfo:getId(), item.item.isActive)
-    end
-    saveModsFile()
-
-    if self:checkConflictsOnAccept() then return end
-
-    -- Setting 'currentGame' to 'default' in case other places forget to set it
-    -- before starting a game (DebugScenarios.lua, etc).
-    local defaultMods = ActiveMods.getById("default")
-    local currentMods = ActiveMods.getById("currentGame")
-    currentMods:copyFrom(defaultMods)
-
-    -- Return to MainScreen
-    MainScreen.instance.bottomPanel:setVisible(true)
-    if self.joyfocus then
-        self.joyfocus.focus = MainScreen.instance
-        updateJoypadFocus(self.joyfocus)
-    end
-
-    --if ActiveMods.requiresResetLua(ActiveMods.getById("default")) then
-    getCore():ResetLua("default", "modsChanged")
-    --end
 end
 
 function ModSelector:onBack()
-    self.listBox.keyboardFocus = false
     self:setVisible(false)
+    self.listBox.keyboardFocus = false
+
+    local activeMods = self:getActiveMods()
+    activeMods:copyFrom(self.activeModsCopy)
+    self.activeModsCopy:clear()
 
     -- Reset filter
     self.filterPanel:resetFilter()
@@ -667,81 +795,57 @@ function ModSelector:onBack()
     end
 end
 
-function ModSelector:onModOrder()
-    self:showModOrderUI(false)
-end
-
-function ModSelector:onGetMods()
-    if getSteamModeActive() then
-        if isSteamOverlayEnabled() then
-            activateSteamOverlayToWorkshop()
-        else
-            openUrl("steam://url/SteamWorkshopPage/108600")
+function ModSelector:onButtonClick(button)
+    if button.internal == "MAPS_ORDER" then
+        self:setVisible(false)
+        self.mapsOrderUI = ModOrderUI:new(0, 0, 700, 400)
+        self.mapsOrderUI:initialise()
+        self.mapsOrderUI:addToUIManager()
+    elseif button.internal == "MODS_ORDER" then
+        self:setVisible(false)
+        if not self.modLoadOrderUI then
+            self.modLoadOrderUI = ModLoadOrderUI:new()
+            self.modLoadOrderUI:initialise()
         end
-    else
-        openUrl("http://theindiestone.com/forums/index.php/forum/58-mods/")
-    end
-end
-
-function ModSelector:loadSettings()
-    self.settings = {}
-    local version = 0
-    local category = ""
-    local file = getFileReader(FILE_SETTINGS, true)
-    local line = file:readLine()
-    while line ~= nil do
-        if luautils.stringStarts(line, "VERSION=") then
-            version = tonumber(string.split(line, "=")[2])
-            --elseif version == VERSION_SETTINGS then
-        else
-            line = line:trim()
-            if line ~= "" then
-                local k, v = line:match("^([^=%[]+)=([^=]+)$")
-                if k then
-                    k = k:trim()
-                    if v:trim() == "true" then
-                        v = true
-                    elseif v:trim() == "false" then
-                        v = false
-                    end
-                    self.settings[category][k] = v
-                else
-                    local t = line:match("^%[([^%[%]%%]+)%]$")
-                    if t then
-                        category = t:trim()
-                        if not self.settings[category] then
-                            self.settings[category] = {}
-                        end
-                    end
-                end
+        self.modLoadOrderUI:populateList()
+        self.modLoadOrderUI:addToUIManager()
+        self.modLoadOrderUI:setVisible(true)
+    elseif button.internal == "SERVER_MANAGER" then
+        if not self.serverSelectorUI then
+            self.serverSelectorUI = ServerModSelectorBeta:new()
+            self.serverSelectorUI:initialise()
+            self.serverSelectorUI:setAnchorRight(true)
+            self.serverSelectorUI:setAnchorLeft(true)
+            self.serverSelectorUI:setAnchorBottom(true)
+            self.serverSelectorUI:setAnchorTop(true)
+            self.serverSelectorUI:addToUIManager()
+        end
+        self.serverSelectorUI:populateListBox(self.listBox.items)
+        self.serverSelectorUI:setVisible(true)
+        self.serverSelectorUI:bringToTop()
+        self:setVisible(false)
+    elseif button.internal == "GET_MODS" then
+        if getSteamModeActive() then
+            if isSteamOverlayEnabled() then
+                activateSteamOverlayToWorkshop()
+            else
+                openUrl("steam://url/SteamWorkshopPage/108600")
             end
+        else
+            openUrl("http://theindiestone.com/forums/index.php/forum/58-mods/")
         end
-        line = file:readLine()
-    end
-    file:close()
-end
-
-function ModSelector:saveSettings()
-    local file = getFileWriter(FILE_SETTINGS, true, false)
-    file:write("VERSION=" .. tostring(VERSION_SETTINGS) .. "\r\n")
-    file:write("\r\n[filter]\r\n")
-    self:writeTickBoxSelection(file, self.filterPanel.locationTickBox)
-    self:writeTickBoxSelection(file, self.filterPanel.mapTickBox)
-    self:writeTickBoxSelection(file, self.filterPanel.translateTickBox)
-    self:writeTickBoxSelection(file, self.filterPanel.availabilityTickBox)
-    self:writeTickBoxSelection(file, self.filterPanel.statusTickBox)
-    self:writeTickBoxSelection(file, self.filterPanel.favorTickBox)
-    file:write("\r\n[order]\r\n")
-    self:writeTickBoxSelection(file, self.filterPanel.orderBy)
-    self:writeTickBoxSelection(file, self.filterPanel.orderAs)
-    file:close()
-
-    self:loadSettings()
-end
-
-function ModSelector:writeTickBoxSelection(file, tickBox)
-    for index = 1, tickBox.optionCount - 1 do
-        file:write(tickBox.optionData[index] .. "=" .. tostring(tickBox.selected[index]) .. "\r\n")
+    elseif button.internal == "ABOUT" then
+        self.aboutUI = ModManagerAboutUI:new()
+        self.aboutUI:initialise()
+        self.aboutUI:addToUIManager()
+    elseif button.internal == "SETTINGS" then
+        if not self.settingsUI then
+            self.settingsUI = ModManagerSettingsUI:new()
+            self.settingsUI:initialise()
+        end
+        self.settingsUI:updateSettings()
+        self.settingsUI:addToUIManager()
+        self.settingsUI:setVisible(true)
     end
 end
 
@@ -761,115 +865,136 @@ function ModSelector:onJoypadBeforeDeactivate(joypadData)
     self.joyfocus = nil
 end
 
+function ModSelector:showModsWarning(warnBroken, warnFavs, warnHidden)
+    if #warnBroken + #warnFavs + #warnHidden > 0 then
+        local msg = ""
+        if #warnBroken > 0 then
+            msg = getText("UI_ModManager_Warning_Failed", #warnBroken) .. "\n" .. table.concat(warnBroken, "\n")
+        end
+        if #warnFavs > 0 then
+            if #warnBroken > 0 then msg = msg .. "\n\n" end
+            msg = msg .. getText("UI_ModManager_Warning_Favs", #warnFavs) .. "\n" .. table.concat(warnFavs, "\n")
+        end
+        if #warnHidden > 0 then
+            if #warnBroken + #warnFavs > 0 then msg = msg .. "\n\n" end
+            msg = msg .. getText("UI_ModManager_Warning_Hidden", #warnHidden) .. "\n" .. table.concat(warnHidden, "\n")
+        end
+        local modal = MMModalDialog.show(msg, true)
+        modal.isCancelable = false
+    end
+end
+
+function ModSelector:showChangelog()
+    if ModManager.instance:isNewVersion(ModManager.ID) then
+        local panel = ModManagerChangelogUI:new(ModManager.ID)
+        panel:initialise()
+        panel:addToUIManager()
+        panel:setAlwaysOnTop(true)
+        panel:setCapture(true)
+    end
+end
+
 -- Called from MainScreen.lua, NewGameScreen.lua, LoadGameScreen.lua
 function ModSelector.showNagPanel()
-    if getCore():isModsPopupDone() then return end
+    if not getCore():isModsPopupDone() then
+        if ModManager.instance.settings.client.showNagPanel ~= false then
+            getCore():setModsPopupDone(true)
+            ModSelector.instance:setVisible(false)
 
-    getCore():setModsPopupDone(true)
-    ModSelector.instance:setVisible(false)
-
-    local width, height = 650, 400
-    local nagPanel = ISModsNagPanel:new(
-            (getCore():getScreenWidth() - width) / 2,
-            (getCore():getScreenHeight() - height) / 2,
-            width, height)
-    nagPanel:initialise()
-    nagPanel:addToUIManager()
-    nagPanel:setAlwaysOnTop(true)
-    local joypadData = JoypadState.getMainMenuJoypad()
-    if joypadData then
-        joypadData.focus = nagPanel
-        updateJoypadFocus(joypadData)
+            local width, height = 650, 400
+            local nagPanel = ISModsNagPanel:new(
+                    (getCore():getScreenWidth() - width) / 2, (getCore():getScreenHeight() - height) / 2, width, height
+            )
+            nagPanel:initialise()
+            nagPanel:addToUIManager()
+            nagPanel:setAlwaysOnTop(true)
+            local joypadData = JoypadState.getMainMenuJoypad()
+            if joypadData then
+                joypadData.focus = nagPanel
+                updateJoypadFocus(joypadData)
+            end
+        else
+            getCore():setModsPopupDone(true)
+            ModSelector.instance:showChangelog()
+        end
     end
 end
 
 function ModSelector.onKeyPressed(key)
     local target = ModSelector.instance
-    if target == nil or not target:getIsVisible() then return end
+    if target == nil or not target:isVisible() then return end
 
-    local list = target.listBox
-    if list == nil or list.keyboardFocus ~= true then return end
+    local listBox = target.listBox
+    if listBox == nil or listBox.keyboardFocus ~= true then return end
 
-    if list.alertDialog and list.alertDialog:getIsVisible() then return end
-
-    local indexInVisibleList = list.items[list.selected].item.visibleIndex
-    if key == Keyboard.KEY_UP then
-        if indexInVisibleList == nil then
-            local new_selected = list:prevVisibleIndex(list.selected)
-            list.selected = new_selected > 0 and new_selected or 1
-        elseif indexInVisibleList > 1 then
-            list.selected = list.visibleItems[indexInVisibleList - 1]
-        end
-    elseif key == Keyboard.KEY_DOWN then
-        if indexInVisibleList == nil then
-            local new_selected = list:nextVisibleItem(list.selected)
-            list.selected = new_selected > 0 and new_selected or list.visibleItems[#list.visibleItems]
-        elseif indexInVisibleList < #list.visibleItems then
-            list.selected = list.visibleItems[indexInVisibleList + 1]
-        end
-    elseif key == Keyboard.KEY_PRIOR then
-        local step = math.floor(list.height / list.itemheight) - 1
-        if indexInVisibleList == nil then
-            local new_selected = list:prevVisibleIndex(list.selected)
-            list.selected = new_selected > 0 and new_selected or 1
-        elseif indexInVisibleList > step then
-            list.selected = list.visibleItems[indexInVisibleList - step]
+    if key == Keyboard.KEY_ESCAPE then
+        if listBox.modal and listBox.modal:isVisible() then
+            if listBox.modal.isCancelable then
+                listBox.modal:destroy()
+            end
+        elseif target.settingsUI and target.settingsUI:isVisible() then
+            target.settingsUI:destroy()
+        elseif target.aboutUI and target.aboutUI:isVisible() then
+            target.aboutUI:destroy()
         else
-            list.selected = list.visibleItems[1]
+            target:onBack()
         end
-    elseif key == Keyboard.KEY_NEXT then
-        local step = math.floor(list.height / list.itemheight) - 1
-        if indexInVisibleList == nil then
-            local new_selected = list:nextVisibleItem(list.selected)
-            list.selected = new_selected > 0 and new_selected or list.visibleItems[#list.visibleItems]
-        elseif indexInVisibleList < #list.visibleItems - step then
-            list.selected = list.visibleItems[indexInVisibleList + step]
-        else
-            list.selected = list.visibleItems[#list.visibleItems]
+        return
+    end
+
+    if listBox:onKeyPressed(key) then
+        return
+    end
+
+    if key == Keyboard.KEY_TAB then
+        if not target.ignoreNextTabKey then
+            if target.filterPanel.searchEntryBox.isFocused then
+                target.filterPanel.searchEntryBox:unfocus()
+            else
+                target.filterPanel.searchEntryBox:focus()
+            end
         end
-    elseif key == Keyboard.KEY_HOME then
-        list.selected = list.visibleItems[1]
-    elseif key == Keyboard.KEY_END then
-        list.selected = list.visibleItems[#list.visibleItems]
+        target.ignoreNextTabKey = false
     elseif key == Keyboard.KEY_RETURN or key == Keyboard.KEY_SPACE then
-        if #list.visibleItems > 0 then
-            local item = list.items[list.selected].item
+        if not listBox:isEmpty() then
+            local item = listBox:getSelectedItem()
             if item.isAvailable then
                 if isShiftKeyDown() then
                     if not item.isHidden then
                         if item.isFavorite then
-                            list:doInactiveRequest(item)
+                            listBox.parent:doInactiveRequest(item)
                         else
-                            list:doActiveRequest(item, true)
+                            listBox.parent:doActiveRequest(item, true)
                         end
                     end
                 elseif isCtrlKeyDown() then
                     if not item.isFavorite then
                         if item.isHidden then
-                            list:doUnhide(item)
+                            listBox.parent:doUnhide(item)
                         else
-                            list:doInactiveRequest(item, true)
+                            listBox.parent:doInactiveRequest(item, true)
                         end
                     end
                 else
                     if not item.isFavorite and not item.isHidden then
                         if item.isActive then
-                            list:doInactiveRequest(item)
+                            listBox.parent:doInactiveRequest(item)
                         else
-                            list:doActiveRequest(item)
+                            listBox.parent:doActiveRequest(item)
                         end
                     end
                 end
+                listBox:ensureVisible(listBox.selected)
             end
         end
-    elseif key == Keyboard.KEY_ESCAPE then
-        target:onBack()
     end
-    list:ensureVisible(list.selected)
 end
 
 function ModSelector.onModsModified()
-    ModTracker.checkMods()
+    local manager = ModManager.instance
+    if manager then
+        manager:trackMods()
+    end
 
     local self = ModSelector.instance
     if self and self.listBox and self:isReallyVisible() then
@@ -881,706 +1006,16 @@ function ModSelector.onModsModified()
     end
 end
 
-Events.OnKeyPressed.Add(ModSelector.onKeyPressed)
-Events.OnModsModified.Add(ModSelector.onModsModified)
-
--- **********************************************
--- ModPanelFilter
--- **********************************************
-
-ModPanelFilter = ISPanelJoypad:derive("ModPanelFilter")
-
-function ModPanelFilter:new(x, y, width, height)
-    local o = ISPanelJoypad:new(x, y, width, height)
-    setmetatable(o, self)
-    self.__index = self
-    return o
-end
-
-function ModPanelFilter:createChildren()
-    self.saveButton = ISButton:new(
-            self.width - BUTTON_WDH - DX, DY, BUTTON_WDH, BUTTON_HGT,
-            getText("UI_ModManager_Presets_ButtonSave"), self,
-            function(target)
-                target.parent:saveSettings()
-            end
-    )
-    self.saveButton.borderColor = { r = 0.4, g = 0.4, b = 0.4, a = 1 }
-    self:addChild(self.saveButton)
-
-    self.resetButton = ISButton:new(
-            self.width - BUTTON_WDH - DX, self.saveButton:getBottom() + DY, BUTTON_WDH, BUTTON_HGT,
-            getText("UI_ModManager_Presets_ButtonReset"), self,
-            function(target, button)
-                target:resetFilter(button.longPressed)
-                button.longPressed = false
-            end
-    )
-    self.resetButton.borderColor = { r = 0.4, g = 0.4, b = 0.4, a = 1 }
-    self.resetButton.update = function(button)
-        ISUIElement.update(button)
-        if button.enable and button.pressed and button.target then
-            if not button.pressedTime then
-                button.pressedTime = getTimestampMs()
-            else
-                local ms = getTimestampMs()
-                if ms - button.pressedTime > 1000 then
-                    button.pressedTime = ms
-                    button.longPressed = true
-                end
-            end
-        else
-            button.pressedTime = nil
-            button.longPressed = false
-        end
-    end
-    self:addChild(self.resetButton)
-
-    self.filter = UIPanelCompact:new(DX, DY, self.width - BUTTON_WDH - 3 * DX, BUTTON_HGT)
-    self:addChild(self.filter)
-    self.filter.createText = function(S)
-        local options, P = {}, S.parent
-
-        if P.locationTickBox.selected[1] and not P.locationTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Workshop"))
-        elseif not P.locationTickBox.selected[1] and P.locationTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Local"))
-        end
-
-        if P.mapTickBox.selected[1] and not P.mapTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_WithMap"))
-        elseif not P.mapTickBox.selected[1] and P.mapTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_WithoutMap"))
-        end
-
-        if P.translateTickBox.selected[1] and not P.translateTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_WithTranslation"))
-        elseif not P.translateTickBox.selected[1] and P.translateTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_WithoutTranslation"))
-        end
-
-        if P.availabilityTickBox.selected[1] and not P.availabilityTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Available"))
-        elseif not P.availabilityTickBox.selected[1] and P.availabilityTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Broken"))
-        end
-
-        if P.statusTickBox.selected[1] and not P.statusTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Enabled"))
-        elseif not P.statusTickBox.selected[1] and P.statusTickBox.selected[2] then
-            table.insert(options, getText("UI_ModManager_Filter_Disabled"))
-        end
-
-        if not P.favorTickBox.selected[1] or not P.favorTickBox.selected[2] or not P.favorTickBox.selected[3] then
-            if P.favorTickBox.selected[1] then
-                table.insert(options, getText("UI_ModManager_Filter_Normal"))
-            end
-            if P.favorTickBox.selected[2] then
-                table.insert(options, getText("UI_ModManager_Filter_Favorites"))
-            end
-            if P.favorTickBox.selected[3] then
-                table.insert(options, getText("UI_ModManager_Filter_Hidden"))
-            end
-        end
-
-        if #options == 0 then
-            S.text = getText("UI_ModManager_Filter_Off")
-        else
-            S.text = getText("UI_ModManager_Filter_On", table.concat(options, ", "))
-        end
-    end
-    self.filter.popup.resize = function(S)
-        local P = S.parentPanel.parent
-
-        -- Update labels, counts and Width
-        local all = P.parent.listBox.count
-        local counters = P.parent.counters
-
-        P.allButton:setTitle(string.format("%s [%d]", getText("UI_ModManager_Filter_AllButton"), all))
-
-        P.locationTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_Workshop"), counters.workshop)
-        P.locationTickBox.optionsIndex[1] = P.locationTickBox.options[1]
-        P.locationTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_Local"), all - counters.workshop)
-        P.locationTickBox.optionsIndex[2] = P.locationTickBox.options[2]
-        P.locationTickBox:setWidthToFit()
-
-        P.mapTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_WithMap"), counters.map)
-        P.mapTickBox.optionsIndex[1] = P.mapTickBox.options[1]
-        P.mapTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_WithoutMap"), all - counters.map)
-        P.mapTickBox.optionsIndex[2] = P.mapTickBox.options[2]
-        P.mapTickBox:setWidthToFit()
-
-        P.translateTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_WithTranslation"), counters.translate)
-        P.translateTickBox.optionsIndex[1] = P.translateTickBox.options[1]
-        P.translateTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_WithoutTranslation"), all - counters.translate)
-        P.translateTickBox.optionsIndex[2] = P.translateTickBox.options[2]
-        P.translateTickBox:setWidthToFit()
-
-        P.availabilityTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_Available"), counters.available)
-        P.availabilityTickBox.optionsIndex[1] = P.availabilityTickBox.options[1]
-        P.availabilityTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_Broken"), all - counters.available)
-        P.availabilityTickBox.optionsIndex[2] = P.availabilityTickBox.options[2]
-        P.availabilityTickBox:setWidthToFit()
-
-        P.statusTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_Enabled"), counters.enabled)
-        P.statusTickBox.optionsIndex[1] = P.statusTickBox.options[1]
-        P.statusTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_Disabled"), all - counters.enabled)
-        P.statusTickBox.optionsIndex[2] = P.statusTickBox.options[2]
-        P.statusTickBox:setWidthToFit()
-
-        P.favorTickBox.options[1] = string.format("%s [%d]", getText("UI_ModManager_Filter_Normal"), all - counters.favorites - counters.hidden)
-        P.favorTickBox.optionsIndex[1] = P.favorTickBox.options[2]
-        P.favorTickBox.options[2] = string.format("%s [%d]", getText("UI_ModManager_Filter_Favorites"), counters.favorites)
-        P.favorTickBox.optionsIndex[2] = P.favorTickBox.options[1]
-        P.favorTickBox.options[3] = string.format("%s [%d]", getText("UI_ModManager_Filter_Hidden"), counters.hidden)
-        P.favorTickBox.optionsIndex[3] = P.favorTickBox.options[3]
-        P.favorTickBox:setWidthToFit()
-
-        -- Update coordinates
-        P.allButton:setWidth(S.width - 2 * DX)
-
-        local w = {
-            P.locationTickBox.width,
-            P.mapTickBox.width,
-            P.translateTickBox.width,
-            P.availabilityTickBox.width,
-            P.statusTickBox.width,
-            P.favorTickBox.width,
-        }
-        local w32 = math.max(w[1], w[4]) + math.max(w[2], w[5]) + math.max(w[3], w[6])
-        local w23 = math.max(w[1], w[2], w[3]) + math.max(w[4], w[5], w[6])
-
-        if w32 + 4 * DX <= S.width then
-            -- 3 columns, 2 rows
-            local x1 = (S.width - w32) / 4
-            local x2 = x1 + math.max(w[1], w[4]) + x1
-            local x3 = x2 + math.max(w[2], w[5]) + x1
-            local y1 = P.allButton:getBottom() + DY
-            P.locationTickBox:setX(x1)
-            P.locationTickBox:setY(y1)
-            P.mapTickBox:setX(x2)
-            P.mapTickBox:setY(y1)
-            P.translateTickBox:setX(x3)
-            P.translateTickBox:setY(y1)
-            local y2 = P.translateTickBox:getBottom() + DY
-            P.availabilityTickBox:setX(x1)
-            P.availabilityTickBox:setY(y2)
-            P.statusTickBox:setX(x2)
-            P.statusTickBox:setY(y2)
-            P.favorTickBox:setX(x3)
-            P.favorTickBox:setY(y2)
-        elseif w23 + 3 * DX <= S.width then
-            -- 2 columns, 3 rows
-            local dx = (S.width - w23) / 3
-            local x1 = (S.width - w23) / 3
-            local x2 = x1 + math.max(w[1], w[2], w[3]) + x1
-            local y1 = P.allButton:getBottom() + DY
-            P.locationTickBox:setX(x1)
-            P.locationTickBox:setY(y1)
-            P.availabilityTickBox:setX(x2)
-            P.availabilityTickBox:setY(y1)
-            local y2 = P.availabilityTickBox:getBottom() + DY
-            P.mapTickBox:setX(x1)
-            P.mapTickBox:setY(y2)
-            P.statusTickBox:setX(x2)
-            P.statusTickBox:setY(y2)
-            local y3 = P.statusTickBox:getBottom() + DY
-            P.translateTickBox:setX(x1)
-            P.translateTickBox:setY(y3)
-            P.favorTickBox:setX(x2)
-            P.favorTickBox:setY(y3)
-        else
-            -- 1 column, 6 rows
-            local dx = (S.width - math.max(w[1], w[2], w[3], w[4], w[5], w[6])) / 2
-            P.locationTickBox:setX(dx)
-            P.locationTickBox:setY(P.allButton:getBottom() + DY)
-            P.mapTickBox:setX(dx)
-            P.mapTickBox:setY(P.locationTickBox:getBottom() + DY)
-            P.translateTickBox:setX(dx)
-            P.translateTickBox:setY(P.mapTickBox:getBottom() + DY)
-            P.availabilityTickBox:setX(dx)
-            P.availabilityTickBox:setY(P.translateTickBox:getBottom() + DY)
-            P.statusTickBox:setX(dx)
-            P.statusTickBox:setY(P.availabilityTickBox:getBottom() + DY)
-            P.favorTickBox:setX(dx)
-            P.favorTickBox:setY(P.statusTickBox:getBottom() + DY)
-        end
-
-        S:setHeight(P.favorTickBox:getBottom() + DY)
-    end
-
-    local allButton = ISButton:new(
-            DX, DY, 0, BUTTON_HGT, "", self,
-            function(target)
-                target.locationTickBox.selected = { true, true }
-                target.mapTickBox.selected = { true, true }
-                target.translateTickBox.selected = { true, true }
-                target.availabilityTickBox.selected = { true, true }
-                target.statusTickBox.selected = { true, true }
-                target.favorTickBox.selected = { true, true, true }
-                target.filter.text = getText("UI_ModManager_Filter_Off")
-                target.parent.listBox:updateFilter()
-            end
-    )
-    allButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self.filter.popup:addChild(allButton)
-    self.allButton = allButton
-
-    local locationTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not optionValue then tickBox.selected[3 - optionIndex] = true end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    locationTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    locationTickBox:addOption("", "from_workshop")
-    locationTickBox:addOption("", "from_local")
-    locationTickBox.selected = { true, true }
-    self.filter.popup:addChild(locationTickBox)
-    self.locationTickBox = locationTickBox
-
-    local mapTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not optionValue then tickBox.selected[3 - optionIndex] = true end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    mapTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    mapTickBox:addOption("", "with_maps")
-    mapTickBox:addOption("", "without_maps")
-    mapTickBox.selected = { true, true }
-    self.filter.popup:addChild(mapTickBox)
-    self.mapTickBox = mapTickBox
-
-    local translateTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not optionValue then tickBox.selected[3 - optionIndex] = true end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    translateTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    translateTickBox:addOption("", "translated")
-    translateTickBox:addOption("", "not_translated")
-    translateTickBox.selected = { true, true }
-    self.filter.popup:addChild(translateTickBox)
-    self.translateTickBox = translateTickBox
-
-    local availabilityTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not optionValue then tickBox.selected[3 - optionIndex] = true end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    availabilityTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    availabilityTickBox:addOption("", "available")
-    availabilityTickBox:addOption("", "not_available")
-    availabilityTickBox.selected = { true, true }
-    self.filter.popup:addChild(availabilityTickBox)
-    self.availabilityTickBox = availabilityTickBox
-
-    local statusTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not optionValue then tickBox.selected[3 - optionIndex] = true end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    statusTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    statusTickBox:addOption("", "enabled")
-    statusTickBox:addOption("", "disabled")
-    statusTickBox.selected = { true, true }
-    self.filter.popup:addChild(statusTickBox)
-    self.statusTickBox = statusTickBox
-
-    local favorTickBox = ISTickBox:new(
-            0, 0, 0, 0, nil, self.filter,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if not tickBox.selected[1] and not tickBox.selected[2] and not tickBox.selected[3] then
-                    tickBox.selected[1] = true
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    favorTickBox.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    favorTickBox:addOption("", "normal")
-    favorTickBox:addOption("", "favorite")
-    favorTickBox:addOption("", "hidden")
-    favorTickBox.selected = { true, true, false }
-    self.filter.popup:addChild(favorTickBox)
-    self.favorTickBox = favorTickBox
-
-    self.filter:createText()
-
-    -- Sort
-    self.order = UIPanelCompact:new(DX, self.filter:getBottom() + DY, self.width - BUTTON_WDH - 3 * DX, BUTTON_HGT)
-    self:addChild(self.order)
-    self.order.createText = function(S)
-        local P = S.parent
-        local operator1, operator2 = "", ""
-
-        for i, name in ipairs(P.orderBy.options) do
-            if P.orderBy.selected[i] then
-                operator1 = name
-            end
-        end
-        for i, name in ipairs(P.orderAs.options) do
-            if P.orderAs.selected[i] then
-                operator2 = name
-            end
-        end
-
-        S.text = getText("UI_ModManager_Order_By", operator1, operator2)
-    end
-    self.order.popup.resize = function(S)
-        local P = S.parentPanel.parent
-
-        local w = {
-            P.orderBy.width,
-            P.orderAs.width,
-        }
-        local w2 = w[1] + w[2]
-        local x1 = (S.width - w2) / 3
-        local x2 = x1 + math.max(w[1], w[2]) + x1
-
-        P.orderBy:setX(x1)
-        P.orderBy:setY(DY)
-        P.orderAs:setX(x2)
-        P.orderAs:setY(DY)
-
-        S:setHeight(math.max(P.orderBy:getBottom(), P.orderAs:getBottom()) + DY)
-    end
-
-    local orderBy = ISTickBox:new(
-            0, 0, 0, 0, nil, self.order,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                tickBox.selected[optionIndex] = true
-                for i = 1, tickBox.optionCount do
-                    if i ~= optionIndex then tickBox.selected[i] = false end
-                end
-
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    orderBy.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    orderBy:addOption(getText("UI_ModManager_Order_Name"), "name")
-    orderBy:addOption(getText("UI_ModManager_Order_Enabled"), "enabled")
-    orderBy:addOption(getText("UI_ModManager_Order_Recent"), "recent")
-    orderBy:setWidthToFit()
-    orderBy.selected = { true, false, false }
-    self.order.popup:addChild(orderBy)
-    self.orderBy = orderBy
-
-    local orderAs = ISTickBox:new(
-            0, 0, 0, 0, nil, self.order,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if optionValue then
-                    tickBox.selected = {}
-                    tickBox.selected[optionIndex] = true
-                    tickBox.selected[3 - optionIndex] = false
-                else
-                    tickBox.selected[optionIndex] = true
-                    tickBox.selected[3 - optionIndex] = false
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    orderAs.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    orderAs:addOption(getText("UI_ModManager_Order_Asc"), "asc")
-    orderAs:addOption(getText("UI_ModManager_Order_Desc"), "desc")
-    orderAs:setWidthToFit()
-    orderAs.selected = { true, false }
-    self.order.popup:addChild(orderAs)
-    self.orderAs = orderAs
-
-    self.order:createText()
-
-    -- Search
-    self.search = UIPanelCompact:new(DX, self.order:getBottom() + DY, self.width - 2 * DX, BUTTON_HGT)
-    self:addChild(self.search)
-    self.search.recalcChildren = function(S)
-        local w = math.max(S.width - (10 + getTextManager():MeasureStringX(S.font, S.text) + 5 + 18), BUTTON_WDH)
-        S.parent.searchEntryBox:setX(S.width - (w + 18))
-        S.parent.searchEntryBox:setWidth(w)
-    end
-    self.search.createText = function(S)
-        local options, P = {}, S.parent
-        local operator1, operator2 = "", ""
-
-        for i, name in ipairs(P.searchBy1.options) do
-            if P.searchBy1.selected[i] then table.insert(options, name) end
-        end
-        for i, name in ipairs(P.searchBy2.options) do
-            if P.searchBy2.selected[i] then table.insert(options, name) end
-        end
-        for i, name in ipairs(P.searchAs1.options) do
-            if P.searchAs1.selected[i] then
-                operator1 = getText("UI_ModManager_Search_OR")
-                operator2 = name
-            end
-        end
-        for i, name in ipairs(P.searchAs2.options) do
-            if P.searchAs2.selected[i] then
-                operator1 = getText("UI_ModManager_Search_AND")
-                operator2 = name
-            end
-        end
-
-        S.text = getText("UI_ModManager_Search_By", table.concat(options, operator1), operator2)
-        S:recalcChildren()
-    end
-    self.search.popup.resize = function(S)
-        local P = S.parentPanel.parent
-
-        local w = {
-            P.searchBy1.width,
-            P.searchBy2.width,
-            P.searchAs1.width,
-            P.searchAs2.width,
-        }
-        local w12 = math.max(w[1], w[2])
-        local w34 = math.max(w[3], w[4])
-
-        if w[1] + w[2] + w[3] + w[4] + 5 * DX <= S.width then
-            local dx = (S.width - (w[1] + w[2] + w[3] + w[4] + 5 * DX)) / 3
-            P.searchBy1:setX(DX + dx)
-            P.searchBy1:setY(DY)
-            P.searchBy2:setX(P.searchBy1:getRight() + DX)
-            P.searchBy2:setY(DY)
-            P.searchAs1:setX(P.searchBy2:getRight() + DX + dx)
-            P.searchAs1:setY(DY)
-            P.searchAs2:setX(P.searchAs1:getRight() + DX)
-            P.searchAs2:setY(DY)
-        elseif w12 + w34 + 3 * DX <= S.width then
-            local x1 = (S.width - (w12 + w34)) / 3
-            local x2 = x1 + w12 + x1
-            P.searchBy1:setX(x1)
-            P.searchBy1:setY(DY)
-            P.searchBy2:setX(x1)
-            P.searchBy2:setY(P.searchBy1:getBottom() + DY)
-            P.searchAs1:setX(x2)
-            P.searchAs1:setY(DY)
-            P.searchAs2:setX(x2)
-            P.searchAs2:setY(P.searchAs1:getBottom() + DY)
-        else
-            local x = (S.width - math.max(w12, w34)) / 2
-            P.searchBy1:setX(x)
-            P.searchBy1:setY(DY)
-            P.searchBy2:setX(x)
-            P.searchBy2:setY(P.searchBy1:getBottom() + DY)
-            P.searchAs1:setX(x)
-            P.searchAs1:setY(P.searchBy2:getBottom() + DY)
-            P.searchAs2:setX(x)
-            P.searchAs2:setY(P.searchAs1:getBottom() + DY)
-        end
-
-        S:setHeight(math.max(P.searchBy2:getBottom(), P.searchAs2:getBottom()) + DY)
-    end
-
-    local searchBy1 = ISTickBox:new(
-            0, 0, 0, 0, nil, self.search,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if optionValue then
-                    target.parent.searchBy2.selected = {}
-                    target.parent.searchEntryBox.options = {}
-                elseif not (tickBox.selected[1] or tickBox.selected[2] or tickBox.selected[3]) then
-                    tickBox.selected[optionIndex] = true
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    searchBy1.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    searchBy1:addOption(getText("UI_ModManager_Search_Name"))
-    searchBy1:addOption(getText("UI_ModManager_Search_Description"))
-    searchBy1:addOption(getText("UI_ModManager_Search_ModID"))
-    searchBy1:setWidthToFit()
-    searchBy1.selected = { true, true, true }
-    self.search.popup:addChild(searchBy1)
-    self.searchBy1 = searchBy1
-
-    local searchBy2 = ISTickBox:new(
-            0, 0, 0, 0, nil, self.search,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if optionValue then
-                    target.parent.searchBy1.selected = {}
-                    tickBox.selected = {}
-                    tickBox.selected[optionIndex] = true
-
-                    target.parent.searchEntryBox.options = {}
-                    if optionIndex == 3 then
-                        local tags = {}
-                        for i, j in pairs(target.parent.parent.counters.originalTags) do
-                            tags[i] = j
-                        end
-                        for i, j in pairs(target.parent.parent.counters.customTags) do
-                            tags[i] = (tags[i] or 0) + j
-                        end
-                        for i, j in pairs(tags) do
-                            target.parent.searchEntryBox:addOption(i, j)
-                        end
-                    elseif optionIndex == 4 then
-                        for i, j in pairs(target.parent.parent.counters.authors) do
-                            target.parent.searchEntryBox:addOption(i, j)
-                        end
-                    end
-                else
-                    tickBox.selected[optionIndex] = true
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    searchBy2.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    searchBy2:addOption(getText("UI_ModManager_Search_WorkshopID"))
-    searchBy2:addOption(getText("UI_ModManager_Search_MapID"))
-    searchBy2:addOption(getText("UI_ModManager_Search_Tags"))
-    searchBy2:addOption(getText("UI_ModManager_Search_Author"))
-    searchBy2:setWidthToFit()
-    searchBy2.selected = {}
-    self.search.popup:addChild(searchBy2)
-    self.searchBy2 = searchBy2
-
-    local searchAs1 = ISTickBox:new(
-            0, 0, 0, 0, nil, self.search,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if optionValue then
-                    target.parent.searchEntryBox:setVisible(not (optionIndex == 3))
-                    target.parent.searchAs2.selected = {}
-                    tickBox.selected = {}
-                    tickBox.selected[optionIndex] = true
-                else
-                    tickBox.selected[optionIndex] = true
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    searchAs1.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    searchAs1:addOption(getText("UI_ModManager_Search_Equals"))
-    searchAs1:addOption(getText("UI_ModManager_Search_Contains"))
-    searchAs1:addOption(getText("UI_ModManager_Search_Empty"))
-    searchAs1:setWidthToFit()
-    searchAs1.selected = { false, true, false }
-    self.search.popup:addChild(searchAs1)
-    self.searchAs1 = searchAs1
-
-    local searchAs2 = ISTickBox:new(
-            0, 0, 0, 0, nil, self.search,
-            function(target, optionIndex, optionValue, arg1, arg2, tickBox)
-                if optionValue then
-                    target.parent.searchEntryBox:setVisible(not (optionIndex == 3))
-                    target.parent.searchAs1.selected = {}
-                    tickBox.selected = {}
-                    tickBox.selected[optionIndex] = true
-                else
-                    tickBox.selected[optionIndex] = true
-                end
-                target:createText()
-                target.parent.parent.listBox:updateFilter()
-            end
-    )
-    searchAs2.choicesColor = { r = 1, g = 1, b = 1, a = 1 }
-    searchAs2:addOption(getText("UI_ModManager_Search_notEquals"))
-    searchAs2:addOption(getText("UI_ModManager_Search_notContains"))
-    searchAs2:addOption(getText("UI_ModManager_Search_notEmpty"))
-    searchAs2:setWidthToFit()
-    searchAs2.selected = {}
-    self.search.popup:addChild(searchAs2)
-    self.searchAs2 = searchAs2
-
-    self.searchEntryBox = UITextEntryList:new("", 0, 3, 0, self.search.height - 6)
-    self.search:addChild(self.searchEntryBox)
-    self.searchEntryBox:setClearButton(true)
-    self.searchEntryBox.onTextChange = function(S)
-        S.parent.parent.parent.listBox:updateFilter()
-    end
-
-    self.search:createText()
-
-    self:resetFilter()
-end
-
-function ModPanelFilter:resetFilter(applyDefault)
-    if applyDefault then
-        self.locationTickBox.selected = { true, true }
-        self.mapTickBox.selected = { true, true }
-        self.translateTickBox.selected = { true, true }
-        self.availabilityTickBox.selected = { true, true }
-        self.statusTickBox.selected = { true, true }
-        self.favorTickBox.selected = { true, true, false }
-        self.orderBy.selected = { true, false, false }
-        self.orderAs.selected = { true, false }
-    else
-        local settings = ModSelector.instance.settings.filter
-        if settings then
-            self:setTickBoxSelection(settings, self.locationTickBox)
-            self:setTickBoxSelection(settings, self.mapTickBox)
-            self:setTickBoxSelection(settings, self.translateTickBox)
-            self:setTickBoxSelection(settings, self.availabilityTickBox)
-            self:setTickBoxSelection(settings, self.statusTickBox)
-            self:setTickBoxSelection(settings, self.favorTickBox)
-        end
-        settings = ModSelector.instance.settings.order
-        if settings then
-            self:setTickBoxSelection(settings, self.orderBy)
-            self:setTickBoxSelection(settings, self.orderAs)
-        end
-    end
-    self.searchBy1.selected = { true, true, true }
-    self.searchBy2.selected = {}
-    self.searchAs1.selected = { false, true, false }
-    self.searchAs2.selected = {}
-    self.searchEntryBox:setText("")
-
-    if self.parent and self.parent.listBox then
-        self.parent.listBox:updateFilter()
-    end
-
-    self.filter:createText()
-    self.order:createText()
-    self.search:createText()
-end
-
-function ModPanelFilter:setTickBoxSelection(settings, tickBox)
-    for index = 1, tickBox.optionCount - 1 do
-        local value = settings[tickBox.optionData[index]]
-        if value == nil then
-            value = tickBox.selected[index]
-            settings[tickBox.optionData[index]] = value
-        end
-
-        tickBox:setSelected(index, value)
-    end
-end
-
--- **********************************************
+-- ******************************
 -- ModListBox
--- **********************************************
-
-ModListBox = ISScrollingListBox:derive("ModListBox")
+-- ******************************
 
 function ModListBox:new(x, y, width, height)
-    local o = ISScrollingListBox:new(x, y, width, height)
+    local o = MMListBox:new(x, y, width, height)
     setmetatable(o, self)
     self.__index = self
-    o.drawBorder = true
     o.indexById = {} -- {modId = index, modId = index, ...}
-    o.visibleItems = {} -- {itemindex1, itemindex5, itemindex10, ...}
-    o.itemheight = math.max(FONT_HGT_MEDIUM + DY * 2, BUTTON_HGT)
     o.keyboardFocus = false
-    o.backgroundColor = { r = 0, g = 0, b = 0, a = 0.8 }
 
     o.btn = {}
     o.btn.text1 = getText("UI_ModManager_List_Favorite")
@@ -1602,7 +1037,7 @@ function ModListBox:new(x, y, width, height)
     o.btn.x3 = o.btn.x2 + o.btn.w3 + DX
     o.btn.dy = (o.itemheight - BUTTON_HGT) / 2
     --[[
-    o.item.item.storedIndex = number -- index, sorted by date added
+    o.item.item.indexRecent = number -- index, sorted by date added
     o.item.item.modInfo
     o.item.item.modInfoExtra = {}
     o.item.item.isAvailable = true/false
@@ -1610,7 +1045,6 @@ function ModListBox:new(x, y, width, height)
     o.item.item.isFavorite = true/false
     o.item.item.isHidden = true/false
     o.item.item.dependents = {}
-    o.item.item.visibleIndex = nil or number
     ]]
     return o
 end
@@ -1625,8 +1059,8 @@ function ModListBox:checkFilter(item)
     if not filter.locationTickBox.selected[2] and not modInfo:getWorkshopID() then return false end
     if not filter.mapTickBox.selected[1] and modInfoExtra.maps then return false end
     if not filter.mapTickBox.selected[2] and not modInfoExtra.maps then return false end
-    if not filter.translateTickBox.selected[1] and modInfoExtra.translate then return false end
-    if not filter.translateTickBox.selected[2] and not modInfoExtra.translate then return false end
+    if not filter.translateTickBox.selected[1] and modInfoExtra.translated then return false end
+    if not filter.translateTickBox.selected[2] and not modInfoExtra.translated then return false end
     if not filter.availabilityTickBox.selected[1] and item.isAvailable then return false end
     if not filter.availabilityTickBox.selected[2] and not item.isAvailable then return false end
     if not filter.statusTickBox.selected[1] and item.isActive then return false end
@@ -1649,7 +1083,7 @@ function ModListBox:checkFilter(item)
         for _, t in ipairs(modInfoExtra.tags or {}) do
             table.insert(tableForFind, t)
         end
-        for _, t in ipairs(self.parent.customTags[modInfo:getId()] or {}) do
+        for _, t in ipairs(self.parent.manager.customTags[modInfo:getId()] or {}) do
             table.insert(tableForFind, t)
         end
     elseif filter.searchBy2.selected[4] then
@@ -1737,9 +1171,9 @@ function ModListBox:updateFilter()
     elseif filter.orderBy.selected[3] then
         -- Order by added, ascending or descending
         if filter.orderAs.selected[1] then
-            sortFunc = function(a, b) return a.item.storedIndex > b.item.storedIndex end
+            sortFunc = function(a, b) return a.item.indexRecent > b.item.indexRecent end
         else
-            sortFunc = function(a, b) return a.item.storedIndex < b.item.storedIndex end
+            sortFunc = function(a, b) return a.item.indexRecent < b.item.indexRecent end
         end
     end
     -- Sort
@@ -1747,26 +1181,7 @@ function ModListBox:updateFilter()
     -- Re-index
     self:indexByModId()
 
-    local visibleItems = {}
-    for _, i in ipairs(self.items) do
-        local item = i.item
-        if self:checkFilter(item) then
-            table.insert(visibleItems, i.itemindex)
-            item.visibleIndex = #visibleItems
-        else
-            item.visibleIndex = nil
-        end
-    end
-    self.visibleItems = visibleItems
-end
-
-function ModListBox:sort(func)
-    -- Sort using arg or by name asc
-    func = func or function(a, b) return a.text < b.text end
-    table.sort(self.items, func)
-    for i, item in ipairs(self.items) do
-        item.itemindex = i
-    end
+    MMListBox.updateFilter(self)
 end
 
 function ModListBox:indexByModId()
@@ -1782,9 +1197,9 @@ function ModListBox:doDrawItem(y, i, alt)
     local h, s = self.itemheight, self:isVScrollBarVisible() and 13 or 0
 
     -- Check real line visibility
-    local local_y = self:getYScroll() + y
-    if s ~= 0 and (local_y < -h or local_y > self:getHeight()) then
-        return y + h + 1
+    local localY = self:getYScroll() + y
+    if s ~= 0 and (localY < -h or localY > self:getHeight()) then
+        return y + h - 1
     end
 
     -- Item bar
@@ -1796,7 +1211,11 @@ function ModListBox:doDrawItem(y, i, alt)
     self:drawRectBorder(0, y, self:getWidth(), h, 0.5, self.borderColor.r, self.borderColor.g, self.borderColor.b)
 
     -- Icon, title
-    local icon = item.modInfoExtra.icon or item.modInfoExtra.maps and ICON_MAP or ICON_DEFAULT
+    local icon = item.modInfoExtra.maps and ICON_MAP or ICON_DEFAULT
+    if self.parent.manager.settings.client.showCustomModIcons ~= false then
+        icon = item.modInfoExtra.icon or icon
+    end
+
     local text = item.modInfo:getName()
     local tooltip
     local r, g, b = 1, 1, 1
@@ -1805,10 +1224,14 @@ function ModListBox:doDrawItem(y, i, alt)
         icon = item.modInfoExtra.maps and ICON_MAP_GREY or ICON_DEFAULT_GREY
         r, g, b = 0.7, 0.7, 0.7
     end
-    self:drawTextureScaled(icon, DX, y + DY, FONT_HGT_MEDIUM, FONT_HGT_MEDIUM, 1)
+
+    local iconY = y + DY
+    local iconRight, iconBottom = DX + FONT_HGT_MEDIUM, iconY + FONT_HGT_MEDIUM
+    self:drawTextureScaled(icon, DX, iconY, FONT_HGT_MEDIUM, FONT_HGT_MEDIUM, 1)
+
     if not item.isAvailable then
         g, b = 0.2, 0.2
-        self:drawTexture(ICON_BROKEN, DX + FONT_HGT_MEDIUM - 6, y + DY + FONT_HGT_MEDIUM - 9, 1)
+        self:drawTexture(ICON_BROKEN, iconRight - 6, iconBottom - 9, 1)
     elseif item.isActive then
         local dependents = {}
         for _, dependentId in ipairs(item.dependents or {}) do
@@ -1818,23 +1241,26 @@ function ModListBox:doDrawItem(y, i, alt)
         end
         if #dependents > 0 then
             g, b = 0.7, 0.2
-            tooltip = " <SIZE:medium> " .. getText("UI_ModManager_List_Tooltip_EnabledBy") .. " <SIZE:small> <LINE> "
+            tooltip = getText("UI_ModManager_List_Tooltip_EnabledBy")
             for _, dependentId in ipairs(dependents) do
                 tooltip = tooltip .. " <LINE> <INDENT:20> " .. getModInfoByID(dependentId):getName()
             end
-            self:drawTexture(ICON_REQUIRE, DX + FONT_HGT_MEDIUM - 4, y + DY + FONT_HGT_MEDIUM - 4, 1)
+            self:drawTexture(ICON_REQUIRED, iconRight - 4, iconBottom - 4, 1)
         else
             r, g, b = 0.4, 0.8, 0.3
-            self:drawTexture(ICON_ACTIVE, DX + FONT_HGT_MEDIUM - 4, y + DY + FONT_HGT_MEDIUM - 4, 1)
+            self:drawTexture(ICON_ACTIVE, iconRight - 4, iconBottom - 4, 1)
         end
     end
     if item.isFavorite then
-        self:drawTexture(ICON_FAVORITE, DX + FONT_HGT_MEDIUM - 6, y + DY - 4, 1)
+        self:drawTexture(ICON_FAVORITE, iconRight - 6, iconY - 4, 1)
     end
     self.items[index].tooltip = tooltip
     self:drawText(text, DX + FONT_HGT_MEDIUM + DX, y + DY, r, g, b, 1, UIFont.Medium)
 
-    local iconLocation = item.modInfo:getWorkshopID() and ICON_STEAM or item.modInfo:getDir():find("Workshop") and ICON_FOLDER_W or ICON_FOLDER
+    local iconLocation = item.modInfo:getWorkshopID() and ICON_STEAM
+    if not iconLocation then
+        iconLocation = item.modInfo:getDir():find(string.gsub("Zomboid/Workshop", "/", getFileSeparator())) and ICON_FOLDER_W or ICON_FOLDER
+    end
     self:drawTextureScaled(iconLocation, self.width - FONT_HGT_SMALL - DX - s, y + h / 2 - FONT_HGT_SMALL / 2, FONT_HGT_SMALL, FONT_HGT_SMALL, 1)
 
     -- Buttons
@@ -1854,238 +1280,55 @@ function ModListBox:doDrawItem(y, i, alt)
         end
     end
 
-    y = y + h + 1
+    y = y + h - 1
     return y
 end
 
-function ModListBox:doDrawButton(text, internal, x, y, w, h)
-    local selected = self.mouseOverSelected
-    local color = { a = 1.0, r = 0.0, g = 0.0, b = 0.0 }
-
-    if self:getMouseX() > x and self:getMouseX() < x + w and self:getMouseY() > y and self:getMouseY() < y + h then
-        if self.pressedButton and self.pressedButton.internal == internal and self.pressedButton.selected == selected then
-            color = { a = 1.0, r = 0.15, g = 0.15, b = 0.15 }
-        else
-            color = { a = 1.0, r = 0.3, g = 0.3, b = 0.3 }
-        end
-        self.mouseOverButton = { internal = internal, selected = selected }
-    elseif self.mouseOverButton and self.mouseOverButton.internal == internal and self.mouseOverButton.selected == selected then
-        self.mouseOverButton = nil
-    end
-
-    self:drawRect(x, y, w, h, color.a, color.r, color.g, color.b)
-    self:drawRectBorder(x, y, w, h, 0.3, 1, 1, 1)
-    self:drawTextCentre(
-            text, x + w / 2, y + (BUTTON_HGT - FONT_HGT_SMALL) / 2,
-            1.0, 1.0, 1.0, 1.0, UIFont.Small
-    )
-end
-
-function ModListBox:updateTooltip()
-    ISScrollingListBox.updateTooltip(self)
-
-    if self.mouseOverButton and self.tooltipUI and self.tooltipUI:getIsVisible() then
-        self.tooltipUI:setVisible(false)
-        self.tooltipUI:removeFromUIManager()
-    end
-end
-
-function ModListBox:doActiveRequest(item, doFavor)
-    local indexInVisibleList
-    local filter = self.parent.filterPanel
-    if filter.orderBy.selected[2] then
-        indexInVisibleList = self.items[self.selected].item.visibleIndex
-    end
-
-    self:doActive(item, doFavor)
-
-    if indexInVisibleList and #self.visibleItems > 0 then
-        self.selected = self.visibleItems[indexInVisibleList]
-    end
-end
-
-function ModListBox:doActive(item, doFavor)
-    if item.isActive == false then
-        item.isActive = true
-        self.parent.counters.enabled = self.parent.counters.enabled + 1
-    end
-
-    if doFavor then
-        item.isFavorite = true
-        self.parent.counters.favorites = self.parent.counters.favorites + 1
-    end
-
-    self:updateFilter()
-
-    local requires = item.modInfo:getRequire()
-    if requires and not requires:isEmpty() then
-        for i = 0, requires:size() - 1 do
-            self:doActive(self.items[self.indexById[requires:get(i)]].item, doFavor)
-        end
-    end
-end
-
-function ModListBox:doInactiveRequest(item, doHidden)
-    local indexInVisibleList
-    local filter = self.parent.filterPanel
-    if filter.orderBy.selected[2] then
-        indexInVisibleList = self.items[self.selected].item.visibleIndex
-    end
-
-    self:doInactive(item, doHidden)
-
-    if indexInVisibleList and #self.visibleItems > 0 then
-        self.selected = self.visibleItems[indexInVisibleList]
-    end
-end
-
-function ModListBox:doInactive(item, doHidden)
-    if item.isActive then
-        self.parent.counters.enabled = self.parent.counters.enabled - 1
-        item.isActive = false
-    end
-
-    if item.isFavorite then
-        self.parent.counters.favorites = self.parent.counters.favorites - 1
-        item.isFavorite = false
-    end
-
-    if doHidden then
-        self.parent.counters.hidden = self.parent.counters.hidden + 1
-        item.isHidden = true
-    end
-
-    self:updateFilter()
-
-    for _, dependentId in ipairs(item.dependents or {}) do
-        self:doInactive(self.items[self.indexById[dependentId]].item)
-    end
-end
-
-function ModListBox:doUnhide(item)
-    self.parent.counters.hidden = self.parent.counters.hidden - 1
-    item.isHidden = false
-
-    self:updateFilter()
-end
-
-function ModListBox:showDialog(text, item, onClick)
-    local modal = ISModalDialog:new(0, 0, 350, 150, text, true, self, onClick, nil, item)
-    modal:initialise()
-    modal.originalOnMouseDown = ISModalDialog.onMouseDown
-    modal.onMouseDown = function(target, x, y)
-        if not target:isMouseOver() then
-            target:removeFromUIManager()
-        else
-            target.originalOnMouseDown(target, x, y)
-        end
-    end
-    modal:setAlwaysOnTop(true)
-    modal:setCapture(true)
-    modal:addToUIManager()
-    self.alertDialog = modal
-end
-
-function ModListBox:onMouseMove(dx, dy)
-    if self:isMouseOverScrollBar() then
-        self.mouseOverButton = nil
-        return
-    end
-    self.mouseOverSelected = self:rowAt(self:getMouseX(), self:getMouseY())
-    if self.mouseOverButton and self.mouseOverButton.selected ~= self.mouseOverSelected then
-        self.mouseOverButton = nil
-    end
-end
-
-function ModListBox:onMouseMoveOutside(x, y)
-    self.mouseOverSelected = -1
-    self.mouseOverButton = nil
-end
-
-function ModListBox:onMouseDown(x, y)
-    -- Stops from changing mods while in ModOrderUI
-    if not self.parent.modOrderUI or not self.parent.modOrderUI:isVisible() then
-        self.keyboardFocus = true
-        if self.mouseOverButton then
-            self.pressedButton = self.mouseOverButton
-        else
-            ISScrollingListBox.onMouseDown(self, x, y)
-        end
-    end
-end
-
-function ModListBox:onMouseUp(x, y)
-    if self.mouseOverButton and self.pressedButton
-            and self.mouseOverButton.internal == self.pressedButton.internal
-            and self.mouseOverButton.selected == self.pressedButton.selected then
-        getSoundManager():playUISound("UIActivateButton")
-
-        local selectedItem = self.items[self.pressedButton.selected].item
-        if self.pressedButton.internal == "ON" then
-            self:doActiveRequest(selectedItem)
-        elseif self.pressedButton.internal == "OFF" then
-            self:doInactiveRequest(selectedItem)
-        elseif self.pressedButton.internal == "FAVORITE" then
-            self:showDialog(getText("UI_ModManager_List_Dialog_Favorite"), selectedItem,
-                    function(target, button, item)
-                        if button.internal == "YES" then
-                            target:doActiveRequest(item, true)
-                        end
+function ModListBox:onButtonClick(button, item)
+    if button.internal == "ON" then
+        self.parent:doActiveRequest(item)
+    elseif button.internal == "OFF" then
+        self.parent:doInactiveRequest(item)
+    elseif button.internal == "FAVORITE" then
+        self:showDialog(getText("UI_ModManager_List_Dialog_Favorite"), item,
+                function(target, modalButton, selectedItem)
+                    if modalButton.internal == "YES" then
+                        target.parent:doActiveRequest(selectedItem, true)
                     end
-            )
-        elseif self.pressedButton.internal == "UNFAVORITE" then
-            self:doInactiveRequest(selectedItem)
-        elseif self.pressedButton.internal == "HIDE" then
-            self:showDialog(getText("UI_ModManager_List_Dialog_Hide"), selectedItem,
-                    function(target, button, item)
-                        if button.internal == "YES" then
-                            target:doInactiveRequest(item, true)
-                        end
+                end
+        )
+    elseif button.internal == "UNFAVORITE" then
+        self.parent:doInactiveRequest(item)
+    elseif button.internal == "HIDE" then
+        self:showDialog(getText("UI_ModManager_List_Dialog_Hide"), item,
+                function(target, modalButton, selectedItem)
+                    if modalButton.internal == "YES" then
+                        target.parent:doInactiveRequest(selectedItem, true)
                     end
-            )
-        elseif self.pressedButton.internal == "UNHIDE" then
-            self:doUnhide(selectedItem)
-        end
-        self.mouseOverButton = nil
-        self.pressedButton = nil
-    else
-        self.pressedButton = nil
-        ISScrollingListBox.onMouseUp(self, x, y)
+                end
+        )
+    elseif button.internal == "UNHIDE" then
+        self.parent:doUnhide(item)
     end
 end
 
-function ModListBox:onMouseUpOutside(x, y)
-    self.pressedButton = nil
-    self.keyboardFocus = false
-    --ISScrollingListBox.onMouseUpOutside(self, x, y) -- call error "attempted index: onMouseUpOutside of non-table" when "reload lua" and mouse cursor outside the panel
-    if self.vscroll then self.vscroll.scrolling = false end
-end
-
-function ModListBox:onMouseDoubleClick(x, y)
-    if self:isMouseOverScrollBar() then
-        return
-    end
-
-    if self.mouseOverButton then
-        self.pressedButton = self.mouseOverButton
-        return
-    end
-
-    local item = self.items[self.selected].item
+function ModListBox:onItemDoubleClick(item)
     if not item.isAvailable then return end
 
     if not item.isActive then
-        self:doActiveRequest(item)
+        self.parent:doActiveRequest(item)
     else
-        self:doInactiveRequest(item)
+        self.parent:doInactiveRequest(item)
     end
 end
 
--- **********************************************
--- ModPanelPoster
--- **********************************************
+function ModListBox:showDialog(text, item, onClick)
+    self.modal = MMModalDialog.show(text, false, true, 0, 0, 350, 0, self, onClick, item)
+end
 
-ModPanelPoster = ISPanelJoypad:derive("ModPanelPoster")
+-- ******************************
+-- ModPanelPoster
+-- ******************************
 
 function ModPanelPoster:new(x, y, width, height)
     local o = ISPanelJoypad:new(x, y, width, height)
@@ -2093,7 +1336,9 @@ function ModPanelPoster:new(x, y, width, height)
     self.__index = self
     o.selectedMod = 0
     o.index = 0 -- poster index
-    --o.modInfo // set in ModPanelInfo
+    --[[
+    o.modInfo -- set in ModPanelInfo
+    ]]
     return o
 end
 
@@ -2123,14 +1368,14 @@ end
 function ModPanelPoster:onMouseDown(x, y)
     local poster = self.modInfo:getPoster(self.index - 1)
     if poster then
-        local posterView = UIModPoster:new(poster)
+        local posterView = MMPoster:new(poster)
         posterView:initialise()
-        local wrapper = posterView:wrapInCollapsableWindow(getText("UI_ModManager_Info_Poster"), false, UIModPosterWrapper)
+        local wrapper = posterView:wrapInCollapsableWindow(getText("UI_ModManager_Info_Poster"), false, MMPosterWrapper)
         wrapper:setWantKeyEvents(true)
         posterView.wrap = wrapper
         wrapper.posterUI = posterView
-        posterView.render = UIModPoster.noRender
-        posterView.prerender = UIModPoster.noRender
+        posterView.render = MMPoster.noRender
+        posterView.prerender = MMPoster.noRender
         wrapper:setCapture(true)
         wrapper:setAlwaysOnTop(true)
         wrapper:setVisible(true)
@@ -2147,11 +1392,9 @@ function ModPanelPoster:setModInfo(modInfo)
     self.modInfo = modInfo
 end
 
--- **********************************************
+-- ******************************
 -- ModPanelThumbnail
--- **********************************************
-
-ModPanelThumbnail = ISPanelJoypad:derive("ModPanelThumbnail")
+-- ******************************
 
 function ModPanelThumbnail:new(x, y, width, height)
     local o = ISPanelJoypad:new(x, y, width, height)
@@ -2163,7 +1406,9 @@ function ModPanelThumbnail:new(x, y, width, height)
     o.thumbnailHeight = height - o.padY * 2 -- 64
     o.thumbs = {}
     o.index = 1
-    --o.modInfo // set in ModPanelInfo
+    --[[
+    o.modInfo -- set in ModPanelInfo
+    ]]
     return o
 end
 
@@ -2256,11 +1501,9 @@ function ModPanelThumbnail:setModInfo(modInfo)
     self.thumbs = {}
 end
 
--- **********************************************
+-- ******************************
 -- ModPanelInfo
--- **********************************************
-
-ModPanelInfo = ISPanelJoypad:derive("ModPanelInfo")
+-- ******************************
 
 function ModPanelInfo:new(x, y, width, height)
     local o = ISPanelJoypad:new(x, y, width, height)
@@ -2269,7 +1512,9 @@ function ModPanelInfo:new(x, y, width, height)
     o.scrollwidth = 13
     o.selected = 0
     o.backgroundColor = { r = 0, g = 0, b = 0, a = 0.8 }
-    --o.item = self.parent.listBox.items[i].item / can be nil
+    --[[
+    o.item = self.parent.listBox.items[i].item -- can be nil
+    ]]
     return o
 end
 
@@ -2321,34 +1566,33 @@ function ModPanelInfo:initialise()
     self.descRichText = ISRichTextLayout:new(self.width - self.scrollwidth)
     self.descRichText:setMargins(DX, DY, DX, DY)
 
-    self.customTagsButton = ISButton:new(
-            self:getRight() - DX - BUTTON_SQ - self.scrollwidth,
-            self:getBottom() - DX - BUTTON_SQ - 1,
-            BUTTON_SQ, BUTTON_SQ, "", self, self.onCustomTagsDialog
+    self.customTagsButton = MMImageButton:new(
+            self:getRight() - DX - BUTTON_SQ - self.scrollwidth, self:getBottom() - DX - BUTTON_SQ - 1,
+            BUTTON_SQ, BUTTON_SQ, self, self.onCustomTagsDialog
     )
-    self.customTagsButton:setImage(getTexture("media/ui/ModManager_InfoTags.png"))
-    self.customTagsButton:forceImageSize(BUTTON_SQ_IMG, BUTTON_SQ_IMG)
-    self.customTagsButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self.customTagsButton.tooltip = getText("UI_ModManager_Info_TagsButton")
+    self.customTagsButton:setImage(getTexture("media/ui/MM_Button_Tags.png"))
+    self.customTagsButton:setPadding(DX, DY)
+    self.customTagsButton:setDisplayBackground(true)
+    self.customTagsButton.tooltip = getText("UI_ModManager_Info_Tags_Button")
     self.parent:addChild(self.customTagsButton)
 
-    self.workshopButton = ISButton:new(
-            0, self:getBottom() - DX - BUTTON_SQ - 1, BUTTON_SQ, BUTTON_SQ, "", self, self.onGoButton
+    self.workshopButton = MMImageButton:new(
+            0, self:getBottom() - DX - BUTTON_SQ - 1, BUTTON_SQ, BUTTON_SQ, self, self.onGoButton
     )
     self.workshopButton.internal = "WORKSHOP"
-    self.workshopButton:setImage(getTexture("media/ui/ModManager_InfoSteam.png"))
-    self.workshopButton:forceImageSize(BUTTON_SQ_IMG, BUTTON_SQ_IMG)
-    self.workshopButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
+    self.workshopButton:setImage(getTexture("media/ui/MM_Button_Steam.png"))
+    self.workshopButton:setDisplayBackground(true)
+    self.workshopButton:setPadding(DX, DY)
     self.workshopButton.tooltip = getText("UI_WorkshopSubmit_OverlayButton")
     self.parent:addChild(self.workshopButton)
 
-    self.urlButton = ISButton:new(
-            0, self:getBottom() - DX - BUTTON_SQ - 1, BUTTON_SQ, BUTTON_SQ, "", self, self.onGoButton
+    self.urlButton = MMImageButton:new(
+            0, self:getBottom() - DX - BUTTON_SQ - 1, BUTTON_SQ, BUTTON_SQ, self, self.onGoButton
     )
     self.urlButton.internal = "URL"
-    self.urlButton:setImage(getTexture("media/ui/ModManager_InfoWeb.png"))
-    self.urlButton:forceImageSize(BUTTON_SQ_IMG, BUTTON_SQ_IMG)
-    self.urlButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
+    self.urlButton:setImage(getTexture("media/ui/MM_Button_Url.png"))
+    self.urlButton:setPadding(DX, DY)
+    self.urlButton:setDisplayBackground(true)
     self.urlButton.tooltip = getText("UI_ModManager_Info_URLButton")
     self.parent:addChild(self.urlButton)
 end
@@ -2411,10 +1655,10 @@ function ModPanelInfo:prerender()
         end
 
         -- Mod ID
-        description = description .. " <LINE> <TEXT> " .. getText("UI_mods_ID", modInfo:getId()) .. " <LINE> "
+        description = description .. " <LINE> <TEXT> " .. getText("UI_ModManager_Info_ModID", modInfo:getId()) .. " <LINE> "
         -- Workshop ID
         if getSteamModeActive() and modInfo:getWorkshopID() then
-            description = description .. getText("UI_WorkshopSubmit_ItemID") .. " " .. modInfo:getWorkshopID() .. " <LINE> "
+            description = description .. getText("UI_ModManager_Info_WorkshopID", modInfo:getWorkshopID()) .. " <LINE> "
         end
 
         -- Mod version
@@ -2425,7 +1669,7 @@ function ModPanelInfo:prerender()
         -- Authors
         local authors = modInfoExtra.authors
         if authors ~= nil then
-            description = description .. " <TEXT> " .. getText("UI_ModManager_Info_Authors")
+            description = description .. " <TEXT> " .. getText("UI_ModManager_Info_Author")
             for index, author in ipairs(authors) do
                 description = description .. " " .. author
                 if #authors > 1 and index ~= #authors then
@@ -2448,7 +1692,7 @@ function ModPanelInfo:prerender()
 
         -- Tags
         local tags = modInfoExtra.tags or {}
-        local customTags = self.parent.customTags[modInfo:getId()] or {}
+        local customTags = self.parent.manager.customTags[modInfo:getId()] or {}
         if #tags + #customTags > 0 then
             description = description .. " <LINE> <TEXT> " .. getText("UI_ModManager_Info_Tags")
             description = description .. " <LINE> <INDENT:20> "
@@ -2552,35 +1796,27 @@ end
 
 function ModPanelInfo:onGoButton(button)
     if button.internal == "URL" then
-        if isSteamOverlayEnabled() then
-            activateSteamOverlayToWebPage(self.urlEntry.title)
-        else
-            openUrl(self.urlEntry.title)
-        end
+        ModManagerUtils.openUrl(self.urlEntry.title)
     elseif button.internal == "WORKSHOP" then
-        if isSteamOverlayEnabled() then
-            activateSteamOverlayToWorkshopItem(self.item.modInfo:getWorkshopID())
-        else
-            openUrl(string.format("https://steamcommunity.com/sharedfiles/filedetails/?id=%s", self.item.modInfo:getWorkshopID()))
-        end
+        ModManagerUtils.openWorkshopLink(self.item.modInfo:getWorkshopID())
     end
 end
 
 function ModPanelInfo:onCustomTagsDialog()
     local modId = self.parent.listBox.items[self.selected].item.modInfo:getId()
-    local text = table.concat(self.parent.customTags[modId] or {}, ",")
+    local text = table.concat(self.parent.manager.customTags[modId] or {}, ",")
     local modal = ISTextBox:new(
             (getCore():getScreenWidth() / 2) - 140,
             (getCore():getScreenHeight() / 2) - 90,
             280, 180,
-            getText("UI_ModManager_Info_TagsButton_Request"),
+            getText("UI_ModManager_Info_Tags_Request"),
             text, self, self.onCustomTagsConfirm
     )
-    modal.validateTooltipText = getText("UI_ModManager_Info_TagsButton_Warning")
+    modal.validateTooltipText = getText("UI_ModManager_Info_Tags_Warning", ModManager.getCustomTagsIllegalCharsString())
     modal:initialise()
     modal:setCapture(true)
     modal:setAlwaysOnTop(true)
-    modal:setValidateFunction(self, self.isValidCustomTags)
+    modal:setValidateFunction(nil, ModManager.isValidCustomTags)
     modal:addToUIManager()
     modal.entry:focus()
 
@@ -2662,18 +1898,13 @@ function ModPanelInfo:onCustomTagsDialog()
     modal.entry:onTextChange()
 end
 
-function ModPanelInfo:isValidCustomTags(text)
-    return not text:contains("/") and not text:contains("\\")
-            and not text:contains(":") and not text:contains(";")
-            and not text:contains("\"") and not text:contains(".")
-end
-
 function ModPanelInfo:onCustomTagsConfirm(button)
     if button.internal == "OK" then
         local modId = self.parent.listBox.items[self.selected].item.modInfo:getId()
         local text = button.parent.entry:getText()
+
         local old_tags, new_tags = {}, {}
-        for _, tag in ipairs(self.parent.customTags[modId] or {}) do
+        for _, tag in ipairs(self.parent.manager.customTags[modId] or {}) do
             old_tags[tag] = true
         end
         for _, tag in ipairs(luautils.split(text, ",")) do
@@ -2686,21 +1917,15 @@ function ModPanelInfo:onCustomTagsConfirm(button)
                 self.parent.counters.customTags[tag] = self.parent.counters.customTags[tag] - 1
             end
         end
-        self.parent.customTags[modId] = {}
+        self.parent.manager.customTags[modId] = {}
         for tag, _ in pairs(new_tags) do
             self.parent.counters.customTags[tag] = (self.parent.counters.customTags[tag] or 0) + 1
-            table.insert(self.parent.customTags[modId], tag)
+            table.insert(self.parent.manager.customTags[modId], tag)
         end
-        table.sort(self.parent.customTags[modId])
+        table.sort(self.parent.manager.customTags[modId])
 
-        -- Write to file
-        local file = getFileWriter(FILE_CUSTOM_TAGS, true, false)
-        for id, tags in pairs(self.parent.customTags) do
-            if #tags > 0 then
-                file:write(id .. ":" .. table.concat(tags, ",") .. "\n")
-            end
-        end
-        file:close()
+        -- Save custom tags
+        self.parent.manager:saveCustomTags()
 
         -- To force update info panel
         self.item = nil
@@ -2722,57 +1947,28 @@ function ModPanelInfo:onCustomTagsConfirm(button)
     end
 end
 
--- **********************************************
+-- ******************************
 -- ModPanelPresets
--- **********************************************
-
-ModPanelPresets = ISPanelJoypad:derive("ModPanelPresets")
+-- ******************************
 
 function ModPanelPresets:new(x, y, width, height)
-    local o = ISPanelJoypad:new(x, y, width, height)
+    local o = MMPanelPresets:new(x, y, width, height)
     setmetatable(o, self)
     self.__index = self
-    o.background = false
-    o.saveList = {}
+    o.validateNameText = getText("UI_ModManager_Presets_Save_Warning", ModManager.getPresetNameIllegalCharsString())
+    o.validateNameFunc = ModManager.isValidPresetName
     return o
 end
 
 function ModPanelPresets:createChildren()
-    self.saveLabel = ISLabel:new(
-            DX, 0, BUTTON_HGT, getText("UI_ModManager_Presets_Label"),
-            1, 1, 1, 1, UIFont.Small, true
-    )
-    self:addChild(self.saveLabel)
+    MMPanelPresets.createChildren(self)
 
-    self.presetsComboBox = ISComboBox:new(self.saveLabel:getRight() + DX, 0, BUTTON_WDH * 2, BUTTON_HGT, self, self.onSelected)
-    self.presetsComboBox.openUpwards = true
-    self.presetsComboBox.noSelectionText = getText("UI_ModManager_Presets_NoSelection")
-    self:addChild(self.presetsComboBox)
-
-    self.saveButton = ISButton:new(
-            self.presetsComboBox:getRight() + DX, 0, BUTTON_WDH, BUTTON_HGT,
-            getText("UI_ModManager_Presets_ButtonSave"), self, self.onSavePresetRequest
-    )
-    self.saveButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self.saveButton:setWidthToTitle(BUTTON_WDH / 2)
-    self:addChild(self.saveButton)
-
-    self.delButton = ISButton:new(
-            self.saveButton:getRight() + DX, 0, BUTTON_WDH, BUTTON_HGT,
-            getText("UI_ModManager_Presets_ButtonDel"), self, self.onDeletePresetRequest
-    )
-    self.delButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self.delButton:setWidthToTitle(BUTTON_WDH / 2)
-    self.delButton:setEnable(false)
-    self:addChild(self.delButton)
-
-    self.fromSaveButton = ISButton:new(
+    self.loadFromButton = MMButton:new(
             self.delButton:getRight() + DX, 0, BUTTON_WDH, BUTTON_HGT,
-            getText("UI_ModManager_Presets_ButtonLoadFromSave"), self, self.onLoadFromSaveButton
+            getText("UI_ModManager_Presets_Button_LoadFromSave"), self, self.onLoadFromButton
     )
-    self.fromSaveButton.borderColor = { r = 1, g = 1, b = 1, a = 0.1 }
-    self.fromSaveButton:setWidthToTitle(BUTTON_WDH)
-    self:addChild(self.fromSaveButton)
+    self.loadFromButton:setWidthToTitle(BUTTON_WDH)
+    self:addChild(self.loadFromButton)
 end
 
 function ModPanelPresets:updateOptions()
@@ -2781,36 +1977,30 @@ function ModPanelPresets:updateOptions()
     self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_DisableAllExceptFavs"), "clear")
     self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_EnableAll"), "enableAll")
     self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_EnableAllExceptHidden"), "enable")
-    self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_Global"), "currentList_global")
+    self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_Default"), "game_default")
     if MainScreen.latestSaveGameMode and MainScreen.latestSaveWorld and #getFullSaveDirectoryTable() > 0 then
-        if not MainScreen.latestSaveGameMode == "LastStand" and not MainScreen.latestSaveGameMode == "Multiplayer" then
+        if not (MainScreen.latestSaveGameMode == "LastStand") and not (MainScreen.latestSaveGameMode == "Multiplayer") then
             getWorld():setGameMode(MainScreen.latestSaveGameMode)
             getWorld():setWorld(MainScreen.latestSaveWorld)
             if getSaveInfo(getWorld():getWorld()).gameMode then
-                self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_LastSave"), "currentList_lastSave")
+                self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_LastSave"), "game_lastSave")
             end
         end
     end
     if self.parent.loadGameFolder or self.parent.isNewGame then
-        self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_CurrentSave"), "currentList_currentSave")
+        self.presetsComboBox:addOptionWithData(getText("UI_ModManager_Presets_List_CurrentSave"), "game_currentSave")
     end
-    self:loadPresets()
-    for save_name, _ in pairs(self.saveList) do
-        if save_name ~= LIST_FAVORITES and save_name ~= LIST_HIDDEN then
-            self.presetsComboBox:addOptionWithData(save_name, "user")
+    for name, _ in pairs(self.parent.manager.presets) do
+        if name ~= ModManager.PRESET_FAVORITES and name ~= ModManager.PRESET_HIDDEN then
+            self.presetsComboBox:addOptionWithData(name, "user")
         end
     end
     self.presetsComboBox.selected = 0
     self.delButton:setEnable(false)
 end
 
-function ModPanelPresets:onSelected()
-    local selectedItem = self.presetsComboBox.options[self.presetsComboBox.selected]
-    local name, data = selectedItem.text, selectedItem.data
-
-    self.delButton:setEnable(data == "user")
-
-    local activeMods = {}
+function ModPanelPresets:onSelectedAux(name, data)
+    local activeList = {}
     if data == "clearAll" then
         for _, item in ipairs(self.parent.listBox.items) do
             item.item.isActive = false
@@ -2821,61 +2011,103 @@ function ModPanelPresets:onSelected()
         for _, item in ipairs(self.parent.listBox.items) do
             if not item.item.isFavorite then
                 item.item.isActive = false
+            else
+                table.insert(activeList, item.item.modInfo:getId())
+                activeList[item.item.modInfo:getId()] = true
             end
         end
         self:updateOptions()
     elseif data == "enableAll" then
         for _, item in ipairs(self.parent.listBox.items) do
-            activeMods[item.item.modInfo:getId()] = true
             item.item.isHidden = false
+
+            table.insert(activeList, item.item.modInfo:getId())
+            activeList[item.item.modInfo:getId()] = true
         end
         self:updateOptions()
     elseif data == "enable" then
         for _, item in ipairs(self.parent.listBox.items) do
             if not item.item.isHidden then
-                activeMods[item.item.modInfo:getId()] = true
+                table.insert(activeList, item.item.modInfo:getId())
+                activeList[item.item.modInfo:getId()] = true
             end
         end
         self:updateOptions()
-    elseif data == "currentList_global" then
+    elseif data == "game_default" then
         local mods = ActiveMods.getById("default"):getMods()
-        for i = 0, mods:size() - 1 do
-            activeMods[mods:get(i)] = true
+        if not self.parent.isNewGame and not self.parent.loadGameFolder then
+            -- "default" list is edited, load backup
+            mods = ActiveMods.getById("modManager"):getMods()
         end
-    elseif data == "currentList_lastSave" then
+        for i = 0, mods:size() - 1 do
+            table.insert(activeList, mods:get(i))
+            activeList[mods:get(i)] = true
+        end
+    elseif data == "game_lastSave" then
         local latestSave = MainScreen.latestSaveGameMode .. getFileSeparator() .. MainScreen.latestSaveWorld
         local mods = getSaveInfo(latestSave).activeMods:getMods()
         for i = 0, mods:size() - 1 do
-            activeMods[mods:get(i)] = true
+            table.insert(activeList, mods:get(i))
+            activeList[mods:get(i)] = true
         end
-    elseif data == "currentList_currentSave" then
-        local mods = ActiveMods.getById("currentGame"):getMods()
+    elseif data == "game_currentSave" then
+        -- "currentGame" list is edited, load backup
+        local mods = ActiveMods.getById("modManager"):getMods()
         for i = 0, mods:size() - 1 do
-            activeMods[mods:get(i)] = true
+            table.insert(activeList, mods:get(i))
+            activeList[mods:get(i)] = true
         end
     elseif data == "user" then
-        for _, m in ipairs(self.saveList[name]) do
-            activeMods[m] = true
+        for _, modId in ipairs(self.parent.manager.presets[name]) do
+            table.insert(activeList, modId)
+            activeList[modId] = true
         end
     end
 
+    self:onApplyPreset(activeList)
+end
+
+function ModPanelPresets:onApplyPreset(activeList)
     self.parent.counters.enabled = 0
     self.parent.counters.favorites = 0
     self.parent.counters.hidden = 0
 
+    local warnBroken, warnFavs, warnHidden = {}, {}, {}
+
+    -- TODO: add mod names instead of their ids when possible
+    -- Remove not existing mods
+    for i = #activeList, 1, -1 do
+        local modId = activeList[i]
+        if not getModInfoByID(modId) or not getModInfoByID(modId):isAvailable() then
+            table.insert(warnBroken, modId)
+
+            activeList[modId] = nil
+            table.remove(activeList, i)
+        end
+    end
+
     for _, item in ipairs(self.parent.listBox.items) do
-        if not item.item.isAvailable then
-            activeMods[item.item.modInfo:getId()] = false
-            -- Remove broken mods from favorites?
-            --item.item.isFavorite = false
-            item.item.isActive = false
+        local modId = item.item.modInfo:getId()
+
+        if activeList[modId] and item.item.isHidden then
+            table.insert(warnHidden, modId)
+
+            activeList[modId] = nil
+            table.remove(activeList, ModManagerUtils.indexOf(activeList, modId))
         end
         if item.item.isFavorite then
+            if not activeList[modId] and item.item.isAvailable then
+                table.insert(warnFavs, modId)
+
+                table.insert(activeList, modId)
+                activeList[modId] = true
+            end
+
             self.parent.counters.favorites = self.parent.counters.favorites + 1
         elseif item.item.isHidden then
             self.parent.counters.hidden = self.parent.counters.hidden + 1
         end
-        if activeMods[item.item.modInfo:getId()] or (item.item.isFavorite and item.item.isAvailable) then
+        if activeList[modId] then
             item.item.isActive = true
             self.parent.counters.enabled = self.parent.counters.enabled + 1
         else
@@ -2883,76 +2115,31 @@ function ModPanelPresets:onSelected()
         end
     end
 
+    local activeMods = self.parent:getActiveMods()
+    activeMods:clear()
+    for _, modId in ipairs(activeList) do
+        activeMods:setModActive(modId, true)
+    end
+
     self.parent.listBox:updateFilter()
+    self.parent:showModsWarning(warnBroken, warnFavs, warnHidden)
 end
 
-function ModPanelPresets:onSavePresetRequest()
-    local selectedItem = self.presetsComboBox.options[self.presetsComboBox.selected]
-    local name = "New"
-    if selectedItem and selectedItem.data == "user" then
-        name = selectedItem.text
+function ModPanelPresets:onSavePresetAux(name)
+    self.parent.manager.presets[name] = {}
+    local activeList = self.parent:getActiveMods():getMods()
+    for i = 0, activeList:size() - 1 do
+        table.insert(self.parent.manager.presets[name], activeList:get(i))
     end
-
-    local modal = ISTextBox:new(
-            (getCore():getScreenWidth() / 2) - 140, (getCore():getScreenHeight() / 2) - 90, 280, 180,
-            getText("UI_ModManager_Presets_ButtonSave_Request"), name, self, self.onSavePreset
-    )
-    modal.maxChars = 50
-    modal.noEmpty = true
-    modal.validateTooltipText = getText("UI_ModManager_Presets_ButtonSave_Warning")
-    modal:initialise()
-    modal:setCapture(true)
-    modal:setAlwaysOnTop(true)
-    modal:setValidateFunction(self, self.isValidPresetName)
-    modal:addToUIManager()
-    modal.entry:focus()
+    self.parent.manager:savePresets()
 end
 
-function ModPanelPresets:isValidPresetName(text)
-    return not text:contains("/") and not text:contains("\\")
-            and not text:contains(":") and not text:contains(";")
-            and not text:contains("\"") and not text:contains(".")
-            and text ~= LIST_FAVORITES and text ~= LIST_HIDDEN
+function ModPanelPresets:onDeletePresetAux(name)
+    self.parent.manager.presets[name] = nil
+    self.parent.manager:savePresets()
 end
 
-function ModPanelPresets:onSavePreset(button)
-    if button.internal == "OK" then
-        local name = button.parent.entry:getText()
-        self.saveList[name] = {}
-        for _, item in ipairs(self.parent.listBox.items) do
-            if item.item.isActive then
-                table.insert(self.saveList[name], item.item.modInfo:getId())
-            end
-        end
-        self:savePresets()
-        self:updateOptions()
-        self.presetsComboBox:select(name)
-        self.delButton:setEnable(true)
-    end
-end
-
-function ModPanelPresets:onDeletePresetRequest()
-    local name = self.presetsComboBox.options[self.presetsComboBox.selected].text
-    local modal = ISModalDialog:new(
-            (getCore():getScreenWidth() - 230) / 2, (getCore():getScreenHeight() - 120) / 2, 230, 120,
-            getText("UI_ModManager_Presets_ButtonDel_Request", name), true, self, self.onDeletePreset
-    )
-    modal:initialise()
-    modal:setCapture(true)
-    modal:setAlwaysOnTop(true)
-    modal:addToUIManager()
-end
-
-function ModPanelPresets:onDeletePreset(button)
-    if button.internal == "YES" then
-        local name = self.presetsComboBox.options[self.presetsComboBox.selected].text
-        self.saveList[name] = nil
-        self:savePresets()
-        self:updateOptions()
-    end
-end
-
-function ModPanelPresets:onLoadFromSaveButton()
+function ModPanelPresets:onLoadFromButton()
     local loadGameScreen = LoadGameScreen.instance
     loadGameScreen.originalRender = LoadGameScreen.render
     loadGameScreen.originalOnOptionMouseDown = LoadGameScreen.onOptionMouseDown
@@ -2992,7 +2179,7 @@ function ModPanelPresets:onLoadFromSaveButton()
 
     loadGameScreen.loadModsButton = ISButton:new(
             loadGameScreen.width - 116, loadGameScreen.height - BUTTON_HGT - 5, 100, BUTTON_HGT,
-            getText("UI_ModManager_LoadGameScreen_ButtonLoadMods"), loadGameScreen, loadGameScreen.onOptionMouseDown
+            getText("UI_ModManager_LoadGameScreen_Button_LoadMods"), loadGameScreen, loadGameScreen.onOptionMouseDown
     )
     loadGameScreen.loadModsButton.internal = "LOAD_MODS"
     loadGameScreen.loadModsButton:setAnchorLeft(false)
@@ -3019,47 +2206,12 @@ function ModPanelPresets:onSaveFileSelected(folder)
     local activeMods = {}
     local mods = getSaveInfo(folder).activeMods:getMods()
     for i = 0, mods:size() - 1 do
+        table.insert(activeMods, mods:get(i))
         activeMods[mods:get(i)] = true
     end
 
-    for _, item in ipairs(self.parent.listBox.items) do
-        if activeMods[item.item.modInfo:getId()] then
-            item.item.isActive = true
-            self.parent.counters.enabled = self.parent.counters.enabled + 1
-        else
-            item.item.isActive = false
-        end
-    end
-
-    self.parent.listBox:updateFilter()
+    self:onApplyPreset(activeMods)
 end
 
-function ModPanelPresets:loadPresets()
-    self.saveList = {}
-    local file = getFileReader(FILE_MOD_LIST, true)
-    local line = file:readLine()
-    while line ~= nil do
-        -- Split name and list (by first ":", no luautils.split)
-        local sep = string.find(line, ":")
-        local save_name, save_list = "", ""
-        if sep ~= nil then
-            save_name = string.sub(line, 0, sep - 1)
-            save_list = string.sub(line, sep + 1)
-        end
-        if save_name ~= "" and save_list ~= "" then
-            self.saveList[save_name] = luautils.split(save_list, ";")
-        end
-        line = file:readLine()
-    end
-    file:close()
-end
-
-function ModPanelPresets:savePresets()
-    local file = getFileWriter(FILE_MOD_LIST, true, false)
-    for save_name, save_list in pairs(self.saveList) do
-        if #save_list > 0 then
-            file:write(save_name .. ":" .. table.concat(save_list, ";") .. "\n")
-        end
-    end
-    file:close()
-end
+Events.OnKeyPressed.Add(ModSelector.onKeyPressed)
+Events.OnModsModified.Add(ModSelector.onModsModified)

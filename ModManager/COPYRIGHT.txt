@@ -1,0 +1,33 @@
+
+Mod: Mod Manager
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2694448564
+Author: NoctisFalco
+Profile: https://steamcommunity.com/id/NoctisFalco/
+
+Redistribution of this mod without explicit permission from the creator is prohibited
+under any circumstances. This includes, but not limited to, uploading this mod to the Steam Workshop
+or any other site, distribution as part of another mod or modpack, distribution of modified versions.
+
+
+Parts of the code in this mod, and some content may be licensed by their original authors.
+If this is the case, the original author and license will either be given in the source code,
+or be in a LICENSE file next to the content.
+
+Narrnika: this mod is based on NRK Mod Selector and uploaded with his permission.
+(https://steamcommunity.com/sharedfiles/filedetails/?id=2155197983)
+
+Parts of this mod were created by, or derived from works created by:
+The Indie Stone: pie and map icons
+Freepik: gear icon in the mod's logo (Freepik from www.flaticon.com)
+Google and other contributors: material design icons (https://github.com/Templarian/MaterialDesign)
+[[Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+Some of the icons are redistributed under the Apache 2.0 license. All other
+icons are either redistributed under their respective licenses or are
+distributed under the Apache 2.0 license.]]
+
+Ko-fi and the Ko-fi logo are trademarks and/or registered trademarks of Ko-fi Labs Limited.
+The "Patreon" Wordmark and the "P" Logo (together, the "Patreon Marks") are trademarks registered by Patreon, Inc.
+in the U.S. Patent and Trademark Office. The Patreon Marks are also registered trademarks, trademarks
+or trade dress of Patreon, Inc. in other countries.
+Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation
+in the U.S. and/or other countries.
