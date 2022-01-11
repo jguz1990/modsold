@@ -113,3 +113,33 @@ function Clean_Water_Bottle_Full(item)
     end
     return true;
 end
+function MRE_NoVehicle(item, result)
+	-- local cont = item:getContainer()
+	-- if cont:getVehiclePart() then return false end
+	local cont = item:getOutermostContainer()
+	-- if cont:getVehiclePart() then return false end
+	local player = cont:getParent()
+	-- print("Parent " .. tostring(player))
+	-- local player = getSpecificPlayer(0)
+	-- print("Player " .. tostring(player))
+	if player and player:getVehicle() then
+		-- print("Vehicle!")
+		return false
+	end
+    return true;
+end
+function MRE_NoVehicle2(item, player)
+	-- local cont = item:getContainer()
+	-- if cont:getVehiclePart() then return false end
+	-- local cont = item:getOutermostContainer()
+	-- -- if cont:getVehiclePart() then return false end
+	-- local player = cont:getParent()
+	-- print("Parent " .. tostring(player))
+	-- local player = getSpecificPlayer(0)
+	-- print("Player " .. tostring(player))
+	if player and player:getVehicle() then
+		-- print("Vehicle!")
+		return false
+	end
+    return true;
+end

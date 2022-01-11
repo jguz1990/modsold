@@ -35,6 +35,18 @@ module Base
         mesh = ZREs/mre_small_world,
         texture = mreSm,
 		scale = 0.01,
+    }   
+    model MRE_packet
+    {
+        mesh = ZREs/mre_packet,
+        texture = mreSm,
+		scale = 0.01,
+    }   
+    model MRE_packet_world
+    {
+        mesh = ZREs/mre_packet_world,
+        texture = mreSS,
+		scale = 0.01,
     } 
 	
     model MRE_open

@@ -14,7 +14,7 @@ item MRE_Drink_Trash
 		Icon 		= MREdrinkmixpackage3,
 		Weight 		= 0.01,
 		Type 		= Normal,
-        WorldStaticModel = MRE_small_world,
+        WorldStaticModel = MRE_packet_world,
 	}
 item MRE_Cocoa_Trash
 	{
@@ -22,7 +22,7 @@ item MRE_Cocoa_Trash
 		Icon 		= MREChockyTrash,
 		Weight 		= 0.01,
 		Type 		= Normal,
-        WorldStaticModel = MRE_small_world,
+        WorldStaticModel = MRE_packet_world,
 	}
 item MRE_Coffee_Trash
 	{
@@ -30,7 +30,7 @@ item MRE_Coffee_Trash
 		Icon 		= MRECoffeeTrash,
 		Weight 		= 0.01,
 		Type 		= Normal,
-        WorldStaticModel = MRE_small_world,
+        WorldStaticModel = MRE_packet_world,
 	}
 item MRE_Crackers_Trash
 	{
@@ -46,7 +46,7 @@ item MRE_Spread_Trash
 		Icon 		= MREspreadpackageTrash2,
 		Weight 		= 0.01,
 		Type 		= Normal,
-        WorldStaticModel = MRE_small_world,
+        WorldStaticModel = MRE_packet_world,
 	}	
 item MRE_Meal_Pouch_Trash
 	{

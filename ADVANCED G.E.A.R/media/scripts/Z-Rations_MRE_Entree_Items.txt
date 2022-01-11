@@ -7,12 +7,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_PorkwithRiceinBBQSauce_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -21,12 +23,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_CornedBeefHash_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -35,12 +39,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_ChickenStew_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -49,12 +55,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_OmeletwithHam_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -63,12 +71,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_SpaghettiwithMeatSauce_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -77,12 +87,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_ChickenalaKing_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -91,12 +103,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_BeefStew_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -105,12 +119,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_HamSlice_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -119,12 +135,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_MeatballswithTomatoSauce_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -133,12 +151,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_TunawithNoodles_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -147,12 +167,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_ChickenwithRice_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 	recipe Heat MRE Meal
@@ -161,12 +183,14 @@ module Base
 		MRE_FlamelessRationHeater,
 		Water=1,
 		Result:MRE_EscallopedPotatoeswithHam_Heating,
-		Time:50.0,
+		Time:150.0,
 		Category:Cooking,
 		Sound:GetWater,
 		OnCreate:StartMRE,
 	   Prop1:Source=3,
 	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
 		}
 
 

@@ -18,8 +18,8 @@ item MRE_Coffee
 		Calories					=	4,
 		Weight						=	0.1,
 		Packaged					=	TRUE,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
+        StaticModel = MRE_packet,
+        WorldStaticModel = MRE_packet_world,
         EvolvedRecipe   =   HotDrink:5;HotDrinkRed:5;HotDrinkWhite:5;HotDrinkSpiffo:5;HotDrinkTea:5,
 	}
 

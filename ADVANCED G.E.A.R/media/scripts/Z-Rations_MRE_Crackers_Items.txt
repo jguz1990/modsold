@@ -135,8 +135,8 @@ item MRE_Jelly
 		Weight						=	0.1,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
+        StaticModel = MRE_packet,
+        WorldStaticModel = MRE_packet_world,
 	}
 
 
@@ -154,8 +154,8 @@ item MRE_PeanutButter
 		Weight						=	0.1,
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
+        StaticModel = MRE_packet,
+        WorldStaticModel = MRE_packet_world,
 	}
 
 item MRE_Cheesespread
@@ -173,8 +173,8 @@ item MRE_Cheesespread
 		Packaged					=	TRUE,
 		ReplaceOnUse 		= MRE_Spread_Trash,
 		/*ReplaceOnUse 		= MRE_Meal_Pouch_Trash,*/
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
+        StaticModel = MRE_packet,
+        WorldStaticModel = MRE_packet_world,
 	}	
 }
 
