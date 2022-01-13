@@ -56,7 +56,7 @@ function RecycleVehicleAction:perform()
     local metalSheetSmall = math.floor((self.vArea - metalSheet * 4) / 3)
     local metalBar = math.floor(self.vArea - metalSheet * 4 - metalSheetSmall * 2)
     -- Other elements
-    local metalPipe = 0
+    local metalPipe = 4
     local metalScrap = 5
     local metalUnusable = ZombRand(3)
     local electronicsScrap = 2
