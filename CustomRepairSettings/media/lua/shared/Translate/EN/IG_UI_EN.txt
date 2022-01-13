@@ -1,0 +1,4 @@
+UI_EN = {
+
+	IGUI_perks_VehicleDurability = "Controlled Impact",
+}

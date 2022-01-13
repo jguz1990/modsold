@@ -1,0 +1,31 @@
+VERSION = 1,
+
+option CustomRepairSettings.NoPenaltiesMechanics {
+	type = boolean,
+	default = false,
+	page = Character,
+	translation = CustomRepairSettings.NoPenaltiesMechanics,
+}
+
+option CustomRepairSettings.NoPenaltiesOther {
+	type = boolean,
+	default = false,
+	page = Character,
+	translation = CustomRepairSettings.NoPenaltiesOther,
+}
+
+option CustomRepairSettings.MaxCondPotentialRepairMechanics {
+	type = enum,
+	numValues = 2,
+	default = 1,
+	page = Character,
+	translation = CustomRepairSettings.MaxCondPotentialRepairMechanics,
+}
+
+option CustomRepairSettings.MaxCondPotentialRepairOther {
+	type = enum,
+	numValues = 2,
+	default = 1,
+	page = Character,
+	translation = CustomRepairSettings.MaxCondPotentialRepairOther,
+}

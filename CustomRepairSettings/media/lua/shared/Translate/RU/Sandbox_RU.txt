@@ -1,0 +1,14 @@
+Sandbox_RU = {
+	Sandbox_CustomRepairSettings.NoPenaltiesMechanics = "Отключить счетчик ремонта для частей автомобиля"
+	Sandbox_CustomRepairSettings.NoPenaltiesMechanics_tooltip = "Эффективность ремонта постоянна и не зависит от счетчика ремонта."
+	Sandbox_CustomRepairSettings.NoPenaltiesOther = "Отключить счетчик ремонта для остальных предметов"
+	Sandbox_CustomRepairSettings.NoPenaltiesOther_tooltip = "Эффективность ремонта постоянна и не зависит от счетчика ремонта."
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics = "Удачность починки для частей автомобиля"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_tooltip = "Удачность починки - это доля максимального состояния предмета или сломанной его части?"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_option1 = "Доля сломанной части предмета"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_option2 = "Доля максимального состояния предмета"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther = "Удачность починки для остальных предметов"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_tooltip = "Удачность починки - это доля максимального состояния предмета или сломанной его части?"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_option1 = "Доля сломанной части предмета"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_option2 = "Доля максимального состояния предмета"
+}

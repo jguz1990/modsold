@@ -1,0 +1,14 @@
+Sandbox_EN = {
+	Sandbox_CustomRepairSettings.NoPenaltiesMechanics = "Disable repair counter for vehicle parts"
+	Sandbox_CustomRepairSettings.NoPenaltiesMechanics_tooltip = "Repair efficiency is constant and does not depend on repair counter."
+	Sandbox_CustomRepairSettings.NoPenaltiesOther = "Disable repair counter for other items"
+	Sandbox_CustomRepairSettings.NoPenaltiesOther_tooltip = "Repair efficiency is constant and does not depend on repair counter."
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics = "Potential Repair for vehicle parts"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_tooltip = "Potential Repair is percentage of maximum item condition or its broken part?"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_option1 = "Percentage of broken item part"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairMechanics_option2 = "Percentage of maximum item condition"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther = "Potential Repair for other items"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_tooltip = "Potential Repair is percentage of maximum item condition or its broken part?"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_option1 = "Percentage of broken item part"
+	Sandbox_CustomRepairSettings.MaxCondPotentialRepairOther_option2 = "Percentage of maximum item condition"
+}
