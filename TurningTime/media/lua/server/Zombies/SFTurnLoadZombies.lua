@@ -6,12 +6,12 @@ function SFTurn.BehaviorBanshee(zombie, items)
 	
 	local chance = ZombRand(0,5);
 	local x, y, z = zombie:getX(), zombie:getY(), zombie:getZ();
-	if getPlayer():isGhostMode() == false and zombie:DistTo(getPlayer()) < 5 and zombie:CanSee(getPlayer()) == true and zombie:isUseless() == true and not zombie:isProne() then
+	if getPlayer():isGhostMode() == false and zombie:DistTo(getPlayer()) < 7 and zombie:CanSee(getPlayer()) == true and zombie:isUseless() == true and not zombie:isProne() then
 		local test = SFTurn.TestSneak(getPlayer())
 		if test == false then
 			zombie:playSound("BansheeScream")
 			addSound(null, x, y, z, 200, 200)
-			--zombie:changeSpeed(1)
+			zombie:changeSpeed(1)
 			zombie:DoZombieStats()
 			zombie:setForceEatingAnimation(false)
 			zombie:setUseless(false)
@@ -91,7 +91,7 @@ function SFTurn.ReloadZombie(zombie)
         for j=0,items:size()-1 do
             local item = items:getItemByIndex(j)
 			if item and item:getType() == "Token_Banshee" then
-				--zombie:changeSpeed(1)
+				zombie:changeSpeed(1)
 				--zombie:DoZombieStats()
 			end
 			if item and item:getType() == "Token_Crawler" and not zombie:isCrawling() then
@@ -107,7 +107,7 @@ function SFTurn.ReloadZombie(zombie)
 				if SandboxVars.SFTurn.ImmortalNemesis == true then
 					zombie:setOnlyJawStab(true)
 				else
-					zombie:setHealth(50)
+					zombie:setHealth(5000)
 				end
 				--zombie:changeSpeed(3)
 				zombie:DoZombieStats()
@@ -160,7 +160,7 @@ function SFTurn.UpdateZombie(zombie)
 				if SandboxVars.SFTurn.ImmortalNemesis == true then
 					zombie:setOnlyJawStab(true)
 				else
-					zombie:setHealth(200)
+					zombie:setHealth(5000)
 				end
 				--zombie:changeSpeed(3)
 				--zombie:DoZombieStats()
