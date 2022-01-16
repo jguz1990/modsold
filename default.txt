@@ -27,7 +27,6 @@ mods
 	mod = CCFastReadx100,
 	mod = cheatmenu,
 	mod = ClaimNonResidential,
-	mod = CustomizableZombies,
 	mod = DisableCarWear,
 	mod = waterPipes,
 	mod = DynamicTraits,

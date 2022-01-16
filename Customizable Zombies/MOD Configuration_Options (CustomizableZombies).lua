@@ -8,11 +8,11 @@ local obj1 = {
 		["HPMultiplier"] = 1000;
 	};
 	["Crawler"] = {
-		["ChanceToSpawn"] = 50;
+		["ChanceToSpawn"] = 5;
 		["HPMultiplier"] = 1000;
 	};
 	["Shambler"] = {
-		["ChanceToSpawn"] = 350;
+		["ChanceToSpawn"] = 420;
 		["HPMultiplier"] = 1000;
 	};
 	["FastShambler"] = {
@@ -20,7 +20,7 @@ local obj1 = {
 		["HPMultiplier"] = 1000;
 	};
 	["Runner"] = {
-		["ChanceToSpawn"] = 100;
+		["ChanceToSpawn"] = 75;
 		["HPMultiplier"] = 1000;
 	};
 	["Preset"] = {

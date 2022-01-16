@@ -1,4 +1,4 @@
-require "EasyConfigChucked1_Main"
+require "EasyConfig/EasyConfig"
 
 ---Override sandbox+ easyconfig entirely
 EasyConfig = EasyConfig or nil
@@ -17,7 +17,7 @@ function sandboxPlusEasyConfigOverride()
 
 	if SBP and SP then
 
-		print("OLD Easy Config: Loading: "..SP.modId)
+		if getDebug() then print("Easy-Config-Chucked: OLD Easy Config Found: "..SP.modId) end
 		for kk,vv in pairs(SP) do print(" -- "..tostring(kk).." = "..tostring(vv)) end
 
 		local newMod = {}
@@ -35,10 +35,10 @@ function sandboxPlusEasyConfigOverride()
 		EasyConfig_Chucked = EasyConfig_Chucked or {}
 		EasyConfig_Chucked.mods = EasyConfig_Chucked.mods or {}
 		EasyConfig_Chucked.mods[newMod.modId] = newMod
-	else
-		if not SBP then print("-SBP not found") end
-		if not SP then print("-SP not found") end
-		end
+	--else
+		--if not SBP then print("--Easy-Config-Chucked: SBP not found") end
+		--if not SP then print("--Easy-Config-Chucked: SP not found") end
+	end
 end
 
 
@@ -49,9 +49,8 @@ function scrub_EasyConfig_mods()
 	end
 end
 
---Events.OnGameBoot.Add(scrub_EasyConfig_mods)
-Events.OnMainMenuEnter.Add(scrub_EasyConfig_mods)
-
+Events.OnGameBoot.Add(scrub_EasyConfig_mods)
+Events.OnServerStarted.Add(scrub_EasyConfig_mods)
 
 
 

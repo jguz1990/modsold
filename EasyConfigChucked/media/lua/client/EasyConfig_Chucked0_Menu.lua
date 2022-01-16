@@ -3,10 +3,8 @@ require "ISUI/ISButton"
 require "ISUI/ISControllerTestPanel"
 require "ISUI/ISVolumeControl"
 require "defines"
-require "OptionScreens/MainOptions"
 
 local GameOption = ISBaseObject:derive("GameOption")
-
 
 function GameOption:new(name, control, arg1, arg2)
 	local o = {}
@@ -30,7 +28,6 @@ function GameOption:new(name, control, arg1, arg2)
 	end
 
 	if (not control.isCombobox) and (not control.isTickBox) and (not control.isSlider) then
-		local go = o.gameOptions
 		control.onChange = function() o.gameOptions.changed = true end
 	end
 
@@ -42,19 +39,15 @@ function GameOption:onChange()
 end
 
 
-EasyConfig_MainOptions_create = MainOptions.create
-
+local EasyConfig_MainOptions_create = MainOptions.create
 function MainOptions:create() -- override
+
+	for modId,mod in pairs(EasyConfig_Chucked.mods) do
+		EasyConfig_Chucked.prepModForLoad(mod)
+	end
 
 	if EasyConfig_MainOptions_create then
 		EasyConfig_MainOptions_create(self) -- call original
-	end
-
-	if isClient() then --and isIngameState() then
-		if (not isAdmin()) and (not isCoopHost()) then
-			print("Easy-Config-Chucked: MP GameMode Detected: Note Host/Admin: MainOptions Hidden")
-			return
-		end
 	end
 
 	local EasyConfig_self_gameOptions_toUI = self.gameOptions.toUI
@@ -74,7 +67,6 @@ function MainOptions:create() -- override
 			end
 		end
 		EasyConfig_Chucked.saveConfig()
-		EasyConfig_Chucked.loadConfig()
 		self.changed = false
 		return EasyConfig_self_gameOptions_apply(self)
 	end
@@ -244,15 +236,22 @@ function MainOptions:create() -- override
 
 		local invalidAccess = false
 
+		if isClient() then
+			if not (isAdmin() or isCoopHost()) then
+				invalidAccess = true
+				addText("This mod's options can only be accessed by an admin or the host.", UIFont.Medium, 1, 1, 1, 1, -125)
+			end
+		end
+
 		if (not mod.menuSpecificAccess) or (getPlayer() and mod.menuSpecificAccess=="ingame") or (not getPlayer() and mod.menuSpecificAccess=="mainmenu") then
 		else
 			invalidAccess = true
 			if (not getPlayer() and mod.menuSpecificAccess=="ingame") then
-				addText("This mod's options can only be accessed from the in-game options menu.", UIFont.Medium, 1, 1, 1, 1, -100)
+				addText("This mod's options can only be accessed from the in-game options menu.", UIFont.Medium, 1, 1, 1, 1, -125)
 			end
 			if (getPlayer() and mod.menuSpecificAccess=="mainmenu") then
-				addText("This mod has options that can only be accessed from the main-menu options.", UIFont.Medium, 1, 1, 1, 1, -100)
-				addText("Note: Make sure to enable this mod from the main-menu to view the options.", UIFont.Small, 1, 1, 1, 1, -100)
+				addText("This mod has options that can only be accessed from the main-menu options.", UIFont.Medium, 1, 1, 1, 1, -125)
+				addText("Note: Make sure to enable this mod from the main-menu to view the options.", UIFont.Small, 1, 1, 1, 1, -125)
 			end
 			addText(" ", UIFont.Medium)
 		end
@@ -264,3 +263,19 @@ function MainOptions:create() -- override
 	end
 
 end
+
+
+function clientLoadConfig()
+	print("ECC: OnMainMenuEnter")
+	EasyConfig_Chucked.loadConfig()
+end
+Events.OnMainMenuEnter.Add(clientLoadConfig)
+
+function clientLoadConfig2(key)
+	local mainMenuKey = getCore():getKey("Main Menu")
+	if (key == mainMenuKey) or (mainMenuKey == 0 and key == Keyboard.KEY_ESCAPE) then
+		print("ECC: OnKeyPressed "..(getPlayer():getUsername()))
+		EasyConfig_Chucked.loadConfig()
+	end
+end
+Events.OnKeyPressed.Add(clientLoadConfig2)
