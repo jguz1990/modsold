@@ -23,6 +23,7 @@ module Base
         SmokeRange  =   5,
         /*ExplosionSound  =   BlowTorch,*/
 	AttachmentType = Gear,
+        ExplosionSound = SmokeBombExplode,
     }
 
 

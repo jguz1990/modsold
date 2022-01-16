@@ -21,7 +21,7 @@ module Base
         Icon	=	IncendiaryGrenade,
         FirePower  =   97,
         FireRange  =   6,
-        ExplosionSound  =   SmallExplosion,
+        ExplosionSound  =   FlameTrapExplode,
         /*SmokeRange  =   5,*/
 	AttachmentType = Gear,
         TriggerExplosionTimer   =   50,

@@ -25,7 +25,7 @@ module Base
         TriggerExplosionTimer   =   50,
         ExtraDamage  =   50,
         ExplosionRange  =   3,
-        ExplosionSound  =   SmallExplosion,
+		ExplosionSound = PipeBombExplode,
 	AttachmentType = Gear,
     }
 
@@ -51,7 +51,7 @@ module Base
         TriggerExplosionTimer   =   50,
         ExtraDamage  =   0.1,
         ExplosionRange  =   3,
-        ExplosionSound  =   SmallExplosion,
+		ExplosionSound = PipeBombExplode,
 	AlwaysKnockdown = TRUE,
 	AttachmentType = Gear,
     }

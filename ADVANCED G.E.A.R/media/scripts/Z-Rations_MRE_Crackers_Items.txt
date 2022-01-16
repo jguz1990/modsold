@@ -7,7 +7,7 @@ module Base
 		Result:MRE_Crackers_Jelly,
 		Time:50,
 		Category:Cooking,
-		OnCreate:SpreadMRE,
+		/*OnCreate:SpreadMRE,*/
         Sound:PutItemInBag,
 	   Prop1:Source=2,
 	   Prop2:Source=1,
@@ -20,7 +20,7 @@ module Base
 		Result:MRE_Crackers_PeanutButter,
 		Time:50,
 		Category:Cooking,
-		OnCreate:SpreadMRE,
+		/*OnCreate:SpreadMRE,*/
         Sound:PutItemInBag,
 	   Prop1:Source=2,
 	   Prop2:Source=1,
@@ -33,7 +33,7 @@ module Base
 		Result:MRE_Crackers_Cheesespread,
 		Time:50,
 		Category:Cooking,
-		OnCreate:SpreadMRE,
+		/*OnCreate:SpreadMRE,*/
         Sound:PutItemInBag,
 	   Prop1:Source=2,
 	   Prop2:Source=1,

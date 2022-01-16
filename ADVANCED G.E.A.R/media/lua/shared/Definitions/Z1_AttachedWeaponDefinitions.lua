@@ -38,7 +38,7 @@ AttachedWeaponDefinitions.armyGrenade = {
 	bloodLocations = nil,
 	addHoles = false,
 	daySurvived = 0,
-	ensureItem = "Base.Webbing",
+	ensureItem = "Base.Webbing_Military",
 	weapons = {
 		"Base.SmokeGrenade",
 		"Base.ConcussionGrenade",
@@ -47,7 +47,7 @@ AttachedWeaponDefinitions.armyGrenade = {
 }
 
 AttachedWeaponDefinitions.armyCanteenLeft = {
-	id = "armyGrenade",
+	id = "armyCanteenLeft",
 	chance = 50,
 	outfit = {"ArmyCamoGreen","ArmyCamoDesert", "PrivateMilitia"},
 	weaponLocation =  {"Gear Belt Left"},
@@ -62,7 +62,7 @@ AttachedWeaponDefinitions.armyCanteenLeft = {
 
 
 AttachedWeaponDefinitions.armyCanteenRight = {
-	id = "armyGrenade",
+	id = "armyCanteenRight",
 	chance = 50,
 	outfit = {"ArmyCamoGreen","ArmyCamoDesert", "PrivateMilitia"},
 	weaponLocation =  {"Gear Belt Right"},
@@ -83,10 +83,10 @@ AttachedWeaponDefinitions.armyRadio = {
 	bloodLocations = nil,
 	addHoles = false,
 	daySurvived = 0,
-	ensureItem = "Base.Webbing",
+	ensureItem = "Base.Webbing_Military",
 	weapons = {
 		"Radio.WalkieTalkie5",
-		"Radio.Flashlight_Military",
+		"Base.Flashlight_Military",
 		"Base.SmokeGrenade",
 		"Base.ConcussionGrenade",
 	},
@@ -187,12 +187,12 @@ AttachedWeaponDefinitions.firstAidKit = {
 -- Define some custom weapons attached on some specific outfit, so for example police have way more chance to have guns in holster and not simply a spear in stomach or something
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit = AttachedWeaponDefinitions.attachedWeaponCustomOutfit or {};
 
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.HockeyPsycho = {
-	chance = 100;
-	weapons = {
-		AttachedWeaponDefinitions.macheteInBack,
-	},
-}
+-- AttachedWeaponDefinitions.attachedWeaponCustomOutfit.HockeyPsycho = {
+	-- chance = 100;
+	-- weapons = {
+		-- AttachedWeaponDefinitions.macheteInBack,
+	-- },
+-- }
 
 
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.AmbulanceDriver = {

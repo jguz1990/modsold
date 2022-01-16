@@ -8,7 +8,7 @@ module Base
     }   
    	model MRE_closed_world
     {
-        mesh = ZREs/mre_closed_world,
+        mesh = ZREs/mre_closed,
         texture = mre,
 		scale = 0.01,
     }   

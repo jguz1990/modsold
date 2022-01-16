@@ -91,8 +91,8 @@ function OnEat_MRE(food, player)
     --player:getInventory():AddItem("MRE_Meal_Carton_Trash")
 end
 function SpreadMRE(items, result,  player)
-    player:getInventory():AddItem("Base.MRE_Crackers_Trash")
-    player:getInventory():AddItem("Base.MRE_Spread_Trash")
+    -- player:getInventory():AddItem("Base.MRE_Crackers_Trash")
+    -- player:getInventory():AddItem("Base.MRE_Spread_Trash")
 end
 function MRE_Drink(items, result,  player)
     player:getInventory():AddItem("MRE_Drink_Trash")
@@ -114,11 +114,11 @@ function Clean_Water_Bottle_Full(item)
     return true;
 end
 function MRE_NoVehicle(item, result)
-	-- local cont = item:getContainer()
+	local cont = item:getContainer()
 	-- if cont:getVehiclePart() then return false end
-	local cont = item:getOutermostContainer()
+	local cont = cont:getOutermostContainer()
 	-- if cont:getVehiclePart() then return false end
-	local player = cont:getParent()
+	local player = item:getParent()
 	-- print("Parent " .. tostring(player))
 	-- local player = getSpecificPlayer(0)
 	-- print("Player " .. tostring(player))
