@@ -1,0 +1,154 @@
+module Base
+{
+
+	/************************ Tires ************************/
+
+    item V100Tire2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Tire,
+        Icon	=	runflatTire,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = RunFlatWI,
+    }
+
+	/******************* Double Tires ************************/
+
+    item V100Tires2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	18.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Double Tires,
+        Icon	=	doublerunflatTire,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = runFlatDoubleWI,
+    }
+
+	item V100SmallTires2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	16.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Small Double Tires,
+        Icon	=	doublerunflatTire,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = SmallRunFlatDoubleWI,
+    }
+
+	/******************* 4 Tire Axle ************************/
+
+    item V100Axle2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat 4 Tire Axle,
+        Icon	=	runflatTireaxle,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = runFlatAxleWI,
+    }
+
+
+/******************* 4 Tire Axle Small************************/
+
+    item V100AxleSmall2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Small 4 Tire Axle,
+        Icon	=	runflatTireaxle,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = SmallRunFlatAxleWI,
+    }
+
+	/************************ Trunks ************************/
+
+    item M911Trunk2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	na,
+        VehicleType =   2,
+        MaxCapacity = 75,
+        ConditionAffectsCapacity = true,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item M911Toolbox2
+    {
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	na,
+        VehicleType =   2,
+        MaxCapacity = 25,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item M911SpareTire2
+    {
+        Weight	=	17.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	na,
+        VehicleType =   2,
+        MaxCapacity = 16,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item M911Extra2
+    {
+        Weight	=	1.00,
+        Type	=	Normal,
+        DisplayName	=	Extra,
+        Icon	=	na,
+        MaxCapacity = 1,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+}

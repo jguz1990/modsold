@@ -1,0 +1,80 @@
+module Base
+{
+	model isoContainer1Base
+	{
+		mesh = vehicles/Containers_ISO_body,
+		shader = vehicle_norandom_multiuv,
+		static = TRUE,
+		scale = 1,
+	}
+	vehicle isoContainer1
+	{
+		mechanicType = 2,
+
+		model
+		{
+			file = isoContainer1Base,
+			scale = 0.9000,
+			offset = 0.0000 1.3111 0.0000,
+		}
+
+		spawnOffsetY = 0,
+
+		skin
+		{
+			texture = Vehicles/Containers_ISO2_Shell,
+		}
+
+		extents = 2.4889 2.6222 6.0667,
+		mass = 500,
+		physicsChassisShape = 2.4889 2.6222 6.0667,
+		centerOfMassOffset = 0.0000 1.3111 0.0000,
+		shadowExtents = 2.5667 7.0111,
+		shadowOffset = 0.0000 -0.0000,
+
+		area TruckBed
+		{
+			xywh = 0.0000 -3.4778 2.2222 0.8889,
+		}
+
+		template = Trunk/part/TruckBed,
+
+		part TruckBed
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 1200,
+			}
+		}
+
+		template = TrunkDoor,
+
+		part TrunkDoor
+		{
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.8556 -3.5444,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = -1.0000,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 -0.8556 3.5444,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = 1.0000,
+		}
+	}
+}

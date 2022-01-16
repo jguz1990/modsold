@@ -1,0 +1,25 @@
+Sandbox_CN = {
+	Sandbox_HN_HordeNightHour = "尸潮开始时间"
+	Sandbox_HN_HordeNightHour_tooltip = "决定尸潮在一天的哪一小时开始。"
+
+	Sandbox_HN_FirstHordeNightDay = "第一次尸潮的日期"
+	Sandbox_HN_FirstHordeNightDay_tooltip = "决定第一次尸潮开始的日期。\n0意味着在出生的这一天开始，1意味着在出生后的下一天开始。"
+
+	Sandbox_HN_HordeNightFrequency = "尸潮间隔"
+	Sandbox_HN_HordeNightFrequency_tooltip = "决定第一次尸潮之后的每一次尸潮将间隔多少天发生一次。\n1意味着每一天都会有尸潮。"
+
+	Sandbox_HN_FirstHordeNightZombiesCount = "第一次尸潮的僵尸量"
+	Sandbox_HN_FirstHordeNightZombiesCount_tooltip = "决定第一次尸潮时会来多少僵尸。\n注意：太多的僵尸会导致游戏运行不佳。"
+
+	Sandbox_HN_HordeNightZombieIncrement = "每一次尸潮的僵尸增长量"
+	Sandbox_HN_HordeNightZombieIncrement_tooltip = "决定每存活过一次尸潮后，下一次尸潮会增加多少僵尸数量。\n注意：太多的僵尸会导致游戏运行不佳。"
+
+	Sandbox_HN_HordeNightZombieCountMax = "尸潮的僵尸量上限"
+	Sandbox_HN_HordeNightZombieCountMax_tooltip = "决定一次尸潮最多能来多少僵尸。\n注意：太多的僵尸会导致游戏运行不佳。"
+
+	Sandbox_HN_RandomHordeNightChance = "随机尸潮出现几率"
+	Sandbox_HN_RandomHordeNightChance_tooltip = "决定在规定的尸潮日期之外的日子中，随机出现尸潮的几率。\n0.0意味着不会有随机尸潮，1.0意味着每天都会有尸潮。"
+
+	Sandbox_HN_HordeNightZombieSpawnDistance = "尸潮僵尸生成距离"
+	Sandbox_HN_HordeNightZombieSpawnDistance_tooltip = "决定在尸潮中僵尸在玩家附近生成的最远距离。 \n如果在尸潮中没有僵尸生成请减少这个距离。"
+}

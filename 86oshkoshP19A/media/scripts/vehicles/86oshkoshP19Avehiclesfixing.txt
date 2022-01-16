@@ -1,0 +1,46 @@
+module Base
+{
+	fixing Fix Tire
+	{
+	   Require : V100Tire1;V100Tire2;V100Tire3,
+	   ConditionModifier : 0.45,
+
+       Fixer : DuctTape=2;Mechanics=2,
+	}
+
+	fixing Fix Tire 1
+	{
+	   Require : V100Tire1;V100Tire2;V100Tire3,
+	   ConditionModifier : 0.45,
+
+       Fixer : Glue=2;Mechanics=2,
+	}
+
+	fixing Fix P19ARoofHatch Door Welding
+	{
+	   Require : P19ARoofHatch1;P19ARoofHatch2;P19ARoofHatch3,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=4,
+	}
+
+	fixing Fix P19ABigTrunk Door Welding
+	{
+	   Require : P19ABigTrunk1;P19ABigTrunk2;P19ABigTrunk3,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=4,
+	}
+
+	fixing Fix P19ASmallTrunk Door Welding
+	{
+	   Require : P19ASmallTrunk1;P19ASmallTrunk2;P19ASmallTrunk3,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=4,
+	}
+
+}

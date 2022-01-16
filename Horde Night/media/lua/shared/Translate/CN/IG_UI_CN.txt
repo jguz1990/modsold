@@ -1,0 +1,12 @@
+IGUI_CN = {
+	IGUI_PlayerText_HNWarning00 = "他们来了……我能感觉到。",
+	IGUI_PlayerText_HNWarning01 = "他们从四面八方过来了。",
+	IGUI_PlayerText_HNWarning02 = "小心，一大群僵尸过来了。",
+	IGUI_PlayerText_HNWarning03 = "尸潮……他们要来把我碾成粉碎。",
+	IGUI_PlayerText_HNWarning04 = "时间到了，他们不再等了。",
+	IGUI_PlayerText_HNWarning05 = "这不安全，危险近了。",
+	IGUI_PlayerText_HNWarning06 = "希望我能活过今天……",
+	IGUI_PlayerText_HNWarning07 = "如果我能活过之前的一切，那我也能活过今天。",
+	IGUI_PlayerText_HNWarning08 = "他们想要我成为他们的一份子，我会吗？",
+	IGUI_PlayerText_HNWarning09 = "事情变得更严重了……他们来了。",
+}

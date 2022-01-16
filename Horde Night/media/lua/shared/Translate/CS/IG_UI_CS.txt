@@ -1,0 +1,12 @@
+IGUI_CS = {
+	IGUI_PlayerText_HNWarning00 = "Pøicházejí... Cítím to ve vzduchu. Hroznej puch.",
+	IGUI_PlayerText_HNWarning01 = "Šmejdi. Obklíèili mì. Jednoduchı to nebude.",
+	IGUI_PlayerText_HNWarning02 = "Hlavu vzhùru, snad jich nebude tolik",
+	IGUI_PlayerText_HNWarning03 = "Chtìjí èerstvé maso, mám se stát hlavním chodem...",
+	IGUI_PlayerText_HNWarning04 = "U je nebavilo èekat, jdou po mì.",
+	IGUI_PlayerText_HNWarning05 = "Jsou blí, ne by se mi líbilo.",
+	IGUI_PlayerText_HNWarning06 = "Doufám, e to pøeiju...moná...snad...",
+	IGUI_PlayerText_HNWarning07 = "Pøeil jsem horší vìci, tohle dám.",
+	IGUI_PlayerText_HNWarning08 = "Teda jako, vùbec nemám chu se k nim pøidat?",
+	IGUI_PlayerText_HNWarning09 = "Lepší u to nebude,nedá se nic dìlat, pojïte vy ...",
+}

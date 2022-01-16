@@ -1,0 +1,81 @@
+module Base
+{
+
+	/************************ Tires ************************/
+
+    item V100Tire2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Tire,
+        Icon	=	runflatTire,
+        VehicleType =   2,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = RunFlatWI,
+    }
+
+	/************************ Doors ************************/
+
+    item P19ARoofHatch2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	P19A Hatch,
+        Icon	=	P19Ahatch,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 15,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+	WorldStaticModel = CarTrunkLid,
+    }
+
+	/************************ Trunks ************************/
+
+    item P19ABigTrunk2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	P19Ahatch,
+        VehicleType =   2,
+        MaxCapacity = 100,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+    item P19ASmallTrunk2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	P19Ahatch,
+        VehicleType =   2,
+        MaxCapacity = 30,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+	item P19AExtra2
+    {
+        Weight	=	0.01,
+        Type	=	Normal,
+        DisplayName	=	Extra,
+        Icon	=	na,
+        MaxCapacity = 0.01,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+
+}

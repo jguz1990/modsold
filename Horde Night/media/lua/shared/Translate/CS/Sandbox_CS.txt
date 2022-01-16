@@ -1,0 +1,25 @@
+Sandbox_CS = {
+Sandbox_HN_HordeNightHour = "Hodina pøíchodu hordy"
+Sandbox_HN_HordeNightHour_tooltip = "Hodina pøíchodu hordy."
+
+Sandbox_HN_FirstHordeNightDay = "Poèáteèní den odpoètu."
+Sandbox_HN_FirstHordeNightDay_tooltip = "Den odpoètu pøíchodu hordy.\n0 - zaèátek hry, 1 - 1. den od zaèátku hry."
+
+Sandbox_HN_HordeNightFrequency = "Dny mezi hordami"
+Sandbox_HN_HordeNightFrequency_tooltip = "Poèet dnù mezi hordami.\n1 - horda každý den."
+
+Sandbox_HN_FirstHordeNightZombiesCount = "Poèáteèní poèet zombie"
+Sandbox_HN_FirstHordeNightZombiesCount_tooltip = ""Poèet zombií pøi první hordì.\nVAROVÁNÍ: Pøíliš velký poèet zpùsobí problémy s výkonem."
+
+Sandbox_HN_HordeNightZombieIncrement = "Pøírùstky zombie"
+Sandbox_HN_HordeNightZombieIncrement_tooltip = "Navýšení zombie pro další hordu .\nVAROVÁNÍ: Pøíliš velký poèet zpùsobí problémy s výkonem."
+
+Sandbox_HN_HordeNightZombieCountMax = "Limit zombie"
+Sandbox_HN_HordeNightZombieCountMax_tooltip = "Maximální poèet zombie v hordì.\nVAROVÁNÍ: Pøíliš velký poèet zpùsobí problémy s výkonem"
+
+Sandbox_HN_RandomHordeNightChance = "Náhodná šance"
+Sandbox_HN_RandomHordeNightChance_tooltip = "Náhodná šance na zahájení hordy mimo bìžnou frekvenci.\nStane se to až po první hordì.\n0.0 - žádná náhodná horda, 1.0 - náhodná horda každý den.""
+
+Sandbox_HN_HordeNightZombieSpawnDistance = "Vzdálenost spawn zombie"
+Sandbox_HN_HordeNightZombieSpawnDistance_tooltip = "Maximální vzdálenost, ve které se zombie objeví kolem hráèù. \nSnižte hodnotu, pokud se nebudou spawnovat zombie."
+}

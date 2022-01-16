@@ -1,0 +1,10 @@
+module Base
+{
+	model RunFlatWI
+	{
+		mesh    = vehicles/WorldItems_RunFlat_Wheel,
+		texture = Vehicles/Vehicles_86oshkoshP19A_Wheel,
+		scale   = 0.85,
+	}
+
+}

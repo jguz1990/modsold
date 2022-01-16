@@ -1,0 +1,25 @@
+Sandbox_EN = {
+	Sandbox_HN_HordeNightHour = "HordeNight Starting Hour"
+	Sandbox_HN_HordeNightHour_tooltip = "At which hour would the HordeNight start."
+
+	Sandbox_HN_FirstHordeNightDay = "First HordeNight Day"
+	Sandbox_HN_FirstHordeNightDay_tooltip = "At which day would the first HordeNight start.\n0 means the spawn day, 1 means the day after the spawn day."
+
+	Sandbox_HN_HordeNightFrequency = "HordeNight Frequency"
+	Sandbox_HN_HordeNightFrequency_tooltip = "How many days would a HordeNight start after one another.\n1 means HordeNight every day."
+
+	Sandbox_HN_FirstHordeNightZombiesCount = "HordeNight Starting Zombie Counts"
+	Sandbox_HN_FirstHordeNightZombiesCount_tooltip = "How many zombies would spawn at the first HordeNight.\nWarnning: too much spawn will cause performance issues."
+
+	Sandbox_HN_HordeNightZombieIncrement = "HordeNight Zombie Increments"
+	Sandbox_HN_HordeNightZombieIncrement_tooltip = "How many more zombies would spawn in the next HordeNight after you survived one.\nWarnning: too much spawn will cause performance issues."
+
+	Sandbox_HN_HordeNightZombieCountMax = "HordeNight Zombie Limits"
+	Sandbox_HN_HordeNightZombieCountMax_tooltip = "The maximal amount of zombies could spawn in a HordeNight.\nWarnning: too much spawn will cause performance issues."
+
+	Sandbox_HN_RandomHordeNightChance = "Random HordeNight Chance"
+	Sandbox_HN_RandomHordeNightChance_tooltip = "The random chance to start a HordeNight, outside of the regular frequency.\nIt will only happen after the first HordeNight.\n0.0 means no random HordeNight, 1.0 means HordeNight everyday."
+
+	Sandbox_HN_HordeNightZombieSpawnDistance = "HordeNight Spawn Distance"
+	Sandbox_HN_HordeNightZombieSpawnDistance_tooltip = "The maximal distance for a HordeNight zombie to spawn around players. \nTurn down the value if you don't see zombies spawn in the HordeNight."
+}

@@ -1,0 +1,265 @@
+module Base
+{
+	model TrailerM1095Base
+	{
+		mesh = vehicles/Trailers_m1095_openbed_body,
+		shader = vehicle_norandom_multiuv,
+		invertX = FALSE,
+		scale = 1,
+	}
+	model TrailerM1095frontwheelleft
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+
+	}
+	model TrailerM1095frontwheelright
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+	}
+	model TrailerM1095rearwheelleft
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+
+	}
+	model TrailerM1095rearwheelright
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+	}
+	vehicle TrailerM1095
+	{
+		mechanicType = 2,
+		offRoadEfficiency = 4,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1,
+
+		model
+		{
+			file = TrailerM1095Base,
+			scale = 0.9000,
+			offset = 0.0000 1.0889 -0.5667,
+		}
+
+		spawnOffsetY = 0.35,
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_USMCGreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_NATOGreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_desertTan,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1095_Shell_camo,
+		}
+
+		textureRust = Vehicles/Trailers_M1082_Rust,
+		textureMask = Vehicles/Trailers_M1082tarp_Mask,
+		textureLights = Vehicles/Trailers_M1082_Lights,
+		textureDamage1Shell = Vehicles/Trailers_M1082_Shell_Damaged01,
+		textureDamage2Shell = Vehicles/Trailers_M1082_Shell_Damaged02,
+		textureDamage1Overlay = Vehicles/Trailers_M1082_Overlays_Damaged01,
+		textureDamage2Overlay = Vehicles/Trailers_M1082_Overlays_Damaged02,
+		textureShadow = Vehicles/Trailers_M1095_Shadow,
+		extents = 2.3778 1.0444 4.4222,
+		shadowExtents = 6.4445 6.3889,
+		shadowOffset = 0.0000 0.7333,
+		mass = 200,
+		physicsChassisShape = 2.3778 1.0444 4.4222,
+		centerOfMassOffset = 0.0000 1.0333 0.0889,
+		engineForce = 3600,
+		engineQuality = 60,
+		engineLoudness = 55,
+		maxSpeed = 70f,
+		brakingForce = 1,
+		stoppingMovementForce = 2.0f,
+		rollInfluence = 1.0f,
+		steeringIncrement = 0.03,
+		steeringClamp = 0.3,
+		suspensionStiffness = 35,
+		suspensionCompression = 4.83,
+		suspensionDamping = 3.88,
+		maxSuspensionTravelCm = 20,
+		suspensionRestLength = 0.21f,
+		wheelFriction = 4.0f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		seats = 2,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.9667 -0.3444 0.9000,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.9667 -0.3444 0.9000,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 0.9667 -0.3444 -0.5000,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -0.9667 -0.3444 -0.5000,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 0.0222 3.7556 5.6222,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 1.4111 0.3000 0.4444 0.4889,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -1.4111 0.3000 0.4444 0.4889,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 1.4111 -1.0889 0.4444 0.4889,
+		}
+
+		area TireRearRight
+		{
+			xywh = -1.4111 -1.0889 0.4444 0.4889,
+		}
+
+		template = TireV100A2,
+		template = Suspension/part/SuspensionFrontLeft,
+		template = Suspension/part/SuspensionFrontRight,
+		template = Suspension/part/SuspensionRearLeft,
+		template = Suspension/part/SuspensionRearRight,
+
+		part TireFrontLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1095tarpfrontwheelleft,
+			}
+
+			table install
+			{
+				requireInstalled = SuspensionFrontLeft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1095tarpfrontwheelright,
+			}
+
+			table install
+			{
+				requireInstalled = SuspensionFrontRight,
+			}
+		}
+
+		part TireRearLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1095tarprearwheelleft,
+			}
+
+			table install
+			{
+				requireInstalled = SuspensionRearLeft,
+			}
+		}
+
+		part TireRearRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1095tarprearwheelright,
+			}
+
+			table install
+			{
+				requireInstalled = SuspensionRearRight,
+			}
+		}
+
+		template = Trunk/part/TruckBed,
+
+		part TruckBed
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 500,
+			}
+		}
+
+		physics box
+		{
+			offset = 0.2556 1.2000 2.5444,
+			extents = 0.1053 0.2211 1.1053,
+			rotate = 0.0000 -25.0000 0.0000,
+		}
+
+		physics box
+		{
+			offset = -0.2444 1.2000 2.5556,
+			extents = 0.1053 0.2211 1.1053,
+			rotate = 0.0000 25.0000 0.0000,
+		}
+
+		physics box
+		{
+			offset = 0.0000 1.7444 0.1000,
+			extents = 2.4111 0.8444 4.4333,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		physics sphere
+		{
+			offset = 0.0000 1.2000 3.0333,
+			radius = 0.1100,
+		}
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.3556 4.2333,
+			rotate = 0.0000 0.0000 0.0000,
+			canAttach = trailer,
+		}
+	}
+}

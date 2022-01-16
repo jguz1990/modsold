@@ -1,0 +1,12 @@
+IGUI_EN = {
+	IGUI_PlayerText_HNWarning00 = "They are coming... I can feel it.",
+	IGUI_PlayerText_HNWarning01 = "They are approaching from all sides.",
+	IGUI_PlayerText_HNWarning02 = "Heads up, a huge swarm is coming.",
+	IGUI_PlayerText_HNWarning03 = "A group of undeads, they all want a piece of me...",
+	IGUI_PlayerText_HNWarning04 = "Time has come, they are done waitting.",
+	IGUI_PlayerText_HNWarning05 = "This is not safe, danger is near.",
+	IGUI_PlayerText_HNWarning06 = "Let's hope I can survive this...",
+	IGUI_PlayerText_HNWarning07 = "If I can survive before, I can survive now.",
+	IGUI_PlayerText_HNWarning08 = "They want me to join them, will I?",
+	IGUI_PlayerText_HNWarning09 = "Things just keep getting worse... here they come.",
+}

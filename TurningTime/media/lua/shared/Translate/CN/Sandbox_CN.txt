@@ -1,0 +1,16 @@
+Sandbox_CN = {
+	Sandbox_SFTurn = "SF Turning Time",
+
+	Sandbox_SFTurn_RarityBanshee = "尖叫者",
+	Sandbox_SFTurn_RarityBanshee_tooltip = "Applied on top of the standard population.",
+	Sandbox_SFTurn_RarityBanshee_option1 = "关闭",
+	Sandbox_SFTurn_RarityBanshee_option2 = "稀有",
+	Sandbox_SFTurn_RarityBanshee_option3 = "标准",
+	Sandbox_SFTurn_RarityBanshee_option4 = "较多",
+	Sandbox_SFTurn_RarityBanshee_option5 = "疯狂",
+
+	Sandbox_SFTurn_RarityNemesis = "不朽者",
+	Sandbox_SFTurn_RarityNemesis_tooltip = "Applied on top of the standard population.",
+	
+	Sandbox_SFTurn_ImmortalNemesis = "Immortal Nemesis"
+}

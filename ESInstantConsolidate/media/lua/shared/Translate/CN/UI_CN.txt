@@ -1,3 +1,0 @@
-UI_CN = {
-    UI_ESIC_CONSOLIDATE_THIS_ITEM = "合并",
-}

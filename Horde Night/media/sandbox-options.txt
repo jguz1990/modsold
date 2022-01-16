@@ -1,0 +1,83 @@
+VERSION = 1,
+
+option HordeNightMain.HordeNightHour
+{
+	type = integer,
+	min = 0,
+	max = 23,
+	default = 22,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightHour,
+}
+
+option HordeNightMain.FirstHordeNightDay
+{
+	type = integer,
+	min = 0,
+	max = 365,
+	default = 10,
+	page = ZombieAdvanced,
+	translation = HN_FirstHordeNightDay,
+}
+
+option HordeNightMain.HordeNightFrequency
+{
+	type = integer,
+	min = 1,
+	max = 365,
+	default = 5,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightFrequency,
+}
+
+option HordeNightMain.FirstHordeNightZombiesCount
+{
+	type = integer,
+	min = 1,
+	max = 7200,
+	default = 100,
+	page = ZombieAdvanced,
+	translation = HN_FirstHordeNightZombiesCount,
+}
+
+
+option HordeNightMain.HordeNightZombieIncrement
+{
+	type = integer,
+	min = 0,
+	max = 1000,
+	default = 50,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightZombieIncrement,
+}
+
+option HordeNightMain.HordeNightZombieCountMax
+{
+	type = integer,
+	min = 0,
+	max = 7200,
+	default = 800,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightZombieCountMax,
+}
+
+option HordeNightMain.RandomHordeNightChance
+{
+	type = double,
+	min = 0.0,
+	max = 1.0,
+	default = 0.0,
+	page = ZombieAdvanced,
+	translation = HN_RandomHordeNightChance,
+}
+
+
+option HordeNightMain.HordeNightZombieSpawnDistance
+{
+	type = integer,
+	min = 10,
+	max = 90,
+	default = 75,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightZombieSpawnDistance,
+}

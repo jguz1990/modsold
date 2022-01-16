@@ -1,0 +1,92 @@
+module Base
+{
+	template vehicle roofHatch
+	{
+
+		part roofHatch
+		{
+			area = SeatFrontRight,
+			anim ActorOpen
+			{
+				angle = 0.0 270.0 0.0,
+			}
+			anim ActorClose
+			{
+				angle = 0.0 270.0 0.0,
+			}
+			itemType = Base.P19ARoofHatch,
+			{
+			}
+
+		}
+
+		part roofHatch*
+		{
+			category = bodywork,
+			door
+			{
+				/* TODO: rear police-car doors won't open from inside */
+			}
+			anim Open
+			{
+				sound = VehicleDoorOpen,
+			}
+			anim Close
+			{
+				sound = VehicleDoorClose,
+			}
+			anim ActorOpen
+			{
+				anim = Attack_Shove,
+				rate = 0.3,
+			}
+			anim ActorClose
+			{
+				anim = Attack_Shove,
+				rate = 0.3,
+			}
+			table install
+			{
+				items
+				{
+					item
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 3000,
+				skills = Mechanics:4,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Door,
+			}
+			table uninstall
+			{
+				items
+				{
+					item
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 5000,
+				skills = Mechanics:4,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Door,
+			}
+			lua
+			{
+				create = Vehicles.Create.Door,
+				init = Vehicles.Init.Door,
+				use = Vehicles.Use.Door,
+			}
+		}
+	}
+}

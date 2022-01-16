@@ -1,0 +1,299 @@
+module Base
+{
+
+	/************************ Tires ************************/  
+
+	item V101Tire2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M998 RunFlat Tire,
+        Icon	=	runflatTireM998,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = M998WheelWI,
+    }
+
+	/************************ Trunks ************************/
+
+	item M998Trunk2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	Trunk,
+        Icon	=	na,
+        MaxCapacity = 140,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+    }
+
+	item M998Extra2
+    {
+        Weight	=	0.01,
+        Type	=	Normal,
+        DisplayName	=	Extra,
+        Icon	=	na,
+        MaxCapacity = 5,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        MechanicsItem = TRUE,
+    }
+
+     /************************ Trunk Barriers ************************/
+
+	item M998TrunkBarrier1_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	10.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Metal Trunk Barrier,
+          Icon	=	metalbarrierM998,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998MetalBarrierWI,
+      }
+
+	item M998TrunkBarrier2_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	3.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Net Trunk Barrier,
+          Icon	=	netbarrierM998,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998NetBarrierWI,
+      }
+
+	/************************ Spare tire ************************/
+
+    item M998SpareMount_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	16.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Spare Tire Mount,
+        Icon	=	mountM998,
+        MaxCapacity = 16,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+	WorldStaticModel = M998SpareMountWI,
+    }
+
+    item M998SpareTireMount_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	4.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Spare Tire with Mount,
+        Icon	=	sparewmount,
+	MaxCapacity = 16,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+	WorldStaticModel = M998SpareTireWI,
+    }
+
+
+
+    /************************ Doors ************************/
+
+    item M998CarFrontDoor2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Door,
+        Icon	=	fdoorM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998FrontDoorWI,
+    }
+
+    item M998CarRearDoor2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Door,
+        Icon	=	rdoorM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998RearDoorWI,
+    }
+
+    /************************ Hood ************************/
+
+    item M998EngineDoor2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Hood,
+        Icon	=	hoodM998,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998EngineDoorWI,
+    }
+
+    /************************ Trunk Lid ************************/
+
+    item M998TrunkDoor2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Trunk Lid,
+        Icon	=	trunkM998,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998TrunkDoorWI,
+    }
+
+     /************************ Back Covers ************************/
+
+	item M998BackCover1_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	30.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Sloped Back Cover,
+          Icon	=	slopedcover,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998SlopedBackWI,
+      }
+
+    /************************ Seats ************************/
+
+     item M998CarSeat2
+     {
+	 DisplayCategory = VehicleMaintenance,
+         Weight	=	15.0,
+         Type	=	Normal,
+         DisplayName	=	M998 Seat,
+         Icon	=	seatM998,
+         MaxCapacity = 25,
+         ChanceToSpawnDamaged = 20,
+         ConditionMax = 100,
+         MechanicsItem = TRUE,
+         WorldStaticModel = M998SeatWI,
+     }
+
+     /************************ Muffler ************************/
+
+      item M998Muffler1_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	4.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Small Muffler,
+          Icon	=	smallmuff,
+          EngineLoudness = 80,
+          ConditionMax = 100,
+          ConditionLowerStandard = 0.02,
+          ConditionLowerOffroad = 0.04,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998SmallMufflerWI,
+      }
+
+      item M998Muffler2_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	10.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Big Muffler,
+          Icon	=	bigmuff,
+          EngineLoudness = 120,
+          ConditionMax = 100,
+          ConditionLowerStandard = 0.01,
+          ConditionLowerOffroad = 0.02,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998BigMufflerWI,
+      }
+
+     /************************ Bullbar ************************/
+
+	item M998Bullbar1_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	10.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Small Bullbar,
+          Icon	=	smallbull,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998SmallBullbarWI,
+      }
+
+	item M998Bullbar2_Item
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	15.0,
+          Type	=	Normal,
+          DisplayName	=	M998 Big Bullbar,
+          Icon	=	bigbull,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+          WorldStaticModel = M998BigBullbarWI,
+      }
+
+     /************************ Interiors ************************/
+
+	item M998DefaultInterior2
+      {
+	  DisplayCategory = VehicleMaintenance,
+          Weight	=	0.1,
+          Type	=	Normal,
+          DisplayName	=	M998 Interior,
+          Icon	=	na,
+          ConditionMax = 100,
+          MechanicsItem = TRUE,
+      }
+
+     /************************ Windows ************************/
+
+	item M998Windshield2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Windshield,
+        Icon	=	windshieldM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998WindshieldWI,
+    }
+
+	item M998SideWindow2
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Side Window,
+        Icon	=	windowM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998WindowWI,
+    }
+
+}

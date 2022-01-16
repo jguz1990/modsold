@@ -1,0 +1,104 @@
+module RunFlat
+
+{
+
+	recipe Make RunFlat Double Tires
+	{
+		keep LugWrench,
+		V100Tire2=2,
+
+		Result:V100Tires2,
+		Sound:Hammering,
+		Time:150.0,
+		Category:Mechanical,
+	}
+
+	recipe Dismantle RunFlat Double Tires
+	{
+		keep LugWrench,
+		V100Tires2,
+
+		Result:V100Tire2=2,
+		Sound:Hammering,
+		Time:150.0,
+		Category:Mechanical,
+	}
+
+	recipe Dismantle RunFlat 4 Tire Axle
+	{
+		keep LugWrench,
+		V100Axle2,
+		
+		Result:V100Tire2=4,,
+		Sound:Hammering,
+		Time:300.0,
+		Category:Mechanical,
+	}
+
+	recipe Make RunFlat 4 Tire Axle
+	{
+		keep LugWrench,
+		V100Tires2=2,
+
+		Result:V100Axle2,
+		Sound:Hammering,
+		Time:300.0,
+		Category:Mechanical,
+	}
+
+	recipe Make Small RunFlat Double Tires
+	{
+		keep LugWrench,
+		OldTire2=2,
+
+		Result:V100SmallTires2,
+		Sound:Hammering,
+		Time:250.0,
+		Category:Mechanical,
+	}
+
+	recipe Make Small RunFlat Double Tires
+	{
+		keep LugWrench,
+		NormalTire2=2,
+
+		Result:V100SmallTires2,
+		Sound:Hammering,
+		Time:250.0,
+		Category:Mechanical,
+	}
+
+	recipe Make Small RunFlat Double Tires
+	{
+		keep LugWrench,
+		ModernTire2=2,
+
+		Result:V100SmallTires2,
+		Sound:Hammering,
+		Time:250.0,
+		Category:Mechanical,
+	}
+
+	recipe Dismantle Small RunFlat Double Tires
+	{
+		keep LugWrench,
+		V100SmallTires2,
+
+		Result:OldTire2=4,
+		Sound:Hammering,
+		Time:250.0,
+		Category:Mechanical,
+	}
+
+	recipe Make Small 4 Tire Axle
+	{
+		keep LugWrench,
+		V100SmallTires2=2,
+
+		Result:V100AxleSmall2,
+		Sound:Hammering,
+		Time:250.0,
+		Category:Mechanical,
+	}
+
+}

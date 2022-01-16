@@ -1,0 +1,33 @@
+VERSION = 1,
+
+option SFTurn.RarityBanshee
+{
+	type = enum,
+	numValues = 5,
+	default = 3,
+
+	page = ZombieLore,
+	translation = SFTurn_RarityBanshee,
+	valueTranslation = SFTurn_RarityBanshee,
+}
+
+option SFTurn.RarityNemesis
+{
+	type = enum,
+	numValues = 5,
+	default = 3,
+
+	page = ZombieLore,
+	translation = SFTurn_RarityNemesis,
+	valueTranslation = SFTurn_RarityBanshee,
+}
+
+option SFTurn.ImmortalNemesis
+{
+	type = boolean,
+	default = true,
+
+	page = ZombieLore,
+	translation = SFTurn_ImmortalNemesis,
+}
+

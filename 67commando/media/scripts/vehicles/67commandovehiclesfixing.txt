@@ -1,0 +1,46 @@
+module Base
+{
+	fixing Fix 67commando Door Welding
+	{
+	   Require : FrontLeftV100Door2;FrontRightV100Door2;RearV100Door2;EngineV100Door2,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=4,
+	}
+
+	fixing Fix 67commando Door
+	{
+	   Require : FrontLeftV100Door2;FrontRightV100Door2;RearV100Door2;EngineV100Door2,
+	   ConditionModifier : 0.4,
+
+       Fixer : DuctTape=2;Mechanics=3,
+       Fixer : Glue=2;Mechanics=3,
+	}
+	
+	fixing Fix 67commando Viewport
+	{
+	   Require : V100Window2,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 2.0,
+	   
+       Fixer : SmallSheetMetal; MetalWelding=6;Mechanics=4,
+	}
+	
+	fixing Fix Tire
+	{
+	   Require : V100Tire2,
+	   ConditionModifier : 0.45,
+
+       Fixer : DuctTape=2;Mechanics=2,
+	}
+
+	fixing Fix Tire 1
+	{
+	   Require : V100Tire2,
+	   ConditionModifier : 0.45,
+
+       Fixer : Glue=2;Mechanics=2,
+	}
+
+}

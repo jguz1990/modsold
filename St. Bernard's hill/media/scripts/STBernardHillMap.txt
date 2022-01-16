@@ -1,0 +1,17 @@
+module Base
+{
+    
+    item STBernardHillMap
+    {
+DisplayCategory = Cartography,
+        Type				=			Map,
+        DisplayName			=		    St. Bernard's Hill Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           STBernardHillMap,
+	SurvivalGear = TRUE,
+	WorldStaticModel = Map,
+    }
+
+}
+	

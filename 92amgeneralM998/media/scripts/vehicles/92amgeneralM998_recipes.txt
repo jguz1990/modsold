@@ -1,0 +1,124 @@
+module RunFlat
+
+{
+
+	recipe Make Spare Tire with Mount
+	{
+		keep LugWrench,
+		V101Tire2=1,
+		M998SpareMount_Item=1,
+
+		Result:M998SpareTireMount_Item,
+		Time:200.0,
+		Category:Mechanical,
+		Prop1:LugWrench,
+	}
+
+	recipe Dismantle Spare Tire with Mount
+    	{
+		M998SpareTireMount_Item=1,
+		keep LugWrench,
+
+		NoBrokenItems:true,
+		Result:V101Tire2=1,
+		Time:350.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=1,
+		OnCreate:Recipe.OnCreate.DismantleSpareTireWithMount,
+		NeedToBeLearn:false,
+		Prop1:LugWrench,
+    }
+
+	recipe Make M998 Side Window
+	{
+		keep Scalpel,
+		FrontWindow2=1,
+
+		Result:M998SideWindow2,
+		Time:200.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=1,
+		Prop1:Scalpel,
+	}
+
+	recipe Make M998 Side Window
+	{
+		keep Scalpel,
+		RearWindow2=1,
+
+		Result:M998SideWindow2,
+		Time:200.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=1,
+		Prop1:Scalpel,
+	}
+
+		recipe Make M998 Windshield
+	{
+		keep Scalpel,
+		Windshield2=1,
+
+		Result:M998Windshield2,
+		Time:200.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=1,
+		Prop1:Scalpel,
+	}
+
+	recipe Make M998 Small Muffler
+	{
+		keep Wrench,
+		OldCarMuffler2=1,
+
+		Result:M998Muffler1_Item,
+		Time:350.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=2,
+		Prop1:Wrench,
+	}
+
+	recipe Make M998 Small Muffler
+	{
+		keep Wrench,
+		NormalCarMuffler2=1,
+
+		Result:M998Muffler1_Item,
+		Time:350.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=2,
+		Prop1:Wrench,
+	}
+
+	recipe Make M998 Small Muffler
+	{
+		keep Wrench,
+		ModernCarMuffler2=1,
+
+		Result:M998Muffler1_Item,
+		Time:350.0,
+		Category:Mechanical,
+		SkillRequired:Mechanics=2,
+		Prop1:Wrench,
+	}
+
+	recipe Make M998 Net Trunk Barrier
+	{
+		keep Needle,
+		RippedSheets=11,
+
+		Result:M998TrunkBarrier2_Item,
+		Time:2000.0,
+		Category:Mechanical,
+	}
+
+	recipe Make M101A3 Tarp
+	{
+		keep Needle,
+		Tarp=1,
+
+		Result:M101A3Tarp1_Item,
+		Time:1000.0,
+		Category:Mechanical,
+	}
+
+}

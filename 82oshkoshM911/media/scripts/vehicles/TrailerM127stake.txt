@@ -1,0 +1,228 @@
+module Base
+{
+	model TrailerM127stakeBase
+	{
+		mesh = vehicles/Trailers_M127stake_Body,
+		shader = vehicle_norandom_multiuv,
+		invertX = FALSE,
+		scale = 1,
+	}
+	model TrailerM127stakefrontwheelleft
+	{
+		mesh = vehicles/Trailers_M126_Wheels_Double,
+		texture = vehicles/Vehicles_82oshkoshM911_Wheel,
+		shader = vehiclewheel,
+	}
+	model TrailerM127stakefrontwheelright
+	{
+		mesh = vehicles/Trailers_M126_Wheels_Double,
+		texture = vehicles/Vehicles_82oshkoshM911_Wheel,
+		shader = vehiclewheel,
+	}
+	model TrailerM127stakerearwheelleft
+	{
+		mesh = vehicles/Trailers_M126_Wheels_Double,
+		texture = vehicles/Vehicles_82oshkoshM911_Wheel,
+		shader = vehiclewheel,
+	}
+	model TrailerM127stakerearwheelright
+	{
+		mesh = vehicles/Trailers_M126_Wheels_Double,
+		texture = vehicles/Vehicles_82oshkoshM911_Wheel,
+		shader = vehiclewheel,
+	}
+	vehicle TrailerM127stake
+	{
+		mechanicType = 2,
+		offRoadEfficiency = 2,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1,
+
+		model
+		{
+			file = TrailerM127stakeBase,
+			scale = 0.9000,
+			offset = 0.0000 1.1444 -1.9556,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M127stake_Shell_USMCgreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M127stake_Shell_NATOgreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M127stake_Shell_desertTan,
+		}
+
+		textureRust = Vehicles/Trailers_M127_Rust,
+		textureMask = Vehicles/Trailers_M127_Mask,
+		textureLights = Vehicles/Trailers_M12x_Lights,
+		textureDamage1Overlay = Vehicles/Trailers_M12-8-9_Overlays_Damaged01,
+		textureDamage1Shell = Vehicles/Trailers_M12-8-9_Damaged01,
+		textureDamage2Overlay = Vehicles/Trailers_M12-8-9_Overlays_Damaged02,
+		textureDamage2Shell = Vehicles/Trailers_M12-8-9_Damaged02,
+		extents = 2.6667 1.4889 5.2222,
+		shadowExtents = 2.4999 8.6221,
+		shadowOffset = 0.0000 0.1999,
+		mass = 310,
+		physicsChassisShape = 2.6667 1.4889 5.2222,
+		centerOfMassOffset = 0.0000 0.5778 -1.3556,
+		engineForce = 3600,
+		engineQuality = 60,
+		engineLoudness = 55,
+		maxSpeed = 60f,
+		brakingForce = 1,
+		stoppingMovementForce = 2.0f,
+		rollInfluence = 0.15f,
+		steeringIncrement = 0.03,
+		steeringClamp = 0.3,
+		suspensionStiffness = 40,
+		suspensionCompression = 4.83,
+		suspensionDamping = 3.88,
+		maxSuspensionTravelCm = 15,
+		suspensionRestLength = 0.16f,
+		wheelFriction = 2.0f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		seats = 2,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.9111 -0.8333 0.7000,
+			radius = 0.60f,
+			width = 0.60f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.9111 -0.8333 0.7000,
+			radius = 0.60f,
+			width = 0.60f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 0.9111 -0.8000 -0.6778,
+			radius = 0.60f,
+			width = 0.60f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -0.9111 -0.8000 -0.6778,
+			radius = 0.60f,
+			width = 0.60f,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 -4.6667 2.6667 1.7778,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 1.8222 -1.2778 0.4444 0.4889,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -1.8222 -1.2778 0.4444 0.4889,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 1.8222 -2.6556 0.4444 0.4889,
+		}
+
+		area TireRearRight
+		{
+			xywh = -1.8222 -2.6556 0.4444 0.4889,
+		}
+
+		template = TiresV100A3,
+
+		part TireFrontLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM127stakefrontwheelleft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM127stakefrontwheelright,
+			}
+		}
+
+		part TireRearLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM127stakerearwheelleft,
+			}
+		}
+
+		part TireRearRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM127stakerearwheelright,
+			}
+		}
+
+		template = Suspension/part/SuspensionFrontLeft,
+		template = Suspension/part/SuspensionFrontRight,
+		template = Suspension/part/SuspensionRearLeft,
+		template = Suspension/part/SuspensionRearRight,
+		template = Trunk/part/TruckBed,
+		template = TrunkDoor,
+
+		part TrunkDoor
+		{
+		mechanicRequireKey = false,
+		}
+
+		part TruckBed
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 900,
+			}
+		}
+
+		physics box
+		{
+			offset = 0.0000 1.9333 0.1889,
+			extents = 2.4556 1.6000 8.2778,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		physics box
+		{
+			offset = 0.0000 2.2222 4.7333,
+			extents = 0.1111 0.1111 0.5889,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment trailer
+		{
+			offset = 0.0000 0.0333 5.5778,
+			rotate = 0.0000 0.0000 0.0000,
+			canAttach = trailerfront,
+		}
+	}
+}

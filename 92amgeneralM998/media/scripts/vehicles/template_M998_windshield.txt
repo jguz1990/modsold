@@ -1,0 +1,75 @@
+module Base
+{
+
+        model 92amgeneralM998windshield
+    {
+        mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_windshield,
+        shader = vehicle,
+        static = FALSE,
+        scale = 0.1,
+    }
+
+	template vehicle M998Windshield
+	{
+		part Windshield
+        {
+
+ 	    model windshieldFront
+		{
+			file = 92amgeneralM998windshield,
+			offset = 0 0 0,
+			rotate = 0 0 0,
+			scale = 1.0,
+		}	
+
+            area = Engine,
+            category = bodywork,
+            itemType = Base.M998Windshield,
+            mechanicRequireKey = true,
+            window
+            {
+                openable = false,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 500,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 500,
+                  skills = Mechanics:5,
+                  recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+
+	}
+}

@@ -1,0 +1,62 @@
+module Base
+{
+	model 82oshkoshM911Burnt
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_Burnt,
+		shader = vehicle,
+		static = TRUE,
+		scale = 1,
+	}
+	vehicle 82oshkoshM911Burnt
+	{
+		model
+		{
+			file = 82oshkoshM911Burnt,
+			scale = 0.9000,
+			offset = 0.0000 0.6667 0.0000,
+		}
+
+		spawnOffsetY = 0,
+
+		skin
+		{
+			texture = Vehicles/Vehicles_82oshkoshM911_burnt1,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_82oshkoshM911_burnt2,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_82oshkoshM911_burnt3,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_82oshkoshM911_burnt4,
+		}
+
+		extents = 2.1333 1.2222 8.2000,
+		mass = 1100,
+		physicsChassisShape = 2.1333 1.2222 8.2000,
+		centerOfMassOffset = 0.0000 0.6000 0.0444,
+		shadowExtents = 2.3666 8.7333,
+		shadowOffset = 0.0000 0.0444,
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.2889 -4.1889,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = -1.0000,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 -0.2889 4.3889,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = 1.0000,
+		}
+	}
+}

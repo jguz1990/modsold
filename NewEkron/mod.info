@@ -1,0 +1,8 @@
+name=NewEkron
+id=NewEkron
+description=A remake of Ekron.
+poster=poster.png
+pack=ekron
+tiledef=ekron 5484
+require=tkTiles_01
+require=DylansTiles

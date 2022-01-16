@@ -1,0 +1,5 @@
+name=Military Locker Interactable
+poster=poster.png
+id=militarylockerinteractable
+description=Makes military lockers interactable
+tiledef=militarylockerinteractable 923

@@ -1,0 +1,16 @@
+IG_UI_EN = {
+	IGUI_VehicleName82oshkoshM911 = "'82 Oshkosh M911 Truck",
+	IGUI_VehicleName82oshkoshM911B = "'82 Oshkosh M911 Black",
+	IGUI_VehicleName82oshkoshM911Burnt = "'82 Oshkosh M911 Burnt",
+
+	IGUI_VehiclePartM911Trunk = "Trunk",
+	IGUI_VehiclePartM911Toolbox = "Toolbox",
+	IGUI_VehiclePartM911SpareTire = "Spare Tire compartment",
+
+	IGUI_VehicleNameTrailerM747lowbed = "M747 Lowbed Trailer",
+	IGUI_VehicleNameTrailerM127stake = "M127 Stake Trailer",
+	IGUI_VehicleNameTrailerM128van = "M128 Van Trailer",
+	IGUI_VehicleNameTrailerM129van = "M129 Van Trailer",
+	IGUI_VehicleNameTrailerM967tanker = "M967 Tanker Trailer",
+
+}

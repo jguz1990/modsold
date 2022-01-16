@@ -1,0 +1,8 @@
+IG_UI_ES = {
+IGUI_VehicleName92amgeneralM998 = "'92 AM General M998 HMMWV",
+IGUI_VehicleName92amgeneralM998Burnt = "'92 AM General M998 HMMWV Quemado",
+
+IGUI_VehiclePartM998Trunk = "Maletero",
+IGUI_VehiclePartM998SpareTire = "Rueda de Repuesto",
+IGUI_VehiclePartM998Bullbar = "Proteccion Parachoques",
+IGUI_VehiclePartM998Muffler = "Tubo de Escape",

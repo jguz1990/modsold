@@ -53,7 +53,7 @@ module Base
 			texture = Vehicles/ATA_Jeep_base_1_egnh,
 		}
 		
-		engineForce = 6600,
+		engineForce = 8600,
 		maxSpeed = 120f,
 	}
 	vehicle ATAJeepRubicon
@@ -75,7 +75,7 @@ module Base
 		{
 			texture = Vehicles/ATA_Jeep_base_3_egnh,
 		}
-		engineForce = 5600,
+		engineForce = 8600,
 		maxSpeed = 100f,
 	}
 	vehicle ATAJeepClassic
@@ -140,7 +140,7 @@ module Base
 		}
 
 		mass = 900,
-		engineForce = 4400,
+		engineForce = 8400,
 		maxSpeed = 90f,
 		engineLoudness = 90,
 		engineQuality = 70,
@@ -281,7 +281,7 @@ module Base
 		{
 			container
 			{
-				capacity = 20,
+				capacity = 50,
 			}
 
 			table install
@@ -442,11 +442,11 @@ module Base
 
 		part TruckBed
 		{
-			itemType = Base.SmallTrunk,
+			itemType = Base.NormalTrunk2,
 
 			container
 			{
-				capacity = 40,
+				capacity = 340,
 			}
 		}
 
@@ -456,7 +456,7 @@ module Base
 		{
 			container
 			{
-				capacity = 5,
+				capacity = 25,
 			}
 		}
 

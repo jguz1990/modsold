@@ -1,0 +1,69 @@
+module Base
+{
+    item Token_Banshee
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_Crawler
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_Inactive
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_NoTeeth
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_Useless
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_OnlyJawStab
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+
+    item Token_Skeleton
+    {
+        Type = Normal,
+        Weight = 0,
+    }
+    item Token_Timer
+    {
+        Type 		= Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.01,
+        Weight 		= 0,
+    }
+
+    item Dress_KneesWhite
+    {
+        Type = Clothing,
+        DisplayName = Knee-length Dress,
+        ClothingItem = Dress_KneesWhite,
+        BodyLocation = Dress,
+        BloodLocation = ShortsShort;Shirt,
+        Icon = DressShortWhite,
+        Insulation = 0.15,
+        WindResistance = 0.1,
+        FabricType = Cotton
+        WorldStaticModel = Dress_Short_Ground,
+    }
+
+    item Zed_Nemesis
+    {
+        Type = Clothing,
+        ClothingItem = Zed_Nemesis,
+        BodyLocation = Torso1Legs1,
+	CanHaveHoles = False,
+        BloodLocation = Trousers;Jumper,
+    }
+}

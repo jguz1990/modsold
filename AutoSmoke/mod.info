@@ -1,8 +1,0 @@
-name=AutoSmoke
-id=AutoSmoke
-poster=poster.png
-description=Your character smokes cigarettes automatically.
-require=modoptions
-versionMin=41.56
-pzversion=41.56
-modversion=1.2.1

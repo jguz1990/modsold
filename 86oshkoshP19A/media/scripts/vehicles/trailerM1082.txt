@@ -1,0 +1,188 @@
+module Base
+{
+	model TrailerM1082Base
+	{
+		mesh = vehicles/Trailers_m1082_openbed_body,
+		shader = vehicle_norandom_multiuv,
+		invertX = FALSE,
+		scale = 1,
+	}
+	model TrailerM1082frontwheelleft
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+
+	}
+	model TrailerM1082frontwheelright
+	{
+		mesh = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		texture = vehicles/Vehicles_86oshkoshP19A_Wheel,
+		shader = vehiclewheel,
+	}
+	vehicle TrailerM1082
+	{
+		mechanicType = 2,
+		offRoadEfficiency = 4,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1,
+
+		model
+		{
+			file = TrailerM1082Base,
+			scale = 0.9000,
+			offset = 0.0000 1.0889 -0.1667,
+		}
+
+		spawnOffsetY = 0.35,
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_USMCGreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_NATOGreen,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_desertTan,
+		}
+
+		skin
+		{
+			texture = Vehicles/Trailers_M1082_Shell_camo,
+		}
+
+		textureRust = Vehicles/Trailers_M1082_Rust,
+		textureMask = Vehicles/Trailers_M1082_Mask,
+		textureLights = Vehicles/Trailers_M1082_Lights,
+		textureDamage1Shell = Vehicles/Trailers_M1082_Shell_Damaged01,
+		textureDamage2Shell = Vehicles/Trailers_M1082_Shell_Damaged02,
+		textureDamage1Overlay = Vehicles/Trailers_M1082_Overlays_Damaged01,
+		textureDamage2Overlay = Vehicles/Trailers_M1082_Overlays_Damaged02,
+		textureShadow = Vehicles/Trailers_M1082_Shadow,
+		extents = 2.3778 1.0444 3.7333,
+		shadowExtents = 6.4445 6.3888,
+		shadowOffset = 0.0000 0.8778,
+		mass = 200,
+		physicsChassisShape = 2.3778 1.0444 3.7333,
+		centerOfMassOffset = 0.0000 1.0333 0.1333,
+		engineForce = 3600,
+		engineQuality = 60,
+		engineLoudness = 55,
+		maxSpeed = 70f,
+		brakingForce = 1,
+		stoppingMovementForce = 2.0f,
+		rollInfluence = 1.0f,
+		steeringIncrement = 0.03,
+		steeringClamp = 0.3,
+		suspensionStiffness = 40,
+		suspensionCompression = 4.83,
+		suspensionDamping = 3.88,
+		maxSuspensionTravelCm = 20,
+		suspensionRestLength = 0.21f,
+		wheelFriction = 4.0f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		seats = 2,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.9667 -0.3444 0.0222,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.9667 -0.3444 0.0222,
+			radius = 0.58f,
+			width = 0.34f,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 0.2667 3.7556 5.0889,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 1.4111 -0.1667 0.4444 0.4889,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -1.4111 -0.1667 0.4444 0.4889,
+		}
+
+		template = TireV100A1,
+
+		part TireFrontLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1082frontwheelleft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = TrailerM1082frontwheelright,
+			}
+		}
+
+		template = Suspension/part/SuspensionFrontLeft,
+		template = Suspension/part/SuspensionFrontRight,
+		template = Trunk/part/TruckBed,
+
+		part TruckBed
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 250,
+			}
+		}
+
+		physics box
+		{
+			offset = 0.2222 1.2000 2.3333,
+			extents = 0.1053 0.2211 1.1053,
+			rotate = 0.0000 -25.0000 0.0000,
+		}
+
+		physics box
+		{
+			offset = -0.2444 1.2000 2.2889,
+			extents = 0.1053 0.2211 1.1053,
+			rotate = 0.0000 25.0000 0.0000,
+		}
+
+		physics sphere
+		{
+			offset = 0.0000 1.2000 2.8111,
+			radius = 0.1556,
+		}
+
+		physics box
+		{
+			offset = 0.0000 2.2000 0.3222,
+			extents = 2.4111 1.7778 3.7889,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.3556 3.5778,
+			rotate = 0.0000 0.0000 0.0000,
+			canAttach = trailer,
+		}
+	}
+}

@@ -1,0 +1,15 @@
+module Base
+{
+	sound BansheeScream
+	{
+		category = Zombie,
+		loop = false,
+		clip
+		{
+			file = media/sound/bansheescream.wav,
+			distanceMax = 100,
+			volume = 1.5,
+		}
+	}
+
+}

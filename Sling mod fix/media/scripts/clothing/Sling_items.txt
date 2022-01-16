@@ -21,6 +21,7 @@ module Base
         ClothingItemExtraOption = SlingStyle2;SlingStyle3;SlingStyle4,
         clothingExtraSubmenu = SlingStyle1,
         WorldStaticModel = SlingFlat,
+		ConditionLowerChanceOneIn = 100000,
     } 
 	item SlingAalt
     {
@@ -43,6 +44,7 @@ module Base
         ClothingItemExtraOption = SlingStyle1;SlingStyle3;SlingStyle4,
         clothingExtraSubmenu = SlingStyle2,
         WorldStaticModel = SlingFlat,
+		ConditionLowerChanceOneIn = 100000,
     } 
 	item SlingAalt2
     {
@@ -65,6 +67,7 @@ module Base
         ClothingItemExtraOption = SlingStyle1;SlingStyle2;SlingStyle4,
         clothingExtraSubmenu = SlingStyle3,
         WorldStaticModel = SlingFlat,
+		ConditionLowerChanceOneIn = 100000,
     } 
 	item SlingAalt3
     {
@@ -87,6 +90,7 @@ module Base
         ClothingItemExtraOption = SlingStyle1;SlingStyle2;SlingStyle3,
         clothingExtraSubmenu = SlingStyle4,
         WorldStaticModel = SlingFlat,
+		ConditionLowerChanceOneIn = 100000,
     } 
 
 	recipe Make Rifle Sling

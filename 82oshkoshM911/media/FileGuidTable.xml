@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+		<path>media/clothing/clothingItems/TShirt_bknht.xml</path>
+		<guid>66586775-8f13-47e5-80d1-90813408a55f</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/TShirt_OshkoshBlack.xml</path>
+		<guid>f450179c-bd86-493b-8078-6a48e4aeb783</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/TShirt_OshkoshGray.xml</path>
+		<guid>cdd1a236-233e-4b26-ad0d-d9b8539de90a</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Hoodie_OshkoshBlack.xml</path>
+		<guid>8fa7d914-6cff-4289-83bd-8182e4597499</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/HoodieDOWN_OshkoshBlack.xml</path>
+		<guid>d2cce215-b759-4a36-b33b-87d5a4e5f27d</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Hoodie_OshkoshGray.xml</path>
+		<guid>cd42fa8b-360f-48dc-b970-f85ade9ae72b</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/HoodieDOWN_OshkoshGray.xml</path>
+		<guid>cb9432e5-0ef3-4375-a139-d1830cd81b43</guid>
+	</files>
+
+</fileGuidTable>

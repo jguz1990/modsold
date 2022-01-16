@@ -1,0 +1,74 @@
+module Base
+{
+	/************************ Tires ************************/
+
+    item V100Tire2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Tire,
+        Icon	=	runflatTire,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 20,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = RunFlatWI,
+    }
+
+	/************************ Doors ************************/
+
+	item FrontLeftV100Door2
+    {
+        Weight	=	14.9,
+        Type	=	Normal,
+        DisplayName	=	Commando Left Door,
+        Icon	=	CarDoorFront,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+	WorldStaticModel = CarDoor,
+    }
+
+	item FrontRightV100Door2
+    {
+        Weight	=	14.9,
+        Type	=	Normal,
+        DisplayName	=	Commando Right Door,
+        Icon	=	CarDoorRear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+	WorldStaticModel = CarDoor,
+    }
+
+	item RearV100Door2
+    {
+        Weight	=	14.9,
+        Type	=	Normal,
+        DisplayName	=	Commando Rear Door,
+        Icon	=	CarDoorRear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+	WorldStaticModel = CarDoor,
+    }
+
+	/************************ Windows ************************/
+
+
+	item V100Window2
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	Commando Viewport,
+        Icon	=	SideWindow,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+	WorldStaticModel = CarWindow,
+    }
+	
+}
