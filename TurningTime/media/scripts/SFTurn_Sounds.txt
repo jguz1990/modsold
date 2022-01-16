@@ -7,7 +7,7 @@ module Base
 		clip
 		{
 			file = media/sound/bansheescream.wav,
-			distanceMax = 100,
+			distanceMax = 200,
 			volume = 1.5,
 		}
 	}

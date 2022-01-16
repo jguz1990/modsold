@@ -101,6 +101,7 @@ mods
 	mod = BetterSortCC,
 	mod = WalterWhitesRV,
 	mod = eggonsWorthwileCars,
+	mod = CustomizableZombies,
 }
 
 maps
