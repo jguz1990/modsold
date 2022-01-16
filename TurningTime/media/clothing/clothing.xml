@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<outfitManager>
+	<m_MaleOutfits>
+		<m_Name>Nemesis</m_Name>
+		<m_Guid>sfdress1-time-male-spec-000000000000</m_Guid>
+		<m_Top>false</m_Top>
+		<m_Pants>false</m_Pants>
+		<m_AllowTopTint>false</m_AllowTopTint>
+		<m_AllowPantsHue>false</m_AllowPantsHue>
+		<m_AllowTShirtDecal>false</m_AllowTShirtDecal>
+		<m_items>
+			<itemGUID>sfdress0-time-zeds-0000-000000000000</itemGUID>
+		</m_items>
+		<m_items>
+			<itemGUID>d3481027-59dc-42ac-9e66-8cc2ba1f66a4</itemGUID>
+			<subItems>
+				<itemGUID>2424958a-64aa-4494-aeba-ad05a08d5917</itemGUID>
+			</subItems>
+		</m_items>
+	</m_MaleOutfits>
+	<m_FemaleOutfits>
+		<m_Name>Banshee</m_Name>
+		<m_Guid>sfdress1-time-feme-spec-000000000000</m_Guid>
+		<m_Top>false</m_Top>
+		<m_Pants>false</m_Pants>
+		<m_AllowTopTint>false</m_AllowTopTint>
+		<m_AllowPantsHue>false</m_AllowPantsHue>
+		<m_AllowTShirtDecal>false</m_AllowTShirtDecal>
+		<m_items>
+			<itemGUID>sfdress0-time-dres-0000-000000000003</itemGUID>
+		</m_items>
+	</m_FemaleOutfits>
+</outfitManager>

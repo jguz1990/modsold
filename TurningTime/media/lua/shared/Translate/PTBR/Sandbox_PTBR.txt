@@ -1,0 +1,16 @@
+Sandbox_PTBR = {
+	Sandbox_SFTurn = "SF Turning Time",
+
+	Sandbox_SFTurn_RarityBanshee = "População de Banshee",
+	Sandbox_SFTurn_RarityBanshee_tooltip = "Valor aplicado sobre o de população normal.",
+	Sandbox_SFTurn_RarityBanshee_option1 = "Nenhuma",
+	Sandbox_SFTurn_RarityBanshee_option2 = "Rara",
+	Sandbox_SFTurn_RarityBanshee_option3 = "Padrão",
+	Sandbox_SFTurn_RarityBanshee_option4 = "Alta",
+	Sandbox_SFTurn_RarityBanshee_option5 = "Insana",
+
+	Sandbox_SFTurn_RarityNemesis = "População de Nêmesis",
+	Sandbox_SFTurn_RarityNemesis_tooltip = "Valor aplicado sobre o de população normal.",
+
+	Sandbox_SFTurn_ImmortalNemesis = "Nemesis imortal"
+}

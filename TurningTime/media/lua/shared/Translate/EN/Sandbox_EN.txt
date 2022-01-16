@@ -1,0 +1,16 @@
+Sandbox_EN = {
+	Sandbox_SFTurn = "SF Turning Time",
+
+	Sandbox_SFTurn_RarityBanshee = "Banshee Population",
+	Sandbox_SFTurn_RarityBanshee_tooltip = "Applied on top of the standard population.",
+	Sandbox_SFTurn_RarityBanshee_option1 = "None",
+	Sandbox_SFTurn_RarityBanshee_option2 = "Rare",
+	Sandbox_SFTurn_RarityBanshee_option3 = "Standard",
+	Sandbox_SFTurn_RarityBanshee_option4 = "High",
+	Sandbox_SFTurn_RarityBanshee_option5 = "Insane",
+
+	Sandbox_SFTurn_RarityNemesis = "Nemesis Population",
+	Sandbox_SFTurn_RarityNemesis_tooltip = "Applied on top of the standard population.",
+
+	Sandbox_SFTurn_ImmortalNemesis = "Immortal Nemesis"
+}
