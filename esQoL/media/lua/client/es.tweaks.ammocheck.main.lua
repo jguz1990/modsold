@@ -1,6 +1,15 @@
 local esCommon = require("esq.common.01");
 local esAmmoOptions = require("es.tweaks.options");
 local esAmmoCheckMain = {};
+esAmmoCheckMain.notes = {
+    "",
+    "[<GunAmmo>]",
+    "[<GunAmmo>] @<BagAmmo>",
+    "<GunName> [<GunAmmo>]",
+    "<GunName> [<GunAmmo>] @<BagAmmo>",
+    "<GunName> [<GunAmmo>] #[<MagAmmo>]",
+    "<GunName> [<GunAmmo>] #[<MagAmmo>] @<BagAmmo>",
+};
 
 function esAmmoCheckMain.getCurrentWeapon()
     return getPlayer():getPrimaryHandItem();
@@ -38,7 +47,7 @@ end
 
 function esAmmoCheckMain.getAmmoBag(item)
     local weapon = item or esAmmoCheckMain.getCurrentWeapon();
-    return getPlayer():getInventory():getAllTypeRecurse(weapon:getAmmoType()):size();
+    return getPlayer():getInventory():getCountTypeRecurse(weapon:getAmmoType());
 end
 
 function esAmmoCheckMain.getAmmoMag(item)
@@ -71,17 +80,19 @@ function esAmmoCheckMain.printNote(item)
     if (not esAmmoCheckMain.isValid()) then return end;
     local weapon = item or esAmmoCheckMain.getCurrentWeapon();
 
-    local noteFormat = getText("IGUI_mo_ammoCheckAmmoF1");
-    if (esAmmoOptions.getOption("ammoCheckFormat") == 3) then
-        noteFormat = getText("IGUI_mo_ammoCheckAmmoF2");
-    elseif (esAmmoOptions.getOption("ammoCheckFormat") == 4) then
-        noteFormat = getText("IGUI_mo_ammoCheckAmmoF3");
+    local noteFormat = esAmmoCheckMain.notes[esAmmoOptions.getOption("ammoCheckFormat")];
+    if (noteFormat:contains("<GunName>")) then
+        noteFormat = noteFormat:gsub("<GunName>", weapon:getName());
     end
-
-    noteFormat = noteFormat:gsub("<GunName>", weapon:getName());
-    noteFormat = noteFormat:gsub("<GunAmmo>", esAmmoCheckMain.getAmmoGun(weapon));
-    noteFormat = noteFormat:gsub("<BagAmmo>", esAmmoCheckMain.getAmmoBag(weapon));
-    noteFormat = noteFormat:gsub("<MagAmmo>", esAmmoCheckMain.getAmmoMag(weapon));
+    if (noteFormat:contains("<GunAmmo>")) then
+        noteFormat = noteFormat:gsub("<GunAmmo>", esAmmoCheckMain.getAmmoGun(weapon));
+    end
+    if (noteFormat:contains("<BagAmmo>")) then
+        noteFormat = noteFormat:gsub("<BagAmmo>", esAmmoCheckMain.getAmmoBag(weapon));
+    end
+    if (noteFormat:contains("<MagAmmo>")) then
+        noteFormat = noteFormat:gsub("<MagAmmo>", esAmmoCheckMain.getAmmoMag(weapon));
+    end
 
     local rgb = esCommon.volume.getRGB(esAmmoCheckMain.getAmmoPercent(weapon));
     getPlayer():setHaloNote(noteFormat, rgb.green.r * 250, rgb.green.g * 250, rgb.green.b * 250, 150);

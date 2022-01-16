@@ -38,7 +38,7 @@ function esSortCorpse.onBackpackRefreshDone(inventoryPage, state)
     if state ~= "end" then return end;
     if (not inventoryPage.onCharacter) then
         local firstCorpse;
-        local itemCollect = LuaList:new();
+        local itemCollect = {};
 
         for i, c in ipairs(inventoryPage.backpacks) do
             if (c.inventory:getType() == "inventorymale" or c.inventory:getType() == "inventoryfemale") then
@@ -46,7 +46,15 @@ function esSortCorpse.onBackpackRefreshDone(inventoryPage, state)
                     if (firstCorpse == nil) then
                         firstCorpse = c.inventory;
                     else
-                        itemCollect:addAll(c.inventory:getItems());
+                        local items = c.inventory:getItems();
+                        local item = items:get(0) or nil;
+
+                        while item ~= nil do
+                            itemCollect[item:getID()] = item;
+                            c.inventory:Remove(item);
+                            if (items:size() < 1) then break end;
+                            item = items:get(0);
+                        end
                     end
                 elseif (esDismantleOptions.getOption("corpseMergeArrow")) then
                     esSortCorpse.removeArrow(c.inventory:getParent():getCurrentSquare());
@@ -54,9 +62,8 @@ function esSortCorpse.onBackpackRefreshDone(inventoryPage, state)
             end
         end
 
-        for ic = 0, itemCollect:size() - 1 do
-            local item = itemCollect:get(ic)
-            firstCorpse:AddItem(item);
+        for i,c in pairs(itemCollect) do
+            firstCorpse:AddItem(c);
         end
 
         if (firstCorpse and esDismantleOptions.getOption("corpseMergeArrow")) then

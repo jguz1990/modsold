@@ -16,11 +16,11 @@ end
 local baseISVehicleMenuOnMechanic = ISVehicleMenu.onMechanic;
 function ISVehicleMenu.onMechanic(playerObj, vehicle)
     if (esCarHoodOptions.getOption("carhoodOn")) then
-        local openHoodAction = ISOpenMechanicsUIAction:new(playerObj, vehicle);
-        return ISTimedActionQueue.add(openHoodAction);
+        ISTimedActionQueue.add(ISOpenMechanicsUIAction:new(playerObj, vehicle));
+        return;
     end
 
-    return baseISVehicleMenuOnMechanic(playerObj, vehicle);
+    baseISVehicleMenuOnMechanic(playerObj, vehicle);
 end
 
 local baseISOpenMechanicsUIActionPerform = ISOpenMechanicsUIAction.perform;
@@ -32,5 +32,5 @@ function ISOpenMechanicsUIAction:perform()
         self.vehicle:getModData()["maxTime"] = maxTime;
     end
 
-    return baseISOpenMechanicsUIActionPerform(self);
+    baseISOpenMechanicsUIActionPerform(self);
 end

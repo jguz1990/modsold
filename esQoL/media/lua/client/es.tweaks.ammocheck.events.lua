@@ -13,8 +13,11 @@ function esAmmoCheck.mouseUp()
 end
 function esAmmoCheck.mouseShow()
     if esAmmoCheck.mouse.down and (esAmmoCheck.mouse.tick + 800) < getTimestampMs() then
+        if not isMouseButtonDown(0) and not isMouseButtonDown(1) and not isMouseButtonDown(2) then
+            return esAmmoCheck.mouseUp();
+        end
         esAmmoCheckMain.printNote(esAmmoCheckMain.getCurrentWeapon());
-        esAmmoCheck.mouse.tick = getTimestampMs();
+        esAmmoCheck.mouse.tick = getTimestampMs() + 1500;
     end
 end
 
@@ -33,7 +36,7 @@ function esAmmoCheck.kbShow(key)
     if getCore():getKey("Aim") ~= key then return end
     if esAmmoCheck.keyboard.down and (esAmmoCheck.keyboard.tick + 800) < getTimestampMs() then
         esAmmoCheckMain.printNote(esAmmoCheckMain.getCurrentWeapon());
-        esAmmoCheck.keyboard.tick = getTimestampMs();
+        esAmmoCheck.keyboard.tick = getTimestampMs() + 1500;
     end
 end
 

@@ -1,0 +1,139 @@
+IG_UI_CN = {
+    -- Common words
+    IGUI_ESQ_COMMON_UI_ON = "开",
+    IGUI_ESQ_COMMON_UI_OFF = "关",
+    IGUI_ESQ_COMMON_UI_MAKE = "",
+    IGUI_ESQ_COMMON_UI_FROM = "从",
+    IGUI_ESQ_COMMON_UI_USE = "用",
+    IGUI_ESQ_COMMON_UI_SELECTED = "已选择",
+    IGUI_ESQ_COMMON_UI_CRITICAL = "临界几率",
+
+    -- extra info
+    IGUI_mo_esqInfoName = "[esq] 更多信息",
+    IGUI_mo_esqInfo_TT_E = "信息显示在右侧",
+    IGUI_mo_esqInfo_TT_S = "信息显示在下方",
+    IGUI_mo_esqInfo_TT_O = "代替原本的提示框",
+
+    IGUI_mo_esqHealthInfo = "健康信息",
+    IGUI_mo_esqHealthInfo_TT = "显示包扎下的伤口信息",
+    IGUI_mo_esqClothingInfo = "衣物信息",
+    IGUI_mo_esqClothingInfo_TT = "显示衣物具体数值并比较",
+    IGUI_mo_esqDrainableInfo = "可饮用物信息",
+    IGUI_mo_esqDrainableInfo_TT = "显示可倒出物(如: 水瓶),的具体数值",
+    IGUI_mo_esqWeaponInfoMelee = "近战武器信息",
+    IGUI_mo_esqWeaponInfoMelee_TT = "数值化近战武器信息",
+    IGUI_mo_esqWeaponInfoRanged = "远程武器信息",
+    IGUI_mo_esqWeaponInfoRanged_TT = "数值化远程武器信息",
+    IGUI_mo_esqWeaponInfoParts = "远程武器零件信息",
+    IGUI_mo_esqWeaponInfoParts_TT = "重新排列的武器零件信息",
+
+    IGUI_tt_esqWeaponInfo_Durability = "耐久度",
+    IGUI_tt_esqWeaponInfo_SwingTime = "攻击速度",
+    IGUI_tt_esqWeaponInfo_MaxRange = "最大攻击范围",
+    IGUI_tt_esqWeaponInfo_Accuracy = "命中率",
+    IGUI_tt_esqWeaponInfo_AimingSpeed = "瞄准速度",
+    IGUI_tt_esqWeaponInfo_Sound = "噪音大小",
+    IGUI_tt_esqWeaponInfo_Weight = "重量",
+    IGUI_tt_esqWeaponInfo_Recoil = "后坐力",
+    IGUI_tt_esqWeaponInfo_ReloadSpeed = "装弹速度",
+
+    -- imported
+    IGUI_mo_esqImportTweaksName = "[esq] 包含的作者的其他Mod",
+
+    -- Tweaks
+    IGUI_mo_esqTweaksName = "[esq] 功能增强",
+    IGUI_mo_esqDrier = "擦干自己",
+    IGUI_mo_esqDrier_TT = "持续使用堆叠的毛巾来擦干自己",
+    IGUI_esqDrier_UntilDried = "直到擦干为止",
+    IGUI_mo_esqDieter = "节食者",
+    IGUI_mo_esqDieter_TT = "吃掉刚刚饱为止的量的食物",
+    IGUI_mo_esqVitaMax = "维他命Max",
+    IGUI_mo_esqVitaMax_TT = "持续吃维他命, 直到疲劳完全消除",
+    IGUI_mo_esqVitaMaxPills30 = "每瓶5分钟",
+    IGUI_mo_esqVitaMaxPills15 = "每瓶2分30秒",
+    IGUI_mo_esqCarHood = "更易使用的机械界面",
+    IGUI_mo_esqCarHood_TT = "在车的任意位置打开引擎盖, 打开速度会随着你打开的次数而变快",
+    IGUI_mo_esqInstantConsolidate = "耐久合并",
+    IGUI_mo_esqInstantConsolidate_TT = "合并整堆可倒出物,或者所有可触及的可倒出物. 为保证mod兼容选择保留空项",
+    IGUI_mo_icKeepEmpty = "保留空项",
+    IGUI_menu_esqIC_MERGE_THIS = "合并这堆",
+    IGUI_menu_esqIC_MERGE_ALL = "合并",
+    IGUI_mo_esdSortLoot = "尸体掉落合并",
+    IGUI_mo_esdSortLoot_TT = "将附近尸体的掉落物集中到一个尸体上",
+    IGUI_mo_esdSortLootA1 = "带箭头指示, 10格范围",
+    IGUI_mo_esdSortLootA2 = "带箭头指示, 20格范围",
+    IGUI_mo_esdSortLootA3 = "带箭头指示, 30格范围",
+    IGUI_mo_esdMetals = "金属废料",
+    IGUI_mo_esdMetals_tt = "从特定的物品中尝试获取金属废料",
+    IGUI_mo_esdGunPowders = "子弹利用",
+    IGUI_mo_esdGunPowders_tt = "从堆叠的子弹中获取火药,而不是全部",
+    IGUI_mo_esdTrashCars = "废车利用",
+    IGUI_mo_esdTrashCars_tt = "拆解发动机性能小于11的汽车",
+
+    -- sorter
+    IGUI_ESS_MENU = "排序",
+    IGUI_ESS_MENU_TT = "更快的标记和排序, 在某些操作(如: 制作, 分解) 以后自动整理背包",
+    IGUI_ESS_MANUAL_SORT = "手动排序",
+
+    IGUI_ESS_TAG_THIS = "加标签给这个 ",
+    IGUI_ESS_TAG_THESE = "给这些物品加标签",
+    IGUI_ESS_TAG_THIS_TYPE = "加标签给这类 ",
+    IGUI_ESS_TAG_THESE_TYPE = "给这些类型加标签",
+
+    IGUI_ESS_CLEAR = "取消所有标签: ",
+    IGUI_ESS_UNTAG_THIS = "取消标签: ",
+    IGUI_ESS_UNTAG_THIS_TYPE = "取消这类标签: ",
+    IGUI_ESS_UNTAG_THESE = "取消标签: ",
+    IGUI_ESS_UNTAG_THESE_TYPE = "取消这类标签: ",
+
+    IGUI_ESS_SORT_THIS = "排序",
+    IGUI_ESS_SORT_PLAYA = "排序所有 '玩家的容器'",
+    IGUI_ESS_SORT_LOOTS = "排序所有 '掉落物容器'",
+    IGUI_ESS_FROM = " 于这里",
+    IGUI_ESS_TO = " 到这里",
+
+    -- sac
+    IGUI_mo_esqSac = "背包增强",
+    IGUI_mo_esqSac_TT = "更易访问到背包",
+    IGUI_mo_esqSacToggle = "切换快捷键: ",
+    IGUI_mo_esqSacRespect = "忽略父容器容量",
+
+    -- AmmoCheck
+    IGUI_mo_ammoCheckName = "[esq] 弹药检查",
+    IGUI_mo_ammoCheck = "子弹检查",
+    IGUI_mo_ammoCheck_TT = "简易子弹显示",
+    IGUI_mo_ammoCheckAmmoF2 = "[<枪中子弹数>]",
+    IGUI_mo_ammoCheckAmmoF3 = "[<枪中子弹数>] @<包中子弹数>",
+    IGUI_mo_ammoCheckAmmoF4 = "<枪名> [<枪中子弹数>]",
+    IGUI_mo_ammoCheckAmmoF5 = "<枪名> [<枪中子弹数>] @<包中子弹数>",
+    IGUI_mo_ammoCheckAmmoF6 = "<枪名> [<枪中子弹数>] #[<盒装子弹数>]",
+    IGUI_mo_ammoCheckAmmoF7 = "<枪名> [<枪中子弹数>] #[<盒装子弹数>] @<包中子弹数>",
+
+    -- AutoEquip
+    IGUI_mo_esqAutoEquip = "自动装备",
+    IGUI_mo_esqAutoEquip_TT = "自动装备下一个耐久最低的武器",
+    IGUI_mo_aeSameWeapon = "替换相同武器",
+    IGUI_mo_aeSameType = "替换相同武器类型",
+    IGUI_mo_aeDropOnBreak = "自动丢弃",
+    IGUI_mo_aeDropOnBreak_TT = "丢弃损坏的武器",
+
+    -- fixer
+    IGUI_mo_fixer = "近战武器修正",
+    IGUI_mo_fixer_TT = "转移同一武器的耐久给其他的, 只搜索同一容器",
+    IGUI_mo_fixer_menu = "修正",
+    IGUI_mo_fixerRanged = "远程武器修正",
+    IGUI_mo_fixerRanged_TT = "转移远程武器的耐久给其他的, 只搜索同一容器",
+    IGUI_mo_fixerAmmo = "弹药修正",
+    IGUI_mo_fixerAmmo_TT = "使用金属废料和火药制作更多弹药",
+
+    IGUI_mo_book = "技能书提示",
+    IGUI_mo_book_TT = "显示你当前的技能和技能书的信息",
+
+    IGUI_mo_carSpace = "汽车零件容量和拖力显示",
+    IGUI_mo_carSpace_TT = "显示汽车零件的最大容量和拖力",
+
+    IGUI_mo_esqForceEquip = "强制装备",
+    IGUI_mo_esqForceEquip_TT = "强制装备非常重的物品",
+    IGUI_mo_esqTowing = "拖力: %1",
+
+}

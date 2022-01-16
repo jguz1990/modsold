@@ -1,6 +1,11 @@
-local tweaksOptions = {};
+esQolModOptions = esQolModOptions or {};
+esQolModOptions.options = esQolModOptions.options or {};
+local esQoLOptions = require("es.qoloptions.main");
 
-tweaksOptions.modImportOptions = {};
+local tweaksOptions = {};
+local modOptionsImport = {};
+local modOptionsTweaks = {};
+
 tweaksOptions.configImportedOptions = {
     options_data = {
         esQoLIC = {
@@ -14,9 +19,12 @@ tweaksOptions.configImportedOptions = {
         },
         esQoLAC = {
             getText("IGUI_ESQ_COMMON_UI_OFF"),
-            getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF1"),
             getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF2"),
             getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF3"),
+            getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF4"),
+            getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF5"),
+            getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF6"),
+            getText("IGUI_ESQ_COMMON_UI_ON") .. " " .. getText("IGUI_mo_ammoCheckAmmoF7"),
 
             name = getText("IGUI_mo_ammoCheck"),
             tooltip = getText("IGUI_mo_ammoCheck_TT"),
@@ -32,12 +40,11 @@ tweaksOptions.configImportedOptions = {
             default = 1,
         },
     },
-    mod_id = "esQoL",
+    mod_id = "esQoLMP",
     mod_fullname = getText("IGUI_mo_esqImportTweaksName"),
     mod_shortname = getText("IGUI_mo_esqImportTweaksName"),
 }
 
-tweaksOptions.modOptions = {};
 tweaksOptions.configOptions = {
     options_data = {
         esQoLDrier = {
@@ -167,50 +174,91 @@ tweaksOptions.configOptions = {
             default = 1,
         },
     },
-    mod_id = "esQoL",
+    mod_id = "esQoLMP",
     mod_fullname = getText("IGUI_mo_esqTweaksName"),
     mod_shortname = getText("IGUI_mo_esqTweaksName"),
 }
 
 function tweaksOptions.getOption(infoOption)
-    if (infoOption == "mergeOn") then return tweaksOptions.modImportOptions.options.esQoLIC > 1 end;
-    if (infoOption == "mergeKeepOn") then return tweaksOptions.modImportOptions.options.esQoLIC == 3 end;
-    if (infoOption == "ammoCheckOn") then return tweaksOptions.modImportOptions.options.esQoLAC > 1 end;
-    if (infoOption == "ammoCheckFormat") then return tweaksOptions.modImportOptions.options.esQoLAC end;
-    if (infoOption == "sacOn") then return tweaksOptions.modImportOptions.options.esQoLSac > 1 end;
-    if (infoOption == "sacIgnore") then return tweaksOptions.modImportOptions.options.esQoLSac == 3 end;
+    if (getPlayer() and esQoLOptions.isMP and not esQoLOptions.isAdmin(getPlayer())) then
+        local settings = esQoLOptions.getSettings(getPlayer());
+        if not settings then return false end;
+        esQolModOptions.options = settings;
+    end
+    if (esQolModOptions == nil) then return false end;
 
-    if (infoOption == "drierOn") then return tweaksOptions.modOptions.options.esQoLDrier > 1 end;
-    if (infoOption == "dieterOn") then return tweaksOptions.modOptions.options.esQoLDieter > 1 end;
-    if (infoOption == "vitamaxOn") then return tweaksOptions.modOptions.options.esQoLVitaMax > 1 end;
-    if (infoOption == "vitamaxFast") then return tweaksOptions.modOptions.options.esQoLVitaMax == 3 end;
-    if (infoOption == "carhoodOn") then return tweaksOptions.modOptions.options.esQoLCarHood > 1 end;
-    if (infoOption == "corpseMergeOn") then return tweaksOptions.modOptions.options.esQoLCorpseMerge > 1 end;
+    if (infoOption == "mergeOn") then return esQolModOptions.options.esQoLIC > 1 end;
+    if (infoOption == "mergeKeepOn") then return esQolModOptions.options.esQoLIC == 3 end;
+    if (infoOption == "ammoCheckOn") then return esQolModOptions.options.esQoLAC > 1 end;
+    if (infoOption == "ammoCheckFormat") then return esQolModOptions.options.esQoLAC end;
+    if (infoOption == "sacOn") then return esQolModOptions.options.esQoLSac > 1 end;
+    if (infoOption == "sacIgnore") then return esQolModOptions.options.esQoLSac == 3 end;
+
+    if (infoOption == "drierOn") then return esQolModOptions.options.esQoLDrier > 1 end;
+    if (infoOption == "dieterOn") then return esQolModOptions.options.esQoLDieter > 1 end;
+    if (infoOption == "vitamaxOn") then return esQolModOptions.options.esQoLVitaMax > 1 end;
+    if (infoOption == "vitamaxFast") then return esQolModOptions.options.esQoLVitaMax == 3 end;
+    if (infoOption == "carhoodOn") then return esQolModOptions.options.esQoLCarHood > 1 end;
+    if (infoOption == "corpseMergeOn") then return esQolModOptions.options.esQoLCorpseMerge > 1 end;
     if (infoOption == "corpseMergeArrow") then
-        if (tweaksOptions.modOptions.options.esQoLCorpseMerge == 3) then return 10 end;
-        if (tweaksOptions.modOptions.options.esQoLCorpseMerge == 4) then return 20 end;
-        if (tweaksOptions.modOptions.options.esQoLCorpseMerge == 5) then return 30 end;
+        if (esQolModOptions.options.esQoLCorpseMerge == 3) then return 10 end;
+        if (esQolModOptions.options.esQoLCorpseMerge == 4) then return 20 end;
+        if (esQolModOptions.options.esQoLCorpseMerge == 5) then return 30 end;
         return nil;
     end
-    if (infoOption == "metalOn") then return tweaksOptions.modOptions.options.esQoLMetals > 1 end;
-    if (infoOption == "wreckOn") then return tweaksOptions.modOptions.options.esQoLTrashCars > 1 end;
-    if (infoOption == "gunpowderOn") then return tweaksOptions.modOptions.options.esQoLPowders > 1 end;
-    if (infoOption == "sorterOn") then return tweaksOptions.modOptions.options.esQoLSorter > 1 end;
-    if (infoOption == "sorterManualOn") then return tweaksOptions.modOptions.options.esQoLSorter == 3 end;
-    if (infoOption == "autoEquipOn") then return tweaksOptions.modOptions.options.esQoLAutoEquip > 1 end;
-    if (infoOption == "autoEquipSameType") then return tweaksOptions.modOptions.options.esQoLAutoEquip == 2 end;
-    if (infoOption == "autoEquipSameWeapon") then return tweaksOptions.modOptions.options.esQoLAutoEquip == 3 end;
-    if (infoOption == "DropOnBreakOn") then return tweaksOptions.modOptions.options.esQoLDropOnBreak > 1 end;
-    if (infoOption == "fixerOn") then return tweaksOptions.modOptions.options.esQoLFixer > 1 end;
+    if (infoOption == "metalOn") then return esQolModOptions.options.esQoLMetals > 1 end;
+    if (infoOption == "wreckOn") then return esQolModOptions.options.esQoLTrashCars > 1 end;
+    if (infoOption == "gunpowderOn") then return esQolModOptions.options.esQoLPowders > 1 end;
+    if (infoOption == "sorterOn") then return esQolModOptions.options.esQoLSorter > 1 end;
+    if (infoOption == "sorterManualOn") then return esQolModOptions.options.esQoLSorter == 3 end;
+    if (infoOption == "autoEquipOn") then return esQolModOptions.options.esQoLAutoEquip > 1 end;
+    if (infoOption == "autoEquipSameType") then return esQolModOptions.options.esQoLAutoEquip == 2 end;
+    if (infoOption == "autoEquipSameWeapon") then return esQolModOptions.options.esQoLAutoEquip == 3 end;
+    if (infoOption == "DropOnBreakOn") then return esQolModOptions.options.esQoLDropOnBreak > 1 end;
+    if (infoOption == "fixerOn") then return esQolModOptions.options.esQoLFixer > 1 end;
 
-    if (infoOption == "fixerRangeOn") then return tweaksOptions.modOptions.options.esQoLFixerRanged > 1 end;
-    if (infoOption == "fixerAmmoOn") then return tweaksOptions.modOptions.options.esQoLFixerAmmo > 1 end;
-    if (infoOption == "forceEquipOn") then return tweaksOptions.modOptions.options.esQoLForceEquip > 1 end;
+    if (infoOption == "fixerRangeOn") then return esQolModOptions.options.esQoLFixerRanged > 1 end;
+    if (infoOption == "fixerAmmoOn") then return esQolModOptions.options.esQoLFixerAmmo > 1 end;
+    if (infoOption == "forceEquipOn") then return esQolModOptions.options.esQoLForceEquip > 1 end;
+end
+
+local function refreshGlobal()
+    for k, v in pairs(modOptionsImport.options) do
+        esQolModOptions.options[k] = v;
+    end
+    for k, v in pairs(modOptionsTweaks.options) do
+        esQolModOptions.options[k] = v;
+    end
+    if (getPlayer() and esQoLOptions.isMP and esQoLOptions.isAdmin(getPlayer()) and esQolModOptions.options.esQoLMPInfo > 1) then
+        esQoLOptions.setSettings();
+    end;
+    --print(esQoLOptions.isMP(),":",esQoLOptions.isAdmin(),":",esQolModOptions.options.esQoLMPInfo)
 end
 
 if ModOptions and ModOptions.getInstance then
-    tweaksOptions.modImportOptions = ModOptions:getInstance(tweaksOptions.configImportedOptions);
-    tweaksOptions.modOptions = ModOptions:getInstance(tweaksOptions.configOptions);
+    local importSettings = tweaksOptions.configImportedOptions;
+    if (esQoLOptions.isMP) then
+        importSettings.options_data["esQoLMPInfo"] = {
+            getText("IGUI_ESQ_COMMON_UI_OFF"),
+            getText("IGUI_ESQ_COMMON_UI_ON"),
+
+            name = "Create MP Settings",
+            tooltip = "Send QoL Settings to all players",
+            default = 1,
+        };
+    end
+
+    for k, v in pairs(importSettings.options_data) do
+        importSettings.options_data[k]["OnApplyInGame"] = refreshGlobal;
+    end
+    for k, v in pairs(tweaksOptions.configOptions.options_data) do
+        tweaksOptions.configOptions.options_data[k]["OnApplyInGame"] = refreshGlobal;
+    end
+
+    modOptionsImport = ModOptions:getInstance(importSettings);
+    modOptionsTweaks = ModOptions:getInstance(tweaksOptions.configOptions);
+    ModOptions:loadFile();
+    refreshGlobal();
 end
 
 return tweaksOptions;

@@ -1,5 +1,9 @@
+esQolModOptions = esQolModOptions or {};
+esQolModOptions.options = esQolModOptions.options or {};
+
+local esQoLOptions = require("es.qoloptions.main");
 local infoOptions = {};
-infoOptions.modOptions = {};
+local modOptionsInfo = {};
 
 infoOptions.configOptions = {
     options_data = {
@@ -76,44 +80,63 @@ infoOptions.configOptions = {
             default = 1,
         },
     },
-    mod_id = "esQoL",
+    mod_id = "esQoLMP",
     mod_fullname = getText("IGUI_mo_esqInfoName"),
     mod_shortname = getText("IGUI_mo_esqInfoName"),
 }
 
 function infoOptions.getOption(infoOption)
-    if (infoOption == "drainOn") then return infoOptions.modOptions.options.esQoLDrainableInfo == 2 end;
-    if (infoOption == "healthOn") then return infoOptions.modOptions.options.esQoLHealthInfo == 2 end;
-    if (infoOption == "meleeOn") then return infoOptions.modOptions.options.esQoLWIMelee > 1 end;
+    if (getPlayer() and esQoLOptions.isMP and not esQoLOptions.isAdmin(getPlayer())) then
+        local settings = esQoLOptions.getSettings(getPlayer());
+        if not settings then return false end;
+        esQolModOptions.options = settings;
+    end
+    if (esQolModOptions == nil) then return false end;
+
+    if (infoOption == "drainOn") then return esQolModOptions.options.esQoLDrainableInfo == 2 end;
+    if (infoOption == "healthOn") then return esQolModOptions.options.esQoLHealthInfo == 2 end;
+    if (infoOption == "meleeOn") then return esQolModOptions.options.esQoLWIMelee > 1 end;
     if (infoOption == "meleeCardinal") then
-        if (infoOptions.modOptions.options.esQoLWIMelee == 2) then return "E" end;
-        if (infoOptions.modOptions.options.esQoLWIMelee == 3) then return "S" end;
-        if (infoOptions.modOptions.options.esQoLWIMelee == 4) then return "O" end;
+        if (esQolModOptions.options.esQoLWIMelee == 2) then return "E" end;
+        if (esQolModOptions.options.esQoLWIMelee == 3) then return "S" end;
+        if (esQolModOptions.options.esQoLWIMelee == 4) then return "O" end;
     end
-    if (infoOption == "rangedOn") then return infoOptions.modOptions.options.esQoLWIRanged > 1 end;
+    if (infoOption == "rangedOn") then return esQolModOptions.options.esQoLWIRanged > 1 end;
     if (infoOption == "rangedCardinal") then
-        if (infoOptions.modOptions.options.esQoLWIRanged == 2) then return "E" end;
-        if (infoOptions.modOptions.options.esQoLWIRanged == 3) then return "S" end;
-        if (infoOptions.modOptions.options.esQoLWIRanged == 4) then return "O" end;
+        if (esQolModOptions.options.esQoLWIRanged == 2) then return "E" end;
+        if (esQolModOptions.options.esQoLWIRanged == 3) then return "S" end;
+        if (esQolModOptions.options.esQoLWIRanged == 4) then return "O" end;
     end
-    if (infoOption == "partsOn") then return infoOptions.modOptions.options.esQoLWIParts > 1 end;
+    if (infoOption == "partsOn") then return esQolModOptions.options.esQoLWIParts > 1 end;
     if (infoOption == "partsCardinal") then
-        if (infoOptions.modOptions.options.esQoLWIParts == 2) then return "E" end;
-        if (infoOptions.modOptions.options.esQoLWIParts == 3) then return "S" end;
-        if (infoOptions.modOptions.options.esQoLWIParts == 4) then return "O" end;
+        if (esQolModOptions.options.esQoLWIParts == 2) then return "E" end;
+        if (esQolModOptions.options.esQoLWIParts == 3) then return "S" end;
+        if (esQolModOptions.options.esQoLWIParts == 4) then return "O" end;
     end
-    if (infoOption == "booksOn") then return infoOptions.modOptions.options.esQoLBookInfo > 1 end;
-    if (infoOption == "carSpaceOn") then return infoOptions.modOptions.options.esQoLCarSpaceInfo > 1 end;
-    if (infoOption == "clotheOn") then return infoOptions.modOptions.options.esQoLClothingInfo > 1 end;
+    if (infoOption == "booksOn") then return esQolModOptions.options.esQoLBookInfo > 1 end;
+    if (infoOption == "carSpaceOn") then return esQolModOptions.options.esQoLCarSpaceInfo > 1 end;
+    if (infoOption == "clotheOn") then return esQolModOptions.options.esQoLClothingInfo > 1 end;
     if (infoOption == "clotheCardinal") then
-        if (infoOptions.modOptions.options.esQoLClothingInfo == 2) then return "E" end;
-        if (infoOptions.modOptions.options.esQoLClothingInfo == 3) then return "S" end;
-        if (infoOptions.modOptions.options.esQoLClothingInfo == 4) then return "O" end;
+        if (esQolModOptions.options.esQoLClothingInfo == 2) then return "E" end;
+        if (esQolModOptions.options.esQoLClothingInfo == 3) then return "S" end;
+        if (esQolModOptions.options.esQoLClothingInfo == 4) then return "O" end;
+    end
+end
+
+local function refreshGlobal()
+    for k, v in pairs(modOptionsInfo.options) do
+        esQolModOptions.options[k] = v;
     end
 end
 
 if ModOptions and ModOptions.getInstance then
-    infoOptions.modOptions = ModOptions:getInstance(infoOptions.configOptions);
+    for k, v in pairs(infoOptions.configOptions.options_data) do
+        infoOptions.configOptions.options_data[k]["OnApplyInGame"] = refreshGlobal;
+    end
+
+    modOptionsInfo = ModOptions:getInstance(infoOptions.configOptions);
+    ModOptions:loadFile();
+    refreshGlobal();
 end
 
 return infoOptions;

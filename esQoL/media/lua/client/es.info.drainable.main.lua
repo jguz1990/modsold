@@ -4,7 +4,7 @@ local esCommon = require("esq.common.01");
 local baseISInventoryPane = ISInventoryPane.drawItemDetails;
 function ISInventoryPane:drawItemDetails(item, y, xoff, yoff, red)
 
-    if (esInfoOptions.getOption("drainOn") and item ~= nil and instanceof(item, "Drainable")) then
+    if (esInfoOptions.getOption("drainOn") and item ~= nil and instanceof(item, "Drainable") and item:getUseDelta() > 0) then
         local maxUses = esCommon.numbers.round(1 / item:getUseDelta());
         local usesLeft = item:getDrainableUsesInt();
 

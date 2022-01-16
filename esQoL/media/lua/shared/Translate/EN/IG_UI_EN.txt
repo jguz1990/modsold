@@ -57,6 +57,7 @@ IG_UI_EN = {
     IGUI_mo_esqInstantConsolidate_TT = "Merge stacks of drainables, or all drainables. Keep empty option for mod compatibility.",
     IGUI_mo_icKeepEmpty = "Keep empty item",
     IGUI_menu_esqIC_MERGE_THIS = "Merge this stack of",
+    IGUI_menu_esqIC_FILL_THIS = "Fill this",
     IGUI_menu_esqIC_MERGE_ALL = "Merge",
     IGUI_mo_esdSortLoot = "Corpse Merge",
     IGUI_mo_esdSortLoot_TT = "Move loot from nearby corpse into one corpse",
@@ -102,9 +103,12 @@ IG_UI_EN = {
     IGUI_mo_ammoCheckName = "esqAmmoCheck",
     IGUI_mo_ammoCheck = "AmmoCheck",
     IGUI_mo_ammoCheck_TT = "Simple ammo HUD",
-    IGUI_mo_ammoCheckAmmoF1 = "[<GunAmmo>] @<BagAmmo>",
-    IGUI_mo_ammoCheckAmmoF2 = "<GunName> [<GunAmmo>] @<BagAmmo>",
-    IGUI_mo_ammoCheckAmmoF3 = "<GunName> [<GunAmmo>] #[<MagAmmo>] @<BagAmmo>",
+    IGUI_mo_ammoCheckAmmoF2 = "[<GunAmmo>]",
+    IGUI_mo_ammoCheckAmmoF3 = "[<GunAmmo>] @<BagAmmo>",
+    IGUI_mo_ammoCheckAmmoF4 = "<GunName> [<GunAmmo>]",
+    IGUI_mo_ammoCheckAmmoF5 = "<GunName> [<GunAmmo>] @<BagAmmo>",
+    IGUI_mo_ammoCheckAmmoF6 = "<GunName> [<GunAmmo>] #[<MagAmmo>]",
+    IGUI_mo_ammoCheckAmmoF7 = "<GunName> [<GunAmmo>] #[<MagAmmo>] @<BagAmmo>",
 
     -- AutoEquip
     IGUI_mo_esqAutoEquip = "AutoEquip",
@@ -126,9 +130,11 @@ IG_UI_EN = {
     IGUI_mo_book = "Book Skills",
     IGUI_mo_book_TT = "Shows your current skill level for skill books",
 
-    IGUI_mo_carSpace = "Car Parts Capacity",
-    IGUI_mo_carSpace_TT = "Shows the max capacity for car parts.",
+    IGUI_mo_carSpace = "Car Parts Capacity & Towing",
+    IGUI_mo_carSpace_TT = "Shows the max capacity for car parts & towing power",
 
     IGUI_mo_esqForceEquip = "Force Equip",
-    IGUI_mo_esqForceEquip_TT = "Force Equip items with extreme weight.",
+    IGUI_mo_esqForceEquip_TT = "Force Equip items with extreme weight",
+    IGUI_mo_esqTowing = "Towing: %1",
+
 }

@@ -44,13 +44,42 @@ local function doMenuMerge(item, itemStack, player)
     ISTimedActionQueue.add(animate);
 end
 
+local function doMenuFill(item, itemStack, player)
+    local animate = mergeAnimate:new(player, item, 80);
+    local usesPerItem = esCommon.numbers.round(1 / item:getUseDelta());
+    local fillUses = usesPerItem - item:getDrainableUsesInt();
+    local newStack = LuaList:new();
+
+    newStack:add(item);
+    for i = 0, itemStack:size() - 1 do
+        local localItem = itemStack:get(i);
+        if (localItem ~= item) then
+            fillUses = fillUses - localItem:getDrainableUsesInt();
+            newStack:add(localItem);
+            if (fillUses <= 0) then
+                break;
+            end
+        end
+    end
+
+    animate:setExtra({ newStack, item:getContainer() });
+
+    if (isClient()) then
+        esCommon.items.moveTo(newStack, player:getInventory(), player);
+    else
+        esCommon.items.moveTo(newStack, item:getContainer(), player);
+    end
+
+    ISTimedActionQueue.add(animate);
+end
+
 local function filterDrainable(itemStack)
     local drainables = LuaList:new();
     local selectedItem;
 
     for i = 0, itemStack:size() - 1 do
         local testItem = itemStack:get(i);
-        if testItem:IsDrainable() and not testItem:isFavorite() then
+        if testItem:IsDrainable() and testItem:getUseDelta() > 0 and not testItem:isFavorite() then
 
             if (selectedItem == nil) then
                 drainables:add(testItem);
@@ -75,6 +104,10 @@ ISInventoryPaneContextMenu.createMenu = function(player, isInPlayerInventory, it
 
     local allItems = esCommon.items.getStackItems(selectedItem:getFullType(), esCommon.containers.getAll(player))
 
+    if (allItems:size() > 1) then
+        local recipeName = getText("IGUI_menu_esqIC_FILL_THIS") .. " " .. selectedItem:getDisplayName();
+        baseContext:addOption(recipeName, selectedItem, doMenuFill, allItems, esCommon.player.getPlayerObject(player));
+    end
     if (thisStack:size() > 1) then
         local recipeName = getText("IGUI_menu_esqIC_MERGE_THIS") .. " " .. selectedItem:getDisplayName() .. " (" .. thisStack:size() .. ")";
         baseContext:addOption(recipeName, selectedItem, doMenuMerge, thisStack, esCommon.player.getPlayerObject(player));
