@@ -1,8 +1,0 @@
-module Base
-{
-	model SleepingBagBBUPurple
-  	  {
-     	   mesh = WorldItems/SleepingBagBBUPurple,
-      	  texture = WorldItems/SleepingBagBBUPurple,
-      	     	 }
- }
