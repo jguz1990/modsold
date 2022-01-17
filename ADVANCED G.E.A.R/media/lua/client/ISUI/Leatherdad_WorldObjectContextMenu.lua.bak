@@ -1,0 +1,72 @@
+
+function Leatherdad_Lightbulb(player, context, worldobjects, test)
+	local playerObj = getSpecificPlayer(player)
+	local playerInv = playerObj:getInventory()
+	if lightSwitch ~= nil and not ISWorldObjectContextMenu.isSomethingTo(lightSwitch, player) then
+
+
+        if lightSwitch:getCanBeModified() then
+            if test == true then return true; end
+
+            -- if not modified yet, give option to modify this lamp so it uses battery instead of power
+            if not lightSwitch:getUseBattery() then
+                if playerObj:getPerkLevel(Perks.Electricity) >= ISLightActions.perkLevel then
+                    if ( playerInv:contains("Multitool") or playerInv:contains("SAK"))
+					and not playerInv:contains("Screwdriver")
+					and playerInv:contains("ElectronicsScrap") then
+                        context:addOption(getText("ContextMenu_CraftBatConnector"), worldobjects, ISWorldObjectContextMenu.onLightModify, lightSwitch, player);
+                    end
+                end
+            end
+
+            -- if its modified add the battery options
+            if lightSwitch:getUseBattery() then
+                if lightSwitch:getHasBattery() then
+                    local removeOption = context:addOption(getText("ContextMenu_Remove_Battery"), worldobjects, ISWorldObjectContextMenu.onLightBattery, lightSwitch, player, true);
+                    if playerObj:DistToSquared(lightSwitch:getX() + 0.5, lightSwitch:getY() + 0.5) < 2 * 2 then
+                        local item = ScriptManager.instance:getItem("Base.Battery")
+                        local tooltip = ISWorldObjectContextMenu.addToolTip()
+                        tooltip:setName(item and item:getDisplayName() or "???")
+                        tooltip.description = getText("IGUI_RemainingPercent", luautils.round(math.ceil(lightSwitch:getPower()*100),0))
+                        removeOption.toolTip = tooltip
+                    end
+                elseif playerInv:containsTypeRecurse("Battery") then
+                    local batteryOption = context:addOption(getText("ContextMenu_AddBattery"), worldobjects, nil);
+                    local subMenuBattery = ISContextMenu:getNew(context);
+                    context:addSubMenu(batteryOption, subMenuBattery);
+
+                    local batteries = playerInv:getAllTypeEvalRecurse("Battery", predicateNotEmpty)
+                    for n = 0,batteries:size()-1 do
+                        local battery = batteries:get(n)
+                        if instanceof(battery, 'DrainableComboItem') and battery:getUsedDelta() > 0 then
+                            local insertOption = subMenuBattery:addOption(battery:getName(), worldobjects, ISWorldObjectContextMenu.onLightBattery, lightSwitch, player, false, battery);
+                            local tooltip = ISWorldObjectContextMenu.addToolTip()
+                            tooltip:setName(battery:getName())
+                            tooltip.description = getText("IGUI_RemainingPercent", luautils.round(math.ceil(battery:getUsedDelta()*100),0))
+                            insertOption.toolTip = tooltip
+                        end
+                    end
+
+                end
+            end
+		end
+	end
+end
+
+ISWorldObjectContextMenu.onLightModify = function(worldobjects, light, player, scrapitem)
+    local playerObj = getSpecificPlayer(player)
+    local playerInv = playerObj:getInventory()
+    if light:getSquare() and luautils.walkAdj(playerObj, light:getSquare()) then
+        local screwdriver = playerInv:getItemFromType("Screwdriver") or playerInv:getItemFromType("Multitool") or playerInv:getItemFromType("SAK")
+        local scrapItem = playerInv:getItemFromType("ElectronicsScrap")
+        if not screwdriver or not scrapItem then return end
+        ISWorldObjectContextMenu.equip(playerObj, playerObj:getPrimaryHandItem(), screwdriver, true, false)
+        ISWorldObjectContextMenu.equip(playerObj, playerObj:getSecondaryHandItem(), scrapItem, false, false)
+        ISTimedActionQueue.add(ISLightActions:new("ModifyLamp",playerObj, light, scrapItem));
+    end
+end
+
+
+
+--triggerEvent("OnPreFillWorldObjectContextMenu", player, context, worldobjects, test);
+Events.OnPreFillWorldObjectContextMenu.Add(Leatherdad_Lightbulb)

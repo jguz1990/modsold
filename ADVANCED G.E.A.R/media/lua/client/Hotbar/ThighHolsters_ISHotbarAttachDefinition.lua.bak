@@ -1,0 +1,26 @@
+ISHotbarAttachDefinition = ISHotbarAttachDefinition or {};
+ISHotbarAttachDefinition.replacements = {};
+
+
+
+local ThighHolsterRight = {
+	type = "ThighHolsterRight",
+	name = "Thigh Holster",
+	animset = "holster right",
+	attachments = {
+		Holster = "Thigh Holster Right",
+		SawnOff = "Sawnoff Right",
+	},
+}
+table.insert(ISHotbarAttachDefinition, ThighHolsterRight);
+
+local ThighHolsterLeft = {
+	type = "ThighHolsterLeft",
+	name = "Thigh Holster",
+	animset = "holster left",
+	attachments = {
+		Holster = "Thigh Holster Left",
+		SawnOff = "Sawnoff Left",
+	},
+}
+table.insert(ISHotbarAttachDefinition, ThighHolsterLeft);

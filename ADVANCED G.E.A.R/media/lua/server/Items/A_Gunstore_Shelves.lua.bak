@@ -1,0 +1,33 @@
+require "Items/SuburbsDistributions"
+require "Items/ProceduralDistributions"
+require "Items/VehicleDistributions"
+require "Items/ItemPicker"	
+
+   
+    SuburbsDistributions["gunstore"]["shelves"] = {
+            rolls = 3,
+            items = {
+                "x2Scope", 3,
+                "x4Scope", 2,
+                "x8Scope", 1,
+                "AmmoStraps", 3,
+                "Sling", 4,
+                "FiberglassStock", 3,
+                "RecoilPad",  4,
+                "HuntingKnife", 5,
+                "GunPowder", 10,
+                "GunPowder", 10,
+                "GunPowder", 10,
+                "HuntingKnife", 3,
+                "HuntingMag1", 0.2,
+                "HuntingMag2", 0.2,
+                "HuntingMag3", 0.2,
+                "Radio.WalkieTalkie4",10,
+                "Radio.WalkieTalkie5",5,
+                "Radio.HamRadio1",10,
+                "Radio.HamRadio2",5,
+                "Glasses_Shooting", 2,
+                "Machete", 1,
+            },
+            fillRand = 0,
+        }

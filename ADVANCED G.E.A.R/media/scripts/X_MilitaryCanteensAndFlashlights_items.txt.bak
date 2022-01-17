@@ -1,0 +1,104 @@
+module Base
+{
+    
+
+	item Flashlight_Military
+	{
+		LightDistance	=	20,
+		Weight	=	0.5,
+		DisappearOnUse	=	FALSE,
+		Type	=	Drainable,
+		TorchCone	=	TRUE,
+		UseDelta	=	0.0009,
+		LightStrength	=	0.8,
+		DisplayName	=	Military Flashlight,
+		ActivatedItem	=	TRUE,
+		Icon	=	Flashlight_Military,
+		MetalValue = 10,
+		cantBeConsolided = TRUE,
+		StaticModel = Flashlight_Military,
+		AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}  
+
+	recipe Remove Battery
+   {
+     keep Flashlight_Military,
+
+     Result:Battery,
+     Time:30,
+     OnTest:TorchBatteryRemoval_TestIsValid,
+     OnCreate:TorchBatteryRemoval_OnCreate,
+      Prop2:Flashlight_Military,
+   }
+
+  	 recipe Insert Battery into Military Flashlight
+   {
+     destroy Flashlight_Military,
+     destroy Battery,
+
+     Result:Flashlight_Military,
+     Time:30,
+     OnTest:TorchBatteryInsert_TestIsValid,
+     OnCreate:TorchBatteryInsert_OnCreate,
+      Prop2:Flashlight_Military,
+   }
+   
+   	recipe Dismantle Military Flashlight
+   {
+      destroy Flashlight_Military,
+      keep Screwdriver,
+
+      Result:ElectronicsScrap,
+      Time:30.0,
+      OnTest:TorchBatteryInsert_TestIsValid,
+      OnGiveXP:DismantleElectronics_OnGiveXP,
+      OnCreate:TorchDismantle_OnCreate,
+      Category:Electrical,
+      AnimNode:Disassemble,
+      Prop1:Screwdriver,
+      Prop2:Flashlight_Military,
+   }
+
+
+	item Canteen
+    	{
+       	 	Weight    		= 	0.1,
+		CanStoreWater		= 	TRUE,
+        	Type    		= 	Normal,
+        	DisplayName         	= 	Canteen,
+		ReplaceOnUseOn		= 	WaterSource-Canteenfull,
+        	icon 			= 	Canteen,
+		RainFactor 		= 	1,
+		Tooltip = Tooltip_item_RainFromGround,
+		StaticModel = Inauthentic_Canteen,
+		AttachmentType = Gear,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+	}
+
+	item Canteenfull
+    	{
+		IsWaterSource		=	TRUE,
+		Weight			=	1.5,
+		CanStoreWater		=	TRUE,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		IsCookable		=	TRUE,
+		UseDelta		=	0.05,
+		DisplayName		=	Canteen with Water,
+		ReplaceOnDeplete	=	Canteen,
+		ReplaceOnUseOn		=	WaterSource-Canteenfull,
+		Icon			=	Canteen,
+		RainFactor 		= 	1,
+		Tooltip = Tooltip_item_RainFromGround,
+		StaticModel = Inauthentic_Canteen,
+		AttachmentType = Gear,
+        	EatType = bottle,
+		primaryAnimMask = HoldingTorchRight,
+        	secondaryAnimMask = HoldingTorchLeft,
+	}
+	
+}
+

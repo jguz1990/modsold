@@ -1,0 +1,80 @@
+require "Items/SuburbsDistributions"
+require "Items/ProceduralDistributions"
+require "Items/VehicleDistributions"
+require "Items/ItemPicker"	
+
+	-- table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, 1);
+	
+	-- table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, 1);
+
+	-- table.insert(SuburbsDistributions["gunstore"]["counter"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["gunstore"]["counter"].items, 1);
+
+	-- table.insert(SuburbsDistributions["gunstore"]["displaycase"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["gunstore"]["displaycase"].items, 1);
+	
+	-- table.insert(SuburbsDistributions["gunstore"]["locker"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["gunstore"]["locker"].items, 1);
+	
+	-- table.insert(SuburbsDistributions["gunstore"]["metal_shelves"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["gunstore"]["metal_shelves"].items, 1);
+	
+	-- table.insert(SuburbsDistributions["gunstorestorage"]["all"].items, "Base.SmokeGrenade");
+	-- table.insert(SuburbsDistributions["gunstorestorage"]["all"].items, 1);	
+	
+	table.insert(SuburbsDistributions["armystorage"]["locker"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["armystorage"]["locker"].items, 1);
+	
+	table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, 1);
+	
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, 0.1);
+	
+	table.insert(SuburbsDistributions["Bag_SurvivorBag"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["Bag_SurvivorBag"].items, 10);
+	
+	table.insert(SuburbsDistributions["SurvivorCache1"]["SurvivorCrate"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["SurvivorCache1"]["SurvivorCrate"].items, 0.1);
+	
+	table.insert(SuburbsDistributions["SurvivorCache2"]["SurvivorCrate"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["SurvivorCache2"]["SurvivorCrate"].items, 0.1);
+		
+	table.insert(ProceduralDistributions.list["LockerArmyBedroom"].items, "Base.SmokeGrenade");
+	table.insert(ProceduralDistributions.list["LockerArmyBedroom"].items, 1);
+
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, 50);
+
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, 50);
+
+
+	table.insert(ProceduralDistributions.list["FirearmWeapons"].items, "Base.SmokeGrenade");
+	table.insert(ProceduralDistributions.list["FirearmWeapons"].items, 1);
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, "Base.SmokeGrenade");
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, 1);	
+--	table.insert(Distributions, 1, distributionTable);
+	
+	
+	local function isMod(mod_Name)
+		local mods = getActivatedMods();
+		for i=0, mods:size()-1, 1 do
+			if mods:get(i) == mod_Name then
+				return true;
+			end
+		end
+		return false;
+	end
+	
+	
+
+ --if isMod("FRUsedCarsBETA") then
+
+	-- end	
+	
+	-- if isMod("VileM113APC") then
+
+	-- end

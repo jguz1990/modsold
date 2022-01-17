@@ -1,0 +1,31 @@
+require "Items/SuburbsDistributions"
+require "Items/ProceduralDistributions"
+require "Items/VehicleDistributions"
+require "Items/ItemPicker"	
+
+
+table.insert(SuburbsDistributions["giftstore"]["displaycase"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["giftstore"]["displaycase"].items, 0.0001);
+table.insert(SuburbsDistributions["departmentstore"]["counter"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["departmentstore"]["counter"].items, 0.0001);
+table.insert(SuburbsDistributions["electronicsstore"]["counter"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["electronicsstore"]["counter"].items, 0.0001);
+table.insert(SuburbsDistributions["electronicsstore"]["shelves"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["electronicsstore"]["shelves"].items, 0.0001);
+
+table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["policestorage"]["metal_shelves"].items, 0.001);
+table.insert(SuburbsDistributions["policestorage"]["locker"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["policestorage"]["locker"].items, 0.001);
+
+table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, 0.001);
+table.insert(SuburbsDistributions["armystorage"]["locker"].items, "eris_nvg.nvgoggles");
+table.insert(SuburbsDistributions["armystorage"]["locker"].items, 0.001);	
+
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, "eris_nvg.nvgoggles");
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, 5);	
+
+
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, "eris_nvg.nvgoggles");
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, 5);	
