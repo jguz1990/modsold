@@ -126,7 +126,36 @@ D) Electrician Profession:
    - The Profession starts with "Amateur Electrician" (it already did because of the Electronic levels but now the trait is not pickable, just to ensure no one waste points on that.)
 E) Physically Active and Sedentary now require more time to be obtained/removed.
 
-Not on Steam yet:
+On Steam, Update 23 Dec 2021:
 A) Prodigy trait:
    - Cost reduced from 8 to 6.
 B) New Trait: Nightmares. When sleeping there are possibilities of waking up with Extreme Panic, Stress and Wetness. The only way to remove it is by obtaining Desensitized. Not available for MP.
+
+On Steam, Update 31 Dec 2021:
+A) Fixed a minimum bug in the Alcoholic trait, a + was changed to -. Thanks Sauce for letting me know.
+
+On Steam, Update 08 Jan 2022:
+A) Hard of Hearing and Keen Hearing Traits: Files affected, DTMainCreationMethods.lua, DTByPerkLevel.lua.
+   - Each level of the next Perks will increase an internal counter by 1: Sneak, Lightfoot, Nimble, Aiming, Axe, Blunt, SmallBlunt, LongBlade, SmallBlade, Spear, PlantScavenging (which means a total of 110 points).
+   - Reach the counter to 30 to remove Hard Of Hearing, reach the counter to 50 to obtain Keen Hearing.
+B) Slow Learner and Fast Learner Traits: Files affected, DTMainCreationMethods.lua, DTByPerkLevel.lua.
+   - Each level of the next Perks will increase an internal counter by 1: Woodwork, Cooking, Farming, Doctor, Electricity, MetalWelding, Mechanics, Tailoring, Fishing, Trapping, PlantScavenging (which means a total of 110 points).
+   - Reach the counter to 30 to remove Slow Learner, reach the counter to 50 to obtain Fast Learner.
+C) Hard refactor in some part of the code (not changing functionality): Files affected, DTMainCreationMethods.lua, DTByOtherConditions.lua, DTinitializations.lua (deleted).
+D) Burglar Profession: File affected: DTMainCreationMethods.lua
+   - Cost changed from 8 to 10 (mostly because everyone uses it on MP).
+E) Translations: 
+   - French translation updated. Thanks Xiivait.
+   - Russian translation added. Thanks Archi9.
+F) Rain Traits and Outdoorsman Traits: Files affected, DTMainCreationMethods.lua, DTByOtherConditions.lua
+   - Pluviophobia and Outdoorsman are now mutually excluyent.
+   - To obtain the Traits now the player has to be Outside AND not in a vehicle.
+   - Having the Traits: Outdoorsman, Hiker and/or Former Scout, the Rain Traits are removed/obtained faster.
+   - Having the Traits: Pluviophile, Hiker and/or Former Scout, the Outdoorsman Trait is obtained faster.
+G) Claustrophobic and Agoraphobic Traits: DTByOtherConditions.lua, DTByKills.lua
+   - Buffed the possibilities and the amount the value increases after killing a zombie.
+   - Buffed the possibilities to increase the value by being Lucky (It was nerfed if you're unlucky!!)
+   - Buffed the rate in which the counter increases passively 
+
+Not on Steam yet:
+A) Fixed a lua error that happened once when loading the game for the first time. Moved some code lines from the bottom to the top. Files affected, DTByPerkLevel.lua

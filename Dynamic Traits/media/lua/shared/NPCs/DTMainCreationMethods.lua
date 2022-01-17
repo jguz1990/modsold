@@ -1,5 +1,8 @@
 DTBaseGameCharacterDetails = {}
 
+------------------------------------------------------------
+----- NEW TRAITS / TRAITS REBALANCE / TRAITS EXLUCIONS -----
+------------------------------------------------------------
 DTBaseGameCharacterDetails.DoTraits = function()
 
     -- VANILLA TRAITS COST REBALANCE
@@ -20,12 +23,12 @@ DTBaseGameCharacterDetails.DoTraits = function()
     fit:addXPBoost(Perks.Fitness, 2)
     local ath = TraitFactory.addTrait("Athletic", getText("UI_trait_athletic"), 10, getText("UI_trait_athleticdesc"), false);
     ath:addXPBoost(Perks.Fitness, 4)
-    local underweight = TraitFactory.addTrait("Very Underweight", getText("UI_trait_veryunderweight"), -10, getText("UI_trait_veryunderweightdesc"), false);
-	underweight:addXPBoost(Perks.Fitness, -2)
+    local veryUnderweight = TraitFactory.addTrait("Very Underweight", getText("UI_trait_veryunderweight"), -10, getText("UI_trait_veryunderweightdesc"), false);
+	veryUnderweight:addXPBoost(Perks.Fitness, -2)
 	local underweight = TraitFactory.addTrait("Underweight", getText("UI_trait_underweight"), -6, getText("UI_trait_underweightdesc"), false);
 	underweight:addXPBoost(Perks.Fitness, -1)
-	local obese = TraitFactory.addTrait("Overweight", getText("UI_trait_overweight"), -6, getText("UI_trait_overweightdesc"), false);
-	obese:addXPBoost(Perks.Fitness, -1)
+	local overweight = TraitFactory.addTrait("Overweight", getText("UI_trait_overweight"), -6, getText("UI_trait_overweightdesc"), false);
+	overweight:addXPBoost(Perks.Fitness, -1)
     local obese = TraitFactory.addTrait("Obese", getText("UI_trait_obese"), -10, getText("UI_trait_obesedesc"), false);
 	obese:addXPBoost(Perks.Fitness, -2)
     local strong = TraitFactory.addTrait("Strong", getText("UI_trait_strong"), 10, getText("UI_trait_strongdesc"), false);
@@ -71,12 +74,12 @@ DTBaseGameCharacterDetails.DoTraits = function()
     formerscout:addXPBoost(Perks.PlantScavenging, 1)
 	local baseball = TraitFactory.addTrait("BaseballPlayer", getText("UI_trait_PlaysBaseball"), 4, getText("UI_trait_PlaysBaseballDesc"), false);
 	baseball:addXPBoost(Perks.Blunt, 1)
-	local hiker = TraitFactory.addTrait("Hiker", getText("UI_trait_Hiker"), 5, getText("UI_trait_HikerDesc"), false);
-	hiker:addXPBoost(Perks.PlantScavenging, 2)
-	hiker:addXPBoost(Perks.Trapping, 1)
-    hiker:getFreeRecipes():add("Make Stick Trap");
-    hiker:getFreeRecipes():add("Make Snare Trap");
-    hiker:getFreeRecipes():add("Make Wooden Cage Trap");
+	local backpacker = TraitFactory.addTrait("Hiker", getText("UI_trait_Hiker"), 5, getText("UI_trait_HikerDesc"), false);
+	backpacker:addXPBoost(Perks.PlantScavenging, 2)
+	backpacker:addXPBoost(Perks.Trapping, 1)
+    backpacker:getFreeRecipes():add("Make Stick Trap");
+    backpacker:getFreeRecipes():add("Make Snare Trap");
+    backpacker:getFreeRecipes():add("Make Wooden Cage Trap");
 	local hunter = TraitFactory.addTrait("Hunter", getText("UI_trait_Hunter"), 6, getText("UI_trait_HunterDesc"), false);
 	hunter:addXPBoost(Perks.Aiming, 1)
 	hunter:addXPBoost(Perks.Trapping, 1)
@@ -286,12 +289,15 @@ DTBaseGameCharacterDetails.DoTraits = function()
     -- "Handy" && "Handy2" EXCLUSION.
     TraitFactory.setMutualExclusive("Handy", "Handy2");
 
-    -- "Amateur Electrician" && "Amateur Electrician" EXCLUSION.
+    -- "Amateur Electrician" && "Amateur Electrician2" EXCLUSION.
     TraitFactory.setMutualExclusive("AmateurElectrician", "AmateurElectrician2");
 
     -- TRAITS THAT CAN'T BE PICKED WITH "Nightmares" TRAIT.
     TraitFactory.setMutualExclusive("Nightmares","Brave");
     TraitFactory.setMutualExclusive("Nightmares","Desensitized");
+
+    -- "Pluviophobia" && "Outdoorsman" EXCLUSION.
+    TraitFactory.setMutualExclusive("Outdoorsman","Pluviophobia");
 
     local traitList = TraitFactory.getTraits()
 	for i=1,traitList:size() do
@@ -300,8 +306,10 @@ DTBaseGameCharacterDetails.DoTraits = function()
 	end
 end
 
+---------------------------------
+----- PROFESSIONS REBALANCE -----
+---------------------------------
 DTBaseGameCharacterDetails.DoProfessions = function()
-
     -- PROFFESIONS REBALANCE AND REWORK
     -- FIRE OFFICER PROFESSION REBALANCE
     local fireofficer = ProfessionFactory.getProfession("fireofficer");
@@ -316,33 +324,35 @@ DTBaseGameCharacterDetails.DoProfessions = function()
     -- BURGLAR PROFESSION REBALANCE
     if getActivatedMods():contains("WPA") and getActivatedMods():contains("betterLockpicking") then 
         local burglar = ProfessionFactory.getProfession("burglar");
-        burglar:setCost(-10);
+        burglar:setCost(-12);
     elseif getActivatedMods():contains("WPA") or getActivatedMods():contains("betterLockpicking") then
         local burglar = ProfessionFactory.getProfession("burglar");
-        burglar:setCost(-9);
+        burglar:setCost(-11);
     else
         local burglar = ProfessionFactory.getProfession("burglar");
-        burglar:setCost(-8);
+        burglar:setCost(-10);
     end
 
     -- FARMER PROFESSION REBALANCE
     if getActivatedMods():contains("LeGourmetRevolution") then
         local farmer = ProfessionFactory.getProfession("farmer");
         farmer:setCost(4);
+        farmer:addXPBoost(Perks.Farming, 4);
     else
         local farmer = ProfessionFactory.getProfession("farmer");
         farmer:setCost(6);
+        farmer:addXPBoost(Perks.Farming, 4);
     end
 
     -- FISHERMAN PROFESSION REBALANCE
     local fisherman = ProfessionFactory.getProfession("fisherman");
-    fisherman:setCost(4);
+    fisherman:setCost(6);
 
     -- DOCTOR PROFESSION REBALANCE
     local doctor = ProfessionFactory.getProfession("doctor");
     doctor:setCost(0);
-	doctor:addXPBoost(Perks.Doctor, 5)
-	doctor:addXPBoost(Perks.SmallBlade, 2)
+	doctor:addXPBoost(Perks.Doctor, 5);
+	doctor:addXPBoost(Perks.SmallBlade, 2);
     doctor:addFreeTrait("NightOwl");
 
     -- VETERAN PROFESSION REBALANCE
@@ -384,6 +394,7 @@ DTBaseGameCharacterDetails.DoProfessions = function()
 
     -- ELECTRICIAN PROFESSION REBALANCE
     local electrician = ProfessionFactory.getProfession("electrician");
+    electrician:addXPBoost(Perks.Electricity, 4);
     electrician:setCost(0);
     electrician:addFreeTrait("AmateurElectrician2");
 
@@ -391,33 +402,34 @@ DTBaseGameCharacterDetails.DoProfessions = function()
     if getActivatedMods():contains("WPA") and getActivatedMods():contains("AmmoMaker") then
         local engineer = ProfessionFactory.getProfession("engineer");
         engineer:setCost(-8);
-        engineer:addXPBoost(Perks.Electricity, 1);
-        engineer:addXPBoost(Perks.Mechanics, 2);
+        engineer:addXPBoost(Perks.Mechanics, 1);
+        engineer:addXPBoost(Perks.MetalWelding, 1);
         engineer:addFreeTrait("Burglar");
     elseif getActivatedMods():contains("WPA") or getActivatedMods():contains("AmmoMaker") then
         local engineer = ProfessionFactory.getProfession("engineer");
-        engineer:setCost(-6);
-        engineer:addXPBoost(Perks.Electricity, 1);
-        engineer:addXPBoost(Perks.Mechanics, 2);
+        engineer:setCost(-7);
+        engineer:addXPBoost(Perks.Mechanics, 1);
+        engineer:addXPBoost(Perks.MetalWelding, 1);
         engineer:addFreeTrait("Burglar");
     else
         local engineer = ProfessionFactory.getProfession("engineer");
-        engineer:setCost(-4);
-        engineer:addXPBoost(Perks.Electricity, 1);
-        engineer:addXPBoost(Perks.Mechanics, 2);
+        engineer:setCost(-6);
+        engineer:addXPBoost(Perks.Mechanics, 1);
+        engineer:addXPBoost(Perks.MetalWelding, 1);
         engineer:addFreeTrait("Burglar");
     end
 
     -- METALWORKER PROFESSION REBALANCE
     local metalworker = ProfessionFactory.getProfession("metalworker");
-    metalworker:setCost(0);
+    metalworker:setCost(-2);
     metalworker:addXPBoost(Perks.MetalWelding, 4);
 
     -- MECHANICS PROFESSION REBALANCE
     local mechanics = ProfessionFactory.getProfession("mechanics");
-    mechanics:setCost(0);
+    mechanics:setCost(-6);
 	mechanics:addXPBoost(Perks.Mechanics, 3);
 	mechanics:addXPBoost(Perks.MetalWelding, 1);
+    mechanics:addFreeTrait("Burglar");
 
     local profList = ProfessionFactory.getProfessions()
 	for i=1,profList:size() do
@@ -426,5 +438,344 @@ DTBaseGameCharacterDetails.DoProfessions = function()
 	end
 end
 
+----------------------------------------------
+----- INITIALIZATION FOR A NEW CHARACTER -----
+----------------------------------------------
+DTBaseGameCharacterDetails.DoNewCharacterInitializations = function(playernum, character)
+    local player = getSpecificPlayer(playernum);
+
+    -- TRAITS CHANGE
+    if player:HasTrait("PhysicallyActive2") then
+        player:getTraits():remove("PhysicallyActive2");
+        player:getTraits():add("PhysicallyActive");
+    end
+    if player:HasTrait("Handy2") then
+        player:getTraits():remove("Handy2");
+        player:getTraits():add("Handy");
+    end
+
+    -- INITIALIZATION FOR KILLS PATH
+    if player:getModData().DTKillsPath == nil then
+        if player:HasTrait("Cowardly") then
+            player:getModData().DTKillsPath = 1;
+        elseif player:HasTrait("Brave") then
+            player:getModData().DTKillsPath = 2;
+        else
+            player:getModData().DTKillsPath = 3;
+        end
+    end
+    -- INITIALIZATION FOR KILLS SYSTEM
+    if player:getModData().DTKillscheck2 == nil then
+        player:getModData().DTKillscheck2 = 0;
+    end
+    -- INITIALIZATION FOR DEXTROUS/ALLTHUMBS
+    if player:getModData().DTatdTraits == nil then
+        if player:HasTrait("AllThumbs") then
+            player:getModData().DTatdTraits = 0;
+        elseif player:HasTrait("Dextrous") then
+            player:getModData().DTatdTraits = 120000;
+        else
+            player:getModData().DTatdTraits = 60000;
+        end
+    end
+    -- INITIALIZATION FOR ORGANIZED/DISORGANIZED TRAITS
+    if player:getModData().DTdoTraits == nil then
+        if player:HasTrait("Disorganized") then
+            player:getModData().DTdoTraits = 0;
+        elseif player:HasTrait("Organized") then
+            player:getModData().DTdoTraits = 200000;
+        else
+            player:getModData().DTdoTraits = 100000;
+        end
+    end
+    -- INITIALIZATION FOR OUTDOORSMAN TRAIT
+    if player:getModData().DTOutdoorsCounter == nil then
+        player:getModData().DTOutdoorsCounter = 0;
+    end
+    -- INITIALIZATION FOR CATSEYES TRAIT
+    if player:getModData().DTCatsEyesCounter == nil then
+        player:getModData().DTCatsEyesCounter = 0;
+    end
+    -- INITIALIZATION FOR RAIN TRAITS
+    if player:getModData().DTRainTraits == nil then
+        if player:HasTrait("Pluviophile") then
+            player:getModData().DTRainTraits = 100000;
+        elseif player:HasTrait("Pluviophobia") then
+            player:getModData().DTRainTraits = 0;
+        else
+            player:getModData().DTRainTraits = 50000;
+        end
+    end
+    -- INITIALIZATION FOR CLAUSTROPHOBIC AND AGORAPHOBIC TRAITS
+    if player:getModData().DTagoraClaustroCounter == nil then
+        player:getModData().DTagoraClaustroCounter = 0;
+    end
+    -- INITIALIZATION FOR SMOKER TRAIT
+    if player:getModData().DTdaysSinceLastSmoke == nil then
+        player:getModData().DTdaysSinceLastSmoke = 0;
+    end
+    -- INITIALIZATION FOR BLOODLUST TRAIT
+    if player:getModData().DTKillscheck == nil then
+        player:getModData().DTKillscheck = 0;
+    end
+    if player:getModData().DTtimesinceLastKill == nil then
+        player:getModData().DTtimesinceLastKill = 0;
+    end
+    -- INITIALIZATION FOR ALCOHOLIC TRAIT
+    if player:getModData().DThoursSinceLastDrink == nil then
+        player:getModData().DThoursSinceLastDrink = 0;
+    end
+    if player:getModData().DTthresholdToObtainAlcoholic == nil then
+        player:getModData().DTthresholdToObtainAlcoholic = 0;
+    end
+    -- INITIALIZATION FOR ANOREXIC TRAIT
+    if player:getModData().DTthresholdToObtainLoseAnorexy == nil then
+        if player:HasTrait("Anorexy") then
+            player:getModData().DTthresholdToObtainLoseAnorexy = -720;
+        else
+            player:getModData().DTthresholdToObtainLoseAnorexy = 0;
+        end
+    end
+    -- INITIALIZATION FOR PHYSICALLY ACTIVE/SEDENTARY TRAITS
+    if player:getModData().DTObtainLoseActiveSedentary == nil then 
+        if player:HasTrait("PhysicallyActive") then
+            player:getModData().DTObtainLoseActiveSedentary = 60000;
+        elseif player:HasTrait("Sedentary") then
+            player:getModData().DTObtainLoseActiveSedentary = -60000;
+        else
+            player:getModData().DTObtainLoseActiveSedentary = 0;
+        end
+    end
+    -- INITIALIZATION FOR HARD OF HEARING AND KEEN HEARING TRAITS
+    if player:getModData().DTKeenHardOfHearing == nil then 
+        local total = 0;
+        -- AGILITY SKILLS
+        total = total + player:getPerkLevel(Perks.Sneak);
+        total = total + player:getPerkLevel(Perks.Lightfoot);
+        total = total + player:getPerkLevel(Perks.Nimble);
+        -- FIREARMS SKILLS
+        total = total + player:getPerkLevel(Perks.Aiming);
+        -- COMBAT SKILLS
+        total = total + player:getPerkLevel(Perks.Axe);
+        total = total + player:getPerkLevel(Perks.Blunt);
+        total = total + player:getPerkLevel(Perks.SmallBlunt);
+        total = total + player:getPerkLevel(Perks.LongBlade);
+        total = total + player:getPerkLevel(Perks.SmallBlade);
+        total = total + player:getPerkLevel(Perks.Spear);
+        -- SURVIVALIST SKILLS
+        total = total + player:getPerkLevel(Perks.PlantScavenging);
+        -- MOD DATA = TOTAL
+        player:getModData().DTKeenHardOfHearing = total;
+        -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE HARD OF HEARING OR OBTAIN KEEN HEARING
+        if player:getModData().DTKeenHardOfHearing >= 30 and player:HasTrait("HardOfHearing") then
+            player:getTraits():remove("HardOfHearing");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_hardhear"), false, HaloTextHelper.getColorGreen());
+        end
+        if player:getModData().DTKeenHardOfHearing >= 50 and not player:HasTrait("KeenHearing") and not player:HasTrait("Deaf") then
+            player:getTraits():add("KeenHearing");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_keenhearing"), true, HaloTextHelper.getColorGreen());
+        end
+    end
+    -- INITIALIZATION FOR SLOW LEARNER AND FAST LEARNER TRAITS
+    if player:getModData().DTSlowFastLearner == nil then 
+        local total = 0;
+        -- CRAFTING SKILLS
+        total = total + player:getPerkLevel(Perks.Woodwork);
+        total = total + player:getPerkLevel(Perks.Cooking);
+        total = total + player:getPerkLevel(Perks.Farming);
+        total = total + player:getPerkLevel(Perks.Doctor);
+        total = total + player:getPerkLevel(Perks.Electricity);
+        total = total + player:getPerkLevel(Perks.MetalWelding);
+        total = total + player:getPerkLevel(Perks.Mechanics);
+        total = total + player:getPerkLevel(Perks.Tailoring);
+        -- SURVIVALIST SKILLS
+        total = total + player:getPerkLevel(Perks.Fishing);
+        total = total + player:getPerkLevel(Perks.Trapping);
+        total = total + player:getPerkLevel(Perks.PlantScavenging);
+        -- MOD DATA = TOTAL
+        player:getModData().DTSlowFastLearner = total;
+        -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE SLOW LEARNER OR OBTAIN FAST LEARNER
+        if player:getModData().DTSlowFastLearner >= 30 and player:HasTrait("SlowLearner") then
+            player:getTraits():remove("SlowLearner");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_SlowLearner"), false, HaloTextHelper.getColorGreen());
+        end
+        if player:getModData().DTSlowFastLearner >= 50 and not player:HasTrait("FastLearner") then
+            player:getTraits():add("FastLearner");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_FastLearner"), true, HaloTextHelper.getColorGreen());
+        end
+    end
+end
+
+----------------------------------------------------
+----- INITIALIZATION FOR AN EXISTING CHARACTER -----
+----------------------------------------------------
+DTBaseGameCharacterDetails.DoExistingCharacterInitializations = function(player)
+    -- SUPERB/SUBPAR SURVIVORS AND NPC MOD COMPATIBILITY
+    if (player:getModData().DTKillsPath == nil or player:getModData().DTKillscheck2 == nil or player:getModData().DTatdTraits == nil or player:getModData().DTdoTraits == nil or player:getModData().DTOutdoorsCounter == nil or player:getModData().DTCatsEyesCounter == nil or player:getModData().DTRainTraits == nil or player:getModData().DTagoraClaustroCounter == nil or player:getModData().DTdaysSinceLastSmoke == nil or player:getModData().DTKillscheck == nil or player:getModData().DTtimesinceLastKill == nil or player:getModData().DThoursSinceLastDrink == nil or player:getModData().DTthresholdToObtainAlcoholic == nil or player:getModData().DTthresholdToObtainLoseAnorexy == nil or player:getModData().DTObtainLoseActiveSedentary == nil or player:getModData().DTKeenHardOfHearing == nil or player:getModData().DTSlowFastLearner == nil) then
+
+        -- TRAITS CHANGE
+        if player:HasTrait("PhysicallyActive2") then
+            player:getTraits():remove("PhysicallyActive2");
+            player:getTraits():add("PhysicallyActive");
+        end
+        if player:HasTrait("Handy2") then
+            player:getTraits():remove("Handy2");
+            player:getTraits():add("Handy");
+        end
+
+        -- INITIALIZATION FOR KILLS PATH
+        if player:getModData().DTKillsPath == nil then
+            if player:HasTrait("Cowardly") then
+                player:getModData().DTKillsPath = 1;
+            elseif player:HasTrait("Brave") then
+                player:getModData().DTKillsPath = 2;
+            else
+                player:getModData().DTKillsPath = 3;
+            end
+        end
+        -- INITIALIZATION FOR KILLS SYSTEM
+        if player:getModData().DTKillscheck2 == nil then
+            player:getModData().DTKillscheck2 = 0;
+        end
+        -- INITIALIZATION FOR DEXTROUS/ALLTHUMBS
+        if player:getModData().DTatdTraits == nil then
+            if player:HasTrait("AllThumbs") then
+                player:getModData().DTatdTraits = 0;
+            elseif player:HasTrait("Dextrous") then
+                player:getModData().DTatdTraits = 120000;
+            else
+                player:getModData().DTatdTraits = 60000;
+                end
+        end
+        -- INITIALIZATION FOR ORGANIZED/DISORGANIZED TRAITS
+        if player:getModData().DTdoTraits == nil then
+            if player:HasTrait("Disorganized") then
+                player:getModData().DTdoTraits = 0;
+            elseif player:HasTrait("Organized") then
+                player:getModData().DTdoTraits = 200000;
+            else
+                player:getModData().DTdoTraits = 100000;
+            end
+        end
+        -- INITIALIZATION FOR OUTDOORSMAN TRAIT
+        if player:getModData().DTOutdoorsCounter == nil then
+            player:getModData().DTOutdoorsCounter = 0;
+        end
+        -- INITIALIZATION FOR CATSEYES TRAIT
+        if player:getModData().DTCatsEyesCounter == nil then
+            player:getModData().DTCatsEyesCounter = 0;
+        end
+        -- INITIALIZATION FOR RAIN TRAITS
+        if player:getModData().DTRainTraits == nil then
+            if player:HasTrait("Pluviophile") then
+                player:getModData().DTRainTraits = 100000;
+            elseif player:HasTrait("Pluviophobia") then
+                player:getModData().DTRainTraits = 0;
+            else
+                player:getModData().DTRainTraits = 50000;
+            end
+        end
+        -- INITIALIZATION FOR CLAUSTROPHOBIC AND AGORAPHOBIC TRAITS
+        if player:getModData().DTagoraClaustroCounter == nil then
+            player:getModData().DTagoraClaustroCounter = 0;
+        end
+        -- INITIALIZATION FOR SMOKER TRAIT
+        if player:getModData().DTdaysSinceLastSmoke == nil then
+            player:getModData().DTdaysSinceLastSmoke = 0;
+        end
+        -- INITIALIZATION FOR BLOODLUST TRAIT
+        if player:getModData().DTKillscheck == nil then
+            player:getModData().DTKillscheck = 0;
+        end
+        if player:getModData().DTtimesinceLastKill == nil then
+            player:getModData().DTtimesinceLastKill = 0;
+        end
+        -- INITIALIZATION FOR ALCOHOLIC TRAIT
+        if player:getModData().DThoursSinceLastDrink == nil then
+            player:getModData().DThoursSinceLastDrink = 0;
+        end
+        if player:getModData().DTthresholdToObtainAlcoholic == nil then
+            player:getModData().DTthresholdToObtainAlcoholic = 0;
+        end
+        -- INITIALIZATION FOR ANOREXIC TRAIT
+        if player:getModData().DTthresholdToObtainLoseAnorexy == nil then
+            if player:HasTrait("Anorexy") then
+                player:getModData().DTthresholdToObtainLoseAnorexy = -720;
+            else
+                player:getModData().DTthresholdToObtainLoseAnorexy = 0;
+            end
+        end
+        -- INITIALIZATION FOR PHYSICALLY ACTIVE/SEDENTARY TRAITS
+        if player:getModData().DTObtainLoseActiveSedentary == nil then 
+            if player:HasTrait("PhysicallyActive") then
+                player:getModData().DTObtainLoseActiveSedentary = 60000;
+            elseif player:HasTrait("Sedentary") then
+                player:getModData().DTObtainLoseActiveSedentary = -60000;
+            else
+                player:getModData().DTObtainLoseActiveSedentary = 0;
+            end
+        end
+        -- INITIALIZATION FOR HARD OF HEARING AND KEEN HEARING TRAITS
+        if player:getModData().DTKeenHardOfHearing == nil then 
+            local total = 0;
+            -- AGILITY SKILLS
+            total = total + player:getPerkLevel(Perks.Sneak);
+            total = total + player:getPerkLevel(Perks.Lightfoot);
+            total = total + player:getPerkLevel(Perks.Nimble);
+            -- FIREARMS SKILLS
+            total = total + player:getPerkLevel(Perks.Aiming);
+            -- COMBAT SKILLS
+            total = total + player:getPerkLevel(Perks.Axe);
+            total = total + player:getPerkLevel(Perks.Blunt);
+            total = total + player:getPerkLevel(Perks.SmallBlunt);
+            total = total + player:getPerkLevel(Perks.LongBlade);
+            total = total + player:getPerkLevel(Perks.SmallBlade);
+            total = total + player:getPerkLevel(Perks.Spear);
+            -- SURVIVALIST SKILLS
+            total = total + player:getPerkLevel(Perks.PlantScavenging);
+            -- MOD DATA = TOTAL
+            player:getModData().DTKeenHardOfHearing = total;
+            -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE HARD OF HEARING OR OBTAIN KEEN HEARING
+            if player:getModData().DTKeenHardOfHearing >= 30 and player:HasTrait("HardOfHearing") then
+                player:getTraits():remove("HardOfHearing");
+                HaloTextHelper.addTextWithArrow(player, getText("UI_trait_hardhear"), false, HaloTextHelper.getColorGreen());
+            end
+            if player:getModData().DTKeenHardOfHearing >= 50 and not player:HasTrait("KeenHearing") and not player:HasTrait("Deaf") then
+                player:getTraits():add("KeenHearing");
+                HaloTextHelper.addTextWithArrow(player, getText("UI_trait_keenhearing"), true, HaloTextHelper.getColorGreen());
+            end
+        end
+        -- INITIALIZATION FOR SLOW LEARNER AND FAST LEARNER TRAITS
+        if player:getModData().DTSlowFastLearner == nil then 
+            local total = 0;
+            -- CRAFTING SKILLS
+            total = total + player:getPerkLevel(Perks.Woodwork);
+            total = total + player:getPerkLevel(Perks.Cooking);
+            total = total + player:getPerkLevel(Perks.Farming);
+            total = total + player:getPerkLevel(Perks.Doctor);
+            total = total + player:getPerkLevel(Perks.Electricity);
+            total = total + player:getPerkLevel(Perks.MetalWelding);
+            total = total + player:getPerkLevel(Perks.Mechanics);
+            total = total + player:getPerkLevel(Perks.Tailoring);
+            -- SURVIVALIST SKILLS
+            total = total + player:getPerkLevel(Perks.Fishing);
+            total = total + player:getPerkLevel(Perks.Trapping);
+            total = total + player:getPerkLevel(Perks.PlantScavenging);
+            -- MOD DATA = TOTAL
+            player:getModData().DTSlowFastLearner = total;
+            -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE SLOW LEARNER OR OBTAIN FAST LEARNER
+            if player:getModData().DTSlowFastLearner >= 30 and player:HasTrait("SlowLearner") then
+                player:getTraits():remove("SlowLearner");
+                HaloTextHelper.addTextWithArrow(player, getText("UI_trait_SlowLearner"), false, HaloTextHelper.getColorGreen());
+            end
+            if player:getModData().DTSlowFastLearner >= 50 and not player:HasTrait("FastLearner") then
+                player:getTraits():add("FastLearner");
+                HaloTextHelper.addTextWithArrow(player, getText("UI_trait_FastLearner"), true, HaloTextHelper.getColorGreen());
+            end
+        end
+    end
+end
+
 Events.OnGameBoot.Add(DTBaseGameCharacterDetails.DoTraits);
 Events.OnGameBoot.Add(DTBaseGameCharacterDetails.DoProfessions);
+Events.OnCreatePlayer.Add(DTBaseGameCharacterDetails.DoNewCharacterInitializations);

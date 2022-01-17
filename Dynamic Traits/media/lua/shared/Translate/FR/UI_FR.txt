@@ -17,10 +17,10 @@ UI_FR = {
     UI_trait_AnorexyDesc = "Trouble du comportement alimentaire. Peur extrême de prendre du poids.",
 	UI_trait_Prodigy = "Sportif",
 	UI_trait_ProdigyDesc = "Vous améliorer votre Force et votre Condition physique plus rapidement.",
-	UI_trait_PhysicallyActive = "Physically Active",
-	UI_trait_PhysicallyActiveDesc = "Energetic person. Spending energy makes you feel good.",
-	UI_trait_Sedentary = "Sedentary",
-	UI_trait_SedentaryDesc = "Inactive lifestyle. You don't like wasting energy.",
-	UI_trait_Nightmares = "Nightmares",
-	UI_trait_NightmaresDesc = "You suffer nightmares more often than others."
+	UI_trait_PhysicallyActive = "Personne énergique",
+	UI_trait_PhysicallyActiveDesc = "Actif physiquement. Vous dépenser améliore votre moral.",
+	UI_trait_Sedentary = "Sédentaire",
+	UI_trait_SedentaryDesc = "Mode de vie inactif. Vous n'aimez pas dépenser votre énergie.",
+	UI_trait_Nightmares = "Cauchemars récurrents",
+	UI_trait_NightmaresDesc = "Vous faites des cauchemars plus souvent que les autres."
 }

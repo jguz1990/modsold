@@ -102,6 +102,7 @@ mods
 	mod = WalterWhitesRV,
 	mod = eggonsWorthwileCars,
 	mod = CustomizableZombies,
+	mod = Swatpack_Rework,
 }
 
 maps

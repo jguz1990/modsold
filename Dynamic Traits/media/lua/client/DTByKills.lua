@@ -2,8 +2,8 @@ function traitsGainsByKills(zombie)
     for playerIndex = 0, getNumActivePlayers()-1 do
         local player = getSpecificPlayer(playerIndex);
         if player:HasTrait("Agoraphobic") or player:HasTrait("Claustophobic") then
-            if ZombRand(15) == 0 then
-                player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + ZombRand(5);
+            if ZombRand(5) == 0 then
+                player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + ZombRand(10);
             end
         end
         if player:getHoursSurvived() > 360 then

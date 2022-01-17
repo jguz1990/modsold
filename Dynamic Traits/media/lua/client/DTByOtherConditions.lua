@@ -2,8 +2,10 @@ require "TimedActions/ISBaseTimedAction"
 
 -- MAIN METHOD TO CALL OTHERS
 function DTMain(player)
-    -- INITIALIZATIONS 
-    existingGamesInitializations(player);
+    -- INITIALIZATIONS FOR AN EXISTING CHARACTER
+    DTBaseGameCharacterDetails.DoExistingCharacterInitializations(player);
+
+    -- CALL TO OTHER METHODS THAT RUNS BASED ON THE OnPlayerUpdate FUNCTION
     if not player:HasTrait("Dextrous") or not player:HasTrait("Organized") then
         traitsByMovingObjects(player);
     end
@@ -133,7 +135,7 @@ function outdoorsmanTrait(player)
     local windIntensity = climateManager:getWindIntensity();
     local fogIntensity = climateManager:getFogIntensity();
     local isThunderstorming = climateManager:getIsThunderStorming();
-    if player:isOutside() then -- THE PLAYER IS OUTSIDE SO IS GETTING THE OUTDOORSMAN TRAIT
+    if player:isOutside() and player:getVehicle() == nil then -- THE PLAYER IS OUTSIDE AND NOT IN A VEHICLE SO IS GETTING THE OUTDOORSMAN TRAIT
         -- RAIN WEATHER
         if rainIntensity > 0 and rainIntensity <= 0.30 then
             player:getModData().DTOutdoorsCounter = player:getModData().DTOutdoorsCounter + 0.06;
@@ -187,6 +189,15 @@ function outdoorsmanTrait(player)
             player:getModData().DTOutdoorsCounter = player:getModData().DTOutdoorsCounter + 0.05;
         end
     end
+    if player:HasTrait("Pluviophile") then
+        player:getModData().DTOutdoorsCounter = player:getModData().DTOutdoorsCounter + 0.01;
+    end
+    if player:HasTrait("Formerscout") then
+        player:getModData().DTOutdoorsCounter = player:getModData().DTOutdoorsCounter + 0.01;
+    end
+    if player:HasTrait("Hiker") then
+        player:getModData().DTOutdoorsCounter = player:getModData().DTOutdoorsCounter + 0.01;
+    end
     -- CHECK IF THE PLAYER ACHIEVED THE NECESSARY TO WIN OUTDOORSMAN
     if player:getModData().DTOutdoorsCounter >= 300000 then
         player:getTraits():add("Outdoorsman");
@@ -225,7 +236,7 @@ end
 function rainTraits(player)
     local climateManager = getClimateManager();
     local rainIntensity = climateManager:getRainIntensity();
-    if player:isOutside() and rainIntensity > 0 then     
+    if player:isOutside() and player:getVehicle() == nil and rainIntensity > 0 then -- THE PLAYER NEEDS TO BE OUTSIDE, NOT IN A VEHICLE AND IT MUST BE RAINING
         -- BASED ON THE RAIN LEVELS THE EFFECTS WILL BE STRONGER OR WEAKER
         if rainIntensity > 0 and rainIntensity <= 0.30 then
             if player:HasTrait("Pluviophile") then
@@ -288,6 +299,18 @@ function rainTraits(player)
                 player:getModData().DTRainTraits = player:getModData().DTRainTraits + 0.05;
             end
         end
+        -- IF THE PLAYER HAVEN'T OBTAINED PLUVIOPHILE, THEN SOME EXTRA POINTS ARE ADDED IF "Outdoorsman", "Former Scout" AND/OR "Hiker" ARE PRESENT
+        if not player:HasTrait("Pluviophile") then
+            if player:HasTrait("Outdoorsman") then
+                player:getModData().DTRainTraits = player:getModData().DTRainTraits + 0.01;
+            end
+            if player:HasTrait("Formerscout") then
+                player:getModData().DTRainTraits = player:getModData().DTRainTraits + 0.01;
+            end
+            if player:HasTrait("Hiker") then
+                player:getModData().DTRainTraits = player:getModData().DTRainTraits + 0.01;
+            end
+        end
     end
     -- CHECK IF THE PLAYER ACHIEVED THE REQUIREMENTS TO REMOVE/GAIN THE TRAITS
     if player:getModData().DTRainTraits >= 50000 and player:HasTrait("Pluviophobia") then
@@ -303,9 +326,9 @@ end
 -- CLAUSTROPHOBIC AND AGORAPHOBIC TRAITS
 function agoraphobicClaustrophobicTraits(player)
     if player:isOutside() and player:HasTrait("Agoraphobic") then
-        player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + 0.02;
-    elseif not player:isOutside() and player:HasTrait("Claustophobic") then
         player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + 0.04;
+    elseif not player:isOutside() and player:HasTrait("Claustophobic") then
+        player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + 0.08;
     end
     -- CHECK IF THE PLAYER ACHIEVED THE NECESSARY TO REMOVE CLAUSTROPHOBIC OR AGORAPHOBIC TRAITS
     if player:getModData().DTagoraClaustroCounter >= 500000 then
@@ -323,7 +346,7 @@ function luckyUnluckyEffectsForAgoraClaustroTraits()
     for playerIndex = 0, getNumActivePlayers()-1 do
         local player = getSpecificPlayer(playerIndex);
         if player:HasTrait("Agoraphobic") or player:HasTrait("Claustophobic") then
-            if ZombRand(100) == 0 then
+            if ZombRand(50) == 0 then
                 player:getModData().DTagoraClaustroCounter = player:getModData().DTagoraClaustroCounter + DTluckyUnluckyModifier(player, 10);
             end
         end
@@ -385,7 +408,7 @@ function alcoholicTrait()
             player:getModData().DTthresholdToObtainAlcoholic = player:getModData().DTthresholdToObtainAlcoholic - 1;
             if ZombRand(25) == 0 then
                 player:getModData().DThoursSinceLastDrink = player:getModData().DThoursSinceLastDrink + DTluckyUnluckyModifier(player, 7);
-                player:getModData().DTthresholdToObtainAlcoholic = player:getModData().DTthresholdToObtainAlcoholic + DTluckyUnluckyModifier(player, 7);
+                player:getModData().DTthresholdToObtainAlcoholic = player:getModData().DTthresholdToObtainAlcoholic - DTluckyUnluckyModifier(player, 7);
             end
             -- If the player has the Alcoholic trait and haven't drinked for the latest 48 hours the effects starts.
             if player:HasTrait("Alcoholic") and player:getModData().DThoursSinceLastDrink >= 48 then

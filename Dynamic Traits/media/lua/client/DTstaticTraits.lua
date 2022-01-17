@@ -146,7 +146,7 @@ function ISFitnessAction:exeLooped()
     if player:HasTrait("PhysicallyActive") then
         DTdecreaseStress(player, 0.05);
         DTdecreaseStressFromCigarettes(player, 0.05);
-        DTdecreaseUnhappyness(player, 0.5);
+        DTdecreaseUnhappyness(player, 5);
         DTdecreaseBoredom(player, 5);
     elseif player:HasTrait("Sedentary") then
         DTincreaseBoredom(player, 7);

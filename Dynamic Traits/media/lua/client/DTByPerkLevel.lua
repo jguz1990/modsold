@@ -1,5 +1,9 @@
 -- Traits gains based on skills levels are going to be handled in this function.
 function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
+    -- CALL TO INITIALIZATIONS METHOD TO PREVENT LUA ERRORS WHEN A CHARACTER IS CREATED AND HAS PERK LEVELS (THE LEVEL PERK EVENT IS CALLED WHEN THE ASSIGNING THE STARTING PERK LEVELS)
+    if player:getModData().DTSlowFastLearner == nil or player:getModData().DTKeenHardOfHearing == nil then
+        DTBaseGameCharacterDetails.DoExistingCharacterInitializations(player);
+    end
     --------------- AGILITY SKILLS ---------------
     -- SPRINTING
     if perk == Perks.Sprinting then
@@ -38,6 +42,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("Inconspicuous");
             HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Inconspicuous"), true, HaloTextHelper.getColorGreen());
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
     -- LIGHTFOOT
     if perk == Perks.Lightfoot then
@@ -70,6 +75,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getXp():addXpMultiplier(Perks.Lightfoot, 1, perkLevel, 10); -- NPC MOD LUA ERROR FIX WHEN NPC SPAWN
             player:getXp():getMultiplierMap():remove(Perks.Lightfoot);
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     -- NIMBLE
@@ -95,6 +101,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getXp():addXpMultiplier(Perks.Nimble, 1, perkLevel, 10); -- NPC MOD LUA ERROR FIX WHEN NPC SPAWN
             player:getXp():getMultiplierMap():remove(Perks.Nimble);
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     --------------- FIREARMS SKILLS ---------------
@@ -111,6 +118,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("EagleEyed");
             HaloTextHelper.addTextWithArrow(player, getText("UI_trait_eagleeyed"), true, HaloTextHelper.getColorGreen());
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     --------------- COMBAT SKILLS ---------------
@@ -137,6 +145,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getXp():addXpMultiplier(Perks.Axe, 1, perkLevel, 10); -- NPC MOD LUA ERROR FIX WHEN NPC SPAWN
             player:getXp():getMultiplierMap():remove(Perks.Axe);
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     -- LONG BLUNT
@@ -163,6 +172,17 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getXp():addXpMultiplier(Perks.Blunt, 1, perkLevel, 10); -- NPC MOD LUA ERROR FIX WHEN NPC SPAWN
             player:getXp():getMultiplierMap():remove(Perks.Blunt);
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
+    end
+
+    -- SMALL BLUNT
+    if perk == Perks.SmallBlunt then
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
+    end
+
+    -- LONG BLADE
+    if perk == Perks.LongBlade then
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     -- SMALL BLADE
@@ -173,6 +193,12 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("Hunter");
             HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Hunter"), true, HaloTextHelper.getColorGreen());
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
+    end
+
+    -- SPEAR
+    if perk == Perks.Spear then
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
     end
 
     --------------- CRAFTING SKILLS ---------------
@@ -183,14 +209,7 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("Handy");
             HaloTextHelper.addTextWithArrow(player, getText("UI_trait_handy"), true, HaloTextHelper.getColorGreen());
         end
-    end
-
-    -- FARMING
-    if perk == Perks.Farming then
-        if perkLevel >= 8 and not player:HasTrait("Gardener") then
-            player:getTraits():add("Gardener");
-            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Gardener"), true, HaloTextHelper.getColorGreen());
-        end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
     end
 
     -- COOKING
@@ -205,6 +224,21 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("Nutritionist");
             HaloTextHelper.addTextWithArrow(player, getText("UI_trait_nutritionist"), true, HaloTextHelper.getColorGreen());
         end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
+    -- FARMING
+    if perk == Perks.Farming then
+        if perkLevel >= 8 and not player:HasTrait("Gardener") then
+            player:getTraits():add("Gardener");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Gardener"), true, HaloTextHelper.getColorGreen());
+        end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
+    -- DOCTOR
+    if perk == Perks.Doctor then
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
     end
 
     -- ELECTRONIC
@@ -224,6 +258,12 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
                 playerRecipes:add("Generator");
             end
         end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
+    -- METALWELDING
+    if perk == Perks.MetalWelding then
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
     end
 
     -- MECHANICS
@@ -234,9 +274,43 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
             player:getTraits():add("Burglar");
             HaloTextHelper.addTextWithArrow(player, getText("UI_prof_Burglar"), true, HaloTextHelper.getColorGreen());
         end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
+    -- TAILORING
+    if perk == Perks.Tailoring then
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
     end
 
     --------------- SURVIVALIST SKILLS ---------------
+    -- FISHING
+    if perk == Perks.Fishing then
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
+    -- TRAPPING
+    if perk == Perks.Trapping then
+        -- Gain trait "Formerscout" if the next requirements are met: Lv2 of PlantScavenging, Lv2 of Trapping.
+        -- Case 2: Leveling Up Trapping
+        if perkLevel >= 2 and player:getPerkLevel(Perks.PlantScavenging) >= 2 and not player:HasTrait("Formerscout") then
+            player:getTraits():add("Formerscout");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Scout"), true, HaloTextHelper.getColorGreen());
+        end
+        -- Gain trait "Hiker" if the next requirements are met: Lv4 of PlantScavenging, Lv2 of Trapping.
+        -- Case 2: Leveling Up Trapping
+        if perkLevel >= 2 and player:getPerkLevel(Perks.PlantScavenging) >= 4 and not player:HasTrait("Hiker") then
+            player:getTraits():add("Hiker");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Hiker"), true, HaloTextHelper.getColorGreen());
+        end
+        -- Gain trait "Hunter" if the next requirements are met: Lv3 of Aiming, Lv3 of Trapping, Lv3 of Sneak, Lv3 of SmallBlade.
+        -- Case 2 Leveling Up Trapping
+        if perkLevel >= 3 and player:getPerkLevel(Perks.Aiming) >= 3 and player:getPerkLevel(Perks.Sneak) >= 3 and player:getPerkLevel(Perks.SmallBlade) >= 3 and not player:HasTrait("Hunter") then
+            player:getTraits():add("Hunter");
+            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Hunter"), true, HaloTextHelper.getColorGreen());
+        end
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
+    end
+
     -- FORAGING
     if perk == Perks.PlantScavenging then
         -- Gain trait "Formerscout" if the next requirements are met: Lv2 of PlantScavenging, Lv2 of Trapping.
@@ -260,27 +334,36 @@ function traitsGainsByLevel(player, perk, perkLevel, addBuffer)
                 playerRecipes:add("Herbalist");
             end
         end
+        player:getModData().DTKeenHardOfHearing = player:getModData().DTKeenHardOfHearing + 1;
+        player:getModData().DTSlowFastLearner = player:getModData().DTSlowFastLearner + 1;
     end
-    -- TRAPPING
-    if perk == Perks.Trapping then
-        -- Gain trait "Formerscout" if the next requirements are met: Lv2 of PlantScavenging, Lv2 of Trapping.
-        -- Case 2: Leveling Up Trapping
-        if perkLevel >= 2 and player:getPerkLevel(Perks.PlantScavenging) >= 2 and not player:HasTrait("Formerscout") then
-            player:getTraits():add("Formerscout");
-            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Scout"), true, HaloTextHelper.getColorGreen());
-        end
-        -- Gain trait "Hiker" if the next requirements are met: Lv4 of PlantScavenging, Lv2 of Trapping.
-        -- Case 2: Leveling Up Trapping
-        if perkLevel >= 2 and player:getPerkLevel(Perks.PlantScavenging) >= 4 and not player:HasTrait("Hiker") then
-            player:getTraits():add("Hiker");
-            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Hiker"), true, HaloTextHelper.getColorGreen());
-        end
-        -- Gain trait "Hunter" if the next requirements are met: Lv3 of Aiming, Lv3 of Trapping, Lv3 of Sneak, Lv3 of SmallBlade.
-        -- Case 2 Leveling Up Trapping
-        if perkLevel >= 3 and player:getPerkLevel(Perks.Aiming) >= 3 and player:getPerkLevel(Perks.Sneak) >= 3 and player:getPerkLevel(Perks.SmallBlade) >= 3 and not player:HasTrait("Hunter") then
-            player:getTraits():add("Hunter");
-            HaloTextHelper.addTextWithArrow(player, getText("UI_trait_Hunter"), true, HaloTextHelper.getColorGreen());
-        end
+    -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE SLOW LEARNER OR OBTAIN FAST LEARNER
+    if player:getModData().DTSlowFastLearner >= 30 and player:HasTrait("SlowLearner") then
+        player:getTraits():remove("SlowLearner");
+        HaloTextHelper.addTextWithArrow(player, getText("UI_trait_SlowLearner"), false, HaloTextHelper.getColorGreen());
     end
+    if player:getModData().DTSlowFastLearner >= 50 and not player:HasTrait("FastLearner") then
+        player:getTraits():add("FastLearner");
+        HaloTextHelper.addTextWithArrow(player, getText("UI_trait_FastLearner"), true, HaloTextHelper.getColorGreen());
+    end
+    -- CHECKS IF THE PLAYER HAS THE NECESSARY TO REMOVE HARD OF HEARING OR OBTAIN KEEN HEARING
+    if player:getModData().DTKeenHardOfHearing >= 30 and player:HasTrait("HardOfHearing") then
+        player:getTraits():remove("HardOfHearing");
+        HaloTextHelper.addTextWithArrow(player, getText("UI_trait_hardhear"), false, HaloTextHelper.getColorGreen());
+    end
+    if player:getModData().DTKeenHardOfHearing >= 50 and not player:HasTrait("KeenHearing") and not player:HasTrait("Deaf") then
+        player:getTraits():add("KeenHearing");
+        HaloTextHelper.addTextWithArrow(player, getText("UI_trait_keenhearing"), true, HaloTextHelper.getColorGreen());
+    end
+    --[[ local playerTraits = player:getTraits();
+    local array = {};
+    for i=0, playerTraits:size()-1 do
+        local trait = playerTraits:get(i);
+        array[i] = trait;
+        print(array[i]);
+    end
+    player:applyTraits(array); ]]
+    --print("player:getModData().DTKeenHardOfHearing: " .. player:getModData().DTKeenHardOfHearing);
+    --print("player:getModData().DTSlowFastLearner: " .. player:getModData().DTSlowFastLearner);
 end
 Events.LevelPerk.Add(traitsGainsByLevel);
