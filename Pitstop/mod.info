@@ -1,0 +1,8 @@
+name=Pitstop
+id=Pitstop
+description=A Commercial Pitstop location near the Crossroads.
+poster=poster.png
+pack=Pitstop
+tiledef=pitstop 5481
+require=tkTiles_01
+require=DylansTiles
