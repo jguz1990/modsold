@@ -1,0 +1,4 @@
+UI_EN = {
+UI_trait_Hiker = "Hiker",
+UI_trait_HikerDesc = "This increases the your carry capacity by 150%.",
+}
