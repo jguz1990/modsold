@@ -104,7 +104,7 @@ function SFTurn.ReloadZombie(zombie)
 				zombie:setNoTeeth(true)
 			end
 			if item and item:getType() == "Token_OnlyJawStab" then
-				if SandboxVars.SFTurn.ImmortalNemesis == true then
+				if SandboxVars.SFTurn.ImmortalNemesis == true and not isClient() and not isServer() then
 					zombie:setOnlyJawStab(true)
 				else
 					zombie:setHealth(50)
