@@ -1,6 +1,6 @@
+-- if you brainlessly copypaste this, at least change symbol/texture prefix; you know who you are --
 
 local function map_symbol(name)
---- using "extra" prefix and *not* using "media/ui/LootableMaps/" should (sic!) make it compatibile with other map symbols mods, if any, for quite some time
     MapSymbolDefinitions.getInstance():addTexture("extra:" .. name, "media/ui/ExtraMapSymbols/" .. name .. ".png")
 end
 

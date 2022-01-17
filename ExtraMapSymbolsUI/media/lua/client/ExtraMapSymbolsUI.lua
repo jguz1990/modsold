@@ -3,16 +3,15 @@
 ExtraMapSymbolsUI
 Copyright (C) Rotators  2021-2022
 
-NOTES
-
-- checkInventory() is called as last when symbols ui is being created, and during prerender phase when drawing/erasing status changes
-  probably weird place for a hook, but still better than overriding half of TIS UI; as long vars names are unchanged, mod should be fine (famous last words~)
-- worldmap and annotated maps symbols ui are different objects, means wm/maps options can be different from each other; bug/feature?
-
 TODO
 
 - symbols/text scaling
 - crayons addnote/editnote
+
+TWEAKS FOR EXTERNAL MODS
+
+- MapLegendUI : https://steamcommunity.com/sharedfiles/filedetails/?id=2710167561
+  toggle legend visibility
 
 ]]--
 
@@ -22,9 +21,9 @@ require "ISUI/ISColorPicker"
 require "ISUI/ISPanelJoypad"
 require "ISUI/ISSpinBox"
 require "ISUI/ISTickbox"
-require "ISUI/Map/ISMap"
-require "ISUI/Map/ISWorldMap"
-require "ISUI/Map/ISWorldMapSymbols"
+require "ISUI/Maps/ISMap"
+require "ISUI/Maps/ISWorldMap"
+require "ISUI/Maps/ISWorldMapSymbols"
 
 ExtraMapSymbolsUI = ISBaseObject:derive("ExtraMapSymbolsUI")
 
@@ -59,7 +58,12 @@ function ExtraMapSymbolsUI:new()
 			ToolX = 30,
 			ToolH = getTextManager():getFontHeight(UIFont.Small) + 2 * 2,
 
-			MarginXY = 15
+			MarginXY = 15,
+
+			ScaleJmp = 0.222,
+			ScaleNum = 20,
+			ScaleMax = -1,
+			ScaleMin = -1
 		}
 	}
 
@@ -108,15 +112,20 @@ end
 
 -- main hooks --
 
-local ISWMS_checkInventory = ISWorldMapSymbols.checkInventory
-local ISM_canWrite = ISMap.canWrite
-
-function ISWorldMapSymbols:checkInventory()
+local ISWMS_prerender = ISWorldMapSymbols.prerender
+function ISWorldMapSymbols:prerender()
+	ISWMS_prerender(self)
 	self:extraUI_Init()
 	self:extraUI_Refresh()
-	ISWMS_checkInventory(self)
 end
 
+local ISWMS_undisplay = ISWorldMapSymbols.undisplay
+function ISWorldMapSymbols:undisplay()
+	self:extraUI_OptionsHide()
+	ISWMS_undisplay(self)
+end
+
+local ISM_canWrite = ISMap.canWrite
 function ISMap:canWrite()
 	local result = ISM_canWrite(self) or self.character:getInventory():contains("Crayons", true)
 
@@ -130,12 +139,18 @@ function ISWorldMapSymbols:extraUI_Init()
 		return
 	end
 
+	-- required to play nice with external mods, which might add new buttons --
+
+	if ExtraMapSymbolsUI.CONST.ColumnsMin < #self.colorButtonInfo then
+		ExtraMapSymbolsUI.CONST.ColumnsMin = #self.colorButtonInfo
+	end
+
+	--
+
 	local const = ExtraMapSymbolsUI.CONST
 
 	self.extraUI = {
-		Columns = 4,
-		SymbolScale = 0.666,
-		TextScale = 0.666
+		Columns = PZMath.clamp(self:extraUI_GetModData("Columns") or const.ColumnsMin, const.ColumnsMin, const.ColumnsMax)
 	}
 
 	-- create crayons button --
@@ -176,10 +191,20 @@ function ISWorldMapSymbols:extraUI_Init()
 	option = ISSpinBox:new(0, 0, 100, const.ToolH, self, self.extraUI_ColumnsSet)
 	option:initialise()
 	for count = const.ColumnsMin, const.ColumnsMax, 1 do
-		option:addOption( "Columns" )
+		option:addOption("Columns")
 	end
+	option.selected = self.extraUI.Columns + 1 - const.ColumnsMin
+
 	self.extraUI.OptionsPanel:addChild(option)
 	table.insert(options, option)
+
+	if ActiveMods.getById("currentGame"):isModActive("MapLegendUI") and self:getParent().mapLegendWindow ~= nil then -- https://steamcommunity.com/sharedfiles/filedetails/?id=2710167561
+		option = ISTickBox:new(0, 0, 100, const.ToolH, "", self, self.extraUI_LegendToggle)
+		option:initialise()
+		option:addOption("Hide legend")
+		self.extraUI.OptionsPanel:addChild(option)
+		table.insert(options, option)
+	end
 
 	-- automagically reposition all option elements and resize options panel, just for fun --
 
@@ -200,8 +225,8 @@ function ISWorldMapSymbols:extraUI_Init()
 	self.extraUI.OptionsPanel.Attach = false
 end
 
+-- this function is currently being called waaay too often for what it does... --
 function ISWorldMapSymbols:extraUI_Refresh()
-	-- this function is currently being called waaay too often for what it does... --
 
 	local const = ExtraMapSymbolsUI.CONST
 	local column = 0
@@ -225,7 +250,7 @@ function ISWorldMapSymbols:extraUI_Refresh()
 		x = val:getRight() + const.Pad
 	end
 
-	-- process options elements --
+	-- process options button --
 
 	self.extraUI.OptionsButton:setX(const.OptionsButtonX)
 	self.extraUI.OptionsButton:setY(const.OptionsButtonY)
@@ -278,7 +303,7 @@ function ISWorldMapSymbols:extraUI_Refresh()
 
 	-- resize and reposition whole ui --
 
-	y = y + const.Pad
+	y = y + const.Pad * 2
 
 	if self:getParent() ~= nil then
 		self:setX(self:getParent():getWidth() - self:getWidth() - const.MarginXY)
@@ -294,6 +319,14 @@ end
 
 -- options --
 
+function ISWorldMapSymbols:extraUI_GetModData(name)
+	return getPlayer():getModData()["ExtraMapSymbolsUI:" .. name]
+end
+
+function ISWorldMapSymbols:extraUI_SetModData(name, value)
+	getPlayer():getModData()["ExtraMapSymbolsUI:" .. name] = value
+end
+
 function ISWorldMapSymbols:extraUI_OptionsToggle()
 	self.selectedSymbol = nil
 	self:setCurrentTool(nil)
@@ -307,9 +340,33 @@ function ISWorldMapSymbols:extraUI_OptionsToggle()
 	end
 end
 
+function ISWorldMapSymbols:extraUI_OptionsHide()
+	if not self.extraUI then
+		return
+	end
+
+	if self.extraUI.OptionsPanel.Attach then
+		self.extraUI.OptionsPanel.Attach = not self.extraUI.OptionsPanel.Attach
+		self:getParent():removeChild(self.extraUI.OptionsPanel)
+	end
+end
+
 function ISWorldMapSymbols:extraUI_ColumnsSet(spinbox)
-	self.extraUI.Columns = (ExtraMapSymbolsUI.CONST.ColumnsMin - 1) + spinbox.selected
+	self.extraUI.Columns = ExtraMapSymbolsUI.CONST.ColumnsMin + spinbox.selected - 1
+	self:extraUI_SetModData("Columns", self.extraUI.Columns)
 	self:extraUI_Refresh()
+end
+
+function ISWorldMapSymbols:extraUI_LegendToggle() -- https://steamcommunity.com/sharedfiles/filedetails/?id=2710167561
+	if self:getParent().mapLegendWindow == nil then
+		return
+	end
+
+	self.selectedSymbol = nil
+	self:setCurrentTool(nil)
+
+	local visible = not self:getParent().mapLegendWindow:isVisible()
+	self:getParent().mapLegendWindow:setVisible(visible)
 end
 
 -- crayons --
@@ -338,6 +395,8 @@ function ISWorldMapSymbols:extraUI_CrayonsPick(color, mouseUp)
 	self:checkInventory()
 	self:onButtonClick(self.extraUI.CrayonsButton)
 end
+
+---
 
 --[[
     local icon = item.item:getIcon()
