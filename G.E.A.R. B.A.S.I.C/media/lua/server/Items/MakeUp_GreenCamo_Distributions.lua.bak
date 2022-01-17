@@ -1,0 +1,62 @@
+require "Items/SuburbsDistributions"
+require "Items/ProceduralDistributions"
+require "Items/VehicleDistributions"
+require "Items/ItemPicker"	
+
+	table.insert(SuburbsDistributions["camping"]["all"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["camping"]["all"].items, 1);
+
+	table.insert(SuburbsDistributions["gunstore"]["counter"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["gunstore"]["counter"].items, 1);
+
+	table.insert(SuburbsDistributions["gunstore"]["displaycase"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["gunstore"]["displaycase"].items, 1);
+	
+	table.insert(SuburbsDistributions["gunstore"]["locker"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["gunstore"]["locker"].items, 1);
+
+	table.insert(SuburbsDistributions["gunstore"]["metal_shelves"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["gunstore"]["metal_shelves"].items, 1);
+	
+	table.insert(SuburbsDistributions["gunstorestorage"]["all"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["gunstorestorage"]["all"].items, 1);		
+	
+	table.insert(SuburbsDistributions["armystorage"]["locker"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["armystorage"]["locker"].items, 1);	
+	
+	table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["armystorage"]["metal_shelves"].items, 1);	
+
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["Bag_WeaponBag"].items, 0.1);
+	
+	table.insert(SuburbsDistributions["Bag_SurvivorBag"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["Bag_SurvivorBag"].items, 0.1);
+		
+	table.insert(SuburbsDistributions["SurvivorCache1"]["SurvivorCrate"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["SurvivorCache1"]["SurvivorCrate"].items, 0.1);
+	
+	table.insert(SuburbsDistributions["SurvivorCache2"]["SurvivorCrate"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["SurvivorCache2"]["SurvivorCrate"].items, 0.1);
+
+	table.insert(ProceduralDistributions.list["LockerArmyBedroom"].items, "MakeUp_GreenCamo2");
+	table.insert(ProceduralDistributions.list["LockerArmyBedroom"].items, 1);
+	
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["Bag_ALICEpack_Army"].items, 50);
+
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, "MakeUp_GreenCamo2");
+	table.insert(SuburbsDistributions["Bag_ALICEpack"].items, 50);
+	
+	local function isMod(mod_Name)
+		local mods = getActivatedMods();
+		for i=0, mods:size()-1, 1 do
+			if mods:get(i) == mod_Name then
+				return true;
+			end
+		end
+		return false;
+	end
+	
+	
+

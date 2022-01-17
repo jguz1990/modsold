@@ -1,0 +1,198 @@
+module Base
+{
+    
+        item WaterBottleFull
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	WaterBottleEmpty,
+		ReplaceOnUseOn	=	WaterSource-WaterBottleFull,
+		Icon	=	WaterBottle_Full,
+		StaticModel = WaterBottle,
+		AttachmentType = Bottle,
+	}
+
+    item Pop
+	{
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	=	Pop,
+		Icon	=	Pop,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 39,
+        ReplaceOnUse = PopEmpty,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 140,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = PopCanDiet,
+        EatType = popcan,
+		AttachmentType = Bottle,
+	}
+
+	item Pop2
+	{
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		ReplaceOnUse = PopEmpty,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	=	Pop,
+		Icon	=	Pop2,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 39,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 140,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = PopCanRed,
+        EatType = popcan,
+		AttachmentType = Bottle,
+	}
+
+	item Pop3
+	{
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		ReplaceOnUse = PopEmpty,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-60,
+		DisplayName	=	Pop,
+		Icon	=	Pop3,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 39,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 140,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = PopCanRed,
+        EatType = popcan,
+		AttachmentType = Bottle,
+	}
+
+	item PopBottle
+	{
+		HungerChange	=	-12,
+		Weight	=	0.8,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-85,
+		DisplayName	=	Orange Soda,
+		ReplaceOnUse	=	PopBottleEmpty,
+		Icon	=	Pop4,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = PopBottle,
+        EatType = bottle,
+		AttachmentType = Bottle,
+	}
+
+
+	item WaterPopBottle
+	{
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	PopBottleEmpty,
+		ReplaceOnUseOn	=	WaterSource-WaterPopBottle,
+		Icon	=	Pop_water,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		StaticModel = PopBottle,
+		AttachmentType = Bottle,
+	}
+
+    item WhiskeyFull
+	{
+		HungerChange	=	-20,
+		Weight	=	0.7,
+		Type	=	Food,
+		ThirstChange	=	-20,
+		DisplayName	=	Whiskey Bottle,
+		Alcoholic	=	TRUE,
+        UnhappyChange	=	-10,
+		ReplaceOnUse	=	WhiskeyEmpty,
+		Icon	=	WhiskeyFull,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		AlcoholPower = 2,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1500,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = WhiskeyBottle,
+		AttachmentType = Bottle,
+	}
+
+	item WaterBottleEmpty
+	{
+		Weight	=	0.1,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-WaterBottleFull,
+		Icon	=	WaterBottle_Empty,
+		StaticModel = WaterBottle,
+		AttachmentType = Bottle,
+	}
+
+	item PopBottleEmpty
+	{
+		Weight	=	0.1,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-WaterPopBottle,
+		Icon	=	Pop_empty,
+		MetalValue = 5,
+		AttachmentType = Bottle,
+	}
+
+	item WhiskeyEmpty
+	{
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-WhiskeyWaterFull,
+		Icon	=	WhiskeyEmpty,
+		StaticModel = WhiskeyBottle,
+		AttachmentType = Bottle,
+	}
+
+
+
+
+}
+

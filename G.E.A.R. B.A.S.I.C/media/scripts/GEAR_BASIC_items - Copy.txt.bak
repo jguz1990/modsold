@@ -1,0 +1,91 @@
+module Base
+{
+   	item Hat_GasMask
+	{
+	Type = Clothing,
+	DisplayName = Gas Mask,
+	ClothingItem = Hat_GasMask,
+	BodyLocation = MaskEyes,
+	Icon = GasMask,
+	CanHaveHoles = false,
+        BloodLocation = Head,
+        Insulation = 0.75,
+        WindResistance = 0.60,
+        WaterResistance = 1.0,
+	ChanceToFall = 20,
+		AttachmentType = Gear,
+        StaticModel = GasMask,
+	}
+
+	item MakeUp_GreenCamo
+    {
+        Type = Clothing,
+	Weight	=	0.02,
+        DisplayName = Green Camo Makeup,
+        ClothingItem = MakeUp_GreenCamo,
+        BodyLocation = MakeUp,
+        Icon = MakeUp_GreenCamo,
+    }
+
+	item MakeUp_GreenCamo2
+    {
+        Type = Clothing,
+	Weight	=	0.02,
+        DisplayName = Green Camo Makeup,
+        ClothingItem = MakeUp_GreenCamo,
+        BodyLocation = MakeUp,
+        Icon = MakeUp_GreenCamo,
+    }    
+
+	item HandTorch
+    {
+        LightDistance	=	15,
+        Weight	=	0.5,
+        DisappearOnUse	=	FALSE,
+        Type	=	Drainable,
+        TorchCone	=	TRUE,
+        UseDelta	=	0.0004,
+        LightStrength	=	0.9,
+        DisplayName	=	Hand Torch,
+        ActivatedItem	=	TRUE,
+        Icon	=	Flashlight2,
+        MetalValue = 10,
+        cantBeConsolided = TRUE,
+        StaticModel = HandTorch,
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+		AttachmentType = Bottle,
+    }
+
+	item Saw
+	{
+		Weight	=	0.7,
+		Type	=	Normal,
+		DisplayName	=	Saw,
+		Icon	=	Hacksaw,
+		MetalValue = 35,
+		StaticModel = HackSaw,
+		SurvivalGear = TRUE,
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+		AttachmentType = Saw,
+	}
+
+    item BlowTorch
+    {
+        Weight	=	0.3,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.01,
+        DisplayName	=	Propane Torch,
+        Icon	=	BlowTorch,
+        MetalValue = 20,
+        KeepOnDeplete = true,
+        StaticModel = BlowTorch,
+		AttachmentType = Tool,
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+
+}
+
