@@ -1,0 +1,7 @@
+IG_UI_DE = {
+	IGUI_VehicleNameisoContainer1Base = "_test",
+	IGUI_VehicleNameisoContainer2Base = "ISO Container",
+	IGUI_VehicleNameisoContainer3tankerBase = "ISO Tankcontainer",
+	IGUI_VehiclePartContainerDoor = "ISO Containertür",
+	IGUI_VehiclePartContainerTankerDoor = "ISO Tankcontainertür",
+}

@@ -1,0 +1,22 @@
+IG_UI_EN = {
+	IGUI_VehicleName86oshkoshUSMC = "'86 Oshkosh P19A USMC"
+	IGUI_VehicleName86oshkoshKYFD = "'86 Oshkosh P19A KYFD"
+	IGUI_VehicleName86oshkoshFRTR55 = "P19A FRTR55"
+	IGUI_VehicleName86oshkoshP19ABurnt = "Burnt Oshkosh P19A"
+
+	IGUI_VehicleNameTrailerM1082 = "M1082 Trailer"
+	IGUI_VehicleNameTrailerM1082tarp = "M1082 Covered Trailer"
+	IGUI_VehicleNameTrailerM1095 = "M1095 Trailer"
+	IGUI_VehicleNameTrailerM1095tarp = "M1095 Covered Trailer"
+
+	IGUI_VehiclePartroofHatch = "Roof Hatch",
+
+	IGUI_VehiclePartP19ABigTrunkCompartment0 = "Large top compartment",
+	IGUI_VehiclePartP19ASmallTrunkCompartment1 = "Small left compartment",
+	IGUI_VehiclePartP19ASmallTrunkCompartment2 = "Small middle compartment",
+	IGUI_VehiclePartP19ASmallTrunkCompartment3 = "Small right compartment",
+
+	IGUI_VehiclePartCatP19Atrunk = "Trunk",
+
+}
+
