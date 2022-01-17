@@ -1,0 +1,8 @@
+name=West Point Trailer Park and VHS Store
+poster=poster.png
+id=WestPointTrailerParkAndVhsStore
+description= A trailer park with a VHS store, south of West Point next to the road that leads to Muldraugh. 
+description= Also includes a convenience store and a farmer's market, as well as two farms.
+description= Cell 38x24. 
+tags=map
+require=Diederiks Tile Palooza,tkTiles_01,DylansTiles
