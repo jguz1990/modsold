@@ -130,6 +130,9 @@ end
 
 function EHE_EventMarker:setDuration(value)
 	self.duration = value
+	if value <= 0 then
+		self:setVisible(false)
+	end
 end
 
 
@@ -239,11 +242,8 @@ end
 
 
 function EHE_EventMarker:update(posX,posY)
-	if self.duration<=0 and not self:isVisible() then
-		return
-	end
 
-	local timeStamp = getTimestampMs()
+	local timeStamp = getGametimeTimestamp()
 	if (self.lastUpdateTime+10 >= timeStamp) then
 		return
 	else

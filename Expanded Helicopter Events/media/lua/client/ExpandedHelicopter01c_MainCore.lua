@@ -345,6 +345,9 @@ end
 
 ---@param character IsoGameCharacter
 function eHelicopter:findAlternativeTarget(character)
+	if not character then
+		return false
+	end
 	local newTargets = {}
 	local fractalCenters = getIsoRange(character, 1, 150)
 
@@ -456,7 +459,9 @@ function eHelicopter:findTarget(range, DEBUGID)
 					table.insert(weightPlayersList, p)
 				else
 					local altTarget = self:findAlternativeTarget(p)
-					table.insert(weightPlayersList, altTarget)
+					if altTarget then
+						table.insert(weightPlayersList, altTarget)
+					end
 				end
 			end
 		end
@@ -469,7 +474,7 @@ function eHelicopter:findTarget(range, DEBUGID)
 	local DEBUGallTargetsText = " -- "..DEBUGID.."HELI "..self:heliToString().." selecting targets <"..#weightPlayersList.."> x "
 
 	--really convoluted printout method that counts repeated targets accordingly
-	--[[DEBUG]] if getDebug() then
+	--[[DEBUG] if getDebug() then
 		local DEBUGallTargets = {}
 		for _,target in pairs(weightPlayersList) do
 			if instanceof(target, "IsoPlayer") then
@@ -594,11 +599,19 @@ function eHelicopter:formationInit()
 end
 
 
-function eHelicopter:applyCrashChance(applyEnvironmentalCrashChance)
+function fetchStartDayAndCutOffDay(HelicopterOrPreset)
+	local startDayFactor = HelicopterOrPreset.eventStartDayFactor or eHelicopter.eventStartDayFactor
+	local startDay = math.floor((startDayFactor*SandboxVars.ExpandedHeli.CutOffDay)+0.5)
+	local cutOffDayFactor = HelicopterOrPreset.eventCutOffDayFactor or eHelicopter.eventCutOffDayFactor
+	local cutOffDay = math.floor((cutOffDayFactor*(startDay+SandboxVars.ExpandedHeli.CutOffDay))+0.5)
+	return startDay, cutOffDay
+end
 
+
+function eHelicopter:applyCrashChance(applyEnvironmentalCrashChance)
 	local globalModData = getExpandedHeliEventsModData()
 	--increase crash chance as the apocalypse goes on
-	local cutOffDay = self.eventCutOffDayFactor*SandboxVars.ExpandedHeli.CutOffDay
+	local startDay, cutOffDay = fetchStartDayAndCutOffDay(self)
 	local eventFrequency = SandboxVars.ExpandedHeli["Frequency_"..self.masterPresetID] or 2
 
 	--[DEBUG]] print("EHE: DEBUG: Crash Chance Freq: "..self.masterPresetID)
@@ -740,8 +753,13 @@ function eHelicopter:unlaunch()
 	print(" ---- UN-LAUNCH: "..self:heliToString(true).." day:"..getGameTime():getNightsSurvived().." hour:"..getGameTime():getHour())
 
 	eventSoundHandler:stopAllHeldEventSounds(self)
-	eventShadowHandler:setShadowPos(self.ID)
-	eventMarkerHandler.setOrUpdate("HELI"..self.ID, self.eventMarkerIcon, 0)
+
+	if self.shadow==true then
+		eventShadowHandler:setShadowPos(self.ID)
+	end
+	if self.eventMarkerIcon ~= false then
+		eventMarkerHandler.setOrUpdate("HELI"..self.ID, self.eventMarkerIcon, 0)
+	end
 
 	self.state = "unLaunched"
 
