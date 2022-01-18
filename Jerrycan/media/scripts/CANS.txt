@@ -411,4 +411,20 @@ module Base {
 		CustomEatSound 		= DrinkingFromBottle,
 		EatType             = Pot,
 	}
+	item XLStorage_Bag
+    {
+        WeightReduction		=	100,
+        Weight				=	0.01,
+        Type				=	Container,
+        Capacity			=	500,
+        DisplayName			=	XL Storage Case,
+        Icon				=	Case_Heavy,
+		StaticModel			=	Case_Heavy,
+		WorldStaticModel	=	W_Case_Heavy,
+        OpenSound			=	OpenBag,
+       	CloseSound			=	CloseBag,
+        PutInSound			=	PutItemInBag,
+        ReplaceInSecondHand = 	Case_Heavy_LHand holdingbagleft,
+        ReplaceInPrimaryHand = 	Case_Heavy_RHand holdingbagright,
+    }
 }
