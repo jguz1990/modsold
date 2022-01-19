@@ -1,4 +1,4 @@
 UI_EN = {
-UI_trait_Hiker = "Hiker",
-UI_trait_HikerDesc = "This increases the your carry capacity by 150%.",
+UI_trait_Strongback = "Strong Back",
+UI_trait_StrongbackDesc = "This increases the your carry capacity by 200%.",
 }
