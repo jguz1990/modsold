@@ -29,9 +29,8 @@ module Base
 		WorldStaticModel = W_Launcher,				
         WeightModifier = 1.5,
         HitChanceModifier = -5,		/* UN-BALANCED				*/
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -4,	/* ADDED WEIGHT SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* VERY CLUMBSY RELOAD SLOWER		*/
         MountOn = M16A1; M723; XM117; H416; MK18; MCX_Spear;
 		SCARL; SCARH; SCAR20; G28;
 		LVOA_C; ColtM16; M16Tape; M16Wood; M16A2; M16A3; M4; M4A1;
@@ -49,9 +48,8 @@ module Base
         Weight = 0.3,
 		WorldStaticModel = W_Bipod,			
         WeightModifier = 0.3,
-        RecoilDelayModifier = -0.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -2.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED WEIGHT SLOWER TO POINT		*/
-        ReloadTimeModifier = 5,		/* CLUMBSY RELOAD SLOWER		*/
         MountOn = BOAR; EDM96; M82;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
 		M85_Stock; M85_Fold; AK103; AKMS_Stock; AKMS_Fold; MD65_Stock; MD65_Fold; SVD; SVDK;
@@ -109,7 +107,7 @@ module Base
         Icon = Ammobelt,
         Weight = 0.5,
         WeightModifier = 0.5,
-        ReloadTimeModifier = -7,
+        ReloadTimeModifier = -45,
         MountOn = Boar; M82; EDM96;
 		Marlin_1894; Marlin_1894_357; Win_1895; Win_1894; Viper; M1; 
 		NEF_Handi_38; NEF_Handi_357; NEF_Handi_38_Sawed; NEF_Handi_357_Sawed;
@@ -177,7 +175,6 @@ module Base
         Icon = Sling_1,
         Weight = 0.01,
         WeightModifier = -2,
-        ReloadTimeModifier = 1,		/* CLUMBSY RELOAD SLOWER	*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Carbine; AR7;
 		M1911_Carbine; M29_44Carbine;
 		KRISS_Fold; KRISS_Stock;
@@ -246,7 +243,6 @@ module Base
         Icon = Sling_2,
         Weight = 0.01,
         WeightModifier = -2.5,
-        ReloadTimeModifier = 3,		/* CLUMBSY RELOAD SLOWER	*/
 	AimingTimeModifier = -1,	/* SLIGHTLY OBSTRUCTIVE		*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Carbine; AR7;
 		EVO_Fold; EVO_Stock; K1; K11;
@@ -316,7 +312,6 @@ module Base
         Icon = Sling_3,
         Weight = 0.01,
         WeightModifier = -3,
-        ReloadTimeModifier = 5,		/* CLUMBSY RELOAD SLOWER	*/
 	AimingTimeModifier = -2,	/* COMPLEXED, OBSTRUCTIVE	*/
         MountOn = EVO_Fold; EVO_Stock; K1; K11;
 		DoubleBarrelShotgun; Shotgun;
@@ -386,7 +381,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_ForeGrip,			
         WeightModifier = 0.2,
-        RecoilDelayModifier = -1.5,
+        RecoilDelayModifier = -7.5,
 	AimingTimeModifier = 2,
         MountOn = SUB2000; SCARSC_Fold; SCARSC_Stock;
 		Marlin_1894; Marlin_1894_357; Win_1895; Win_1894; Viper;
@@ -449,7 +444,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_Grip_Magpul,					
         WeightModifier = 0.2,
-        RecoilDelayModifier = -1.5,
+        RecoilDelayModifier = -7.5,
 	AimingTimeModifier = 2,
         MountOn = SUB2000; SCARSC_Fold; SCARSC_Stock;
 		Marlin_1894; Marlin_1894_357; Win_1895; Win_1894; Viper;
@@ -512,7 +507,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_Grip_MLOK,							
         WeightModifier = 0.2,
-        RecoilDelayModifier = -1.5,
+        RecoilDelayModifier = -7.5,
 	AimingTimeModifier = 2,
         MountOn = SUB2000; SCARSC_Fold; SCARSC_Stock;
 		Marlin_1894; Marlin_1894_357; Win_1895; Win_1894; Viper;
@@ -575,7 +570,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_Grip_TG,				
         WeightModifier = 0.2,
-        RecoilDelayModifier = -1.5,
+        RecoilDelayModifier = -7.5,
 	AimingTimeModifier = 2,
         MountOn = SUB2000; SCARSC_Fold; SCARSC_Stock;
 		Marlin_1894; Marlin_1894_357; Win_1895; Win_1894; Viper;
@@ -643,7 +638,7 @@ module Base
         Weight = 0.12,		
 		WorldStaticModel = W_Light_Small,		
         WeightModifier = 0.12,
-        RecoilDelayModifier = -0.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -2.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -1,	/* ADDED WEIGHT SLOWER TO POINT		*/
 	MountOn = UmarexSS; CP33; Ruger_MK4; Buckmark; Buckmark_Long;
 		LCP380; BodyGuard380; G42; M5238;
@@ -737,7 +732,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_Light_Large,		
         WeightModifier = 0.2,
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED WEIGHT SLOWER TO POINT		*/
 	MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		M5238; B93R; CZ75; G18; G34; K5; M9; M9A3; M5906;
@@ -997,7 +992,7 @@ module Base
 		WorldStaticModel = W_Laser_DVAL,			
         WeightModifier = 0.3,
         HitChanceModifier = 3,
-        RecoilDelayModifier = -1,
+        RecoilDelayModifier = -5,
 	AimingTimeModifier = 2,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		K1_Stock; K1_Fold; SCARSC_Fold; SCARSC_Stock;
@@ -1080,7 +1075,7 @@ module Base
 		WorldStaticModel = W_Laser_PEQ15,			
         WeightModifier = 0.25,
         HitChanceModifier = 3,
-        RecoilDelayModifier = -1,
+        RecoilDelayModifier = -5,
 	AimingTimeModifier = 2,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		K1_Stock; K1_Fold; SCARSC_Fold; SCARSC_Stock;
@@ -1165,9 +1160,8 @@ module Base
         WeightModifier = 0.2,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY REDUCE MUZZLE EFFECT	*/
         MinRangeModifier = 0.1,		/* LENGTH				*/
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* CLUMBSY RELOAD SLOWER		*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; CP33; Ruger_MK4; Buckmark; Buckmark_Long; Buckmark_Carbine; AR7;
 		LCP380; BodyGuard380; G42; M5238;
 		PPK; Bersa85F; Colt1903; Model50; Model55;
@@ -1206,9 +1200,8 @@ module Base
         WeightModifier = 0.25,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY REDUCE MUZZLE EFFECT	*/
         MinRangeModifier = 0.1,		/* LENGTH				*/
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* CLUMBSY RELOAD SLOWER		*/
         MountOn = Win_1895; Viper;
 		K1_Stock; K1_Fold; SCARSC_Fold; SCARSC_Stock;
 		AUG; DR200; G33; G3; G28; K2; K2C1; K14; Type64;
@@ -1253,9 +1246,8 @@ module Base
         WeightModifier = 0.3,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY REDUCE MUZZLE EFFECT	*/
         MinRangeModifier = 0.2,		/* LENGTH				*/
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* VERY CLUMBSY RELOAD SLOWER		*/
         MountOn = Shotgun;
 		Shorty_Pistol; R11_87; M870; M1897;
 		SPAS12_Fixed; SPAS12_Fold; SPAS12_Stock;
@@ -1280,9 +1272,8 @@ module Base
         WeightModifier = 0.5,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY REDUCE MUZZLE EFFECT	*/
         MinRangeModifier = 0.2,		/* LENGTH				*/
-        RecoilDelayModifier = -2,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -10,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* VERY CLUMBSY RELOAD SLOWER		*/
         MountOn = M82; BOAR; EDM96; BFG50; Harris50; TAC50,
         PartType = Canon,
         Tooltip = Tooltip_Suppressor_BMG,
@@ -1297,9 +1288,8 @@ module Base
 		WorldStaticModel = W_Suppressor_Oil,			
         WeightModifier = 0.2,
         HitChanceModifier = 1,		/* SLIGHT ACCURACY REDUCE MUZZLE EFFECT	*/
-        RecoilDelayModifier = -1,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -1,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 5,		/* CLUMBSY RELOAD SLOWER		*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; CP33; Ruger_MK4; Buckmark; Buckmark_Long; Buckmark_Carbine; AR7;
 		LCP380; BodyGuard380; G42; M5238;
 		PPK; Bersa85F; Colt1903;
@@ -1371,7 +1361,6 @@ module Base
         WeightModifier = 0.1,
         MinRangeModifier = 0.1,		/* LENGTH				*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
-        ReloadTimeModifier = 10,	/* VERY CLUMBSY RELOAD SLOWER		*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; CP33; Ruger_MK4; Buckmark; Buckmark_Long; Buckmark_Carbine; AR7;
 		LCP380; BodyGuard380; G42; M5238;
 		PPK; Bersa85F; Colt1903; Winchester1903; Winchester1866; Winchester1873;
@@ -1420,10 +1409,9 @@ module Base
 		WorldStaticModel = W_Bayonet_M4,		
         WeightModifier = 0.25,
         MinRangeModifier = 0.5,		/* LENGTH				*/
-        RecoilDelayModifier = -0.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -2.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
         HitChanceModifier = -5,		/* NEGATIVE HARMONICS			*/
-        ReloadTimeModifier = 10,	/* CLUMBSY RELOAD SLOWER		*/
         MountOn = M14; M14EBR; M1Carbine; M2Carbine;
 		M16A1; M723; XM117; H416; MK18;
 		G3; G33; G28; 
@@ -1446,10 +1434,9 @@ module Base
 		WorldStaticModel = W_Bayonet_AK,			
         WeightModifier = 0.25,
         MinRangeModifier = 0.5,		/* LENGTH				*/
-        RecoilDelayModifier = -0.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -2.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
         HitChanceModifier = -5,		/* NEGATIVE HARMONICS			*/
-        ReloadTimeModifier = 10,	/* CLUMBSY RELOAD SLOWER		*/
         MountOn = AK103; AKMS_Stock; AKMS_Fold; M85_Stock; M85_Fold; MD65_Stock; MD65_Fold;
 		SVD; SVDK;
 		AK12; AK12_Fold; AK12_New; RPK16; AK308;
@@ -1469,10 +1456,9 @@ module Base
 		
         WeightModifier = 0.25,
         MinRangeModifier = 0.5,		/* LENGTH				*/
-        RecoilDelayModifier = -0.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
+        RecoilDelayModifier = -2.5,	/* MUZZLE WEIGHT MITIGATES RECOIL	*/
 	AimingTimeModifier = -2,	/* ADDED LENGTH SLOWER TO POINT		*/
         HitChanceModifier = -5,		/* NEGATIVE HARMONICS			*/
-        ReloadTimeModifier = 10,	/* CLUMBSY RELOAD SLOWER		*/
         MountOn = Type64; M1897; Type38; Type99;
 		M1; M1903; Mosin; MAS36; MAS44; MAS49,
         PartType = Canon,
@@ -1531,7 +1517,7 @@ module Base
         Weight = 1.0,
         WeightModifier = 1.0,
         HitChanceModifier = 5,		/* SLIGHT ACCURACY FROM CONSISTENCY	*/
-        RecoilDelayModifier = -2,	/* WEIGHT MITIGATES RECOIL		*/
+        RecoilDelayModifier = -10,	/* WEIGHT MITIGATES RECOIL		*/
 	AimingTimeModifier = -1,	/* WEIGHT SLOWER TO POINT		*/
         MountOn = 
         PartType = Canon,
@@ -1548,7 +1534,7 @@ module Base
 		WorldStaticModel = W_Compensator,			
         WeightModifier = 0.07,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY LIKE LESSER CALIBER	*/
-        RecoilDelayModifier = -2.0,	/* NEGATIVE IS FASTER			*/
+        RecoilDelayModifier = -10,	/* NEGATIVE IS FASTER			*/
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; CP33; Ruger_MK4; Buckmark; Buckmark_Long; Buckmark_Carbine; AR7;
 		LCP380; BodyGuard380; G42; M5238;
 		PPK; Bersa85F; Colt1903;
@@ -1616,7 +1602,7 @@ module Base
 		WorldStaticModel = W_MuzzleBrake,			
         WeightModifier = 0.1,
         HitChanceModifier = 2,		/* SLIGHT ACCURACY LIKEN LESSER CALIBER	*/
-        RecoilDelayModifier = -3.0,	/* NEGATIVE IS FASTER			*/
+        RecoilDelayModifier = -15,	/* NEGATIVE IS FASTER			*/
         MountOn = K1_Stock; K1_Fold; 
 		Win_1895; Win_1894; Viper; Mosin;
 		K1_Stock; K1_Fold; SCARSC_Fold; SCARSC_Stock;
@@ -1691,7 +1677,6 @@ module Base
         HitChanceModifier = -1,
         MaxRangeModifier = -1,
 	AimingTimeModifier = 8,
-        ReloadTimeModifier = 2,
         AngleModifier = -0.004,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Ruger_MK4; Buckmark; Buckmark_Long; Buckmark_Carbine; AR7;
 		LCP380; BodyGuard380; G42; M5238;
@@ -1780,7 +1765,6 @@ module Base
         HitChanceModifier = 4,
         MaxRangeModifier = 0.5,
 	AimingTimeModifier = 6,
-        ReloadTimeModifier = 5,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -1851,7 +1835,6 @@ module Base
         HitChanceModifier = 4,
         MaxRangeModifier = 0.4,
 	AimingTimeModifier = 6,
-        ReloadTimeModifier = 4,
         AngleModifier = -0.002,
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Carbine; AR7;
 		MosinObrez_Pistol; Model50; Model55;
@@ -1933,7 +1916,6 @@ module Base
         HitChanceModifier = 4,
         MaxRangeModifier = 0.5,
 	AimingTimeModifier = 6,
-        ReloadTimeModifier = 9,
         AngleModifier = -0.003,
         MountOn = American180;
 		Mosin; BAR_Monitor; BAR;
@@ -2007,7 +1989,6 @@ module Base
         HitChanceModifier = 8,
         MaxRangeModifier = 1.6,
 	AimingTimeModifier = 3,
-        ReloadTimeModifier = 10,
         AngleModifier = -0.005,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		BT380_Fold; BT380_Stock; BT9_Fold; BT9_Stock;
@@ -2096,7 +2077,6 @@ module Base
         HitChanceModifier = 8,
         MaxRangeModifier = 1.5,
 	AimingTimeModifier = 2,
-        ReloadTimeModifier = 8,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2167,7 +2147,6 @@ module Base
         HitChanceModifier = 5,
         MaxRangeModifier = 0.8,
 	AimingTimeModifier = 5,
-        ReloadTimeModifier = 6,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2238,7 +2217,6 @@ module Base
         HitChanceModifier = 9,
         MaxRangeModifier = 1.8,
 	AimingTimeModifier = 1,
-        ReloadTimeModifier = 10,
         AngleModifier = -0.003,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		BT380_Fold; BT380_Stock; BT9_Fold; BT9_Stock;
@@ -2327,7 +2305,6 @@ module Base
         HitChanceModifier = 9,
         MaxRangeModifier = 1.8,
 	AimingTimeModifier = 2,
-        ReloadTimeModifier = 10,
         AngleModifier = -0.003,
         MountOn = UmarexSS; Cricket_22; Ruger_1022; Marlin_M70; CP33; Buckmark_Long; Buckmark_Carbine; AR7;
 		BT380_Fold; BT380_Stock; BT9_Fold; BT9_Stock;
@@ -2416,7 +2393,6 @@ module Base
         HitChanceModifier = 8,
         MaxRangeModifier = 1.5,
 	AimingTimeModifier = 2,
-        ReloadTimeModifier = 12,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2487,7 +2463,6 @@ module Base
         HitChanceModifier = 8,
         MaxRangeModifier = 1.5,
 	AimingTimeModifier = 2,
-        ReloadTimeModifier = 7,
         AngleModifier = -0.002,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2558,7 +2533,6 @@ module Base
         HitChanceModifier = 7,
         MaxRangeModifier = 1.1,
 	AimingTimeModifier = 3,
-        ReloadTimeModifier = 5,
         AngleModifier = -0.002,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2629,7 +2603,6 @@ module Base
         HitChanceModifier = 6,
         MaxRangeModifier = 0.9,
 	AimingTimeModifier = 5,
-        ReloadTimeModifier = 11,
         AngleModifier = -0.004,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock; Saiga12_Tromix;
@@ -2700,7 +2673,6 @@ module Base
         HitChanceModifier = 7,
         MaxRangeModifier = 1.3,
 	AimingTimeModifier = 4,
-        ReloadTimeModifier = 10,
         AngleModifier = -0.004,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2771,7 +2743,6 @@ module Base
         HitChanceModifier = 9,
         MaxRangeModifier = 1.8,
 	AimingTimeModifier = 2,
-        ReloadTimeModifier = 11,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2842,7 +2813,6 @@ module Base
         HitChanceModifier = 4,
         MaxRangeModifier = 0.5,
 	AimingTimeModifier = 6,
-        ReloadTimeModifier = 9,
         AngleModifier = -0.004,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2913,7 +2883,6 @@ module Base
         HitChanceModifier = 6,
         MaxRangeModifier = 1,
 	AimingTimeModifier = 5,
-        ReloadTimeModifier = 11,
         AngleModifier = -0.004,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -2977,7 +2946,6 @@ module Base
         HitChanceModifier = 8,
         MaxRangeModifier = 1.6,
 	AimingTimeModifier = 3,
-        ReloadTimeModifier = 10,
         AngleModifier = -0.004,
         MountOn = Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Stock; Vz58_Mini_Fold;
 		Vz61_Fixed; Vz61_Fold; Vz61_Stock;
@@ -3043,7 +3011,6 @@ module Base
         HitChanceModifier = 9,
         MaxRangeModifier = 3.5,
         MinRangeModifier = 1.8,
-        ReloadTimeModifier = 13,
         AngleModifier = -0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3115,7 +3082,6 @@ module Base
         MaxRangeModifier = 4.1,
         MinRangeModifier = 2.1,
 	AimingTimeModifier = -3,
-        ReloadTimeModifier = 7,
         AngleModifier = 0.001,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3187,7 +3153,6 @@ module Base
         MaxRangeModifier = 4.6,
         MinRangeModifier = 1.3,
 	AimingTimeModifier = -4,
-        ReloadTimeModifier = 11,
         AngleModifier = 0.001,
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Long; Buckmark_Carbine; AR7;
 		UMP9_Stock; UMP9_Fold; UMP45_Stock; UMP45_Fold;
@@ -3273,7 +3238,6 @@ module Base
         MaxRangeModifier = 4.2,
         MinRangeModifier = 2.1,
 	AimingTimeModifier = -1,
-        ReloadTimeModifier = 12,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
 		ASVAL; ASVAL_Fold; VSS;
@@ -3344,7 +3308,6 @@ module Base
         MaxRangeModifier = 4.4,
         MinRangeModifier = 2.2,
 	AimingTimeModifier = -2,
-        ReloadTimeModifier = 12,
         AngleModifier = 0.001,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3416,7 +3379,6 @@ module Base
         MaxRangeModifier = 5,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -4,
-        ReloadTimeModifier = 12,
         AngleModifier = 0.001,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3482,7 +3444,6 @@ module Base
         MaxRangeModifier = 5,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -5,
-        ReloadTimeModifier = 16,
         AngleModifier = 0.002,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3548,7 +3509,6 @@ module Base
         MaxRangeModifier = 5,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -2,
-        ReloadTimeModifier = 11,
         AngleModifier = 0.001,
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Long; Buckmark_Carbine; AR7;
 		K1_Stock; K1_Fold;
@@ -3619,7 +3579,6 @@ module Base
         MaxRangeModifier = 5,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -3,
-        ReloadTimeModifier = 9,
         AngleModifier = 0.002,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3684,7 +3643,6 @@ module Base
         MaxRangeModifier = 5,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -3,
-        ReloadTimeModifier = 11,
         AngleModifier = 0.002,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3749,7 +3707,6 @@ module Base
         MaxRangeModifier = 5.5,
         MinRangeModifier = 2.8,
 	AimingTimeModifier = -5,
-        ReloadTimeModifier = 7,
         AngleModifier = 0.003,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -3815,7 +3772,6 @@ module Base
         MaxRangeModifier = 5.5,
         MinRangeModifier = 2.8,
 	AimingTimeModifier = -5,
-        ReloadTimeModifier = 12,
         AngleModifier = 0.002,
         MountOn = Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Stock; Vz58_Mini_Fold;
 		M1; M1903; Mosin;
@@ -3874,7 +3830,6 @@ module Base
         MaxRangeModifier = 5.5,
         MinRangeModifier = 2.8,
 	AimingTimeModifier = -4,
-        ReloadTimeModifier = 7,
         AngleModifier = 0.002,
         MountOn = SUB2000;
 		Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Long; Buckmark_Carbine; AR7;
@@ -3947,7 +3902,6 @@ module Base
         MaxRangeModifier = 5.5,
         MinRangeModifier = 1.3,
 	AimingTimeModifier = -5,
-        ReloadTimeModifier = 9,
         AngleModifier = 0.003,
         MountOn = SUB2000;
 		Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Long; Buckmark_Carbine; AR7;
@@ -4020,7 +3974,6 @@ module Base
         MaxRangeModifier = 7.2,
         MinRangeModifier = 1.4,
 	AimingTimeModifier = -5,
-        ReloadTimeModifier = 13,
         AngleModifier = 0.004,
         MountOn = Cricket_22; Ruger_1022; Marlin_M70; Buckmark_Long; Buckmark_Carbine; AR7;
 		K1_Stock; K1_Fold;
@@ -4091,7 +4044,6 @@ module Base
         MaxRangeModifier = 9.2,
         MinRangeModifier = 4.6,
 	AimingTimeModifier = -7,
-        ReloadTimeModifier = 10,
         AngleModifier = 0.007,
         MountOn = Win_1895; Win_1894; Viper;
 		ASVAL; ASVAL_Fold; VSS; M1Carbine; M2Carbine; Commando;
@@ -4157,7 +4109,6 @@ module Base
         MaxRangeModifier = 13,
         MinRangeModifier = 2.5,
 	AimingTimeModifier = -8,
-        ReloadTimeModifier = 13,
         AngleModifier = 0.01,
         MountOn = Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Stock; Vz58_Mini_Fold;
 		M1; M1903; Mosin;
@@ -4217,7 +4168,6 @@ module Base
         MaxRangeModifier = 15,
         MinRangeModifier = 2.8,
 	AimingTimeModifier = -9,
-        ReloadTimeModifier = 10,
         AngleModifier = 0.013,
         MountOn = Win_1895; Win_1894; Viper;
 		ASVAL; ASVAL_Fold; VSS; M1Carbine; M2Carbine; Commando;
@@ -4282,7 +4232,6 @@ module Base
         MaxRangeModifier = 20.6,
         MinRangeModifier = 2.8,
 	AimingTimeModifier = -10,
-        ReloadTimeModifier = 11,
         AngleModifier = 0.02,
         MountOn = Win_1895; Win_1894; Viper;
 		ASVAL; ASVAL_Fold; VSS; M1Carbine; M2Carbine; Commando;
@@ -4344,7 +4293,6 @@ module Base
         MaxRangeModifier = 20.6,
         MinRangeModifier = 1.8,
 	AimingTimeModifier = -10,
-        ReloadTimeModifier = 13,
         AngleModifier = 0.018,
         MountOn = Mosin; MosinObrez_Pistol; M1; Commando; M1903; WA2000;
 		Vz58; Vz58_Stock; Vz58_Fold; Vz58_Mini_Fold; Vz58_Mini_Stock;
@@ -4402,7 +4350,6 @@ module Base
         MaxRangeModifier = 5.4,
         MinRangeModifier = 2.7,
 	AimingTimeModifier = -12,
-        ReloadTimeModifier = 29,
         AngleModifier = 0.025,
         MountOn = M249; M249E3; M249E3_Fold;
 		Sako85; Savage12; Mosin; M1903; Type64;
@@ -4465,7 +4412,6 @@ module Base
         MaxRangeModifier = 4,
         MinRangeModifier = 2,
 	AimingTimeModifier = -10,
-        ReloadTimeModifier = 22,
         AngleModifier = 0.023,
         MountOn = M85_Stock; M85_Fold; AK103; AKMS_Stock; AKMS_Fold; MD65_Stock; MD65_Fold; 
 		SVD; SVDK; MAC10_Fold; MAC10_Stock; Model50; Model55;
@@ -4529,7 +4475,6 @@ module Base
         MaxRangeModifier = 4.1,
         MinRangeModifier = 2.1,
 	AimingTimeModifier = -10,
-        ReloadTimeModifier = 31,
         AngleModifier = 0.023,
         MountOn = M249; M249E3; M249E3_Fold; FN_FNC_Fold;
 		Sako85; Savage12; Mosin; M1903; Type64; QBZ_95;
@@ -4592,7 +4537,7 @@ module Base
         Icon = Pad,
         Weight = 0.1,
         WeightModifier = 0.1,
-        RecoilDelayModifier = -2.0,
+        RecoilDelayModifier = -10.0,
         MountOn = DoubleBarrelShotgun; DoubleBarrelShotgunSawnoff; Shotgun; ShotgunSawnoff;
 		Coachgun; Coachgun_Sawed; DT11; DT11_Sawed;
 		R11_87; M870; M1897;
@@ -4656,7 +4601,7 @@ module Base
         Weight = 0.2,
 		WorldStaticModel = W_Carrier_12g,				
         WeightModifier = 0.2, 
-        ReloadTimeModifier = -15,	/* RELOAD FASTER		*/
+        ReloadTimeModifier = -45,	/* RELOAD FASTER		*/
         MountOn = DoubleBarrelShotgun; DoubleBarrelShotgunSawnoff; Shotgun; ShotgunSawnoff;
 		Coachgun; Coachgun_Sawed; Coachgun_Pistol; DT11; DT11_Sawed; DT11_Pistol;
 		Shorty_Pistol; R11_87; M870; M1897;
