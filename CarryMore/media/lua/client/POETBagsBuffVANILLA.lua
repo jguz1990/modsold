@@ -739,3 +739,8 @@ TweakItem("Base.SackOnions", "Weight", "0.01")
 TweakItem("Base.Paperclip", "Weight", "0.001")
 
 TweakItem("Base.PropaneTank", "UseDelta", "0.01")
+TweakItem("Base.Plank", "Weight", "0.5")
+TweakItem("Base.Log", "Weight", "1.5")
+TweakItem("Base.LogStacks2", "Weight", "2")
+TweakItem("Base.LogStacks3", "Weight", "2.5")
+TweakItem("Base.LogStacks4", "Weight", "3")
