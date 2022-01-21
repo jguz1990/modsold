@@ -18,13 +18,6 @@ module Base
 			leftCol = 0;0;1,
 			rightCol = 0;0;1,
 		}
-		
-		model
-		{
-			file = Vehicles_ATA_Bus,
-			scale = 1.8500,
-			offset = -0.0108 -0.0811 0.8054,
-		}
 
 		skin
 		{
@@ -37,8 +30,8 @@ module Base
 		}
 
 		textureMask = Vehicles/ATA_PrisonBus_mask,
-		engineForce = 4500,
-		maxSpeed = 40f,
+		engineForce = 3500,
+		maxSpeed = 35f,
 
 		part WindowFrontLeft
 		{
@@ -57,25 +50,22 @@ module Base
 	{
 		template! = ATAArmySchoolBus,
 		template = ATA_Bus_Protection/part/DoorRearProtection,
+
 		lightbar
 		{
 			soundSiren = VehicleSiren,
 			leftCol = 0;0;1,
 			rightCol = 0;0;1,
 		}
+
 		template = ATALightBars/part/ATALightBar,
+
 		part ATALightBar
 		{
 			model Default
 			{
 				file = Vehicles_ATA_Bus_Lightbar,
 			}
-		}
-		model
-		{
-			file = Vehicles_ATA_Bus,
-			scale = 1.8500,
-			offset = -0.0108 -0.0811 0.8054,
 		}
 
 		skin
@@ -89,20 +79,15 @@ module Base
 		}
 
 		textureMask = Vehicles/ATA_ArmyBus_mask,
-		engineForce = 5000,
-		maxSpeed = 50f,
+		engineForce = 4000,
+		maxSpeed = 40f,
 	}
 	vehicle ATASchoolBus
 	{
 		template! = ATAArmySchoolBus,
 		template = ATA_Bus_Protection/part/DoorRearProtection,
-		model
-		{
-			file = Vehicles_ATA_Bus,
-			scale = 1.8500,
-			offset = -0.0108 -0.0811 0.8054,
-		}
-		skin
+		
+        skin
 		{
 			texture = Vehicles/ATA_SchoolBus_body,
 		}
@@ -112,8 +97,8 @@ module Base
 			texture = Vehicles/ATA_SchoolBus_body_egnh,
 		}
 		textureMask = Vehicles/ATA_ArmyBus_mask,
-		engineForce = 4000,
-		maxSpeed = 40f,
+		engineForce = 3500,
+		maxSpeed = 30f,
 	}
 	template vehicle ATAArmySchoolBus
 	{
@@ -221,6 +206,7 @@ module Base
 		playerDamageProtection = 1.5,
 		offRoadEfficiency = 1.5,
 		engineRPMType = van,
+        mass = 1000,
 		
 		textureLights = Vehicles/ATA_Bus_light,
 		textureDamage1Overlay = Vehicles/ATA_Bus_Blood_Mask,
@@ -228,7 +214,14 @@ module Base
 		textureDamage1Shell = Vehicles/ATA_Army_Damage1,
 		textureDamage2Shell = Vehicles/ATA_Army_Damage2,
 		textureRust = Vehicles/ATA_Bus_rust,
-
+           
+        model
+		{
+			file = Vehicles_ATA_Bus,
+			scale = 1.8000,
+			offset = 0.0000 -0.0722 0.0000,
+		}
+           
 		sound
 		{
 			engine = VehicleEnginePickUpVan,
@@ -239,22 +232,22 @@ module Base
 			backSignal = VehicleBackUpBeeper,
 		}
 
-		extents = 1.0486 0.7027 3.3622,
-		physicsChassisShape = 1.0486 0.7027 3.3622,
-		centerOfMassOffset = 0.0000 0.5189 0.1459,
-		shadowExtents = 1.0169 3.1933,
-		shadowOffset = 0.0000 0.0000,
+		extents = 1.0556 0.7000 3.3111,
+		physicsChassisShape = 1.0556 0.7000 3.3111,
+		centerOfMassOffset = 0.0000 0.4333 0.1556,
+		shadowExtents = 1.0836 3.4321,
+		shadowOffset = 0.0000 0.1167,
 
 		attachment trailer
 		{
-			offset = 0.0000 0.1838 -2.4324,
+			offset = 0.0000 0.0324 -1.6216,
 			rotate = 0.0000 0.0000 0.0000,
 			zoffset = -1.0000,
 		}
 
 		attachment trailerfront
 		{
-			offset = 0.0000 0.2162 1.0919,
+			offset = 0.0000 -0.0270 1.7892,
 			rotate = 0.0000 0.0000 0.0000,
 			zoffset = 1.0000,
 		}
@@ -285,7 +278,7 @@ module Base
 		wheel FrontLeft
 		{
 			front = true,
-			offset = 0.4324 0.1081 0.4757,
+			offset = 0.4722 0.0167 1.3667,
 			radius = 0.17f,
 			width = 0.2f,
 		}
@@ -293,7 +286,7 @@ module Base
 		wheel FrontRight
 		{
 			front = true,
-			offset = -0.4216 0.1081 0.4757,
+			offset = -0.4722 0.0167 1.3667,
 			radius = 0.17f,
 			width = 0.2f,
 		}
@@ -301,7 +294,7 @@ module Base
 		wheel RearLeft
 		{
 			front = false,
-			offset = 0.4432 0.1081 -1.4973,
+			offset = 0.4278 0.0000 -0.8222,
 			radius = 0.17f,
 			width = 0.4f,
 		}
@@ -309,42 +302,26 @@ module Base
 		wheel RearRight
 		{
 			front = false,
-			offset = -0.4108 0.1081 -1.4973,
+			offset = -0.4278 0.0000 -0.8222,
 			radius = 0.17f,
 			width = 0.4f,
 		}
 
 		template = PassengerSeat6,
 
-		passenger FrontLeft
+        passenger FrontLeft
 		{
 			position inside
 			{
-				offset = 0.2703 0.5946 -0.2000,
+				offset = 0.2722 0.4167 0.8111,
 				rotate = 0.0000 0.0000 0.0000,
 			}
 
 			position outside
 			{
-				offset = -0.5730 -0.4649 -0.0703,
-				rotate = 0.0000 0.0000 0.0000,
 				area = SeatFrontRight,
-			}
-		}
-
-		passenger FrontRight
-		{
-			position inside
-			{
-				offset = -0.2703 0.5946 -0.2000,
+				offset = 0.7222 -0.1667 0.8389,
 				rotate = 0.0000 0.0000 0.0000,
-			}
-
-			position outside
-			{
-				offset = -0.5730 -0.4649 -0.0703,
-				rotate = 0.0000 0.0000 0.0000,
-				area = SeatFrontRight,
 			}
 		}
 
@@ -352,15 +329,15 @@ module Base
 		{
 			position inside
 			{
-				offset = 0.2703 0.5946 -0.7027,
+				offset = 0.2722 0.4167 -0.4444,
 				rotate = 0.0000 0.0000 0.0000,
 			}
 
 			position outside
 			{
-				offset = -0.5730 -0.4649 -0.0703,
-				rotate = 0.0000 0.0000 0.0000,
 				area = SeatFrontRight,
+				offset = 0.7222 -0.1667 -0.4444,
+				rotate = 0.0000 0.0000 0.0000,
 			}
 		}
 
@@ -368,15 +345,15 @@ module Base
 		{
 			position inside
 			{
-				offset = -0.2703 0.5946 -0.7027,
+				offset = -0.2722 0.4167 -0.4444,
 				rotate = 0.0000 0.0000 0.0000,
 			}
 
 			position outside
 			{
-				offset = -0.5730 -0.4649 -0.0703,
-				rotate = 0.0000 0.0000 0.0000,
 				area = SeatFrontRight,
+				offset = -0.7222 -0.1667 -0.4444,
+				rotate = 0.0000 0.0000 0.0000,
 			}
 		}
 
@@ -384,15 +361,15 @@ module Base
 		{
 			position inside
 			{
-				offset = 0.2703 0.5946 -1.2432,
+				offset = 0.2722 0.4167 -1.1667,
 				rotate = 0.0000 0.0000 0.0000,
 			}
 
 			position outside
 			{
-				offset = -0.5730 -0.4649 -0.0703,
-				rotate = 0.0000 0.0000 0.0000,
 				area = SeatFrontRight,
+				offset = 0.7222 -0.1667 -1.1667,
+				rotate = 0.0000 0.0000 0.0000,
 			}
 		}
 
@@ -400,13 +377,29 @@ module Base
 		{
 			position inside
 			{
-				offset = -0.2703 0.5946 -1.2432,
+				offset = -0.2722 0.4167 -1.1667,
 				rotate = 0.0000 0.0000 0.0000,
 			}
 
 			position outside
 			{
-				offset = -0.5730 -0.4649 -0.0703,
+				area = SeatFrontRight,
+				offset = -0.7222 -0.1667 -1.1667,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		passenger FrontRight
+		{
+			position inside
+			{
+				offset = -0.2722 0.4167 0.2778,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -0.6889 -0.1667 0.8167,
 				rotate = 0.0000 0.0000 0.0000,
 				area = SeatFrontRight,
 			}
@@ -414,72 +407,72 @@ module Base
 
 		area Engine
 		{
-			xywh = 0.0000 1.3243 1.0486 1.4378,
+			xywh = 0.0000 1.8944 1.0556 0.5778,
 		}
 
 		area TruckBed
 		{
-			xywh = 0.0000 -1.7730 0.8432 0.4757,
+			xywh = 0.0000 -1.7722 0.8444 0.4778,
 		}
 
 		area RoofRack
 		{
-			xywh = 0.0000 -0.2649 1.7730 2.6595,
+			xywh = 0.0000 -0.2667 1.7778 2.6667,
 		}
 
 		area SeatFrontLeft
 		{
-			xywh = 0.7622 0.6270 0.4757 0.4757,
+			xywh = 0.7611 0.8056 0.4778 0.4778,
 		}
 
 		area SeatFrontRight
 		{
-			xywh = -0.7622 0.6324 0.4757 0.4757,
+			xywh = -0.7611 0.8056 0.4778 0.4778,
 		}
 
 		area SeatMiddleLeft
 		{
-			xywh = 0.7622 0.0000 0.4757 0.4757,
+			xywh = 0.7611 0.0000 0.4778 0.4778,
 		}
 
 		area SeatMiddleRight
 		{
-			xywh = -0.7622 0.0000 0.4757 0.4757,
+			xywh = -0.7611 0.0000 0.4778 0.4778,
 		}
 
 		area SeatRearLeft
 		{
-			xywh = 0.7622 -1.2486 0.4757 0.4757,
+			xywh = 0.7611 -1.2500 0.4778 0.4778,
 		}
 
 		area SeatRearRight
 		{
-			xywh = -0.7622 -1.2541 0.4757 0.4757,
+			xywh = -0.7611 -1.2556 0.4778 0.4778,
 		}
 
 		area GasTank
 		{
-			xywh = 0.7622 1.1243 0.4757 0.4757,
+			xywh = 0.7611 1.1222 0.4778 0.4778,
 		}
 
 		area TireFrontLeft
 		{
-			xywh = 0.7622 1.2811 0.4757 0.4757,
+			xywh = 0.7611 1.3667 0.4778 0.4778,
 		}
 
 		area TireFrontRight
 		{
-			xywh = -0.7622 1.2486 0.4757 0.4757,
+			xywh = -0.7611 1.3667 0.4778 0.4778,
 		}
 
 		area TireRearLeft
 		{
-			xywh = 0.7622 -0.6865 0.4757 0.4757,
+			xywh = 0.7611 -0.6889 0.4778 0.4778,
 		}
 
 		area TireRearRight
 		{
-			xywh = -0.7622 -0.6865 0.4757 0.4757,
+			xywh = -0.7611 -0.6889 0.4778 0.4778,
 		}
 
 		template = TrunkDoor,
@@ -496,7 +489,7 @@ module Base
 
 			container
 			{
-				conditionAffectsCapacity = false,
+				conditionAffectsCapacity = true,
 				capacity = 60,
 			}
 		}

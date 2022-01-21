@@ -2,7 +2,7 @@ module Base
 {
 	model ATA_Bus_Kengur_1
 	{
-		mesh = vehicles/ATA_Bus_parts|Kengur_1,
+		mesh = vehicles/ATA_Bus|Kengur_1,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
@@ -10,7 +10,7 @@ module Base
 		
 	model ATA_Bus_Kengur_2
 	{
-		mesh = vehicles/ATA_Bus_parts|Kengur_2,
+		mesh = vehicles/ATA_Bus|Kengur_2,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
@@ -18,7 +18,7 @@ module Base
 	
 	model ATA_Bus_Kengur_3
 	{
-		mesh = vehicles/ATA_Bus_parts|Kengur_3,
+		mesh = vehicles/ATA_Bus|Kengur_3,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,

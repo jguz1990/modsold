@@ -1,3 +1,28 @@
+v.1.12
+2022-01-20
+
+Обновлены иконки предметов для автобуса.
+Добавлены 3д-модели предметов для автобуса.
+Добавлен правильный интерфейс механика.
+Добавлен правильный интерфейс пересадки.
+Обновлена 3д-модель и текстуры (передвинуто заднее колесо).
+Улучшена физика автобусов, уменьшена мощность двигателей.
+Запрещено снимать багажник, до снятия ящика.
+Исправлено: после снятия кенгурятника состояние передних колес оставалось 100%.
+Исправлено: после прочтения чертежа улучшенного кенгурятника в инвентаре появлялся журнал.
+
+Updated icons of items for the bus.
+Added 3D models of items for bus.
+Added correct mechanic UI.
+Added correct seat UI.
+Updated 3d-models and textures (moved back wheel).
+Improved bus physics, reduced engine power.
+Prohibited removal of the trunk, until the box is removed.
+Fixed: after removal of the bullbar, the condition of the front wheels remained 100%.
+Fixed: after reading the blueprint of the improved bullbar, the magazine appeared in the inventory.
+
+-------------------
+
 v.1.11
 2021-12-19
 

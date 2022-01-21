@@ -2,21 +2,21 @@ module Base
 {
 	model ATA_Bus_Roof_Barrel_1
 	{
-		mesh = vehicles/ATA_Bus_parts|Barrel_1,
+		mesh = vehicles/ATA_Bus|Barrel_1,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_Barrel_2
 	{
-		mesh = vehicles/ATA_Bus_parts|Barrel_2,
+		mesh = vehicles/ATA_Bus|Barrel_2,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_Box
 	{
-		mesh = vehicles/ATA_Bus_parts|Box,
+		mesh = vehicles/ATA_Bus|Box,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
@@ -24,42 +24,42 @@ module Base
 	
 	model ATA_Bus_Roof_Fench
 	{
-		mesh = vehicles/ATA_Bus_parts|Fench,
+		mesh = vehicles/ATA_Bus|Fench,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_GasCan_1
 	{
-		mesh = vehicles/ATA_Bus_parts|GasCan_1,
+		mesh = vehicles/ATA_Bus|GasCan_1,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_GasCan_2
 	{
-		mesh = vehicles/ATA_Bus_parts|GasCan_2,
+		mesh = vehicles/ATA_Bus|GasCan_2,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_Pipes
 	{
-		mesh = vehicles/ATA_Bus_parts|Pipes,
+		mesh = vehicles/ATA_Bus|Pipes,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_Pipes1
 	{
-		mesh = vehicles/ATA_Bus_parts|Pipes1,
+		mesh = vehicles/ATA_Bus|Pipes1,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_Pipes2
 	{
-		mesh = vehicles/ATA_Bus_parts|Pipes2,
+		mesh = vehicles/ATA_Bus|Pipes2,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
@@ -67,14 +67,14 @@ module Base
 		
 	model ATA_Bus_Roof_Tent
 	{
-		mesh = vehicles/ATA_Bus_parts|Tent,
+		mesh = vehicles/ATA_Bus|Tent,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Roof_TentBox
 	{
-		mesh = vehicles/ATA_Bus_parts|TentBox,
+		mesh = vehicles/ATA_Bus|TentBox,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
@@ -156,6 +156,11 @@ module Base
 					3 = Pipes2,
 				}
 			}
+            
+            table uninstall
+            {
+                requireUninstalled = ATARoofRackToolbox,
+            }
 		}
 		part ATARoofRackToolbox
 		{

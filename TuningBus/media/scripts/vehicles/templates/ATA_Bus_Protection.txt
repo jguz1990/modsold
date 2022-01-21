@@ -2,49 +2,49 @@ module Base
 {
 	model ATA_Bus_Protection_door
 	{
-		mesh = vehicles/ATA_Bus_parts|Door,
+		mesh = vehicles/ATA_Bus|Door,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_door_rear
 	{
-		mesh = vehicles/ATA_Bus_parts|Door_rear,
+		mesh = vehicles/ATA_Bus|Door_rear,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_wheels
 	{
-		mesh = vehicles/ATA_Bus_parts|Protection_wheel,
+		mesh = vehicles/ATA_Bus|Protection_wheel,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_windows_front
 	{
-		mesh = vehicles/ATA_Bus_parts|Protection_windows_front,
+		mesh = vehicles/ATA_Bus|Protection_windows_front,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_windows_right
 	{
-		mesh = vehicles/ATA_Bus_parts|Protection_windows_right,
+		mesh = vehicles/ATA_Bus|Protection_windows_right,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_windows_left_light
 	{
-		mesh = vehicles/ATA_Bus_parts|Protection_windows_left_light,
+		mesh = vehicles/ATA_Bus|Protection_windows_left_light,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
 	}
 	model ATA_Bus_Protection_windows_left_full
 	{
-		mesh = vehicles/ATA_Bus_parts|Protection_windows_left_full,
+		mesh = vehicles/ATA_Bus|Protection_windows_left_full,
 		texture = Vehicles/ATA_Bus_parts,
 		shader = vehiclewheel,
 		scale = 0.01,
