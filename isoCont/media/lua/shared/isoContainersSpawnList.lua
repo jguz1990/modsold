@@ -19,8 +19,8 @@ VehicleZoneDistribution.postal.vehicles["Base.isoContainer3tanker"] = {index = -
 
 -- TrailerPark spawn --
 
-VehicleZoneDistribution.trailerpark.vehicles["Base.isoContainer2"] = {index = -1, spawnChance = 35};
-VehicleZoneDistribution.trailerpark.vehicles["Base.isoContainer3tanker"] = {index = -1, spawnChance = 10};
+VehicleZoneDistribution.trailerpark.vehicles["Base.isoContainer2"] = {index = -1, spawnChance = 55};
+VehicleZoneDistribution.trailerpark.vehicles["Base.isoContainer3tanker"] = {index = -1, spawnChance = 30};
 
 -- Military spawn --
 
@@ -35,7 +35,7 @@ VehicleZoneDistribution.military.vehicles["Base.isoContainer3tanker"] = {index =
 
 VehicleZoneDistribution.farm = VehicleZoneDistribution.farm or {}
 VehicleZoneDistribution.farm.vehicles = VehicleZoneDistribution.farm.vehicles or {}
-VehicleZoneDistribution.farm.vehicles["Base.isoContainer2"] = {index = -1, spawnChance = 25};
-VehicleZoneDistribution.farm.vehicles["Base.isoContainer3tanker"] = {index = -1, spawnChance = 10};
+VehicleZoneDistribution.farm.vehicles["Base.isoContainer2"] = {index = -1, spawnChance = 40};
+VehicleZoneDistribution.farm.vehicles["Base.isoContainer3tanker"] = {index = -1, spawnChance = 30};
 
 end

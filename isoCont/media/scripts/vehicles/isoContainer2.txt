@@ -57,6 +57,12 @@ module Base
 			texture = Vehicles/Containers_ISO2_Shell_red,
 		}
 
+		textureRust = Vehicles/Containers_ISO2_rust,
+		textureMask = Vehicles/Containers_ISO2_mask,
+		textureDamage1Overlay = Vehicles/Containers_ISO2_damage1,
+		textureDamage1Shell = Vehicles/Containers_ISO2_damage2,
+		textureDamage2Overlay = Vehicles/Containers_ISO2_blood,
+		textureDamage2Shell = Vehicles/Containers_ISO2_blood,
 		extents = 2.5111 2.6222 6.0889,
 		mass = 500,
 		physicsChassisShape = 2.5111 2.6222 6.0889,
@@ -105,14 +111,14 @@ module Base
 			anim Close
 			{
 				anim = Trunk_closing,
-				rate = 2.5,
+				rate = 1.5,
 			}
 
 			anim Open
 			{
 				anim = Trunk_closing,
 				reverse = TRUE,
-				rate = 2.0,
+				rate = 0.40,
 			}
 
 			anim Closed

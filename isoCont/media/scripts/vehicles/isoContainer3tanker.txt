@@ -54,15 +54,41 @@ module Base
 
 		skin
 		{
+			texture = Vehicles/Containers_ISO3_Shell_red,
+		}
+
+		skin
+		{
 			texture = Vehicles/Containers_ISO3_Shell_bee,
 		}
 
+		textureRust = Vehicles/Containers_ISO3_rust,
+		textureMask = Vehicles/Containers_ISO2_mask,
+		textureDamage1Overlay = Vehicles/Containers_ISO2_damage1,
+		textureDamage1Shell = Vehicles/Containers_ISO2_damage2,
+		textureDamage2Overlay = Vehicles/Containers_ISO2_blood,
+		textureDamage2Shell = Vehicles/Containers_ISO2_blood,
 		extents = 2.5111 2.6222 6.0889,
-		mass = 500,
+		mass = 650,
 		physicsChassisShape = 2.5111 2.6222 6.0889,
 		centerOfMassOffset = 0.0000 1.2556 0.0778,
 		shadowExtents = 2.5334 6.9000,
 		shadowOffset = 0.0000 -0.0000,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.0000 -1.1000 0.0000,
+			radius = 0.50f,
+			width = 0.50f,
+		}
+
+		template = Tire/part/TireFrontLeft,
+
+		part TireFrontLeft
+		{
+			category = nodisplay,
+		}
 
 		area TruckBed
 		{
@@ -105,14 +131,14 @@ module Base
 			anim Close
 			{
 				anim = Trunk_closing,
-				rate = 2.5,
+				rate = 1.5,
 			}
 
 			anim Open
 			{
 				anim = Trunk_closing,
 				reverse = TRUE,
-				rate = 2.0,
+				rate = 0.4,
 			}
 
 			anim Closed

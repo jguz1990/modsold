@@ -14,6 +14,5 @@ VehicleDistributions.fosoil = {
 	TruckBed = VehicleDistributions.FossoilTruckBed;
 }
 
-distributionTable["isoContainer1"] = { Normal = VehicleDistributions.mccoy; }
 distributionTable["isoContainer2"] = { Normal = VehicleDistributions.mccoy; }
 distributionTable["isoContainer3tanker"] = { Normal = VehicleDistributions.fosoil; }
