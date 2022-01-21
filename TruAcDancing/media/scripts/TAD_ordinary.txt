@@ -7,14 +7,14 @@ module TAD
 
 	model BobTAAfricanNoodleModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAAfricanNoodle,
 		scale = 0.4,
 	}
 
 	item BobTA_African_Noodle_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	African Noodle,
 		Icon	=	BobTAAfricanNoodle,
@@ -26,14 +26,14 @@ module TAD
 
 	model BobTAAfricanRainbowModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAAfricanRainbow,
 		scale = 0.4,
 	}
 
 	item BobTA_African_Rainbow_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	African Rainbow,
 		Icon	=	BobTAAfricanRainbow,
@@ -45,14 +45,14 @@ module TAD
 
 	model BobTAArmsHipHopModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAArmsHipHop,
 		scale = 0.4,
 	}
 
 	item BobTA_Arms_Hip_Hop_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Arms Hip Hop,
 		Icon	=	BobTAArmsHipHop,
@@ -64,14 +64,14 @@ module TAD
 
 	model BobTAArmPushModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAArmPush,
 		scale = 0.4,
 	}
 
 	item BobTA_Arm_Push_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Arm Push,
 		Icon	=	BobTAArmPush,
@@ -83,14 +83,14 @@ module TAD
 
 	model BobTAArmWaveOneModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAArmWaveOne,
 		scale = 0.4,
 	}
 
 	item BobTA_Arm_Wave_One_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Arm Wave One,
 		Icon	=	BobTAArmWaveOne,
@@ -102,14 +102,14 @@ module TAD
 
 	model BobTAArmWaveTwoModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAArmWaveTwo,
 		scale = 0.4,
 	}
 
 	item BobTA_Arm_Wave_Two_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Arm Wave Two,
 		Icon	=	BobTAArmWaveTwo,
@@ -121,14 +121,14 @@ module TAD
 
 	model BobTAAroundTheWorldModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAAroundTheWorld,
 		scale = 0.4,
 	}
 
 	item BobTA_Around_The_World_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Around The World,
 		Icon	=	BobTAAroundTheWorld,
@@ -140,14 +140,14 @@ module TAD
 
 	model BobTABboyHipHopOneModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABboyHipHopOne,
 		scale = 0.4,
 	}
 
 	item BobTA_Bboy_Hip_Hop_One_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Bboy Hip Hop One,
 		Icon	=	BobTABboyHipHopOne,
@@ -159,14 +159,14 @@ module TAD
 
 	model BobTABboyHipHopThreeModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABboyHipHopThree,
 		scale = 0.4,
 	}
 
 	item BobTA_Bboy_Hip_Hop_Three_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Bboy Hip Hop Three,
 		Icon	=	BobTABboyHipHopThree,
@@ -178,14 +178,14 @@ module TAD
 
 	model BobTABboyHipHopTwoModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABboyHipHopTwo,
 		scale = 0.4,
 	}
 
 	item BobTA_Bboy_Hip_Hop_Two_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Bboy Hip Hop Two,
 		Icon	=	BobTABboyHipHopTwo,
@@ -197,14 +197,14 @@ module TAD
 
 	model BobTABodyWaveModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABodyWave,
 		scale = 0.4,
 	}
 
 	item BobTA_Body_Wave_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Body Wave,
 		Icon	=	BobTABodyWave,
@@ -216,14 +216,14 @@ module TAD
 
 	model BobTABootyStepModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABootyStep,
 		scale = 0.4,
 	}
 
 	item BobTA_Booty_Step_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Booty Step,
 		Icon	=	BobTABootyStep,
@@ -235,14 +235,14 @@ module TAD
 
 	model BobTABreakdanceBrooklynUprockModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTABreakdanceBrooklynUprock,
 		scale = 0.4,
 	}
 
 	item BobTA_Breakdance_Brooklyn_Uprock_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Breakdance Brooklyn Uprock,
 		Icon	=	BobTABreakdanceBrooklynUprock,
@@ -254,14 +254,14 @@ module TAD
 
 	model BobTACabbagePatchModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTACabbagePatch,
 		scale = 0.4,
 	}
 
 	item BobTA_Cabbage_Patch_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Cabbage Patch,
 		Icon	=	BobTACabbagePatch,
@@ -273,14 +273,14 @@ module TAD
 
 	model BobTACanCanModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTACanCan,
 		scale = 0.4,
 	}
 
 	item BobTA_Can_Can_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Can Can,
 		Icon	=	BobTACanCan,
@@ -292,14 +292,14 @@ module TAD
 
 	model BobTAChickenModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAChicken,
 		scale = 0.4,
 	}
 
 	item BobTA_Chicken_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Chicken,
 		Icon	=	BobTAChicken,
@@ -311,14 +311,14 @@ module TAD
 
 	model BobTACrazyLegsModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTACrazyLegs,
 		scale = 0.4,
 	}
 
 	item BobTA_Crazy_Legs_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Crazy Legs,
 		Icon	=	BobTACrazyLegs,
@@ -330,14 +330,14 @@ module TAD
 
 	model BobTADefileDeSambaParadeModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTADefileDeSambaParade,
 		scale = 0.4,
 	}
 
 	item BobTA_Defile_De_Samba_Parade_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Defile De Samba Parade,
 		Icon	=	BobTADefileDeSambaParade,
@@ -349,14 +349,14 @@ module TAD
 
 	model BobTAHokeyPokeyModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAHokeyPokey,
 		scale = 0.4,
 	}
 
 	item BobTA_Hokey_Pokey_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Hokey Pokey,
 		Icon	=	BobTAHokeyPokey,
@@ -368,14 +368,14 @@ module TAD
 
 	model BobTAKickStepModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAKickStep,
 		scale = 0.4,
 	}
 
 	item BobTA_Kick_Step_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Kick Step,
 		Icon	=	BobTAKickStep,
@@ -387,14 +387,14 @@ module TAD
 
 	model BobTAMacarenaModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAMacarena,
 		scale = 0.4,
 	}
 
 	item BobTA_Macarena_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Macarena,
 		Icon	=	BobTAMacarena,
@@ -406,14 +406,14 @@ module TAD
 
 	model BobTAMaraschinoModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAMaraschino,
 		scale = 0.4,
 	}
 
 	item BobTA_Maraschino_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Maraschino,
 		Icon	=	BobTAMaraschino,
@@ -425,14 +425,14 @@ module TAD
 
 	model BobTAMoonWalkOneModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAMoonWalkOne,
 		scale = 0.4,
 	}
 
 	item BobTA_MoonWalk_One_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	MoonWalk One,
 		Icon	=	BobTAMoonWalkOne,
@@ -444,14 +444,14 @@ module TAD
 
 	model BobTANorthernSoulSpinModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTANorthernSoulSpin,
 		scale = 0.4,
 	}
 
 	item BobTA_Northern_Soul_Spin_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Northern Soul Spin,
 		Icon	=	BobTANorthernSoulSpin,
@@ -463,14 +463,14 @@ module TAD
 
 	model BobTANorthernSoulSpinOnFloorModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTANorthernSoulSpinOnFloor,
 		scale = 0.4,
 	}
 
 	item BobTA_Northern_Soul_Spin_On_Floor_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Northern Soul Spin On Floor,
 		Icon	=	BobTANorthernSoulSpinOnFloor,
@@ -482,14 +482,14 @@ module TAD
 
 	model BobTARaiseTheRoofModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARaiseTheRoof,
 		scale = 0.4,
 	}
 
 	item BobTA_Raise_The_Roof_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Raise The Roof,
 		Icon	=	BobTARaiseTheRoof,
@@ -501,14 +501,14 @@ module TAD
 
 	model BobTAReallyTwirlModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAReallyTwirl,
 		scale = 0.4,
 	}
 
 	item BobTA_Really_Twirl_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Really Twirl,
 		Icon	=	BobTAReallyTwirl,
@@ -520,14 +520,14 @@ module TAD
 
 	model BobTARibPopsModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARibPops,
 		scale = 0.4,
 	}
 
 	item BobTA_Rib_Pops_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Rib Pops,
 		Icon	=	BobTARibPops,
@@ -539,14 +539,14 @@ module TAD
 
 	model BobTARocketteKickModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARocketteKick,
 		scale = 0.4,
 	}
 
 	item BobTA_Rockette_Kick_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Rockette Kick,
 		Icon	=	BobTARocketteKick,
@@ -558,14 +558,14 @@ module TAD
 
 	model BobTARumbaDancingModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARumbaDancing,
 		scale = 0.4,
 	}
 
 	item BobTA_Rumba_Dancing_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Rumba Dancing,
 		Icon	=	BobTARumbaDancing,
@@ -577,14 +577,14 @@ module TAD
 
 	model BobTARunningManOneModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARunningManOne,
 		scale = 0.4,
 	}
 
 	item BobTA_Running_Man_One_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Running Man One,
 		Icon	=	BobTARunningManOne,
@@ -596,14 +596,14 @@ module TAD
 
 	model BobTARunningManThreeModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARunningManThree,
 		scale = 0.4,
 	}
 
 	item BobTA_Running_Man_Three_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Running Man Three,
 		Icon	=	BobTARunningManThree,
@@ -615,14 +615,14 @@ module TAD
 
 	model BobTARunningManTwoModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTARunningManTwo,
 		scale = 0.4,
 	}
 
 	item BobTA_Running_Man_Two_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Running Man Two,
 		Icon	=	BobTARunningManTwo,
@@ -634,14 +634,14 @@ module TAD
 
 	model BobTASalsaModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTASalsa,
 		scale = 0.4,
 	}
 
 	item BobTA_Salsa_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Salsa,
 		Icon	=	BobTASalsa,
@@ -653,14 +653,14 @@ module TAD
 
 	model BobTASalsaDoubleTwirlModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTASalsaDoubleTwirl,
 		scale = 0.4,
 	}
 
 	item BobTA_Salsa_Double_Twirl_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Salsa Double Twirl,
 		Icon	=	BobTASalsaDoubleTwirl,
@@ -672,14 +672,14 @@ module TAD
 
 	model BobTASalsaDoubleTwirlandClapModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTASalsaDoubleTwirlandClap,
 		scale = 0.4,
 	}
 
 	item BobTA_Salsa_Double_Twirl_and_Clap_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Salsa Double Twirl and Clap,
 		Icon	=	BobTASalsaDoubleTwirlandClap,
@@ -691,14 +691,14 @@ module TAD
 
 	model BobTASalsaSidetoSideModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTASalsaSidetoSide,
 		scale = 0.4,
 	}
 
 	item BobTA_Salsa_Side_to_Side_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Salsa Side to Side,
 		Icon	=	BobTASalsaSidetoSide,
@@ -710,14 +710,14 @@ module TAD
 
 	model BobTAShimmyModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAShimmy,
 		scale = 0.4,
 	}
 
 	item BobTA_Shimmy_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Shimmy,
 		Icon	=	BobTAShimmy,
@@ -729,14 +729,14 @@ module TAD
 
 	model BobTAShimShamModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAShimSham,
 		scale = 0.4,
 	}
 
 	item BobTA_Shim_Sham_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Shim Sham,
 		Icon	=	BobTAShimSham,
@@ -748,14 +748,14 @@ module TAD
 
 	model BobTAShufflingModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAShuffling,
 		scale = 0.4,
 	}
 
 	item BobTA_Shuffling_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Shuffling,
 		Icon	=	BobTAShuffling,
@@ -767,14 +767,14 @@ module TAD
 
 	model BobTASidetoSideModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTASidetoSide,
 		scale = 0.4,
 	}
 
 	item BobTA_Side_to_Side_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Side to Side,
 		Icon	=	BobTASidetoSide,
@@ -786,14 +786,14 @@ module TAD
 
 	model BobTATwistOneModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTATwistOne,
 		scale = 0.4,
 	}
 
 	item BobTA_Twist_One_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Twist One,
 		Icon	=	BobTATwistOne,
@@ -805,14 +805,14 @@ module TAD
 
 	model BobTATwistTwoModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTATwistTwo,
 		scale = 0.4,
 	}
 
 	item BobTA_Twist_Two_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Twist Two,
 		Icon	=	BobTATwistTwo,
@@ -824,14 +824,14 @@ module TAD
 
 	model BobTAUprockIndianStepModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAUprockIndianStep,
 		scale = 0.4,
 	}
 
 	item BobTA_Uprock_Indian_Step_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	Uprock Indian Step,
 		Icon	=	BobTAUprockIndianStep,
@@ -843,14 +843,14 @@ module TAD
 
 	model BobTAYMCAModel
 	{
-		mesh	=	WorldItems/Magazine,
+		mesh	=	WorldItems/TADMagazine,
 		texture	=	WorldItems/Magazine_BobTAYMCA,
 		scale = 0.4,
 	}
 
 	item BobTA_YMCA_Mag
 	{
-		Weight	=	0.01,
+		Weight	=	0.1,
 		Type	=	Literature,
 		DisplayName	=	YMCA,
 		Icon	=	BobTAYMCA,
