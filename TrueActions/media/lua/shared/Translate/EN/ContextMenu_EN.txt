@@ -1,5 +1,0 @@
-ContextMenu_EN = {
-	ContextMenu_Sit = "Sit",
-	ContextMenu_Lie = "Lie",
-	ContextMenu_OnSleep = "Lie down",
-}

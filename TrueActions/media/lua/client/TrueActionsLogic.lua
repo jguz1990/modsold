@@ -50,6 +50,7 @@ function ISWorldObjectContextMenu.sitOnObject(player, context, worldobjects, tes
 				woForLie = bed
 			end
 		end
+		-- print(item:getSprite():getName())
 		if not woForSeat and item and item:getSprite() and TrueActions.WorldSeatObject[item:getSprite():getName()] then
 			woForSeat = item
 		end
@@ -70,12 +71,12 @@ function ISWorldObjectContextMenu.sitOnObject(player, context, worldobjects, tes
 				playerObj:getVariableString("SitWOAnim") == "OnBedReversoE" or 
 				playerObj:getVariableString("SitWOAnim") == "OnBedReversoS") then
 			context:addOption(getText("ContextMenu_OnSleep"), playerObj, TrueActions.onSleepOnWorldObject);
-			TrueActions.updateSleepOption(context, player, woForLie, TrueActions.WorldLieObject[name_sprite])
+			TrueActions.updateSleepOption(context, player, bed, TrueActions.WorldLieObject[name_sprite])
 		elseif  playerObj:getVariableString("SitWOAnim") == "Sleep" or 
 				playerObj:getVariableString("SitWOAnim") == "SleepReversoE" or 
 				playerObj:getVariableString("SitWOAnim") == "SleepReversoS"then
 			context:addOption(getText("ContextMenu_Sit"), playerObj, TrueActions.fromSleep);
-			TrueActions.updateSleepOption(context, player, woForLie, TrueActions.WorldLieObject[name_sprite])
+			TrueActions.updateSleepOption(context, player, bed, TrueActions.WorldLieObject[name_sprite])
 		end
 	end
 end
@@ -151,27 +152,58 @@ end
 
 
 TrueActions.onSitOnWorldObject = function(playerObj, item, delta, facing)
-	if item:getModData().trueActions and item:getModData().trueActions.occupied then
-		playerObj:Say(getText(TrueActions.Phrases["Sit"][ZombRand(#TrueActions.Phrases["Sit"])+1]))
-	else
-		if playerObj:getStats():getNumVisibleZombies() == 0 then
-			if not TrueActions.walkAdj10(playerObj, item:getSquare(), true) then
+	if item:getModData().trueActions and (item:getModData().trueActions.occup or item:getModData().trueActions.occupied)  then
+		local player = item:getModData().trueActions.occupied or getPlayerFromUsername(item:getModData().trueActions.occup)
+		if player then
+			if (player == playerObj) or (player:getX() >= item:getX() + 2 or player:getX() < item:getX() - 2 or
+					player:getY() >= item:getY() + 2 or player:getY() < item:getY() - 2) then
+				item:getModData().trueActions.occupied = nil
+				item:getModData().trueActions.occup = nil
+				item:transmitModData()
+			else
+				processSayMessage(getText(TrueActions.Phrases["Sit"][ZombRand(#TrueActions.Phrases["Sit"])+1]))
 				return
 			end
-			ISTimedActionQueue.add(ISSitOnWO:new(playerObj, item, delta[1], delta[2], facing));
 		else
-			playerObj:Say(getText("IGUI_PlayerText_TRUEA_cant_sit"))
+			item:getModData().trueActions = {}
+			item:transmitModData()
 		end
+	end
+	if playerObj:getStats():getNumVisibleZombies() == 0 then
+		if not TrueActions.walkAdj10(playerObj, item:getSquare(), true) then
+			return
+		end
+		ISTimedActionQueue.add(ISSitOnWO:new(playerObj, item, delta[1], delta[2], facing));
+	else
+		processSayMessage(getText("IGUI_PlayerText_TRUEA_cant_sit"))
 	end
 end
 
 TrueActions.onSleepOnWorldObject = function(playerObj)
 	if playerObj:getVariableString("SitWOAnim") == "OnBed" then
 		playerObj:setVariable("SitWOAnim", "Sleep"); 
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "Sleep";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "Sleep";
+		-- ModData.transmit("trueActionsData");
+		-- playerObj:getModData().trueActions.SitWOAnim = "Sleep";
 	elseif playerObj:getVariableString("SitWOAnim") == "OnBedReversoE" then
 		playerObj:setVariable("SitWOAnim", "SleepReversoE"); 
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "SleepReversoE";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "SleepReversoE";
+		-- ModData.transmit("trueActionsData");
+		-- playerObj:getModData().trueActions.SitWOAnim = "SleepReversoE";
 	elseif playerObj:getVariableString("SitWOAnim") == "OnBedReversoS" then
-		playerObj:setVariable("SitWOAnim", "SleepReversoS"); 
+		playerObj:setVariable("SitWOAnim", "SleepReversoS");
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "SleepReversoS";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "SleepReversoS";
+		-- ModData.transmit("trueActionsData");		
+		-- playerObj:getModData().trueActions.SitWOAnim = "SleepReversoS";
 	end
 end
 
@@ -208,10 +240,25 @@ end
 TrueActions.fromSleep = function(playerObj)
 	if playerObj:getVariableString("SitWOAnim") == "Sleep" then
 		playerObj:setVariable("SitWOAnim", "OnBed"); 
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "OnBed";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "OnBed";
+		-- ModData.transmit("trueActionsData");
 	elseif playerObj:getVariableString("SitWOAnim") == "SleepReversoE" then
 		playerObj:setVariable("SitWOAnim", "OnBedReversoE"); 
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "OnBedReversoE";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "OnBedReversoE";
+		-- ModData.transmit("trueActionsData");
 	elseif playerObj:getVariableString("SitWOAnim") == "SleepReversoS" then
 		playerObj:setVariable("SitWOAnim", "OnBedReversoS"); 
+		playerObj:getModData().trueActions.on:getModData().trueActions.sitwoanim = "OnBedReversoS";
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = "OnBedReversoS";
+		-- ModData.transmit("trueActionsData");
 	end
 end
 
@@ -274,7 +321,7 @@ end
 TrueActions.onLieOnWorldObject = function(playerObj, item, dirData)
 	if TrueActions.isBlocked(item, dirData[1].dir, dirData[1].side) then
 		if not dirData[2] or TrueActions.isBlocked(item, dirData[2].dir, dirData[2].side) then
-			playerObj:Say(getText("IGUI_PlayerText_TRUEA_bed_away_wall"))
+			processSayMessage(getText("IGUI_PlayerText_TRUEA_bed_away_wall"))
 		else
 			TrueActions.onLieOnWorldObjectDo(playerObj, item, dirData[2])
 		end
@@ -284,17 +331,30 @@ TrueActions.onLieOnWorldObject = function(playerObj, item, dirData)
 end
 
 TrueActions.onLieOnWorldObjectDo = function(playerObj, item, dirData)
-	if item:getModData().trueActions and item:getModData().trueActions.occupied then
-		playerObj:Say(getText(TrueActions.Phrases["Lie"][ZombRand(#TrueActions.Phrases["Lie"])+1]))
-	else
-		if playerObj:getStats():getNumVisibleZombies() == 0 then
-			if not TrueActions.walkAdj10(playerObj, item:getSquare(), true) then
+	if item:getModData().trueActions and (item:getModData().trueActions.occup or item:getModData().trueActions.occupied) then
+		local player = item:getModData().trueActions.occupied or getPlayerFromUsername(item:getModData().trueActions.occup)
+		if player then
+			if ((player == playerObj) or (player:getX() >= item:getX() + 2 or player:getX() < item:getX() - 2 or
+					player:getY() >= item:getY() + 2 or player:getY() < item:getY() - 2)) then
+				item:getModData().trueActions.occupied = nil
+				item:getModData().trueActions.occup = nil
+				item:transmitModData()
+			else
+				processSayMessage(getText(TrueActions.Phrases["Lie"][ZombRand(#TrueActions.Phrases["Lie"])+1]))
 				return
 			end
-			ISTimedActionQueue.add(ISLieOnWO:new(playerObj, item, dirData));
 		else
-			playerObj:Say(getText("IGUI_PlayerText_TRUEA_cant_lie"))
+			item:getModData().trueActions = {}
+			item:transmitModData()
 		end
+	end
+	if playerObj:getStats():getNumVisibleZombies() == 0 then
+		if not TrueActions.walkAdj10(playerObj, item:getSquare(), true) then
+			return
+		end
+		ISTimedActionQueue.add(ISLieOnWO:new(playerObj, item, dirData));
+	else
+		processSayMessage(getText("IGUI_PlayerText_TRUEA_cant_lie"))
 	end
 end
 
@@ -303,19 +363,88 @@ TrueActions.waitIdleState = false
 
 function TrueActions.standUp(playerObj)
 -- print("TrueActions.standUp")
+	-- if playerObj ~= getPlayer() then
+		-- print("TrueActions.standUp")
+	-- end
 	playerObj:setVariable("forceGetUp", true)
-
 	playerObj:clearVariable("Position")
+	-- playerObj:getModData().trueActions.SitWOAnim = nil;
 	if playerObj:getModData().trueActions.on then
 		playerObj:getModData().trueActions.on:getModData().trueActions.occupied = nil
-		playerObj:getModData().trueActions.on = nil
+		playerObj:getModData().trueActions.on:getModData().trueActions.forcegetup = true
+		playerObj:getModData().trueActions.on:getModData().trueActions.occup = nil
+		playerObj:getModData().trueActions.on:transmitModData()
+		-- playerObj:getModData().trueActions.on = nil
 	end
 end
 
 function TrueActions.checkState()
+	local playerObj = getPlayer()
+	local players = getOnlinePlayers();
+	if players then
+		for i=1,players:size() do
+			local player = players:get(i-1)
+			if player and player ~= playerObj then
+				if player:getX() >= playerObj:getX() - 50 and player:getX() < playerObj:getX() + 50 and
+						player:getY() >= playerObj:getY() - 50 and player:getY() < playerObj:getY() + 50 then
+					if not player:getModData().trueActions then
+						player:getModData().trueActions = {}
+					end
+					-- print(player:getModData().trueActions.on)
+					if not player:getModData().trueActions.on then
+						player:clearVariable("SitWOAnim")
+						for x = player:getX()-1,player:getX() + 1 do
+							for y = player:getY()-1,player:getY() + 1 do
+								local sq = getCell():getGridSquare(x,y,player:getZ());
+								if sq then
+									for i=0,sq:getObjects():size()-1 do
+										-- print("sq")
+										local wo = sq:getObjects():get(i)
+										if instanceof(wo, "IsoObject") and wo:getSprite() and 
+										(TrueActions.WorldSeatObject[wo:getSprite():getName()] or TrueActions.WorldLieObject[wo:getSprite():getName()]) then
+											if wo:getModData().trueActions and wo:getModData().trueActions.occup == player:getUsername() then
+												player:getModData().trueActions.on = wo
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+					if player:getModData().trueActions.on and player:getModData().trueActions.on:getSquare() then
+						local wo = player:getModData().trueActions.on
+						if player:getX() >= wo:getX() + 2 or wo:getX() < wo:getX() - 2  or
+								player:getY() >= wo:getY() + 2  or wo:getY() < wo:getY() - 2 then
+							player:setNoClip(false)
+							player:setBlockMovement(false)
+							player:getModData().trueActions.on = nil
+							wo:getModData().trueActions = nil
+							-- print("on clear")
+						else
+							if player:getModData().trueActions.on:getModData().trueActions and player:getModData().trueActions.on:getModData().trueActions.forcegetup then
+								player:setNoClip(false)
+								player:setBlockMovement(false)
+							elseif player:getModData().trueActions.on:getModData().trueActions then
+								player:setNoClip(true)
+								player:setBlockMovement(true)
+								player:setVariable("SitWOAnim", player:getModData().trueActions.on:getModData().trueActions.sitwoanim); 
+								if not string.match(tostring(player:getCurrentState()), "PlayerSitOnGroundState") or
+									not string.match(tostring(player:getCurrentState()), "PlayerGetUpState") then
+									player:reportEvent("EventSitOnGround");
+								end
+							end
+						end
+					end
+					
+					
+				end
+			end
+		end
+	end
+	
 	local playersSum = getNumActivePlayers()
 	for playerNum = 0, playersSum - 1 do
-		local playerObj = getSpecificPlayer(playerNum)
+		playerObj = getSpecificPlayer(playerNum)
 		if playerObj then
 			local playerObjState = playerObj:getCurrentState()
 			-- print(playerObj:getVariableString("SitWOAnim"))
@@ -328,12 +457,14 @@ function TrueActions.checkState()
 					playerObj:getVariableString("SitWOAnim") == "Sleep" or 
 					playerObj:getVariableString("SitWOAnim") == "SleepReversoE" or 
 					playerObj:getVariableString("SitWOAnim") == "SleepReversoS") then
-				
 				if string.match(tostring(playerObjState), "PlayerHitReactionState") then
 					-- TrueActions.standUp(playerObj)
 					playerObj:setBlockMovement(false)
 					playerObj:setNoClip(false)
 					playerObj:clearVariable("SitWOAnim");
+					-- ModData.request("trueActionsData");
+					-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = nil;
+					-- ModData.transmit("trueActionsData");
 				end
 				
 				if not playerObj:getVariableBoolean("forceGetUp") then
@@ -354,6 +485,9 @@ function TrueActions.checkState()
 					playerObj:setBlockMovement(false)
 					playerObj:setNoClip(false)
 					playerObj:clearVariable("SitWOAnim");
+					-- ModData.request("trueActionsData");
+					-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = nil;
+					-- ModData.transmit("trueActionsData");
 				end
 			end
 			
@@ -363,7 +497,7 @@ function TrueActions.checkState()
 				-- print("deltaX: ", deltaX)
 				-- print("deltaY: ", deltaY)
 				if (deltaX > 0.2) or (deltaY > 0.2) then
-					playerObj:Say(getText(TrueActions.Phrases["Push"][ZombRand(#TrueActions.Phrases["Push"])+1]))
+					processSayMessage(getText(TrueActions.Phrases["Push"][ZombRand(#TrueActions.Phrases["Push"])+1]))
 					TrueActions.standUp(playerObj)
 				end
 			end
@@ -372,16 +506,42 @@ function TrueActions.checkState()
 end
 
 function TrueActions.ClearPlayer(playerNum, playerObj)
+-- print("TrueActions.ClearPlayer")
 	if playerObj then
 		playerObj:setNoClip(false)
 		playerObj:setBlockMovement(false)
 		playerObj:clearVariable("SitWOAnim");
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[playerObj:getUsername()] = nil;
+		-- ModData.transmit("trueActionsData");
 		if playerObj:getModData().trueActions then
 			if playerObj:getModData().trueActions.on then
-				playerObj:getModData().trueActions.on:getModData().trueActions.occupied = nil
+                if playerObj:getModData().trueActions.on:getModData().trueActions then
+                    playerObj:getModData().trueActions.on:getModData().trueActions.occupied = nil
+                    playerObj:getModData().trueActions.on:getModData().trueActions.occup = nil
+                    playerObj:getModData().trueActions.on:transmitModData()
+                end
 			end
 		end
 		playerObj:getModData().trueActions = {}
+	end
+	local players = getOnlinePlayers();
+	if players then
+		for i=1,players:size() do
+			local player = players:get(i-1)
+			player:setNoClip(false)
+			player:setBlockMovement(false)
+			player:clearVariable("SitWOAnim");
+			if player:getModData().trueActions then
+				if player:getModData().trueActions.on then
+                    if player:getModData().trueActions.on:getModData().trueActions then
+                        player:getModData().trueActions.on:getModData().trueActions.occupied = nil
+                        player:getModData().trueActions.on:getModData().trueActions.occup = nil
+                    end
+				end
+			end
+			player:getModData().trueActions = {}
+		end
 	end
 end
 

@@ -10,9 +10,10 @@ function ISSitOnWO:isValid()
 		self.character:Say(getText("IGUI_PlayerText_TRUEA_need_come_closer"))
 		return false
 	else
-		if not self.item:getModData().trueAction then
+		if not self.item:getModData().trueActions then
+			self.item:getModData().trueActions = {}
 			return true
-		elseif self.item:getModData().trueAction.occupied then
+		elseif self.item:getModData().trueActions.occupied then
 			return false
 		else
 			return true
@@ -69,8 +70,9 @@ function ISSitOnWO:perform()
 	self.character:setPrimaryHandItem(nil)
 	-- self.character:setHideWeaponModel(true)
 	self.character:setSecondaryHandItem(nil)
-	self.item:getModData().trueActions = {}
 	self.item:getModData().trueActions.occupied = self.character
+	self.item:getModData().trueActions.occup = self.character:getUsername()
+
 	if not self.character:getModData().trueActions then
 		self.character:getModData().trueActions = {}
 	end
@@ -83,8 +85,19 @@ function ISSitOnWO:perform()
 	-- end
 	self.character:getModData().trueActions.on = self.item
 	self.character:reportEvent("EventSitOnGround");
-	self.character:setVariable("SitWOAnim", "Idle"); 
+	self.character:setVariable("SitWOAnim", "Idle");
+	self.item:getModData().trueActions.sitwoanim = "Idle";
+	self.item:getModData().trueActions.forcegetup = false
+	self.item:transmitModData()
+	-- self.character:getModData().trueActions.SitWOAnim = "Idle";
+	-- ModData.request("trueActionsData");
+	-- ModData.getOrCreate("trueActionsData")[self.character:getUsername()] = "Idle";
+	-- ModData.transmit("trueActionsData");
 	self.character:setBlockMovement(true)
+	
+	
+	
+	-- sendClientCommand(self.character, 'player', 'seatWo', {SitWOAnim = "Idle" ; })
     -- needed to remove from queue / start next.
     ISBaseTimedAction.perform(self);
 end

@@ -11,6 +11,7 @@ function ISLieOnWO:isValid()
 		return false
 	else
 		if not self.item:getModData().trueAction then
+			self.item:getModData().trueActions = {}
 			return true
 		elseif self.item:getModData().trueAction.occupied then
 			return false
@@ -46,17 +47,31 @@ function ISLieOnWO:waitToStart()
 	end
 	self.character:setX(self.item:getSquare():getX() + self.deltaX)
 	self.character:setY(self.item:getSquare():getY() + self.deltaY)
+	self.item:getModData().trueActions.forcegetup = false
 	if self.side == "L" then
 		if self.direction == "S" or self.direction == "N" then
 			self.character:setVariable("SitWOAnim", "OnBedReversoS"); 
+			-- ModData.request("trueActionsData");
+			-- ModData.getOrCreate("trueActionsData")[self.character:getUsername()] = "OnBedReversoS";
+			-- ModData.transmit("trueActionsData");
+			self.item:getModData().trueActions.sitwoanim = "OnBedReversoS";
 		elseif self.direction == "E" or self.direction == "W" then
 			self.character:setVariable("SitWOAnim", "OnBedReversoE"); 
+			-- ModData.request("trueActionsData");
+			-- ModData.getOrCreate("trueActionsData")[self.character:getUsername()] = "OnBedReversoE";
+			-- ModData.transmit("trueActionsData");
+			self.item:getModData().trueActions.sitwoanim = "OnBedReversoE";
 		end
 	elseif self.side == "R" then
 		self.character:setVariable("SitWOAnim", "OnBed"); 
+		self.item:getModData().trueActions.sitwoanim = "OnBed";
+		-- ModData.request("trueActionsData");
+		-- ModData.getOrCreate("trueActionsData")[self.character:getUsername()] = "OnBed";
+		-- ModData.transmit("trueActionsData");
 	else
 		self:forceStop()
 	end
+	
 	return self.character:shouldBeTurning()
 end
 
@@ -90,11 +105,21 @@ function ISLieOnWO:perform()
 	-- self.character:setVariable("NoBite", true); 
 	self.character:setNoClip(true)
 	self.character:setBlockMovement(true)
-	self.item:getModData().trueActions = {}
-	self.item:getModData().trueActions.occupied = self.character
-	if not self.character:getModData().trueActions then
-		self.character:getModData().trueActions = {}
+	
+	if self.side == "L" then
+		if self.direction == "S" or self.direction == "N" then
+			self.item:getModData().trueActions.sitwoanim = "OnBedReversoS";
+		elseif self.direction == "E" or self.direction == "W" then
+			self.item:getModData().trueActions.sitwoanim = "OnBedReversoE";
+		end
+	elseif self.side == "R" then
+		self.item:getModData().trueActions.sitwoanim = "OnBed";
 	end
+	
+	
+	self.item:getModData().trueActions.occupied = self.character
+	self.item:getModData().trueActions.occup = self.character:getUsername()
+	self.item:transmitModData()
 	self.character:getModData().trueActions.on = self.item
 	self.character:reportEvent("EventSitOnGround");
 	self.character:setVariable("forceGetUp", false);

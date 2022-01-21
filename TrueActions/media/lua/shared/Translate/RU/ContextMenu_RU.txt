@@ -1,5 +1,0 @@
-ContextMenu_RU = {
-	ContextMenu_Sit = "Сесть",
-	ContextMenu_Lie = "Прилечь",
-	ContextMenu_OnSleep = "Лечь",
-}
