@@ -201,7 +201,7 @@ module Base
 		lua
 		{
 			create = CommonTemplates.Create.BatteryCharger,
-			update = Trailers.Update.BatteryCharger,
+			update = CommonTemplates.Update.BatteryCharger,
 		}
 
 		template = Headlight/part/HeadlightLeft,

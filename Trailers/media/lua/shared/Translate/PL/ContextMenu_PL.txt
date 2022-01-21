@@ -1,7 +1,0 @@
-ContextMenu_PL = {
-	ContextMenu_Close_trunk = "Zamknij baga¿nik",
-	ContextMenu_Open_trunk = "Otwórz baga¿nik",
-	ContextMenu_TrailerSpotlightOff = "Wy³¹cz reflektory",
-    ContextMenu_TrailerSpotlightOn = "W³¹cz reflektory",
-	ContextMenu_Turn_On_Generator = "Uruchom generator",
-}

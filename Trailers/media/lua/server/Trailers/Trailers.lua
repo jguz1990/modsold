@@ -13,26 +13,6 @@ Trailers.UninstallTest = {}
 Trailers.Update = {}
 Trailers.Use = {}
 
--- Перенести в общую библиотеку
-function Trailers.Update.BatteryCharger(trailer, part, elapsedMinutes)
-	-- print("CommonTemplates.Update.BatteryCharger")
-	if part:getInventoryItem() then
-		local chargeOld = part:getInventoryItem():getUsedDelta()
-		print(chargeOld)
-		local charge = chargeOld
-		-- Running the engine charges the battery
-		if elapsedMinutes > 0 and trailer:isEngineRunning() then
-			charge = math.min(charge + elapsedMinutes * 0.001, 1.0)
-		end
-		if charge ~= chargeOld then
-			part:getInventoryItem():setUsedDelta(charge)
-			if VehicleUtils.compareFloats(chargeOld, charge, 2) then
-				trailer:transmitPartUsedDelta(part)
-			end
-		end
-	end
-end
-
 function Trailers.Update.GeneratorEngine(vehicle, part, elapsedMinutes)
 	-- print("Trailers.Update.GeneratorEngine")
 	Vehicles.Update.Engine(vehicle, part, elapsedMinutes)
@@ -157,6 +137,7 @@ function Trailers.Init.EarthingOn (trailer, part)
 			trailer:getModData()["generatorObject"] = nil
 			local item = part:getInventoryItem()
 			trailer:getPartById("EarthingOn"):setInventoryItem(nil)
+            trailer:transmitPartItem(trailer:getPartById("EarthingOn"))
 		end
 	end
 end
@@ -177,5 +158,5 @@ function Trailers.Create.EarthingOn(trailer, part)
 	-- local item = VehicleUtils.createPartInventoryItem(part);
 	-- CommonTemplates.createActivePart(part)
 	part:setInventoryItem(nil)
-	
+    trailer:transmitPartItem(part)
 end

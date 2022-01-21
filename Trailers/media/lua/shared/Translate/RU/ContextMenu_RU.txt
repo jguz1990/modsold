@@ -1,8 +1,0 @@
-ContextMenu_RU = {
-	ContextMenu_Close_trunk = "Закрыть багажник",
-	ContextMenu_Open_trunk = "Открыть багажник",
-	ContextMenu_TrailerSpotlightOn = "Включить прожекторы",
-	ContextMenu_TrailerSpotlightOff = "Выключить прожекторы",
-	ContextMenu_Turn_On_Generator = "Запустить генератор",
-} 
-

@@ -21,7 +21,7 @@ end
 
 function ISShutOffTrailerHomeEngine:perform()
 	local vehicle = self.character:getVehicle()
-	vehicle:shutOff()
+	sendClientCommand(self.character, 'trailer', 'startGeneratorEngine', {trailer=vehicle:getId(), activate = false})
 	-- needed to remove from queue / start next.
 	ISBaseTimedAction.perform(self)
 end

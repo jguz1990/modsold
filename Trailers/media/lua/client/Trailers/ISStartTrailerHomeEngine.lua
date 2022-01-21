@@ -5,8 +5,6 @@ ISStartTrailerHomeEngine = ISBaseTimedAction:derive("ISStartTrailerHomeEngine")
 function ISStartTrailerHomeEngine:isValid()
 	local vehicle = self.character:getVehicle()
 	return vehicle ~= nil and
---		vehicle:isEngineWorking() and
---		vehicle:isDriver(self.character) and
 		not vehicle:isEngineRunning() and 
 		not vehicle:isEngineStarted()
 end
@@ -25,11 +23,7 @@ end
 function ISStartTrailerHomeEngine:perform()
 	local vehicle = self.character:getVehicle()
 	local haveKey = false;
-	if self.character:getInventory():haveThisKeyId(vehicle:getKeyId()) then
-		haveKey = true;
-	end
-	vehicle:tryStartEngine(true)
-	-- needed to remove from queue / start next.
+    sendClientCommand(self.character, 'trailer', 'startGeneratorEngine', {trailer=vehicle:getId(), activate = true})
 	ISBaseTimedAction.perform(self)
 end
 

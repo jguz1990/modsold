@@ -1,7 +1,0 @@
-ContextMenu_ES = {
-	ContextMenu_Close_trunk = "Cerrar maletero",
-	ContextMenu_Open_trunk = "Abrir maletero",
-	ContextMenu_TrailerSpotlightOn = "Encender los focos",
-	ContextMenu_TrailerSpotlightOff = "Apagar los focos",
-	ContextMenu_Turn_On_Generator = "Encender generador",
-}
