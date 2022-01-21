@@ -1,0 +1,10 @@
+name=Mod Manager: Server
+description=An extension for Mod Manager that makes the process of editing server mods much easier.
+id=ModManagerServer
+require=ModManager
+poster=logo.png
+icon=logo-mini.png
+versionMin=41.65
+modVersion=1.0.0
+authors=NoctisFalco
+tags=Interface,Multiplayer

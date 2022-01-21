@@ -1,0 +1,20 @@
+
+Mod: Mod Manager
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2725216703
+Author: NoctisFalco
+Profile: https://steamcommunity.com/id/NoctisFalco/
+
+Redistribution of this mod without explicit permission from the creator is prohibited
+under any circumstances. This includes, but not limited to, uploading this mod to the Steam Workshop
+or any other site, distribution as part of another mod or modpack, distribution of modified versions.
+
+Copyright 2022 NoctisFalco
+
+--------------------------------------------------------------------------------------------------------
+
+- Ko-fi and the Ko-fi logo are trademarks and/or registered trademarks of Ko-fi Labs Limited.
+- The "Patreon" Wordmark and the "P" Logo (together, the "Patreon Marks") are trademarks
+registered by Patreon, Inc. in the U.S. Patent and Trademark Office. The Patreon Marks are
+also registered trademarks, trademarks or trade dress of Patreon, Inc. in other countries.
+- Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation
+in the U.S. and/or other countries.
