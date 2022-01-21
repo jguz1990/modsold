@@ -1,5 +1,8 @@
 IGUI_RU = {
-	/* ATA 20211209*/
+	/* ATA 20220118*/
+    IGUI_PlayerText_TRUEA_cant_vehicle_smash_window = "Я не смогу разбить окно, пока на нем стоит защита.",
+    
+    /* ATA 20211209*/
 	IGUI_VehiclePartATAVisualSpoilerFront = "Губа на передний бампер",
 	IGUI_VehiclePartATAVisualSpoilerRear = "Спойлер",
 	IGUI_VehiclePartATAVisualSkirtsSide = "Юбки боковых порогов",
@@ -27,6 +30,8 @@ IGUI_RU = {
 	IGUI_VehiclePartATAProtectionWindowRearLeft = "Защита окна заднего левого",
 	IGUI_VehiclePartATAProtectionWindowRearRight = "Защита окна заднего правого",
 	IGUI_VehiclePartATAProtectionWheels = "Защита колес",
+    IGUI_VehiclePartATAProtectionHood = "Защита капота",
+	IGUI_VehiclePartATAProtectionTrunk = "Защита багажника",
 	IGUI_VehiclePartATASpareWheel = "Запасное колесо",
 	IGUI_VehiclePartATABumper = "Бампер",
 	IGUI_VehiclePartATARoofBase = "Рейлинги",
@@ -117,4 +122,29 @@ IGUI_RU = {
 	IGUI_VehiclePartBatteryChargerA = "Место под аккумулятор",
 	IGUI_VehiclePartBatteryChargerB = "Место под аккумулятор",
 	IGUI_VehiclePartBatteryChargerC = "Место под аккумулятор",
+	
+	/************ Autotsar Trailers ************/
+	IGUI_VehiclePartCatGenerator = "Генератор",
+	IGUI_VehiclePartEarthingOn = "Заземление",
+	IGUI_VehiclePartEarthingOff = "отключенный питающий провод",
+	
+	/************ True Actions ************/
+	IGUI_PlayerText_TRUEA_cant_lie = "Сейчас опасно ложиться.",
+	IGUI_PlayerText_TRUEA_cant_sit = "Сейчас опасно садиться.",
+	IGUI_PlayerText_TRUEA_need_come_closer = "Нужно подойти ближе.",
+	IGUI_PlayerText_TRUEA_bed_away_wall = "Нужно освободить проход до кровати.",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_Sit_1 = "Что ты тут расселся?",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_Lie_1 = "Ты чего тут разлегся?",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_2 = "Отдохнул? Теперь моя очередь.",
+	IGUI_PlayerText_TRUEA_OccupiedPhrases_3 = "Уступите мне, пожалуйста, место.",
+	IGUI_PlayerText_TRUEA_dont_push_1 = "Зачем ты толкаешься?",
+	IGUI_PlayerText_TRUEA_dont_push_2 = "Не толкайся!",
+	IGUI_PlayerText_TRUEA_dont_push_3 = "Дай мне отдохнуть!",
+	
+	/************ True Music ************/
+	IGUI_media_dragCassette = "Вставьте кассету",
+	IGUI_media_dragVinyl = "Вставьте винил",
+	IGUI_TC_connect_speaker = "Подключить колонку",
+	IGUI_PlayerText_TC_need_speaker = "Колонка должна стоять рядом с проигрывателем.",
+	IGUI_MusicOptionsCar = "Магнитола",
 }

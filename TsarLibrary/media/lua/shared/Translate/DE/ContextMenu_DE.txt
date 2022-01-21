@@ -13,4 +13,11 @@ ContextMenu_DE = {
 	ContextMenu_For_get_Gasoline_Need_Gas_Can = "Benötige einen Kanister",
 	ContextMenu_CloseTent = "Schließe Zelt",
 	ContextMenu_OpenTent = "Öffne Zelt",
+	
+	/************ Autotsar Trailers ************/
+	ContextMenu_Close_trunk = "Kofferraum schlie?en",
+	ContextMenu_Open_trunk = "Kofferraum offnen",
+	ContextMenu_TrailerSpotlightOn = "Lichtwerfer ausschalten",
+    ContextMenu_TrailerSpotlightOff = "Lichtwerfer einschalten",
+	ContextMenu_Turn_On_Generator = "Start-Generator",
 }

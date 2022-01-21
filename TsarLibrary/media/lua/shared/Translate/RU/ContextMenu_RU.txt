@@ -15,6 +15,30 @@ ContextMenu_RU = {
 	ContextMenu_CloseTent = "Закрыть палатку",
 	ContextMenu_OpenTent = "Открыть палатку",
 	
+    ContextMenu_Vehicle_For_Smashwindow_Uninstall_Protection = "Чтобы разбить окно,<br>снимите защиту.",
+    
+/************ Autotsar Tuning Atelier - Bus ************/
 	ContextMenu_Vehicle_EGNH = "Написать «EGNH»",
+
+/************ Autotsar Trailers ************/
 	
+	ContextMenu_Close_trunk = "Закрыть багажник",
+	ContextMenu_Open_trunk = "Открыть багажник",
+	ContextMenu_TrailerSpotlightOn = "Включить прожекторы",
+	ContextMenu_TrailerSpotlightOff = "Выключить прожекторы",
+	ContextMenu_Turn_On_Generator = "Запустить генератор",
+	
+/************ True Actions ************/
+	ContextMenu_Sit = "Сесть",
+	ContextMenu_Lie = "Прилечь",
+	ContextMenu_OnSleep = "Лечь",
+	
+/************ True Music ************/
+	ContextMenu_Stop_music = "Выключить музыку",
+	ContextMenu_Play_music = "Играть музыку",
+    ContextMenu_Sound_carrier_not_install = "Носитель не установлен",
+    ContextMenu_Song = "Петь",
+	
+/************ ZuperCart ************/
+	ContextMenu_GrabTrolley = "Взять тележку",
 }

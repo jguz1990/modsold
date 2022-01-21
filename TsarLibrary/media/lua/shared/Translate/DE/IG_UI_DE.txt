@@ -45,6 +45,7 @@ IG_UI_DE = {
 	
 	IGUI_PlayerText_ATA_TentDontOpen = "Zelt muss leer sein",
 	IGUI_PlayerText_ATA_Engine = "Ich komme nicht an dem Motor.<br>Ich muss zuerst den Frontschutzbügel entfernen."
+
 /* Common Library */
 	IGUI_VehiclePartshelves = "Regale",
 	IGUI_VehiclePartstove = "Herd",
@@ -113,4 +114,11 @@ IG_UI_DE = {
 	IGUI_VehiclePartBatteryChargerA = "Batteriehalterung",
 	IGUI_VehiclePartBatteryChargerB = "Batteriehalterung",
 	IGUI_VehiclePartBatteryChargerC = "Batteriehalterung",
+	
+	/************ Autotsar Trailers ************/
+	
+	IGUI_VehiclePartCatGenerator = "Generator",
+	IGUI_VehiclePartEarthingOn = "Erdung",
+	IGUI_VehiclePartEarthingOff = "Netzkabel abgezogen",
+	
 }

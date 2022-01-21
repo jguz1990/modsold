@@ -52,10 +52,14 @@ ItemName_ES = {
 
 
 /************ Autotsar Tuning Atelier - Jeep ************/
-	ItemName_Autotsar.ATAJeepBumper1Item = "Jeep Wrangler - parachoques clasico",
-	ItemName_Autotsar.ATAJeepBumper2Item = "Jeep Wrangler - parachoques de cabrestante",
-	ItemName_Autotsar.ATAJeepBumper3Item = "Jeep Wrangler - barra de toro",
-	ItemName_Autotsar.ATAJeepBumper4Item = "Jeep Wrangler - parachoques letal",
-
-
+	ItemName_Autotsar.ATAJeepBumper1Item = "Jaap Wrungel - parachoques clasico",
+	ItemName_Autotsar.ATAJeepBumper2Item = "Jaap Wrungel - parachoques de cabrestante",
+	ItemName_Autotsar.ATAJeepBumper3Item = "Jaap Wrungel - barra de toro",
+	ItemName_Autotsar.ATAJeepBumper4Item = "Jaap Wrungel - parachoques letal",
+	
+/************ ZuperCart ************/
+	ItemName_TMC.TrolleyContainer = "Carrito de carga",
+	ItemName_TMC.TrolleyContainer2 = "Carrito de carga",
+	ItemName_TMC.CartContainer = "Carrito de super",
+	ItemName_TMC.CartContainer2 = "Carrito de super",
 }
