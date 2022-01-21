@@ -34,7 +34,8 @@ module Base
 		template = EngineDoor,
 		part EngineDoor
 		{
-			itemType = Base.EngineDoor;Autotsar.ATAMustangHood2Item;Autotsar.ATAMustangHood3Item;Autotsar.ATAMustangHood4Item,
+			repairMechanic = false,
+            itemType = Base.EngineDoor;Autotsar.ATAMustangHood2Item;Autotsar.ATAMustangHood3Item;Autotsar.ATAMustangHood4Item,
 			table ataItemSpawnChance 
 			{
 				1 = 40,

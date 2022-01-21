@@ -1,4 +1,29 @@
+v.1.03
+2022-01-20
+
+Переводы перенесены в общую библиотеку.
+Исправлена маска капота в интерфейсе механика.
+Запрещено чинить капоты без снятия с автомобиля (это защита от лагов возникающих при ремонте анимированных деталей).
+Исправлена ошибка не позволяющая снимать задние сиденья.
+Исправлена маска 3д-модели.
+
+Translations moved to the tsarslib.
+Fixed the hood mask in the mechanic interface.
+It is forbidden to repair hoods without removing them from the car (this is a protection against lags occurring when repairing animated parts).
+Fixed a bug that prevents removing the rear seats.
+Corrected the mask of the 3d-model.
+
 -------------------
+
+v.1.02
+2022-01-04
+
+Изменено название автомобилей на Fjord.
+
+Changed cars name to Fjord.
+
+-------------------
+
 v.1.01
 2021-12-19
 
@@ -9,6 +34,7 @@ Added the ability to repair unique hoods.
 Fixed texture of the hood "Mongoose".
 
 -------------------
+
 v.1.00
 2021-12-13
 

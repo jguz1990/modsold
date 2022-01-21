@@ -300,7 +300,17 @@ module Base
 		template = Seat/part/SeatFrontLeft,
 		template = Seat/part/SeatFrontRight,
 		template = Seat/part/SeatRearLeft,
+        part SeatRearLeft
+        {
+            area = SeatFrontLeft,
+        }
+        
 		template = Seat/part/SeatRearRight,
+        part SeatRearRight
+        {
+            area = SeatFrontRight,
+        }
+        
 		template = PassengerCompartment,
 
 		part Seat*
