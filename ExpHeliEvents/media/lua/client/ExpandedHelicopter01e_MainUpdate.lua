@@ -212,8 +212,15 @@ function eHelicopter:updateSubFunctions(thatIsCloseEnough, distToTarget, timeSta
 	for character,value in pairs(EHEIsoPlayers) do
 		---@type IsoGameCharacter p
 		local p = character
-		if self:getDistanceToIsoObject(p) < (self.flightVolume*0.8) then
-			p:forceAwake()
+		if p:getSleepingTabletEffect() < 2000 then
+			local distanceImpact = self.flightVolume*0.5
+			if not p:isOutside() then
+				distanceImpact = distanceImpact/2
+			end
+
+			if self:getDistanceToIsoObject(p) < distanceImpact then
+				p:forceAwake()
+			end
 		end
 	end
 
@@ -226,7 +233,7 @@ function eHelicopter:updateSubFunctions(thatIsCloseEnough, distToTarget, timeSta
 		if self.dropPackages and packageDropRateChance and (distToTarget <= packageDropRange) then
 			local drop = self:dropCarePackage()
 			if drop then
-				if self.hoverOnTargetDuration then
+				if self.hoverOnTargetDuration and self.hoverOnTargetDuration~=false and self.hoverOnTargetDuration>0 then
 					self.trueTarget = currentSquare
 					self:setTargetPos()
 				end

@@ -3,6 +3,7 @@ require "ExpandedHelicopter01a_MainVariables"
 eventSoundHandler = {}
 
 storedLooperEvents = {}
+storedLooperEventsUpdateTimes = {}
 function eventSoundHandler:handleLooperEvent(reusableID, DATA, command)
 	if isClient() then
 		---@type BaseSoundEmitter | FMODSoundEmitter
@@ -15,6 +16,9 @@ function eventSoundHandler:handleLooperEvent(reusableID, DATA, command)
 			end
 		end
 		if soundEmitter then
+
+			storedLooperEventsUpdateTimes[reusableID] = getGametimeTimestamp()
+
 			if command == "play" then
 				if soundEmitter:isPlaying(DATA.soundEffect) then
 					print("--soundEmitter:isPlaying:"..DATA.soundEffect)
@@ -29,10 +33,6 @@ function eventSoundHandler:handleLooperEvent(reusableID, DATA, command)
 			elseif command == "stop" then
 				--print("--stop:"..tostring(soundEmitter).." - "..DATA)
 				soundEmitter:stopSoundByName(DATA)
-			elseif command == "drop" then
-				--print("--drop:"..tostring(soundEmitter))
-				soundEmitter:stopAll()
-				storedLooperEvents[reusableID] = nil
 			end
 		end
 	end
@@ -142,22 +142,26 @@ end
 function eventSoundHandler:stopAllHeldEventSounds(heli)
 	--[[DEBUG]] local soundsStopped = false
 
-	if isClient() and heli.looperEventIDs then
-		sendClientCommand("sendLooper", "ping", {reusableID=("HELI"..heli.ID), command="drop"})
+	if isClient() then
+		for soundID,_ in pairs(heli.looperEventIDs) do
+			local soundEffect = heli.eventSoundEffects[soundID]
+			soundsStopped = true
+			sendClientCommand("sendLooper", "ping", {reusableID=("HELI"..heli.ID), soundEffect=soundEffect, command="stop"})
+		end
 	end
 
 	for event,emitter in pairs(heli.heldEventSoundEffectEmitters) do
 		local soundEffect = heli.eventSoundEffects[event] or eHelicopter.eventSoundEffects[event] or event
 		if soundEffect then
 			soundsStopped = true
-			emitter:stopAll()--stopSoundByName(soundEffect)
+			emitter:stopSoundByName(soundEffect)
 		end
 	end
 	for event,emitter in pairs(heli.placedEventSoundEffectEmitters) do
 		local soundEffect = heli.eventSoundEffects[event] or eHelicopter.eventSoundEffects[event] or event
 		if soundEffect then
 			soundsStopped = true
-			emitter:stopAll()--stopSoundByName(soundEffect)
+			emitter:stopSoundByName(soundEffect)
 		end
 	end
 	heli.delayedEventSounds = {}
