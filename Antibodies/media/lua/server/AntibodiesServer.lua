@@ -5,14 +5,13 @@ local function onClientCommand(module, command, player, args)
 	  		player, 
 	  		AntibodiesShared.modId, 
 	  		"postOptions", 
-	  		AntibodiesShared.getCurrentOptions()
+	  		AntibodiesShared.getOptions()
 	  	)
 		end
 		if command == "saveOptions" then
 			if player:getAccessLevel() == "Admin" then
         AntibodiesShared.applyOptions(args)
         AntibodiesShared.saveOptions(args)
-        print("getPlayers: ",getPlayers())
 			end
 		end
   end
