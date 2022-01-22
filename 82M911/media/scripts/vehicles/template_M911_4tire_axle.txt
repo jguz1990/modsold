@@ -30,7 +30,7 @@ module Base
 			itemType = Base.V100Axle,
 			container
 			{
-				capacity = 35,
+				capacity = 100,
 				test = Vehicles.ContainerAccess.Tire,
 				contentType = Air,
 			}

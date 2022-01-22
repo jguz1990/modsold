@@ -205,7 +205,7 @@ module Base
 			container
 			{
 				conditionAffectsCapacity = false,
-				capacity = 1000,
+				capacity = 2000,
 			}
 		}
 

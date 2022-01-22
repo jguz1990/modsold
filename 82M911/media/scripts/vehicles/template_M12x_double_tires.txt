@@ -51,7 +51,7 @@ module Base
 			itemType = Base.V100Tires,
 			container
 			{
-				capacity = 35,
+				capacity = 100,
 				test = Vehicles.ContainerAccess.Tire,
 				contentType = Air,
 			}
