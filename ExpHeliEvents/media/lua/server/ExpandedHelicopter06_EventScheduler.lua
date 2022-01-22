@@ -1,5 +1,6 @@
 require "ExpandedHelicopter00f_WeatherImpact"
 require "ExpandedHelicopter00a_Util"
+require "ExpandedHelicopter09_EasyConfigOptions"
 
 ---Inserts a new eHeliEvent (table) to the "EventsOnSchedule" table
 ---@param startDay number Day scheduled for start of this event
@@ -253,8 +254,6 @@ function eHeliEvent_ScheduleNew(nightsSurvived,currentHour,freqOverride,noPrint)
 		end
 	end
 end
-Events.EveryHours.Add(eHeliEvent_ScheduleNew)
-
 
 
 --Checks every hour if there is an event scheduled to engage
@@ -266,11 +265,14 @@ function eHeliEvent_Loop()
 	local HOUR = GT:getHour()
 	local events = globalModData.EventsOnSchedule
 
+	if getDebug() then print("--- EVERYHOUR:  isClient:"..tostring(isClient())) end
+
 	for k,v in pairs(events) do
+
 		if v.triggered or (not eHelicopter_PRESETS[v.preset]) then
 			globalModData.EventsOnSchedule[k] = nil
 		elseif (v.startDay <= DAY) and (v.startTime == HOUR) then
-			print("EHE: SCHEDULED-LAUNCH INFO:  HELI ID:"..k.." - "..v.preset)
+			print("EHE: SCHEDULED-LAUNCH INFO:  HELI ID:"..k.." - day:"..tostring(v.startDay).." time:"..tostring(v.startTime).." id:"..tostring(v.preset).." done:"..tostring(v.triggered))
 			if eHelicopter_PRESETS[v.preset] then
 				eHeliEvent_engage(k)
 			end
@@ -278,4 +280,17 @@ function eHeliEvent_Loop()
 	end
 end
 
-Events.EveryHours.Add(eHeliEvent_Loop)
+local currentHour = -1
+function eHeliEvent_OnHour()
+
+	local GT = getGameTime()
+	local HOUR = GT:getHour()
+
+	if HOUR ~= currentHour then
+		currentHour = HOUR
+		eHeliEvent_ScheduleNew()
+		eHeliEvent_Loop()
+	end
+end
+
+Events.OnTick.Add(eHeliEvent_OnHour)
