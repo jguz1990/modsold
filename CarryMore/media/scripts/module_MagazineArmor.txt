@@ -1,0 +1,30 @@
+module MagazineArmor
+{
+	imports
+	{
+		Base,
+	}
+	
+	recipe Make Left Magazine Armor
+	{
+		Magazine=1,
+	    DuctTape=2,
+		
+		Result 		: MagazineArmorL,
+		Sound 		: MagazineArmorCrafting,
+		Time 		: 300,
+		AnimNode 		: SawLog,
+	}
+	
+	recipe Make Right Magazine Armor
+	{
+		Magazine=1,
+	    DuctTape=2,
+		
+		Result 		: MagazineArmorR,
+		Sound 		: MagazineArmorCrafting,
+		Time 		: 300,
+		AnimNode 		: SawLog,
+	}
+
+}

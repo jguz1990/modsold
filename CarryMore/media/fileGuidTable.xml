@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+	
+		
+	<files>
+	<path>media/clothing/clothingItems/MagazineArmorL.xml</path>
+	<guid>451d3558-14dd-41f6-846d-a5472d5f188a</guid>
+	</files>
+		
+	<files>
+	<path>media/clothing/clothingItems/MagazineArmorR.xml</path>
+	<guid>40f55456-fcd4-4567-8636-2c8ed0fb50bb</guid>
+	</files>
+	
+</fileGuidTable>

@@ -1,0 +1,33 @@
+module Base
+{		
+	item MagazineArmorL
+	{
+	Type = Clothing,
+	DisplayName = Left Magazine Armor,
+	ClothingItem = MagazineArmorL,
+	BodyLocation = LeftArmArmor,
+	BloodLocation = Jacket,
+	Icon = PaddedArmorL,
+	ScratchDefense = 15,
+    BiteDefense = 22,
+    Weight = 0.3,
+    Insulation = 0,
+    WindResistance = 0,
+	}
+	
+	item MagazineArmorR
+	{
+	Type = Clothing,
+	DisplayName = Right Magazine Armor,
+	ClothingItem = MagazineArmorR,
+	BodyLocation = RightArmArmor,
+	BloodLocation = Jacket,
+	Icon = PaddedArmorR,
+	ScratchDefense = 15,
+    BiteDefense = 22,
+    Weight = 0.3,
+    Insulation = 0,
+    WindResistance = 0,
+	}
+	
+}

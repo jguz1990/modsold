@@ -1,0 +1,24 @@
+This mod adds Craftable Magazine Armor for both arms to the game!
+This item acts as a shield. Your character will try to block attacks while wearing this.
+(Does not protect head or legs)
+
+To craft this item you need:
+1 Magazine
+2 Duct Tape (half a roll)
+
+
+credit to djvirus on Steam and their mod "Padded Armor", which paved the way for the development on this one
+Their mod which adds padded armor using sheets to the game
+https://steamcommunity.com/sharedfiles/filedetails/?id=2485833790
+
+
+Thanks to u/Le_Jose on the Project Zomboid subreddit for the idea
+https://www.reddit.com/r/projectzomboid/comments/s9hway/it_would_be_cool_to_be_able_to_make_improvised/
+
+
+Not really planning to do much else with this mod, but there are a few other varieties that could be added such as:
+- Ability to use any Magazine (skill book magazines in particular or something)
+- Use Newspaper or Journals? (bit strange I guess) 
+- Shin Armor? (reduce run speed or make you more likely to trip when vaulting or something)
+
+Just some ideas but don't expect anything, cheers.
