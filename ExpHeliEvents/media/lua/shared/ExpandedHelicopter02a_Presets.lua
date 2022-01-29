@@ -115,7 +115,7 @@ eHelicopter_PRESETS["attack_only_all"] = {
 
 
 eHelicopter_PRESETS["jet"] = {
-	speed = 22,
+	speed = 18,
 	topSpeedFactor = 2,
 	flightVolume = 25,
 	eventSoundEffects = {["flightSound"] = "eJetFlight"},
@@ -132,10 +132,10 @@ eHelicopter_PRESETS["air_raid"] = {
 	doNotListForTwitchIntegration = true,
 	crashType = false,
 	shadow = false,
-	speed = 6.6,
+	speed = 0.5,
 	topSpeedFactor = 3,
 	flightVolume = 0,
-	eventSoundEffects = {["soundAtEventOrigin"] = "eAirRaid"},
+	eventSoundEffects = {["flightSound"]="IGNORE",["soundAtEventOrigin"] = "eAirRaid"},
 	eventMarkerIcon = false,
 	forScheduling = true,
 	flightHours = {11, 11},
@@ -149,7 +149,7 @@ eHelicopter_PRESETS["air_raid"] = {
 
 eHelicopter_PRESETS["jet_bombing"] = {
 	doNotListForTwitchIntegration = true,
-	speed = 22,
+	speed = 18,
 	topSpeedFactor = 2,
 	flightVolume = 25,
 	eventSoundEffects = {["flightSound"] = "eJetFlight", ["soundAtEventOrigin"] = "eCarpetBomb"},
@@ -287,13 +287,13 @@ eHelicopter_PRESETS["raider_heli_passive"] = {
 	},
 }
 
-eHelicopter_PRESETS["raider_heli_aggressive"] = {
+eHelicopter_PRESETS["raider_heli_harasser"] = {
 	inherit = {"raiders"},
 	hoverOnTargetDuration = {1250,1500},
 	attackDelay = 1700,
 	attackSpread = 4,
-	attackHitChance = 55,
-	attackDamage = 10,
+	attackHitChance = 40,
+	attackDamage = 70,
 	hostilePreference = "IsoZombie",
 	eventSoundEffects = {
 		["flightSound"] = "eMiliHeli",

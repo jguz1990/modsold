@@ -1,6 +1,9 @@
 require "ExpandedHelicopter00f_WeatherImpact"
+require "ExpandedHelicopter00e_EHEGlobalModData"
 require "ExpandedHelicopter00a_Util"
 require "ExpandedHelicopter09_EasyConfigOptions"
+require "ExpandedHelicopter02a_Presets"
+require "ExpandedHelicopter01a_MainVariables"
 
 ---Inserts a new eHeliEvent (table) to the "EventsOnSchedule" table
 ---@param startDay number Day scheduled for start of this event
@@ -25,8 +28,6 @@ function eHeliEvent_engage(ID)
 	local globalModData = getExpandedHeliEventsModData()
 	local eHeliEvent = globalModData.EventsOnSchedule[ID]
 
-	eHeliEvent.triggered = true
-	
 	--check if the event will occur
 	local willFly,_ = eHeliEvent_weatherImpact()
 	local foundTarget = eHelicopter:findTarget(nil, "eHeliEvent_engage")
@@ -39,13 +40,14 @@ function eHeliEvent_engage(ID)
 		---@type eHelicopter
 		local heli = getFreeHelicopter(eHeliEvent.preset)
 		if heli then
+			eHeliEvent.triggered = true
 			heli:launch(foundTarget)
 		end
 	end
 end
 
 
-local eventsForScheduling = nil
+local eventsForScheduling
 function eHeliEvents_setEventsForScheduling()
 	if not eventsForScheduling then
 		eventsForScheduling = {}
@@ -149,16 +151,21 @@ function eHeliEvent_ScheduleNew(nightsSurvived,currentHour,freqOverride,noPrint)
 
 		eHeliEvents_setEventsForScheduling()
 
-		for k,presetID in pairs(eventsForScheduling) do
-			if not eventIDsScheduled[presetID] then
+		if #eventsForScheduling <= 0 then
+			return
+		end
 
-				local presetSettings = eHelicopter_PRESETS[presetID]
+		for k,presetID in pairs(eventsForScheduling) do
+
+			local presetSettings = eHelicopter_PRESETS[presetID]
+			if (not eventIDsScheduled[presetID]) and presetSettings and eHelicopter then
+
 				local schedulingFactor = presetSettings.schedulingFactor or eHelicopter.schedulingFactor
 				local flightHours = presetSettings.flightHours or eHelicopter.flightHours
 				local startDay, cutOffDay = fetchStartDayAndCutOffDay(presetSettings)
 				local dayAndHourInRange = ((daysIntoApoc >= startDay) and (daysIntoApoc <= cutOffDay) and (currentHour >= flightHours[1]) and (currentHour <= flightHours[2]))
 
-				local specialDatesObserved = presetSettings.eventSpecialDates
+				local specialDatesObserved = presetSettings.eventSpecialDates or eHelicopter.eventSpecialDates
 				local specialDatesInRange = false
 				if specialDatesObserved then
 					if specialDatesObserved.inGameDates then
@@ -205,19 +212,17 @@ function eHeliEvent_ScheduleNew(nightsSurvived,currentHour,freqOverride,noPrint)
 				--[[DEBUG] print(" processing preset: "..presetID.." a:"..tostring(dayAndHourInRange).." b:"..tostring(SandboxVars.ExpandedHeli.NeverEnding==true).." c:"..chance)--]]
 
 				if eventAvailable then
-					local weight = eHelicopter.eventSpawnWeight
-					if presetSettings then
-						if presetSettings.eventSpawnWeight then
-							weight = presetSettings.eventSpawnWeight
-						elseif inheritedSettings and inheritedSettings.eventSpawnWeight then
-							weight = inheritedSettings.eventSpawnWeight
-						end
+					local weight = eHelicopter.eventSpawnWeight*freq
+					local playersOnlineNum = 1
+					local playersOnline = getOnlinePlayers()
+					if playersOnline then
+						playersOnlineNum = playersOnline:size()
 					end
-
-					weight = weight*freq
+					
+					local probabilityNumerator = math.floor(((freq*schedulingFactor)/playersOnlineNum) + 0.5 )
 
 					for i=1, weight do
-						if (ZombRand(probabilityDenominator) <= freq*schedulingFactor) then
+						if (ZombRand(probabilityDenominator) <= probabilityNumerator) then
 							table.insert(options, presetID)
 						end
 					end
@@ -226,7 +231,6 @@ function eHeliEvent_ScheduleNew(nightsSurvived,currentHour,freqOverride,noPrint)
 		end
 
 		--[[DEBUG]
-		if lessFreqOverTime > 0 then print("EHE:Scheduler: lessFreqOverTime:"..lessFreqOverTime) end
 		local options_tally = {}
 		for kk,vv in pairs(options) do if options_tally[vv] then options_tally[vv] = options_tally[vv]+1 else options_tally[vv] = 1 end end
 		local options_string
@@ -247,6 +251,11 @@ function eHeliEvent_ScheduleNew(nightsSurvived,currentHour,freqOverride,noPrint)
 
 			local nextStartDay = math.min(nightsSurvived+dayOffset, cutOffDay)
 			local startTime = ZombRand(flightHours[1],flightHours[2]+1)
+
+			if startTime >= 24 then
+				startTime = startTime-24
+			end
+
 			if not noPrint==true then
 				print(" -Scheduled: "..selectedPresetID.." [Day:"..nextStartDay.." Time:"..startTime.."]")
 			end
@@ -261,12 +270,11 @@ function eHeliEvent_Loop()
 
 	local GT = getGameTime()
 	local globalModData = getExpandedHeliEventsModData()
-	local DAY = GT:getDay()
+	local DAY = GT:getNightsSurvived()
 	local HOUR = GT:getHour()
 	local events = globalModData.EventsOnSchedule
 
-	if getDebug() then print("--- EVERYHOUR:  isClient:"..tostring(isClient())) end
-
+	--if getDebug() then print("---DAY:"..DAY.." HOUR:"..HOUR.."  isClient:"..tostring(isClient()).." isServer:"..tostring(isServer())) end
 	for k,v in pairs(events) do
 
 		if v.triggered or (not eHelicopter_PRESETS[v.preset]) then
@@ -279,6 +287,7 @@ function eHeliEvent_Loop()
 		end
 	end
 end
+
 
 local currentHour = -1
 function eHeliEvent_OnHour()
