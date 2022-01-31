@@ -270,6 +270,13 @@ VehicleDistributions.blackoppsSeat = {
 VehicleDistributions.blackoppsGloveBox = {
     rolls = 8,
     items ={
+"1_DollarBundle",  1,
+"2_DollarBundle",  1,
+"5_DollarBundle",  1,
+"10_DollarBundle",  1,
+"20_DollarBundle", 1, 
+"50_DollarBundle", 1, 
+"100_DollarBundle", 1,
         "Pistol", 1,
         "Pistol2", 1,
         "Pistol3", 1,

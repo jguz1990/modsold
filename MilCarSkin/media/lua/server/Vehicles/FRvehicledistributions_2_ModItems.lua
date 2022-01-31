@@ -7,7 +7,7 @@ require "Vehicles/VehicleDistributions"
 if VehicleDistributions.Military then
 	
 	local distributionTable = VehicleDistributions[1]
-	VehicleDistributions.MilitaryGloveBox = VehicleDistributions.MilitaryGloveBox or {
+	VehicleDistributions.Military.GloveBox = VehicleDistributions.Military.GloveBox or {
 		rolls = 1,
 		items = {
 			"Cigarettes", 7,
