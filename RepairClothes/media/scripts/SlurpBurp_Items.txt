@@ -1,0 +1,207 @@
+module Base
+{
+
+	item cherrySlurpBurp
+	{
+	HungerChange		=	-12,
+	Weight				=	0.8,
+	Type				=	Food,
+	UnhappyChange		=	-10,
+	ThirstChange		=	-85,
+	DisplayName			=	Cherry Slurp Burp,
+	Icon				=	cherrySlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+    DaysFresh			=	1,
+    DaysTotallyRotten	=	1,
+    ReplaceOnRotten 	=	cherrySlurpBurp_melted,
+	}
+	
+	item colaSlurpBurp
+	{
+	HungerChange		=	-12,
+	Weight				=	0.8,
+	Type				=	Food,
+	UnhappyChange		=	-10,
+	ThirstChange		=	-85,
+	DisplayName			=	Cola Slurp Burp,
+	Icon				=	colaSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+    DaysFresh			=	1,
+    DaysTotallyRotten	=	1,
+    ReplaceOnRotten 	=	colaSlurpBurp_melted,
+	}
+	
+	item dietorangeSlurpBurp
+	{
+	HungerChange		=	-12,
+	Weight				=	0.8,
+	Type				=	Food,
+	/*UnhappyChange		=	-10,*/
+	ThirstChange		=	-85,
+	DisplayName			=	Diet Orange Slurp Burp,
+	Icon				=	dietorangeSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	/*Calories 			= 	400,*/
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+    DaysFresh			=	1,
+    DaysTotallyRotten	=	1,
+    ReplaceOnRotten 	=	dietorangeSlurpBurp_melted,
+	}
+	
+	item lemonlimeSlurpBurp
+	{
+	HungerChange		=	-12,
+	Weight				=	0.8,
+	Type				=	Food,
+	UnhappyChange		=	-10,
+	ThirstChange		=	-85,
+	DisplayName			=	Lemon-Lime Slurp Burp,
+	Icon				=	lemonlimeSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+    DaysFresh			=	1,
+    DaysTotallyRotten	=	1,
+    ReplaceOnRotten 	=	lemonlimeSlurpBurp_melted,
+	}
+
+	item cherrySlurpBurp_melted
+	{
+	HungerChange		=	-6,
+	Weight				=	0.8,
+	Type				=	Food,
+	ThirstChange		=	-85,
+	DisplayName			=	Melted Cherry Slurp Burp,
+	Icon				=	cherrySlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+	}
+	
+	item colaSlurpBurp_melted
+	{
+	HungerChange		=	-6,
+	Weight				=	0.8,
+	Type				=	Food,
+	ThirstChange		=	-85,
+	DisplayName			=	Melted Cola Slurp Burp,
+	Icon				=	colaSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+	}
+	
+	item dietorangeSlurpBurp_melted
+	{
+	HungerChange		=	-6,
+	Weight				=	0.8,
+	Type				=	Food,
+	ThirstChange		=	-85,
+	UnhappyChange		=	10,
+	DisplayName			=	Melted Diet Orange Slurp Burp,
+	ReplaceOnUse		=	PopBottleEmpty,
+	Icon				=	dietorangeSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	/*Calories 			= 	400,*/
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    EatType 			=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+	}
+	
+	item lemonlimeSlurpBurp_melted
+	{
+	HungerChange		=	-6,
+	Weight				=	0.8,
+	Type				=	Food,
+	ThirstChange		=	-85,
+	DisplayName			=	Melted Lemon-Lime Slurp Burp,
+	Icon				=	lemonlimeSlurpBurp,
+	CustomContextMenu 	= 	Drink,
+	CustomEatSound 		= 	SlurpBurp,
+	Carbohydrates 		= 	104,
+	Proteins 			= 	0,
+	Lipids 				= 	0,
+	Calories 			= 	400,
+	/*Packaged			= 	TRUE,*/
+	CantBeFrozen 		= 	TRUE,
+	StaticModel 		= 	SlurpBurp,
+    	EatType 		=	can,
+	ReplaceOnUse    	=   emptySlurpBurp,
+	}	
+	
+	item emptySlurpBurp
+	{
+	Weight				=	0.1,
+	Type				=	Normal,
+	Icon				=	emptySlurpBurp,
+	DisplayName			=	Empty Slurp Burp Cup,
+	}
+
+	sound SlurpBurp
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/SlurpBurp.ogg,
+		}
+	}
+
+}

@@ -1,0 +1,119 @@
+module Base
+{
+    recipe Recycle Corpse
+    {
+		Sound:Recycler2,
+		Time:800.0,
+		CorpseFemale/CorpseMale,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Corpse,
+		Result:GroundCorpse,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Lead
+    {
+		Sound:Recycler2,
+		Time:800.0,
+		LeadPipe,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Lead,
+		Result:fr_LeadChunk,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Metal
+    {
+		Sound:Recycler,
+		Time:200.0,
+		[Recycle_getMetal],
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Metal,
+		Result:ScrapMetal,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Wood
+    {
+		Sound:Recycler,
+		Time:200.0,
+		Drawer/Log/Nightstick/Plank,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Wood1,
+		Result:UnusableWood,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Wood
+    {
+		Sound:Recycler,
+		Time:200.0,
+		Handle/WoodenStick/TreeBranch/UnusableWood,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Wood2,
+		Result:Twigs,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Glass
+    {
+		Sound:Recycler,
+		Time:200.0,
+		[Recycle_getGlass],
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Glass,
+		Result:BrokenGlass,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+    recipe Recycle Rope
+    {
+		Sound:Recycler,
+		Time:200.0,
+		Rope,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Rope,
+		Result:Twine,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+
+    recipe Recycle Cloth
+    {
+		Sound:Recycler,
+		[Recipe.GetItemTypes.RipClothing_Cotton],
+        	Result:RippedSheets,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Cloth,
+		Time:200.0,
+		Tooltip: Requires a powered Recycler.
+    } 
+
+    recipe Recycle Denim
+    {
+		Sound:Recycler,
+        	[Recipe.GetItemTypes.RipClothing_Denim],
+      		 Result:DenimStrips,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Cloth,
+		Time:200.0,
+		Tooltip: Requires a powered Recycler.
+    } 
+
+    recipe Recycle Leather
+    {
+		Sound:Recycler,
+        	[Recipe.GetItemTypes.RipClothing_Leather],
+		Time:200.0,
+       	 	Result:LeatherStrips,
+		OnTest:CanRecycler,
+		OnCreate:UseRecycler_Cloth,
+		Time:200.0,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Recycler.
+    }
+
+
+
+
+}

@@ -1,0 +1,106 @@
+module Base
+{
+
+ 	item Creature_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Creature Mask,
+		ClothingItem = CreatureMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Creature_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}
+
+ 	item Pillowcase_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Ghost Mask,
+		ClothingItem = PillowcaseMask,
+		BodyLocation = FullHat,
+		/*BodyLocation = Mask,*/
+		BloodLocation = Head,
+		Icon = Pillowcase_Balaclava2,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	254,
+		ColorGreen 		=	254,
+		ColorBlue 		=	254,
+	}
+
+ 	item Pumpkin_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Pumpkin Mask,
+		ClothingItem = RubberPumpkinMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Pumpkin_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}	
+	
+ 	item Sack_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (tight),
+		ClothingItem = TightSackMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Sack_Balaclava2,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	254,
+		ColorGreen 		=	254,
+		ColorBlue 		=	254,
+	}
+	
+ 	item Sack_Balaclava2
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (loose),
+		ClothingItem = LooseSackMask,
+		BodyLocation = FullHat,
+		BloodLocation = Head,
+		Icon = Sack_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	254,
+		ColorGreen 		=	254,
+		ColorBlue 		=	254,
+	}
+
+ 	item Skull_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Skull Mask,
+		ClothingItem = RubberSkullMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Skull_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	254,
+		ColorGreen 		=	254,
+		ColorBlue 		=	254,
+	}
+}

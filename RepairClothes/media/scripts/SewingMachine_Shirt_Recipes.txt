@@ -1,0 +1,206 @@
+module Base
+{
+
+	item BluePlaidFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Blue Plaid Fabric,
+		Icon			=	PlaidFabric,
+		SewingMaterial = true,
+		ColorRed 		=	0,
+		ColorGreen 		=	0,
+		ColorBlue 		=	255,
+	}
+	item GreenPlaidFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Green Plaid Fabric,
+		Icon			=	PlaidFabric,
+		SewingMaterial = true,
+		ColorRed 		=	0,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}
+	item GreyPlaidFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Grey Plaid Fabric,
+		Icon			=	PlaidFabric,
+		SewingMaterial = true,
+		ColorRed 		=	128,
+		ColorGreen 		=	128,
+		ColorBlue 		=	128,
+	}
+	item RedPlaidFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Red Plaid Fabric,
+		Icon			=	PlaidFabric,
+		SewingMaterial = true,
+		ColorRed 		=	255,
+		ColorGreen 		=	0,
+		ColorBlue 		=	0,
+	}
+	item YellowPlaidFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = YellowPlaid Fabric,
+		Icon			=	PlaidFabric,
+		SewingMaterial = true,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}
+
+  item StripedFabric
+	{
+		Weight = 1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayName = Striped Fabric,
+		Icon			=	StripedFabric,
+		SewingMaterial = true,
+	}	
+  item TropicalFabric
+	{
+		Weight = 1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayName = Tropical Print Fabric,
+		Icon			=	TropicalFabric,
+		SewingMaterial = true,
+	}
+    recipe Sew Hawaiian Shirt
+    {
+		Sound:SewingMachine,
+		TropicalFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Shirt_HawaiianTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Long Sleeve T-shirt
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Tshirt_WhiteLongSleeveTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	/*
+  recipe Sew Lumberjack Shirt
+    {
+		Sound:SewingMachine,
+		BluePlaidFabric/GreenPlaidFabric/GreyPlaidFabric/RedPlaidFabric/YellowPlaidFabric,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewPlaid,
+		Result:Shirt_Lumberjack,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	*/	
+    recipe Sew Polo Shirt
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Tshirt_PoloTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Striped Polo Shirt
+    {
+		Sound:SewingMachine,
+		StripedFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Tshirt_PoloStripedTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }		
+    recipe Sew T-shirt
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Tshirt_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Tank Top
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Vest_DefaultTEXTURE_TINT,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew T-shirt
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Tshirt_WhiteTINT,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Tank Top
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Vest_DefaultTEXTURE_TINT,
+		Time:4000.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+
+}

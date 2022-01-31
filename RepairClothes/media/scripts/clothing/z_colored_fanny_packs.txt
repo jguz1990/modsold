@@ -1,0 +1,42 @@
+module Base
+{
+
+/*
+    item Bag_FannyPackFront
+    {
+        WeightReduction	=	50,
+        ClothingItemExtra = Bag_FannyPackBack,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	1,
+        DisplayName	=	Fanny Pack (Front),
+        IconsForTexture = 	FannyPack; FannyPack_Blue; FannyPack_Green; FannyPack_Pink; FannyPack_Red; FannyPack_Teal,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.98,
+    }
+
+    item Bag_FannyPackBack
+    {
+        WeightReduction	=	50,
+        ClothingItemExtra = Bag_FannyPackFront,
+        ClothingItemExtraOption = FannyPack_WearFront,
+        clothingExtraSubmenu = FannyPack_WearBack,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	1,
+        DisplayName	=	Fanny Pack (Back),
+        IconsForTexture = 	FannyPack; FannyPack_Blue; FannyPack_Green; FannyPack_Pink; FannyPack_Red; FannyPack_Teal,
+        BodyLocation = FannyPackBack,
+        ClothingItem = Bag_FannyPackBack,
+        CanBeEquipped = FannyPackBack,
+        RunSpeedModifier = 0.98,
+    }
+
+*/
+
+
+}

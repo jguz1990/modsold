@@ -1,0 +1,179 @@
+module Base
+{
+
+
+item CamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Woodland Camo Fabric,
+		Icon			=	CamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+	}
+item UrbanCamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Urban Camo Fabric,
+		Icon			=	UrbanCamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+	}
+item DesertCamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Desert Camo Fabric,
+		Icon			=	DesertCamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+	}
+
+    recipe Sew Military Desert Camo Jacket
+    {
+		Sound:SewingMachine,
+		DesertCamouflageFabric,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Jacket_ArmyCamoDesert,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Desert Camo Pants
+    {
+		Sound:SewingMachine,
+		DesertCamouflageFabric,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Trousers_CamoDesert,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Desert Camo Shirt
+    {
+		Sound:SewingMachine,
+		DesertCamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Shirt_CamoDesert,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Desert Camo T-shirt
+    {
+		Sound:SewingMachine,
+		DesertCamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Tshirt_CamoDesert,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+	
+	
+    recipe Sew Military Green Camo Jacket
+    {
+		Sound:SewingMachine,
+		CamouflageFabric,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Jacket_ArmyCamoGreen,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Green Camo Pants
+    {
+		Sound:SewingMachine,
+		CamouflageFabric,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Trousers_CamoGreen,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Green Camo Shirt
+    {
+		Sound:SewingMachine,
+		CamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Shirt_CamoGreen,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Green Camo T-shirt
+    {
+		Sound:SewingMachine,
+		CamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Tshirt_CamoGreen,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+	
+	
+	
+	
+    recipe Sew Military Urban Camo Pants
+    {
+		Sound:SewingMachine,
+		UrbanCamouflageFabric,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Trousers_CamoUrban,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Urban Camo Shirt
+    {
+		Sound:SewingMachine,
+		UrbanCamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Shirt_CamoUrban,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Urban Camo T-shirt
+    {
+		Sound:SewingMachine,
+		UrbanCamouflageFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Tshirt_CamoUrban,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+}

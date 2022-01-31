@@ -1,0 +1,161 @@
+module Base
+{
+
+
+recipe Dye Yarn Blue-Purple
+    {
+		Blue-PurpleNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Dye Yarn Brown
+    {
+		BrownNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Gray
+    {
+		GrayNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Green
+    {
+		GreenNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Light Brown
+    {
+		LightBrownNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Mustard Yellow
+    {
+		MustardYellowNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Dye Yarn Orange
+    {
+		OrangeNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Pink
+    {
+		PinkNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Dye Yarn Purple
+    {
+		PurpleNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Dye Yarn Red-Brown
+    {
+		Red-BrownNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Strong Purple
+    {
+		StrongPurpleNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Dye Yarn Tan
+    {
+		TanNaturalDye,
+		Sound:GetWater,
+		keep Yarn,
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }			
+}

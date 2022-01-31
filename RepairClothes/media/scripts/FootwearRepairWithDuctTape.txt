@@ -1,0 +1,19 @@
+module Base
+{
+ 
+   
+   recipe Repair Footwear With Duct Tape
+   {
+       keep [Recipe.GetItemTypes.Is_Footwear],
+       DuctTape=1,
+     Result:Shoes_Black,
+        RemoveResultItem:true,
+        Sound:ClothesRipping,
+        Time:100.0,
+     OnCreate:Repair_Footwear,
+     OnTest:Can_Repair_Footwear,
+	AnimNode:BlowTorchFloor,
+        Tooltip:Duct Tape can only repairs footwear that is unbroken but also damaged.,
+   }
+   
+}

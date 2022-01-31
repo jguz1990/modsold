@@ -1,0 +1,11 @@
+module Base
+{
+    item RubberHose
+	{
+		
+		DisplayName	=	Rubber Hose,
+		Icon	=	RubberHose,
+		Weight = 1,
+	}
+
+}

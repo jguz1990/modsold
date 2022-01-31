@@ -1,0 +1,339 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+	item HandRolledCigarette
+	{
+		HungerChange	=	0,
+		Weight	=	0.005,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Hand Rolled Cigarette,
+		StressChange	=	-5,
+		Icon	=	Spliff,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Cigarettes,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+		CustomEatSound = GF_LightUp,
+        	ReplaceOnUse    =   ButtSmokeButt,
+	}
+	item ButtSmoke
+	{
+		HungerChange	=	0,
+		Weight	=	0.005,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Butt Smoke,
+		StressChange	=	-5,
+		Icon	=	Spliff,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_ButtSmoke,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+		CustomEatSound = GF_LightUp,
+        	ReplaceOnUse    =   ButtSmokeButt,
+	}
+	item ButtSmokeButt
+	{
+        	Type		=	Normal,
+		DisplayName	=	Hand Rolled Butt,
+       	 	Icon		=	weed_roach,
+	        Weight		=	0.001,
+	}
+	item WeedRoach
+	{
+		BoredomChange	=	-5,
+		UnhappyChange	=	-5,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Weed Roach,
+		StressChange	=	-5,
+		Icon	=	weed_roach,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		CustomEatSound = GF_LightUp,
+		EatType = Cigarettes,
+	}
+	item SpliffRoach
+	{
+		BoredomChange	=	-2,
+		UnhappyChange	=	-2,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Spliff Roach,
+		StressChange	=	-2,
+		Icon	=	weed_roach,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		CustomEatSound = GF_LightUp,
+		EatType = Cigarettes,
+	}
+	item RoachJoint
+	{
+		BoredomChange	=	-12,
+		UnhappyChange	=	-12,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Roach Joint,
+		StressChange	=	-25,
+		Icon	=	Joint,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Spliff2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   HalfRoachJoint,
+	}
+	item HalfRoachJoint
+	{
+		BoredomChange	=	-12,
+		UnhappyChange	=	-12,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Half Roach Joint,
+		StressChange	=	-25,
+		Icon	=	half_joint,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Spliff2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   WeedRoach,
+	}
+	item Joint
+	{
+		BoredomChange	=	-20,
+		UnhappyChange	=	-20,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Joint,
+		StressChange	=	-20,
+		Icon	=	Joint,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat				=	OnSmoke_Cannabis2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   HalfJoint,
+	}
+	item HalfJoint
+	{
+		BoredomChange	=	-20,
+		UnhappyChange	=	-20,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Half Joint,
+		StressChange	=	-20,
+		Icon	=	half_joint,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat				=	OnSmoke_Cannabis2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   WeedRoach,
+	}
+	item Spliff
+	{
+		BoredomChange	=	-12,
+		UnhappyChange	=	-12,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Spliff,
+		StressChange	=	-13,
+		Icon	=	Spliff,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Spliff2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   HalfSpliff,
+	}
+	item HalfSpliff
+	{
+		BoredomChange	=	-12,
+		UnhappyChange	=	-12,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Half Spliff,
+		StressChange	=	-13,
+		Icon	=	half_joint,
+		Tooltip			=	Tooltip_Painkillers,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Spliff2,
+		CustomEatSound = GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+        	ReplaceOnUse    =   SpliffRoach
+	}
+	item WeedBong
+	{
+		Weight				=	0.7,
+        	Type				=	Food,
+		DisplayName			=	Bong loaded with Cannabis,
+		Icon				=	Bong,
+		BoredomChange			=	-50,
+		UnhappyChange			=	-50,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		StressChange			=	-50,
+		CustomContextMenu		=	Smoke,
+		CantBeFrozen			=	TRUE,
+		Tooltip				=	Tooltip_Painkillers,
+		OnEat				=	OnSmoke_Cannabis,
+		ReplaceOnUse			=	Bong,
+		CustomEatSound			=	GF_LightUp,
+		CustomEatSound 			= 	Bong,
+		StaticModel 			= 	Bong,	
+	}
+	item TobaccoBong
+	{
+		HungerChange		 	=	0,
+		Weight				=	0.7,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type				=	Food,
+		DisplayName			=	Bong loaded with Tobacco,
+		StressChange			=	-5,
+		Icon				=	Bong,
+		CustomContextMenu		=	Smoke,
+		CantBeFrozen			=	TRUE,
+		OnEat				=	OnEat_Tobacco,
+		ReplaceOnUse			=	Bong,
+		CustomEatSound			=	GF_LightUp,
+		CustomEatSound 			= 	Bong,
+		StaticModel 			= 	Bong,	
+	}
+	item WeedPipe
+	{
+		Weight				=	0.1,
+        	Type				=	Food,
+		DisplayName			=	Smoking Pipe filled with Cannabis,
+		Icon				=	SmokingPipe,
+		BoredomChange			=	-50,
+		UnhappyChange			=	-50,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		StressChange			=	-50,
+		CustomContextMenu		=	Smoke,
+		CantBeFrozen			=	TRUE,
+		OnEat				=	OnSmoke_Cannabis,
+		Tooltip				=	Tooltip_Painkillers,
+		ReplaceOnUse			=	SmokingPipe,
+		CustomEatSound			=	GF_LightUp,
+	}
+	item TobaccoPipe
+	{
+		HungerChange		 	=	0,
+		Weight				=	0.1,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type				=	Food,
+		DisplayName			=	Smoking Pipe filled with Tobacco,
+		StressChange			=	-5,
+		Icon				=	SmokingPipe,
+		CustomContextMenu		=	Smoke,
+		CantBeFrozen			=	TRUE,
+		OnEat				=	OnEat_Tobacco,
+		ReplaceOnUse			=	SmokingPipe,
+		CustomEatSound			=	GF_LightUp,
+	}
+	recipe Roll Roach Joint
+	{
+		WeedRoach=5,
+		RollingPapers=1,
+		Result:RoachJoint,
+		Time:120.0,
+	}
+	recipe Roll Roach Joint
+	{
+		SpliffRoach=10,
+		RollingPapers=1,
+		Result:RoachJoint,
+		Time:120.0,
+	}
+	recipe Roll Butt Smoke
+	{		
+		Hydrocraft.HCCigarettebutt/littering.CigaretteButt/littering.CigaretteButtL/littering.CigaretteButtM/SM.SMButt/ZSMP.ZSMPCigaretteButtLite/ZSMP.ZSMPCigaretteButtMent,		
+		Hydrocraft.HCCigarettebutt/littering.CigaretteButt/littering.CigaretteButtL/littering.CigaretteButtM/SM.SMButt/ZSMP.ZSMPCigaretteButtLite/ZSMP.ZSMPCigaretteButtMent,		
+		Hydrocraft.HCCigarettebutt/littering.CigaretteButt/littering.CigaretteButtL/littering.CigaretteButtM/SM.SMButt/ZSMP.ZSMPCigaretteButtLite/ZSMP.ZSMPCigaretteButtMent,		
+		Hydrocraft.HCCigarettebutt/littering.CigaretteButt/littering.CigaretteButtL/littering.CigaretteButtM/SM.SMButt/ZSMP.ZSMPCigaretteButtLite/ZSMP.ZSMPCigaretteButtMent,		
+		Hydrocraft.HCCigarettebutt/littering.CigaretteButt/littering.CigaretteButtL/littering.CigaretteButtM/SM.SMButt/ZSMP.ZSMPCigaretteButtLite/ZSMP.ZSMPCigaretteButtMent,
+		RollingPapers=1,
+		Result:ButtSmoke,
+		Time:120.0,
+	}
+	/*recipe Roll Butt Smoke
+	{		
+		ButtSmokeButt=10,
+		RollingPapers=1,
+		Result:ButtSmoke,
+		Time:120.0,
+	}*/
+
+
+	recipe Load Bong with Cannabis
+	{
+		Bong,
+		Cannabis/Hydrocraft.HCHempbudcured,
+
+		Result:WeedBong,
+		Time:60.0,
+		override:true,
+	}
+
+
+	recipe Fill Smoking Pipe with Cannabis
+	{
+		SmokingPipe,
+		Cannabis/Hydrocraft.HCHempbudcured,
+
+		Result:WeedPipe,
+		Time:60.0,
+		override:true,
+	}
+
+
+	recipe Roll Joint
+	{
+		Cannabis/Hydrocraft.HCHempbudcured,
+		RollingPapers=1,
+
+		Result:Joint,
+		Time:120.0,
+		override:true,
+	}
+
+	recipe Roll Spliff
+	{
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Tobacco,
+		RollingPapers=2,
+
+		Result:Spliff=2,
+		Time:120.0,
+		override:true,
+	}
+
+}

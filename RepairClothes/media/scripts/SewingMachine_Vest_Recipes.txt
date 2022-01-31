@@ -1,0 +1,44 @@
+module Base
+{
+
+    recipe Sew Camo Hunting Vest
+    {
+		Sound:SewingMachine,
+		CamouflageCordura,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Vest_Hunting_Camo,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Grey Hunting Vest
+    {
+		Sound:SewingMachine,
+		GreyCordura,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Vest_Hunting_Grey,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Orange Hunting Vest
+    {
+		Sound:SewingMachine,
+		OrangeCordura,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Vest_Hunting_Orange,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+
+}

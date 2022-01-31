@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>media\models_X\Skinned\BackPacks\M_FannyPackFront.X</m_MaleModel>
+	<m_FemaleModel>media\models_X\Skinned\BackPacks\F_FannyPackFront.X</m_FemaleModel>
+	<m_GUID>48b63e1d-0846-407d-9007-2fdabb58eba2</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>clothes\bag\fannypack</textureChoices>
+	<textureChoices>clothes\bag\fannypack_blue</textureChoices>
+	<textureChoices>clothes\bag\fannypack_green</textureChoices>
+	<textureChoices>clothes\bag\fannypack_pink</textureChoices>
+	<textureChoices>clothes\bag\fannypack_red</textureChoices>
+	<textureChoices>clothes\bag\fannypack_teal</textureChoices>
+</clothingItem>

@@ -1,0 +1,336 @@
+module Base
+{
+	recipe Bleach Clothing
+    {
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	/*keep [BleachOrDye],*/
+	BucketEmpty,
+	Bleach,
+    Result:BucketEmpty,
+	OnCreate:BleachClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	Prop1:BleachBottle,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Bleach Clothing
+    {
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	Pot,
+	Bleach,
+    Result:Pot,
+	OnCreate:BleachClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	Prop1:BleachBottle,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	
+	recipe Dye Clothing Black
+    {
+	FabricDyeBlack,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	/*keep [BleachOrDye],*/
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Blue
+    {
+	FabricDyeBlue,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Green
+    {
+	FabricDyeGreen,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Light Brown
+    {
+	FabricDyeLightBrown,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Pink
+    {
+	FabricDyePink,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Red
+    {
+	FabricDyeRed,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Yellow
+    {
+	FabricDyeYellow,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	
+	recipe Dye Clothing Black
+    {
+	FabricDyeBlack,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Blue
+    {
+	FabricDyeBlue,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Green
+    {
+	FabricDyeGreen,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Clothing Light Brown
+    {
+	FabricDyeLightBrown,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Pink
+    {
+	FabricDyePink,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Red
+    {
+	FabricDyeRed,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Clothing Yellow
+    {
+	FabricDyeYellow,
+	Sound:GetWater,
+	keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	
+    item FabricDyeBlack
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Black Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 27,
+        DyeColorGreen = 23,
+        DyeColorBlue = 22,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyePink
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Pink Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 246,
+        DyeColorGreen = 83,
+        DyeColorBlue = 150,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeYellow
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Yellow Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 252,
+        DyeColorGreen = 223,
+        DyeColorBlue = 0,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeRed
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Red Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 210,
+        DyeColorGreen = 38,
+        DyeColorBlue = 18,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeLightBrown
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Light Brown Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 159,
+        DyeColorGreen = 108,
+        DyeColorBlue = 43,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeGreen
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Green Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 55,
+        DyeColorGreen = 152,
+        DyeColorBlue = 77,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeBlue
+    {
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.5,
+        DisplayName	=	Blue Fabric Dye,
+        Icon	=	FabricDye,
+        ClothingDye = TRUE,
+        DyeColorRed = 66,
+        DyeColorGreen = 155,
+        DyeColorBlue = 207,
+        ReplaceOnDeplete = FabricDyeUsed,
+    }
+    item FabricDyeUsed
+    {
+        Weight	=	0.1,
+        DisplayName	=	Used Fabric Dye,
+        Icon	=	FabricDye,
+    }
+}

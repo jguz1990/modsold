@@ -1,0 +1,52 @@
+module Base
+{   
+/*	item Hat_Bandana
+	{
+		Type = Clothing,
+		DisplayName = Bandana (Head),
+		ClothingItem = Hat_Bandana,
+		BodyLocation = Hat,
+		IconsForTexture = BandanaBlack;BandanaBlue;BandanaRed;SkullMaskBandana,
+		ClothingItemExtra = Hat_BandanaTied;Hat_BandanaMask,
+        	ClothingItemExtraOption = TieBandana;TieBandanaFace,
+		CanHaveHoles = false,
+		ChanceToFall = 5,
+		Insulation = 0.10,
+	}
+
+
+
+    item Hat_BandanaTied
+    {
+        Type = Clothing,
+        DisplayName = Bandana (Tied),
+        ClothingItem = Hat_BandanaTied,
+        BodyLocation = Hat,
+        IconsForTexture = RamboBandanna_Black;RamboBandanna_Blue;RamboBandanna_Red;SkullMaskBandana,
+        ClothingItemExtra = Hat_Bandana;Hat_BandanaMask,
+        ClothingItemExtraOption = UntieBandana;TieBandanaFace,
+        CanHaveHoles = false,
+        ChanceToFall = 5,
+        Insulation = 0.10,
+    }
+
+
+
+
+
+    item Hat_BandanaMask
+    {
+        Type = Clothing,
+        DisplayName = Bandana (Face),
+        ClothingItem = Hat_BandanaMask,
+        BodyLocation = Mask,
+        ClothingItemExtra = Hat_Bandana;Hat_BandanaTied,
+        ClothingItemExtraOption = UntieBandana;TieBandana,
+        IconsForTexture = Handkerchief_Black;Handkerchief_Blue;Handkerchief_Red;SkullMaskBandana,
+        CanHaveHoles = false,
+        ChanceToFall = 5,
+        Insulation = 0.10,
+    }
+*/
+
+}

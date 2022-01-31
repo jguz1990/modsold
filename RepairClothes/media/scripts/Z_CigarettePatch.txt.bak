@@ -1,0 +1,127 @@
+module SM
+{
+	imports
+	{
+		Base
+	}
+	item SMCigarette
+	{
+		Count	=	1,
+		HungerChange	=	0,
+		Weight	=	0.001,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type	=	Food,
+		DisplayName	=	Cigarette,
+		StressChange	=	-8,
+		Icon	=	SMCigaretteNew,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Cigarettes,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+		CustomEatSound = sm_smoking,
+		ReplaceOnUse = SM.SMButt,
+		Override = true,
+	}
+}
+module ZSMP
+{
+	imports { Base, SM, littering }
+
+	item ZSMPCigaretteLite
+		{
+			Count						=	1,
+			HungerChange				=	0,
+			Weight						=	0.001,
+			RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+			Type						=	Food,
+			DisplayName					=	Lite Cigarette,
+			StressChange				=	-5,
+			Icon						=	SLPCigaretteLite,
+			CustomContextMenu 			= 	Smoke,
+			CantBeFrozen				=	TRUE,
+			OnEat						=	OnEat_Cigarettes,
+			StaticModel					=	Cigarette,
+			EatType						=	Cigarettes,
+			CustomEatSound 				=	sm_smoking,
+			ReplaceOnUse				=	ZSMPCigaretteButtLite,
+		}
+	item ZSMPCigaretteMent
+		{
+			Count						=	1,
+			HungerChange				=	0,
+			Weight						=	0.001,
+			RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+			Type						=	Food,
+			DisplayName					=	Menthol Cigarette,
+			StressChange				=	-15,
+			Icon						=	SLPCigaretteMent,
+			CustomContextMenu 			= 	Smoke,
+			CantBeFrozen				=	TRUE,
+			OnEat						=	OnEat_Cigarettes,
+			StaticModel					=	Cigarette,
+			EatType						=	Cigarettes,
+			CustomEatSound 				=	sm_smoking,
+			ReplaceOnUse				=	ZSMPCigaretteButtMent,
+		}
+}
+module littering
+{
+	imports
+	{
+		Base
+	}
+	item Cigarette
+	{
+		HungerChange			=	0,
+		Weight					=	0.01,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type					=	Food,
+		DisplayName				=	Cigarette,
+		StressChange			=	-10,
+		ThirstChange			=	10,
+		Icon					=	SVGCigarette,
+		CustomContextMenu 		= 	Smoke,
+		ReplaceOnUse			=	CigaretteButt,
+		OnEat 					= OnEat_Cigarettes,
+		CustomEatSound			=	sm_smoking,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+	}
+	item CigaretteL
+	{
+		HungerChange			=	0,
+		Weight					=	0.01,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type					=	Food,
+		DisplayName				=	Lite Cigarette,
+		StressChange			=	-5,
+		UnhappyChange			=	-5,
+		ThirstChange			=	5,
+		Icon					=	SVGCigaretteL,
+		CustomContextMenu 		= 	Smoke,
+		ReplaceOnUse			=	CigaretteButtL,
+		OnEat 					= OnEat_Cigarettes,
+		CustomEatSound			=	sm_smoking,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+	}
+	item CigaretteM
+	{
+		HungerChange			=	0,
+		Weight					=	0.01,
+		RequireInHandOrInventory	=	Base.Lighter/Base.Matches,
+		Type					=	Food,
+		DisplayName				=	Menthol Cigarette,
+		StressChange			=	-5,
+		UnhappyChange			=	-10,
+		ThirstChange			=	5,
+		Icon					=	SVGCigaretteM,
+		CustomContextMenu 		= 	Smoke,
+		ReplaceOnUse			=	CigaretteButtM,
+		OnEat 					= OnEat_Cigarettes,
+		CustomEatSound			=	sm_smoking,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+	}
+}

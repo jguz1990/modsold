@@ -1,0 +1,58 @@
+require "Conf/sprayCanConf"
+
+for _,v in ipairs(sprayCanConf.list) do
+	table.insert(SuburbsDistributions["all"]["crate"].items, "spraypaint."..v.name);
+	table.insert(SuburbsDistributions["all"]["crate"].items, 0.01);
+	table.insert(SuburbsDistributions["all"]["metal_shelves"].items, "spraypaint."..v.name);
+	table.insert(SuburbsDistributions["all"]["metal_shelves"].items, 0.01);
+	--GarageTools --CratePaint
+	table.insert(ProceduralDistributions.list["GarageTools"].items, "spraypaint."..v.name);
+	table.insert(ProceduralDistributions.list["GarageTools"].items, 0.01);
+	table.insert(ProceduralDistributions.list["CratePaint"].items, "spraypaint."..v.name);
+	table.insert(ProceduralDistributions.list["CratePaint"].items, 0.1);
+	--table.insert(SuburbsDistributions["garagestorage"]["other"].items, "spraypaint."..v.name);
+	--table.insert(SuburbsDistributions["garagestorage"]["other"].items, 0.01);
+end
+
+for _,v in ipairs(sprayCanConf.listChalk) do
+	table.insert(SuburbsDistributions["all"]["counter"].items, "spraypaint."..v.name);
+	table.insert(SuburbsDistributions["all"]["counter"].items, 0.01);
+	
+	table.insert(ProceduralDistributions.list["GarageMetalwork"].items, "spraypaint."..v.name);
+	table.insert(ProceduralDistributions.list["GarageMetalwork"].items, 0.01);
+	table.insert(ProceduralDistributions.list["GarageTools"].items, "spraypaint."..v.name);
+	table.insert(ProceduralDistributions.list["GarageTools"].items, 0.01);
+	table.insert(ProceduralDistributions.list["WardrobeChild"].items, "spraypaint."..v.name);
+	table.insert(ProceduralDistributions.list["WardrobeChild"].items, 0.1);
+	
+	if ProceduralDistributions.list["ArtStorePen"] then
+		table.insert(ProceduralDistributions.list["ArtStorePen"].items, "spraypaint."..v.name);
+		table.insert(ProceduralDistributions.list["ArtStorePen"].items, 0.1);	
+	end	
+	if ProceduralDistributions.list["CrateToys"] then
+		table.insert(ProceduralDistributions.list["CrateToys"].items, "spraypaint."..v.name);
+		table.insert(ProceduralDistributions.list["CrateToys"].items, 0.1);	
+	end --DaycareCounter
+	if ProceduralDistributions.list["DaycareCounter"] then
+		table.insert(ProceduralDistributions.list["DaycareCounter"].items, "spraypaint."..v.name);
+		table.insert(ProceduralDistributions.list["DaycareCounter"].items, 0.1);	
+	end 
+	if ProceduralDistributions.list["DaycareShelves"] then
+		table.insert(ProceduralDistributions.list["DaycareShelves"].items, "spraypaint."..v.name);
+		table.insert(ProceduralDistributions.list["DaycareShelves"].items, 0.1);	
+	end 
+	if ProceduralDistributions.list["GigamartToys"] then
+		table.insert(ProceduralDistributions.list["GigamartToys"].items, "spraypaint."..v.name);
+		table.insert(ProceduralDistributions.list["GigamartToys"].items, 0.1);	
+	end 
+	-- table.insert(SuburbsDistributions["mechanic"]["wardrobe"].items, "spraypaint."..v.name);
+	-- table.insert(SuburbsDistributions["mechanic"]["wardrobe"].items, 0.01);
+	--table.insert(SuburbsDistributions["all"]["wardrobe"].items, "spraypaint."..v.name);
+	--table.insert(SuburbsDistributions["all"]["wardrobe"].items, 0.01);
+	table.insert(SuburbsDistributions["all"]["sidetable"].items, "spraypaint."..v.name);
+	table.insert(SuburbsDistributions["all"]["sidetable"].items, 0.01);
+	table.insert(SuburbsDistributions["all"]["bin"].items, "spraypaint."..v.name);
+	table.insert(SuburbsDistributions["all"]["bin"].items, 0.01);
+	-- table.insert(SuburbsDistributions["all"]["other"].items, "spraypaint."..v.name);
+	-- table.insert(SuburbsDistributions["all"]["other"].items, 0.01);
+end

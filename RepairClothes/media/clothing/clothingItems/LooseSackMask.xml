@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>skinned\hair\m_nbcmask</m_MaleModel>
+	<m_FemaleModel>skinned\hair\f_nbcmask</m_FemaleModel>
+	<m_GUID>2a67b2fa-b88f-43ab-b20a-4cb2bd055ac2</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<m_HatCategory>nohairnobeard</m_HatCategory>
+	<m_MasksFolder>media/textures/Clothes/Hat/Masks</m_MasksFolder>
+	<textureChoices>LooseSackMask</textureChoices>
+</clothingItem>

@@ -1,0 +1,19 @@
+module Base
+{
+
+	item LabKeycard
+	{
+	    DisplayCategory = Security,
+		/*Type = Key,*/
+		Type = Normal,
+		Weight = 0.1,
+		DisplayName = Lab Keycard,
+		Icon = LabKeycard,
+		AttachmentType = Walkie,
+       /* StaticModel = pa_LabKeycard,*/
+        WorldStaticModel = pa_LabKeycard,
+
+	}
+
+
+}

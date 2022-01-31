@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clothingDecal>
+	<texture>patches/PatchDinosaur</texture>
+	<x>1</x>
+	<y>1</y>
+	<width>256</width>
+	<height>256</height>
+</clothingDecal>

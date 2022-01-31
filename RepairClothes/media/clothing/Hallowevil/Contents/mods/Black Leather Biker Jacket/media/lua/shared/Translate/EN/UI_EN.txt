@@ -1,0 +1,6 @@
+UI_EN = {
+	
+    UI_Intro1 = "happy halloween...",
+    UI_Intro2 = "...Happy Halloween...",
+    UI_Intro3 = "HAPPY HALLOWEEN BOILS AND GHOULS!!!!!!!!!!!!!!",
+}

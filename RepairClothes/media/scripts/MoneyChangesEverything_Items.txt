@@ -1,0 +1,734 @@
+module Base
+{
+/*"Money Set" (https://skfb.ly/6S6SG) by zeki.kalagoglu is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"Cash bundle" (https://skfb.ly/6TnEz) by Dekrayzis is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"Modern Combat Bandage Packaging" (https://skfb.ly/6WWBs) by doodyk2019 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+	/*model Money
+	{
+		mesh = WorldItems/Money,
+		texture = WorldItems/Money,
+		scale = 0.6,
+	}*/
+	model PA_DollarRoll
+	{
+		mesh = PA_DollarRoll,
+		texture = PA_DollarRoll,
+		scale = 0.006,
+	}
+	model PA_BillBundle
+	{
+		mesh = PA_BillBundle,
+		texture = PA_BillBundle,
+		scale = 0.0055,
+	}
+	model PA_Bill
+	{
+		mesh = PA_Bill,
+		texture = WorldItems/Money,
+		scale = 0.006,
+	}
+	model PA_LargeCoin
+	{
+		mesh = PA_LargeCoin,
+		texture = WorldItems/Money,
+		scale = 0.006,
+	}
+	model PA_SmallCoin
+	{
+		mesh = PA_SmallCoin,
+		texture = WorldItems/Money,
+		scale = 0.006,
+	}
+item Penny
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.01,
+        Type    		= Normal,
+		DisplayName     = Penny,
+		icon 			= Penny,
+        WorldStaticModel = PA_SmallCoin,
+    }
+item Nickel
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        Type    		= Normal,
+        DisplayName     = Nickel,
+        icon 			= Nickel,
+        WorldStaticModel = PA_LargeCoin,
+    }
+item Dime
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        Type    		= Normal,
+        DisplayName     = Dime,
+        icon 			= Dime,
+        WorldStaticModel = PA_SmallCoin,
+    }
+item Quarter
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        Type    		= Normal,
+        DisplayName     = Quarter,
+        icon 			= Quarter,
+        WorldStaticModel = PA_LargeCoin,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	1_DollarBill=100,
+    Result:1_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	1_DollarRoll,
+	Result:1_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+item 1_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $1 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	1_DollarBundle,
+	Result:1_DollarBill=100,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:PA_BillBundle,
+    }
+item 1_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $1 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+recipe Open Envelope
+    {
+	1_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_1_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	1_DollarBill=100,
+	Envelope_pa,
+	Result:1_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+item 1_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 1_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $1 Dollar Bill,
+        icon 			= 1_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	2_DollarBill=100,
+    Result:2_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	2_DollarRoll,
+	Result:2_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	2_DollarBundle,
+	Result:2_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+recipe Open Envelope
+    {
+	2_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_2_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	2_DollarBill=100,
+	Envelope_pa,
+	Result:2_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+item 2_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $2 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+		StaticModel = PA_BillBundle,
+    }
+item 2_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $2 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        StaticModel = PA_DollarRoll,
+    }
+item 2_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 2_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $2 Dollar Bill,
+        icon 			= 2_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	5_DollarBill=100,
+    Result:5_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	5_DollarRoll,
+	Result:5_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	5_DollarBundle,
+	Result:5_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+recipe Open Envelope
+    {
+	5_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_5_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	5_DollarBill=100,
+	Envelope_pa,
+	Result:5_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+item 5_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $5 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+item 5_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $5 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+item 5_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 5_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $5 Dollar Bill,
+        icon 			= 5_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Open Envelope
+    {
+	10_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_10_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	10_DollarBill=100,
+	Envelope_pa,
+	Result:10_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	10_DollarBill=100,
+    Result:10_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	10_DollarRoll,
+	Result:10_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	10_DollarBundle,
+	Result:10_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+item 10_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 10_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $10 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+item 10_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $10 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+item 10_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $10 Dollar Bill,
+        icon 			= 10_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Open Envelope
+    {
+	20_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_20_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	20_DollarBill=100,
+	Envelope_pa,
+	Result:20_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	20_DollarBill=100,
+    Result:20_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	20_DollarRoll,
+	Result:20_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	20_DollarBundle,
+	Result:20_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+item 20_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 20_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $20 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+item 20_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $20 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+item 20_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $20 Dollar Bill,
+        icon 			= 20_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Open Envelope
+    {
+	50_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_50_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	50_DollarBill=100,
+	Envelope_pa,
+	Result:2_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	50_DollarBill=100,
+    Result:50_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	50_DollarRoll,
+	Result:50_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	50_DollarBundle,
+	Result:50_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+item 50_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 50_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $50 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+item 50_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $50 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+item 50_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $50 Dollar Bill,
+        icon 			= 50_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Open Envelope
+    {
+	100_DollarEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:Bills_100_100_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	OnTest:PA_Money_NothingInside,
+	100_DollarBill=100,
+	Envelope_pa,
+	Result:100_DollarEnvelope,
+    Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+    }
+recipe Roll Bills
+    {
+	RubberBand,
+	100_DollarBill=100,
+    Result:100_DollarRoll,
+    Time:250,
+	Prop1:Source=1,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unroll Bills
+    {
+	100_DollarRoll,
+	Result:100_DollarBill=100,
+    Time:50,
+    OnCreate:UnrollBills_OnCreate,
+	Prop2:PA_DollarRoll,
+    }
+recipe Unbundle Bills
+    {
+	100_DollarBundle,
+	Result:100_DollarBill=100,
+    Time:50,
+	Prop2:PA_BillBundle,
+    }
+item 100_DollarEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }
+item 100_DollarBundle
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Bundle of $100 Dollar Bills,
+        icon 			= PA_BillBundle,
+        Type    		= Normal,
+        WorldStaticModel = PA_BillBundle,
+		StaticModel = PA_BillBundle,
+    }
+item 100_DollarRoll
+    {
+        DisplayCategory = Money,
+        Weight    		= 1,
+        DisplayName     = Roll of $100 Dollar Bills,
+        icon 			= PA_DollarRoll,
+        Type    		= Normal,
+        WorldStaticModel = PA_DollarRoll,
+        StaticModel = PA_DollarRoll,
+    }
+item 100_DollarBill
+    {
+        DisplayCategory = Money,
+        Weight    		= 0.01,
+        DisplayName     = $100 Dollar Bill,
+        icon 			= 100_DollarBill,
+        Type    		= Normal,
+        WorldStaticModel = PA_Bill,
+		StaticModel = PA_Bill,
+    }
+recipe Flip a Coin
+    {
+	keep Penny/Nickel/Dime/Quarter,
+    Result:Quarter,
+    Time:50,
+    OnCreate:FlipCoin_OnCreate,
+	RemoveResultItem:true,
+	Sound:CoinFlip,
+	AnimNode:BlowTorch,
+    }
+recipe Count Money
+    {
+	Money,
+    Result:Money,
+    Time:50,
+    OnCreate:CountMoney_OnCreate,
+	RemoveResultItem:true,
+	Prop2:Money,
+    }
+recipe Search Wallet
+    {
+    /*keep Wallet/Wallet2/Wallet3/Wallet4,*/
+    Wallet/Wallet2/Wallet3/Wallet4,
+    Result:Money,
+    Time:50,
+    OnTest:SearchWallet_OnTest,
+    OnCreate:SearchWallet_OnCreate,
+	RemoveResultItem:true,
+	Prop2:Source=1,
+    }
+/*recipe Search Wallet
+    {
+    keep Wallet2,
+    Result:Money,
+    Time:50,
+    OnCreate:SearchWallet_OnCreate,
+	RemoveResultItem:true,
+    }
+recipe Search Wallet
+    {
+    keep Wallet3,
+    Result:Wallet3,
+    Time:50,
+    OnCreate:SearchWallet_OnCreate,
+	RemoveResultItem:true,
+    }
+recipe Search Wallet
+    {
+    keep Wallet4,
+    Result:Wallet4,
+    Time:50,
+    OnCreate:SearchWallet_OnCreate,
+	RemoveResultItem:true,
+    }*/
+}

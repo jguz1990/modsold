@@ -1,0 +1,91 @@
+module Base
+{
+
+	item FireBarrel
+	{
+		Weight = 40,
+		Type			= Moveable,
+		WorldObjectSprite	= fire_barrel_0,
+		DisplayName = Fire Barrel,
+		Icon = FireBarrel,		
+	}
+	item StorageBarrel
+	{
+		Weight = 40,
+		Type			= Moveable,
+		WorldObjectSprite	= storagebarrel_0,
+		DisplayName = Storage Barrel,
+		Icon = YellowBarrel,		
+	}
+
+	item FireBarrelGrate
+	{
+		Weight = 10,
+		DisplayName = Metal Grate,
+		Icon = FireBarrelGrate,
+		
+	}
+
+   recipe Make Metal Grate
+    {
+       MetalBar=9,
+       BlowTorch=7,
+       keep WeldingMask,
+
+       Result:FireBarrelGrate,
+       Time:350.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=1,
+       /*OnGiveXP:Recipe.OnGiveXP.MetalWelding10,*/
+	   AnimNode:SawLog,
+	   Prop1:BlowTorch,
+	   Prop2:LeadPipe,
+	   Sound:BlowTorch,
+    }
+
+   recipe Make Fire Barrel
+    {
+       YellowBarrel/GreasyYellowBarrel,
+       FireBarrelGrate,
+
+       Result:FireBarrel,
+       Time:150.0,
+       Category:Welding,
+    }
+   recipe Make Storage Barrel
+    {
+       YellowBarrel/GreasyYellowBarrel,
+
+       Result:StorageBarrel,
+       Time:150.0,
+       Category:Welding,
+    }	
+
+	item GreyBarrel
+	{
+		Weight = 40,
+		Type			= Moveable,
+		WorldObjectSprite	= crafted_01_32,
+		DisplayName = Barrel,	
+		Icon = GreyBarrel,	
+	}
+
+	item YellowBarrel
+	{
+		Weight = 40,
+		Type			= Moveable,
+		WorldObjectSprite	= industry_01_22,
+		DisplayName = Barrel,	
+		Icon = YellowBarrel,		
+	}
+
+	item GreasyYellowBarrel
+	{
+		Weight = 40,
+		Type			= Moveable,
+		WorldObjectSprite	= industry_01_23,
+		DisplayName = Barrel,	
+		Icon = YellowBarrel,		
+	}	
+	
+}

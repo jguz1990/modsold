@@ -1,0 +1,96 @@
+module Base
+{
+   
+
+/************************ITEMS************************/
+
+item CokeBaggie
+    {
+        Weight    		= 0.01,
+	Type			= Drainable,
+        UseDelta		= 0.125,
+        DisplayName         	= Coke Baggie,
+        icon 			= CokeBaggie,
+	ReplaceOnDeplete	= EmptyCokeBaggie,
+	cantBeConsolided 	= FALSE,
+    }  
+item EmptyCokeBaggie
+    {
+        Weight    		= 0.001,
+        Type    		= Normal,
+        DisplayName         	= Empty Coke Baggie,
+        icon 			= EmptyCokeBaggie,
+    } 
+item MirrorWith4Lines
+    {
+        Weight    		= 0.2,
+        DisplayName         	= Mirror With 4 Lines,
+        icon 			= MirrorWith4Lines,
+	Type			= Food,
+	HungerChange            = -5,
+        ThirstChange            = -5,
+        UnhappyChange		= -4,
+        FatigueChange           = -8,
+	EnduranceChange		= 8,
+        StressChange            = 8,
+	CustomEatSound 		= CokeSnort,
+        ReplaceOnUse    	= MirrorWith3Lines,
+	CustomContextMenu 	= Snort,	
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+    }
+item MirrorWith3Lines
+    {
+        Weight    		= 0.2,
+        DisplayName         	= Mirror With 3 Lines,
+        icon 			= MirrorWith3Lines,
+	Type			= Food,
+	HungerChange            = -5,
+        ThirstChange            = -5,
+        UnhappyChange		= -4,
+        FatigueChange           = -8,
+	EnduranceChange		= 8,
+        StressChange            = 8,
+	CustomEatSound 		= CokeSnort,
+        ReplaceOnUse    	= MirrorWith2Lines,
+	CustomContextMenu 	= Snort,	
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+    }
+item MirrorWith2Lines
+    {
+        Weight    		= 0.2,
+        DisplayName         	= Mirror With 2 Lines,
+        icon 			= MirrorWith2Lines,
+	Type			= Food,
+	HungerChange            = -5,
+        ThirstChange            = -5,
+        UnhappyChange		= -4,
+        FatigueChange           = -8,
+	EnduranceChange		= 8,
+        StressChange            = 8,
+	CustomEatSound 		= CokeSnort,
+        ReplaceOnUse    	= MirrorWith1Line,
+	CustomContextMenu 	= Snort,	
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+    }
+item MirrorWith1Line
+    {
+        Weight    		= 0.2,
+        DisplayName         	= Mirror With A Line,
+        icon 			= MirrorWith1Line,
+	Type			= Food,
+	HungerChange            = -5,
+        ThirstChange            = -5,
+        UnhappyChange		= -4,
+        FatigueChange           = -8,
+	EnduranceChange		= 8,
+        StressChange            = 8,
+	CustomEatSound 		= CokeSnort,
+        ReplaceOnUse    	= Mirror,
+	CustomContextMenu 	= Snort,	
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+    }
+}

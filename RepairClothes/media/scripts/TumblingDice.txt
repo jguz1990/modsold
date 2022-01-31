@@ -1,0 +1,13 @@
+module Base
+{
+recipe Roll Dice
+    {
+	Dice,
+    Result:Dice,
+    Time:50,
+    OnCreate:RollDice_OnCreate,
+	RemoveResultItem:true,
+	Sound:DiceShake,
+	AnimNode:BlowTorchFloor,
+    }
+}

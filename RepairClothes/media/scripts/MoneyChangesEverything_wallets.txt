@@ -1,0 +1,81 @@
+module Base
+{
+/*"Modern Combat Bandage Packaging" (https://skfb.ly/6WWBs) by doodyk2019 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+
+	model Envelope_pa
+	{
+		mesh = Envelope_pa,
+		texture = Envelope_pa,
+		scale = 0.001,
+	}
+	item Wallet_pa
+	{
+		Weight	=	0.2,
+		Type	=	Container,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_01,
+		StaticModel = Wallet,
+		WorldStaticModel = Wallet,
+		Capacity = 1,
+		 AcceptItemFunction = Accept_Wallet,
+	}
+
+	item Wallet2_pa
+	{
+		Weight	=	0.2,
+		Type	=	Container,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_02,
+		StaticModel = Wallet2,
+		WorldStaticModel = Wallet2,
+		Capacity = 1,
+		 AcceptItemFunction = Accept_Wallet,
+	}
+
+	item Wallet3_pa
+	{
+		Weight	=	0.2,
+		Type	=	Container,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_03,
+		StaticModel = Wallet3,
+		WorldStaticModel = Wallet3,
+		Capacity = 1,
+		 AcceptItemFunction = Accept_Wallet,
+	}
+
+	item Wallet4_pa
+	{
+		Weight	=	0.2,
+		Type	=	Container,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_04,
+		StaticModel = Wallet4,
+		WorldStaticModel = Wallet4,
+		Capacity = 1,
+		 AcceptItemFunction = Accept_Wallet,
+	}
+item Envelope_pa
+	{
+	    DisplayCategory = Item,
+		Weight	=	0.1,
+		Type	=	Container,
+		DisplayName	=	Envelope,
+        icon 			= Envelope_pa,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+		Capacity = 1,
+		 AcceptItemFunction = Accept_Envelope,
+        OpenSound   =   MapOpen,
+        CloseSound   =   MapClose,
+	}
+item Envelope_pa_torn
+	{
+	    DisplayCategory = Junk,
+		Weight	=	0.1,
+		DisplayName	=	Torn Envelope,
+        icon 			= Envelope_pa,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+	}
+}

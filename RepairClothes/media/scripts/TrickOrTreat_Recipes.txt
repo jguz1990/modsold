@@ -1,0 +1,86 @@
+module Base
+{
+
+	recipe Open Creature Costume
+    {
+		Sound:Packaging,
+		CreatureCostume,
+		OnCreate:Creature_Balaclava,
+		Result:CreatureMask,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    } 
+   recipe Open Ghost Costume
+    {
+		Sound:Packaging,
+		GhostCostume,
+		OnCreate:Pillowcase_Balaclava,
+		Result:GhostMask,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    }  
+	
+   recipe Open Pumpkin Costume
+    {
+		Sound:Packaging,
+		PumpkinCostume,
+		OnCreate:Pumpkin_Balaclava,
+		Result:RubberPumpkinMask,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    } 
+
+   recipe Open Skeleton Costume
+    {
+		Sound:Packaging,
+		SkeletonCostume,
+		OnCreate:Skull_Balaclava,
+		Result:RubberSkullMask,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    } 
+
+
+   recipe Make Pillowcase Mask
+    {
+		Sound:Scissors,
+		Pillow,
+		keep Scissors,
+		OnCreate:Pillowcase_Balaclava,
+		Result:PillowcaseMask,
+		Time:200.0,
+		Category:Tailoring,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }
+
+   recipe Make Ghost Poncho
+    {
+		Sound:Scissors,
+		Sheet,
+		keep Scissors,
+		OnCreate:Poncho_Ghost,
+		Result:Poncho_Ghost,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }  
+  
+  
+   recipe Use Fake Blood
+    {
+		FakeBlood=1,
+		OnCreate:FakeBlood,
+		Result:FakeBlood,
+		Time:175.0,
+		Category:Halloween,
+		RemoveResultItem:true,
+		AnimNode:TakePills,
+    }
+
+}

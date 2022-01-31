@@ -1,0 +1,364 @@
+module Base
+{
+   
+
+/************************ITEMS************************/
+
+item PornoMag1
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Class Magazine,
+		Icon		=	PornoMag1,
+		ReplaceOnUse	=	PornoMag1Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread1.png,*/
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag1b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Class Magazine (missing centerfold),
+		Icon		=	PornoMag1,
+		ReplaceOnUse	=	PornoMag1Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    } 
+item Centerfold1
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Class Centerfold,
+		Icon		=	Centerfold1,
+        	/*Map             =	media/textures/Spread1.png,*/
+    } 
+item PornoMag1Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Class Magazine,
+		Icon		=	PornoMag1Torn,
+		WorldStaticModel = PornoMagGround,
+    }  
+
+item PornoMag2
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Butt Town Magazine,
+		Icon		=	PornoMag2,
+		ReplaceOnUse	=	PornoMag2Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread2.png,*/
+		WorldStaticModel = PornoMagGround,
+    } 
+
+item PornoMag2b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Butt Town Magazine (missing centerfold),
+		Icon		=	PornoMag2,
+		ReplaceOnUse	=	PornoMag2Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    } 
+
+item Centerfold2
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Butt Town Centerfold,
+		Icon		=	Centerfold2,
+        	/*Map             =	media/textures/Spread2.png,*/
+    } 
+item PornoMag2Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Butt Town Magazine,
+		Icon		=	PornoMag2Torn,
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag3
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Show Stoppers Magazine,
+		Icon		=	PornoMag3,
+		ReplaceOnUse	=	PornoMag3Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread3.png,*/
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag3b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Show Stoppers Magazine (missing centerfold),
+		Icon		=	PornoMag3,
+		ReplaceOnUse	=	PornoMag3Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    } 
+item Centerfold3
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Show Stoppers Centerfold,
+		Icon		=	Centerfold3,
+        	/*Map             =	media/textures/Spread3.png,*/
+    } 
+item PornoMag3Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Show Stoppers Magazine,
+		Icon		=	PornoMag3Torn,
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag4
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Longhorns Magazine,
+		Icon		=	PornoMag4,
+		ReplaceOnUse	=	PornoMag4Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread4.png,*/
+		WorldStaticModel = PornoMagGround,
+    }
+item PornoMag4b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Longhorns Magazine (missing centerfold),
+		Icon		=	PornoMag4,
+		ReplaceOnUse	=	PornoMag4Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    } 
+item Centerfold4
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Longhorns Centerfold,
+		Icon		=	Centerfold4,
+        	/*Map             =	media/textures/Spread4.png,*/
+    }
+item PornoMag4Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Longhorns Magazine,
+		Icon		=	PornoMag4Torn,
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag5
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Grovel Magazine,
+		Icon		=	PornoMag5,
+		ReplaceOnUse	=	PornoMag5Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread5.png,*/
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag5b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Grovel Magazine (missing centerfold),
+		Icon		=	PornoMag5,
+		ReplaceOnUse	=	PornoMag5Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    } 
+item Centerfold5
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Grovel Centerfold,
+		Icon		=	Centerfold5,
+        	/*Map             =	media/textures/Spread5.png,
+    } 
+item PornoMag5Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Grovel Magazine,
+		Icon		=	PornoMag5Torn,
+		WorldStaticModel = PornoMagGround,
+    }
+item PornoMag6
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		UnhappyChange	=	-100,
+		StressChange	=	-100,
+		BoredomChange	=	-100,
+		DisplayName	=	Jugs 'n Ammo Magazine,
+		Icon		=	PornoMag6,
+		ReplaceOnUse	=	PornoMag6Torn,
+        	StaticModel 	= 	PornoMag1,
+        	/*Map             =	media/textures/Spread6.png,*/
+		WorldStaticModel = PornoMagGround,
+    } 
+item PornoMag6b
+    {
+        
+		Weight		=	0.2,
+		Type		=	Literature,
+		StressChange	=	-50,
+		BoredomChange	=	-40,
+		DisplayName	=	Jugs 'n Ammo Magazine (missing centerfold),
+		Icon		=	PornoMag6,
+		ReplaceOnUse	=	PornoMag6Torn,
+        	StaticModel 	= 	PornoMag1,
+		WorldStaticModel = PornoMagGround,
+    }
+item Centerfold6
+    {
+        
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Jugs 'n Ammo Centerfold,
+		Icon		=	Centerfold6,
+        	/*Map             =	media/textures/Spread6.png,*/
+    }
+item PornoMag6Torn
+    {
+        
+        	Weight		=	0.2,
+		Type		=	Normal,
+		DisplayName	=	Torn and Stained Jugs 'n Ammo Magazine,
+		Icon		=	PornoMag6Torn,
+		WorldStaticModel = PornoMagGround,
+    }
+model PornoMag1
+	{
+		mesh = Magazine,
+		texture = PornoMag1,
+	}
+model PornoMagGround
+	{
+        	mesh = WorldItems/MagazineOpen,
+		texture = PornoMag1,
+        	scale = 0.4,
+	}
+    recipe Pull Out Centerfold
+    {
+        PornoMag1,
+        Result:Centerfold1,
+        Time:100.0,
+        OnCreate:Centerfold1,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+    recipe Pull Out Centerfold
+    {
+        PornoMag2,
+        Result:Centerfold2,
+        Time:100.0,
+        OnCreate:Centerfold2,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+    recipe Pull Out Centerfold
+    {
+        PornoMag3,
+        Result:Centerfold3,
+        Time:100.0,
+        OnCreate:Centerfold3,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+    recipe Pull Out Centerfold
+    {
+        PornoMag4,
+        Result:Centerfold4,
+        Time:100.0,
+        OnCreate:Centerfold4,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+    recipe Pull Out Centerfold
+    {
+        PornoMag5,
+        Result:Centerfold5,
+        Time:100.0,
+        OnCreate:Centerfold5,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+    recipe Pull Out Centerfold
+    {
+        PornoMag6,
+        Result:Centerfold6,
+        Time:100.0,
+        OnCreate:Centerfold6,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	Prop2:PornoMag1,
+    }
+
+}

@@ -1,0 +1,174 @@
+module Base
+{
+
+
+item SewingMachine
+	{
+		Weight = 15,
+		Type			= Moveable,
+		WorldObjectSprite	= sewing_machine_0,
+		DisplayName = Sewing Machine,
+		Icon			=	SewingMachine,
+		WorkbenchType = Sewing Machine,
+	}
+item WhiteFabric
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = White Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+	}
+item QuiltedFabric
+	{
+		Weight = 1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayCategory = Item,
+		DisplayName = Quilted Fabric,
+		Icon			=	QuiltedFabric,
+		SewingMaterial = true,
+	}
+item Fabric
+	{
+		Weight = 1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayName = Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		/*BodyLocation = Jacket,
+		FabricType = Cotton,
+		ClothingItem = PonchoGreenDOWN,
+		BloodLocation = Shirt;Trousers,
+		RunSpeedModifier = 0,
+		CombatSpeedModifier = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,*/
+	}
+/*item Denim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	21,
+		ColorGreen 		=	96,
+		ColorBlue 		=	189,
+	}
+item BlackDenim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Black Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	64,
+		ColorGreen 		=	64,
+		ColorBlue 		=	64,
+	}
+item LightDenim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Light Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	152,
+		ColorGreen 		=	158,
+		ColorBlue 		=	176,
+	}*/
+/*
+item CamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Woodland Camo Fabric,
+		Icon			=	CamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+		/*BodyLocation = Jacket,
+		FabricType = Cotton,
+		ClothingItem = PonchoGreenDOWN,
+		BloodLocation = Shirt;Trousers,
+		RunSpeedModifier = 0,
+		CombatSpeedModifier = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,*/
+	}
+item UrbanCamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Urban Camo Fabric,
+		Icon			=	UrbanCamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+		/*BodyLocation = Jacket,
+		FabricType = Cotton,
+		ClothingItem = PonchoGreenDOWN,
+		BloodLocation = Shirt;Trousers,
+		RunSpeedModifier = 0,
+		CombatSpeedModifier = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,*/
+	}
+item DesertCamouflageFabric
+	{
+		Weight = 1,
+		DisplayName = Desert Camo Fabric,
+		Icon			=	DesertCamouflageFabric,
+		Type			= Normal,
+		SewingMaterial = true,
+		/*BodyLocation = Jacket,
+		FabricType = Cotton,
+		ClothingItem = PonchoGreenDOWN,
+		BloodLocation = Shirt;Trousers,
+		RunSpeedModifier = 0,
+		CombatSpeedModifier = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,*/
+	}
+
+
+    recipe Make Fabric
+    {
+		Sound:SewingMachine,
+		Sheet,
+		OnTest:CanSewingMachine,
+		NearItem:Sewing Machine,
+		Result:Fabric,
+		Time:400.0,
+    }
+*/
+	sound SewingMachine
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/SewingMachine.ogg,
+		}
+	}
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+}

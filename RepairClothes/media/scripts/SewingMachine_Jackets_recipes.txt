@@ -1,0 +1,45 @@
+module Base
+{
+
+    recipe Sew Hoodie
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=9,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		/*NearItem:Sewing Machine,*/
+		Result:HoodieUP_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Jacket
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Jacket_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Padded Jacket
+    {
+		Sound:SewingMachine,
+		QuiltedFabric,
+		Thread=9,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Jacket_Padded,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+  
+}

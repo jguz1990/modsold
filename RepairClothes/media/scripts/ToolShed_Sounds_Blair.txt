@@ -1,0 +1,30 @@
+module Base
+{
+ /* TOOL SHED SOUNDS */ 
+
+	sound MetalSnips
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/MetalSnips.ogg,
+		}
+	}
+	
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}	
+	sound Drill1
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Drill1.ogg,
+		}
+	}
+}

@@ -1,0 +1,368 @@
+module Base
+{
+
+	
+	item GhostCostume
+	{
+	Weight=1,
+	DisplayName=Ghost Costume,
+	Icon=GhostCostume,
+	}	
+	item GhostCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Ghost Costume Packaging,
+	Icon=GhostCostume,
+	}	
+	item PumpkinCostume
+	{
+	Weight=1,
+	DisplayName=Pumpkin Costume,
+	Icon=PumpkinCostume,
+	}	
+	item PumpkinCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Pumpkin Costume Packaging,
+	Icon=PumpkinCostume,
+	}
+	
+	item Tote
+	{
+		WeightReduction	=	50,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	12,
+		DisplayName	=	Candy Bag,
+		Icon	=	TrickTote,
+		ReplaceInSecondHand = Bag_Tote_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_Tote_RHand holdingbagright,
+	}
+	
+	item FakeBlood
+	{
+	Weight=0.5,
+	Type=Drainable,
+	UseDelta=0.1,
+	DisplayName=Fake Blood,
+	Icon=FakeBlood,
+		ReplaceOnDeplete	=	UsedFakeBlood,
+	}	
+	item UsedFakeBlood
+	{
+	Weight=0.1,
+	DisplayName=Empty Fake Blood Tube,
+	Icon=FakeBlood,
+	}	
+	
+
+	
+    item Poncho_Ghost
+    {
+        Type = Clothing,
+        DisplayName = Ghost Poncho,
+        ClothingItem = PonchoGreen,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Ghost,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_GhostDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+    item Poncho_GhostDOWN
+    {
+        Type = Clothing,
+        DisplayName = Ghost Poncho,
+        ClothingItem = PonchoGreenDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Ghost,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Ghost,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }	
+    item Poncho_Pumpkin
+    {
+        Type = Clothing,
+        DisplayName = Pumpkin Poncho,
+        ClothingItem = PonchoGreen,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Pumpkin,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_PumpkinDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+    item Poncho_PumpkinDOWN
+    {
+        Type = Clothing,
+        DisplayName = Pumpkin Poncho,
+        ClothingItem = PonchoGreenDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Pumpkin,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Pumpkin,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+
+ 	item Pumpkin_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Pumpkin Mask,
+		ClothingItem = Hat_BalaclavaFull,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Pumpkin_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}	
+	
+ 	item Sack_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (tight),
+		ClothingItem = Hat_BalaclavaFull,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Sack_Balaclava2,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+	}	
+ 	item Sack_Balaclava2
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (loose),
+		ClothingItem = Hat_NBCmask,
+		BodyLocation = FullHat,
+		BloodLocation = Head,
+		Icon = Sack_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+	}
+ 	item Skull_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Skull Mask,
+		ClothingItem = Hat_BalaclavaFull,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = Skull_Balaclava,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	200,
+		ColorGreen 		=	200,
+		ColorBlue 		=	200,
+	}
+ 	item Pillowcase_Balaclava
+	{
+		Type = Clothing,
+		DisplayName = Ghost Mask,
+		ClothingItem = Hat_NBCmask,
+		BodyLocation = FullHat,
+		/*BodyLocation = Mask,*/
+		BloodLocation = Head,
+		Icon = Pillowcase_Balaclava2,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+	}
+   recipe Open Pumpkin Costume
+    {
+		Sound:Packaging,
+		PumpkinCostume,
+		OnCreate:Pumpkin_Balaclava,
+		Result:Pumpkin_Balaclava,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    } 
+   recipe Pumpkin Mask
+    {
+		Sound:Scissors,
+		EmptySandbag,
+		keep Scissors,
+		OnCreate:Pumpkin_Balaclava,
+		Result:Pumpkin_Balaclava,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:SandBag,
+    } 
+   recipe Sack Mask
+    {
+		Sound:Scissors,
+		EmptySandbag,
+		keep Scissors,
+		Rope,
+		OnCreate:Sack_Balaclava,
+		Result:Sack_Balaclava,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:SandBag,
+    } 
+   recipe Sack Mask
+    {
+		Sound:Scissors,
+		EmptySandbag,
+		keep Scissors,
+		OnCreate:Sack_Balaclava2,
+		Result:Sack_Balaclava2,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:SandBag,
+    } 
+   recipe Skull Mask
+    {
+		Sound:Scissors,
+		Pillow,
+		keep Scissors,
+		OnCreate:Skull_Balaclava,
+		Result:Skull_Balaclava,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }  
+   recipe Open Ghost Costume
+    {
+		Sound:Packaging,
+		GhostCostume,
+		OnCreate:Pillowcase_Balaclava,
+		Result:Pillowcase_Balaclava,
+		Time:500.0,
+		Category:Halloween,
+		AnimNode:Loot,
+    }  
+   recipe Ghost Mask
+    {
+		Sound:Scissors,
+		Pillow,
+		keep Scissors,
+		OnCreate:Pillowcase_Balaclava,
+		Result:Pillowcase_Balaclava,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }  
+ 
+   recipe Ghost Poncho
+    {
+		Sound:Scissors,
+		Sheet,
+		keep Scissors,
+		OnCreate:Poncho_Ghost,
+		Result:Poncho_Ghost,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }  
+  
+   recipe Pumpkin Poncho
+    {
+		Sound:Scissors,
+		Tarp,
+		keep Scissors,
+		OnCreate:Poncho_Pumpkin,
+		Result:Poncho_Pumpkin,
+		Time:400.0,
+		Category:Halloween,
+		Prop1:Scissors,
+		Prop2:Pillow,
+    }   
+  
+   recipe Use Fake Blood
+    {
+		/*Sound:Squirt2,*/
+		FakeBlood=1,
+		OnCreate:FakeBlood,
+		Result:FakeBlood,
+		Time:175.0,
+		Category:Halloween,
+		RemoveResultItem:true,
+		AnimNode:TakePills,
+    }
+	sound Packaging
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Packaging.ogg,
+		}
+	}
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+	sound Squirt2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Squirt2.ogg,
+		}
+	}
+}

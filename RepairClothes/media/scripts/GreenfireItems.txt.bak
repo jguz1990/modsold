@@ -1,0 +1,620 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+	item GFCigaretteCarton
+	{
+		WeightReduction	=	10,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	1,
+		DisplayName	=	Carton of Cigarettes,
+		Icon	=	GFCigaretteCarton,
+	}
+
+	item GFEmptyCigaretteCarton
+	{
+		WeightReduction	=	10,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	1,
+		DisplayName	=	Carton of Cigarettes,
+		Icon	=	GFCigaretteCarton,
+	}
+
+	item GFUsedCigaretteCarton
+	{
+		WeightReduction	=	10,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	1,
+		DisplayName	=	Carton of Cigarettes,
+		Icon	=	GFCigaretteCarton,
+	}
+
+/***************Smokes***************/
+
+	item Cannabis
+	{
+		Count		=	3,
+		Weight	=	0.001,
+		Type	=	Normal,
+		DisplayName	=	Cannabis,
+		Icon	=	CannabisBase,
+	}
+
+	item Tobacco
+	{
+		HungerChange 	=	0,
+		Weight	=	0.001,
+		Type	=	Normal,
+		DisplayName	=	Tobacco,
+		Icon	=	Tobacco,
+	}
+
+
+/***************Paraphenelia***************/
+
+	item Bong
+	{
+		Weight			=	0.7,
+        	Type			=	Normal,
+		DisplayName		=	Bong,
+		Icon			=	Bong,
+	}
+
+
+	item SmokingPipe
+	{
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Smoking Pipe,
+		Icon		=	SmokingPipe,
+	}
+
+
+	item RollingPapers
+	{
+		Weight			=	0.1,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta  	 	=	0.025,
+		DisplayName		=	Rolling Papers,
+		Icon			=	RollingPapers,
+		cantBeConsolided	=	TRUE,
+	}
+
+/***************Seeds&Packets***************/
+
+	item CannabisSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Cannabis Seeds,
+		Icon				=		TZ_LRRadishSeeds,
+		Weight				=		0.001,
+	}
+
+	item TobaccoSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Tobacco Seeds,
+		Icon				=		TZ_StrewberrySeeds,
+		Weight				=		0.001,
+	}
+
+	item CannabisBagSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Cannabis Seeds Packet,
+		Icon				=		SeedpackCannabis,
+		Weight				=		0.1,
+	}
+
+	item TobaccoBagSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Tobacco Seeds Packet,
+		Icon				=		SeedpackTobacco,
+		Weight				=		0.1,
+	}
+	
+	item PipeTobaccoBag
+	{
+		Type		=	Normal,
+		DisplayName	=	Bag of Tobacco,
+		Icon		=	TobaccoBag,
+		Weight		=	0.1,
+	}
+
+/***************Edibles***************/
+
+	item SBrownieBatter
+	{
+		Type			=	Food,
+		Weight			=	2.33,
+		DisplayName		=	Pan of Brownie Batter,
+		Icon			=	SBrownieBatter,
+		HungerChange		=	-64,
+		ThirstChange		=	16,
+		UnhappyChange		=	-384,
+		BoredomChange		=	-384,
+		StressChange		=	-384,
+		Carbohydrates		=	450.6,
+		Proteins		=	47.1,
+		Lipids			=	428.8,
+		Calories		=	5656.5,
+		MinutesToCook		=	40,
+		MinutesToBurn		=	60,
+		IsCookable		=	TRUE,
+		BadInMicrowave		=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysFresh		=	1,
+		DaysTotallyRotten	=	3,
+		ReplaceOnUse		=	BakingPan,
+		ReplaceOnCooked		=	Greenfire.SBrowniePan,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item SBrowniePan
+	{
+		Type			=	Food,
+		Weight			=	2.33,
+		DisplayName		=	Pan of Brownies,
+		Icon			=	SBrowniePan,
+		HungerChange		=	-64,
+		ThirstChange		=	16,
+		UnhappyChange		=	-384,
+		BoredomChange		=	-384,
+		StressChange		=	-384,
+		Carbohydrates		=	450.6,
+		Proteins		=	47.1,
+		Lipids			=	428.8,
+		Calories		=	5656.5,
+		ReplaceOnUse		=	BakingPan,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	9,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item SBrownie
+	{
+		Type			=	Food,
+		Weight			=	0.114,
+		DisplayName		=	Brownie,
+		Icon			=	SBrownie,
+		HungerChange		=	-4,
+		ThirstChange		=	1,
+		UnhappyChange		=	-24,
+		BoredomChange		=	-24,
+		StressChange		=	-24,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	9,
+		Carbohydrates		=	28.2,
+		Proteins		=	2.9,
+		Lipids			=	26.8,
+		Calories		=	353.5,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item Marshmallows
+	{
+		Type			=	Food,
+		Weight			=	0.67,
+		DisplayName		=	Bag of Marshmallows,
+		Icon			=	Marshmallows,
+		HungerChange		=	-20,
+		UnhappyChange		=	-20,
+		Calories		=	2500,
+		Carbohydrates		=	552,
+		Proteins		=	23,
+		Lipids			=	0,
+		Packaged		=	TRUE,
+	}
+
+	item SCrispyMix
+	{
+		Type			=	Food,
+		Weight			=	2.386,
+		DisplayName		=	Saucepan of Nice Crispiez Mix,
+		Icon			=	NiceSauce,
+		ReplaceOnUse		=	Saucepan,
+		IsCookable		=	TRUE,
+		BadInMicrowave		=	TRUE,
+		MinutesToCook		=	10,
+		ReplaceOnCooked		=	Greenfire.SCrispySauce,
+		HungerChange		=	-45,
+		ThirstChange		=	25,
+		UnhappyChange		=	40,
+		BoredomChange		=	-100,
+		StressChange		=	20,
+		Calories		=	5700,
+		Lipids			=	352,
+		Carbohydrates		=	552,
+		Proteins			=	23,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item SCrispySauce
+	{
+		Type			=	Food,
+		Weight			=	2.386,
+		DisplayName		=	Saucepan of Nice Crispiez Sauce,
+		Icon			=	NiceSauceMelt,
+		HungerChange		=	-45,
+		ThirstChange		=	35,
+		UnhappyChange		=	-384,
+		BoredomChange		=	-384,
+		StressChange		=	-384,
+		Calories		=	5700,
+		Lipids			=	352,
+		Carbohydrates		=	552,
+		Proteins			=	23,
+		ReplaceOnUse		=	Saucepan,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item NiceCrispiezPan
+	{
+		Type			=	Food,
+		Weight			=	2.086,
+		DisplayName		=	Pan of Nice Crispiez,
+		Icon			=	NiceCrispiezPan,
+		HungerChange		=	-64,
+		ThirstChange		=	16,
+		UnhappyChange		=	-384,
+		BoredomChange		=	-384,
+		StressChange		=	-384,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	12,
+		Calories		=	8060,
+		Lipids			=	378,
+		Carbohydrates		=	1124,
+		Proteins			=	75,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+	item NiceCrispiez
+	{
+		Type			=	Food,
+		Weight			=	0.118,
+		DisplayName		=	Nice Crispiez,
+		Icon			=	NiceCrispiez,
+		HungerChange		=	-4,
+		ThirstChange		=	1,
+		UnhappyChange		=	-24,
+		BoredomChange		=	-24,
+		StressChange		=	-24,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	12,
+		Calories		=	504,
+		Lipids			=	24,
+		Carbohydrates		=	70,
+		Proteins			=	5,
+		Tooltip			=	Tooltip_Painkillers,
+	}
+
+/***************Recipes***************/
+
+   	recipe Make Fly Cure
+	{
+        	GardeningSprayEmpty,
+        	Water=3,
+		Tobacco=5,
+
+		Result:GardeningSprayCigarettes,
+		Time:40.0,
+		Category:Farming,
+	}
+
+	recipe Unload Cannabis from Bong
+	{
+		destroy WeedBong,
+
+		Result:Cannabis=1,
+		Time:30.0,
+		OnCreate:DumpBong_OnCreate,
+	}
+
+	recipe Unload Cannabis from Smoking Pipe
+	{
+		destroy WeedPipe,
+
+		Result:Cannabis=1,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Unload Tobacco from Bong
+	{
+		destroy TobaccoBong,
+
+		Result:Tobacco,
+		Time:30.0,
+		OnCreate:DumpBong_OnCreate,
+	}
+
+	recipe Unload Tobacco from Smoking Pipe
+	{
+		destroy TobaccoPipe,
+
+		Result:Tobacco,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Dump Brownie Batter
+	{
+		destroy SBrownieBatter,
+
+		Result:BakingPan,
+		Time:30.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Dump Brownies
+	{
+		destroy SBrowniePan,
+
+		Result:BakingPan,
+		Time:30.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Dump Nice Crispiez
+	{
+		destroy NiceCrispiezPan,
+
+		Result:BakingPan,
+		Time:30.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Dump Nice Crispiez Sauce
+	{
+		destroy SCrispySauce,
+
+		Result:Saucepan,
+		Time:30.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Dump Nice Crispiez Mix
+	{
+		destroy SCrispyMix,
+
+		Result:Saucepan,
+		Time:20.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+
+	/*recipe Make Nice Crispiez Mix
+	{
+		Butter,
+		Cannabis=16,
+		Marshmallows,
+		Saucepan,
+
+		Result:SCrispySauce,
+		Time:40.0,
+		Category:Cooking,
+		OnGiveXP:Give3CookingXP,
+	}*/
+
+
+	recipe Make Nice Crispiez Mix
+	{
+		Butter,
+		Marshmallows,
+		Saucepan,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Result:SCrispySauce,
+		Time:40.0,
+		Category:Cooking,
+		OnGiveXP:Give3CookingXP,
+	}
+	
+	recipe Make Nice Crispiez
+	{
+		destroy SCrispySauce,
+		Cereal,
+		BakingPan,
+
+		Result:NiceCrispiezPan,
+		Time:40.0,
+		Category:Cooking,
+		OnGiveXP:Give10CookingXP,
+		OnCreate:GFNiceCrispiez_OnCreate,
+	}
+
+	recipe Cut Nice Crispiez
+	{
+		NiceCrispiezPan,
+		keep HuntingKnife/KitchenKnife/ButterKnife,
+		
+		Result:NiceCrispiez=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:Cooking,
+		OnGiveXP:Give3CookingXP,
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+
+	recipe Cut Special Brownies
+	{
+		SBrowniePan,
+		keep HuntingKnife/KitchenKnife/ButterKnife,
+		
+		Result:SBrownie=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:Cooking,
+		OnGiveXP:Give3CookingXP,
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+/*	recipe Make Special Brownie Batter
+	{
+		Flour=1,
+		Egg/WildEggs,
+		Butter;15,
+		Sugar=1,
+		Salt;1,
+		Cannabis=16,
+		Chocolate,
+		BakingPan,
+		
+		Result:SBrowniePan,
+		Time:120.0,
+		Category:Cooking,
+		OnGiveXP:Give10CookingXP,
+	}*/
+
+
+	recipe Make Special Brownie Batter
+	{
+		Flour=1,
+		Egg/WildEggs,
+		Butter;15,
+		Sugar=1,
+		Salt;1,
+		Chocolate,
+		BakingPan,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		Cannabis/Hydrocraft.HCHempbudcured,
+		
+		Result:SBrowniePan,
+		Time:120.0,
+		Category:Cooking,
+		OnGiveXP:Give10CookingXP,
+	}
+
+
+	recipe Load Bong with Tobacco
+	{
+		Bong,
+		Tobacco,
+
+		Result:TobaccoBong,
+		Time:60.0,
+	}
+
+
+	recipe Fill Smoking Pipe with Tobacco
+	{
+		SmokingPipe,
+		Tobacco,
+
+		Result:TobaccoPipe,
+		Time:60.0,
+	}
+
+	recipe Open Bag of Tobacco
+	{
+		PipeTobaccoBag,
+		
+		Result:Tobacco=100,
+		Time:20.0,
+	}
+
+	recipe Open Packet of Cannabis Seeds
+	{
+		CannabisBagSeed,
+  
+        	Result:CannabisSeed=16,
+        	Time:20.0,
+        	Category:Farming,
+	}
+
+	recipe Open Packet of Tobacco Seeds
+	{
+		TobaccoBagSeed,
+
+        	Result:TobaccoSeed=32,
+        	Time:20.0,
+        	Category:Farming,
+	}
+
+	recipe Put Cannabis Seeds in Packet
+	{
+        	CannabisSeed=16,
+
+        	Result:CannabisBagSeed,
+        	Time:10.0,
+        	Category:Farming,
+	}
+
+	recipe Put Tobacco Seeds in Packet
+	{
+        	TobaccoSeed=32,
+
+        	Result:TobaccoBagSeed,
+		Time:10.0,
+		Category:Farming,
+	}
+
+
+	recipe Roll Cigarette
+	{
+		Tobacco,
+		RollingPapers=1,
+
+		Result:HandRolledCigarette,
+		Time:120.0,
+	}
+
+	recipe Break Cigarette
+	{
+		Cigarettes,
+		
+		Result:Tobacco,
+		Time:20.0,
+		obsolete:true,
+	}
+
+	recipe Break Joint
+	{
+		Joint,
+		
+		Result:Cannabis=1,
+		Time:20.0,
+	}
+}

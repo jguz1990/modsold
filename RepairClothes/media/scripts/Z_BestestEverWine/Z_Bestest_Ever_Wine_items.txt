@@ -1,0 +1,205 @@
+module Base
+{
+   
+
+    item Wine
+    {
+       /* HungerChange	=	-20,*/
+        Weight	=	1,
+        Type	=	Food,
+       /* ThirstChange	=	-20,
+        UnhappyChange	=	-20,*/
+        DisplayName	=	Chardonnay,
+        Alcoholic	=	TRUE,
+      /*  ReplaceOnUse	=	WineEmpty,*/
+        Icon	=	WineFull,
+      /*  CustomContextMenu = Drink,
+        CustomEatSound = DrinkingFromBottle,*/
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = WhiteWineBottle,
+       /* EatType = Bourbon,*/
+    }
+
+
+
+    item Wine2
+	{
+		/*HungerChange	=	-20,*/
+	    Weight	=	1,
+		Type	=	Food,
+		/*ThirstChange	=	-20,
+        UnhappyChange	=	-20,*/
+		DisplayName	=	Red Wine,
+		Alcoholic	=	TRUE,
+		/*ReplaceOnUse	=	WineEmpty2,*/
+		Icon	=	Wine2Full,
+		/*CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,*/
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = RedWineBottle,
+       /* EatType = Bourbon,*/
+	}
+
+
+    item WineOpen
+    {
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+        HungerChange	=	-20,
+        Weight	=	1,
+        Type	=	Food,
+        ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+        DisplayName	=	Opened White Wine,
+        Alcoholic	=	TRUE,
+        ReplaceOnUse	=	WineEmpty,
+        Icon	=	WineFull,
+        CustomContextMenu = Drink,
+        CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = WhiteWineBottle,
+        EatType = Bourbon,
+    }
+
+
+
+    item Wine2Open
+	{
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+		HungerChange	=	-20,
+	    Weight	=	1,
+		Type	=	Food,
+		ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+		DisplayName	=	Opened Red Wine,
+		Alcoholic	=	TRUE,
+		ReplaceOnUse	=	WineEmpty2,
+		Icon	=	Wine2Full,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = RedWineBottle,
+        EatType = Bourbon,
+	}
+
+
+    recipe Open Bottle Of Wine
+    {
+		Wine,
+		keep [Recipe.GetItemTypes.Corkscrew],
+
+		Result:WineOpen,
+		Time:80.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Prop1:Source=2,
+		Prop2:Source=1,
+		OnCreate:OnCreate_CorkPop,
+    }
+	
+    recipe Open Bottle Of Wine
+    {
+		Wine2,
+		keep [Recipe.GetItemTypes.Corkscrew],
+
+		Result:Wine2Open,
+		Time:80.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Prop1:Source=2,
+		Prop2:Source=1,
+		OnCreate:OnCreate_CorkPop,
+    }	
+    recipe Open Box Of Wine
+    {
+		BoxWine,
+
+		Result:BoxWineOpen,
+		Time:80.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Prop2:Source=1,
+    }
+	sound Corkpop
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Corkpop.ogg,
+		}
+	}
+
+    item BoxWine
+	{
+	    Weight	=	1.5,
+		Type	=	Food,
+		DisplayName	=	Box Wine,
+		Alcoholic	=	TRUE,
+		Icon	=	BoxWine,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        /*StaticModel = RedWineBottle,*/
+	}
+
+    item BoxWineOpen
+	{
+		DaysFresh	=	14,
+		DaysTotallyRotten	=	28,
+		HungerChange	=	-40,
+	    Weight	=	1.5,
+		Type	=	Food,
+		ThirstChange	=	-40,
+        UnhappyChange	=	-40,
+		DisplayName	=	Opened Box Wine,
+		Alcoholic	=	TRUE,
+		ReplaceOnUse	=	BoxWineEmpty,
+		Icon	=	BoxWine,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1020,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        /*StaticModel = RedWineBottle,*/
+        EatType = Bourbon,
+	}
+
+  item BoxWineEmpty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty Wine Box,
+		Icon	=	BoxWine,
+		/*StaticModel = RedWineBottle,*/
+	}
+
+
+
+}

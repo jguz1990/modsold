@@ -1,0 +1,102 @@
+module Base
+{
+	
+	/*Items*/
+
+	item SFBarbecueEmpty
+    	{
+        	DisplayName			=	Empty Barbecue Sauce Bottle,
+        	Icon				=	SFBarbecue,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFBoxOfTeaEmpty
+    	{
+        	DisplayName			=	Empty Box of Teabags,
+        	Icon				=	SFBoxOfTeaEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFCocoaPowderEmpty
+    	{
+        	DisplayName			=	Empty Cocoa Powder Canister,
+        	Icon				=	SFCocoaPowderEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFMangoPit
+    	{
+        	DisplayName			=	Mango Pit,
+        	Icon				=	SFMangoPit,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFMapleSyrupEmpty
+    	{
+        	DisplayName			=	Empty Maple Syrup Bottle,
+        	Icon				=	SFMapleSyrup,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SpiceBottle
+    	{
+        	DisplayName			=	Empty Spice Bottle,
+        	Icon				=	SpiceBottle,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFPapayaSeeds
+    	{
+        	DisplayName			=	Papya Seeds,
+        	Icon				=	SFPapayaSeeds,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFPopsicleStick
+    	{
+        	DisplayName			=	Popsicle Stick,
+        	Icon				=	SFPopsicleStick,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item PumpkinShell
+    	{
+        	DisplayName			=	Pumpkin Shell,
+        	Icon				=	PumpkinShell,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFTomatoSauceEmpty
+    	{
+        	DisplayName			=	Empty Tomato Sauce Bottle,
+        	Icon				=	SFTomatoSauceEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item VegetableOilEmpty
+    	{
+        	DisplayName			=	Empty Vegetable Oil Bottle,
+        	Icon				=	VegetableOilEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SFWhippedCreamEmpty
+    	{
+        	DisplayName			=	Empty Whipped cream Tub,
+        	Icon				=	SFWhippedCreamEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+}

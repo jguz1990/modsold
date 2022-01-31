@@ -1,0 +1,24 @@
+module Base
+{
+model multitoolclosed	
+    {
+        mesh = multitoolclosed,
+        texture = multitool,
+    }
+
+	
+model multitoolpliers
+    {
+        mesh = multitoolpliers,
+        texture =multitool,
+    }
+
+
+model swissarmyknife
+    {
+        mesh = swissarmyknife,
+        texture =swissarmyknife,
+    }
+
+
+}

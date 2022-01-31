@@ -1,0 +1,127 @@
+module Base
+{
+ 
+
+	item Recycler
+	{
+		Weight = 40,
+		Type			= Radio,
+		DisplayCategory = Item,
+		WorldObjectSprite	= recycler_0,
+		DisplayName = Recycler,
+		WorkbenchType = Recycler,
+		Icon = Recycler,
+		Weight = 40,
+	}
+	item RecyclerFrame
+	{
+		Weight = 40,
+		DisplayName = Recycler Frame,
+		Icon = RecyclerFrame,
+		UseWorldItem = TRUE,
+	}
+/*	item ElectricMotor
+	{
+		Weight = 3,
+		DisplayName = Electric Motor,
+		Icon = ElectricMotor,
+	}
+
+	item Gears
+	{
+		Weight = 1,
+		DisplayName = Gears,
+		Icon = Gears,
+	}*/
+
+	item BrokenGlass
+	{
+		Weight	=	0.1,
+		Type	=	Moveable,
+		DisplayName	=	Broken Glass,
+		Icon	=	BrokenGlass,
+		WorldObjectSprite	= brokenglass_1_3,
+	}
+
+
+		
+    item fr_LeadChunk
+    {
+		Weight	=	0.5,
+		Type	=	Normal,
+		DisplayName	=	Lead Chunk,
+		Icon	=	MetalBits,
+    }
+
+
+	item GroundCorpse
+	{
+		Weight	=	20,
+		Type	=	Food,
+		DisplayName	=	Ground Up Human Corpse,
+		Icon	=	GroundCorpse,
+		DisplayCategory = Item,
+	}
+    recipe Build Recycler Frame
+    {
+		Sound:BlowTorch,
+		Time:1000.0,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],
+		keep Saw,
+		keep WeldingMask,
+		BlowTorch=100,
+		MetalBar=4,
+		MetalPipe,
+		Screws=10,
+		ScrapMetal=4,
+		SheetMetal=4,
+		SmallSheetMetal=4,
+		WeldingRods=20,
+		Result:RecyclerFrame,
+       		SkillRequired:MetalWelding=6,
+	   	CanBeDoneFromFloor:true,
+    }
+    recipe Install Recycler Motor
+    {
+		Sound:Hammering,
+		Time:1000.0,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],
+		keep Saw,
+		RecyclerFrame,
+		ElectricMotor,
+		ElectricWire,
+		ElectronicsScrap,
+		Gears,
+		Screws=10,
+		Result:Recycler,
+       		SkillRequired:Mechanics=6;Electricity=3,
+	   	CanBeDoneFromFloor:true,
+    }
+	sound Recycler
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Recycler.ogg,
+		}
+	}
+	sound Recycler2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Recycler2.ogg,
+		}
+	}
+	sound Recycler3
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Recycler3.ogg,
+		}
+	}
+
+}

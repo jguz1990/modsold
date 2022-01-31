@@ -1,0 +1,245 @@
+module Base
+{
+ 
+
+/*
+
+
+    item HumanLiver
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Liver,
+        Icon	=	HumanLiver,
+        DaysFresh	=	2,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+        StaticModel = SmallAnimalMeat_Ground,
+        WorldStaticModel = SmallAnimalMeat_Ground,
+    }
+
+    item InfectedHumanLiver
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	2,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Liver,
+        Icon	=	HumanLiver,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+	FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+	OnEat = InfectedFlesh,
+        StaticModel = SmallAnimalMeat_Ground,
+        WorldStaticModel = SmallAnimalMeat_Ground,
+    }
+*/
+
+
+
+   item HumanFlesh
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Flesh,
+        Icon	=	HumanFlesh,
+        DaysFresh	=	2,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+	ReplaceOnUse = BonePieces,
+        StaticModel = Steak,
+        WorldStaticModel = Steak,
+    }
+
+    item InfectedHumanFlesh
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	2,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Flesh,
+        Icon	=	HumanFlesh,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+	FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+	OnEat = InfectedFlesh,
+	ReplaceOnUse = BonePieces,
+        StaticModel = Steak,
+        WorldStaticModel = Steak,
+    }
+
+
+   item HumanLiver
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Liver,
+        Icon	=	HumanLiver,
+        DaysFresh	=	2,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+        StaticModel = SmallAnimalMeat_Ground,
+        WorldStaticModel = SmallAnimalMeat_Ground,
+    }
+
+    item InfectedHumanLiver
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	2,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Liver,
+        Icon	=	HumanLiver,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+	FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	StressChange = 50,
+	UnhappyChange = 50,
+	OnEat = InfectedFlesh,
+        StaticModel = SmallAnimalMeat_Ground,
+        WorldStaticModel = SmallAnimalMeat_Ground,
+    }
+
+
+
+
+    item ZombieFlesh
+    {
+        HungerChange	=	-12.5,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	0,
+        MinutesToBurn	=	120,
+        DisplayName	=	Human Flesh,
+        Icon	=	HumanFlesh,
+        DaysFresh	=	0,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+	FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 100,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+	ReplaceOnUse = BonePieces,
+        StaticModel = Steak,
+        WorldStaticModel = Steak,
+    }
+
+	item BonePieces
+    	{
+        	DisplayName			=	Bone Pieces,
+        	Icon				=	BonePieces,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item token_Uninfected
+    {
+        Weight    =    0,
+        Type    =    Normal,
+        /*DisplayName    =    .,*/
+    }
+	item token_Infected
+    {
+        Weight    =    0,
+        Type    =    Normal,
+       /*DisplayName    =    .,*/
+    }
+
+
+
+
+
+}

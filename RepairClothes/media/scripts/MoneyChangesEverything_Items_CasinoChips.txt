@@ -1,0 +1,133 @@
+module Base
+{
+/*"Chip 500" (https://skfb.ly/GwVZ) by mnilionic is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+
+	model PA_CasinoChip_Black
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Black,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Blue
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Blue,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Brown
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Brown,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Green
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Green,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Green
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Green,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Mustard
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Mustard,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Red
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Red,
+		scale = 0.000075,
+	}
+	model PA_CasinoChip_Violet
+	{
+		mesh = PA_CasinoChip,
+		texture = PA_CasinoChip_Violet,
+		scale = 0.000075,
+	}
+	
+	item PA_CasinoChip_Black
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $100 000 Casino Chip,
+		icon 			= PA_CasinoChip_Black,
+        WorldStaticModel = PA_CasinoChip_Black,
+    }
+	
+	item PA_CasinoChip_Blue
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $100 Casino Chip,
+		icon 			= PA_CasinoChip_Blue,
+        WorldStaticModel = PA_CasinoChip_Blue,
+    }
+	
+	item PA_CasinoChip_Brown
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $5000 Casino Chip,
+		icon 			= PA_CasinoChip_Brown,
+        WorldStaticModel = PA_CasinoChip_Brown,
+    }
+	
+	item PA_CasinoChip_Green
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $200 Casino Chip,
+		icon 			= PA_CasinoChip_Green,
+        WorldStaticModel = PA_CasinoChip_Green,
+    }
+	
+	item PA_CasinoChip_Mustard
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $10 000 Casino Chip,
+		icon 			= PA_CasinoChip_Mustard,
+        WorldStaticModel = PA_CasinoChip_Mustard,
+    }
+	
+	item PA_CasinoChip_Red
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $500 Casino Chip,
+		icon 			= PA_CasinoChip_Red,
+        WorldStaticModel = PA_CasinoChip_Red,
+    }
+	
+	
+	item PA_CasinoChip_Violet
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $2000 Casino Chip,
+		icon 			= PA_CasinoChip_Violet,
+        WorldStaticModel = PA_CasinoChip_Violet,
+    }
+	item PA_CasinoChip_Yellow
+    {
+        DisplayCategory = Money,
+		Weight    		= 0.05,
+        Type    		= Normal,
+		DisplayName     = $1000 Casino Chip,
+		icon 			= PA_CasinoChip_Yellow,
+        WorldStaticModel = PA_CasinoChip_Yellow,
+    }
+}

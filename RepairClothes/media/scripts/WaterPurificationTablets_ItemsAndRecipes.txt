@@ -1,0 +1,44 @@
+module Base
+{
+ 
+item WaterPurificationTablets
+	{
+		Weight	=	0.2,
+        	UseDelta	=	0.05,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Water Purification Tablets,
+		Icon	=	WaterPurificationTablets,
+		StaticModel = PillBottle,
+		WorldStaticModel = Vitamins_Ground,
+        	SurvivalGear = TRUE,
+		ReplaceOnDeplete = WaterPurificationTablets_Empty,
+	}
+
+item WaterPurificationTablets_Empty
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Empty Water Purification Tablets Bottle,
+		Icon	=	WaterPurificationTablets,
+		StaticModel = PillBottle,
+		WorldStaticModel = Vitamins_Ground,
+	}
+
+
+   recipe Purify Water
+   {
+       
+	keep [Recipe.GetItemTypes.Is_Water_Container],
+      	WaterPurificationTablets = 1,
+        Time:50.0,
+     	OnCreate:Purify_Water_Container,
+        Category:Survivalist,
+        Prop1:Source=2,
+        Prop2:Source=1,
+        Result:WaterBottleFull,
+        RemoveResultItem:true,
+   }
+   
+}

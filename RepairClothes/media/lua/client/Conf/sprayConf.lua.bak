@@ -1,0 +1,364 @@
+-------------------------------------
+-- 		 Configuration file		   --
+--       for shape of tags		   --
+-------------------------------------
+
+shapeConf = {};
+
+shapeConf.list = {
+	{
+		text = getText("UI_SprayOnFloor"), symbolTypes = {
+			{
+				text = getText("UI_SimpleSymbol"), shapes = {
+
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_A1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_A1_Floor.png',
+						icon = 'media/textures/Icons/Icon_A1.png', text = "A"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_B1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_B1_Floor.png',
+						icon = 'media/textures/Icons/Icon_B1.png', text = "B"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_C1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_C1_Floor.png',
+						icon = 'media/textures/Icons/Icon_C1.png', text = "C"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_D1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_D1_Floor.png',
+						icon = 'media/textures/Icons/Icon_D1.png', text = "D"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_E1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_E1_Floor.png',
+						icon = 'media/textures/Icons/Icon_E1.png', text = "E"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_F1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_F1_Floor.png',
+						icon = 'media/textures/Icons/Icon_F1.png', text = "F"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_G1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_G1_Floor.png',
+						icon = 'media/textures/Icons/Icon_G1.png', text = "G"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_H1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_H1_Floor.png',
+						icon = 'media/textures/Icons/Icon_H1.png', text = "H"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_I1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_I1_Floor.png',
+						icon = 'media/textures/Icons/Icon_I1.png', text = "I"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_J1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_J1_Floor.png',
+						icon = 'media/textures/Icons/Icon_J1.png', text = "J"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_K1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_K1_Floor.png',
+						icon = 'media/textures/Icons/Icon_K1.png', text = "K"
+					},
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_L1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_L1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_L1.png', text = "L"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_M1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_M1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_M1.png', text = "M"
+					 },
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_N1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_N1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_N1.png', text = "N"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_O1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_O1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_O1.png', text = "O"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_P1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_P1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_P1.png', text = "P"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Q1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Q1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Q1.png', text = "Q"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_R1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_R1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_R1.png', text = "R"
+					 },
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_S1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_S1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_S1.png', text = "S"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_T1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_T1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_T1.png', text = "T"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_U1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_U1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_U1.png', text = "U"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_V1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_V1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_V1.png', text = "V"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_W1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_W1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_W1.png', text = "W"
+					 },
+
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_X1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_X1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_X1.png', text = "X"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Y1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Y1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Y1.png', text = "Y"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Z1_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Z1_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Z1.png', text = "Z"
+					 },
+
+
+
+
+
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_A2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_A2_Floor.png',
+						icon = 'media/textures/Icons/Icon_A2.png', text = "A2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_B2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_B2_Floor.png',
+						icon = 'media/textures/Icons/Icon_B2.png', text = "B2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_C2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_C2_Floor.png',
+						icon = 'media/textures/Icons/Icon_C2.png', text = "C2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_D2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_D2_Floor.png',
+						icon = 'media/textures/Icons/Icon_D2.png', text = "D2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_E2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_E2_Floor.png',
+						icon = 'media/textures/Icons/Icon_E2.png', text = "E2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_F2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_F2_Floor.png',
+						icon = 'media/textures/Icons/Icon_F2.png', text = "F2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_G2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_G2_Floor.png',
+						icon = 'media/textures/Icons/Icon_G2.png', text = "G2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_H2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_H2_Floor.png',
+						icon = 'media/textures/Icons/Icon_H2.png', text = "H2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_I2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_I2_Floor.png',
+						icon = 'media/textures/Icons/Icon_I2.png', text = "I2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_J2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_J2_Floor.png',
+						icon = 'media/textures/Icons/Icon_J2.png', text = "J2"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_K2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_K2_Floor.png',
+						icon = 'media/textures/Icons/Icon_K2.png', text = "K2"
+					},
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_L2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_L2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_L2.png', text = "L2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_M2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_M2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_M2.png', text = "M2"
+					 },
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_N2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_N2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_N2.png', text = "N2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_O2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_O2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_O2.png', text = "O2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_P2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_P2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_P2.png', text = "P2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Q2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Q2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Q2.png', text = "Q2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_R2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_R2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_R2.png', text = "R2"
+					 },
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_S2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_S2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_S2.png', text = "S2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_T2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_T2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_T2.png', text = "T2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_U2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_U2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_U2.png', text = "U2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_V2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_V2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_V2.png', text = "V2"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_W2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_W2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_W2.png', text = "W2"
+					 },
+
+
+					
+					 { id = '', name = 'media/textures/Tags/Item_tz_X2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_X2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_X2.png', text = "X"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Y2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Y2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Y2.png', text = "Y"
+					 },
+					 { id = '', name = 'media/textures/Tags/Item_tz_Z2_Floor.png',
+					 	chalk = 'media/textures/Chalk/Item_tz_Z2_Floor.png',
+					 	icon = 'media/textures/Icons/Icon_Z2.png', text = "Z"
+					 },
+
+
+
+
+
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_Smile1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_Smile1_Floor.png',
+						icon = 'media/textures/Icons/Icon_Smile1.png', text = "Smile1"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_Smile2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_Smile2_Floor.png',
+						icon = 'media/textures/Icons/Icon_Smile2.png', text = "Smile2"
+					},
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_Skull1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_Skull1_Floor.png',
+						icon = 'media/textures/Icons/Icon_Skull1.png', text = "Skull1"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_Skull2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_Skull2_Floor.png',
+						icon = 'media/textures/Icons/Icon_Skull2.png', text = "Skull2"
+					},
+				}
+			},
+
+			{
+				text = "Arrow", shapes = {
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowWEST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowWEST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowWEST.png', text = "West"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowNORTH_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowNORTH_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowNORTH.png', text = "North"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowSOUTH_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowSOUTH_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowSOUTH.png', text = "South"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowEAST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowEAST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowEAST.png', text = "East"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowNORTHWEST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowNORTHWEST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowNORTHWEST.png', text = "Northwest"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowNORTHEAST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowNORTHEAST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowNORTHEAST.png', text = "Northeast"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowSOUTHWEST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowSOUTHWEST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowSOUTHWEST.png', text = "Southwest"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_ArrowSOUTHEAST_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_ArrowSOUTHEAST_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_ArrowSOUTHEAST.png', text = "Southeast"
+					},
+				}
+			},
+
+			{
+				text = "SpecialMeaningSymbol", shapes = {
+
+
+					
+
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_CROSS_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_CROSS_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_CROSS.png', text = "Cross"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_SQTARE_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_SQTARE_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_SQUARE.png', text = "Square"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_CIRCLE_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_CIRCLE_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_CIRCLE.png', text = "Circle"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_TRIANGLE_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_TRIANGLE_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_TRIANGLE.png', text = "Triangle"
+					},
+
+
+
+					{ id = '', name = 'media/textures/Tags/Item_tz_LOOTED_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_LOOTED_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_LOOTED.png', text = "Looted"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_HORDES_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_HORDES_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_HORDES.png', text = "Hordes"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_NOTSAFE_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_NOTSAFE_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_NOTSAFE.png', text = "NotSafe"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_SAFE_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_SAFE_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_SAFE.png', text = "Safe"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_SAFEHOUSE1_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_SAFEHOUSE1_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_SAFEHOUSE1.png', text = "Safehouse1"
+					},
+					{ id = '', name = 'media/textures/Tags/Item_tz_SAFEHOUSE2_Floor.png',
+						chalk = 'media/textures/Chalk/Item_tz_SAFEHOUSE2_Floor_Chalk.png',
+						icon = 'media/textures/Icons/Icon_SAFEHOUSE2.png', text = "Safehouse2"
+					},
+				}
+			}
+		}
+	}
+};

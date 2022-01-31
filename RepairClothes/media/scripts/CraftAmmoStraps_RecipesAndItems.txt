@@ -1,0 +1,59 @@
+module Base
+{
+  
+    item BrokenNeedle
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=   Broken Needle,
+		Icon	=	BrokenNeedle,
+		MetalValue = 2,
+	}
+    item LeatherworkingAwl
+	{
+		Weight	=	0.3,
+		Type	=	Normal,
+		DisplayName	=   Leatherworking Awl,
+		Icon	=	IcePick,
+		MetalValue = 2,
+	}
+
+   recipe Craft Bullets Ammo Strap
+    {
+		Sound:Scissors,
+		keep Needle,
+		keep Scissors,
+		Belt2,
+		LeatherStrips=2,
+		Thread=6,
+		Result:AmmoStrap_Bullets,
+		OnCreate:SewLeather,
+		Time:4000.0,
+		SkillRequired:Tailoring=5;Reloading=3,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 
+     recipe Craft Shells Ammo Strap
+    {
+		Sound:Scissors,
+		keep Needle,
+		keep Scissors,
+		Belt2,
+		LeatherStrips=2,
+		Thread=6,
+		Result:AmmoStrap_Shells,
+		OnCreate:SewLeather,
+		Time:4000.0,
+		SkillRequired:Tailoring=5;Reloading=3,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 	
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+}

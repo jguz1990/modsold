@@ -1,0 +1,165 @@
+module Base
+{
+
+	item TitaniumSpork
+	{
+		MaxRange	=	0.8,
+		WeaponSprite	=	Spoon,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		Weight	=	0.1,
+		ConditionLowerChanceOneIn	=	10,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	3,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		DisplayName	=	Titanium Spork,
+		MinRange	=	0.2,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		Icon	=	Spork,
+		TreeDamage  =   0,
+		EnduranceMod = 0.5,
+		MetalValue = 5,
+		CriticalChance	=	0,
+		MinDamage	=	0.1,
+        MaxDamage	=	0.1,
+		WeaponLength = 0.17,
+		AttachmentType = Screwdriver,
+        BreakSound	=	BreakMetalItem,
+ 	}
+
+
+	item TitaniumHinge
+	{
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Titanium Hinge,
+		Icon	=	TitaniumHinge,
+	}
+	
+  item TitaniumSheet
+    {
+        Weight	=	20,
+        Type	=	Normal,
+        DisplayName	=	Titanium Sheet,
+        Icon	=	TitaniumSheet,
+    }		
+  item TitaniumChunk
+    {
+        Weight	=	5,
+        Type	=	Normal,
+        DisplayName	=	Titanium Chunk,
+        Icon	=	TitaniumChunk,
+    }	
+ 
+
+
+    item TitaniumBar
+    {
+        MaxRange	=	1.2,
+        WeaponSprite	=	LeadPipe,
+        MinAngle	=	0.72,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;SmallBlunt,
+        ConditionLowerChanceOneIn	=	150,
+        Weight	=	3,
+        SplatNumber	=	1,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	8,
+        MaxHitCount	=	2,
+        DoorDamage	=	1,
+        SwingAnim	=	Bat,
+        DisplayName	=	Titanium Bar,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	TitaniumBar,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   0,
+        CriticalChance	=	30,
+        CritDmgMultiplier = 2,
+        MinDamage	=	0.7,
+        MaxDamage	=	1.1,
+        BaseSpeed = 0.95,
+        WeaponLength = 0.35,
+        AttachmentType = BigWeapon,
+   }
+
+    recipe Cut Titanium Sheet Into Chunks
+    {
+		Sound:Metalwork1,
+		Time:400.0,
+		TitaniumSheet,
+		OnTest:CanMetalworkStation,
+		NearItem:Metalwork Station,
+		Result:TitaniumChunk=4,
+		/*Category:Metal Fabrication,*/
+       		Category:Welding,
+       		SkillRequired:MetalWelding=3,
+       		/*NeedToBeLearn:true,*/
+    }
+
+
+    recipe Fabricate Titanium Bars
+    {
+		Sound:Metalwork1,
+		Time:400.0,
+		TitaniumSheet,
+		OnTest:CanMetalworkStation,
+		NearItem:Metalwork Station,
+		Result:TitaniumBar=4,
+		/*Category:Metal Fabrication,*/
+       		Category:Welding,
+       		SkillRequired:MetalWelding=4,
+       		/*NeedToBeLearn:true,*/
+    }
+
+    recipe Fabricate Titanium Hinge
+    {
+		Sound:Metalwork1,
+		Time:400.0,
+		TitaniumChunk,
+		OnTest:CanMetalworkStation,
+		NearItem:Metalwork Station,
+		Result:TitaniumHinge,
+		/*Category:Metal Fabrication,*/
+       		Category:Welding,
+       		SkillRequired:MetalWelding=6,
+       		/*NeedToBeLearn:true,*/
+    }
+
+    recipe Fabricate Titanium Sporks
+    {
+		Sound:Metalwork1,
+		Time:400.0,
+		TitaniumChunk,
+		OnTest:CanMetalworkStation,
+		NearItem:Metalwork Station,
+		Result:TitaniumSpork=5,
+		/*Category:Metal Fabrication,*/
+       		Category:Welding,
+       		SkillRequired:MetalWelding=4,
+       		/*NeedToBeLearn:true,*/
+    }
+
+
+
+
+
+
+}

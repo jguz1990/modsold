@@ -1,0 +1,20 @@
+module Base
+{
+ 
+	item ElectricMotor
+	{
+		Weight = 3,
+		DisplayName = Electric Motor,
+		Icon = ElectricMotor,
+	}
+
+	item Gears
+	{
+		Weight = 1,
+		DisplayName = Gears,
+		Icon = Gears,
+	}
+
+
+
+}

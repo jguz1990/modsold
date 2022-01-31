@@ -1,0 +1,140 @@
+module Base
+{
+
+
+
+   recipe Craft Bucket Helmet
+    {
+		Sound:MetalSnips,
+		keep MetalSnips,
+		keep Needle,
+		keep Pliers/Multitool,
+		keep Scissors,
+		Belt2=1,
+		LeatherStrips=1,
+		Bucket,
+		ScrapMetal=2,
+		Thread=4,
+		Result:BucketHelmet,
+		OnCreate:SewLeather,
+		Time:1000.0,
+		SkillRequired:MetalWelding=3;Tailoring=2,
+		Category:Tailoring,
+       		/*AnimNode:RipSheets,*/
+    } 
+
+ 
+   recipe Craft Burlap Forearm Wraps
+    {
+		Sound:Scissors,
+		keep Needle,
+		keep Scissors,
+		EmptySandbag=2,
+		Thread=4,
+		Twine=2,
+		Result:BurlapBracers,
+		OnCreate:SewLeather,
+		Time:500.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 
+ 
+   recipe Craft Roadsign Bracers
+    {
+		Sound:MetalSnips,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep MetalSnips,
+		keep Needle,
+		keep Pliers/Multitool,
+		keep Scissors,
+		Belt2=1,
+		LeatherStrips=1,
+		Roadsign,
+		ScrapMetal=2,
+		Thread=4,
+		Result:RoadsignBracers,
+		OnCreate:SewLeather,
+		Time:1000.0,
+		SkillRequired:MetalWelding=3;Tailoring=3,
+		Category:Tailoring,
+       		/*AnimNode:RipSheets,*/
+    } 
+ 
+   recipe Craft Roadsign Cuirass
+    {
+		Sound:MetalSnips,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep MetalSnips,
+		keep Needle,
+		keep Pliers/Multitool,
+		keep Scissors,
+		Belt2=2,
+		LeatherStrips=2,
+		Roadsign=4,
+		ScrapMetal=4,
+		Thread=6,
+		Result:RoadsignCuirass,
+		OnCreate:SewLeather,
+		Time:4000.0,
+		SkillRequired:MetalWelding=3;Tailoring=3,
+		Category:Tailoring,
+       		/*AnimNode:RipSheets,*/
+    } 
+   recipe Craft Tire Pauldrons
+    {
+		/*Sound:Scissors,*/
+		keep Needle,
+		keep Pliers/Multitool,
+		keep Saw,
+		keep Scissors,
+		Belt2=2,
+		LeatherStrips=2,
+		OldTire1/NormalTire1/NormalTire1/OldTire2/NormalTire2/NormalTire2/OldTire3/NormalTire3/NormalTire3,
+		ScrapMetal=2,
+		Thread=4,
+		Result:TirePauldrons,
+		OnCreate:SewLeather,
+		Time:1000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+       		AnimNode:Sawing,
+    } 
+
+   recipe Make Tight Sack Mask
+    {
+		Sound:Scissors,
+		EmptySandbag,
+		keep Needle,
+		keep Scissors,
+		Rope,
+		Thread=4,
+		OnCreate:Sack_Balaclava,
+		Result:TightSackMask,
+		Time:400.0,
+		Category:Tailoring,
+		Prop1:Scissors,
+		Prop2:SandBag,
+		SkillRequired:Tailoring=2,
+       		AnimNode:RipSheets,
+    } 
+   recipe Make Loose Sack Mask
+    {
+		Sound:Scissors,
+		EmptySandbag,
+		keep Scissors,
+		OnCreate:Sack_Balaclava2,
+		Result:LooseSackMask,
+		Time:200.0,
+		Category:Tailoring,
+		Prop1:Scissors,
+		Prop2:SandBag,
+    } 
+
+
+
+
+
+
+
+}

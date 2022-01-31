@@ -1,0 +1,407 @@
+module Base
+{
+
+	item SyringeBroken
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Syringe (Broken),
+        Icon	=	SyringeBroken,
+		StaticModel	=	Algol_Syringe,
+	WorldStaticModel = Algol_Syringe_World,
+    }
+
+
+  recipe Take Blood Sample From Yourself
+	{
+	SyringeEmpty,
+       Result:SyringeBlood,
+       Time:30.0,
+	   SkillRequired:Doctor=3,
+		OnCreate:blood_Test,
+    	RemoveResultItem:true,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+
+  recipe Inject Blood Into Yourself
+	{
+	SyringeBlood/SyringeZombieBlood,
+       Result:SyringeEmpty,
+       Time:30.0,
+		OnCreate:Shoot_Blood,
+       Prop1:Algol_Syringe,
+	   SkillRequired:Doctor=1,
+        Category:Health,
+	}
+
+  recipe Test Rat
+	{	
+	SyringeBlood/SyringeZombieBlood,
+	DeadRat,
+       Result:SyringeEmpty,
+       Time:30.0,
+	   SkillRequired:Doctor=3,
+		OnCreate:TestRat,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+  recipe Test Mouse
+	{	
+	SyringeBlood/SyringeZombieBlood,
+	DeadMouse,
+       Result:SyringeEmpty,
+       Time:30.0,
+	  SkillRequired:Doctor=3,
+		OnCreate:TestMouse,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+  recipe Test Rabbit
+	{	
+	SyringeBlood/SyringeZombieBlood,
+	DeadRabbit,
+       Result:SyringeEmpty,
+       Time:30.0,
+	   SkillRequired:Doctor=3,
+		OnCreate:TestRabbit,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+  recipe Test Squirrel
+	{	
+	SyringeBlood/SyringeZombieBlood,
+	DeadSquirrel,
+       Result:SyringeEmpty,
+       Time:30.0,
+	   SkillRequired:Doctor=3,
+		OnCreate:TestSquirrel,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+  recipe Test Bird
+	{	
+	SyringeBlood/SyringeZombieBlood,
+	DeadBird,
+       Result:SyringeEmpty,
+       Time:30.0,
+	   SkillRequired:Doctor=3,
+		OnCreate:TestBird,
+       Prop1:Algol_Syringe,
+        Category:Health,
+	}
+
+    item ZombieRat
+	{
+		HungerChange	=	-5.625,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Undead Rat,
+		Icon	=	DeadRat,
+		DaysTotallyRotten	=	0,
+		DaysFresh	=	0,
+        Carbohydrates = 0,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 50,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 50,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+        WorldStaticModel = DeadRat,
+        StaticModel = DeadRat,
+        CustomEatSound = EatingDeadAnimal,
+	}
+
+    item ZombieMouse
+    {
+        HungerChange	=	-3.75,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Undead Mouse,
+        Icon	=	MouseDead,
+        DaysTotallyRotten	=	0,
+        DaysFresh	=	0,
+        Carbohydrates = 0,
+        Proteins = 7,
+        Lipids = 0,
+        Calories = 30,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 50,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+        StaticModel = DeadMouse,
+        WorldStaticModel = DeadMouseWorld,
+        CustomEatSound = EatingDeadAnimal,
+    }
+
+    item ZombieRabbit
+    {
+        HungerChange	=	-15,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Undead Rabbit,
+        Icon	=	RabbitDead,
+        DaysTotallyRotten	=	0,
+        DaysFresh	=	0,
+        Carbohydrates = 0,
+        Proteins = 100.8,
+        Lipids = 9.58,
+        Calories = 373,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 50,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+        StaticModel = DeadRabbit,
+        WorldStaticModel = DeadRabbit,
+        CustomEatSound = EatingDeadAnimal,
+    }
+
+    item ZombieSquirrel
+    {
+        HungerChange	=	-11.25,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Undead Squirrel,
+        Icon	=	SquirrelDead,
+        DaysTotallyRotten	=	0,
+        DaysFresh	=	0,
+        Carbohydrates = 0,
+        Proteins = 30,
+        Lipids = 3.25,
+        Calories = 161,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 50,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+        StaticModel = DeadSquirrel,
+        WorldStaticModel = DeadSquirrel,
+        CustomEatSound = EatingDeadAnimal,
+    }
+
+    item ZombieBird
+    {
+        HungerChange	=	-7.5,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Undead Bird,
+        Icon	=	BirdDead,
+        DaysTotallyRotten	=	0,
+        DaysFresh	=	0,
+        Carbohydrates = 0,
+        Proteins = 30,
+        Lipids = 3.25,
+        Calories = 161,
+	OnEat = InfectedFlesh,
+	Poison = true,
+	PoisonDetectionLevel = 1,
+	PoisonPower = 40,
+	StressChange = 50,
+	UnhappyChange = 30,
+	UseForPoison = 15,
+        StaticModel = DeadBird,
+        WorldStaticModel = DeadBird,
+        CustomEatSound = EatingDeadAnimal,
+    }
+
+	item token_Uninfected
+    {
+        Weight    =    0,
+        Type    =    Normal,
+        /*DisplayName    =    .,*/
+    }
+	item token_Infected
+    {
+        Weight    =    0,
+        Type    =    Normal,
+     /*  DisplayName    =    .,*/
+    }
+
+    item SyringeEmpty
+	{
+		MaxRange	=	0.8,
+		WeaponSprite	=	Algol_Syringe,
+	WorldStaticModel = Algol_Syringe_World,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		/*ConditionLowerChanceOneIn	=	7,*/
+		Weight	=	0.3,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	1,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	0,
+		SwingAnim	=	Stab,
+		DisplayName	=	Syringe,
+		MinRange	=	0.61,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	SyringeEmpty,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   0,
+        BreakSound  =   BreakMetalItem,
+        EnduranceMod = 0.5,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 5,
+        MinDamage	=	0.1,
+        MaxDamage	=	0.1,
+	 	WeaponLength = 0.25,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+	WorldStaticModel = Algol_Syringe_World,
+    }
+
+    item SyringeBlood
+	{
+		MaxRange	=	0.8,
+		WeaponSprite	=	Algol_Syringe,
+	WorldStaticModel = Algol_Syringe_World,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		/*ConditionLowerChanceOneIn	=	7,*/
+		Weight	=	0.3,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	1,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	0,
+		SwingAnim	=	Stab,
+		DisplayName	=	Syringe of Blood,
+		MinRange	=	0.61,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	SyringeBlood,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   0,
+        BreakSound  =   BreakMetalItem,
+        EnduranceMod = 0.5,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 5,
+        MinDamage	=	0.1,
+        MaxDamage	=	0.1,
+	 	WeaponLength = 0.25,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+	WorldStaticModel = Algol_Syringe_World,
+    }
+
+    item SyringeZombieBlood
+	{
+		MaxRange	=	0.8,
+		WeaponSprite	=	Algol_Syringe,
+	WorldStaticModel = Algol_Syringe_World,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		/*ConditionLowerChanceOneIn	=	7,*/
+		Weight	=	0.3,
+		SplatNumber	=	4,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	1,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	0,
+		SwingAnim	=	Stab,
+		DisplayName	=	Syringe of Blood,
+		MinRange	=	0.61,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	SyringeBlood,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   0,
+        BreakSound  =   BreakMetalItem,
+        EnduranceMod = 0.5,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 5,
+        MinDamage	=	0.1,
+        MaxDamage	=	0.1,
+	 	WeaponLength = 0.25,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        HitFloorSound	=	BladeHit,
+        ImpactSound	=	BladeHit,
+		HitSound	=	BladeHit,
+	WorldStaticModel = Algol_Syringe_World,
+    }
+
+	model Syringe
+	{
+		mesh = Weapons/1Handed/IcePick,
+        texture = Syringe,
+	}
+
+	model SyringeBlood
+	{
+		mesh = Weapons/1Handed/IcePick,
+        texture = SyringeBlood,
+	}
+	
+	
+/*"Syringe" (https://skfb.ly/69HRx) by elouisetrewartha is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).*/
+/*"Medical syringe - Jeringa Medica Videogame Free" (https://skfb.ly/6YXuE) by ArnoldE is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+	model Algol_Syringe
+	{
+		mesh = Syringe_1,
+        	texture = Syringe_1,
+		scale = 0.00375,
+	}
+	model Algol_Syringe_World
+	{
+		mesh = Syringe_2,
+        	texture = Syringe_1,
+		scale = 0.01,
+
+	
+
+
+	}
+	
+}

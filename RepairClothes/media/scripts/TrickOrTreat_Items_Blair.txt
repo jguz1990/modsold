@@ -1,0 +1,36 @@
+module Base
+{
+
+	
+
+	
+	item HalloweenBag
+	{
+		WeightReduction	=	50,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	12,
+		DisplayName	=	Halloween Bag,
+		Icon	=	TrickTote,
+		ReplaceInSecondHand = Bag_Tote_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_Tote_RHand holdingbagright,
+	}
+	
+	item FakeBlood
+	{
+	Weight=0.5,
+	Type=Drainable,
+	UseDelta=0.1,
+	DisplayName=Fake Blood,
+	Icon=FakeBlood,
+		ReplaceOnDeplete	=	UsedFakeBlood,
+	}	
+	item UsedFakeBlood
+	{
+	Weight=0.1,
+	DisplayName=Empty Fake Blood Tube,
+	Icon=FakeBlood,
+	}	
+	
+
+}

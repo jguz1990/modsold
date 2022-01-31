@@ -1,0 +1,130 @@
+module Base
+{
+
+
+	item CarKeyCutter
+    {
+        Weight			= 	0.5,
+        Type    		= 	Normal,
+        DisplayName     = 	Car Key Cutter,
+        icon 			= 	CarKeyCutter,
+		AttachmentType 	= 	Screwdriver,
+		StaticModel = PA_Pliers,
+		WorldStaticModel = PA_Pliers,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+	model PA_Pliers
+	{
+		mesh = PA_Pliers,
+		texture = PA_Pliers,
+		scale = 0.0005,
+        	invertX = FALSE,
+			rotate = 0.0000 0.0000 0.0000,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.0005,
+		}
+	}
+
+	sound WireCutting
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/WireCutting.ogg,
+		}
+	}
+
+	item BlankHouseKey
+	{
+       		Count	=	5,
+		Type			= Normal,
+		DisplayCategory			= Key,
+		DisplayName	=	Blank House Key,
+		Icon	=	Key1,
+		MetalValue = 5,
+		WorldStaticModel = Key,
+		Weight = 0,
+	}
+	item BlankCarKey
+	{
+        	Count	=	5,
+		Type			= Normal,
+		DisplayCategory			= Key,
+		DisplayName	=	Blank Car Key,
+		Icon	=	CarKey,
+		MetalValue = 7,
+		WorldStaticModel = Key,
+		Weight = 0,
+	}
+	item BlankKeyPadlock
+	{
+        	Count	=	5,
+		Type			= Normal,
+		DisplayCategory			= Key,
+		DisplayName	=	Blank Padlock Key,
+		Icon	=	KeyPadlock1,
+		MetalValue = 5,
+		WorldStaticModel = KeyPadlock,
+		Weight = 0,
+	}
+
+
+	item Key_Duplication_Machine
+	{
+		Type			= Moveable,
+		WorldObjectSprite	= key_cutting_machine_0,
+		DisplayName	=	Key Duplication Machine,
+		Icon	=	key_duplication_machine,
+        	Weight	=	15,
+	}
+    recipe Duplicate House Key
+    {
+	Sound:Metalwork1,
+    keep Key1/Key2/Key3/Key4/Key5,
+	BlankHouseKey,
+    Result:Key1,
+    Time:500,
+    OnCanPerform:CanFindKeyCuttingMachine,
+	OnCreate:Duplicate_Key,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Key Duplication Machine.,
+    Prop1:Source=1,
+    Category:Welding,
+    SkillRequired:MetalWelding=1,
+    }
+    recipe Duplicate Car Key
+    {
+	keep CarKeyCutter,
+	BlankCarKey,
+    keep CarKey,
+    Result:CarKey,
+    Time:500,
+	OnCreate:Duplicate_Key,
+    Prop1:Source=1,
+    Prop1:Source=2,
+    Category:Welding,
+    SkillRequired:MetalWelding=1;Mechanics=1,
+	Sound:WireCutting,
+    }
+    recipe Duplicate Padlock Key
+    {
+	Sound:Metalwork1,
+    keep KeyPadlock,
+	BlankKeyPadlock,
+    Result:KeyPadlock,
+    Time:500,
+    OnCanPerform:CanFindKeyCuttingMachine,
+	OnCreate:Duplicate_Key,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Key Duplication Machine.,
+    Prop1:Source=1,
+    Category:Welding,
+    SkillRequired:MetalWelding=1,
+    }
+
+}

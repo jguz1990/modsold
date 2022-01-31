@@ -1,0 +1,175 @@
+module Base
+{
+
+
+   item Poncho_Creature
+    {
+        Type = Clothing,
+        DisplayName = Creature Poncho,
+        ClothingItem = Poncho_Creature,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Creature,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_CreatureDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+    item Poncho_CreatureDOWN
+    {
+        Type = Clothing,
+        DisplayName = Creature Poncho,
+        ClothingItem = Poncho_CreatureDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Creature,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Creature,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }		
+	
+    item Poncho_Ghost
+    {
+        Type = Clothing,
+        DisplayName = Ghost Poncho,
+        ClothingItem = Poncho_Ghost,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Ghost,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_GhostDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+
+    item Poncho_GhostDOWN
+    {
+        Type = Clothing,
+        DisplayName = Ghost Poncho,
+        ClothingItem = Poncho_GhostDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Ghost,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Ghost,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }	
+
+    item Poncho_Pumpkin
+    {
+        Type = Clothing,
+        DisplayName = Pumpkin Poncho,
+        ClothingItem = Poncho_Pumpkin,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Pumpkin,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_PumpkinDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+
+    item Poncho_PumpkinDOWN
+    {
+        Type = Clothing,
+        DisplayName = Pumpkin Poncho,
+        ClothingItem = Poncho_PumpkinDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Pumpkin,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Pumpkin,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+
+    item Poncho_Skeleton
+    {
+        Type = Clothing,
+        DisplayName = Skeleton Poncho,
+        ClothingItem = Poncho_Skeleton,
+        BodyLocation = JacketHat,
+        Icon = Poncho_Skeleton,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_SkeletonDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }
+    item Poncho_SkeletonDOWN
+    {
+        Type = Clothing,
+        DisplayName = Skeleton Poncho,
+        ClothingItem = Poncho_SkeletonDOWN,
+        BodyLocation = Jacket,
+        Icon = Poncho_Skeleton,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = Poncho_Skeleton,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+        WaterResistance = 1.0,
+		ColorRed 		=	255,
+		ColorGreen 		=	255,
+		ColorBlue 		=	255,
+    }	
+ 
+}

@@ -1,0 +1,65 @@
+module Base
+{
+   
+/************************RECIPES************************/
+
+	recipe Lay Out One Line
+	{
+	CokeBaggie=2,
+	Base.Mirror,
+	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Result:MirrorWith1Line,
+    	Time:100,
+	Sound:AddItemInRecipe,
+	}
+
+	recipe Lay Out Two Lines
+	{
+	CokeBaggie=4,
+	Base.Mirror,
+	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Result:MirrorWith2Lines,
+    	Time:150,
+	Sound:AddItemInRecipe,
+	}
+
+	recipe Lay Out Three Lines
+	{
+	CokeBaggie=6,
+	Base.Mirror,
+	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Result:MirrorWith3Lines,
+    	Time:200,
+	Sound:AddItemInRecipe,
+	}
+	recipe Lay Out Four Lines
+	{
+	CokeBaggie=8,
+	Base.Mirror,
+	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Result:MirrorWith4Lines,
+    	Time:250,
+	Sound:AddItemInRecipe,
+	}
+
+	recipe Do A Bump
+	{
+	CokeBaggie=1,
+    	Time:50,
+      	OnCreate:DoBump,
+	Result:CokeBaggie,
+    	RemoveResultItem:true,
+	Sound:CokeSnort,
+	}
+
+	recipe Do A Key Bump
+	{
+	CokeBaggie=1,
+	keep Base.Key1/Base.Key2/Base.Key3/Base.Key4/Base.Key5,
+    	Time:25,
+      	OnCreate:DoKeyBump,
+	Result:CokeBaggie,
+    	RemoveResultItem:true,
+	Sound:CokeSnort,	
+	}
+}

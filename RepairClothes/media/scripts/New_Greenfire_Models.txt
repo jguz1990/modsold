@@ -1,0 +1,9 @@
+module Base
+{
+	
+    model Bong
+    {
+        mesh = bongblair1,
+        texture = bongblair,
+    }
+}

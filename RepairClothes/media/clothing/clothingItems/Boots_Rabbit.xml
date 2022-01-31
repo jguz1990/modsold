@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel></m_MaleModel>
+	<m_FemaleModel></m_FemaleModel>
+	<m_GUID>453b5de9-d7b1-46ce-8d32-638d30fae9ac</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<m_BaseTextures>Boots_Rabbit</m_BaseTextures>
+	<m_BaseTextures>Boots_Rabbit2</m_BaseTextures>
+</clothingItem>

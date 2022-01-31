@@ -1,0 +1,22 @@
+module Base
+{
+
+	item MetalSnips
+    {
+        Weight			= 0.5,
+        Type    		= Normal,
+        DisplayName     = Metal Snips,
+        icon 			= MetalSnips,
+	AttachmentType = Screwdriver,
+    }
+
+	sound MetalSnips
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/MetalSnips.ogg,
+		}
+	}
+}
+

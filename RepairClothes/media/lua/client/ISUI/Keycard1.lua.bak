@@ -1,0 +1,5 @@
+function UseElevator (player, context, worldobjects, test)
+	UseElevator2(player, context, worldobjects, test)
+end
+
+Events.OnPreFillWorldObjectContextMenu.Add(UseElevator)	

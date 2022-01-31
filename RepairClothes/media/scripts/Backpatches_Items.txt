@@ -1,0 +1,264 @@
+module Base
+{
+
+
+	item	PatchAlien
+	{		
+        DisplayName	=	Alien Backpatch,
+        Icon		=	PatchAlien,
+		Backpatch	=	PatchAlien,
+		Tags		=	Backpatch,
+	}
+	item	PatchChieftan
+	{		
+        DisplayName	=	Chieftan Backpatch,
+        Icon		=	PatchChieftan,
+		Backpatch	=	PatchChieftan,
+		Tags		=	Backpatch,
+	}
+	item	PatchCobra
+	{		
+        DisplayName	=	Cobra Backpatch,
+        Icon		=	PatchCobra,
+		Backpatch	=	PatchCobra,
+		Tags		=	Backpatch,
+	}
+	item	PatchCowSkull
+	{		
+        DisplayName	=	Cow Skull Backpatch,
+        Icon		=	PatchCowSkull,
+		Backpatch	=	PatchCowSkull,
+		Tags		=	Backpatch,
+	}
+	item	PatchDeathOrGlory
+	{		
+        DisplayName	=	Death Or Glory Backpatch,
+        Icon		=	PatchDeathOrGlory,
+		Backpatch	=	PatchDeathOrGlory,
+		Tags		=	Backpatch,
+	}
+	item	PatchDevil
+	{		
+        DisplayName	=	Devil Backpatch,
+        Icon		=	PatchDevil,
+		Backpatch	=	PatchDevil,
+		Tags		=	Backpatch,
+	}
+	item	PatchDinosaur
+	{		
+        DisplayName	=	Dinosaur Backpatch,
+        Icon		=	PatchDinosaur,
+		Backpatch	=	PatchDinosaur,
+		Tags		=	Backpatch,
+	}
+	item	PatchDragon
+	{		
+        DisplayName	=	Dragon Backpatch,
+        Icon		=	PatchDragon,
+		Backpatch	=	PatchDragon,
+		Tags		=	Backpatch,
+	}
+	item	PatchEagle
+	{		
+        DisplayName	=	Eagle Backpatch,
+        Icon		=	PatchEagle,
+		Backpatch	=	PatchEagle,
+		Tags		=	Backpatch,
+	}
+	item	PatchFangs
+	{		
+        DisplayName	=	Fangs Backpatch,
+        Icon		=	PatchFangs,
+		Backpatch	=	PatchFangs,
+		Tags		=	Backpatch,
+	}
+	item	PatchFlail
+	{		
+        DisplayName	=	Flail Backpatch,
+        Icon		=	PatchFlail,
+		Backpatch	=	PatchFlail,
+		Tags		=	Backpatch,
+	}
+	item	PatchFrankenstein
+	{		
+        DisplayName	=	Frankenstein Backpatch,
+        Icon		=	PatchFrankenstein,
+		Backpatch	=	PatchFrankenstein,
+		Tags		=	Backpatch,
+	}
+	item	PatchFuckOff
+	{		
+        DisplayName	=	Fuck Off Backpatch,
+        Icon		=	PatchFuckOff,
+		Backpatch	=	PatchFuckOff,
+		Tags		=	Backpatch,
+	}
+	item	PatchGarfield
+	{		
+        DisplayName	=	Garfield Backpatch,
+        Icon		=	PatchGarfield,
+		Backpatch	=	PatchGarfield,
+		Tags		=	Backpatch,
+	}
+	item	PatchGasmask
+	{		
+        DisplayName	=	Gasmask Backpatch,
+        Icon		=	PatchGasmask,
+		Backpatch	=	PatchGasmask,
+		Tags		=	Backpatch,
+	}
+	item	PatchGoalieMask
+	{		
+        DisplayName	=	Goalie Mask Backpatch,
+        Icon		=	PatchGoalieMask,
+		Backpatch	=	PatchGoalieMask,
+		Tags		=	Backpatch,
+	}
+	item	PatchHorse
+	{		
+        DisplayName	=	Horse Backpatch,
+        Icon		=	PatchHorse,
+		Backpatch	=	PatchHorse,
+		Tags		=	Backpatch,
+	}
+	item	PatchKatana
+	{		
+        DisplayName	=	Katana Backpatch,
+        Icon		=	PatchKatana,
+		Backpatch	=	PatchKatana,
+		Tags		=	Backpatch,
+	}
+	item	PatchNinja
+	{		
+        DisplayName	=	Ninja Backpatch,
+        Icon		=	PatchNinja,
+		Backpatch	=	PatchNinja,
+		Tags		=	Backpatch,
+	}
+	item	PatchPanther
+	{		
+        DisplayName	=	Panther Backpatch,
+        Icon		=	PatchPanther,
+		Backpatch	=	PatchPanther,
+		Tags		=	Backpatch,
+	}		
+	item	PatchPeaceSign
+	{		
+        DisplayName	=	Peace Sign Backpatch,
+        Icon		=	PatchPeaceSign,
+		Backpatch	=	PatchPeaceSign,
+		Tags		=	Backpatch,
+	}	
+	item	PatchPitbull
+	{		
+        DisplayName	=	Pitbull Backpatch,
+        Icon		=	PatchPitbull,
+		Backpatch	=	PatchPitbull,
+		Tags		=	Backpatch,
+	}
+	item	PatchPlanet
+	{		
+        DisplayName	=	Planet Backpatch,
+        Icon		=	PatchPlanet,
+		Backpatch	=	PatchPlanet,
+		Tags		=	Backpatch,
+	}
+	item	PatchPotLeaf
+	{		
+        DisplayName	=	Pot Leaf Backpatch,
+        Icon		=	PatchPotLeaf,
+		Backpatch	=	PatchPotLeaf,
+		Tags		=	Backpatch,
+	}
+	item	PatchPumpkin
+	{		
+        DisplayName	=	Pumpkin Backpatch,
+        Icon		=	PatchPumpkin,
+		Backpatch	=	PatchPumpkin,
+		Tags		=	Backpatch,
+	}
+	item	PatchRose
+	{		
+        DisplayName	=	Rose Backpatch,
+        Icon		=	PatchRose,
+		Backpatch	=	PatchRose,
+		Tags		=	Backpatch,
+	}
+	item	PatchScorpion
+	{		
+        DisplayName	=	Scorpion Backpatch,
+        Icon		=	PatchScorpion,
+		Backpatch	=	PatchScorpion,
+		Tags		=	Backpatch,
+	}
+	item	PatchSixguns
+	{		
+        DisplayName	=	Sixguns Backpatch,
+        Icon		=	PatchSixguns,
+		Backpatch	=	PatchSixguns,
+		Tags		=	Backpatch,
+	}
+	item	PatchStPauli
+	{		
+        DisplayName	=	St. Pauli Backpatch,
+        Icon		=	PatchStPauli,
+		Backpatch	=	PatchStPauli,
+		Tags		=	Backpatch,
+	}
+	item	PatchTiger
+	{		
+        DisplayName	=	Tiger Backpatch,
+        Icon		=	PatchTiger,
+		Backpatch	=	PatchTiger,
+		Tags		=	Backpatch,
+	}
+	item	PatchWarrior
+	{		
+        DisplayName	=	Warrior Backpatch,
+        Icon		=	PatchWarrior,
+		Backpatch	=	PatchWarrior,
+		Tags		=	Backpatch,
+	}
+	item	PatchWolf
+	{		
+        DisplayName	=	Wolf Backpatch,
+        Icon		=	PatchWolf,
+		Backpatch	=	PatchWolf,
+		Tags		=	Backpatch,
+	}
+
+
+	recipe Sew On Backpatch
+    {
+		/*keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim]/[Recipe.GetItemTypes.RipClothing_Leather],*/
+		keep [CanBackpatch],
+		[IsBackpatch],
+		keep Needle,
+		Thread=5,
+		Result:PatchEagle,
+		OnCreate:Backpatch,
+		RemoveResultItem:true,
+		/*OnTest:ClothingOffTest,*/
+		OnTest:CanBackpatchGarment,
+		Time:200.0,
+		AnimNode:RipSheets,
+	   SkillRequired:Tailoring=1,
+    }
+	recipe Remove Backpatch
+    {
+        Sound:ClothesRipping,
+		/*keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim]/[Recipe.GetItemTypes.RipClothing_Leather],*/
+		keep [CanBackpatch],
+		keep KitchenKnife/HuntingKnife/Scissors,
+		Result:PatchEagle,
+		OnCreate:RemoveBackpatch,
+		RemoveResultItem:true,
+		/*OnTest:ClothingOffTest,*/
+		OnTest:HasBackpatch,
+		Time:200.0,
+		AnimNode:RipSheets,
+		Prop1:HuntingKnife,
+    }
+	
+		
+}

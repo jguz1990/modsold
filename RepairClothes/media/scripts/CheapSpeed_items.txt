@@ -1,0 +1,98 @@
+module Base
+{
+	
+	item CheapSpeed
+    {
+	HungerChange		=	-5,
+	Weight	        	=	0.1,
+	Type	        	=	Food,
+	UseWhileEquipped	=	FALSE,
+	DisplayName		    =	Cheap Speed Pills,
+	Icon	        	=	CheapSpeed,
+	FatigueChange		=	-15,
+	EnduranceChange		=	15,
+	StressChange		=	5,
+    PainReduction 	    =	5,
+    CustomContextMenu   =	Take,
+    CantBeFrozen 		=	TRUE,
+    }
+	recipe Lay Out Four Lines
+	{
+		CheapSpeed=10,
+		Base.Mirror,
+		keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+		Result:MirrorWith4LinesCheapSpeed,
+		Time:250,
+		Sound:AddItemInRecipe,
+	}	
+	recipe Lay Out Two Lines
+	{
+		CheapSpeed=5,
+		Base.Mirror,
+		keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+		Result:MirrorWith2LinesCheapSpeed,
+		Time:125,
+		Sound:AddItemInRecipe,
+	}	
+	item MirrorWith4LinesCheapSpeed
+    {
+        Weight    				= 0.2,
+        DisplayName         	= Mirror With 4 Lines,
+        icon 					= MirrorWith4Lines,
+		Type					= Food,
+		HungerChange            = -3,
+        FatigueChange           = -8,
+		EnduranceChange			= 8,
+        StressChange            = 3,
+		PainReduction 	    	= 3,
+		CustomEatSound 			= CokeSnort,
+        ReplaceOnUse    		= MirrorWith3LinesCheapSpeed,
+		CustomContextMenu 		= Snort,
+    }
+item MirrorWith3LinesCheapSpeed
+    {
+        Weight    				= 0.2,
+        DisplayName         	= Mirror With 3 Lines,
+        icon 					= MirrorWith3Lines,
+		Type					= Food,
+		HungerChange            = -3,
+        FatigueChange           = -8,
+		EnduranceChange			= 8,
+        StressChange            = 3,
+		PainReduction 	    	= 3,
+		CustomEatSound 			= CokeSnort,
+        ReplaceOnUse    		= MirrorWith2LinesCheapSpeed,
+		CustomContextMenu 		= Snort,
+    }
+item MirrorWith2LinesCheapSpeed
+    {
+        Weight    				= 0.2,
+        DisplayName         	= Mirror With 2 Lines,
+        icon 					= MirrorWith2Lines,
+		Type					= Food,
+		HungerChange            = -3,
+        FatigueChange           = -8,
+		EnduranceChange			= 8,
+        StressChange            = 3,
+		PainReduction 	    	= 3,
+		CustomEatSound 			= CokeSnort,
+        ReplaceOnUse    		= MirrorWith1LineCheapSpeed,
+		CustomContextMenu 		= Snort,
+    }
+item MirrorWith1LineCheapSpeed
+    {
+        Weight    				= 0.2,
+        DisplayName         	= Mirror With A Line,
+        icon 					= MirrorWith1Line,
+		Type					= Food,
+		HungerChange            = -3,
+        FatigueChange           = -8,
+		EnduranceChange			= 8,
+        StressChange            = 3,
+		PainReduction 	    	= 3,
+		CustomEatSound 			= CokeSnort,
+        ReplaceOnUse    		= Mirror,
+		CustomContextMenu 		= Snort,
+    }
+}
+

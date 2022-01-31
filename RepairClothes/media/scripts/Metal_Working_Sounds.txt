@@ -1,0 +1,27 @@
+module Base
+{
+	sound Drill1
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Drill1.ogg,
+		}
+	}
+	sound Metalwork1
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Metalwork1.ogg,
+		}
+	}
+	sound Recycler2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Recycler2.ogg,
+		}
+	}
+}

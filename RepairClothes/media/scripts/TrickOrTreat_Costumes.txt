@@ -1,0 +1,60 @@
+module Base
+{
+
+	item CreatureCostume
+	{
+	Weight=1,
+	DisplayName=Creature Costume,
+	Icon=CreatureCostume,
+	}	
+
+	item CreatureCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Creature Costume Packaging,
+	Icon=CreatureCostume,
+	}
+	
+	item GhostCostume
+	{
+	Weight=1,
+	DisplayName=Ghost Costume,
+	Icon=GhostCostume,
+	}	
+
+	item GhostCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Ghost Costume Packaging,
+	Icon=GhostCostume,
+	}
+	
+	item PumpkinCostume
+	{
+	Weight=1,
+	DisplayName=Pumpkin Costume,
+	Icon=PumpkinCostume,
+	}
+	
+	item PumpkinCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Pumpkin Costume Packaging,
+	Icon=PumpkinCostume,
+	}
+
+	item SkeletonCostume
+	{
+	Weight=1,
+	DisplayName=Skeleton Costume,
+	Icon=SkeletonCostume,
+	}	
+
+	item SkeletonCostumePackaging
+	{
+	Weight=1,
+	DisplayName=Skeleton Costume Packaging,
+	Icon=SkeletonCostume,
+	}
+	
+}

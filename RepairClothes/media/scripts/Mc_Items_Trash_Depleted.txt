@@ -1,0 +1,304 @@
+module Base
+{
+	imports
+	{
+		Base
+	}
+
+	/*Items*/
+
+	item LighterEmpty
+    	{
+        	DisplayName			=	Empty Lighter,
+        	Icon				=	Lighter,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = ZippoGround,
+    	}
+
+	item MatchesEmpty
+    	{
+        	DisplayName			=	Empty Matchbook,
+        	Icon				=	Matches,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Matches,
+    	}
+
+	item ThreadEmpty
+    	{
+        	DisplayName			=	Thread Spool,
+        	Icon				=	ThreadSpool,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Thread,
+    	}
+
+	item CandleLitEmpty
+    	{
+        	DisplayName			=	Candle Stub,
+        	Icon				=	CandleLitEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item TissueUsed
+    	{
+        	DisplayName			=	Used Tissue,
+        	Icon				=	Tissue,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Tissue,
+    	}
+
+	item AlcoholWipesEmpty
+    	{
+        	DisplayName			=	Alcohol Wipe Packaging,
+        	Icon				=	AlcoholWipesPackaging,
+        	Weight				=	0.06,
+		Type				=	Normal,
+        WorldStaticModel = AlcoholWipes,
+    	}
+
+	item ConcretePowderEmpty
+    	{
+        	DisplayName			=	Empty Concrete Powder Bag,
+        	Icon				=	Concrete_Powder,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = BagofConcretePowder,
+    	}
+
+	item PlasterPowderEmpty
+    	{
+        	DisplayName			=	Empty Plaster Powder Bag,
+        	Icon				=	PlasterPowder,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = BagOfPlasterPowder,
+    	}
+
+	item FlourEmpty
+    	{
+        	DisplayName			=	Empty Flour Bag,
+        	Icon				=	FlourBag,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Flour,
+    	}
+
+	item PropaneTankEmpty
+    	{
+        	DisplayName			=	Empty Propane Tank,
+        	Icon				=	PropaneTank,
+        	Weight				=	10,
+		Type				=	Normal,
+		WorldStaticModel = PropaneTank,
+    	}
+
+	item CharcoalEmpty
+    	{
+        	DisplayName			=	Empty Charcoal Bag,
+        	Icon				=	ConcretePowder,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = BagofConcretePowder,
+    	}
+
+	item SugarEmpty
+    	{
+        	DisplayName			=	Empty Sugar Bag,
+        	Icon				=	Sugar,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Sugar,
+    	}
+
+	item SparklersEmpty
+    	{
+        	DisplayName			=	Empty Sparklers Box,
+        	Icon				=	SparklersEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = BoxOfSparklers,
+    	}
+
+	item CleaningLiquidEmpty
+    	{
+        	DisplayName			=	Empty Cleaning Liquid Bottle,
+        	Icon				=	CleaningLiquid,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = CleaningLiquid,
+    	}
+
+	item CornflourEmpty
+    	{
+        	DisplayName			=	Empty Corn Flour Bag,
+        	Icon				=	Cornflour,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Cornflour_Ground,
+    	}
+
+	item ScotchtapeEmpty
+    	{
+        	DisplayName			=	Empty Scotch Tape Dispenser,
+        	Icon				=	Scotchtape,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Scotchtape,
+    	}
+/*
+	item TwineEmpty
+    	{
+        	DisplayName			=	Empty Twine Spool,
+        	Icon				=	TwineEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+*/
+	item WoodglueEmpty
+    	{
+        	DisplayName			=	Empty Wood Glue Bottle,
+        	Icon				=	WoodglueEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = WoodGlue,
+    	}
+
+	item DuctTapeEmpty
+    	{
+        	DisplayName			=	Empty Duct Tape Roll,
+        	Icon				=	DuctTapeEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = DuctTape,
+    	}
+
+	item CottonBallEmpty
+    	{
+        	DisplayName			=	Empty Cotton Ball Bag,
+        	Icon				=	CottonBallEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item Shaker
+    	{
+        	DisplayName			=	Empty Shaker,
+        	Icon				=	Shaker,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Salt,
+    	}
+
+	item BatteryEmpty
+    	{
+        	DisplayName			=	Dead Battery,
+        	Icon				=	Battery,
+        	Weight				=	0.6,
+		Type				=	Normal,
+		WorldStaticModel = Battery,
+    	}
+
+	item Empty_Pills
+    	{
+        	DisplayName			=	Empty Painkillers Packaging,
+        	Icon				=	PillsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = PainKillers_Ground,
+    	}
+
+	item Empty_PillsAntiDep
+    	{
+        	DisplayName			=	Empty Antidepressants Bottle,
+        	Icon				=	PillsAntiDepEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = PillBottleGround,
+    	}
+
+	item Empty_PillsBeta
+    	{
+        	DisplayName			=	Empty Beta Blockers Bottle,
+        	Icon				=	PillsBetaEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = PillBottleGround,
+    	}
+
+	item Empty_PillsSleepingTablets
+    	{
+        	DisplayName			=	Empty Sleeping Tablets Packaging,
+        	Icon				=	PillsSleepingTabletsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = SleepingTablets_Ground,
+    	}
+	item GlueEmpty
+    	{
+        	DisplayName			=	Empty Glue Bottle,
+        	Icon				=	GlueEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Glue,
+    	}
+
+	item PillsVitaminsEmpty
+    	{
+        	DisplayName			=	Empty Vitamins Bottle,
+        	Icon				=	GlueEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = Vitamins_Ground,
+    	}
+
+	item ExtinguisherEmpty
+    	{
+        	DisplayName			=	Depleted Extinguisher,
+        	Icon				=	Extinguisher,
+        	Weight				=	0.4,
+		Type				=	Normal,
+		WorldStaticModel = Extinguisher,
+    	}
+
+	item DisinfectantEmpty
+    	{
+        	DisplayName			=	Empty Disinfectant Bottle,
+        	Icon				=	Alcohol,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Disinfectant,
+    	}
+
+	item VinegarEmpty
+    	{
+        	DisplayName			=	Empty Vinegar Bottle,
+        	Icon				=	Vinegar,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Vinegar,
+    	}
+
+	item HairDyeGreenEmpty
+    	{
+        	DisplayName			=	Empty Green Hair Dye,
+        	Icon				=	PaintbucketEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = HairDyeGreen,
+    	}
+
+	item HairDyeBlueEmpty
+    	{
+        	DisplayName			=	Empty Blue Hair Dye,
+        	Icon				=	PaintbucketEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = HairDyeBlue,
+    	}
+
+
+}

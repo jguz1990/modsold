@@ -1,0 +1,39 @@
+module Base
+{
+    
+
+    recipe Make Barbed Wire
+    {
+       keep [Recipe.GetItemTypes.Pliers],
+       Wire=10,
+
+       Result:BarbedWire,
+       Time:1000.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=1,
+       Prop1:Pliers,
+       Sound:WireCutting,
+    }
+
+   recipe Make Wire
+    {
+       keep [Recipe.GetItemTypes.Pliers],
+       BarbedWire,
+
+       Result:Wire,
+       Time:1000.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=1,
+       Prop1:Pliers,
+       Sound:WireCutting,
+    }
+
+	sound WireCutting
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/WireCutting.ogg,
+		}
+	}
+}

@@ -1,0 +1,8 @@
+version=1
+id=2029056179
+title=Black Leather Biker Jacket (build 41)
+description=THis mod had been broken by a build 41 update a while ago, and was wiped, but I was able to fix it, so it should be workign again; enjoy!
+description=
+description=Replaces one of the jackets in the game with a black leather biker jacket.
+tags=
+visibility=public

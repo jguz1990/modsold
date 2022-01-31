@@ -1,0 +1,167 @@
+module Base
+{
+ 
+ 
+ 
+/&	item Hat_Bandana
+	{
+	    DisplayCategory = Accessory,
+		Type = Clothing,
+		DisplayName = Bandana (Head),
+		ClothingItem = Hat_Bandana,
+		BodyLocation = Hat,
+		IconsForTexture = BandanaBlack;BandanaBlue;BandanaRed,
+		ClothingItemExtra = Hat_BandanaTied;Hat_BandanaMask;Armband_Left;Armband_Right,
+        ClothingItemExtraOption = TieBandana;TieBandanaFace;TieLeftArm;TieRightArm,
+		CanHaveHoles = false,
+		ChanceToFall = 30,
+		Insulation = 0.10,
+		Weight = 0.1,
+	}*/
+	item Hat_BandanaTINT
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Bandana (Head),
+        ClothingItem = Hat_BandanaTINT,
+        BodyLocation = Hat,
+        Icon = BandanaBlack,
+        ClothingItemExtra = Hat_BandanaTiedTINT;Hat_BandanaMaskTINT;Armband_LeftTINT;Armband_RightTINT,
+        ClothingItemExtraOption = TieBandana;TieBandanaFace;TieLeftArm;TieRightArm,
+        CanHaveHoles = false,
+        ChanceToFall = 30,
+        Insulation = 0.10,
+        Weight = 0.1,
+    }
+  /*  item Hat_BandanaTied
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Bandana (Tied),
+        ClothingItem = Hat_BandanaTied,
+        BodyLocation = Hat,
+        IconsForTexture = RamboBandanna_Black;RamboBandanna_Blue;RamboBandanna_Red,
+        ClothingItemExtra = Hat_Bandana;Hat_BandanaMask;Armband_Left;Armband_Right,
+        ClothingItemExtraOption = UntieBandana;TieBandanaFace;TieLeftArm;TieRightArm,
+        CanHaveHoles = false,
+        ChanceToFall = 30,
+        Insulation = 0.10,
+        Weight = 0.1,
+    }*/
+    item Hat_BandanaTiedTINT
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Bandana (Tied),
+        ClothingItem = Hat_BandanaTiedTINT,
+        BodyLocation = Hat,
+        ClothingItemExtra = Hat_BandanaTINT;Hat_BandanaMaskTINT;Armband_LeftTINT;Armband_RightTINT,
+        ClothingItemExtraOption = UntieBandana;TieBandanaFace;TieLeftArm;TieRightArm,
+        Icon = RamboBandanna,
+        CanHaveHoles = false,
+        ChanceToFall = 30,
+        Insulation = 0.10,
+        Weight = 0.1,
+    }
+    item Hat_BandanaMaskTINT
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Bandana (Face),
+        ClothingItem = Hat_BandanaMaskTINT,
+        BodyLocation = Mask,
+        ClothingItemExtra = Hat_BandanaTINT;Hat_BandanaTiedTINT;Armband_LeftTINT;Armband_RightTINT,
+        ClothingItemExtraOption = UntieBandana;TieBandana;TieLeftArm;TieRightArm,
+        Icon = Handkerchief,
+        CanHaveHoles = false,
+        ChanceToFall = 30,
+        Insulation = 0.10,
+        Weight = 0.1,
+    }
+/*  item Hat_BandanaMask
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Bandana (Face),
+        ClothingItem = Hat_BandanaMask,
+        BodyLocation = Mask,
+        ClothingItemExtra = Hat_Bandana;Hat_BandanaTied;Armband_Left;Armband_Right,
+        ClothingItemExtraOption = UntieBandana;TieBandana;TieLeftArm;TieRightArm,
+        IconsForTexture = Handkerchief_Black;Handkerchief_Blue;Handkerchief_Red,
+        CanHaveHoles = false,
+        ChanceToFall = 30,
+        Insulation = 0.10,
+        Weight = 0.1,
+    }*/
+
+
+
+	item Armband_RightTINT
+    {
+        Type = Clothing,
+        DisplayName = Armband (right),
+        ClothingItem = Armband_RightTINT,
+        BodyLocation = Armband_Right,
+        Icon = RamboBandanna,
+        ClothingItemExtra =  Hat_BandanaTINT;Hat_BandanaTiedTINT;Hat_BandanaMaskTINT;Armband_LeftTINT,
+        ClothingItemExtraOption =  UntieBandana;TieBandana;TieBandanaFace;TieLeftArm,
+        CanHaveHoles = false,
+    }
+	item Armband_LeftTINT
+    {
+        Type = Clothing,
+        DisplayName = Armband (left),
+        ClothingItem = Armband_LeftTINT,
+        BodyLocation = Armband_Left,
+        Icon = RamboBandanna,
+        ClothingItemExtra =  Hat_BandanaTINT;Hat_BandanaTiedTINT;Hat_BandanaMaskTINT;Armband_RightTINT,
+        ClothingItemExtraOption =  UntieBandana;TieBandana;TieBandanaFace;TieRightArm,
+        CanHaveHoles = false,
+    }
+
+
+	item Armband_Right
+    {
+        Type = Clothing,
+        DisplayName = Armband (right),
+        ClothingItem = Armband_Right,
+        BodyLocation = Armband_Right,
+        IconsForTexture = RamboBandanna_Black;RamboBandanna_Blue;RamboBandanna_Red,
+       /*   ClothingItemExtra =  Hat_Bandana;Hat_BandanaTied;Hat_BandanaMask;Armband_Left,
+        ClothingItemExtraOption =  UntieBandana;TieBandana;TieBandanaFace;TieLeftArm,*/
+      ClothingItemExtra =  Armband_Right,
+        ClothingItemExtraOption =  TieRightArm,
+        CanHaveHoles = false,
+    }
+	item Armband_Left
+    {
+        Type = Clothing,
+        DisplayName = Armband (left),
+        ClothingItem = Armband_Left,
+        BodyLocation = Armband_Left,
+        IconsForTexture = RamboBandanna_Black;RamboBandanna_Blue;RamboBandanna_Red,
+       /*  ClothingItemExtra =  Hat_Bandana;Hat_BandanaTied;Hat_BandanaMask;Armband_Right,
+        ClothingItemExtraOption =  UntieBandana;TieBandana;TieBandanaFace;TieRightArm,*/
+       ClothingItemExtra =  Armband_Right,
+        ClothingItemExtraOption =  TieRightArm,
+        CanHaveHoles = false,
+
+    }
+
+	recipe Tie Armband
+    {
+		Hat_Bandana/Hat_BandanaTied/Hat_BandanaMask,
+		Result:Armband_Right,
+		OnCreate: Transfer_Texture_Index,
+		Time:50.0,
+		Category:Tailoring,
+    }
+	recipe Untie Armband
+    {
+		Armband_Right/Armband_Left,
+		Result:Hat_Bandana,
+		OnCreate: Transfer_Texture_Index,
+		Time:50.0,
+		Category:Tailoring,
+    }
+}

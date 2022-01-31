@@ -1,0 +1,35 @@
+module Base
+
+{
+    item CombinationPadlock_Cut
+	{
+		Weight	=	0.2,
+		DisplayName	=	Cut Combination Padlock,
+		Icon	=	PadlockDigital_Cut,
+        MetalValue = 15,
+	}
+
+    item Padlock_Cut
+	{
+		Weight	=	0.2,
+		DisplayName	=	Cut Padlock,
+		Icon	=	Padlock_Cut,
+        MetalValue = 15,
+	}
+
+    item CombinationPadlock_Snapped
+	{
+		Weight	=	0.2,
+		DisplayName	=	Snapped Combination Padlock,
+		Icon	=	PadlockDigital_Cut,
+        MetalValue = 15,
+	}
+
+    item Padlock_Snapped
+	{
+		Weight	=	0.2,
+		DisplayName	=	Snapped Padlock,
+		Icon	=	Padlock_Cut,
+        MetalValue = 15,
+	}
+}

@@ -1,0 +1,113 @@
+module Base
+{
+
+ 	item CreatureMask
+	{
+		Type = Clothing,
+		DisplayName = Creature Mask,
+		ClothingItem = CreatureMask,
+		BodyLocation = MaskEyes,
+		BloodLocation = Head,
+		Icon = CreatureMask,
+		CanHaveHoles = false,
+        Insulation = 0.25,
+        WindResistance = 0.55,
+	}
+
+ 	item GhostMask
+	{
+		Type = Clothing,
+		DisplayName = Ghost Mask,
+		ClothingItem = PillowcaseMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = PillowcaseMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+
+ 	item PillowcaseMask
+	{
+		Type = Clothing,
+		DisplayName = Pillowcase Mask,
+		ClothingItem = PillowcaseMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = PillowcaseMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+
+ 	item RubberPumpkinMask
+	{
+		Type = Clothing,
+		DisplayName = Rubber Pumpkin Mask,
+		ClothingItem = RubberPumpkinMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = RubberPumpkinMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}	
+	
+ 	item TightSackMask
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (tight),
+		ClothingItem = TightSackMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = TightSackMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+	
+ 	item LooseSackMask
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (loose),
+		ClothingItem = LooseSackMask,
+		BodyLocation = FullHat,
+		BloodLocation = Head,
+		Icon = LooseSackMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+
+ 	item RubberSkullMask
+	{
+		Type = Clothing,
+		DisplayName = Rubber Skull Mask,
+		ClothingItem = RubberSkullMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = RubberSkullMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+ 	item RubberClownMask
+	{
+		Type = Clothing,
+		DisplayName = Rubber Clown Mask,
+		ClothingItem = RubberClownMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = RubberClownMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+	}
+}

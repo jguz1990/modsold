@@ -1,0 +1,53 @@
+module Base
+{
+
+
+	model boltcutters
+	{
+		/*scale = 0.2,*/
+		scale = 0.35,
+		mesh = boltcutters4,
+		texture = boltcutters,
+
+			offset = 0.000 0.0000 0.0000,
+	}
+
+    item Boltcutters
+    {
+        MaxRange	=	1.1,
+        WeaponSprite	=	boltcutters,
+        MinAngle	=	0.67,
+        Type	=	Weapon,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Blunt,
+        ConditionLowerChanceOneIn	=	25,
+        Weight	=	6,
+        SplatNumber	=	1,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	10,
+        MaxHitCount	=	2,
+        DoorDamage	=	10,
+        SwingAnim	=	Bat,
+        DisplayName	=	Bolt Cutters,
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	2,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	boltcutters,
+        BreakSound  =   BreakMetalItem,
+        TreeDamage  =   0,
+        CriticalChance	=	25,
+        CritDmgMultiplier = 2,
+        MinDamage	=	0.5,
+        MaxDamage	=	1,
+        BaseSpeed = 1,
+        TwoHandWeapon = TRUE,
+        WeaponLength = 0.3,
+     	AttachmentType = BigBlade,
+        Tags = Boltcutters,
+     }
+
+}

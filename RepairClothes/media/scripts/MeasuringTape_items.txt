@@ -1,0 +1,22 @@
+module Base
+{
+      item Measuring_Tape
+    {
+
+        Type	=	Normal,
+        Weight	=	1,
+        DisplayName	=	Measuring Tape,
+        Icon	=	Measuring_Tape,
+        AttachmentType = Walkie,
+    }
+
+	sound Measuring_Tape
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Measuring_Tape.ogg,
+		}
+	}
+}
+

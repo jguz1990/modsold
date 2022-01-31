@@ -1,0 +1,5 @@
+IGUI_EN = {
+
+    IGUI_ItemCat_Money = "Money",
+    IGUI_ItemCat_Item = "Item",
+}

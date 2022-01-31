@@ -1,0 +1,302 @@
+module Base
+{
+   item Trousers_Rabbit
+    {
+        Type = Clothing,
+        DisplayName = Rabbit Fur Pants,
+        ClothingItem = Trousers_Rabbit,
+        BodyLocation = Pants,
+        BloodLocation = Trousers,
+		IconsForTexture = Trousers_Rabbit;Trousers_Rabbit2,
+        RunSpeedModifier = 0.95,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.6,
+    }
+
+
+    item Jacket_Rabbit
+    {
+        Type = Clothing,
+        DisplayName = Rabbit Fur Jacket,
+        ClothingItem = Jacket_Rabbit,
+        BodyLocation = JacketHat,
+		IconsForTexture = Jacket_Rabbit;Jacket_Rabbit2,
+        BloodLocation = Jumper;FullHelmet,
+        RunSpeedModifier = 0.89,
+        CombatSpeedModifier = 0.96,
+        ClothingItemExtra = Jacket_RabbitDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.60,
+        Weight = 3,
+    }
+    item Jacket_RabbitDOWN
+    {
+        Type = Clothing,
+        DisplayName = Rabbit Fur Jacket,
+        ClothingItem = Jacket_RabbitDOWN,
+        BodyLocation = Jacket,
+		IconsForTexture = Jacket_Rabbit;Jacket_Rabbit2,
+        BloodLocation = Jacket,
+        RunSpeedModifier = 0.89,
+        CombatSpeedModifier = 0.96,
+        ClothingItemExtra = Jacket_Rabbit,
+        ClothingItemExtraOption = UpHoodie,
+        clothingExtraSubmenu = DownHoodie,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        NeckProtectionModifier = 0.5,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.60,
+        Weight = 3,
+    }
+
+
+
+	item Gloves_Rabbit
+	{
+		Type = Clothing,
+		DisplayName = Rabbit Fur Mittens,
+		ClothingItem =Gloves_Rabbit,
+		BodyLocation = Hands,
+		BloodLocation = Hands,
+		IconsForTexture = Gloves_Rabbit;Gloves_Rabbit2,
+		Weight = 0.1,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        FabricType = Cotton,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+	}
+
+
+	item Boots_Rabbit
+	{
+		Type = Clothing,
+		DisplayName = Rabbit Fur Boots,
+		ClothingItem = Boots_Rabbit,
+		BodyLocation = Shoes,
+		BloodLocation = Shoes,
+		IconsForTexture = Boots_Rabbit;Boots_Rabbit2,
+		StompPower = 0.8,
+		ConditionLowerChanceOneIn = 10,
+        ConditionMax = 18,
+        RunSpeedModifier = 1.0,
+        RemoveOnBroken = false,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.65,
+	}
+
+	item Hat_Rabbit
+	{
+		Type = Clothing,
+		DisplayName = Rabbit Fur Hat,
+		ClothingItem = Hat_Rabbit,
+		BodyLocation = Hat,
+		IconsForTexture = Hat_Rabbit;Hat_Rabbit2,
+		CanHaveHoles = false,
+		ChanceToFall = 40,
+        BloodLocation = Head,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+        Weight = 0.5,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+    }
+
+
+
+	item RabbitPelt
+	{
+		Type = Food,
+		Weight = 0.5,	
+		DaysFresh	=	0,
+		DaysTotallyRotten	=	7,
+		DisplayCategory = Item,
+        DisplayName = Rabbit Pelt,
+		Icon = Rabbit_Pelt,
+	}
+
+
+
+
+
+
+	item RabbitPeltCuring   
+	{
+		Type = Food,
+		Weight = 0.5,	
+		DaysFresh	=	0,
+		DaysTotallyRotten	=	3,
+		ReplaceOnRotten =	RabbitPeltCured,
+		DisplayCategory = Item,
+        DisplayName = Curing Rabbit Pelt,
+		Icon = Rabbit_Pelt,
+	}
+	
+	item RabbitPeltCured  
+	{
+		Type = Food,
+		DisplayCategory = Item,
+		Weight = 0.5,
+        DisplayName = Cured Rabbit Pelt,
+		Icon = Rabbit_Pelt,	
+	}
+	
+	item RabbitFur  
+	{
+		Weight = 0.5,
+        DisplayName = Rabbit Fur,
+		Icon = Rabbit_Pelt,	
+	}
+	/* recipes: Skin Rabbit, Cure Rabbit Hide, Finish Rabbit Hide, Sew Rabbit Fur Pants, Sew Rabbit Fur Jacket */
+   
+
+    recipe Butcher Rabbit
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+        DeadRabbit,
+
+        Result:Rabbitmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:Butcher_Rabbit,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		Override:true,
+    }
+
+
+    recipe Sew Rabbit Fur Jacket
+    {
+		Sound:Scissors,
+		Thread=10,
+		RabbitFur=30,
+		keep Needle,
+		keep Scissors,
+		Result:Jacket_Rabbit,
+		Time:4000.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+    }
+
+    recipe Sew Rabbit Fur Pants
+    {
+		Sound:Scissors,
+		Thread=10,
+		RabbitFur=20,
+		keep Needle,
+		keep Scissors,
+		Result:Trousers_Rabbit,
+		Time:4000.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+    }
+
+    recipe Sew Rabbit Fur Mittens
+    {
+		Sound:Scissors,
+		Thread=4,
+		RabbitFur=6,
+		keep Needle,
+		keep Scissors,
+		Result:Gloves_Rabbit,
+		Time:1000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+    }
+
+    recipe Sew Rabbit Fur Boots
+    {
+		Sound:Scissors,
+		Thread=4,
+		RabbitFur=6,
+		keep Needle,
+		keep Scissors,
+		Result:Boots_Rabbit,
+		Time:1000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+    }
+
+    recipe Sew Rabbit Fur Hat
+    {
+		Sound:Scissors,
+		Thread=5,
+		RabbitFur=10,
+		keep Needle,
+		keep Scissors,
+		Result:Hat_Rabbit,
+		Time:1000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+    }
+    recipe Start Curing Rabbit Pelt
+    {
+        keep ButterKnife/KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+		Salt;10,
+		RabbitPelt,
+		Result:RabbitPeltCuring,
+		Time:1000.0,
+		Category:Survivalist,
+		OnTest:Not_Rotten_Bunny,
+    }
+    recipe Finish Curing Rabbit Pelt
+    {
+        BucketWaterFull=25,
+		Egg;10,
+		RabbitPeltCured,
+		Result:RabbitFur,
+		Time:1000.0,
+		Category:Survivalist,
+    }
+    recipe Finish Curing Rabbit Pelt
+    {
+        BucketWaterFull=25,
+		WildEggs;10,
+		RabbitPeltCured,
+		Result:RabbitFur,
+		Time:1000.0,
+		Category:Survivalist,
+    }
+    recipe Finish Curing Rabbit Pelt
+    {
+        WaterPot=25,
+		Egg;10,
+		RabbitPeltCured,
+		Result:RabbitFur,
+		Time:1000.0,
+		Category:Survivalist,
+    }
+    recipe Finish Curing Rabbit Pelt
+    {
+        WaterPot=25,
+		WildEggs;10,
+		RabbitPeltCured,
+		Result:RabbitFur,
+		Time:1000.0,
+		Category:Survivalist,
+    }
+	
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+}
+

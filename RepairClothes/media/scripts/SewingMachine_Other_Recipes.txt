@@ -1,0 +1,174 @@
+module Base
+{
+ 		
+    recipe Sew Bandanas
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=1,
+		keep Needle,
+		keep Scissors,
+		OnCreate:MakeBandanas,
+		Result:Hat_BandanaTINT=8,
+		Time:1000.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		RemoveResultItem:true,
+       		AnimNode:RipSheets,
+    }  			
+    recipe Sew Bandanas
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=1,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:MakeBandanas,
+		Result:Hat_BandanaTINT=8,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		RemoveResultItem:true,
+		Tooltip: Requires a powered Sewing Machine.,
+    }  	
+    recipe Sew Bath Robe
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=6,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:LongCoat_Bathrobe,
+		Time:400.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 	
+    recipe Sew Coveralls
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Boilersuit,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Dress
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Dress_Normal,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Knee-length Dress
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=4,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Dress_Knees,
+		Time:400.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Long Dress
+    {
+		Sound:SewingMachine,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Dress_Long,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Short Dress
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=4,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Dress_Short,
+		Time:4000.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }	
+    recipe Sew Dress
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Dress_Normal,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }	
+    recipe Sew Knee-length Dress
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=4,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Dress_Knees,
+		Time:4000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }	
+    recipe Sew Long Dress
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Dress_Long,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }	
+    recipe Sew Short Dress
+    {
+		Sound:Scissors,
+		Fabric/WhiteFabric,
+		Thread=4,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Dress_Short,
+		Time:4000.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }
+}

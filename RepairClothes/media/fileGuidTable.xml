@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+	<path>media/clothing/clothingItems/CreatureMask.xml</path>
+	<guid>48b6a6ea-b518-47b5-af30-cbb797e58475</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/LooseSackMask.xml</path>
+	<guid>2a67b2fa-b88f-43ab-b20a-4cb2bd055ac2</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/PillowcaseMask.xml</path>
+	<guid>69b01eb9-8cb9-4169-adac-fd2433d2106c</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_Creature.xml</path>
+	<guid>057800ce-1863-4512-a2be-473893694423</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_CreatureDOWN.xml</path>
+	<guid>f62b7425-fa1f-4c98-b37f-0118156a207e</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_Ghost.xml</path>
+	<guid>dcd5bb94-75dc-40e2-8921-afcd42a8f9d7</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_GhostDOWN.xml</path>
+	<guid>dabc4cfd-835e-4f9d-82c9-bed8656df123</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_Pumpkin.xml</path>
+	<guid>bd4dba2d-fd95-4daa-a609-2a3f9bcf33fe</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_PumpkinDOWN.xml</path>
+	<guid>cbc82ba7-a292-4fab-8424-1664a94f0c51</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_Skeleton.xml</path>
+	<guid>d83b1387-a3f7-43cd-8857-90efe1866247</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Poncho_SkeletonDOWN.xml</path>
+	<guid>178f0d9a-fa1d-4ae0-b7b8-9ec8a0ed8e64</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RubberClownMask.xml</path>
+	<guid>9fe7924f-4cda-4dbc-bfec-09aaa99d9ae1</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RubberPumpkinMask.xml</path>
+	<guid>1f82898d-1e20-4bed-9aca-03e01ed743db</guid>
+	</files>	
+
+	<files>
+	<path>media/clothing/clothingItems/RubberSkullMask.xml</path>
+	<guid>a481c4f6-7ebf-428b-8f93-328dc2b73b85</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/TightSackMask.xml</path>
+	<guid>fbfd9c40-7598-4030-b3ce-990146102d10</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Armband_LeftTINT.xml</path>
+	<guid>4b4390fd-8f29-4c27-8642-49f2b6545701</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Armband_RightTINT.xml</path>
+	<guid>bbdd241b-0630-479e-8db0-419da24fd89a</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Armband_Left.xml</path>
+	<guid>312ba5f2-4bf3-4592-9dd1-f49244c5eb70</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/Armband_Right.xml</path>
+	<guid>b6733801-feb5-435d-a1a4-4945a9632105</guid>
+	</files>
+
+
+
+	<files>
+		<path>media/clothing/clothingItems/Jacket_Rabbit.xml</path>
+		<guid>cb7f5be4-54b6-48f9-a655-4cce228b506e</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Jacket_RabbitDOWN.xml</path>
+		<guid>c1d742f9-d5a5-4c5f-99b1-8ee43c131f0f</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Trousers_Rabbit.xml</path>
+		<guid>6a7017ee-d119-49c0-bce4-f24c5bfabc4f</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Boots_Rabbit.xml</path>
+		<guid>453b5de9-d7b1-46ce-8d32-638d30fae9ac</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Gloves_Rabbit.xml</path>
+		<guid>fcfe8c4e-d868-48f7-8054-91f5587f5233</guid>
+	</files>
+
+	<files>
+		<path>media/clothing/clothingItems/Hat_Rabbit.xml</path>
+		<guid>2e5da79e-38e2-4d12-943d-6bcbadb06bbf</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RoadsignBracers.xml</path>
+	<guid>ddac0608-eae7-4da2-9f59-4d9271d99f16</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RoadsignCuirass.xml</path>
+	<guid>e17af3a0-7cec-43f1-bffb-49a3ff2d6488</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/TirePauldrons.xml</path>
+	<guid>7b1349cb-35ae-4bc1-b916-5ae253060866</guid>
+	</files>	
+	<files>
+	<path>media/clothing/clothingItems/BucketHelmet.xml</path>
+	<guid>99679db6-f27d-42f5-9d94-498662464f7e</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/BurlapBracers.xml</path>
+	<guid>d56ba711-df9a-4b16-9578-9e3cad82cbda</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/BurlapBracers2.xml</path>
+	<guid>d56ba711-df9a-4b16-9578-9e3cad82cbd2</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RoadsignBracers.xml</path>
+	<guid>ddac0608-eae7-4da2-9f59-4d9271d99f16</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/RoadsignCuirass.xml</path>
+	<guid>e17af3a0-7cec-43f1-bffb-49a3ff2d6488</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/TirePauldrons.xml</path>
+	<guid>7b1349cb-35ae-4bc1-b916-5ae253060866</guid>
+	</files>	
+
+	<files>
+	<path>media/clothing/clothingItems/RoadsignGreaves.xml</path>
+	<guid>e9a52318-7684-4a1d-9343-91461114598X</guid>
+	</files>
+
+
+	<files>
+	<path>media/clothing/clothingItems/LooseSackMask.xml</path>
+	<guid>2a67b2fa-b88f-43ab-b20a-4cb2bd055ac2</guid>
+	</files>
+
+
+
+</fileGuidTable>
+
+
+
+

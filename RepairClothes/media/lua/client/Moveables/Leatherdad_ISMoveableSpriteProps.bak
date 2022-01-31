@@ -1,0 +1,56 @@
+--***********************************************************
+--**                    THE INDIE STONE                    **
+--**				  Author: turbotutone				   **
+--***********************************************************
+
+--test
+local function lastIndexOf( _string, _needle)
+	local i=_string:match(".*".._needle.."()")
+	if i==nil then return nil else return i end
+end
+
+function ISThumpableSpriteProps:getInfoPanelDescription( _square, _object, _player, _mode )
+    local infoTable = {};
+    if _mode ~= "scrap" or not self.scrapThumpable then
+        return ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_NoCanScrap"), 255, 0, 0 )
+    end
+    infoTable = ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_Name")..":", 255, 255, 255, Translator.getMoveableDisplayName(self.name), 0, 255, 0 )
+
+    local skillText = PerkFactory.getPerkName(Perks.Woodwork)
+    infoTable = ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_Skill")..":", 255, 255, 255, skillText, getColorValues(true) )
+
+    local scriptItem = ScriptManager.instance:FindItem("Base.Saw")
+    local hasTool = _player:getInventory():containsTypeRecurse("Saw")
+	if not hasTool then
+		scriptItem = ScriptManager.instance:FindItem("Base.GardenSaw")
+		hasTool = _player:getInventory():containsTypeRecurse("GardenSaw")
+	end
+    infoTable = ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_Tool")..":", 255, 255, 255, scriptItem and scriptItem:getDisplayName() or "Saw", getColorValues(hasTool) )
+
+    scriptItem = ScriptManager.instance:FindItem("Base.Screwdriver") or ScriptManager.instance:FindItem("Base.Multitool")
+    hasTool = _player:getInventory():containsTypeRecurse("Screwdriver") or player:getInventory():containsTypeRecurse("Multitool")
+	if hasTool:contains("Screwdriver") then
+		infoTable = ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_Tool")..":", 255, 255, 255, scriptItem and scriptItem:getDisplayName() or "Screwdriver", getColorValues(hasTool) )
+	else
+		infoTable = ISMoveableSpriteProps.addLineToInfoTable( infoTable, getText("IGUI_Tool")..":", 255, 255, 255, scriptItem and scriptItem:getDisplayName() or "Multitool", getColorValues(hasTool) )
+    end
+	return infoTable
+end
+
+function ISThumpableSpriteProps:walkToAndEquip( _character, _square, _mode )
+    if _mode ~= "scrap" then return false end
+    if luautils.walkAdj(_character, _square, false) then
+        local tool = _character:getInventory():getFirstTypeRecurse("Saw")
+		if not tool then
+			tool = _character:getInventory():getFirstTypeRecurse("GardenSaw")
+		end
+        if not tool then return false end
+        ISWorldObjectContextMenu.equip(_character, _character:getPrimaryHandItem(), tool:getType(), true)
+
+        tool = _character:getInventory():getFirstTypeRecurse("Screwdriver") or _character:getInventory():getFirstTypeRecurse("Multitool")
+        if not tool then return false end
+        ISWorldObjectContextMenu.equip(_character, _character:getSecondaryHandItem(), tool:getType(), false)
+        return true
+    end
+    return false
+end

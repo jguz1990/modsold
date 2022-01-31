@@ -1,0 +1,37 @@
+module Base
+{
+  
+	item Lipstick_Used
+	{
+	    DisplayCategory = Appearance,
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Used Lipstick,
+		Icon	=	Lipstick,
+		MetalValue = 1,
+		WorldStaticModel = Lipstick,
+	}
+
+    item MakeupEyeshadow_Used
+    {
+        DisplayCategory = Appearance,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Used Eyes Makeup,
+        Icon	=	MakeupEyeshadow,
+        WorldStaticModel = EyesMakeup,
+    }
+
+    item MakeupFoundation_Used
+    {
+        DisplayCategory = Appearance,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Used Foundation Makeup,
+        Icon	=	MakeupFoundation,
+        WorldStaticModel = FoundationMakeup,
+    }
+
+  
+}
+

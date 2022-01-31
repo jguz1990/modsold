@@ -1,0 +1,35 @@
+module Base
+{
+
+
+
+	sound NewMusic_MainTheme
+	{
+		category = Music,
+		master = Music,
+		clip
+		{
+			file = media/sound/sound1.ogg,
+		}
+	}
+
+	sound OldMusic_preface
+	{
+		category = Music,
+		master = Music,
+		clip
+		{
+			file = media/sound/sound2.ogg,
+		}
+	}
+	sound NewMusic_Introduction
+	{
+		category = Music,
+		master = Music,
+		clip
+		{
+			file = media/sound/sound2.ogg,
+		}
+	}
+
+}

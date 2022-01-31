@@ -1,0 +1,654 @@
+module Base
+{
+    item NaturalDyesMag
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Natural Dyes,
+        Icon	=	NaturalDyesMag,
+        TeachedRecipes  =   Make Blue-Purple Dye;Make Brown Dye;Make Gray Dye;Make Green Dye;Make Light Brown Dye;Make Mustard Yellow Dye;Make Orange Dye;Make Pink Dye;Make Purple Dye;Make Red-Brown Dye;Make Strong Purple Dye; Make Tan Dye,
+        ReplaceOnUse    =   NaturalDyesMag,
+        StaticModel = Magazine,
+    }
+/*	recipe Dump Dye
+    {
+		Sound:GetWater,
+		OrangeNaturalDye/OrangeNaturalDye_Raw,
+		Result:Pot,
+		Time:50.0,
+		/*RemoveResultItem:true,*/
+		Prop1:CookingPot,
+		AnimNode:Loot,
+    }*/		
+recipe Make Blue-Purple Dye
+    {
+		Sound:AddItemInRecipe,
+		BerryBlue;200,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:Blue-PurpleNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item Blue-PurpleNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Blue-Purple Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye = TRUE,
+        DyeColorRed = 138,
+        DyeColorGreen = 43,
+        DyeColorBlue = 226,
+	}
+item Blue-PurpleNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Blue-Purple Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   Blue-PurpleNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Blue-Purple
+    {
+		Blue-PurpleNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }		
+recipe Make Brown Dye
+    {
+		Sound:AddItemInRecipe,
+		Coffee2;60,
+		Vinegar=10,
+		Pot,
+		Result:BrownNaturalDye_Raw,
+		Time:200.0,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item BrownNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Brown Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	=	TRUE,
+        DyeColorRed 	=	111,
+        DyeColorGreen 	=	78,
+        DyeColorBlue 	=	55,
+	}
+item BrownNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Brown Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   BrownNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Brown
+    {
+		BrownNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Make Gray Dye
+    {
+		Sound:AddItemInRecipe,
+		BerryBlack;200,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:GrayNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }	
+item GrayNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Gray Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye = TRUE,
+        DyeColorRed = 128,
+        DyeColorGreen = 128,
+        DyeColorBlue = 128,
+	}
+item GrayNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Gray Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   GrayNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Gray
+    {
+		GrayNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Make Green Dye
+    {
+		Sound:AddItemInRecipe,
+		Plantain=20,
+		Vinegar=10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:GreenNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item GreenNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Green Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye = TRUE,
+        DyeColorRed = 55,
+        DyeColorGreen = 152,
+        DyeColorBlue = 77,
+	}
+item GreenNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Green Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   GreenNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Green
+    {
+		GreenNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Make Light Brown Dye
+    {
+		Sound:AddItemInRecipe,
+		Teabag2;100,
+		Vinegar=10,
+		Pot,
+		Result:LightBrownNaturalDye_Raw,
+		Time:200.0,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item LightBrownNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Light Brown Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	= 	TRUE,
+        DyeColorRed 	= 	159,
+        DyeColorGreen 	= 	108,
+        DyeColorBlue 	= 	43,
+	}
+item LightBrownNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Light Brown Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   LightBrownNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Light Brown
+    {
+		LightBrownNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }		
+recipe Make Mustard Yellow Dye
+    {
+		Sound:AddItemInRecipe,
+		Mustard;200,
+		Vinegar=10,
+		Pot,
+		Result:MustardYellowNaturalDye_Raw,
+		Time:200.0,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item MustardYellowNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Mustard Yellow Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	=	TRUE,
+        DyeColorRed 	=	225,
+        DyeColorGreen 	=	173,
+        DyeColorBlue 	=	1,
+	}
+item MustardYellowNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Mustard Yellow Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   MustardYellowNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Mustard Yellow
+    {
+		MustardYellowNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Make Orange Dye
+    {
+		Sound:AddItemInRecipe,
+		Carrots;80,
+		Vinegar=10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:OrangeNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item OrangeNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Orange Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	=	TRUE,
+        DyeColorRed 	=	237,
+        DyeColorGreen 	=	145,
+        DyeColorBlue 	=	33,
+	}
+item OrangeNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Orange Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   OrangeNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Orange
+    {
+		OrangeNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }		
+recipe Make Pink Dye
+    {
+		Sound:AddItemInRecipe,
+		Cherry;20,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:PinkNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }	
+recipe Make Pink Dye
+    {
+		Sound:AddItemInRecipe,
+		farming.Strewberrie;100,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:PinkNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item PinkNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Pink Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	= 	TRUE,
+        DyeColorRed 	= 	246,
+        DyeColorGreen	= 	83,
+        DyeColorBlue 	= 	150,
+	}
+item PinkNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Pink Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   PinkNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Pink
+    {
+		PinkNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }
+recipe Make Purple Dye
+    {
+		Sound:AddItemInRecipe,
+		Grapes;150,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:PurpleNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item PurpleNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Purple Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye = TRUE,
+        DyeColorRed = 128,
+        DyeColorGreen = 0,
+        DyeColorBlue = 128,
+	}
+item PurpleNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Purple Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   PurpleNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Purple
+    {
+		PurpleNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }			
+recipe Make Red-Brown Dye
+    {
+		Sound:AddItemInRecipe,
+		Onion;100,
+		Vinegar=10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:Red-BrownNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item Red-BrownNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Red-Brown Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	=	TRUE,
+        DyeColorRed 	=	161,
+        DyeColorGreen 	=	61,
+        DyeColorBlue 	=	45,
+	}
+item Red-BrownNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Red-Brown Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   Red-BrownNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Red-Brown
+    {
+		Red-BrownNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Make Strong Purple Dye
+    {
+		Sound:AddItemInRecipe,
+		BerryBlack;200,
+		Salt;10,
+		Pot,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/Hammer/BallPeenHammer/ClubHammer/StoneHammer/WoodenMallet/MortarPestle,
+		Result:StrongPurpleNaturalDye_Raw,
+		Time:200.0,
+		Prop1:KitchenKnife,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }	
+item StrongPurpleNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Strong Purple Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye = TRUE,
+        DyeColorRed = 105,
+        DyeColorGreen = 0,
+        DyeColorBlue = 168,
+	}
+item StrongPurpleNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Strong Purple Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   StrongPurpleNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Strong Purple
+    {
+		StrongPurpleNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }	
+recipe Make Tan Dye
+    {
+		Sound:AddItemInRecipe,
+		Teabag2;50,
+		Vinegar=10,
+		Pot,
+		Result:TanNaturalDye_Raw,
+		Time:200.0,
+		Prop2:CookingPot,
+		AnimNode:Loot,
+        SkillRequired:Cooking=1,
+		NeedToBeLearn:true,
+    }
+item TanNaturalDye
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Tan Dye,
+		ReplaceOnUse	=	Pot,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+        ClothingDye 	= 	TRUE,
+        DyeColorRed 	= 	210,
+        DyeColorGreen 	= 	180,
+        DyeColorBlue 	= 	140,
+	}
+item TanNaturalDye_Raw
+	{
+		Weight			=	3,
+		DisplayName		=	Cooking Pot with Raw Tan Dye,
+		StaticModel 	=	CookingPot,
+		Icon			=	Pot_Water,
+		Type			=	Food,
+        ReplaceOnCooked =   TanNaturalDye,
+        IsCookable		=	TRUE,
+        MinutesToCook	=	60,
+		ReplaceOnUse	=	Pot,
+	}
+recipe Dye Clothing Tan
+    {
+		TanNaturalDye,
+		Sound:GetWater,
+		keep [Recipe.GetItemTypes.RipClothing_Cotton]/[Recipe.GetItemTypes.RipClothing_Denim],
+		Result:Pot,
+		OnCreate:DyeClothes,
+		OnTest:ClothingOffTest,
+		Time:200.0,
+		/*RemoveResultItem:true,*/
+		Prop2:CookingPot,
+		AnimNode:Loot,
+    }			
+}

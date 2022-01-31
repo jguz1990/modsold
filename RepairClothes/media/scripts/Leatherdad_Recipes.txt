@@ -1,0 +1,251 @@
+module Base
+{
+
+
+    recipe Make Stake
+    {
+	Override:true,
+        TreeBranch,
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+
+        Result:Stake,
+        Time:80.0,
+        Category:Survivalist,
+        OnGiveXP:Give5WoodworkXP,
+    }
+
+
+
+	recipe Slice Watermelon
+	{
+	   Watermelon,
+	   keep HuntingKnife/KitchenKnife/Saw/Axe/HandAxe/AxeStone/WoodAxe/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+
+	   Result:WatermelonSliced=10,
+	   OnCreate:SliceWatermelon_OnCreate,
+	   Time:70.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	Override:true,
+	}
+
+
+
+    recipe Slice Bread
+    {
+        keep KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool,
+        Bread,
+
+        Result:BreadSlices=3,
+        OnCreate:SliceBread_OnCreate,
+        Sound:SliceBread,
+        Time:40.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Bread
+    {
+        keep KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool,
+        BreadDough,
+
+        Result:BreadSlices=3,
+        Sound:SliceBread,
+        Time:40.0,
+        Category:Cooking,
+        OnTest:SliceBreadDough_TestIsValid,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Pie
+    {
+        keep KitchenKnife/HuntingKnife/ButterKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        PieWholeRaw,
+
+        Result:Pie=5,
+        Time:20.0,
+        OnCreate:SlicePie_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+	Override:true,
+    }
+
+    recipe Slice Cake
+    {
+        keep KitchenKnife/HuntingKnife/ButterKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        CakeRaw,
+
+        Result:CakeSlice=5,
+        Time:20.0,
+        OnCreate:SlicePie_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+	Override:true,
+    }
+
+    recipe Slice Fillet
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        Bass/Catfish/Perch/Crappie/Panfish/Pike/Trout,
+
+        Result:FishFillet=2,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnTest:CutFish_TestIsValid,
+        OnCreate:CutFish_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+	Override:true,
+    }
+
+    recipe Slice Ham
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        Ham,
+
+        Result:HamSlice=6,
+        OnCreate:SliceHam_OnCreate,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+	Override:true,
+    }
+
+    recipe Slice Frog
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        Frog,
+
+        Result:FrogMeat,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+	Override:true,
+    }
+
+    recipe Make Fishing Rod
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        WoodenStick,
+        Twine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRodTwineLine,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Fishing Rod
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        WoodenStick,
+        FishingLine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRod,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+ /*
+*/
+    recipe Drill Plank
+    {
+	Override:true,
+        Plank/Log,
+        keep Screwdriver/KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/SharpedStone/FlintKnife/Multitool/SAK,
+
+        Result:PercedWood,
+        Time:40.0,
+    }
+ 
+    recipe Butcher Small Animal
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        DeadMouse/DeadSquirrel/DeadRat,
+
+        Result:Smallanimalmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+	Override:true,
+    }
+
+    recipe Butcher Rabbit
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        DeadRabbit,
+
+        Result:Rabbitmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+	Override:true,
+    }
+
+    recipe Butcher Bird
+    {
+        keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Multitool/SAK,
+        DeadBird,
+
+        Result:Smallbirdmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+	Override:true,
+    }
+
+
+    recipe Create Spear
+    {
+        Plank/TreeBranch,
+        keep HuntingKnife/KitchenKnife/SharpedStone/FlintKnife/MeatCleaver/Machete/Multitool/SAK,
+
+        Result:SpearCrafted,
+        Time:100.0,
+        OnCreate:CreateSpear_OnCreate,
+        Category:Survivalist,
+        OnGiveXP:Give5WoodworkXP,
+	Override:true,
+    }
+
+
+
+    recipe Rip Clothing With Multitool
+    {
+        [Recipe.GetItemTypes.RipClothing_Denim],
+        keep Multitool,
+
+        Result:DenimStrips,
+        RemoveResultItem:true,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+        OnCreate:Recipe.OnCreate.RipClothing,
+    }
+
+    recipe Rip Clothing With Multitool
+    {
+        [Recipe.GetItemTypes.RipClothing_Leather],
+        keep Multitool,
+
+        Result:LeatherStrips,
+        RemoveResultItem:true,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+        OnCreate:Recipe.OnCreate.RipClothing,
+    }
+
+
+}

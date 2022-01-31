@@ -1,0 +1,60 @@
+module Base
+{
+
+	item Compass
+	{
+		Type			= Normal,
+		Weight          	= 0.1,
+		DisplayName		= Compass, 
+		Icon			= Compass,
+		
+	}
+	item Compass2
+	{
+		Type			= Normal,
+		Weight          	= 0.1,
+		DisplayName		= Compass,    
+		Icon			= Compass2,
+		
+	}
+	item CliponCompass
+	{
+		Type			= Normal,
+		Weight          	= 0.1,
+		DisplayName		= Clip-on Compass,    
+	        AttachmentType 		= Walkie,
+		Icon			= CliponCompass,
+		
+	}
+	
+	
+    item WristCompass_Right
+	{
+		Type = Clothing,
+		DisplayName = Wrist Compass,
+		ClothingItem = WristWatch_Right_ClassicMilitary,
+		BodyLocation = RightWrist,
+		Icon = WristCompass2,
+		Weight = 0.1,
+        ClothingItemExtra = WristCompass_Left,
+        ClothingItemExtraOption = LeftWrist,
+        clothingExtraSubmenu = RightWrist,
+		Cosmetic = TRUE,
+	}
+    item WristCompass_Left
+	{
+		Type = Clothing,
+		DisplayName = Wrist Compass,
+		ClothingItem = WristWatch_Left_ClassicMilitary,
+		BodyLocation = LeftWrist,
+		Icon = WristCompass2,
+		Weight = 0.1,
+		ClothingItemExtra = WristCompass_Right,
+        ClothingItemExtraOption = RightWrist,
+        clothingExtraSubmenu = LeftWrist,
+		Cosmetic = TRUE,
+	}
+	
+	
+}
+

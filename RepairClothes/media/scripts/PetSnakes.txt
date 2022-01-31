@@ -1,0 +1,114 @@
+module Base
+{
+
+item BallPython
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python,
+	Icon				=	BallPython,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	10,
+        ReplaceOnRotten = BallPythonHungry,
+	}
+
+item BallPythonHungry
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python,
+	Icon				=	BallPython,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	30,
+        ReplaceOnRotten = BallPythonEmaciated,
+	}
+
+item BallPythonEmaciated
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python (unhealthy),
+	Icon				=	BallPython,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	60,
+        ReplaceOnRotten = BallPythonDead,
+	}
+
+item BallPythonDead
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python (dead),
+	Icon				=	BallPython,
+        DaysTotallyRotten	=	70,
+        HungerChange	=	-45,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToBurn	=	60,
+        MinutesToCook	=	25,
+        Carbohydrates = 0,
+        Proteins = 330,
+        Lipids = 35,
+        Calories = 1730,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	}
+item BallPythonDead2
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python (dead),
+	Icon				=	BallPython,
+        DaysTotallyRotten	=	10,
+	DaysFresh = 6,
+        HungerChange	=	-45,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToBurn	=	60,
+        MinutesToCook	=	25,
+        Carbohydrates = 0,
+        Proteins = 330,
+        Lipids = 35,
+        Calories = 1730,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item BallPythonSickly
+	{
+	Weght 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Ball Python (unhealthy),
+	Icon				=	BallPython,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	10,
+        ReplaceOnRotten = BallPythonDead2,
+	}*/
+
+recipe Feed Ball Python
+	{
+	BallPythonHungry/BallPythonEmaciated,
+	DeadRat/DeadMouse/DeadSquirrel/DeadBird,
+	Result: BallPython,
+	OnTest: BallPython_WillEat,
+	/*OnCreate: BallPython_Eats,*/
+	Time:500.0,
+        Prop1:DeadMouse,
+	}
+recipe Kill Ball Python
+	{
+	BallPython/BallPythonHungry/BallPythonEmaciated,
+	Result: BallPythonDead,
+	Time:100.0,
+	}
+/*recipe Kill Ball Python
+	{
+	BallPythonSickly,
+	Result: BallPythonDead2,
+	Time:100.0,
+	}*/
+
+
+}

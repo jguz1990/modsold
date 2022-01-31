@@ -1,0 +1,121 @@
+require "Camping/camping_tent"	
+
+
+local function spriteNameOf(object)
+	if not object then return nil end
+	if not object:getSprite() then return nil end
+	return object:getSprite():getName() or object:getSpriteName()
+end
+
+
+function camping.findTentSprites2(sprite)
+	for _,sprites in pairs(camping.tentSprites) do
+		if sprite == sprites.frontLeft or --sprite == sprites.backLeft or
+				sprite == sprites.frontRight --or sprite == sprites.backRight then
+				then
+			return sprites
+		end
+	end
+	return nil
+end
+
+
+function camping.isTentObject2(object)
+	if not object then return false end
+	if not object:getSprite() then return false end
+	local spriteName = spriteNameOf(object)
+	return camping.findTentSprites2(spriteName) ~= nil
+--	return object:getObjectName() == "Tent"
+end
+
+
+function camping.findTentObject2(square)
+	if not square then return nil end
+	for i=0,square:getObjects():size()-1 do
+		local object = square:getObjects():get(i)
+		if camping.isTentObject2(object) then
+			return object
+		end
+	end
+	return nil
+end
+
+camping.getCurrentTent2 = function(grid)
+	if not grid then return nil end
+	return camping.findTentObject2(grid)
+end
+
+-- add a tent to the ground
+function camping.addTent(grid, sprite)
+	if not grid then return end
+	if camping.findTentObject(grid) then return end
+
+	local tentSprites = camping.findTentSprites(sprite)
+	if not tentSprites then return end
+
+	local tent = IsoObject.new(grid, sprite, "Tent")
+	tent:createContainersFromSpriteProperties()
+	--local container = ItemContainer.new("Tent", grid, tent)
+	--tent:setContainer(container)
+	local pdata = getPlayerData(0)
+	pdata.lootInventory:refreshBackpacks();
+	pdata.playerInventory:refreshBackpacks();
+	
+	grid:AddTileObject(tent)
+	tent:transmitCompleteItemToClients()
+
+	local dx = 0
+	local dy = 0
+	if sprite == tentSprites.frontLeft then
+		sprite = tentSprites.backLeft
+		dx = -1
+	elseif sprite == tentSprites.frontRight then
+		sprite = tentSprites.backRight
+		dy = -1
+	else
+		error "expected front tent sprite"
+	end
+
+	grid = getCell():getGridSquare(grid:getX() + dx, grid:getY() + dy, grid:getZ())
+	tent = IsoObject.new(grid, sprite, "Tent")
+	
+	grid:AddTileObject(tent)
+	tent:transmitCompleteItemToClients()
+
+	return tent;
+end
+
+
+-- remove a tent
+function camping.removeTent(tent)
+	if not tent then return end
+	local grid = tent:getSquare()
+	if not grid then return end
+
+	local spriteName = spriteNameOf(tent)
+	local tentSprites = camping.findTentSprites(spriteName)
+	if not tentSprites then return end
+
+	grid:transmitRemoveItemFromSquare(tent)
+
+	local dx = 0
+	local dy = 0
+	if spriteName == tentSprites.frontLeft then
+		dx = -1
+	elseif spriteName == tentSprites.backLeft then
+		dx = 1
+	elseif spriteName == tentSprites.frontRight then
+		dy = -1
+	elseif spriteName == tentSprites.backRight then
+		dy = 1
+	end
+
+	grid = getCell():getGridSquare(grid:getX() + dx, grid:getY() + dy, grid:getZ())
+	tent = camping.findTentObject(grid)
+	if not tent then return end
+	grid:transmitRemoveItemFromSquare(tent)
+	
+	local pdata = getPlayerData(0)
+	pdata.lootInventory:refreshBackpacks();
+	pdata.playerInventory:refreshBackpacks();
+end

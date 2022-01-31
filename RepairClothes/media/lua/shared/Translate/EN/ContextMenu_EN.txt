@@ -1,0 +1,8 @@
+ContextMenu_EN = {
+
+	ContextMenu_Snort = "Snort",
+    ContextMenu_Tie_Right_armband = "Tie Bandana Around Right Arm",
+    ContextMenu_Tie_Left_armband = "Tie Bandana Around Left Arm",
+    ContextMenu_TieLeftArm = "Tie Around Left Arm",
+    ContextMenu_TieRightArm = "Tie Around Rght Arm",
+} 

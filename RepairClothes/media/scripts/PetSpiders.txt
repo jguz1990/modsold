@@ -1,0 +1,95 @@
+module Base
+{
+
+item Tarantula
+	{
+	Weight 				= 	1,
+	Type 				= 	Food,
+	DisplayName 			= 	Rose Hair Tarantula,
+	Icon				=	Tarantula,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	7,
+        ReplaceOnRotten = TarantulaHungry,
+	}
+
+item TarantulaHungry
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Rose Hair Tarantula,
+	Icon				=	Tarantula,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	21,
+        ReplaceOnRotten = TarantulaEmaciated,
+	}
+
+item TarantulaEmaciated
+	{
+	Weight 				= 	2,
+	Type 				= 	Food,
+	DisplayName 			= 	Rose Hair Tarantula,
+	Icon				=	Tarantula,
+        DaysFresh	=	0,
+        DaysTotallyRotten	=	42,
+        ReplaceOnRotten = TarantulaDead,
+	}
+
+item TarantulaDead
+	{
+	Weight 				= 	1,
+	Type 				= 	Food,
+	DisplayName 			= 	Rose Hair Tarantula (dead),
+	Icon				=	Tarantula,
+        DaysTotallyRotten	=	54,
+	DaysFresh = 8,
+        HungerChange	=	-11,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToBurn	=	25,
+        MinutesToCook	=	5,
+        Carbohydrates = 1.27,
+        Proteins = 7.41,
+        Lipids = 3.9,
+        Calories = 30,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+item TarantulaDead2
+	{
+	Weight 				= 	1,
+	Type 				= 	Food,
+	DisplayName 			= 	Rose Hair Tarantula (dead),
+	Icon				=	Tarantula,
+        DaysTotallyRotten	=	12,
+	DaysFresh = 8,
+        HungerChange	=	-11,
+        IsCookable	=	TRUE,
+        MinutesToBurn	=	25,
+        MinutesToCook	=	5,
+        Carbohydrates = 1.27,
+        Proteins = 7.41,
+        Lipids = 3.9,
+        Calories = 30,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	}
+
+recipe Feed Rose Hair Tarantula
+	{
+	TarantulaHungry/TarantulaEmaciated,
+	Worm/Cricket/Cockroach/Grasshopper,
+	Result: Tarantula,
+	Time:500.0,
+	}
+recipe Kill Rose Hair Tarantula
+	{
+	Tarantula/TarantulaHungry/TarantulaEmaciated,
+	Result: TarantulaDead2,
+	Time:100.0,
+	}
+
+
+}

@@ -1,0 +1,684 @@
+module Base
+{
+ 
+   item JerkJerkyRaw
+    {
+        HungerChange	=	-10,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToBurn	=	140,
+        DisplayName	=	Jerk Jerky,
+        Icon	=	BeefJerky,
+        MinutesToCook	=	100,
+	EvolvedRecipe = Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5;Salad:5;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 1,
+        Lipids = 1,
+        Calories = 80,
+        BadInMicrowave = true,
+        ThirstChange	=	3,
+	ReplaceOnCooked     =   JerkJerky,
+        WorldStaticModel = BeefJerky,
+        StaticModel = BeefJerky,
+    }
+   item InfectedJerkJerkyRaw
+    {
+        HungerChange	=	-10,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	140,
+        DisplayName	=	Jerk Jerky,
+        Icon	=	BeefJerky,
+        DaysFresh	=	2,
+        MinutesToCook	=	100,
+	EvolvedRecipe = Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5;Salad:5;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 1,
+        Lipids = 1,
+        Calories = 80,
+        BadInMicrowave = true,
+        ThirstChange	=	3,
+	OnEat = InfectedFlesh,
+	ReplaceOnCooked     =   InfectedJerkJerky,
+        WorldStaticModel = BeefJerky,
+        StaticModel = BeefJerky,
+    }
+    item JerkJerky
+    {
+        HungerChange	=	-18,
+        Weight	=	0.2,
+        Type	=	Food,
+        MinutesToBurn	=	70,
+        DisplayName	=	Jerk Jerky,
+        Icon	=	BeefJerky,
+	EvolvedRecipe = Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5;Salad:5;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 1,
+        Lipids = 1,
+        Calories = 80,
+        ThirstChange	=	3,
+        WorldStaticModel = BeefJerky,
+        StaticModel = BeefJerky,
+    }
+    item InfectedJerkJerky
+    {
+        HungerChange	=	-4,
+        Weight	=	0.2,
+        Type	=	Food,
+        MinutesToBurn	=	70,
+        DisplayName	=	Jerk Jerky,
+        Icon	=	BeefJerky,
+	EvolvedRecipe = Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5;Salad:5;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 1,
+        Lipids = 1,
+        Calories = 80,
+        ThirstChange	=	3,
+	OnEat = InfectedFlesh,
+        WorldStaticModel = BeefJerky,
+        StaticModel = BeefJerky,
+    }
+
+	recipe Make Jerk Jerky
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	Salt;4,
+	HumanFlesh,
+       	Result:JerkJerkyRaw=3,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=3,
+	}
+
+	recipe Make Jerk Jerky
+	{
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,	
+	Salt;4,
+	InfectedHumanFlesh,
+      	 Result:InfectedJerkJerkyRaw=3,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=3,
+	}
+
+
+  recipe Make Cooked Creep
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	HumanFlesh/InfectedHumanFlesh,
+	Saucepan,
+       	Result:CookedCreepSaucepan,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+      	 NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=2,
+	}
+
+  recipe Make Cooked Creep
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	HumanFlesh/InfectedHumanFlesh,
+	Pan,
+       	Result:CookedCreepPan,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=2,
+	}
+
+  recipe Make Cooked Creep
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	HumanFlesh/InfectedHumanFlesh,
+	Pot,
+       	Result:CookedCreepPot,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+      	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=2,
+	}
+
+
+  item CookedCreepPot
+    {
+        HungerChange	=	-30,
+        Weight	=	3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	1,
+        MinutesToBurn	=	120,
+        DisplayName	=	Cooked Creep,
+        Icon	=	PotFull,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	ReplaceOnUse = Pot,
+        StaticModel = CookingPot,
+        EatType = Pot,
+        StaticModel = CookingPot,
+        WorldStaticModel = CookingPotSoup_Ground,
+    }  
+item CookedCreepSaucepan
+    {
+        HungerChange	=	-30,
+        Weight	=	3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	1,
+        MinutesToBurn	=	120,
+        DisplayName	=	Cooked Creep,
+        Icon	=	SaucepanFilled,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	ReplaceOnUse = Saucepan,
+	StaticModel = SaucePan,
+        WorldStaticModel = WaterSaucepanRice,
+        EatType = Pot,
+    }  
+item CookedCreepPan
+    {
+        HungerChange	=	-30,
+        Weight	=	1.2,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	1,
+        MinutesToBurn	=	120,
+        DisplayName	=	Cooked Creep,
+        Icon	=	PanFull,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	ReplaceOnUse = Pan,
+        WorldStaticModel = GriddlePanFriedVegetables_Ground,
+    } 
+item BakBonDzhow
+    {
+        HungerChange	=	-15,
+        Weight	=	1,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+	DaysTotallyRotten	=	3,
+        MinutesToBurn	=	120,
+        DisplayName	=	Bak Bon Dzhow,
+        Icon	=	BowlFull,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+        EvolvedRecipe = Sandwich:3;Burger:3;RicePot:3;RicePan:3;PastaPot:3;PastaPan:3;Soup:3;Stew:3;Stir fry:3|Cooked;Burger:3;Salad:3|Cooked;Roasted Vegetables:3,
+        FoodType    =   Meat,
+        Carbohydrates = 55,
+        Proteins = 10,
+        Lipids = 7.5,
+        Calories = 120,
+	ReplaceOnUse = Bowl,
+        StaticModel = Bowl,
+        WorldStaticModel = BowlRamen_Ground,
+        EatType = 2hand,
+        BadInMicrowave = true,
+	CustomEatSound = MaleZombieEating,
+    }
+item BakBonDzhowInfected
+    {
+	DaysTotallyRotten	=	3,
+        DaysFresh	=	1,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToBurn	=	120,
+        MinutesToCook	=	100,
+        HungerChange	=	-15,
+        Weight	=	1,
+        Type	=	Food,
+        DisplayName	=	Bak Bon Dzhow,
+        Icon	=	BowlFull,
+        EvolvedRecipe = Sandwich:3;Burger:3;RicePot:3;RicePan:3;PastaPot:3;PastaPan:3;Soup:3;Stew:3;Stir fry:3|Cooked;Burger:3;Salad:3|Cooked;Roasted Vegetables:3,
+        FoodType    =   Meat,
+        Carbohydrates = 55,
+        Proteins = 10,
+        Lipids = 7.5,
+        Calories = 120,
+	ReplaceOnUse = Bowl,
+        StaticModel = Bowl,
+        WorldStaticModel = BowlRamen_Ground,
+        EatType = 2hand,
+        BadInMicrowave = true,
+	CustomEatSound = MaleZombieEating,
+	OnEat = InfectedFlesh,
+    }
+ recipe Make Bak Bon Dzhow
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	keep Hammer/BallPeenHammer/ClubHammer/WoodenMallet/HammerStoneStone/Camping.Stone,
+	WildGarlic,
+	Onion,
+	Salt;1,
+	Pepper;1,
+        Vinegar=1,
+	HumanFlesh;15,
+	Bowl,
+       	Result:BakBonDzhow,
+       	Time:1000.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:Hammering,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=2,
+        Prop2:Source=8,
+	}
+ recipe Make Bak Bon Dzhow
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	keep Hammer/BallPeenHammer/ClubHammer/WoodenMallet/HammerStone/Stone/Camping.Stone,
+	WildGarlic,
+	Onion,
+	Salt;1,
+	Pepper;1,
+        Vinegar=1,
+	InfectedHumanFlesh;15,
+	Bowl,
+       	Result:BakBonDzhow,
+       	Time:1000.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:Hammering,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=2,
+        Prop2:Source=8,
+	}
+
+item SoylentGreenRaw
+    {
+        Weight	=	1.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToCook	=	100,
+        MinutesToBurn	=	120,
+        DaysFresh	=	1,
+        DaysFresh	=	1,
+        DisplayName	=	Pan of Soylent Green,
+        Icon	=	Soylent,
+	ReplaceOnUse = BakingPan,
+	ReplaceOnCooked     =   SoylentGreenPan,
+        FoodType    =   Meat,
+        Carbohydrates = 34,
+        Proteins = 37,
+        Lipids = 8,
+        Calories = 350,
+        HungerChange	=	-65,
+    } 
+item SoylentGreenInfectedRaw
+    {
+        Weight	=	1.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        MinutesToCook	=	100,
+        MinutesToBurn	=	120,
+        DaysFresh	=	1,
+        DaysFresh	=	1,
+        DisplayName	=	Pan of Soylent Green,
+        Icon	=	Soylent,
+	ReplaceOnUse = BakingPan,
+	ReplaceOnCooked     =   SoylentGreenInfectedPan,
+        FoodType    =   Meat,
+        Carbohydrates = 34,
+        Proteins = 37,
+        Lipids = 8,
+        Calories = 350,
+        HungerChange	=	-65,
+	OnEat = InfectedFlesh,
+    } 
+item SoylentGreenPan
+    {
+        Weight	=	1.1,
+        Type	=	Food,
+        DisplayName	=	Pan of Soylent Green,
+        Icon	=	Soylent,
+	ReplaceOnUse = BakingPan,
+        FoodType    =   Meat,
+        Carbohydrates = 34,
+        Proteins = 37,
+        Lipids = 8,
+        Calories = 350,
+        HungerChange	=	-65,
+    } 
+item SoylentGreenInfectedPan
+    {
+        Weight	=	1.1,
+        Type	=	Food,
+        DisplayName	=	Pan of Soylent Green,
+        Icon	=	Soylent,
+	ReplaceOnUse = BakingPan,
+        FoodType    =   Meat,
+        Carbohydrates = 34,
+        Proteins = 37,
+        Lipids = 8,
+        Calories = 350,
+        HungerChange	=	-65,
+	OnEat = InfectedFlesh,
+    } 
+item SoylentGreenCracker
+    {
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Soylent Green Crackers,
+        Icon	=	SoylentCracker,
+	ReplaceOnUse = BakingPan,
+        FoodType    =   Meat,
+        Carbohydrates = 7,
+        Proteins = 7,
+        Lipids = 1,
+        Calories = 32,
+        HungerChange	=	-13,
+    } 
+item SoylentGreenInfectedCracker
+    {
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Soylent Green Crackers,
+        Icon	=	SoylentCracker,
+	ReplaceOnUse = BakingPan,
+        FoodType    =   Meat,
+        Carbohydrates = 7,
+        Proteins = 7,
+        Lipids = 1,
+        Calories = 32,
+        HungerChange	=	-13,
+	OnEat = InfectedFlesh,
+    } 
+
+
+ recipe Make Soylent Green Crackers
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	SoylentGreenPan,
+       	Result:SoylentGreenCracker=5,
+       	Time:30.0,
+       	Category:Cooking,
+	Sound:AddItemInRecipe,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=2,
+	}
+
+
+ recipe Make Soylent Green Crackers
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	SoylentGreenInfectedPan,
+       	Result:SoylentGreenInfectedCracker=5,
+       	Time:30.0,
+       	Category:Cooking,
+	Sound:AddItemInRecipe,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=2,
+	}
+
+
+ recipe Make Soylent Green
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	Salt;1,
+	Tofu,
+	OpenBeans/BeanBowl,
+	HumanFlesh,
+	BakingPan,
+       	Result:SoylentGreenRaw,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,
+        Prop1:Source=1,
+        Prop2:Source=5,
+	}
+ recipe Make Soylent Green
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	Salt;1,
+	Tofu,
+	OpenBeans/BeanBowl,
+	InfectedHumanFlesh,
+	BakingPan,
+       	Result:SoylentGreenInfectedRaw,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,	
+        Prop1:Source=1,
+        Prop2:Source=5,
+	}
+
+item LectorsLiver
+    {
+        HungerChange	=	-45,
+        Weight	=	1.4,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	2,
+        MinutesToBurn	=	120,
+        DisplayName	=	Lector's Liver With Fava Beans,
+        Icon	=	PanFull,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+	FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 25,
+        Lipids = 76,
+        Calories = 818,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	ReplaceOnUse = Pan,
+    } 
+item LectorsLiverInfected
+    {
+        HungerChange	=	-45,
+        Weight	=	1.4,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	2,
+        MinutesToBurn	=	120,
+        DisplayName	=	Lector's Liver With Fava Beans,
+        Icon	=	PanFull,
+        DaysFresh	=	1,
+        MinutesToCook	=	100,
+	FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 25,
+        Lipids = 76,
+        Calories = 818,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+	ReplaceOnUse = Pan,
+	OnEat = InfectedFlesh,
+    }
+
+
+ recipe Make Lector's Liver With Fava Beans
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	Salt;1,
+	Onion,
+	Pepper;1,
+	Butter;5,
+	OpenBeans/BeanBowl,
+	InfectedHumanLiver,
+	Pan,
+       	Result:LectorsLiverInfected,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,	
+        Prop1:Source=1,
+        Prop2:Source=7,
+	}
+ recipe Make Lector's Liver With Fava Beans
+	{	
+	keep MeatCleaver/KitchenKnife/HuntingKnife/FlintKnife,
+	Salt;1,
+	Onion,
+	Pepper;1,
+	Butter;5,
+	OpenBeans/BeanBowl,
+	HumanLiver,
+	Pan,
+       	Result:LectorsLiver,
+       	Time:30.0,
+       	Category:Cooking,
+	SkillRequired:Cooking=3,
+	Sound:AddItemInRecipe,
+       	NeedToBeLearn:true,
+	OnCreate:IsTainted,		
+        Prop1:Source=1,
+        Prop2:Source=7,
+	}
+    item ToServeMan
+    {
+        Weight	=	0.5,
+        Type	=	Literature,
+        DisplayName	=	To Serve Man,
+        Icon	=	Book,
+        TeachedRecipes  =   Make Cooked Creep;Make Jerk Jerky;Make Bak Bon Dzhow;Make Soylent Green;Make Lector's Liver With Fava Beans,
+        ReplaceOnUse    =   ToServeMan,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+
+item Gore_Mask
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_ShotgunFaceFull,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask2
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_ShotgunFaceLeft,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask3
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_ShotgunFaceRight,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask4
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_FaceSkullLeft,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask5
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_FaceSkullRight,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask6
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = ZedDmg_HEAD_Skin,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+item Gore_Mask7
+	{
+		Type = Clothing,
+		DisplayName = Gore Mask,
+		ClothingItem = Zed_Skin,
+		BodyLocation = Mask,
+		Icon = SurgicalMaskBlue,
+		CanHaveHoles = false,
+	}
+
+  
+}

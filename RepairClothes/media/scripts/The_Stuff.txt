@@ -1,0 +1,43 @@
+module Base
+{
+
+
+	item TheStuff
+	{
+		HungerChange	=	-30,
+		Weight	=	0.2,
+		UnhappyChange	=	-40,
+		StressChange	=	-40,
+		BoredomChange	=	-50,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	The Stuff,
+		Icon	=	TheStuff,
+        	Carbohydrates = 180,
+        	Proteins = 26,
+        	Lipids = 84,
+        	Calories = 0,
+        	Packaged = TRUE,
+		ReplaceOnUse	=	TheStuffEmpty,
+		OnEat = TheStuff,
+        	StaticModel = TheStuff,
+        	EatType = can,
+        	Map             =	media/textures/NeverEnough.png,
+	}
+
+	item TheStuffEmpty
+	{
+		Weight	=	0.01,
+		Type	=	Normal,
+		DisplayName	=	Empty The Stuff Container,
+		Icon	=	TheStuffEmpty,
+	}
+
+
+	model TheStuff
+	{
+		mesh = CanClosed,
+		texture = TheStuff,
+	}
+
+}

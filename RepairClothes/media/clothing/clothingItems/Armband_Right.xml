@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel></m_MaleModel>
+	<m_FemaleModel></m_FemaleModel>
+	<m_GUID>b6733801-feb5-435d-a1a4-4945a9632105</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<m_BaseTextures>ArmBandImp_Black_Right</m_BaseTextures>
+	<m_BaseTextures>ArmBandImp_Blue_Right</m_BaseTextures>
+	<m_BaseTextures>ArmBandImp_Red_Right</m_BaseTextures>
+	<m_BaseTextures>ArmBandImp_Black_Right2</m_BaseTextures>
+</clothingItem>

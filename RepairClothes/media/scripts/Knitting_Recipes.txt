@@ -1,0 +1,156 @@
+module Base
+{
+
+item Yarn
+	{
+		Weight = 0.1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayName = Yarn,
+		Icon			=	Yarn_New,
+		SewingMaterial = true,
+	}	
+    recipe Knit Balaclava
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Hat_BalaclavaFull,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }
+    recipe Knit Beanie
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Hat_Beany,
+		Time:400.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+    recipe Knit Long Socks
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Socks_Long,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+    recipe Knit Open Balaclava
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Hat_BalaclavaFace,
+		Time:400.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+    recipe Knit Polo Neck Sweater
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Jumper_PoloNeck,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+    recipe Knit Round Neck Sweater
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Jumper_RoundNeck,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }
+    recipe Knit Scarf
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Scarf_White,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }
+    recipe Knit Socks
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Socks_Ankle,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }
+    recipe Knit V-neck Sweater
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Jumper_VNeck,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+    recipe Knit V-neck Sweater Vest
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Jumper_TankTopTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }
+    recipe Knit Woolly Hat
+    {
+		keep KnittingNeedles,
+		Yarn,
+		OnCreate:DyeClothes2,
+		Result:Hat_WoolyHat,
+		Time:400.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,
+       		AnimNode:Loot,
+		Prop1:Pen,
+		Prop2:Pen,
+    }	
+}

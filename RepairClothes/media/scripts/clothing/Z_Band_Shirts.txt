@@ -1,0 +1,15 @@
+module Base
+{    item Tshirt_Rock
+    {
+        Type = Clothing,
+        DisplayName = Rock T-Shirt,
+        ClothingItem = Tshirt_Rock,
+        BodyLocation = Tshirt,
+        /*Icon	=	TshirtGeneric,*/
+        IconsForTexture = BandShirt1;BandShirt2;BandShirt3;BandShirt4;BandShirt5;BandShirt6;BandShirt7;BandShirt8;BandShirt9;BandShirt10;BandShirt11;BandShirt12;BandShirt13;BandShirt14;BandShirt15;BandShirt16;BandShirt17;BandShirt18;BandShirt19;BandShirt20;BandShirt21;BandShirt22;BandShirt23;BandShirt24;BandShirt25;BandShirt26;BandShirt27;BandShirt28,
+        BloodLocation = Shirt,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        FabricType = Cotton,
+    }
+}

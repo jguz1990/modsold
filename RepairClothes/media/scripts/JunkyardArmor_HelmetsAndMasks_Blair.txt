@@ -1,0 +1,82 @@
+module Base
+{
+
+
+    item BucketHelmet
+	{
+		Type = Clothing,
+		DisplayName = Bucket Helmet,
+		ClothingItem = BucketHelmet,
+		BodyLocation = Hat,
+		/*Icon = BucketHelmet4,	*/
+	        IconsForTexture = BucketHelmet1;BucketHelmet2;BucketHelmet3;BucketHelmet4,
+		CanHaveHoles = false,
+		BloodLocation = Head,
+		BiteDefense = 100,
+		ScratchDefense = 100,
+		BulletDefense = 25,
+		ChanceToFall = 5,
+		Insulation = 0.25,
+		WaterResistance = 0.2,
+	}
+
+
+	item TightSackMask
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (tight),
+		ClothingItem = TightSackMask,
+		BodyLocation = Mask,
+		BloodLocation = Head,
+		Icon = TightSackMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+        	ScratchDefense = 25,
+        	BiteDefense = 5,
+	}
+	
+ 	item LooseSackMask
+	{
+		Type = Clothing,
+		DisplayName = Sack Mask (loose),
+		ClothingItem = LooseSackMask,
+		BodyLocation = FullHat,
+		BloodLocation = Head,
+		Icon = LooseSackMask,
+		CanHaveHoles = false,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+        WaterResistance = 0.5,
+        	ScratchDefense = 25,
+        	BiteDefense = 5,
+	}
+
+
+/*
+   recipe Craft Gas Mask Filter
+    {
+		Sound:MetalSnips,
+	  	keep [Recipe.GetItemTypes.Hammer],
+		keep MetalSnips,
+		keep MortarPestle,
+		keep Pliers/Multitool/Hydrocraft.HCPliers,
+		keep Scissors,
+		Charcoal,
+		ClothStrips,
+		DuctTape,
+		FineMesh,
+        	Glue,
+		ScrapMetal=2,
+        	Sponge,
+		TinCanEmpty,
+		Result:HomemadeGasMaskFilter,
+		Time:1000.0,
+		SkillRequired:MetalWelding=4,
+		Category:Survivalist,
+    } 
+
+*/
+
+}

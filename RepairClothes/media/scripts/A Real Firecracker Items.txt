@@ -1,0 +1,90 @@
+
+module Base
+{
+
+
+
+
+
+    item Firecracker
+    {
+        OtherHandUse	=	TRUE,
+        MaxRange	=	10,
+      WeaponSprite = RealFirecracker,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Throw,
+        UseSelf	=	TRUE,
+        DisplayName	=	Firecracker,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	MolotovCocktail,
+        MinDamage	=	0,
+        Weight	=	0.1,
+        MaxDamage	=	0,
+        OtherHandRequire	=	Lighter,
+	/*RequireInHandOrInventory	=	Lighter/Matches,*/
+        MaxHitCount	=	0,
+        FirePower  =   0,
+        FireRange  =   0,
+        Icon	=	Firecracker,
+        NoiseRange  =   17,
+        ExplosionSound  =   Firecracker,
+    }
+  
+
+
+    item HistoryOfFireworks
+    {
+        Weight	=	0.5,
+        Type	=	Literature,
+        DisplayName	=	The History of Fireworks,
+        Icon	=	Book,
+        TeachedRecipes  =   Make Firecracker,
+        ReplaceOnUse    =   HistoryOfFireworks,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGround,
+    }
+
+
+  recipe Make Firecracker
+    {
+       keep Scissors,,
+       Glue=1,
+	GunPowder=1,
+	SheetPaper2,
+	Twine=1,
+
+       Result:Firecracker,
+       NeedToBeLearn:true,
+       Time:1000.0,
+    }
+
+
+
+	model RealFirecracker
+	{
+		mesh = Candle,
+		texture = RealFirecracker,
+			scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.5,
+		}
+
+	}
+
+	sound Firecracker
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Firecracker1.ogg,
+       			 distanceMax = 200,
+		}
+	}
+
+}

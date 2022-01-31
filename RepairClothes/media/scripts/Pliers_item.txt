@@ -1,0 +1,54 @@
+module Base
+{
+ 
+	model PA_Pliers
+	{
+		mesh = PA_Pliers,
+		texture = PA_Pliers,
+		scale = 0.0005,
+        	invertX = FALSE,
+			rotate = 0.0000 0.0000 0.0000,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.0005,
+		}
+	}
+
+
+	item Pliers
+    {
+        Weight			= 	0.5,
+        Type    		= 	Normal,
+        DisplayName     = 	Pliers,
+        icon 			= 	Pliers,
+		Tags 			= 	Pliers,
+		AttachmentType 	= 	Screwdriver,
+		StaticModel = PA_Pliers,
+		WorldStaticModel = PA_Pliers,
+		primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+    }
+
+
+
+
+
+
+	sound WireCutting
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/WireCutting.ogg,
+		}
+	}
+
+
+
+
+
+}
+/*"Pliers" (https://skfb.ly/6XM7U) by Batuhan13 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/

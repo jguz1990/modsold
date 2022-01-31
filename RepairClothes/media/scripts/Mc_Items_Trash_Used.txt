@@ -1,0 +1,485 @@
+module Base
+{
+	imports
+	{
+		Base
+	}
+
+	/*Items*/
+
+	model BandaidDirty
+	{
+		mesh = WorldItems/BandAid,
+		texture = WorldItems/BandagesDirty,
+		scale = 0.6,
+	}
+	item BaconEmpty
+    	{
+        	DisplayName			=	Bacon Packaging,
+        	Icon				=	BaconEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+
+	item CigarettesButt
+    	{
+        	DisplayName			=	Cigarette Butt,
+        	Icon				=	CigarettesButt,
+        	Weight				=	0.01,
+		Type				=	Normal,
+		WorldStaticModel = SimpleButt,
+	}
+	model SimpleButt
+	{
+		mesh = simplebutt_rotated,
+		texture = Cigarette,
+	}
+
+	item BoxOfJarsEmpty
+    	{
+        	DisplayName			=	Empty Jar Box,
+        	Icon				=	BoxOfJarsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = BoxOfJars,
+    	}
+
+	item SutureNeedleEmpty
+    	{
+        	DisplayName			=	Suture Needle Packaging,
+        	Icon				=	SutureNeedleEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+		WorldStaticModel = SutureNeedle,
+    	}
+	item BandaidDirty
+    	{
+        	DisplayName			=	Dirty Adhesive Bandaid,
+        	Icon				=	BandaidDirty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+       			 WorldStaticModel = BandAidDirty,
+    	}
+
+	item NailBoxEmpty
+    	{
+        	DisplayName			=	Small Cardboard Box,
+        	Icon				=	NailBoxEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = NailsBox,
+    	}
+
+	item PaperclipBoxEmpty
+    	{
+        	DisplayName			=	Small Cardboard Box,
+        	Icon				=	PaperclipBoxEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = PaperclipBox,
+    	}
+
+	item ScrewBoxEmpty
+    	{
+        	DisplayName			=	Small Cardboard Box,
+        	Icon				=	ScrewBoxEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = ScrewsBox,
+    	}
+
+	item AntibioticsEmpty
+    	{
+        	DisplayName			=	Empty Antibiotics Bottle,
+        	Icon				=	AntibioticsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Antibiotics,
+    	}
+
+	item AvocadoPit
+    	{
+        	DisplayName			=	Avocado Pit,
+        	Icon				=	AvocadoPit,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item CornCob
+    	{
+        	DisplayName			=	Corncob,
+        	Icon				=	CornCob,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item LemonPeel
+    	{
+        	DisplayName			=	Lemon Peel,
+        	Icon				=	LemonPeel,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item PeachPit
+    	{
+        	DisplayName			=	Peach Pit,
+        	Icon				=	PeachPit,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item PineappleCrown
+    	{
+        	DisplayName			=	PineappleCrown,
+        	Icon				=	PineappleCrown,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item CherryPits
+    	{
+        	DisplayName			=	Cherry Pits,
+        	Icon				=	CherryPits,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item WatermelonRind
+    	{
+        	DisplayName			=	Watermelon Rind,
+        	Icon				=	WatermelonRind,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item OrangePeel
+    	{
+        	DisplayName			=	Orange Peel,
+        	Icon				=	OrangePeel,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item AppleCore
+    	{
+        	DisplayName			=	Apple Core,
+        	Icon				=	AppleCore,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item BananaPeel
+    	{
+        	DisplayName			=	Banana Peel,
+        	Icon				=	BananaPeel,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item FishBones
+    	{
+        	DisplayName			=	Fish Bones,
+        	Icon				=	FishBones,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item SmallAnimalBones
+    	{
+        	DisplayName			=	Fish Bones,
+        	Icon				=	FishBones,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item BirdBones
+    	{
+        	DisplayName			=	Bird Bones,
+        	Icon				=	BirdBones,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item BonePieces
+    	{
+        	DisplayName			=	Bone Pieces,
+        	Icon				=	BonePieces,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item TofuEmpty
+    	{
+        	DisplayName			=	Tofu Packaging,
+        	Icon				=	TofuEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Tofu,
+    	}
+
+	item EggShell
+    	{
+        	DisplayName			=	Egg Shell,
+        	Icon				=	EggShell,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Egg,
+    	}
+
+	item JuiceBoxEmpty
+    	{
+        	DisplayName			=	Empty Juice Box Empty,
+        	Icon				=	JuiceBoxEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = JuiceBox,
+    	}
+
+	item IcecreamEmpty
+    	{
+        	DisplayName			=	Icecream Carton,
+        	Icon				=	IcecreamEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = IceCream,
+    	}
+
+	item CandyWrapper
+    	{
+        	DisplayName			=	Candy Wrapper,
+        	Icon				=	CandyWrapper,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = CandyPackage,
+    	}
+
+	item CerealEmpty
+    	{
+        	DisplayName			=	Cereal Box,
+        	Icon				=	CerealEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Cereal,
+    	}
+
+	item SunflowerSeedsEmpty
+    	{
+        	DisplayName			=	Sunflower Seeds Bag,
+        	Icon				=	SunflowerSeedsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = SunflowerSeeds,
+    	}
+
+	item CandyEmpty
+    	{
+        	DisplayName			=	Candy Packaging,
+        	Icon				=	CandyEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = CandyPackage,
+    	}
+
+	item PopcornEmpty
+    	{
+        	DisplayName			=	Popcorn Bag,
+        	Icon				=	PopcornEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item ChocolateEmpty
+    	{
+        	DisplayName			=	Chocolate Wrapper,
+        	Icon				=	ChocolateEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Chocolate,
+    	}
+
+	item ButterEmpty
+    	{
+        	DisplayName			=	Butter Wrapper,
+        	Icon				=	ButterEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item CrispsEmpty
+    	{
+        	DisplayName			=	Crisps Bag,
+        	Icon				=	CrispsEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Chips,
+    	}
+
+	item TVDinnerEmpty
+    	{
+        	DisplayName			=	TV Dinner Packaging,
+        	Icon				=	TVDinnerEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = TVDinner_Ground,
+    	}
+
+	item EggCartonEmpty
+    	{
+        	DisplayName			=	Empty Egg Carton,
+        	Icon				=	EggCartonEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = EggCarton,
+    	}
+
+	item RiceEmpty
+    	{
+        	DisplayName			=	Empty Rice Sack,
+        	Icon				=	Rice,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Rice,
+    	}
+
+	item PastaEmpty
+    	{
+        	DisplayName			=	Empty Pasta Box,
+        	Icon				=	PastaEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Pasta,
+    	}
+
+	item TeaBag2Used
+    	{
+        	DisplayName			=	Used Teabag,
+        	Icon				=	TeaBag2Used,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = TeaBag,
+    	}
+
+	item MacandcheeseEmpty
+    	{
+        	DisplayName			=	Empty Macandcheese Box,
+        	Icon				=	MacandcheeseEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = MacAndCheese,
+    	}
+
+	item YoghurtEmpty
+    	{
+        	DisplayName			=	Empty Yoghurt Packaging,
+        	Icon				=	Yoghurt,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Yogurt,
+    	}
+
+	item OatsRawEmpty
+    	{
+        	DisplayName			=	Empty Oats Cannister,
+        	Icon				=	OatsRawEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = CanOfOats,
+    	}
+
+	item BurgerEmpty
+    	{
+        	DisplayName			=	Burger Wrapper,
+        	Icon				=	BurgerEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item FriesEmpty
+    	{
+        	DisplayName			=	Fries Carton,
+        	Icon				=	FriesEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+
+	item ProcessedCheeseEmpty
+    	{
+        	DisplayName			=	Processed Cheese Wrapper,
+        	Icon				=	ProcessedCheeseEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item NailsBoxEmpty
+    	{
+        	DisplayName			=	Empty Nails Box,
+        	Icon				=	NailsBoxEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = NailsBox,
+    	}
+
+	item PeasEmpty
+    	{
+        	DisplayName			=	Empty Peas Bag,
+        	Icon				=	PeasEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Peas,
+    	}
+
+	item BeefJerkyEmpty
+    	{
+        	DisplayName			=	Beef Jerky Packaging,
+        	Icon				=	BeefJerkyEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item HamEmpty
+    	{
+        	DisplayName			=	Ham Packaging,
+        	Icon				=	HamEmpty,
+        	Weight				=	0.1,
+		Type				=	Normal,
+    	}
+
+	item BookTorn
+    	{
+        	DisplayName			=	Torn Book,
+        	Icon				=	BookTorn,
+        	Weight				=	0.5,
+		Type				=	Normal,
+		WorldStaticModel = BookClosedGround,
+    	}
+
+	item MagazineTorn
+    	{
+        	DisplayName			=	Torn Magazine,
+        	Icon				=	MagazineTorn2,
+        	Weight				=	0.2,
+		Type				=	Normal,
+        WorldStaticModel = MagazineGround,
+    	}
+
+	item NewspaperTorn
+    	{
+        	DisplayName			=	Torn Newspaper,
+        	Icon				=	NewspaperTorn,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = Newspaper_Ground,
+    	}
+
+	item ComicBookTorn
+    	{
+        	DisplayName			=	Torn Comic Book,
+        	Icon				=	ComicBookTorn,
+        	Weight				=	0.1,
+		Type				=	Normal,
+        WorldStaticModel = MagazineOpenGround,
+    	}
+}

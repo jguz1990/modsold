@@ -1,0 +1,236 @@
+module Base
+{
+
+	recipe Bleach Yarn
+    {
+	Sound:GetWater,
+	keep Yarn,
+	/*keep [BleachOrDye],*/
+	BucketEmpty,
+	Bleach,
+    Result:BucketEmpty,
+	OnCreate:BleachClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	Prop1:BleachBottle,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Bleach Yarn
+    {
+	Sound:GetWater,
+	keep Yarn,
+	Pot,
+	Bleach,
+    Result:Pot,
+	OnCreate:BleachClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	Prop1:BleachBottle,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+
+	
+	recipe Dye Yarn Black
+    {
+	FabricDyeBlack,
+	Sound:GetWater,
+	keep Yarn,
+	/*keep [BleachOrDye],*/
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Blue
+    {
+	FabricDyeBlue,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Green
+    {
+	FabricDyeGreen,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Light Brown
+    {
+	FabricDyeLightBrown,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Pink
+    {
+	FabricDyePink,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Red
+    {
+	FabricDyeRed,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Yellow
+    {
+	FabricDyeYellow,
+	Sound:GetWater,
+	keep Yarn,
+	BucketWaterFull=25,
+    Result:BucketEmpty,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:Bucket,
+	AnimNode:Loot,
+    }
+	
+	recipe Dye Yarn Black
+    {
+	FabricDyeBlack,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Blue
+    {
+	FabricDyeBlue,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Green
+    {
+	FabricDyeGreen,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }	
+	recipe Dye Yarn Light Brown
+    {
+	FabricDyeLightBrown,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Pink
+    {
+	FabricDyePink,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Red
+    {
+	FabricDyeRed,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+	recipe Dye Yarn Yellow
+    {
+	FabricDyeYellow,
+	Sound:GetWater,
+	keep Yarn,
+	WaterPot=25,
+    Result:Pot,
+	OnCreate:DyeClothes,
+	OnTest:ClothingOffTest,
+    Time:200.0,
+	RemoveResultItem:true,
+	Prop2:CookingPot,
+	AnimNode:Loot,
+    }
+
+
+
+}

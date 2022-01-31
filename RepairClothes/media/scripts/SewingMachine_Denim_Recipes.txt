@@ -1,0 +1,150 @@
+module Base
+{
+
+item Denim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	21,
+		ColorGreen 		=	96,
+		ColorBlue 		=	189,
+	}
+item BlackDenim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Black Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	64,
+		ColorGreen 		=	64,
+		ColorBlue 		=	64,
+	}
+item LightDenim
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayCategory = Item,
+		DisplayName = Light Denim Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	152,
+		ColorGreen 		=	158,
+		ColorBlue 		=	176,
+	}
+  recipe Sew Denim Shirt
+    {
+		Sound:SewingMachine,
+		Denim/BlackDenim/LightDenim,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewDenim,
+		Result:Shirt_Denim,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+/*
+    recipe Sew Denim Shirt
+    {
+		Sound:SewingMachine,
+		Denim,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewDenimShirt0,
+		Result:Shirt_Denim,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Black Denim Shirt
+    {
+		Sound:SewingMachine,
+		BlackDenim,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewDenimShirt1,
+		Result:Shirt_Denim,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Light Denim Shirt
+    {
+		Sound:SewingMachine,
+		LightDenim,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewDenimShirt2,
+		Result:Shirt_Denim,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }*/
+    recipe Sew Overalls
+    {
+		Sound:SewingMachine,
+		Denim/LightDenim,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Dungarees,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Jeans
+    {
+		Sound:SewingMachine,
+		Denim/BlackDenim/LightDenim,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewDenim,
+		Result:Trousers_Denim,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Denim Jeans
+    {
+		Sound:SewingMachine,
+		Denim/LightDenim,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:TrousersMesh_DenimLight,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Baggy Jeans
+    {
+		Sound:SewingMachine,
+		Denim/LightDenim,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Trousers_JeanBaggy,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+}

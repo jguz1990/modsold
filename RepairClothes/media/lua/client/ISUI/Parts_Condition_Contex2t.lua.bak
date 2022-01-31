@@ -1,0 +1,246 @@
+function partCondition2 (player, context, items)
+	--print("TESTING!!!!!!!!!!!!!!!!!!!!!!!!")
+
+	local itemsCraft = {};
+    local c = 0;
+    -- local isAllFood = true;
+	-- local isWeapon = nil;
+	-- local isHandWeapon = nil;
+	-- local isAllPills = true;
+	-- local clothing;
+	-- local recipe = nil;
+    -- local evorecipe = nil;
+    -- local baseItem = nil;
+	-- local isAllLiterature = true;
+	-- local canBeActivated = false;
+	-- local isAllBandage = true;
+	-- local unequip = false;
+    -- local isReloadable = false;
+	-- local waterContainer = nil;
+	-- local canBeDry = nil;
+	-- local canBeEquippedBack = false;
+	-- local canBeEquippedTorsoExtra = false;
+	-- local canBeEquippedBelt2 = false;
+	-- local twoHandsItem = nil;
+    -- local brokenObject = nil;
+    -- local canBeRenamed = nil;
+    -- local canBeRenamedFood = nil;
+    -- local pourOnGround = nil
+    -- local canBeWrite = nil;
+    -- local force2Hands = false;
+    -- local remoteController = nil;
+    -- local remoteControllable = nil;
+    -- local generator = nil;
+    -- local corpse = nil;
+    -- local alarmClock = nil;
+    -- local inPlayerInv = nil;
+    -- local drainable = nil;
+    -- local map = nil;
+    -- local carBattery = nil;
+    -- local carBatteryCharger = nil;
+    -- local clothingRecipe = nil;
+    -- local clothingItemExtra = nil;
+    -- local magazine = nil;
+    -- local bullet = nil;
+	local partCondition = nil
+
+    local playerObj = getSpecificPlayer(player)
+
+	ISInventoryPaneContextMenu.removeToolTip();
+
+	getCell():setDrag(nil, player);
+
+    local containerList = ISInventoryPaneContextMenu.getContainers(playerObj)
+    local testItem = nil;
+    local editItem = nil;
+    for i,v in ipairs(items) do
+        testItem = v;
+        if not instanceof(v, "InventoryItem") then
+            --print(#v.items);
+            if #v.items == 2 then
+                -- editItem = v.items[1];
+            end
+            testItem = v.items[1];
+        else
+            -- editItem = v
+        end
+        -- if instanceof(testItem, "Key") or testItem:getType() == "KeyRing" then
+            -- canBeRenamed = testItem;
+        -- end
+        -- if instanceof(testItem, "Clothing") and testItem:getClothingItemExtraOption() then
+            -- clothingItemExtra = testItem;
+        -- end
+		-- if not testItem:isCanBandage() then
+			-- isAllBandage = false;
+		-- end
+        -- if testItem:getCategory() ~= "Food" then
+            -- isAllFood = false;
+        -- end
+		-- if testItem:getCategory() == "Clothing" then
+            -- clothing = testItem;
+        -- end
+		-- if testItem:getType() == "DishCloth" or testItem:getType() == "BathTowel" and getSpecificPlayer(player):getBodyDamage():getWetness() > 0 then
+			-- canBeDry = true;
+        -- end
+        -- if testItem:isBroken() or testItem:getCondition() < testItem:getConditionMax() then
+            -- brokenObject = testItem;
+        -- end
+        -- if instanceof(testItem, "DrainableComboItem") then
+            -- drainable = testItem;
+        -- end
+        -- if testItem:getContainer() and testItem:getContainer():isInCharacterInventory(playerObj) then
+            -- inPlayerInv = testItem;
+        -- end
+        -- if testItem:getMaxAmmo() > 0 and not instanceof(testItem, "HandWeapon") then
+            -- magazine = testItem;
+        -- end
+        -- if testItem:getDisplayCategory() == "Ammo" then
+            -- bullet = testItem;
+        -- end
+        -- if getSpecificPlayer(player):isEquipped(testItem) then
+			-- unequip = true;
+        -- end
+        -- if ISInventoryPaneContextMenu.startWith(testItem:getType(), "CarBattery") and testItem:getType() ~= "CarBatteryCharger" then
+            -- carBattery = testItem;
+        -- end
+        -- if testItem:getType() == "CarBatteryCharger" then
+            -- carBatteryCharger = testItem;
+        -- end
+        -- if testItem:getMap() then
+            -- map = testItem;
+        -- end
+		-- if testItem:getCategory() ~= "Literature" or testItem:canBeWrite() then
+            -- isAllLiterature = false;
+        -- end
+        -- if testItem:getCategory() == "Literature" and testItem:canBeWrite() then
+            -- canBeWrite = testItem;
+        -- end
+		-- if testItem:canBeActivated() and (testItem == getSpecificPlayer(player):getSecondaryHandItem() or testItem == getSpecificPlayer(player):getPrimaryHandItem()) then
+            -- canBeActivated = true;
+        -- end
+		-- -- all items can be equiped
+		-- if (instanceof(testItem, "HandWeapon") and testItem:getCondition() > 0) or (instanceof(testItem, "InventoryItem") and not instanceof(testItem, "HandWeapon")) then
+            -- isWeapon = testItem;
+        -- end
+        -- if instanceof(testItem, "HandWeapon") then
+            -- isHandWeapon = testItem
+        -- end
+        -- -- remote controller
+        -- if testItem:isRemoteController() then
+            -- remoteController = testItem;
+        -- end
+        -- if isHandWeapon and isHandWeapon:canBeRemote() then
+            -- remoteControllable = isHandWeapon;
+        -- end
+		-- if instanceof(testItem, "InventoryContainer") and ( testItem:canBeEquipped() == "Back" )then
+			-- canBeEquippedBack = true;
+        -- end
+		-- if instanceof(testItem, "InventoryContainer") and (  testItem:canBeEquipped() == "TorsoExtra" )then
+			-- canBeEquippedTorsoExtra = true;
+        -- end
+		-- if instanceof(testItem, "InventoryContainer") and (  testItem:canBeEquipped() == "Belt2" )then
+			-- canBeEquippedBelt2 = true;
+        -- end
+        -- if instanceof(testItem, "InventoryContainer") then
+            -- canBeRenamed = testItem;
+        -- end
+        -- if testItem:getType() == "Generator" then
+            -- generator = testItem;
+        -- end
+        -- if testItem:getType() == "CorpseMale" or testItem:getType() == "CorpseFemale" then
+            -- corpse = testItem;
+        -- end
+        -- if instanceof(testItem, "AlarmClock") then
+            -- alarmClock = testItem;
+        -- end
+        -- if instanceof(testItem, "Food")  then -- Check if it's a recipe from the evolved recipe and have at least 3 ingredient, so we can name them
+            -- for i=0,getEvolvedRecipes():size()-1 do
+                -- local evoRecipeTest = getEvolvedRecipes():get(i);
+                -- if evoRecipeTest:isResultItem(testItem) and testItem:haveExtraItems() and testItem:getExtraItems():size() >= 3 then
+                    -- canBeRenamedFood = testItem;
+                -- end
+            -- end
+        -- end
+		-- if testItem:isTwoHandWeapon() and testItem:getCondition() > 0 then
+			-- twoHandsItem = testItem;
+        -- end
+        -- if testItem:isRequiresEquippedBothHands() and testItem:getCondition() > 0 then
+            -- force2Hands = true;
+        -- end
+        -- --> Stormy
+		-- if(not getCore():isNewReloading() and ReloadUtil:isReloadable(testItem, getSpecificPlayer(player))) then
+			-- isReloadable = true;
+        -- end
+		-- -->> Stormy
+		-- if not ISInventoryPaneContextMenu.startWith(testItem:getType(), "Pills") then
+            -- isAllPills = false;
+        -- end
+        -- if testItem:isWaterSource() then
+            -- waterContainer = testItem;
+        -- end
+        -- if not instanceof(testItem, "Literature") and ISInventoryPaneContextMenu.canReplaceStoreWater(testItem) then
+            -- pourOnGround = testItem
+        -- end
+        -- -- if item is not a clothing, use ClothingRecipesDefinitions
+        -- if not playerObj:isEquippedClothing(testItem) and (ClothingRecipesDefinitions[testItem:getType()] or (testItem:getFabricType() and instanceof(testItem, "Clothing"))) then
+            -- clothingRecipe = testItem;
+        -- end
+        -- evorecipe = RecipeManager.getEvolvedRecipe(testItem, getSpecificPlayer(player), containerList, true);
+        -- if evorecipe then
+            -- baseItem = testItem;
+        -- end
+        -- itemsCraft[c + 1] = testItem;
+		local weaponParts = getSpecificPlayer(player):getInventory():getItemsFromCategory("WeaponPart");
+		if testItem:getCondition() and weaponParts:contains(testItem) then
+		--if testItem:getCondition() and testItem:getPartType() then
+		partCondition = testItem:getCondition() end
+		--partCondition = testItem:getCondition() end
+        c = c + 1;
+        -- you can equip only 1 weapon
+        -- if c > 1 then
+            -- --~ 			isWeapon = false;
+            -- isHandWeapon = nil
+            -- isAllLiterature = false;
+            -- canBeActivated = false;
+            -- isReloadable = false;
+            -- unequip = false;
+            -- canBeEquippedBack = false;
+            -- canBeEquippedTorsoExtra = false;
+            -- canBeEquippedBelt2 = false;
+            -- brokenObject = nil;
+        -- end
+		-- if testItem:getAmmoType() then 
+			-- print(getText("AmmoType: " .. tostring(testItem:getAmmoType()) ))
+		-- end
+	context:addOption(getText("Item Icon: " .. tostring(testItem:getTexture()) .. "%" ))
+	if testItem:getWorldSprite() then
+		context:addOption(getText("Item World Sprite: " .. tostring(testItem:getWorldSprite()) .. "%" ))-- , items, ISInventoryPaneContextMenu.onWearItems, player);
+	end
+    end
+
+    --triggerEvent("OnPreFillInventoryObjectContextMenu", player, context, items);
+
+    context.blinkOption = ISInventoryPaneContextMenu.blinkOption;
+
+
+
+
+    if c == 0 then
+        return;
+    end
+    
+
+	if partCondition then
+		partCondition = (partCondition * 10)
+		context:addOption(getText("Weapon Part Condition: " .. tostring(partCondition) .. "%" ))-- , items, ISInventoryPaneContextMenu.onWearItems, player);
+    end
+	
+	-- if items:getItemsFromCategory("WeaponPart") then 
+		-- context:addOption(getText("Part Condition: " .. tostring(items:getCondition()) ))-- , items, ISInventoryPaneContextMenu.onWearItems, player);
+	-- end
+
+	
+	end
+	
+-- Events.OnPreFillInventoryObjectContextMenu.Add(partCondition)	
+--Events.OnFillInventoryObjectContextMenu.Add(VestsAndPouches)

@@ -1,0 +1,145 @@
+module Base
+{
+  item CopyPaper
+    {
+        Type	=	Drainable,
+        Weight	=	5,
+        UseDelta	=	0.01,
+        DisplayName	=	Package of Photocopier Paper,
+        Icon	=	CopyPaper,
+		ReplaceOnDeplete = CopyPaper_Wrapper,
+    }
+  item CopyPaper_Wrapper
+    {
+        Type	=	Normal,
+        Weight	=	0.1,
+        UseDelta	=	0.01,
+        DisplayName	=	Photocopier Paper Package Wrapper,
+        Icon	=	CopyPaper,
+    }
+	item Photocopier_x
+	{
+		Type			= Moveable,
+		WorldObjectSprite	= photocopier_x_0,
+		DisplayName	=	Photocopier,
+		Icon	=	Photocopier_x,
+        	Weight	=	40,
+	}
+	
+
+    recipe Photocopy Sheet of Paper
+    {
+	Sound:Photocopier,
+    CanBeDoneFromFloor:true,
+    keep SheetPaper2,
+	CopyPaper = 1,
+	/*SheetPaper2,*/
+    Result:SheetPaper2,
+    Time:200,
+    OnCanPerform:CanPhotocopyPhotocopier,
+	OnTest:CanPhotocopyPage,
+	OnCreate:PhotocopySheet,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Photocopier as well as a Package of Photocopier Paper and a Sheet of Paper with Writing on it.,
+    }
+	
+	recipe Photocopy Notebook
+    {
+	Sound:Photocopier2,
+    CanBeDoneFromFloor:true,
+    keep Notebook,
+	Paperclip,
+	CopyPaper = 10,
+	/*SheetPaper2,*/
+    Result:Notebook,
+    Time:2000,
+    OnCanPerform:CanPhotocopyPhotocopier,
+	OnTest:CanPhotocopyBook,
+	OnCreate:PhotocopyBook,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Photocopier as well as a Package of Photocopier Paper and a Notebook with Writing in it.,
+    }	
+	recipe Photocopy Journal
+    {
+	Sound:Photocopier3,
+    CanBeDoneFromFloor:true,
+    keep Journal,
+	Paperclip,
+	CopyPaper = 20,
+	/*SheetPaper2,*/
+    Result:Journal,
+    Time:4000,
+    OnCanPerform:CanPhotocopyPhotocopier,
+	OnTest:CanPhotocopyBook,
+	OnCreate:PhotocopyBook,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Photocopier as well as a Package of Photocopier Paper and a Journal with Writing in it.,
+    }
+
+	recipe Photocopy Recipes
+    {
+	Sound:Photocopier3,
+    CanBeDoneFromFloor:true,
+    keep [Recipe.GetItemTypes.HasRecipeMag],
+	Paperclip,
+	CopyPaper = 20,
+	/*SheetPaper2,*/
+    Result:Magazine,
+    Time:4000,
+    OnCanPerform:CanPhotocopyPhotocopier,
+	/*OnTest:CanPhotocopyBook,*/
+	OnCreate:PhotocopyRecipes,
+	RemoveResultItem:true,
+    Tooltip:Requires a Powered Photocopier as well as a Package of Photocopier Paper and a Magazine with Recipes in it.,
+    }
+
+
+    recipe Photocopy Map
+    {
+	Sound:Photocopier,
+    CanBeDoneFromFloor:true,
+    keep [Recipe.GetItemTypes.HasMap],
+	CopyPaper = 1,
+	/*SheetPaper2,*/
+    Result:SheetPaper2,
+    Time:200,
+    OnCanPerform:CanPhotocopyPhotocopier,
+	OnCreate:PhotocopyMap,
+	/*RemoveResultItem:true,*/
+    Tooltip:Requires a Powered Photocopier as well as a Package of Photocopier Paper and a Map.,
+    }
+
+    recipe Pull Single Sheet Out Of Package Of Copy Paper
+    {
+	CopyPaper = 1,
+    Result:SheetPaper2,
+    Time:20,
+	Sound:PutItemInBag,
+    }
+
+	sound Photocopier
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/photocopier_x.ogg,
+		}
+	}
+	sound Photocopier2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/photocopier_x2.ogg,
+		}
+	}
+	sound Photocopier3
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/photocopier_x3.ogg,
+		}
+	}
+
+}

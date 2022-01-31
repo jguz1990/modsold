@@ -1,0 +1,312 @@
+module Base
+{
+
+	item Sackcloth
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Sackcloth,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	195,
+		ColorGreen 		=	176,
+		ColorBlue 		=	145,
+	}
+
+	item Cordura
+	{
+		Weight = 1,
+		Type			= Clothing,
+		DisplayCategory = Item,
+		DisplayName = Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+	}
+	item BlackCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Black Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	64,
+		ColorGreen 		=	64,
+		ColorBlue 		=	64,
+	}
+	item BlueCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Blue Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	0,
+		ColorGreen 		=	0,
+		ColorBlue 		=	255,
+	}
+	item GreenCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Green Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	0,
+		ColorGreen 		=	255,
+		ColorBlue 		=	0,
+	}
+	item GreyCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Grey Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	128,
+		ColorGreen 		=	128,
+		ColorBlue 		=	128,
+	}
+	item KhakiCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Khaki Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	195,
+		ColorGreen 		=	176,
+		ColorBlue 		=	145,
+	}
+	item OrangeCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Orange Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	255,
+		ColorGreen 		=	165,
+		ColorBlue 		=	0,
+	}
+	item RedCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Red Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial = true,
+		ColorRed 		=	255,
+		ColorGreen 		=	0,
+		ColorBlue 		=	0,
+	}
+	item CamouflageCordura
+	{
+		Weight = 1,
+		Type			= Normal,
+		DisplayName = Woodland Camo Cordura Fabric,
+		Icon			=	CamouflageFabric,
+		SewingMaterial = true,
+	}
+	item OliveDrabCordura
+	{
+		Weight 			=	1,
+		Type			=	Normal,
+		DisplayName 	=	Olive Drab Cordura Fabric,
+		Icon			=	Fabric,
+		SewingMaterial 	=	true,
+		ColorRed 		=	107,
+		ColorGreen 		=	142,
+		ColorBlue 		=	35,
+		Tooltip 		=	OLIVE DARB!,
+	}
+
+    recipe Sew Big Hiking Bag
+    {
+		Sound:SewingMachine,
+		BlueCordura=2,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_BigHikingBag,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Big Hiking Bag
+    {
+		Sound:SewingMachine,
+		GreenCordura=2,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_BigHikingBag,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+
+    recipe Sew Big Hiking Bag
+    {
+		Sound:SewingMachine,
+		RedCordura=2,
+		Thread=8,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_BigHikingBag,
+		Time:400.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Duffle Bag
+    {
+		Sound:SewingMachine,
+		BlueCordura/GreenCordura/GreyCordura,
+		Thread=6,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_DuffelBag,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+	
+    recipe Sew Duffle Bag
+    {
+		Sound:SewingMachine,
+		Cordura,
+		Thread=6,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Bag_DuffelBagTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Fanny Pack
+    {
+		Sound:SewingMachine,
+		BlackCordura,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Bag_FannyPackFront,
+		Time:400.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Hiking Bag
+    {
+		Sound:SewingMachine,
+		BlueCordura/GreenCordura/RedCordura,
+		Thread=7,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_NormalHikingBag,
+		Time:400.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Large Backpack
+    {
+		Sound:SewingMachine,
+		OliveDrabCordura=2,
+		Thread=10,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Bag_ALICEpack,
+		Time:400.0,
+		SkillRequired:Tailoring=10,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Military Backpack
+    {
+		Sound:SewingMachine,
+		CamouflageCordura=2,
+		Thread=10,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:Bag_ALICEpack_Army,
+		Time:400.0,
+		SkillRequired:Tailoring=10,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Sack
+    {
+		Sound:Scissors,
+		Sackcloth,
+		Thread=2,
+		keep Scissors,
+		Result:EmptySandbag,
+		Time:400.0,
+		Category:Tailoring,
+    }
+    recipe Sew Sack
+    {
+		Sound:SewingMachine,
+		Sackcloth,
+		Thread=2,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		Result:EmptySandbag,
+		Time:100.0,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Satchel
+    {
+		Sound:SewingMachine,
+		KhakiCordura/OliveDrabCordura,
+		Thread=4,
+		keep Scissors,
+		ScrapMetal,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_Satchel,
+		Time:400.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+    recipe Sew Satchel
+    {
+		Sound:Scissors,
+		KhakiCordura/OliveDrabCordura,
+		Thread=4,
+		keep Scissors,
+		ScrapMetal,
+		OnCreate:SewBag,
+		Result:Bag_Satchel,
+		Time:4000.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+    }
+    recipe Sew School Bag
+    {
+		Sound:SewingMachine,
+		BlackCordura/BlueCordura,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:SewBag,
+		Result:Bag_Schoolbag,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }
+}

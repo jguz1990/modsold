@@ -1,0 +1,121 @@
+module Base
+{
+
+
+
+
+
+	item RoadsignBracers
+	{
+		Type = Clothing,
+		DisplayName = Roadsign Bracers,
+		ClothingItem = RoadsignBracers,
+		BodyLocation = LowerArms,
+		/*BloodLocation = Jumper,*/
+		Icon = RoadsignBracers,
+		ConditionLowerChanceOneIn = 50,
+        	ConditionMax = 16,
+        	RemoveOnBroken = true,
+		CombatSpeedModifier = 0.95,
+        	ScratchDefense = 50,
+        	BiteDefense = 50,
+		BulletDefense = 25,
+		Weight = 1,
+	} 
+
+
+
+	item BurlapBracers
+	{
+		Type = Clothing,
+		DisplayName = Burlap Forearm Wraps,
+		ClothingItem = BurlapBracers,
+		BodyLocation = LowerArms,
+		/*BloodLocation = Jumper,*/
+		Icon = Burlap2,
+		ConditionLowerChanceOneIn = 50,
+        	ConditionMax = 16,
+        	RemoveOnBroken = true,
+		CombatSpeedModifier = 0.95,
+        	ScratchDefense = 50,
+        	BiteDefense = 25,
+		Weight = 1,
+	} 
+
+
+
+	item BurlapBracers2
+	{
+		Type = Clothing,
+		DisplayName = Burlap Forearm Wraps 2,
+		ClothingItem = BurlapBracers2,
+		BodyLocation = LowerArms,
+		/*BloodLocation = Jumper,*/
+		Icon = Burlap2,
+		ConditionLowerChanceOneIn = 50,
+        	ConditionMax = 16,
+        	RemoveOnBroken = true,
+		CombatSpeedModifier = 0.95,
+        	ScratchDefense = 50,
+        	BiteDefense = 50,
+		Weight = 1,
+	} 
+
+  
+    item RoadsignCuirass
+    {
+        Type = Clothing,
+        DisplayName = Roadsign Cuirass,
+        ClothingItem = RoadsignCuirass,
+        BodyLocation = TorsoExtra,
+        Icon = RoadsignCuirass,
+        BloodLocation = ShirtNoSleeves,
+        WindResistance = 0.25,
+	Weight=5,
+	BiteDefense = 50,
+        ScratchDefense = 50,
+		BulletDefense = 25,
+	RunSpeedModifier = 0.90,
+    }
+
+
+	item TirePauldrons
+	{
+		Type = Clothing,
+		DisplayName = Tire Pauldrons,
+		ClothingItem = TirePauldrons,
+		BodyLocation = UpperArms,
+		/*BloodLocation = Jumper,*/
+		Icon = TirePauldrons,
+		ConditionLowerChanceOneIn = 50,
+        	ConditionMax = 16,
+        	RemoveOnBroken = true,
+		CombatSpeedModifier = 0.95,
+        	ScratchDefense = 50,
+        	BiteDefense = 50,
+		BulletDefense = 25,
+		Weight = 2,
+	}
+
+
+	item RoadsignGreaves
+	{
+		Type = Clothing,
+		DisplayName = Roadsign Greaves,
+		ClothingItem = RoadsignGreaves,
+		BodyLocation = Socks,
+		BloodLocation = Trousers,
+		Icon = RoadsignGreaves,
+		RunSpeedModifier = 0.90,
+		ConditionLowerChanceOneIn = 75,
+        ConditionMax = 32,
+        RemoveOnBroken = true,
+        ScratchDefense = 50,
+        BiteDefense = 50,
+		BulletDefense = 25,
+		Weight = 2,
+	}
+
+
+
+}

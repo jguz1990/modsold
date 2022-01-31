@@ -1,0 +1,233 @@
+module Base
+{
+ 	  	
+	
+    recipe Sew Knee-length Skirt
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Knees,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 	
+    recipe Sew Long Skirt
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Long,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 	
+    recipe Sew Padded Pants
+    {
+		Sound:SewingMachine,
+		QuiltedFabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Trousers_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }   	
+	
+    recipe Sew Pants
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Trousers_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 
+    recipe Sew Pants
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Trousers_DefaultTEXTURE_TINT,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 		
+    recipe Sew Short Skirt
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Short,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    }  		
+    recipe Sew Shorts
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Shorts_ShortFormal,
+		Time:400.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 
+    recipe Sew Skirt
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Normal,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 		
+    recipe Sew Suit Pants
+    {
+		Sound:SewingMachine,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		OnTest:CanSewingMachine,
+		OnCreate:DyeClothes2,
+		Result:Trousers_SuitWhite,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+		Tooltip: Requires a powered Sewing Machine.,
+    } 	
+
+	
+    recipe Sew Knee-length Skirt
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Knees,
+		Time:4000.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 	
+    recipe Sew Long Skirt
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Long,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 		
+	
+    recipe Sew Pants
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Trousers_WhiteTINT,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 
+    recipe Sew Pants
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Trousers_DefaultTEXTURE_TINT,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 		
+    recipe Sew Short Skirt
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Short,
+		Time:4000.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    }  		
+    recipe Sew Shorts
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=3,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Shorts_ShortFormal,
+		Time:4000.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 
+    recipe Sew Skirt
+    {
+		Sound:Scissors,
+		Fabric,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		OnCreate:DyeClothes2,
+		Result:Skirt_Normal,
+		Time:4000.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+       		AnimNode:RipSheets,
+    } 	
+}
