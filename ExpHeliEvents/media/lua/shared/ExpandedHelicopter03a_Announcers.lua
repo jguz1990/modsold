@@ -68,7 +68,7 @@ eHelicopter_announcers["FlyerChoppers"] = {
 	["Lines"] = {
 		["FlyerChoppers"] = {10500*2, "eHeli_lineM_11"},
 	} }
-	
+
 
 eHelicopter_announcers["Police"] = {
 	["LeaveOutOfRandomSelection"] = true,

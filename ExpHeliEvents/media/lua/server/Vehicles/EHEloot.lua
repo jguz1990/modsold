@@ -135,6 +135,10 @@ VehicleDistributions.UH1HRaiderSeat = {
         "HottieZ", 10,
         "AmmoStraps", 10,
         "AmmoStrap_Bullets", 10,
+        "Speaker", 10,
+        "Speaker", 10,
+        "ElectronicsScrap", 10,
+        "ElectronicsScrap", 10,
 
         -- EHE --
 
@@ -229,9 +233,6 @@ VehicleDistributions.UH1HMedevacSeat = {
         "EHE.Hat_SPHMilitary", 10,
         "EHE.Hat_SPHMilitary", 5,
         "EHE.Hat_SPHBlack", 3,
-        "SMUIClothing.Hat_MilitaryHelmetNVGUP", 10,
-        "SMUIClothing.Hat_MilitaryHelmetNVGMount", 10,
-        "SMUIClothing.NightVisionGoggles", 10,
         "EHE.Vest_PilotSurvivalVest", 10,
         "EHE.Vest_PilotSurvivalVest", 10,
         "EHE.MealReadytoEat", 10,
@@ -249,7 +250,10 @@ VehicleDistributions.UH1HMedevacSeat = {
         "SMUIClothing.MilitaryWebbing", 5,
         "SMUIClothing.Hat_PatrolCap", 10,
         "SMUIClothing.Hat_PatrolCap", 10,
-        "SMUIClothing.Hat_BeretSpecial", 3,
+        "SMUIClothing.Hat_BeretSpecial", 3,       
+        "SMUIClothing.Hat_MilitaryHelmetNVGUP", 10,
+        "SMUIClothing.Hat_MilitaryHelmetNVGMount", 10,
+        "SMUIClothing.NightVisionGoggles", 10,
 
         -- AZ --
 
