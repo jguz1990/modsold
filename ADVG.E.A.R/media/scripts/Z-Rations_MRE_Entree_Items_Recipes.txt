@@ -1,0 +1,468 @@
+module Base
+{
+
+	recipe Heat MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_PorkwithRiceinBBQSauce_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_CornedBeefHash,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_CornedBeefHash_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenStew,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_ChickenStew_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_OmeletwithHam,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_OmeletwithHam_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_SpaghettiwithMeatSauce_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenalaKing,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_ChickenalaKing_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_BeefStew,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_BeefStew_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_HamSlice,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_HamSlice_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_MeatballswithTomatoSauce_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_TunawithNoodles,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_TunawithNoodles_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_ChickenwithRice,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_ChickenwithRice_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+	recipe Heat MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam,
+		MRE_FlamelessRationHeater,
+		Water=2,
+		Result:MRE_EscallopedPotatoeswithHam_Heating,
+		Time:150.0,
+		Category:Cooking,
+		Sound:PourWaterIntoObject,
+		/*OnCreate:StartMRE,*/
+	   Prop1:Source=3,
+	   Prop2:Source=1,
+        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
+		Tooltip: Can't be done inside of a vehicle.,
+		}
+
+
+
+
+
+	recipe Open MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce,
+		Result:MRE_PorkwithRiceinBBQSauce_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_CornedBeefHash,
+		Result:MRE_CornedBeefHash_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenStew,
+		Result:MRE_ChickenStew_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_OmeletwithHam,
+		Result:MRE_OmeletwithHam_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce,
+		Result:MRE_SpaghettiwithMeatSauce_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenalaKing,
+		Result:MRE_ChickenalaKing_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_BeefStew,
+		Result:MRE_BeefStew_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_HamSlice,
+		Result:MRE_HamSlice_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce,
+		Result:MRE_MeatballswithTomatoSauce_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_TunawithNoodles,
+		Result:MRE_TunawithNoodles_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_ChickenwithRice,
+		Result:MRE_ChickenwithRice_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Open MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam,
+		Result:MRE_EscallopedPotatoeswithHam_Open,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:OpenMREMeal,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	
+
+	recipe Get MRE Meal
+		{
+		MRE_PorkwithRiceinBBQSauce_Finished,
+		Result:MRE_PorkwithRiceinBBQSauce_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_CornedBeefHash_Finished,
+		Result:MRE_CornedBeefHash_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenStew_Finished,
+		Result:MRE_ChickenStew_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_OmeletwithHam_Finished,
+		Result:MRE_OmeletwithHam_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_SpaghettiwithMeatSauce_Finished,
+		Result:MRE_SpaghettiwithMeatSauce_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenalaKing_Finished,
+		Result:MRE_ChickenalaKing_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_BeefStew_Finished,
+		Result:MRE_BeefStew_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_HamSlice_Finished,
+		Result:MRE_HamSlice_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_MeatballswithTomatoSauce_Finished,
+		Result:MRE_MeatballswithTomatoSauce_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_TunawithNoodles_Finished,
+		Result:MRE_TunawithNoodles_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_ChickenwithRice_Finished,
+		Result:MRE_ChickenwithRice_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	recipe Get MRE Meal
+		{
+		MRE_EscallopedPotatoeswithHam_Finished,
+		Result:MRE_EscallopedPotatoeswithHam_Hot,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+		}
+
+	
+}
+

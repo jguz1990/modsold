@@ -1,0 +1,42 @@
+
+module Base
+
+{
+/*"Secret Docs" (https://skfb.ly/6SBJS) by Thunder is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).*/
+/*"Diskette" (https://skfb.ly/opWLT) by MaximP is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"Daily Mirror-1930 Newspaper" (https://skfb.ly/Utpz) by WENGA is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+	model pa_IntelFolder
+	{
+		/*mesh = Magazine,
+		texture = IntelFolder,*/
+		mesh = pa_IntelClipboard2,
+		texture = pa_IntelClipboard2,
+		scale = 0.0065,
+	}
+
+
+	model pa_LabKeycard
+	{
+		mesh = WorldItems/CreditCard,
+		texture = pa_LabKeycard2,
+		scale = 0.6,
+	}
+	model pa_Diskette1
+	{
+		mesh = pa_Diskette1,
+		texture = pa_Diskette1,
+		scale = 0.01,
+	}
+	
+	
+	
+	 	
+/*
+    model IntelFolderGround
+    {
+        mesh = WorldItems/MagazineOpen,
+		texture = IntelFolder,
+        scale = 0.4,
+    }
+*/
+}

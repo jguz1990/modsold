@@ -183,6 +183,26 @@ item MRE_Cocoa_Mug_White
         StaticModel = MugWhite,
         WorldStaticModel = MugWhite,
 	}
+item MRE_Cocoa_Mug_Spiffo
+	{
+		DisplayName					=	MRE Cocoa,
+        Icon	=	MugSpiffoFull,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-5,
+		Carbohydrates				=	29.0,
+		Proteins					=	3,
+		Lipids						=	7,
+		Calories					=	192,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugSpiffo,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugWhite,
+        WorldStaticModel = MugSpiffo,
+	}
 
 item MRE_BevBasewithSugar
 	{
@@ -267,6 +287,27 @@ item MRE_BevwithSugar_Mug_White
         StaticModel = MugWhite,
         WorldStaticModel = MugWhite,
 	}
+	
+item MRE_BevwithSugar_Mug_Spiffo
+	{
+		DisplayName					=	MRE Beverage with Sugar,
+        Icon	=	MugSpiffoFull,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-5,
+		Carbohydrates				=	28.1,
+		Proteins					=	2,
+		Lipids						=	3,
+		Calories					=	150,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugSpiffo,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugWhite,
+        WorldStaticModel = MugSpiffo,
+	}
 
 item MRE_SugarFreeBevBase
 	{
@@ -349,6 +390,26 @@ item MRE_SugarFreeBev_Mug_White
         StaticModel = MugWhite,
         WorldStaticModel = MugWhite,
 	}
+item MRE_SugarFreeBev_Mug_Spiffo
+	{
+		DisplayName					=	MRE Sugar Free Beverage,
+        Icon	=	MugSpiffoFull,
+		Type						=	Food,
+	UnhappyChange			=	-5,
+		ThirstChange				=	-20,
+		FatigueChange				=	-0,
+		Carbohydrates				=	0.0,
+		Proteins					=	0.0,
+		Lipids						=	0.0,
+		Calories					=	0,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugSpiffo,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugWhite,
+        WorldStaticModel = MugSpiffo,
+	}
 
     recipe Make Hot MRE Cocoa
     {
@@ -388,6 +449,22 @@ item MRE_SugarFreeBev_Mug_White
 		MRE_Cocoa,
         destroy MugWhite,
         Result:MRE_Cocoa_Mug_White,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+	   Prop1:Source=2,
+	   Prop2:Source=3,
+
+    }
+    recipe Make Hot MRE Cocoa
+    {
+        FullKettle=2,
+		MRE_Cocoa,
+        destroy MugSpiffo,
+        Result:MRE_Cocoa_Mug_Spiffo,
         Time:30.0,
         CanBeDoneFromFloor:true,
         Heat:-0.22,
@@ -479,6 +556,34 @@ item MRE_SugarFreeBev_Mug_White
 		MugWhite,
 		MRE_SugarFreeBevBase,
 		Result:MRE_SugarFreeBev_Mug_White,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	   Prop1:Source=1,
+	   Prop2:Source=2,
+		}
+	recipe Make MRE Beverage
+		{
+		Water=2,
+		MugSpiffo,
+		MRE_BevBasewithSugar,
+		Result:MRE_BevwithSugar_Mug_Spiffo,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	   Prop1:Source=1,
+	   Prop2:Source=2,
+		}
+	recipe Make MRE Beverage
+		{
+		Water=2,
+		MugSpiffo,
+		MRE_SugarFreeBevBase,
+		Result:MRE_SugarFreeBev_Mug_Spiffo,
 		Time:50.0,
 		Sound:GetWater,
 		Category:Cooking,
@@ -564,6 +669,35 @@ item MRE_SugarFreeBev_Mug_White
 		WaterMugWhite,
 		MRE_SugarFreeBevBase,
 		Result:MRE_SugarFreeBev_Mug_White,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	   Prop1:Source=2,
+	   Prop2:Source=1,
+		}
+		
+		
+	recipe Make MRE Beverage
+		{
+		WaterMugSpiffo,
+		MRE_BevBasewithSugar,
+		Result:MRE_BevwithSugar_Mug_Spiffo,
+		Time:50.0,
+		Sound:GetWater,
+		Category:Cooking,
+		OnCreate	: MRE_Drink,
+		OnTest		: Recipe.OnTest.NotTaintedWater,
+	   Prop1:Source=2,
+	   Prop2:Source=1,
+		}
+
+	recipe Make MRE Beverage
+		{
+		WaterMugSpiffo,
+		MRE_SugarFreeBevBase,
+		Result:MRE_SugarFreeBev_Mug_Spiffo,
 		Time:50.0,
 		Sound:GetWater,
 		Category:Cooking,

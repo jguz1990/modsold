@@ -83,6 +83,26 @@ item MRE_Coffee_Mug_White
         StaticModel = MugWhite,
         WorldStaticModel = MugWhite,
 	}
+item MRE_Coffee_Mug_Spiffo
+	{
+		DisplayName					=	MRE Coffee,
+        Icon	=	MugSpiffoFull,
+		Type						=	Food,
+		FatigueChange				=	-5,
+		UnhappyChange				=	-5,
+		ThirstChange				=	-20,
+		Carbohydrates				=	0.75,
+		Proteins					=	0,
+		Lipids						=	0,
+		Calories					=	4,
+		FoodType					=	NoExplicit,
+		Weight						=	1,
+		ReplaceOnUse				=	MugWhite,
+		CustomContextMenu			=	Drink,
+		CustomEatSound				=	DrinkingFromBottle,
+        StaticModel = MugSpiffo,
+        WorldStaticModel = MugSpiffo,
+	}
 	
 	/*
 	
@@ -147,6 +167,22 @@ item MRE_Coffee_Mug_White
         destroy MRE_Coffee,
         destroy MugWhite,
         Result:MRE_Coffee_Mug_White,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+		Sound:GetWater,
+		OnCreate	: MRE_Drink,
+	   Prop1:MRE_small,
+	   Prop2:MugWhite,
+
+    }
+    recipe Make Hot MRE Coffee
+    {
+        FullKettle=2,
+        destroy MRE_Coffee,
+        destroy MugSpiffo,
+        Result:MRE_Coffee_Mug_Spiffo,
         Time:30.0,
         CanBeDoneFromFloor:true,
         Heat:-0.22,

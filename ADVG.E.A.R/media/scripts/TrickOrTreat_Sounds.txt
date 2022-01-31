@@ -1,0 +1,29 @@
+module Base
+{
+
+	
+	sound Packaging
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Packaging.ogg,
+		}
+	}
+	sound Scissors
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Scissors.ogg,
+		}
+	}
+	sound Squirt2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Squirt2.ogg,
+		}
+	}
+}

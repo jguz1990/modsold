@@ -1,0 +1,16 @@
+module Base
+{
+  
+
+	item FactionBanner
+	{
+	    DisplayCategory = Material,
+		Weight	=	0.8,
+		Type	=	Normal,
+		DisplayName	=	Faction Banner,
+		Icon	=	Sheet,
+		WorldStaticModel = Sheet,
+	}
+
+
+}

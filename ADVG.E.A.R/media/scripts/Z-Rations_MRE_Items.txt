@@ -1,6 +1,13 @@
 module Base
 {
-   
+  sound Packaging2
+	{
+		category = Player,
+		clip
+		{
+			file = media/sound/Packaging2.ogg,
+		}
+	} 
 	
 recipe Unbox MREs
     {
@@ -43,9 +50,10 @@ recipe Open MRE
 		MRE,
 		Result 			: MRE_Pouch_Trash,
 		OnCreate		: OpenMRE,
-		Time 			: 50.0,
+		Time 			: 150.0,
 		Category 		: Cooking,
-        Sound:PutItemInBag,
+        /*Sound:PutItemInBag,*/
+        Sound:Packaging2,
 	   Prop2:MRE_closed,
 	}
 	

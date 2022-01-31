@@ -1,199 +1,6 @@
 module Base
 {
 
-	recipe Heat MRE Meal
-		{
-		MRE_PorkwithRiceinBBQSauce,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_PorkwithRiceinBBQSauce_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_CornedBeefHash,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_CornedBeefHash_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_ChickenStew,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_ChickenStew_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_OmeletwithHam,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_OmeletwithHam_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_SpaghettiwithMeatSauce,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_SpaghettiwithMeatSauce_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_ChickenalaKing,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_ChickenalaKing_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_BeefStew,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_BeefStew_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_HamSlice,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_HamSlice_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_MeatballswithTomatoSauce,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_MeatballswithTomatoSauce_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_TunawithNoodles,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_TunawithNoodles_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_ChickenwithRice,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_ChickenwithRice_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-	recipe Heat MRE Meal
-		{
-		MRE_EscallopedPotatoeswithHam,
-		MRE_FlamelessRationHeater,
-		Water=1,
-		Result:MRE_EscallopedPotatoeswithHam_Heating,
-		Time:150.0,
-		Category:Cooking,
-		Sound:GetWater,
-		OnCreate:StartMRE,
-	   Prop1:Source=3,
-	   Prop2:Source=1,
-        OnCanPerform:MRE_NoVehicle2,/*OnTest: MRE_NoVehicle,*/
-		Tooltip: Can't be done inside of a vehicle.,
-		}
-
-
 
 	
 item MRE_PorkwithRiceinBBQSauce
@@ -423,140 +230,6 @@ item MRE_EscallopedPotatoeswithHam
         StaticModel = MRE_small,
         WorldStaticModel = MRE_small_world,
 	}
-
-
-
-	recipe Open MRE Meal
-		{
-		MRE_PorkwithRiceinBBQSauce,
-		Result:MRE_PorkwithRiceinBBQSauce_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_CornedBeefHash,
-		Result:MRE_CornedBeefHash_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_ChickenStew,
-		Result:MRE_ChickenStew_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_OmeletwithHam,
-		Result:MRE_OmeletwithHam_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_SpaghettiwithMeatSauce,
-		Result:MRE_SpaghettiwithMeatSauce_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_ChickenalaKing,
-		Result:MRE_ChickenalaKing_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_BeefStew,
-		Result:MRE_BeefStew_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_HamSlice,
-		Result:MRE_HamSlice_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_MeatballswithTomatoSauce,
-		Result:MRE_MeatballswithTomatoSauce_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_TunawithNoodles,
-		Result:MRE_TunawithNoodles_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_ChickenwithRice,
-		Result:MRE_ChickenwithRice_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Open MRE Meal
-		{
-		MRE_EscallopedPotatoeswithHam,
-		Result:MRE_EscallopedPotatoeswithHam_Open,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:OpenMREMeal,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
 
 	
 item MRE_PorkwithRiceinBBQSauce_Open
@@ -1135,309 +808,11 @@ item MRE_EscallopedPotatoeswithHam_Hot
 	}
 
 
-
-
-
-
-
-
-
-item MRE_PorkwithRiceinBBQSauce_Hot_HotSauce
-	{
-		DisplayName					=	MRE Pork with Rice in BBQ Sauce with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	21.9,
-		Proteins					=	32,
-		Lipids						=	25,
-		Calories					=	443,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_CornedBeefHash_Hot_HotSauce
-	{
-		DisplayName					=	MRE Corned Beef Hash with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	23.3,
-		Proteins					=	30,
-		Lipids						=	14,
-		Calories					=	330,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_ChickenStew_Hot_HotSauce
-	{
-		DisplayName					=	MRE Chicken Stew with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	20.2,
-		Proteins					=	19,
-		Lipids						=	10,
-		Calories					=	250,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_OmeletwithHam_Hot_HotSauce
-	{
-		DisplayName					=	MRE Omelet with Ham and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	3.4,
-		Proteins					=	23,
-		Lipids						=	13,
-		Calories					=	221,
-		Weight						=	0.35,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_SpaghettiwithMeatSauce_Hot_HotSauce
-	{
-		DisplayName					=	MRE Spaghetti with Meat Sauce and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	20.5,
-		Proteins					=	23,
-		Lipids						=	7,
-		Calories					=	241,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_ChickenalaKing_Hot_HotSauce
-	{
-		DisplayName					=	MRE Chicken a la King with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	7.7,
-		Proteins					=	23,
-		Lipids						=	30,
-		Calories					=	14,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_BeefStew_Hot_HotSauce
-	{
-		DisplayName					=	MRE Beef Stew with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	13.4,
-		Proteins					=	31,
-		Lipids						=	10,
-		Calories					=	267,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_HamSlice_Hot_HotSauce
-	{
-		DisplayName					=	MRE Ham Slice with Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	0,
-		Proteins					=	26,
-		Lipids						=	5,
-		Calories					=	153,
-		Weight						=	0.25,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_MeatballswithTomatoSauce_Hot_HotSauce
-	{
-		DisplayName					=	MRE Meatballs with Tomato Sauce and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	26.5,
-		Proteins					=	33,
-		Lipids						=	15,
-		Calories					=	376,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_TunawithNoodles_Hot_HotSauce
-	{
-		DisplayName					=	MRE Tuna with Noodles and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	17.7,
-		Proteins					=	26,
-		Lipids						=	9,
-		Calories					=	255,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_ChickenwithRice_Hot_HotSauce
-	{
-		DisplayName					=	MRE Chicken with Rice and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	17.1,
-		Proteins					=	31,
-		Lipids						=	11,
-		Calories					=	289,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small_world,
-	}
-
-item MRE_EscallopedPotatoeswithHam_Hot_HotSauce
-	{
-		DisplayName					=	MRE Escalloped Potatoes with Ham and Hot Sauce,
-		Icon 				= MREEnvelope,
-		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
-		Type						=	Food,
-		HungerChange 		= -30,
-		UnhappyChange				=	-5,
-		DaysFresh			= 3,
-		DaysTotallyRotten	= 4,
-		FoodType					=	NoExplicit,
-		Carbohydrates				=	15.9,
-		Proteins					=	24,
-		Lipids						=	8,
-		Calories					=	234,
-		Weight						=	0.45,
-		Packaged					=	TRUE,
-        GoodHot = true,
-        BadCold = true,
-        EatType = 2hand,
-        StaticModel = MRE_small,
-        WorldStaticModel = MRE_small,
-	}
-
-
-
-
 item MRE_PorkwithRiceinBBQSauce_Heating
 	{
 		DisplayName					=	Heating MRE Meal (Pork with Rice in BBQ Sauce),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1453,7 +828,6 @@ item MRE_CornedBeefHash_Heating
 		DisplayName					=	Heating MRE Meal (Corned Beef Hash),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1469,7 +843,6 @@ item MRE_ChickenStew_Heating
 		DisplayName					=	Heating MRE Meal (Chicken Stew),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1485,7 +858,6 @@ item MRE_OmeletwithHam_Heating
 		DisplayName					=	Heating MRE Meal (Omelet with Ham),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1501,7 +873,6 @@ item MRE_SpaghettiwithMeatSauce_Heating
 		DisplayName					=	Heating MRE Meal (Spaghetti with Meat Sauce),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1517,7 +888,6 @@ item MRE_ChickenalaKing_Heating
 		DisplayName					=	Heating MRE Meal (Chicken a la King),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1533,7 +903,6 @@ item MRE_BeefStew_Heating
 		DisplayName					=	Heating MRE Meal (Beef Stew),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1549,7 +918,6 @@ item MRE_HamSlice_Heating
 		DisplayName					=	Heating MRE Meal (Ham Slice),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1565,7 +933,6 @@ item MRE_MeatballswithTomatoSauce_Heating
 		DisplayName					=	Heating MRE Meal (Meatballs with Tomato Sauce),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1581,7 +948,6 @@ item MRE_TunawithNoodles_Heating
 		DisplayName					=	Heating MRE Meal (Tuna with Noodles),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1597,7 +963,6 @@ item MRE_ChickenwithRice_Heating
 		DisplayName					=	Heating MRE Meal (Chicken with Rice),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1613,7 +978,6 @@ item MRE_EscallopedPotatoeswithHam_Heating
 		DisplayName					=	Heating MRE Meal (Escalloped Potatoes with Ham),
 		Icon 				= MREHeatingsmoke,
 		/*ReplaceOnUse 		= MRE_Meal_Carton_Trash,*/
-		/*Weight						=	100,*/
 		Weight						=	0.55,
         Wet                 =           TRUE,
         WetCooldown         =           2500,
@@ -1758,140 +1122,6 @@ item MRE_EscallopedPotatoeswithHam_Finished
         StaticModel = MRE_small,
         WorldStaticModel = MRE_small,
 	}
-
-
-	recipe Get MRE Meal
-		{
-		MRE_PorkwithRiceinBBQSauce_Finished,
-		Result:MRE_PorkwithRiceinBBQSauce_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_CornedBeefHash_Finished,
-		Result:MRE_CornedBeefHash_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_ChickenStew_Finished,
-		Result:MRE_ChickenStew_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_OmeletwithHam_Finished,
-		Result:MRE_OmeletwithHam_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_SpaghettiwithMeatSauce_Finished,
-		Result:MRE_SpaghettiwithMeatSauce_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_ChickenalaKing_Finished,
-		Result:MRE_ChickenalaKing_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_BeefStew_Finished,
-		Result:MRE_BeefStew_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_HamSlice_Finished,
-		Result:MRE_HamSlice_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_MeatballswithTomatoSauce_Finished,
-		Result:MRE_MeatballswithTomatoSauce_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_TunawithNoodles_Finished,
-		Result:MRE_TunawithNoodles_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_ChickenwithRice_Finished,
-		Result:MRE_ChickenwithRice_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
-	recipe Get MRE Meal
-		{
-		MRE_EscallopedPotatoeswithHam_Finished,
-		Result:MRE_EscallopedPotatoeswithHam_Hot,
-		Time:50.0,
-		Category:Cooking,
-		OnCreate:FinishedMRE,
-        Sound:PutItemInBag,
-	   Prop2:Source=1,
-		}
-
 	
 }
 

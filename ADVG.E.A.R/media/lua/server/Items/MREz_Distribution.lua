@@ -2,6 +2,14 @@ require 'Items/SuburbsDistributions'
 require "Items/ProceduralDistributions"
 require "Vehicles/VehicleDistributions"
 
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, "Base.MRE");
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, 3.0);
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, "Base.MRE_Box");
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, 3.0);
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, "Base.MRE_Stack");
+-- table.insert(ProceduralDistributions.list["ArmySurplusMisc"].items, 0.03);
+
+
 table.insert(ProceduralDistributions["list"]["LockerArmyBedroom"].items, "Base.MRE");
 table.insert(ProceduralDistributions["list"]["LockerArmyBedroom"].items, 1.0);
 

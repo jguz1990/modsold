@@ -18,6 +18,7 @@ module Base
      ClothingItemExtra = BulletBandolier,
         ClothingItemExtraOption = ChangeSide,
         ClothingExtraSubmenu =  Wear_AmmoStrap,
+		WorldStaticModel = AmmoStrap_Ground,
 	}
 
 	item AmmoStrap_Shells
@@ -38,6 +39,7 @@ module Base
      ClothingItemExtra = ShotgunShellBandolier,
         ClothingItemExtraOption = ChangeSide,
         ClothingExtraSubmenu =  Wear_AmmoStrap,
+		WorldStaticModel = AmmoStrap_Ground,
 
 
 	}
@@ -62,6 +64,7 @@ item ShotgunShellBandolier
 		Icon = AmmoStrap,
 		Tooltip = Tooltip_AmmoStrap,
 		 AcceptItemFunction = Accept_Shells,
+		WorldStaticModel = AmmoStrap_Ground,
 	}
 item BulletBandolier
 	{
@@ -84,5 +87,6 @@ item BulletBandolier
 		Icon = AmmoStrap,
 		Tooltip = Tooltip_AmmoStrap,
 		 AcceptItemFunction = Accept_Bullets,
+		WorldStaticModel = AmmoStrap_Ground,
 	}
 }

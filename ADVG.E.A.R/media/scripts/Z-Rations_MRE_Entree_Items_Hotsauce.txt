@@ -1,0 +1,453 @@
+module Base
+{
+
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_PorkwithRiceinBBQSauce_Finished,
+		Hotsauce;2,
+		Result:MRE_PorkwithRiceinBBQSauce_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_CornedBeefHash_Finished,
+		Hotsauce;2,
+		Result:MRE_CornedBeefHash_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_ChickenStew_Finished,
+		Hotsauce;2,
+		Result:MRE_ChickenStew_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_OmeletwithHam_Finished,
+		Hotsauce;2,
+		Result:MRE_OmeletwithHam_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_SpaghettiwithMeatSauce_Finished,
+		Hotsauce;2,
+		Result:MRE_SpaghettiwithMeatSauce_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_ChickenalaKing_Finished,
+		Hotsauce;2,
+		Result:MRE_ChickenalaKing_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_BeefStew_Finished,
+		Hotsauce;2,
+		Result:MRE_BeefStew_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_HamSlice_Finished,
+		Hotsauce;2,
+		Result:MRE_HamSlice_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_MeatballswithTomatoSauce_Finished,
+		Hotsauce;2,
+		Result:MRE_MeatballswithTomatoSauce_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_TunawithNoodles_Finished,
+		Hotsauce;2,
+		Result:MRE_TunawithNoodles_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_ChickenwithRice_Finished,
+		Hotsauce;2,
+		Result:MRE_ChickenwithRice_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+	recipe Get MRE Meal with Hotsauce
+		{
+		MRE_EscallopedPotatoeswithHam_Finished,
+		Hotsauce;2,
+		Result:MRE_EscallopedPotatoeswithHam_Hot_HotSauce,
+		Time:150.0,
+		Category:Cooking,
+		OnCreate:FinishedMRE,
+        Sound:Packaging2,/*Sound:PutItemInBag,*/
+	   Prop2:Source=1,
+	   Prop1:Source=2,
+		}
+
+
+item MRE_PorkwithRiceinBBQSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Pork with Rice in BBQ Sauce with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	21.9,
+		Proteins					=	32,
+		Lipids						=	25,
+		Calories					=	443,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_CornedBeefHash_Hot_HotSauce
+	{
+		DisplayName					=	MRE Corned Beef Hash with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	23.3,
+		Proteins					=	30,
+		Lipids						=	14,
+		Calories					=	330,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_ChickenStew_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken Stew with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.2,
+		Proteins					=	19,
+		Lipids						=	10,
+		Calories					=	250,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_OmeletwithHam_Hot_HotSauce
+	{
+		DisplayName					=	MRE Omelet with Ham and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	3.4,
+		Proteins					=	23,
+		Lipids						=	13,
+		Calories					=	221,
+		Weight						=	0.35,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_SpaghettiwithMeatSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Spaghetti with Meat Sauce and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	20.5,
+		Proteins					=	23,
+		Lipids						=	7,
+		Calories					=	241,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_ChickenalaKing_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken a la King with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	7.7,
+		Proteins					=	23,
+		Lipids						=	30,
+		Calories					=	14,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_BeefStew_Hot_HotSauce
+	{
+		DisplayName					=	MRE Beef Stew with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	13.4,
+		Proteins					=	31,
+		Lipids						=	10,
+		Calories					=	267,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_HamSlice_Hot_HotSauce
+	{
+		DisplayName					=	MRE Ham Slice with Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	0,
+		Proteins					=	26,
+		Lipids						=	5,
+		Calories					=	153,
+		Weight						=	0.25,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_MeatballswithTomatoSauce_Hot_HotSauce
+	{
+		DisplayName					=	MRE Meatballs with Tomato Sauce and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	26.5,
+		Proteins					=	33,
+		Lipids						=	15,
+		Calories					=	376,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_TunawithNoodles_Hot_HotSauce
+	{
+		DisplayName					=	MRE Tuna with Noodles and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.7,
+		Proteins					=	26,
+		Lipids						=	9,
+		Calories					=	255,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_ChickenwithRice_Hot_HotSauce
+	{
+		DisplayName					=	MRE Chicken with Rice and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	17.1,
+		Proteins					=	31,
+		Lipids						=	11,
+		Calories					=	289,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small_world,
+	}
+
+item MRE_EscallopedPotatoeswithHam_Hot_HotSauce
+	{
+		DisplayName					=	MRE Escalloped Potatoes with Ham and Hot Sauce,
+		Icon 				= MREEnvelope,
+		ReplaceOnUse 		= MRE_Meal_Pouch_Trash,
+		Type						=	Food,
+		HungerChange 		= -30,
+		UnhappyChange				=	-5,
+		DaysFresh			= 3,
+		DaysTotallyRotten	= 4,
+		FoodType					=	NoExplicit,
+		Carbohydrates				=	15.9,
+		Proteins					=	24,
+		Lipids						=	8,
+		Calories					=	234,
+		Weight						=	0.45,
+		Packaged					=	TRUE,
+        GoodHot = true,
+        BadCold = true,
+        EatType = 2hand,
+        StaticModel = MRE_small,
+        WorldStaticModel = MRE_small,
+	}
+
+
+
+	
+}
+

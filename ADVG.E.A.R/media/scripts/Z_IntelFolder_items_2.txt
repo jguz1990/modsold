@@ -1,0 +1,42 @@
+
+module Base
+
+{
+
+/*
+	item IntelFolder
+	{
+		DisplayName = Folder With Intel,
+		Icon			= intel_folder_1,
+        Type	=	Literature,
+        TeachedRecipes  =   Make Intel Center; Create Faction,
+        ReplaceOnUse    =   IntelFolder,
+        StaticModel = pa_IntelFolder,
+        WorldStaticModel = pa_IntelFolder,
+	}
+	*/
+    recipe Create Faction
+    {
+		keep IntelFolder,
+		OnCanPerform:CanMakeFaction,
+        OnCreate:MakeFaction,
+		Time:400.0,
+		/*Time:40.0,*/
+		Result:FactionBanner,
+		Category:Faction,
+		Tooltip: Needs to be done in a safehouse you own.,
+        RemoveResultItem:true,
+       NeedToBeLearn:true,
+	Prop2:IntelFolder,
+        /*AnimNode:Reading,*/
+    }  	
+/*
+    model IntelFolderGround
+    {
+        mesh = WorldItems/MagazineOpen,
+		texture = IntelFolder,
+        scale = 0.4,
+    }
+*/
+
+}
