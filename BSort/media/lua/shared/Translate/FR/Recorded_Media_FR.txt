@@ -1,0 +1,62 @@
+// French
+// Encoding: Windows 1252
+
+// Carpentry
+RM_65319278-26d8-4433-a447-04f8dd0c79c0 = "[Menuiserie] VHS: Woodcraft E1"
+RM_095acdbc-c4ef-44a1-aad4-aec98a88cbf8 = "[Menuiserie] VHS: Woodcraft E2"
+RM_36e51b7a-e72a-491b-b81e-7feb2e9b3392 = "[Menuiserie] VHS: Woodcraft E3"
+RM_d7b24844-74a7-4095-bfad-83a99c299673 = "[Menuiserie] VHS: Woodcraft E4"
+RM_76f3676c-493f-478e-b228-1dc7c1f0e0af = "[Menuiserie] VHS: Woodcraft E5"
+RM_e111eb34-3621-483a-8c69-01dc20a0d1f5 = "[Menuiserie] VHS: Woodcraft E6"
+RM_8df2f07b-4088-45dc-b674-01b73f247512 = "[Menuiserie] VHS: Woodcraft E7"
+RM_cc93005d-ab9d-473e-964d-7becaea44c1a = "[Menuiserie] VHS: Exposure Survival E4"
+RM_b46f1ed1-81a2-453c-8ec5-dfea779c9aa5 = "[Menuiserie] VHS: Exposure Survival E8"
+
+// Cooking
+RM_21ff5f9e-4b9f-419a-a6eb-5ccb63ccaa4e = "[Cuisine] VHS: The Cook Show E1"
+RM_08265ea3-f212-46ca-a1c8-467d50460ce6 = "[Cuisine] VHS: The Cook Show E2"
+RM_d9acbdfd-ba72-4aff-93f9-0930845371a9 = "[Cuisine] VHS: The Cook Show E3"
+RM_89bb626a-ac81-4dd7-bb60-aa8838601ce5 = "[Cuisine] VHS: The Cook Show E4"
+RM_a7182576-fb24-4f6d-abac-6c215f2ad68e = "[Cuisine] VHS: The Cook Show E5"
+RM_7dd28b0c-ea7c-4e61-affa-86106091b90c = "[Cuisine] VHS: The Cook Show E6"
+RM_e6a52f32-648b-4ad7-a7c5-05950798bdaf = "[Cuisine] VHS: The Cook Show E7"
+
+// Farming
+RM_7da44577-f37e-4501-9c05-45d6057765d8 = "[Agriculture] VHS: Exposure Survival E3"
+
+// First Aid
+RM_d51d8130-1b4a-4154-9c19-c519a3165c98 = "[Premiers secours] VHS faite maison: RMFA"
+RM_fa55f437-59c8-4277-aca1-56114f1ec7f6 = "[Premiers secours] VHS faite maison: Combat Wound Management"
+
+// Electrical
+RM_00755b75-b252-4ed8-8882-a90019dd8030 = "[Electricité] VHS faite maison: Muldraugh AV Club"
+RM_7662d4e3-6899-4a05-aa1b-d6b6463b30fd = "[Electricité] VHS faite maison: TV repair"
+
+// Metalworking
+RM_22bc8229-f470-4158-8743-81f92b6deccc = "[Travail des métaux] VHS faite maison: nof vid"
+RM_e0b3e6f9-df90-4f92-943b-87b8827a3d86 = "[Travail des métaux] VHS faite maison: no 9"
+
+// Mechanics
+RM_0d184031-e8ad-430f-804e-0e1456beddd3 = "[Mécanique] VHS: Carzone E1"
+RM_7ad44eea-b249-4f7f-af50-37c224c4c0ea = "[Mécanique] VHS: Carzone E2"
+RM_5db54a52-03f8-4832-aff2-dbd94f7f49c4 = "[Mécanique] VHS: Carzone E3"
+RM_fc675719-0322-4705-af1a-524ca714e3a0 = "[Mécanique] VHS faite maison: OSCC '92"
+RM_0ef25267-ebdc-4a9f-9d70-8e57ea391dfb = "[Mécanique] VHS faite maison: stock cars"
+
+// Tailoring
+RM_5929b5c4-1c65-4797-81b3-7963a55769c6 = "[Couture] VHS faite maison: Granny Nani"
+RM_9e8595e6-bb55-40da-a11b-fcd33012e302 = "[Couture] VHS faite maison: Tailoring 101"
+
+// Fishing
+RM_a34efdfd-8769-4602-9fea-b6125793c69c = "[Pêche] VHS: Exposure Survival E1"
+RM_497bac8e-614f-4304-bc75-7b313a8fbb61 = "[Pêche] VHS: Exposure Survival E2"
+
+// Trapping
+RM_c2c86c3a-5630-4749-971a-474079d14cd1 = "[Piégeage] VHS: Exposure Survival E6"
+
+// Foraging
+RM_98d4f152-995c-4b08-9a07-630608eabf02 = "[Recherche] VHS: Exposure Survival E7"
+
+
+// Foraging & Carpentry
+RM_81c44aae-9d19-48b6-8bed-0bacc0377558 = "[Recherche, Menuiserie] VHS: Exposure Survival E5"
