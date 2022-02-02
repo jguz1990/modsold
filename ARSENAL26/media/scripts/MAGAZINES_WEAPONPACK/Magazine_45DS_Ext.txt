@@ -12,7 +12,7 @@ module Base
         DisplayName	=	45-ACP Dbl-Stack Ext Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	45DSExtMag,
-        MaxAmmo 	=	24,
+        MaxAmmo 	=	30,
         AmmoType	=	Base.Bullets45,
         StaticModel	=	GunMagazine,
 	GunType		=	Multi_Gun,

@@ -13,7 +13,7 @@ module Base
         DisplayName	=	22-LR Ext Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	22ExtMag,
-        MaxAmmo 	=	25,
+        MaxAmmo 	=	30,
         AmmoType 	=	Base.Bullets22,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,

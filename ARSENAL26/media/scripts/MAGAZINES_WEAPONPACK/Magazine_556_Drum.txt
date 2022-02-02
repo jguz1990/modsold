@@ -12,7 +12,7 @@ module Base
         DisplayName	=	5.56x45mm Drum Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	556Drum,
-        MaxAmmo 	=	100,
+        MaxAmmo 	=	75,
         AmmoType 	=	Base.556Bullets,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,

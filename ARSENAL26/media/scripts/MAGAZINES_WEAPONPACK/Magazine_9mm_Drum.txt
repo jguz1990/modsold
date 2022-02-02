@@ -12,7 +12,7 @@ module Base
         DisplayName	=	9x19mm Drum Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	9mmDrum,
-        MaxAmmo 	=	50,
+        MaxAmmo 	=	70,
         AmmoType 	=	Base.Bullets9mm,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,

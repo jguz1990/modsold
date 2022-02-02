@@ -12,7 +12,7 @@ module Base
         DisplayName	=	12g Drum Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	12gDrum,
-        MaxAmmo 	=	20,
+        MaxAmmo 	=	30,
         AmmoType 	=	Base.ShotgunShells,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,

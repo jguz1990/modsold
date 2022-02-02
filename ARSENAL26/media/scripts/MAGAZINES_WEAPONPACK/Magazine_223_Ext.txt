@@ -12,7 +12,7 @@ module Base
         DisplayName	=	223-REM Ext Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	223ExtMag,
-        MaxAmmo 	=	20,
+        MaxAmmo 	=	30,
         AmmoType 	=	Base.223Bullets,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,

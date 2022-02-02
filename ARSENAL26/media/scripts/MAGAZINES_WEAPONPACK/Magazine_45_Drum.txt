@@ -12,7 +12,7 @@ module Base
         DisplayName	=	45-ACP Drum Magazine,
 	DisplayCategory	=	GunMag,
         Icon		=	45Drum,
-        MaxAmmo 	=	40,
+        MaxAmmo 	=	60,
         AmmoType 	=	Base.Bullets45,
         StaticModel 	=	GunMagazine,
 	GunType		=	Multi_Gun,
