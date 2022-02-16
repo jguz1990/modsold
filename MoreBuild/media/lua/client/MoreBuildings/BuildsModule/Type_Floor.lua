@@ -12,18 +12,20 @@ MoreBuild.floorsMenuBuilder = function(subMenu, player, context, worldobjects)
 
   MoreBuild.neededMaterials = {
     {
-      Material = 'Plank',
-      Amount = 1,
-      Text = getItemNameFromFullType('Base.Plank')
+      Material = 'Base.Plank',
+      Amount = 1
     },
     {
-      Material = 'Nails',
-      Amount = 1,
-      Text = getItemNameFromFullType('Base.Nails')
+      Material = 'Base.Nails',
+      Amount = 1
     }
   }
 
   MoreBuild.neededTools = {'Hammer'}
+
+  local needSkills = {
+    Woodwork = MoreBuild.skillLevel.floorObject
+  }
 
   local _floorData = MoreBuild.getFloorsData()
   local _currentOption
@@ -43,7 +45,7 @@ MoreBuild.floorsMenuBuilder = function(subMenu, player, context, worldobjects)
 
       _option = _currentSubMenu:addOption(_name, nil, MoreBuild.onBuildTwoSpriteFloor, _sprite, player, _name)
 
-      _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.floorObject, MoreBuild.skillLevel.none, _option, player)
+      _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
       _tooltip:setName(_name)
       _tooltip:setTexture(_sprite.sprite)
 
@@ -205,7 +207,8 @@ MoreBuild.getFloorsData = function()
       {'floors_interior_tilesandwood_01_49', 'floors_interior_tilesandwood_01_49', getText 'ContextMenu_YellowSquare_Flooring', false},
       {'floors_interior_tilesandwood_01_50', 'floors_interior_tilesandwood_01_50', getText 'ContextMenu_OrangeSquare_Flooring', false},
       {'recreational_sports_01_34', 'recreational_sports_01_34', getText 'ContextMenu_RubberFloor_Padding', false},
-      {'floors_burnt_01_0', 'floors_burnt_01_0', getText 'ContextMenu_Burnt_Floor', false}
+      {'floors_burnt_01_0', 'floors_burnt_01_0', getText 'ContextMenu_Burnt_Floor', false},
+      {'roofs_02_54', 'roofs_02_55', getText 'ContextMenu_Glass_Floor', false}
     },
     [getText 'ContextMenu_Industrial_Flooring'] = {
       {'industry_01_7', 'industry_01_7', getText 'ContextMenu_GrayIndustrial_Flooring', false},

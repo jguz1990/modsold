@@ -3,28 +3,40 @@
 -- User: ProjectSky
 -- Date: 2017/7/11
 -- Time: 13:10
--- Project Zomboid More Build Mod
+-- Project Zomboid More Builds Mod
 --
 
+-- pull global functions to local
+local instanceof = instanceof
+local getSpecificPlayer = getSpecificPlayer
+local pairs = pairs
+local split = string.split
+local getItemNameFromFullType = getItemNameFromFullType
+local PerkFactory = PerkFactory
+local getMoveableDisplayName = Translator.getMoveableDisplayName
+local getSprite = getSprite
+local getBestTypeEvalRecurse = getBestTypeEvalRecurse
+local getItemCountFromTypeRecurse = getItemCountFromTypeRecurse
+local addOption = addOption
+local addSubMenu = addSubMenu
+local getNew = getNew
+local getText = getText
+
 local MoreBuild = {}
-MoreBuild.NAME = 'More Build'
+MoreBuild.NAME = 'More Builds'
 MoreBuild.AUTHOR = 'ProjectSky, SiderisAnon'
-MoreBuild.VERSION = '1.1.0'
+MoreBuild.VERSION = '1.1.5'
 
 print('Mod Loaded: ' .. MoreBuild.NAME .. ' by ' .. MoreBuild.AUTHOR .. ' (v' .. MoreBuild.VERSION .. ')')
 
-MoreBuild.availableMaterialsList = {}
 MoreBuild.neededMaterials = {}
 MoreBuild.neededTools = {}
 MoreBuild.toolsList = {}
-MoreBuild.toolsText = {}
-MoreBuild.playerCarpentrySkill = 0
+MoreBuild.playerSkills = {}
+MoreBuild.textSkillsRed = {}
+MoreBuild.textSkillsGreen = {}
 MoreBuild.playerCanPlaster = false
 MoreBuild.textTooltipHeader = ' <RGB:2,2,2> <LINE> <LINE>' .. getText('Tooltip_craft_Needs') .. ' : <LINE> '
-MoreBuild.textCarpentryRed = ''
-MoreBuild.textCarpentryGreen = ''
-MoreBuild.textElectricityRed = ''
-MoreBuild.textElectricityGreen = ''
 MoreBuild.textCanRotate = '<LINE> <RGB:1,1,1>' .. getText('Tooltip_craft_pressToRotate', Keyboard.getKeyName(getCore():getKey('Rotate building')))
 MoreBuild.textPlasterRed = '<RGB:1,0,0> <LINE> <LINE>' .. getText('Tooltip_PlasterRed_Description')
 MoreBuild.textPlasterGreen = '<RGB:1,1,1> <LINE> <LINE>' .. getText('Tooltip_PlasterGreen_Description')
@@ -72,6 +84,7 @@ MoreBuild.skillLevel = {
   floorObject = 1,
   wallObject = 2,
   doorObject = 3,
+  garageDoorObject = 6,
   stairsObject = 6,
   stoneArchitecture = 5,
   metalArchitecture = 5,
@@ -83,7 +96,6 @@ MoreBuild.skillLevel = {
   lightingObject = 2,
   generatorObject = 3,
   windowsObject = 2,
-  none = 0
 }
 
 MoreBuild.healthLevel = {
@@ -93,12 +105,13 @@ MoreBuild.healthLevel = {
   woodContainer = 200,
   stoneContainer = 250,
   metalContainer = 350,
-  wallDecoration = 50
+  wallDecoration = 50,
+  woodenFence = 100,
+  metalDoor = 700
 }
 
 MoreBuild.getMoveableDisplayName = function(sprite)
   local props = getSprite(sprite):getProperties()
-  local getMoveableDisplayName = Translator.getMoveableDisplayName
   if props:Is('CustomName') then
     local name = props:Val('CustomName')
     if props:Is('GroupName') then
@@ -123,21 +136,15 @@ MoreBuild.doBuildMenu = function(player, context, worldobjects, test)
     return
   end
 
-  if MoreBuild.haveAToolToBuildWithWith(player) then
-    MoreBuild.playerCarpentrySkill = getSpecificPlayer(player):getPerkLevel(Perks.Woodwork)
-    MoreBuild.playerelectricianSkill = getSpecificPlayer(player):getPerkLevel(Perks.Electricity)
+  if MoreBuild.haveAToolToBuild(player) then
 
-    if MoreBuild.playerCarpentrySkill > 7 or ISBuildMenu.cheat then
+    MoreBuild.buildSkillsList(player)
+
+    if MoreBuild.playerSkills["Woodwork"] > 7 or ISBuildMenu.cheat then
       MoreBuild.playerCanPlaster = true
     else
       MoreBuild.playerCanPlaster = false
     end
-
-    MoreBuild.textCarpentryRed = ' <RGB:1,0,0>' .. getText('IGUI_perks_Carpentry') .. ' ' .. MoreBuild.playerCarpentrySkill .. '/'
-    MoreBuild.textCarpentryGreen = ' <RGB:1,1,1>' .. getText('IGUI_perks_Carpentry') .. ' '
-    MoreBuild.textElectricityRed = ' <RGB:1,0,0>' .. getText('IGUI_perks_Electricity') .. ' ' .. MoreBuild.playerelectricianSkill .. '/'
-    MoreBuild.textElectricityGreen = ' <RGB:1,1,1>' .. getText('IGUI_perks_Electricity') .. ' '
-    MoreBuild.buildMaterialsList(player)
 
     local _firstTierMenu = context:addOption(getText('ContextMenu_MoreBuild'), worldobjects, nil)
     local _secondTierMenu = ISContextMenu:getNew(context)
@@ -164,6 +171,12 @@ MoreBuild.doBuildMenu = function(player, context, worldobjects, test)
 
     context:addSubMenu(_WindowsOption, _WindowsSubMenu)
     MoreBuild.WindowsMenuBuilder(_WindowsSubMenu, player, context, worldobjects)
+
+    local _HighMetalFenceOption = _architectureThirdTierMenu:addOption(getText('ContextMenu_HighMetal_Fence'), worldobjects, nil)
+    local _HighMetalFenceSubMenu = _architectureThirdTierMenu:getNew(_architectureThirdTierMenu)
+
+    context:addSubMenu(_HighMetalFenceOption, _HighMetalFenceSubMenu)
+    MoreBuild.highMetalFenceMenuBuilder(_HighMetalFenceSubMenu, player, context, worldobjects)
 
     local _moreFencesOption = _architectureThirdTierMenu:addOption(getText('ContextMenu_Fences_Menu'), worldobjects, nil)
     local _moreFencesSubMenu = _architectureThirdTierMenu:getNew(_architectureThirdTierMenu)
@@ -325,92 +338,130 @@ MoreBuild.doBuildMenu = function(player, context, worldobjects, test)
     context:addSubMenu(_SurvivalOption, _SurvivalThirdTierMenu)
     MoreBuild.SurvivalPostsMenuBuilder(_SurvivalThirdTierMenu, player)
 
-    MoreBuild.doWaterWellInfo(player, context, worldobjects)
+    --MoreBuild.doWaterWellInfo(player, context, worldobjects)
   end
 end
 
-MoreBuild.haveAToolToBuildWithWith = function(player)
-  local _inventory = getSpecificPlayer(player):getInventory()
-  MoreBuild.toolsList = {}
-  MoreBuild.toolsList['Hammer'] = _inventory:contains('Hammer') or _inventory:contains('HammerStone') or _inventory:contains('BallPeenHammer') or _inventory:contains('WoodenMallet') or _inventory:contains('ClubHammer')
-  MoreBuild.toolsList['Screwdriver'] = _inventory:contains('Screwdriver')
-  MoreBuild.toolsList['HandShovel'] = _inventory:contains('HandShovel')
-  MoreBuild.toolsList['Saw'] = _inventory:contains('Saw')
-  MoreBuild.toolsList['Spade'] = _inventory:contains('Shovel')
+local function predicateNotBroken(item)
+	return not item:isBroken()
+end
 
-  MoreBuild.toolsText['Hammer'] = getItemNameFromFullType('Base.Hammer')
-  MoreBuild.toolsText['Screwdriver'] = getItemNameFromFullType('Base.Screwdriver')
-  MoreBuild.toolsText['HandShovel'] = getItemNameFromFullType('farming.HandShovel')
-  MoreBuild.toolsText['Saw'] = getItemNameFromFullType('base.Saw')
-  MoreBuild.toolsText['Spade'] = getItemNameFromFullType('Base.Shovel')
+-- TODO: 添加多工具支持
+MoreBuild.haveAToolToBuild = function(player)
+  local inv = getSpecificPlayer(player):getInventory()
+  
+  MoreBuild.toolsList['Hammer'] = {"Base.Hammer", "Base.HammerStone", "Base.BallPeenHammer", "Base.WoodenMallet", "Base.ClubHammer"}
+  MoreBuild.toolsList['Screwdriver'] = {"Base.Screwdriver"}
+  MoreBuild.toolsList['HandShovel'] = {"farming.HandShovel"}
+  MoreBuild.toolsList['Saw'] = {"Base.Saw"}
+  MoreBuild.toolsList['Spade'] = {"Base.Shovel"}
 
-  return MoreBuild.toolsList['Hammer'] or ISBuildMenu.cheat
+  local havaTools = nil
+
+  for _, type in pairs (MoreBuild.toolsList['Hammer']) do
+    havaTools = inv:containsTypeEvalRecurse(type, predicateNotBroken)
+    if havaTools then
+      havaTools = true
+      break
+    end
+  end
+
+  return havaTools or ISBuildMenu.cheat
 end
 
 MoreBuild.equipToolPrimary = function(object, player, tool)
-  if MoreBuild.toolsList[tool] then
-    ISInventoryPaneContextMenu.equipWeapon(getSpecificPlayer(player):getInventory():getItemFromType(tool), true, false, player)
-
-    object.noNeedHammer = true
-  end
-end
-
-MoreBuild.equipToolSecondary = function(object, player, tool)
-  if MoreBuild.toolsList[tool] then
-    ISInventoryPaneContextMenu.equipWeapon(getSpecificPlayer(player):getInventory():getItemFromType(tool), false, false, player)
-  end
-end
-
-MoreBuild.buildMaterialsList = function(player)
-  MoreBuild.availableMaterialsList = buildUtil.checkMaterialOnGround(getSpecificPlayer(player):getCurrentSquare())
-
-  local _inventoryList = getSpecificPlayer(player):getInventory():getItems()
-  local _size = _inventoryList:size()
-  local _currentItemType = ''
-
-  for i = 0, _size - 1 do
-    _currentItemType = _inventoryList:get(i):getType()
-
-    if MoreBuild.availableMaterialsList[_currentItemType] then
-      MoreBuild.availableMaterialsList[_currentItemType] = MoreBuild.availableMaterialsList[_currentItemType] + 1
-    else
-      MoreBuild.availableMaterialsList[_currentItemType] = 1
+  local inv = getSpecificPlayer(player):getInventory()
+  for _, type in pairs (MoreBuild.toolsList[tool]) do
+    tools = inv:getBestTypeEvalRecurse(type, predicateNotBroken)
+    if tools then
+      ISInventoryPaneContextMenu.equipWeapon(tools, true, false, player)
+      object.noNeedHammer = true
+      break
     end
   end
 end
 
-MoreBuild.tooltipCheckForMaterial = function(material, amount, text, tooltip)
-  if amount > 0 then
-    local _thisItemCount = 0
+-- 未使用
+MoreBuild.equipToolSecondary = function(object, player, tool)
+  local inv = getSpecificPlayer(player):getInventory()
+  for _, type in pairs (MoreBuild.toolsList[tool]) do
+    tools = inv:getBestTypeEvalRecurse(type, predicateNotBroken)
+    if tools then
+      ISInventoryPaneContextMenu.equipWeapon(tools, false, false, player)
+      break
+    end
+  end
+end
 
-    if MoreBuild.availableMaterialsList[material] then
-      _thisItemCount = MoreBuild.availableMaterialsList[material]
-    else
-      _thisItemCount = 0
+MoreBuild.buildSkillsList = function(player)
+  local perks = PerkFactory.PerkList
+  for i = 0, perks:size() - 1 do
+    local perkID = perks:get(i):getId()
+    local perkType = perks:get(i):getType()
+    MoreBuild.playerSkills[perkID] = getSpecificPlayer(player):getPerkLevel(perks:get(i))
+    MoreBuild.textSkillsRed[perkID] = ' <RGB:1,0,0>' .. PerkFactory.getPerkName(perkType) .. ' ' .. MoreBuild.playerSkills[perkID] .. '/'
+    MoreBuild.textSkillsGreen[perkID] = ' <RGB:1,1,1>' .. PerkFactory.getPerkName(perkType) .. ' '
+  end
+end
+
+-- ISBuildMenu.countMaterial性能过低，如果玩家库存中物品过多会卡游戏主线程，不使用
+MoreBuild.tooltipCheckForMaterial = function(player, material, amount, tooltip)
+  local inv = getSpecificPlayer(player):getInventory()
+  local type = split(material, '\\.')[2]
+  local _thisItemCount = 0
+  local groundItem = ISBuildMenu.materialOnGround
+  if amount > 0 then
+    _thisItemCount = inv:getItemCountFromTypeRecurse(material) -- 统计玩家库存中指定类名的物品数量，含背包
+
+    -- why #groundItem 0?
+    for k, v in pairs(groundItem) do
+      if k == type then
+        _thisItemCount = _thisItemCount + v
+      end
     end
 
     if _thisItemCount < amount then
-      tooltip.description = tooltip.description .. ' <RGB:1,0,0>' .. text .. ' ' .. _thisItemCount .. '/' .. amount .. ' <LINE>'
+      tooltip.description = tooltip.description .. ' <RGB:1,0,0>' .. getItemNameFromFullType(material) .. ' ' .. _thisItemCount .. '/' .. amount .. ' <LINE>'
       return false
     else
-      tooltip.description = tooltip.description .. ' <RGB:1,1,1>' .. text .. ' ' .. amount .. ' <LINE>'
+      tooltip.description = tooltip.description .. ' <RGB:1,1,1>' .. getItemNameFromFullType(material) .. ' ' .. _thisItemCount .. '/' .. amount .. ' <LINE>'
       return true
     end
   end
   return true
 end
 
-MoreBuild.tooltipCheckForTool = function(tool, tooltip)
-  if MoreBuild.toolsList and MoreBuild.toolsList[tool] then
-    tooltip.description = tooltip.description .. ' <RGB:1,1,1>' .. MoreBuild.toolsText[tool] .. ' <LINE>'
-    return true
-  else
-    tooltip.description = tooltip.description .. ' <RGB:1,0,0>' .. MoreBuild.toolsText[tool] .. ' <LINE>'
-    return false
+MoreBuild.getBestTools = function(player, tool)
+  local tools = nil
+  local toolList = MoreBuild.toolsList[tool]
+  local inv = getSpecificPlayer(player):getInventory()
+  for _, type in pairs (toolList) do
+    tools = inv:getBestTypeEvalRecurse(type, predicateNotBroken)
+    if tools then
+      return tools;
+    end
   end
 end
 
-MoreBuild.canBuildObject = function(carpentry, electricity, option, player)
+-- TODO: 支持背包内工具
+MoreBuild.tooltipCheckForTool = function(player, tool, tooltip)
+  local tools = MoreBuild.getBestTools(player, tool)
+  if tools then
+    tooltip.description = tooltip.description .. ' <RGB:1,1,1>' .. getItemNameFromFullType(tools:getFullType()) .. ' <LINE>'
+    return true
+  else
+    for _, type in pairs (MoreBuild.toolsList[tool]) do
+      tooltip.description = tooltip.description .. ' <RGB:1,0,0>' .. getItemNameFromFullType(type) .. ' <LINE>'
+      return false
+    end
+  end
+end
+
+--- 检查是否满足建造条件
+-- @param skills table: 技能等级需求表
+-- @param option ISContextMenu: ISContextMenu
+-- @return Boolean: 如果满足建造条件则返回true否则返回false
+MoreBuild.canBuildObject = function(skills, option, player)
   local _tooltip = ISToolTip:new()
   _tooltip:initialise()
   _tooltip:setVisible(false)
@@ -423,8 +474,8 @@ MoreBuild.canBuildObject = function(carpentry, electricity, option, player)
   local _currentResult = true
 
   for _, _currentMaterial in pairs(MoreBuild.neededMaterials) do
-    if _currentMaterial['Material'] and _currentMaterial['Amount'] and _currentMaterial['Text'] then
-      _currentResult = MoreBuild.tooltipCheckForMaterial(_currentMaterial['Material'], _currentMaterial['Amount'], _currentMaterial['Text'], _tooltip)
+    if _currentMaterial['Material'] and _currentMaterial['Amount'] then
+      _currentResult = MoreBuild.tooltipCheckForMaterial(player, _currentMaterial['Material'], _currentMaterial['Amount'], _tooltip)
     else
       _tooltip.description = _tooltip.description .. ' <RGB:1,0,0> Error in required material definition. <LINE>'
       _canBuildResult = false
@@ -436,32 +487,22 @@ MoreBuild.canBuildObject = function(carpentry, electricity, option, player)
   end
 
   for _, _currentTool in pairs(MoreBuild.neededTools) do
-    _currentResult = MoreBuild.tooltipCheckForTool(_currentTool, _tooltip)
+    _currentResult = MoreBuild.tooltipCheckForTool(player, _currentTool, _tooltip)
 
     if not _currentResult then
       _canBuildResult = false
     end
   end
 
-  if carpentry > 0 then
-    if MoreBuild.playerCarpentrySkill < carpentry then
-      _tooltip.description = _tooltip.description .. MoreBuild.textCarpentryRed
+  -- 已重写旧版技能需求代码，现在可支持游戏中所有技能
+  for skill, level in pairs (skills) do
+    if (MoreBuild.playerSkills[skill] < level) then
+      _tooltip.description = _tooltip.description .. MoreBuild.textSkillsRed[skill]
       _canBuildResult = false
     else
-      _tooltip.description = _tooltip.description .. MoreBuild.textCarpentryGreen
+      _tooltip.description = _tooltip.description .. MoreBuild.textSkillsGreen[skill]
     end
-
-    _tooltip.description = _tooltip.description .. carpentry .. ' <LINE>'
-  end
-  if electricity > 0 then
-    if MoreBuild.playerelectricianSkill < electricity then
-      _tooltip.description = _tooltip.description .. MoreBuild.textElectricityRed
-      _canBuildResult = false
-    else
-      _tooltip.description = _tooltip.description .. MoreBuild.textElectricityGreen
-    end
-
-    _tooltip.description = _tooltip.description .. electricity .. ' <LINE>'
+    _tooltip.description = _tooltip.description .. level .. ' <LINE>'
   end
 
   if not _canBuildResult and not ISBuildMenu.cheat then
@@ -471,6 +512,8 @@ MoreBuild.canBuildObject = function(carpentry, electricity, option, player)
   return _tooltip
 end
 
+--- 获取MoreBuild实例
+-- @return table: MoreBuild Instance
 function getMoreBuildInstance()
   return MoreBuild
 end

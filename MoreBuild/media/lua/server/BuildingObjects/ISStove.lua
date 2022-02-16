@@ -1,8 +1,3 @@
---***********************************************************
---**                    ROBERT JOHNSON                     **
---***********************************************************
-require 'TimedActions/ISBaseTimedAction'
-
 ISStove = ISBuildingObject:derive('ISStove')
 
 function ISStove:create(x, y, z, north, sprite)
@@ -37,33 +32,18 @@ function ISStove:isValid(square)
   return true
 end
 
-function ISStove:update()
+function ISStove:render(x, y, z, square)
+  ISBuildingObject.render(self, x, y, z, square)
 end
 
-function ISStove:stop()
-  if self.sound then
-    getSoundManager():StopSound(self.sound)
-  end
-
-  ISBaseTimedAction.stop(self)
-end
-
-function ISStove:start()
-end
-
-function ISStove:perform()
-  ISBaseTimedAction.perform(self)
-end
-
-function ISStove:new(sprite, northSprite, corner)
+function ISStove:new(sprite, northSprite, player)
   local o = {}
   setmetatable(o, self)
   self.__index = self
   o:init()
   o:setSprite(sprite)
   o:setNorthSprite(northSprite)
-  o.corner = corner
-  o.canBarricade = false
+  o.player = player
   o.dismantable = true
   o.needToBeAgainstWall = true
   o.name = name
@@ -71,8 +51,4 @@ function ISStove:new(sprite, northSprite, corner)
   o.stopOnRun = true
   o.maxTime = 500
   return o
-end
-
-function ISStove:render(x, y, z, square)
-  ISBuildingObject.render(self, x, y, z, square)
 end

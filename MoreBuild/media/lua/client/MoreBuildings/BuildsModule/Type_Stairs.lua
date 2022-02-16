@@ -12,18 +12,20 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   MoreBuild.neededMaterials = {
     {
-      Material = 'Plank',
-      Amount = 8,
-      Text = getItemNameFromFullType('Base.Plank')
+      Material = 'Base.Plank',
+      Amount = 15
     },
     {
-      Material = 'Nails',
-      Amount = 8,
-      Text = getItemNameFromFullType('Base.Nails')
+      Material = 'Base.Nails',
+      Amount = 15
     }
   }
 
   MoreBuild.neededTools = {'Hammer'}
+
+  local needSkills = {
+    Woodwork = MoreBuild.skillLevel.stairsObject
+  }
 
   _sprite = {}
   _sprite.upToLeft01 = 'fixtures_stairs_01_64'
@@ -39,7 +41,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.stairsObject, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -58,7 +60,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.complexArchitecture, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -77,7 +79,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.complexArchitecture, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -96,7 +98,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.stairsObject, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -115,7 +117,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.stairsObject, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -134,25 +136,23 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildWoodenStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.stairsObject, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
 
   MoreBuild.neededMaterials = {
     {
-      Material = 'SheetMetal',
-      Amount = 4,
-      Text = getItemNameFromFullType('Base.SheetMetal')
+      Material = 'Base.SheetMetal',
+      Amount = 10
     },
     {
-      Material = 'Screws',
-      Amount = 8,
-      Text = getItemNameFromFullType('Base.Screws')
+      Material = 'Base.Screws',
+      Amount = 15
     }
   }
 
-  MoreBuild.neededTools = {'Screwdriver'}
+  MoreBuild.neededTools = {'Hammer', 'Screwdriver'}
 
   _sprite = {}
   _sprite.upToLeft01 = 'fixtures_stairs_01_3'
@@ -168,7 +168,7 @@ MoreBuild.stairsMenuBuilder = function(subMenu, player)
 
   _option = subMenu:addOption(_name, nil, MoreBuild.onBuildMetalStairs, _sprite, player, _name)
 
-  _tooltip = MoreBuild.canBuildObject(MoreBuild.skillLevel.stairsObject, MoreBuild.skillLevel.none, _option, player)
+  _tooltip = MoreBuild.canBuildObject(needSkills, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = MoreBuild.textStairsDescription .. _tooltip.description
   _tooltip:setTexture(_sprite.upToLeft01)
@@ -181,9 +181,9 @@ MoreBuild.onBuildWoodenStairs = function(ignoreThisArgument, sprite, player, nam
   _stairs.player = player
   _stairs.name = name
 
-  _stairs.modData['need:Base.Plank'] = '8'
-  _stairs.modData['need:Base.Nails'] = '8'
-  _stairs.modData['xp:Woodwork'] = '5'
+  _stairs.modData['need:Base.Plank'] = '15'
+  _stairs.modData['need:Base.Nails'] = '15'
+  _stairs.modData['xp:Woodwork'] = '10'
 
   getCell():setDrag(_stairs, player)
 end
@@ -195,15 +195,15 @@ MoreBuild.onBuildMetalStairs = function(ignoreThisArgument, sprite, player, name
   _stairs.player = player
   _stairs.name = name
 
-  _stairs.modData['need:Base.SheetMetal'] = '4'
-  _stairs.modData['need:Base.Screws'] = '8'
-  _stairs.modData['xp:Woodwork'] = '5'
+  _stairs.modData['need:Base.SheetMetal'] = '10'
+  _stairs.modData['need:Base.Screws'] = '15'
+  _stairs.modData['xp:Woodwork'] = '15'
 
   function _stairs:getHealth()
     return MoreBuild.healthLevel.metalStairs + buildUtil.getWoodHealth(self)
   end
 
-  MoreBuild.equipToolPrimary(_stairs, player, 'Screwdriver')
+  MoreBuild.equipToolPrimary(_stairs, player, 'Hammer')
 
   getCell():setDrag(_stairs, player)
 end

@@ -1,29 +1,30 @@
-ISBarbecue = ISBuildingObject:derive('ISBarbecue')
+ISWindowWallObj = ISBuildingObject:derive('ISWindowWallObj')
 
-function ISBarbecue:create(x, y, z, north, sprite)
+function ISWindowWallObj:create(x, y, z, north, sprite)
   local cell = getWorld():getCell()
   self.sq = cell:getGridSquare(x, y, z)
-  self.javaObject = IsoBarbecue.new(getCell(), self.sq, getSprite(sprite))
-  self.javaObject:setMovedThumpable(true)
-  --self.javaObject:setFuelAmount(ZombRand(0,100));
-  --self.javaObject:setLit(false)
-  self.sq:AddSpecialObject(self.javaObject)
+
+  self.javaObject = IsoWindow.new(getCell(), self.sq, getSprite(sprite), north)
   buildUtil.consumeMaterial(self)
+  self.sq:AddSpecialObject(self.javaObject)
   self.javaObject:transmitCompleteItemToServer()
 end
 
-function ISBarbecue:isValid(square)
+function ISWindowWallObj:isValid(square)
   if not ISBuildingObject.isValid(self, square) then
+    return false
+  end
+  if buildUtil.stairIsBlockingPlacement(square, true) then
     return false
   end
   return true
 end
 
-function ISBarbecue:render(x, y, z, square)
+function ISWindowWallObj:render(x, y, z, square)
   ISBuildingObject.render(self, x, y, z, square)
 end
 
-function ISBarbecue:new(sprite, northSprite, player)
+function ISWindowWallObj:new(sprite, northSprite, player)
   local o = {}
   setmetatable(o, self)
   self.__index = self
@@ -31,10 +32,11 @@ function ISBarbecue:new(sprite, northSprite, player)
   o:setSprite(sprite)
   o:setNorthSprite(northSprite)
   o.player = player
+  o.canBarricade = true
   o.dismantable = true
   o.name = name
   o.stopOnWalk = true
   o.stopOnRun = true
-  o.maxTime = 500
+  o.maxTime = 150
   return o
 end
