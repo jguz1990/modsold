@@ -22,4 +22,7 @@ Sandbox_EN = {
 
 	Sandbox_HN_HordeNightZombieSpawnDistance = "HordeNight Spawn Distance"
 	Sandbox_HN_HordeNightZombieSpawnDistance_tooltip = "The maximal distance for a HordeNight zombie to spawn around players. \nTurn down the value if you don't see zombies spawn in the HordeNight."
+
+	Sandbox_HN_HordeNightIndicator = "HordeNight Indicator"
+	Sandbox_HN_HordeNightIndicator_tooltip = "When it's on, there will be an icon on the top right if it's currently the HordeNight day.This will not indicates the random HordeNight."
 }

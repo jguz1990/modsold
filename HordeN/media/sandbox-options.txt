@@ -81,3 +81,11 @@ option HordeNightMain.HordeNightZombieSpawnDistance
 	page = ZombieAdvanced,
 	translation = HN_HordeNightZombieSpawnDistance,
 }
+
+option HordeNightMain.HordeNightIndicator
+{
+	type = boolean,
+	default = true,
+	page = ZombieAdvanced,
+	translation = HN_HordeNightIndicator,
+}

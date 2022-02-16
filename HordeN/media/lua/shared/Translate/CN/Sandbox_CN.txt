@@ -22,4 +22,7 @@ Sandbox_CN = {
 
 	Sandbox_HN_HordeNightZombieSpawnDistance = "尸潮僵尸生成距离"
 	Sandbox_HN_HordeNightZombieSpawnDistance_tooltip = "决定在尸潮中僵尸在玩家附近生成的最远距离。 \n如果在尸潮中没有僵尸生成请减少这个距离。"
+
+	Sandbox_HN_HordeNightIndicator = "当日尸潮标识"
+	Sandbox_HN_HordeNightIndicator_tooltip = "打开后，如果处于会发生尸潮之夜的日子，在屏幕右上角会显示一个标识图标。这个不会标识随机尸潮之夜。"
 }

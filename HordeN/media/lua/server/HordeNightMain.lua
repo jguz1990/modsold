@@ -62,7 +62,8 @@ function HN_SpawnOneZombieAround(cPlayer)
 				zLocationY = zLocationY + pLocation:getY();
 				local spawnSpace = getWorld():getCell():getGridSquare(zLocationX, zLocationY, 0);
 				if spawnSpace then
-						if spawnSpace:isSafeToSpawn() and spawnSpace:isOutside() then
+						local isSafehouse = SafeHouse.getSafeHouse(spawnSpace);
+						if spawnSpace:isSafeToSpawn() and spawnSpace:isOutside() and isSafehouse == nil then
 								canSpawn = true;
 								print("Success finding a place for zombie to spawn. ".."x: "..tostring(zLocationX).." y: "..tostring(zLocationY)) 
 								break
@@ -90,16 +91,16 @@ end
 
 -- Server receive Client command, spawn zombies around.
 function HN_onSpawnCommand( HN_module, HN_command, HN_player, HN_args)
-		print("Player has send ClientCommand, module: "..HN_module.."  command: "..HN_command);
+		--print("Player has send ClientCommand, module: "..HN_module.."  command: "..HN_command);
     if HN_module ~= "HNmodule" then         
-        print("module is not HNmodule");
+        --print("module is not HNmodule");
         return
     end
     if HN_command == "HNLetServerSpawn" then
 				local HNLocationX = HN_args["x"];
 				local HNLocationY = HN_args["y"];
     		local outfit = HN_args["outfit"];
-    		print("server has receive HNLetServerSpawn command.");
+    		--print("server has receive HNLetServerSpawn command.");
     		addZombiesInOutfit(HNLocationX, HNLocationY, 0, 1, outfit, 50, false, false, false, false, 1.5);
     end
 end
@@ -107,7 +108,7 @@ end
 
 -- Every hour check if it's the time to start spawning horde. 
 function HN_CheckStartHordeNight()
-		if getGameTime():getHour() == SandboxVars.HordeNightMain.HordeNightHour then
+		if getGameTime():getHour() % 24 == SandboxVars.HordeNightMain.HordeNightHour then
 				local daysPass = math.floor(HN_getActualSpawnAgeDay());
 				print("It's the hour for HordeNight, day: "..tostring(daysPass));
 				if daysPass >= SandboxVars.HordeNightMain.FirstHordeNightDay then
@@ -155,6 +156,7 @@ function HN_AlarmEveryOne()
 		local rAlarmSound = "zombierand"..tostring(ZombRand(10));
 		local aZed = getSoundManager():PlaySound(rAlarmSound,false,0);
     getSoundManager():PlayAsMusic(rAlarmSound,aZed,false,0);
+    aZed:setVolume(0.1);
 end
 
 -- Every tick, if Spawb Switch is on, spawn azombie every 30 ticks, until the Horde Remain is 0, then turn off Spawn Switch.
