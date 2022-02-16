@@ -1,0 +1,71 @@
+module Base
+{
+    model BoatMag_Ground
+    {
+        mesh = other/BoatMagModel_Ground,
+        texture = other/BoatMagTexture,
+        scale = 1,
+    } 
+    model BoatMag_Reading
+    {
+        mesh = other/BoatMagModel_Reading,
+        texture = other/BoatMagTexture,
+        scale = 1,
+    } 
+    model SwimMag_Ground
+    {
+        mesh = other/BoatMagModel_Ground,
+        texture = other/SwimMagTexture,
+        scale = 0.8,
+    } 
+    model SwimMag_Reading
+    {
+        mesh = other/BoatMagModel_Reading,
+        texture = other/SwimMagTexture,
+        scale = 1,
+    } 
+    
+    model TireTube_Ground
+    {
+        mesh = other/TireTubeModel,
+        texture = other/TireTubeTexture,
+        scale = 0.008,
+    }
+    model DeflatedTireTube_Ground
+    {
+        mesh = other/DeflatedTireTubeModel,
+        texture = other/DeflatedTireTubeTexture,
+        scale = 0.012,
+    } 
+    model Compass_Ground
+    {
+        mesh = other/CompassModel,
+        texture = other/CompassTexture,
+        scale = 0.012,
+    } 
+    model Lifebuoy_Ground
+    {
+        mesh = other/LifebuoyModel,
+        texture = other/LifebuoyTexture,
+        scale = 0.008,
+    } 
+    model ManualStarter_Ground
+    {
+        mesh = other/ManualStarterModel,
+        texture = other/ManualStarterTexture,
+        scale = 0.006,
+    } 
+    model Propeller_Ground
+    {
+        mesh = other/PropellerModel,
+        texture = other/PropellerTexture,
+        scale = 0.010,
+    } 
+    model Sail_Ground
+    {
+        mesh = other/SailModel,
+        texture = other/SailTexture,
+        scale = 0.007,
+    } 
+    
+}    

@@ -1,0 +1,395 @@
+module Aquatsar
+{
+    sound aquatsar_main_theme
+    {
+        category = Boat,
+        loop = false,
+        master = Music,
+        clip
+        {
+            file = media/sound/boats/aquatsar_main_theme.wav,
+            volume = 2.0,
+        }
+    }
+    
+    sound AnchorFromWater
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_anchorFromWater.ogg,
+        }
+    }
+    
+    sound AnchorInWater
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_anchorInWater.ogg,
+        }
+    }
+    
+    sound BindRoap
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_bindRoap.ogg,
+        }
+    }
+    
+    sound boat_sails_set
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_sails_set.ogg,
+        }
+    }
+    
+    sound boat_sails_remove
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_sails_remove.ogg,
+        }
+    }
+    
+    sound boat_sails_change_direction
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_sails_change_direction.ogg,
+        }
+    }
+    
+    sound boat_sails_torn1
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn1.ogg,
+        }
+    }
+    
+    sound boat_sails_torn2
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn2.ogg,
+        }
+    }
+    
+    sound boat_sails_torn3
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn3.ogg,
+        }
+    }
+    
+    sound boat_sails_torn4
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn4.ogg,
+        }
+    }
+    
+    sound boat_sails_torn5
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn5.ogg,
+        }
+    }
+    
+    sound boat_sails_torn6
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn6.ogg,
+        }
+    }
+    
+    sound boat_sails_torn7
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn7.ogg,
+        }
+    }
+    
+    sound boat_sails_torn8
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn8.ogg,
+        }
+    }
+    
+    sound boat_sails_torn9
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torn9.ogg,
+        }
+    }
+    
+    sound boat_sails_torned2
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_sails_torned2.ogg,
+        }
+    }
+    
+    sound boat_launching
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_launching.ogg,
+            volume = 0.5,
+        }
+    }
+
+    sound boat_on_trailer
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/boat_on_trailer.ogg,
+            volume = 0.5,
+        }
+    }
+    
+    sound motoryacht_engine_start
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/motoryacht_engine_start.ogg,
+        }
+    }
+    
+    sound motoryacht_engine_stop
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/motoryacht_engine_stop.ogg,
+        }
+    }
+    
+    sound sail_yacht_engine_start
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/sail_yacht_engine_start.ogg,
+        }
+    }
+    
+    sound sail_yacht_engine_stop
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/sail_yacht_engine_stop.ogg,
+        }
+    }
+    
+        
+    sound BoatSailing
+    {
+        category = Boat,
+        loop = true,
+        clip
+        {
+            file = media/sound/boats/boat_sailing.ogg,
+            volume = 0.2,
+        }
+    }
+    
+    sound BoatSailingByWind
+    {
+        category = Boat,
+        loop = true,
+        clip
+        {
+            file = media/sound/boats/boat_sailing_wind.ogg,
+        }
+    }
+    
+    sound BoatHorn
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/boat_horn.wav,
+        }
+    }
+    
+    sound TryStartEngineManualy
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/tryStartEngineManualy.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound SuccessStartEngineManualy
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/successStartEngineManualy.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound FailStartEngineManualy
+    {
+        category = Boat,
+        loop = false,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/failStartEngineManualy.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound TrumanSetsSail
+    {
+        category = Boat,
+        loop = false,
+        clip
+        {
+            file = media/sound/boats/Truman_Sets_Sail.ogg,
+        }
+    }
+
+    
+    sound WindVeryLight
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_VERY_LIGHT.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound WindLight
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_LIGHT.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound WindMedium
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_MEDIUM.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound WindStrong
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_STRONG.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound WindVeryStrong
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_VERY_STRONG.ogg,
+            volume = 1,
+        }
+    }
+    
+    sound WindStorm
+    {
+        category = Boat,
+        loop = true,
+        master = Ambient,
+        clip
+        {
+            file = media/sound/boats/wind_STORM.ogg,
+            volume = 1,
+        }
+    }
+}

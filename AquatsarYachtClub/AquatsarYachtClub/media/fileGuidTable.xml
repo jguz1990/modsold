@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+	<path>media/clothing/clothingItems/duck.xml</path>
+	<guid>0dda48e1-80d6-46ba-bd9b-885605284067</guid>
+	</files>	
+	
+	<files>
+	<path>media/clothing/clothingItems/divingMask.xml</path>
+	<guid>05bb104b-943d-4b20-8469-9af7ea6df578</guid>
+	</files>	
+
+</fileGuidTable>

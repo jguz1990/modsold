@@ -1,0 +1,23 @@
+pl = getPlayer()
+boat = getPlayer():getVehicle()
+part = getPlayer():getVehicle():getPartById("TireRearLeft")
+
+print(((boat:getMaxSpeed() / boat:getScript():getGearRatioCount()) * 0.71) * boat:getTransmissionNumber())
+print(boat:getMaxSpeed())
+ClimateManager.getWindAngleString(getClimateManager():getWindAngleDegrees())
+
+print(ClimateManager.getWindAngleString(getClimateManager():getWindAngleIntensity()))
+
+print()
+print(part:getZ())
+
+for i, j in ipairs(wo) do print(j) end
+
+for i, j in pairs(DummySoundEmitter.new()) do print(i) end
+
+for i, j in pairs(getmetatable(g)) do print(j) end
+
+for i, j in pairs(getmetatable(g)) do for m, k in pairs(j) do print(m) end end
+
+
+getCore():getKey("Forward")

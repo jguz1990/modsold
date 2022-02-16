@@ -1,0 +1,156 @@
+module Base
+{
+    item SailingYachtName_Sakharov_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = Akademik Sakharov,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    item SailingYachtName_La_Brigandine_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = La Brigandine,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    item SailingYachtName_Default_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = No name,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    
+    item BoatMotorName_NP_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = Nautilus P,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    item BoatMotorName_Orianna_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = Orianna,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    item BoatMotorName_Default_Item
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = No name,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    template vehicle SailingYachtName
+    {
+        part BoatName
+        {
+            specificItem = false,
+            itemType = Base.SailingYachtName_Default_Item;Base.SailingYachtName_La_Brigandine_Item;Base.SailingYachtName_Sakharov_Item,
+            category = BoatBody,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Paintbrush,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                    2
+                    {
+                        type = Base.PaintWhite,
+                        count = 1,
+                        keep = true,
+                    }
+                    3
+                    {
+                        type = Base.PaintBlack,
+                        count = 1,
+                        keep = true,
+                    }
+                }
+                time = 500,
+                professions = ,
+                skills = ,
+                traits = ,
+                recipes = ,
+                test = Vehicles.InstallTest.Default,
+                complete = Boats.InstallComplete.SailingYachtName,
+            }
+            lua
+            {
+                create = Boats.Create.SailingYachtName,
+                init = Boats.Init.SailingYachtName,
+            }
+        }
+    }
+    template vehicle BoatMotorName
+    {
+        part BoatName
+        {
+            specificItem = false,
+            itemType = Base.BoatMotorName_Default_Item;Base.BoatMotorName_NP_Item;Base.BoatMotorName_Orianna_Item,
+            category = BoatBody,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Paintbrush,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                    2
+                    {
+                        type = Base.PaintWhite,
+                        count = 1,
+                        keep = true,
+                    }
+                    3
+                    {
+                        type = Base.PaintBlack,
+                        count = 1,
+                        keep = true,
+                    }
+                }
+                time = 500,
+                professions = ,
+                skills = ,
+                traits = ,
+                recipes = ,
+                test = Vehicles.InstallTest.Default,
+                complete = Boats.InstallComplete.MotorBoatName,
+            }
+            lua
+            {
+                create = Boats.Create.MotorBoatName,
+                init = Boats.Init.MotorBoatName,
+            }
+        }
+    }
+}

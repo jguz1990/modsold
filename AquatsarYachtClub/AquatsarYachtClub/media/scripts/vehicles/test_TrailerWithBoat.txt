@@ -1,0 +1,445 @@
+module Base
+{
+    model TrailerWithBoatBase
+    {
+        mesh = trailers/TrailerWithBoat|Trailer,
+        shader = vehicle_norandom_multiuv,
+        scale = 0.0050,
+    }
+    model TrailerWithBoatMotor
+    {
+        mesh = trailers/TrailerWithBoat|Motor,
+        texture = Boats/BoatMotor_base,
+        shader = vehiclewheel,
+        scale = 0.0050,
+    }
+    model TrailerWithBoatSailing
+    {
+        mesh = trailers/TrailerWithBoat|Sailing,
+        shader = vehicle,
+        scale = 0.0050,
+    }
+    item partBoatSailingYacht
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = partBoatSailingYacht,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    item partBoatMotor
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = partBoatMotor,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    vehicle TrailerWithBoat
+    {
+        mechanicType = 3,
+        engineRepairLevel = 5,
+        playerDamageProtection = 1.3,
+        offRoadEfficiency = 2,
+
+        model
+        {
+            file = TrailerWithBoatBase,
+            scale = 1.8000,
+            offset = 0.0000 0.0000 0.0000,
+        }
+
+        skin
+        {
+            texture = Trailers/TrailerWithBoatSailingYacht_base,
+        }
+
+        part BoatPart
+        {
+            specificItem = false,
+            itemType = Base.partBoatSailingYacht;Base.partBoatMotor,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                    2
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+                        equip = secondary,
+                    }
+                }
+                skills = Mechanics:6,
+                time = 400,
+                test = ATATuning.InstallTest.multiRequire,
+                complete = ATATuning.InstallComplete.DefaultModel,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                    2
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+                        equip = secondary,
+                    }
+                }
+                skills = Mechanics:5,
+                time = 400,
+                test = ATATuning.UninstallTest.multiRequire,
+                complete = ATATuning.UninstallComplete.DefaultModel,
+            }
+            
+            model TrailerWithBoatMotor
+            {
+                file = TrailerWithBoatMotor,
+            }
+            model TrailerWithBoatSailing
+            {
+                file = TrailerWithBoatSailing,
+            }
+            table ataModels
+            {
+                partBoatMotor = TrailerWithBoatMotor,
+                partBoatSailingYacht = TrailerWithBoatSailing,
+            }
+
+            lua
+            {
+                create = ATATuning.Create.Chance0,
+                init = ATATuning.Init.DefaultModel,
+            }
+        }
+
+        textureShadow = Shadows/BoatTrailer_shadow,
+        textureLights = Boats/SailingYacht_light,
+        textureMask = Boats/SailingYacht_mask,
+        textureRust = Boats/BoatMotor_rust,
+        extents = 1.0444 0.6333 4.0333,
+        mass = 400,
+        physicsChassisShape = 1.0444 0.6333 4.0333,
+        centerOfMassOffset = 0.0000 0.3167 0.2333,
+        shadowExtents = 1.3555 4.6722,
+        shadowOffset = 0.0000 0.5555,
+        engineForce = 4000,
+        engineQuality = 80,
+        engineLoudness = 110,
+        maxSpeed = 70f,
+        brakingForce = 80,
+        rollInfluence = 0.8f,
+        steeringIncrement = 0.04,
+        steeringClamp = 0.3,
+        suspensionStiffness = 40,
+        suspensionCompression = 3.83,
+        suspensionDamping = 2.88,
+        maxSuspensionTravelCm = 10,
+        suspensionRestLength = 0.2,
+        wheelFriction = 1.5f,
+        frontEndHealth = 150,
+        rearEndHealth = 150,
+
+        physics box
+        {
+            offset = -0.1222 0.3111 1.3444,
+            extents = 0.0556 0.0556 0.6833,
+            rotate = 0.0000 17.0000 0.0000,
+        }
+
+        physics box
+        {
+            offset = 0.1111 0.3111 1.3444,
+            extents = 0.0556 0.0556 0.6833,
+            rotate = 0.0000 -18.0000 0.0000,
+        }
+
+        physics sphere
+        {
+            offset = -0.0056 0.3056 1.6389,
+            radius = 0.0421,
+        }
+
+        wheel FrontLeft
+        {
+            front = true,
+            offset = 0.6000 -0.1056 0.1500,
+            radius = 0.15f,
+            width = 0.2f,
+        }
+
+        wheel FrontRight
+        {
+            front = true,
+            offset = -0.6000 -0.1056 0.1500,
+            radius = 0.15f,
+            width = 0.2f,
+        }
+
+        wheel RearLeft
+        {
+            front = true,
+            offset = 0.6000 -0.1056 -0.1778,
+            radius = 0.15f,
+            width = 0.2f,
+        }
+
+        wheel RearRight
+        {
+            front = true,
+            offset = -0.6000 -0.1111 -0.1778,
+            radius = 0.15f,
+            width = 0.2f,
+        }
+
+        area TireFrontLeft
+        {
+            xywh = 0.7667 -0.9111 0.4778 0.4778,
+        }
+
+        area TireFrontRight
+        {
+            xywh = -0.7611 -0.9111 0.4778 0.4778,
+        }
+
+        area TireRearLeft
+        {
+            xywh = 0.7611 -1.2167 0.4778 0.4778,
+        }
+
+        area TireRearRight
+        {
+            xywh = -0.7611 -1.2167 0.4778 0.4778,
+        }
+
+        template = Tire/part/TireFrontLeft,
+        template = Tire/part/TireFrontRight,
+        template = Tire/part/TireRearLeft,
+        template = Tire/part/TireRearRight,
+
+        part TireFrontLeft
+        {
+            table install
+            {
+                requireInstalled = SuspensionFrontLeft,
+            }
+        }
+
+        part TireFrontRight
+        {
+            table install
+            {
+                requireInstalled = SuspensionFrontRight,
+            }
+        }
+
+        part TireRearLeft
+        {
+            table install
+            {
+                requireInstalled = SuspensionRearLeft,
+            }
+        }
+
+        part TireRearRight
+        {
+            table install
+            {
+                requireInstalled = SuspensionRearRight,
+            }
+        }
+
+        template = Suspension/part/SuspensionFrontLeft,
+        template = Suspension/part/SuspensionFrontRight,
+        template = Suspension/part/SuspensionRearLeft,
+        template = Suspension/part/SuspensionRearRight,
+
+        attachment trailer
+        {
+            offset = 0.0000 -0.0889 1.0278,
+            rotate = 0.0000 0.0000 0.0000,
+        }
+        
+        
+        template = Seat/part/SeatFrontLeft,
+        template = Seat/part/SeatFrontRight,
+        template = Seat/part/SeatRearLeft,
+        template = Seat/part/SeatRearRight,
+        template = Seat/part/SeatMiddleLeft,
+        template = Seat/part/SeatMiddleRight,
+
+        part Seat*
+        {
+            itemType = Aquatsar.NotRemovableBoatSeat,
+            category = nodisplay,
+
+            container
+            {
+                test = Boats.ContainerAccess.BlockSeat,
+            }
+        }
+
+        template = BoatStandartParts/part/GasTank,
+        template = BoatStandartParts/part/Battery,
+        template = BoatStandartParts/part/Engine,
+        template = BoatStandartParts/part/WindowFrontLeft,
+        template = BoatStandartParts/part/WindowFrontRight,
+        template = BoatStandartParts/part/WindowRearLeft,
+        template = BoatStandartParts/part/WindowRearRight,
+        template = BoatStandartParts/part/Windshield,
+        template = BoatStandartParts/part/Radio,
+        template = BatteryHeater/part/BatteryHeater,
+        template = Propeller,
+        part Propeller
+        {
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+                        equip = secondary,
+                    }
+                }
+
+                time = 2000,
+                skills = Mechanics:3,
+                recipes = Powerboats Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Boats.UninstallComplete.Propeller,
+            }
+        }
+        template = Sails,
+        part Sails
+        {
+            category = nodisplay,
+        }
+        template = ManualStarter,
+        part ManualStarter
+        {
+            category = nodisplay,
+        }
+        template = LightApi,
+        template = Light/part/LightFloodlightLeft,
+        template = Light/part/LightFloodlightRight,
+        part LightFloodlight*
+        {
+            category = nodisplay,
+        }
+        template = Light/part/LightCabin,
+        
+        template = Drawers/part/DrawerFrontLeft,
+        template = Drawers/part/DrawerMiddleLeft,
+        template = Drawers/part/DrawerRearLeft,
+        
+        template = Shelves/part/ShelveRearRight,
+        
+        template = Counters/part/CounterFrontRight,
+        template = Counters/part/CounterMiddleRight,
+        template = Counters/part/CounterMiddleLeft,
+        template = Counters/part/CounterRearLeft,
+        
+        template = Cupboards/part/CupboardMiddleLeft,
+        template = Cupboards/part/CupboardMiddleRight,
+        
+        template = Fridges/part/FridgeRearRight,
+        template = Freezers/part/FreezerRearRight,
+        
+        template = Ovens/part/OvenRearRight,
+        template = Microwaves/part/MicrowaveRearRight,
+        
+        template = Medicines/part/MedicineMiddleRight,
+        template = Medicines/part/MedicineMiddleLeft,
+        
+        template = SeatBoxWooden/part/SeatBoxWoodenRearLeft,
+        template = SeatBoxWooden/part/SeatBoxWoodenRearRight,
+        template = SeatBoxWooden/part/SeatBoxWoodenFrontLeft,
+        template = SeatBoxWooden/part/SeatBoxWoodenFrontRight,
+        
+        template = Mattresses/part/MattressMiddleLeft,
+        template = Mattresses/part/MattressMiddleRight,
+        
+        template = BoatMotorName/part/BoatName,
+        part BoatName
+        {
+            model NP
+            {
+                file = BoatMotorName_NP,
+                scale = 4,
+            }
+            model Orianna
+            {
+                file = BoatMotorName_Orianna,
+                scale = 4,
+            }
+        }
+        
+        template = SailingYachtName/part/BoatName,
+        part BoatName
+        {
+            model Sakharov
+            {
+                file = SailingYachtName_Sakharov,
+                scale = 4.54,
+            }
+            model La_Brigandine
+            {
+                file = SailingYachtName_La_Brigandine,
+                scale = 4.54,
+            }
+        }
+        part Oven*
+        {
+            category = nodisplay,
+        }
+
+        part Fridge*
+        {
+            category = nodisplay,
+        }
+
+        part Freezer*
+        {
+            category = nodisplay,
+        }
+        part Radio
+        {
+            category = nodisplay,
+        }
+
+        part BatteryHeater
+        {
+            category = nodisplay,
+        }
+
+        part Battery
+        {
+            category = nodisplay,
+        }
+
+        part LightCabin
+        {
+            category = nodisplay,
+        }
+    }
+}

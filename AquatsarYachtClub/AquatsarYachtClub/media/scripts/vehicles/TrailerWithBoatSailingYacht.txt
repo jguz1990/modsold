@@ -1,0 +1,347 @@
+module Base
+{
+	model TrailerWithSailingYachtBase
+    {
+        mesh = trailers/TrailerBoat|BoatSailingYacht,
+        shader = vehicle_norandom_multiuv,
+        invertX = FALSE,
+        scale = 0.0050,
+    }
+    model TrailerSailingYachtName_Sakharov
+    {
+        mesh = trailers/TrailerBoat|BoatSailingYachtBodyName,
+        texture = Boats/Name_SailingYacht_Sakharov,
+        shader = vehiclewheel,
+        invertX = FALSE,
+        scale = 0.0050,
+    }
+    model TrailerSailingYachtName_La_Brigandine
+    {
+        mesh = trailers/TrailerBoat|BoatSailingYachtBodyName,
+        texture = Boats/Name_SailingYacht_La_Brigandine,
+        shader = vehiclewheel,
+        invertX = FALSE,
+        scale = 0.0050,
+    }
+	vehicle TrailerWithBoatSailingYacht
+	{
+		mechanicType = 3,
+		engineRepairLevel = 5,
+		playerDamageProtection = 1.3,
+		offRoadEfficiency = 2,
+		spawnOffsetY = 0.0,
+
+		model
+		{
+			file = TrailerWithSailingYachtBase,
+			scale = 1.8000,
+			offset = 0.0000 0.5333 -1.2833,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_body,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_body2,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_body3,
+		}
+
+		skin
+		{
+			texture = Boats/SailingYacht_body4,
+		}
+
+		textureShadow = Shadows/TrailerSailingYacht_shadow,
+		textureLights = Boats/SailingYacht_light,
+		textureMask = Boats/SailingYacht_mask,
+		textureRust = Boats/BoatMotor_rust,
+		extents = 1.6667 0.5667 5.1222,
+		mass = 300,
+		physicsChassisShape = 1.6667 0.5667 4.3222,
+		centerOfMassOffset = 0.0000 0.5333 -1.1667,
+		shadowExtents = 1.9889 6.4166,
+		shadowOffset = 0.0000 -1.1445,
+		engineForce = 4000,
+		engineQuality = 80,
+		engineLoudness = 110,
+		maxSpeed = 70f,
+		brakingForce = 80,
+		rollInfluence = 0.8f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.3,
+		suspensionStiffness = 40,
+		suspensionCompression = 3.83,
+		suspensionDamping = 2.88,
+		maxSuspensionTravelCm = 10,
+		suspensionRestLength = 0.2,
+		wheelFriction = 1.5f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		template = Seat/part/SeatFrontLeft,
+		template = Seat/part/SeatFrontRight,
+		template = Seat/part/SeatMiddleRight,
+		template = Seat/part/SeatMiddleLeft,
+		template = Seat/part/SeatRearLeft,
+		template = Seat/part/SeatRearRight,
+
+		part Seat*
+		{
+			itemType = Aquatsar.NotRemovableBoatSeat,
+			category = nodisplay,
+
+			container
+			{
+				test = Boats.ContainerAccess.BlockSeat,
+			}
+		}
+
+		template = BoatStandartParts/part/GasTank,
+		template = BoatStandartParts/part/Battery,
+		template = BoatStandartParts/part/Engine,
+		template = BoatStandartParts/part/Radio,
+		template = BatteryHeater/part/BatteryHeater,
+		template = Propeller,
+
+		part Propeller
+		{
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = secondary,
+					}
+				}
+
+				time = 2000,
+				skills = Mechanics:3,
+				recipes = Powerboats Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Boats.UninstallComplete.Propeller,
+			}
+		}
+
+		template = Sails,
+
+		part Sails
+		{
+			category = nodisplay,
+		}
+
+		template = ManualStarter,
+		template = BoatStandartParts/part/WindowFrontLeft,
+		template = BoatStandartParts/part/WindowFrontRight,
+		template = BoatStandartParts/part/WindowRearLeft,
+		template = BoatStandartParts/part/WindowRearRight,
+		template = BoatStandartParts/part/Windshield,
+		template = LightApi,
+		template = Light/part/LightFloodlightLeft,
+		template = Light/part/LightFloodlightRight,
+		template = Light/part/LightCabin,
+		template = InCabin/part/InCabinMiddleRight,
+		template = InCabin/part/InCabinMiddleLeft,
+		template = InCabin/part/InCabinRearLeft,
+		template = InCabin/part/InCabinRearRight,
+		template = Cupboards/part/CupboardMiddleRight,
+		template = Counters/part/CounterMiddleRight,
+		template = Counters/part/CounterMiddleLeft,
+		template = Drawers/part/DrawerMiddleLeft,
+		template = Medicines/part/MedicineMiddleLeft,
+		template = Counters/part/CounterRearLeft,
+		template = Drawers/part/DrawerRearLeft,
+		template = Shelves/part/ShelveRearRight,
+		template = Fridges/part/FridgeRearRight,
+		template = Freezers/part/FreezerRearRight,
+		template = Ovens/part/OvenRearRight,
+		template = Microwaves/part/MicrowaveRearRight,
+		template = SeatBoxWooden/part/SeatBoxWoodenFrontLeft,
+		template = SeatBoxWooden/part/SeatBoxWoodenFrontRight,
+		template = Mattresses/part/MattressMiddleLeft,
+		template = Mattresses/part/MattressMiddleRight,
+		template = SailingYachtName/part/BoatName,
+        
+        part BoatName
+        {
+            model Sakharov
+            {
+                file = TrailerSailingYachtName_Sakharov,
+            }
+
+            model La_Brigandine
+            {
+                file = TrailerSailingYachtName_La_Brigandine,
+            }
+        }
+        
+		physics box
+		{
+			offset = -0.1444 0.1222 1.1111,
+			extents = 0.0556 0.0556 0.6833,
+			rotate = 0.0000 17.0000 0.0000,
+		}
+
+		physics box
+		{
+			offset = 0.1389 0.1222 1.1111,
+			extents = 0.0556 0.0556 0.6833,
+			rotate = 0.0000 -18.0000 0.0000,
+		}
+
+		physics sphere
+		{
+			offset = -0.0056 0.1278 1.4389,
+			radius = 0.0500,
+		}
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.6000 -0.5611 0.2056,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.6000 -0.5611 0.2056,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearLeft
+		{
+			front = true,
+			offset = 0.6000 -0.5611 -0.1611,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearRight
+		{
+			front = true,
+			offset = -0.6000 -0.5611 -0.1611,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 1.0722 -1.0778 0.4778 0.4778,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -1.0722 -1.0778 0.4778 0.4778,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 1.0722 -1.4444 0.4778 0.4778,
+		}
+
+		area TireRearRight
+		{
+			xywh = -1.0722 -1.4444 0.4778 0.4778,
+		}
+
+		template = Tire/part/TireFrontLeft,
+		template = Tire/part/TireFrontRight,
+		template = Tire/part/TireRearLeft,
+		template = Tire/part/TireRearRight,
+
+		part TireFrontLeft
+		{
+			table install
+			{
+				requireInstalled = SuspensionFrontLeft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			table install
+			{
+				requireInstalled = SuspensionFrontRight,
+			}
+		}
+
+		part TireRearLeft
+		{
+			table install
+			{
+				requireInstalled = SuspensionRearLeft,
+			}
+		}
+
+		part TireRearRight
+		{
+			table install
+			{
+				requireInstalled = SuspensionRearRight,
+			}
+		}
+
+		area GasTank
+		{
+			xywh = 1.2500 -3.2611 0.8333 0.8000,
+		}
+
+		template = Suspension/part/SuspensionFrontLeft,
+		template = Suspension/part/SuspensionFrontRight,
+		template = Suspension/part/SuspensionRearLeft,
+		template = Suspension/part/SuspensionRearRight,
+
+		part Oven*
+		{
+			category = nodisplay,
+		}
+
+		part Fridge*
+		{
+			category = nodisplay,
+		}
+
+		part Freezer*
+		{
+			category = nodisplay,
+		}
+
+		part Radio
+		{
+			category = nodisplay,
+		}
+
+		part BatteryHeater
+		{
+			category = nodisplay,
+		}
+
+		part Battery
+		{
+			category = nodisplay,
+		}
+
+		part LightCabin
+		{
+			category = nodisplay,
+		}
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.4167 2.9778,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}

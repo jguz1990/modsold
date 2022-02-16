@@ -1,0 +1,27 @@
+module Base
+{
+    item BoatAnchor
+    {
+        Weight    =    0.1,
+        Type    =    Normal,
+        DisplayName    = Akademik Sakharov,
+        Icon    =    CarKey,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+    
+    template vehicle BoatAnchor
+    {
+        part BoatAnchor
+        {
+            specificItem = false,
+            itemType = Base.BoatAnchor,
+            category = nodisplay,
+            lua
+            {
+                create = Boats.Create.BoatAnchor,
+                init = Boats.Init.BoatAnchor,
+            }
+        }
+    }
+}

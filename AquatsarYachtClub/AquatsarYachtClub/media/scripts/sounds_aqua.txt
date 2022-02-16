@@ -1,0 +1,128 @@
+module Aquatsar
+{
+    
+    imports
+    {
+        Base
+    }
+    
+    sound Swim
+    {
+        category = Water,
+        loop = false,
+        is3D = true,
+        clip
+        {
+            file = media/sound/water/swim.ogg,
+            distanceMax = 10,
+        }
+    }
+    
+    sound WashClothes
+    {
+        category = Water,
+        loop = false,
+        is3D = false,
+        clip
+        {
+            file = media/sound/water/WashClothes.ogg,
+        }
+    }
+    
+    sound ScoopUpWater
+    {
+        category = Water,
+        loop = false,
+        is3D = false,
+        clip
+        {
+            file = media/sound/water/ScoopUpWater.ogg,
+        }
+    }
+    
+    sound Dive
+    {
+        category = Water,
+        loop = false,
+        is3D = true,
+        clip
+        {
+            file = media/sound/water/dive.ogg,
+            distanceMax = 10,
+        }
+    }
+    
+    sound LeaveWater
+    {
+        category = Water,
+        loop = false,
+        is3D = true,
+        clip
+        {
+            file = media/sound/water/leave_water.ogg,
+            distanceMax = 10,
+        }
+    }
+    
+    sound ThrowInWater
+    {
+        category = Water,
+        loop = false,
+        is3D = false,
+        clip
+        {
+            file = media/sound/water/throw_in_water.ogg,
+        }
+    }
+    
+    sound DropWater
+    {
+        category = Water,
+        loop = false,
+        is3D = false,
+        clip
+        {
+            file = media/sound/water/drop_water.wav,
+        }
+    }
+    
+    
+    sound TireTubeInflatingSound
+    {
+        category = Item,
+        clip
+        {
+            file = media/sound/water/tire_tube_inflating.ogg,
+            volume = 2.0,
+        }
+    }
+    
+    sound TireTubeFlattenSound
+    {
+        category = Item,
+        clip
+        {
+            file = media/sound/water/tire_tube_flatten.ogg,
+            volume = 0.3,
+        }
+    }
+    
+    sound HandPumpSound
+    {
+        category = Item,
+        clip
+        {
+            file = media/sound/water/hand_pump.ogg,
+        }
+    }
+    
+    sound ExtractTireTubeSound
+    {
+        category = Item,
+        clip
+        {
+            file = media/sound/water/extract_tire_tube.ogg,
+        }
+    }
+    
+}

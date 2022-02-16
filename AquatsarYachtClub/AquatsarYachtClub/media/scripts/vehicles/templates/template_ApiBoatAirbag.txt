@@ -1,0 +1,58 @@
+module Base
+{
+    template vehicle ApiBoatAirbag
+    {
+        part TireFrontLeft
+        {
+            area = TireFrontLeft,
+            wheel = FrontLeft,
+        }
+
+        part TireFrontRight
+        {
+            area = TireFrontRight,
+            wheel = FrontRight,
+        }
+
+        part TireRearLeft
+        {
+            area = TireRearLeft,
+            wheel = RearLeft,
+        }
+
+        part TireRearRight
+        {
+            area = TireRearRight,
+            wheel = RearRight,
+        }
+
+        part Tire*
+        {
+            /**/
+            category = nodisplay,
+            
+            itemType = Aquatsar.AirBagNormal,
+            container
+            {
+                capacity = 100,
+                test = Vehicles.ContainerAccess.Tire,
+                contentType = Air,
+            }
+            lua
+            {
+                create = Boats.Create.ApiBoatAirbag,
+                init = Boats.Init.ApiBoatAirbag,
+            }
+            model InflatedTirePlusWheel
+            {
+                file = Vehicles_Wheel,
+            }
+            /**/
+            model InflatedTirePlusWheel
+            {
+                file = TsarNullModel,
+            }
+        }
+    }
+}
+

@@ -1,0 +1,394 @@
+module Base
+{
+    template vehicle BoatStandartParts
+    {
+        part GasTank
+        {
+            area = GasTank,
+            category = MechanicalSystem,
+            itemType = Base.SmallGasTank;Base.NormalGasTank;Base.BigGasTank;,
+            mechanicRequireKey = false,
+            container
+            {
+                test = Vehicles.ContainerAccess.GasTank,
+                contentType = Gasoline,
+                conditionAffectsCapacity = true,
+            }
+            lua
+            {
+                create = Vehicles.Create.GasTank,
+                update = Boats.Update.GasTank,
+                checkEngine = Vehicles.CheckEngine.GasTank,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = secondary,
+                    }
+                    2
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 500,
+                skills = Mechanics:5,
+                recipes = Basic Mechanics,
+                test = CommonTemplates.InstallTest.PartNotInCabin,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = secondary,
+                    }
+                    2
+                    {
+                        type = Base.Wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 500,
+                skills = Mechanics:5,
+                recipes = Basic Mechanics,
+                test = CommonTemplates.UninstallTest.PartNotInCabin,
+                requireEmpty = true,
+            }
+        }
+        
+        part Battery
+        {
+            area = Engine,
+            itemType = Base.CarBattery,
+            mechanicRequireKey = false,
+            category = ElecticalSystem,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 100,
+                professions = ,
+                skills = ,
+                traits = ,
+                recipes = ,
+                test = CommonTemplates.InstallTest.PartInCabin,
+                door = EngineDoor,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 100,
+                test = CommonTemplates.UninstallTest.PartInCabin,
+            }
+            lua
+            {
+                create = Vehicles.Create.Battery,
+                update = Vehicles.Update.Battery,
+            }
+        }
+        
+        part Engine
+        {
+            area = Engine,
+            category = MechanicalSystem,
+            mechanicRequireKey = false,
+            lua
+            {
+                create = Vehicles.Create.Engine,
+                update = Vehicles.Update.Engine,
+                checkEngine = Vehicles.CheckEngine.Engine,
+            }
+        }
+        
+        part WindowFrontLeft
+        {
+            parent = DoorFrontLeft,
+            area = SeatFrontLeft,
+            itemType = Base.FrontWindow,
+            table install
+            {
+                requireInstalled = DoorFrontLeft,
+            }
+        }
+
+        part WindowFrontRight
+        {
+            parent = DoorFrontRight,
+            area = SeatFrontRight,
+            itemType = Base.FrontWindow,
+            table install
+            {
+                requireInstalled = DoorFrontRight,
+            }
+        }
+
+        part WindowMiddleLeft
+        {
+            parent = DoorMiddleLeft,
+            area = SeatMiddleLeft,
+            itemType = Base.RearWindow,
+        }
+
+        part WindowMiddleRight
+        {
+            parent = DoorMiddleRight,
+            area = SeatMiddleRight,
+            itemType = Base.RearWindow,
+        }
+
+        part WindowRearLeft
+        {
+            parent = DoorRearLeft,
+            area = SeatRearLeft,
+            itemType = Base.RearWindow,
+        }
+
+        part WindowRearRight
+        {
+            parent = DoorRearRight,
+            area = SeatRearRight,
+            itemType = Base.RearWindow,
+        }
+
+        part Window*
+        {
+            category = BoatBody,
+            mechanicRequireKey = false,
+            window
+            {
+                openable = false,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:3,
+                recipes = Basic Mechanics,
+                test = CommonTemplates.InstallTest.PartInCabin,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:3,
+                recipes = Basic Mechanics,
+                test = CommonTemplates.UninstallTest.PartInCabin,
+            }
+            lua
+            {
+                create = Vehicles.Create.Window,
+            }
+        }
+        
+        part Windshield
+        {
+            area = Engine,
+            category = BoatBody,
+            itemType = Base.Windshield,
+            mechanicRequireKey = false,
+            window
+            {
+                openable = false,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:5,
+                recipes = Basic Mechanics,
+                test = CommonTemplates.InstallTest.PartInCabin,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                  skills = Mechanics:5,
+                  recipes = Basic Mechanics,
+                test = CommonTemplates.UninstallTest.PartInCabin,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+
+        part WindshieldRear
+        {
+            area = TruckBed,
+            category = BoatBody,
+            itemType = Base.RearWindshield,
+            mechanicRequireKey = false,
+            window
+            {
+                openable = false,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                  skills = Mechanics:5,
+                  recipes = Basic Mechanics,
+                test = CommonTemplates.InstallTest.PartInCabin,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                         equip = primary,
+                   }
+                }
+                time = 300,
+                  skills = Mechanics:5,
+                  recipes = Basic Mechanics,
+                test = CommonTemplates.UninstallTest.PartInCabin,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+        
+        part Radio
+        {
+            area = Engine,
+            itemType = Radio.RadioBlack;Radio.RadioRed,
+            category = ElecticalSystem,
+            specificItem = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 100,
+                professions = ,
+                skills = ,
+                traits = ,
+                recipes = ,
+                test = CommonTemplates.InstallTest.PartInCabin,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 100,
+                test = CommonTemplates.UninstallTest.PartInCabin,
+            }
+            lua
+            {
+                create = Vehicles.Create.Radio,
+                update = Vehicles.Update.Radio,
+            }
+        }
+
+        part Heater
+        {
+            category = ElecticalSystem,
+            lua
+            {
+                update = Vehicles.Update.Heater,
+            }
+        }
+    }
+}
+
+

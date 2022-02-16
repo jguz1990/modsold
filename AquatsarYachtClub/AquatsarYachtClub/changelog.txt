@@ -1,0 +1,226 @@
+v.1.15.1
+
+Исправлены ошибки с постройкой пола на уровнях выше первого.
+
+Fixed bugs with the construction of the floor on levels above the first.
+
+-------------------
+v.1.15
+
+Исправлены ошибки с постройкой пола на воде в мультиплеере.
+Добавлена обработка некоторых исключений.
+Якорь синхронизирован в мультиплеере.
+Уменьшено расстояние, с которого слышны звуки плавания.
+Исправлена ошибка, из-за которой нельзя было спустить на воду моторную лодку.
+Исправлена ошибка, из-за которой имя лодки не отображалось на прицепе.
+
+Fixed errors with building the floor on the water in multiplayer.
+Added handling of some exceptions.
+Anchor synchronized in multiplayer.
+Reduced the distance from which swimming sounds are heard.
+Fixed a bug that made it impossible to launch a motorboat.
+Fixed a bug that caused the boat name not to be displayed on the trailer.
+
+-------------------
+v.1.14.2
+
+Закомментирована Debug-функция вызывающая ошибку.
+Увеличен шанс запуска лодки с ручного стартера.
+
+The Debug function causing the error has been commented out.
+Increased chance of starting the boat from the manual starter.
+
+-------------------
+v.1.14.1
+
+Исправлена ошибка связанная с ручным стартером.
+
+Fixed a bug related to the manual starter.
+
+-------------------
+v.1.14
+
+Внесены необходимые изменения для мультиплеера.
+Добавлены 3д-модели предметов (спасибо djvirus)
+Улучшены иконки предметов (спасибо djvirus)
+Уменьшен расход лодки на холостом ходу.
+Улучшено поведение парусной яхты.
+Улучшены характеристики моторной яхты.
+Обновлен тектуры и модели парусной лодки.
+Исправлено: после загрузки лодки на прицеп, дверь в кабину запирается.
+Исправлено: шины у прицепа заменялись на "воздушные подушки".
+Исправлена ошибка возникающая при попадании лодки на берег.
+Исправлен спидометр парусной яхты.
+Изменена логика выхода из лодки (включены анимации, разрешено выходить в движении).
+Изменено место хранения переменных для парусов и замка от кабины.
+Изменена логика замены прицепов.
+Изменен шаблон и функции для задания имени лодки.
+Убрано дрожание звуков ветра.
+Добавлены отдельные скрипты для лодок на земле.
+Переводы перенесены в tsarslib.
+Добавлен спавн лодок на воде в Muldraugh.
+
+Известные ошибки, которые пока не удалось устранить:
+- После спавна лодки, она "проваливается под тень". Но возвращается в правильное положение, когда какой-нибудь игрок сядет за руль.
+- Плавание не синхронизировано в мультиплеере и выглядит очень странно. ОЧЕНЬ СТРАННО.
+- Во время спавна лодок игра зависает и закрывается. Ошибка возникает очень редко, сложно отследить закономерность. В мультиплеере не наблюдалось.
+- Положение заднего паруса не синхронизируется в мультиплеере. У каждого игрока своё положение заднего паруса. Это не оказывает негативного влияния, т.к. лодка находится под контролем только одного игрока. Контроль передается второму игроку, если он сядет за штурвал или если первый игрок покинет лодку.
+
+
+Made the necessary changes for multiplayer.
+Added 3D models of items (thanks to djvirus)
+Improved icons for items (thanks to djvirus)
+Reduced boat consumption when idling.
+Improved sailing boat behavior.
+Improved characteristics of motor yacht.
+Sailboat tecture and models updated.
+Fixed: After loading boat on trailer, cockpit door locks.
+Fixed: tires of trailer were replaced by "air cushions".
+Fixed bug that appeared when the boat hit the shore.
+Fixed sailing boat speedometer.
+Changed boat exit logic (animations enabled, allowed to exit on the move).
+Changed storage location of variables for sails and lock from cockpit.
+Changed logic for changing trailers.
+Changed template and functions for setting boat name.
+Removed shaking of wind sounds.
+Added separate scripts for boats on the ground.
+Translations moved to tsarslib.
+Added boat spawn on water in Muldraugh.
+
+Known bugs that could not be fixed yet:
+- After a boat spawns, it "falls under the shadow". But returns to the correct position when some player sits behind the helm.
+- Swimming is out of sync in multiplayer and looks very strange. VERY STRANGE.
+- The game freezes and shuts down during boat spawning. The error occurs very rarely, it's hard to trace the pattern. Not observed in multiplayer.
+- Backsail position is not synchronized in multiplayer. Each player has a different position of the backsail. This has no negative effect as the boat is under the control of only one player. Control is transferred to the second player if he sits at the helm or if the first player leaves the boat.
+
+-------------------
+v.1.13
+
+Исправлены звуки двигателя лодок.
+Исправлена ошибка, когда при выходе из лодки на берег игрок начинал проходить сквозь стены.
+Исправлены мерцающие текстуры.
+Исправлен английский перевод.
+Исправлена ошибка возникающая при клике на спасательном круге и надутой камеры.
+Добавлена возможность чинить стартер и пропеллер.
+Добавлены текстуры ржавчины.
+Улучшено положение дышла на прицепах.
+
+Fixed boat engine sounds.
+Fixed a bug when leaving the boat ashore, the player began to walk through the walls.
+Fixed flickering textures.
+Fixed English translation.
+Fixed bug that occurred when clicking on lifebuoy and inflated tire tube.
+Added the ability to repair the starter and propeller.
+Added rust textures.
+Improved drawbar position on trailers.
+-------------------
+v.1.12
+
+Интеграция с обновленной общей библиотекой.
+
+Integration with the updated common library.
+
+-------------------
+v.1.11
+
+Добавлен спавн лодок на воду.
+Теперь все лодки спавнятся без имени. У игроков есть возможность дать имя лодке.
+
+Added boat spawn on water.
+All boats will now spawn without a name. Players have the option to name the boat.
+-------------------
+v.1.10 
+
+Из лодок убран ручник появляющийся из-за мода "Better Towing".
+Для лодок добавлены правильные тени.
+Добавлен шанс того, что кабина будет открыта.
+Добавлена возможнось вскрывать кабину большим количеством предметов, повышен шанс открытия ломом.
+Исправлена ошибка связанная с появлением меню управления парусом на моторной лодке.
+Исправлена ошибка связанная с появлением всех 3д-моделей парусов на яхте.
+Откорректирован спавн предметов для PZ 41.51.
+
+The handbrake that appears from the "Better Towing" mod has been removed from the boats.
+Added correct shadows for boats.
+Added a chance for the cabin to be open.
+Added the ability to open the cabin with a large number of items, increased the chance of opening it with a crowbar.
+Fixed a bug related to the appearance of the sail control menu on a motor boat.
+Fixed a bug related to the appearance of all 3D models of the sails on the yacht.
+Corrected item spawning for PZ 41.51.
+-------------------
+1.09.1 …
+
+Исправлена ошибка приводящая к обесцечиванию текстур.
+
+Fixed a bug leading to desaturation of textures.
+-------------------
+v.1.09 …
+
+    Для каждой лодки и прицепа создан свой скрипт-файл.
+    Исправлена ошибка с запиранием кабины, когда человек внутри. Теперь кабину можно открывать и закрывать изнутри.
+    Исправлена ошибка с дублированием лодок.
+    Добавлены новые переводы: польский и португальский.
+    Улучшена интерактивность парусов. Отключено затемнение экрана при смене паруса.
+    Добавлена возможность смены имени для лодок.
+
+    A script file has been created for each boat and trailer.
+    Fixed a bug with locking the cabin when a person is inside. The cab can now be opened and closed from the inside.
+    Fixed a bug with duplicate boats.
+    Changed the chance of boats spawning.
+    Added new translations: Polish and Portuguese.
+    Improved sails interactivity. Disabled screen fading when changing sail.
+    Added the ability to change the name for the boats.
+-------------------
+v.1.08 …
+
+Fixed issue with boat key.
+Added message about losing items while swimming.
+Fixed a bug with the type of spare parts.
+-------------------
+v.1.07 …
+
+Fixed launching the boat.
+Increased the chance of spawning boat trailers.
+-------------------
+v.1.06 …
+
+Reduced wind requirements for sailing yachts.
+-------------------
+v.1.05 …
+
+Fixed "require".
+Changed the physical dimensions of the trailer without a boat.
+Added hint when launching/loading a boat.
+-------------------
+v.1.04 …
+
+Improved controller support.
+Added support for RemotePlay.
+-------------------
+v.1.03 …
+
+- Added partial controller support.
+- Fixed a bug with the disappearance of the driver's panel when transferring from a passenger seat.
+- Fixed a bug with dropping heavy objects into the water (corpses, generator, etc.)
+- Fixed bug with boat horn.
+- Fixed the behavior of a boat hitting the ground.
+- Increased damage while swimming when tired.
+- Reduced the fuel consumption of the motor boat.
+- Updated translation.
+-------------------
+v.1.02 …
+
+Fixed gastank position.
+Changed the physical dimensions of the motorboat.
+-------------------
+v.1.01 …
+
+- fixed a bug related to the appearance of the driver's panel on the passenger seats
+- fixed bug with corrupted literature
+- added content of translation files
+- glovebox fixed on motor boat (removed)
+- the anchor can only be thrown outside the cockpit
+- sleeping in water is prohibited
+- fixed textures of lights and masks for sailing yacht
+- removed unnecessary files
+-------------------
+v.1.0
