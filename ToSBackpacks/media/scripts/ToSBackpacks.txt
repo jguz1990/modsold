@@ -1,0 +1,91 @@
+module ToSBackpacks
+{    
+
+    item Small
+	{
+		WeightReduction	=	100,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	200,
+		DisplayName	=	ToS Small,
+		Icon	=	Small,
+        	CanBeEquipped = Back,
+        	OpenSound   =   OpenBag,
+        	CloseSound   =   CloseBag,
+        	PutInSound   =   PutItemInBag,
+		ClothingItem = Bag_Schoolbag,
+		BloodLocation = Bag,
+		RunSpeedModifier = 0.97,
+		CanHaveHoles = false,
+		AttachmentReplacement = Bag,
+		ReplaceInSecondHand = Bag_Schoolbag_LHand holdingbagleft,
+        	ReplaceInPrimaryHand = Bag_Schoolbag_RHand holdingbagright,
+        	WorldStaticModel = SchoolBag_Ground,
+	}
+
+    item Medium
+	{
+		WeightReduction	=	100,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	300,
+		DisplayName	=	ToS Medium,
+		Icon	=	Medium,
+        	CanBeEquipped = Back,
+        	OpenSound   =   OpenBag,
+        	CloseSound   =   CloseBag,
+        	PutInSound   =   PutItemInBag,
+		ClothingItem = Bag_BigHikingBag,
+		BloodLocation = Bag,
+		RunSpeedModifier = 0.95,
+		CanHaveHoles = false,
+		AttachmentReplacement = Bag,
+		ReplaceInSecondHand = Bag_BigHikingBag_LHand holdingbagleft,
+        	ReplaceInPrimaryHand = Bag_BigHikingBag_RHand holdingbagright,
+        	WorldStaticModel = BigHikingBag_Ground,
+	}
+
+    item Big
+	{
+		WeightReduction	=	100,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	400,
+		DisplayName	=	ToS Big,
+		Icon	=	Big,
+        	CanBeEquipped = Back,
+        	OpenSound   =   OpenBag,
+        	CloseSound   =   CloseBag,
+        	PutInSound   =   PutItemInBag,
+		ClothingItem = Bag_ALICEpack,
+		BloodLocation = Bag,
+		RunSpeedModifier = 0.9,
+		CanHaveHoles = false,
+		AttachmentReplacement = Bag,
+		ReplaceInSecondHand = Bag_ALICEpack_LHand holdingbagleft,
+        	ReplaceInPrimaryHand = Bag_ALICEpack_RHand holdingbagright,
+        	WorldStaticModel = ALICE_Pack_Ground,
+	}
+
+    item Huge
+	{
+		WeightReduction	=	100,
+		Weight	=	0.01,
+		Type	=	Container,
+		Capacity	=	500,
+		DisplayName	=	ToS Huge,
+		Icon	=	Huge,
+        	CanBeEquipped = Back,
+        	OpenSound   =   OpenBag,
+        	CloseSound   =   CloseBag,
+        	PutInSound   =   PutItemInBag,
+		ClothingItem = Bag_ALICEpack_Army,
+		BloodLocation = Bag,
+		RunSpeedModifier = 0.80,
+		CanHaveHoles = false,
+		AttachmentReplacement = Bag,
+		ReplaceInSecondHand = Bag_ALICEpack_Army_LHand holdingbagleft,
+        	ReplaceInPrimaryHand = Bag_ALICEpack_Army_RHand holdingbagright,
+        	WorldStaticModel = ALICE_Pack_Ground,
+	}
+}

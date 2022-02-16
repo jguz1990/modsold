@@ -1,0 +1,6 @@
+﻿ItemsName_RU = {
+ItemName_ToSBackpacks.Small_Bag = "Портфель",
+ItemName_ToSBackpacks.Medium_Bag = "Рюкзак Туриста",
+ItemName_ToSBackpacks.Big_Bag = "Рюкзак Походный",
+ItemName_ToSBackpacks.Huge_Bag = "Военый Рюкзак",
+}

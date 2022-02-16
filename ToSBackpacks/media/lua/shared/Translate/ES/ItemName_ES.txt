@@ -1,0 +1,6 @@
+ItemsName_ES = {
+ItemName_ToSBackpacks.Small = "ToS Chica",
+ItemName_ToSBackpacks.Medium = "ToS Mediana",
+ItemName_ToSBackpacks.Big = "ToS Grande",
+ItemName_ToSBackpacks.Huge = "ToS Mamalona",
+}
