@@ -1,13 +1,19 @@
 module Base
 {
-
+/*"Used Military Compass" (https://skfb.ly/6uuSW) by ArdianVrijenhoek is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"compass" (https://skfb.ly/6WSUH) by dimon2091 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"Compass Model" (https://skfb.ly/6Y9Mn) by Three_dots is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
 	item Compass
 	{
 		Type			= Normal,
 		Weight          	= 0.1,
 		DisplayName		= Compass, 
 		Icon			= Compass,
-		
+		StaticModel = pa_Compass,	
+		WorldStaticModel = pa_Compass,	
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+        Tags = Compass,	
 	}
 	item Compass2
 	{
@@ -15,7 +21,11 @@ module Base
 		Weight          	= 0.1,
 		DisplayName		= Compass,    
 		Icon			= Compass2,
-		
+		StaticModel = pa_Compass2,
+		WorldStaticModel = pa_Compass2,	
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+        Tags = Compass,		
 	}
 	item CliponCompass
 	{
@@ -24,15 +34,29 @@ module Base
 		DisplayName		= Clip-on Compass,    
 	        AttachmentType 		= Walkie,
 		Icon			= CliponCompass,
-		
-	}
+		/*WorldStaticModel = pa_CliponCompass,*/
+        Tags = Compass,			
+	}	
 	
+	model pa_Compass
+	{
+		mesh = pa_Compass,
+		texture = pa_Compass,
+		scale = 0.0002,
+	}	
+	
+	model pa_Compass2
+	{
+		mesh = pa_Compass2,
+		texture = pa_Compass2,
+		scale = 0.0000075,
+	}
 	
     item WristCompass_Right
 	{
 		Type = Clothing,
 		DisplayName = Wrist Compass,
-		ClothingItem = WristWatch_Right_ClassicMilitary,
+		ClothingItem = WristCompass_Right,
 		BodyLocation = RightWrist,
 		Icon = WristCompass2,
 		Weight = 0.1,
@@ -40,12 +64,14 @@ module Base
         ClothingItemExtraOption = LeftWrist,
         clothingExtraSubmenu = RightWrist,
 		Cosmetic = TRUE,
+		WorldStaticModel = WatchClassicMilitary,
+        Tags = Compass,	
 	}
     item WristCompass_Left
 	{
 		Type = Clothing,
 		DisplayName = Wrist Compass,
-		ClothingItem = WristWatch_Left_ClassicMilitary,
+		ClothingItem = WristCompass_Left,
 		BodyLocation = LeftWrist,
 		Icon = WristCompass2,
 		Weight = 0.1,
@@ -53,8 +79,8 @@ module Base
         ClothingItemExtraOption = RightWrist,
         clothingExtraSubmenu = LeftWrist,
 		Cosmetic = TRUE,
-	}
-	
-	
+		WorldStaticModel = WatchClassicMilitary,
+        Tags = Compass,	
+	}	
 }
 
