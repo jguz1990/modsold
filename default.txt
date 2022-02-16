@@ -82,7 +82,6 @@ mods
 	mod = jumpThroughWindows,
 	mod = RemoteCraftedV4,
 	mod = MinimalDisplayBars,
-	mod = MoreBuild,
 	mod = OutTheWindow,
 	mod = PSurvival,
 	mod = HBM,
@@ -90,7 +89,6 @@ mods
 	mod = SlingModFix,
 	mod = SimpleConvertToBrita,
 	mod = SleepWithFriends,
-	mod = TurningTime,
 	mod = SwapIt,
 	mod = TMC_TrueActions,
 	mod = TrueActionsDancing,
@@ -103,6 +101,16 @@ mods
 	mod = POETCarryBuff,
 	mod = POETInstantTransfer100,
 	mod = ADVANCEDGEAR,
+	mod = AquatsarYachtClub,
+	mod = TowingCar,
+	mod = Crowbar Grip Buff,
+	mod = KingsmouthKY,
+	mod = Ladders,
+	mod = Militaryairport,
+	mod = MoreBuilds,
+	mod = SubparSurvivors,
+	mod = ToSBackpacks Build41.65,
+	mod = DaszhVehicleChime,
 }
 
 maps
