@@ -7,10 +7,12 @@ local MapSymbolSizeSlider = {
 	consts = {
 		scaleMin = 0.066,
 		scaleMax = 1.266,
-		scaleStep = 0.1
+		scaleStep = 0.1,
+		
+		-- Do not change. Used to determine scale from texture
+		defaultSymbolHeight = 20, -- 20 px
+		defaultTextHeight = getTextManager():getFontHeight(UIFont.Handwritten) -- 36 px
 	},
-	-- to preserve notes scales at least for current session (сurrently there is no way to get symbol scale from java symbol object [WorldMapBaseSymbolV1])
-	symbolScales = {} ,
 	-- original functions that are being intercepted
 	originalPZFuncs = {
 		ISWorldMapSymbols = {
@@ -21,9 +23,6 @@ local MapSymbolSizeSlider = {
 		ISWorldMapSymbolTool_EditNote = {
 			onMouseDown = ISWorldMapSymbolTool_EditNote.onMouseDown,
 			onEditNote = ISWorldMapSymbolTool_EditNote.onEditNote
-		},
- 		ISWorldMapSymbolTool_AddNote = {
-			onAddNote = ISWorldMapSymbolTool_AddNote.onAddNote
 		}
 	}
 }
@@ -72,6 +71,8 @@ end
 function ISWorldMapSymbols:prerender()
 	MapSymbolSizeSlider.originalPZFuncs.ISWorldMapSymbols.prerender(self)
 
+	if MapSymbolSizeSlider.anchorElement == nil then return end
+	
 	local y = MapSymbolSizeSlider.anchorElement:getBottom() + FONT_HGT_SMALL + 2 * 2
 
 	self:drawText(getText("IGUI_Map_MapSymbolSize"), self.width/2 - (getTextManager():MeasureStringX(UIFont.Small, getText("IGUI_Map_MapSymbolSize")) / 2), y, 1,1,1,1, UIFont.Small)
@@ -101,11 +102,9 @@ function ISWorldMapSymbolTool_EditNote:onMouseDown(...)
 	if self.modal then return end
 	
 	-- if note is being edited, update scale for correct size render
-	symbolScale = MapSymbolSizeSlider.symbolScales[self.symbolsUI.mouseOverNote]
-	if symbolScale ~= nil then  -- if symbol was added in this session
-		ISMap.SCALE = symbolScale
-	end
-
+	local symbol = self.symbolsAPI:getSymbolByIndex(self.symbolsUI.mouseOverNote)
+	ISMap.SCALE = symbol:getDisplayHeight() / (self.mapAPI:getWorldScale() * MapSymbolSizeSlider.consts.defaultTextHeight)
+	
 	return MapSymbolSizeSlider.originalPZFuncs.ISWorldMapSymbolTool_EditNote.onMouseDown(self, ...)
 end
 
@@ -115,20 +114,6 @@ function ISWorldMapSymbolTool_EditNote:onEditNote(...)
 
 	-- return scale back to currentScale after note has been saved
 	ISMap.SCALE = MapSymbolSizeSlider.params.currentScale
-end
-
-
-function ISWorldMapSymbolTool_AddNote:onAddNote(...)
-	MapSymbolSizeSlider.originalPZFuncs.ISWorldMapSymbolTool_AddNote.onAddNote(self, ...)
-
-	-- get current symbol(note) index
-	local x = self.mapAPI:worldToUIX(self.symbolsUI.noteX, self.symbolsUI.noteY)
-	local y = self.mapAPI:worldToUIY(self.symbolsUI.noteX, self.symbolsUI.noteY)
-	local hitIndex = self.symbolsAPI:hitTest(x, y)
-	if hitIndex ~= -1 then
-		-- save note's scale
-		MapSymbolSizeSlider.symbolScales[hitIndex] = MapSymbolSizeSlider.params.currentScale
-	end
 end
 
 
@@ -166,7 +151,7 @@ function ISWorldMapSymbols:new(...)
 end
 
 
-
+-- Never do:
 -- TODO add mod settings
 -- TODO block change note size while editing
 -- TODO block slider if no pencil (onMouseMove + check inv)
