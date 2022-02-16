@@ -1,0 +1,19 @@
+module Base
+{
+ 
+	item BandaidDirty
+    	{
+        	DisplayName			=	Used Bloody Adhesive Bandage,
+	   	 DisplayCategory = Junk,
+        	Icon				=	BandaidDirty,
+        	Weight				=	0.05,
+		Type				=	Normal,
+       			 WorldStaticModel = BandAidDirty,
+    	}
+	model BandaidDirty
+	{
+		mesh = WorldItems/BandAid,
+		texture = WorldItems/BandagesDirty,
+		scale = 0.6,
+	}
+}

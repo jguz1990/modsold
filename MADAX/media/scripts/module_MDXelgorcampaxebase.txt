@@ -1,0 +1,44 @@
+module Base  
+{
+
+	model elgorcampaxe 
+	{
+		mesh = weapons/1handed/elgorcampaxe,
+                                        texture = weapons/1handed/elgorcampaxetexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+
+	model elgorcampaxehammermod
+	{
+		mesh = weapons/1handed/elgorcampaxehammermod,
+                                        texture = weapons/1handed/elgorcampaxehammermodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model elgorcampaxepiercemod
+	{
+		mesh = weapons/1handed/elgorcampaxepiercemod,
+                                        texture = weapons/1handed/elgorcampaxepiercemodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+	
+}

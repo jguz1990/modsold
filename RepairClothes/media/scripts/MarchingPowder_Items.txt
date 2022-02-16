@@ -1,8 +1,86 @@
 module Base
 {
-   
-
+ /*"Grungy Brown Package" (https://skfb.ly/ooFZs) by KaitlinKelly is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+/*"ziplock package" (https://skfb.ly/6SwMx) by onetwofourhour is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).*/
+model pa_CokeBrick
+{
+	mesh = pa_CokeBrick,
+	texture = pa_CokeBrick,
+	scale = 0.075,
+} 
+model pa_CokeBaggie
+{
+	mesh = pa_CokeBaggie,
+	texture = pa_CokeBaggie,
+	scale = 0.075,
+} 
 /************************ITEMS************************/
+
+item pa_CokeBrick
+    {
+        Weight    		= 1,
+	Type			= Drainable,
+        UseDelta		= 0.001,
+        DisplayName         	= Brick of Coke,
+        icon 			= pa_CokeBrick,
+	/*ReplaceOnDeplete	= EmptyCokeBaggie,*/
+	cantBeConsolided 	= FALSE,
+	StaticModel = pa_CokeBrick,
+	WorldStaticModel = pa_CokeBrick,
+    } 
+item pa_CokeBrick2
+    {
+        Weight    		= 1,
+        DisplayName         	= Suspicious Package,
+        icon 			= pa_CokeBrick,
+	StaticModel = pa_CokeBrick,
+	WorldStaticModel = pa_CokeBrick,
+    }  
+item pa_CokeEnvelope
+    {
+        DisplayCategory = Item,
+        Weight    		= 1,
+        DisplayName     = Sealed Envelope,
+        icon 			= Envelope_pa,
+        Type	=	Literature,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        WorldStaticModel = Envelope_pa,
+		StaticModel =  Envelope_pa,
+    }  
+
+recipe Open Envelope
+    {
+	pa_CokeEnvelope,
+	Result:Envelope_pa_torn,
+    OnCreate:CokeBrick_OnCreate,
+    Time:50,
+	Prop2:Source=1,
+	Sound:MapOpen,
+    }
+recipe Stuff Envelope
+    {
+	pa_CokeBrick2,
+	Envelope_pa,
+	Result:pa_CokeEnvelope,
+    	Time:50,
+	Prop1:Source=1,
+	Prop2:Source=2,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+recipe Tape Up Brick
+    {
+	pa_CokeBrick=1000,
+	Scotchtape,
+	Result:pa_CokeBrick2,
+    	Time:200,
+	Prop1:Source=2,
+	Prop2:Source=1,
+	Sound:MapOpen,
+	OnTest:PA_Money_NothingInside,
+    }
+
 
 item CokeBaggie
     {
@@ -13,6 +91,8 @@ item CokeBaggie
         icon 			= CokeBaggie,
 	ReplaceOnDeplete	= EmptyCokeBaggie,
 	cantBeConsolided 	= FALSE,
+	/*StaticModel = pa_CokeBaggie,
+	WorldStaticModel = pa_CokeBaggie,*/
     }  
 item EmptyCokeBaggie
     {
@@ -20,6 +100,8 @@ item EmptyCokeBaggie
         Type    		= Normal,
         DisplayName         	= Empty Coke Baggie,
         icon 			= EmptyCokeBaggie,
+	/*StaticModel = pa_CokeBaggie,
+	WorldStaticModel = pa_CokeBaggie,*/
     } 
 item MirrorWith4Lines
     {
@@ -27,17 +109,20 @@ item MirrorWith4Lines
         DisplayName         	= Mirror With 4 Lines,
         icon 			= MirrorWith4Lines,
 	Type			= Food,
-	HungerChange            = -5,
-        ThirstChange            = -5,
-        UnhappyChange		= -4,
-        FatigueChange           = -8,
-	EnduranceChange		= 8,
-        StressChange            = 8,
+/*	HungerChange            = -5,
+        ThirstChange            = -5,*/
+        UnhappyChange		= -20,
+        BoredomChange		= -20,
+        FatigueChange           = -16,
+	EnduranceChange		= 16,
+        StressChange            = 4,
 	CustomEatSound 		= CokeSnort,
         ReplaceOnUse    	= MirrorWith3Lines,
 	CustomContextMenu 	= Snort,	
 	StaticModel = Mirror,
 	WorldStaticModel = Mirror,
+        EatType = popcan,
+		OnEat = DoLine,
     }
 item MirrorWith3Lines
     {
@@ -45,17 +130,20 @@ item MirrorWith3Lines
         DisplayName         	= Mirror With 3 Lines,
         icon 			= MirrorWith3Lines,
 	Type			= Food,
-	HungerChange            = -5,
-        ThirstChange            = -5,
-        UnhappyChange		= -4,
-        FatigueChange           = -8,
-	EnduranceChange		= 8,
-        StressChange            = 8,
+/*	HungerChange            = -5,
+        ThirstChange            = -5,*/
+        UnhappyChange		= -20,
+        BoredomChange		= -20,
+        FatigueChange           = -16,
+	EnduranceChange		= 16,
+        StressChange            = 4,
 	CustomEatSound 		= CokeSnort,
         ReplaceOnUse    	= MirrorWith2Lines,
 	CustomContextMenu 	= Snort,	
 	StaticModel = Mirror,
 	WorldStaticModel = Mirror,
+        EatType = popcan,
+		OnEat = DoLine,
     }
 item MirrorWith2Lines
     {
@@ -63,17 +151,20 @@ item MirrorWith2Lines
         DisplayName         	= Mirror With 2 Lines,
         icon 			= MirrorWith2Lines,
 	Type			= Food,
-	HungerChange            = -5,
-        ThirstChange            = -5,
-        UnhappyChange		= -4,
-        FatigueChange           = -8,
-	EnduranceChange		= 8,
-        StressChange            = 8,
+/*	HungerChange            = -5,
+        ThirstChange            = -5,*/
+        UnhappyChange		= -20,
+        BoredomChange		= -20,
+        FatigueChange           = -16,
+	EnduranceChange		= 16,
+        StressChange            = 4,
 	CustomEatSound 		= CokeSnort,
         ReplaceOnUse    	= MirrorWith1Line,
 	CustomContextMenu 	= Snort,	
 	StaticModel = Mirror,
 	WorldStaticModel = Mirror,
+        EatType = popcan,
+		OnEat = DoLine,
     }
 item MirrorWith1Line
     {
@@ -81,16 +172,19 @@ item MirrorWith1Line
         DisplayName         	= Mirror With A Line,
         icon 			= MirrorWith1Line,
 	Type			= Food,
-	HungerChange            = -5,
-        ThirstChange            = -5,
-        UnhappyChange		= -4,
-        FatigueChange           = -8,
-	EnduranceChange		= 8,
-        StressChange            = 8,
+/*	HungerChange            = -5,
+        ThirstChange            = -5,*/
+        UnhappyChange		= -20,
+        BoredomChange		= -20,
+        FatigueChange           = -16,
+	EnduranceChange		= 16,
+        StressChange            = 4,
 	CustomEatSound 		= CokeSnort,
         ReplaceOnUse    	= Mirror,
 	CustomContextMenu 	= Snort,	
 	StaticModel = Mirror,
 	WorldStaticModel = Mirror,
+        EatType = popcan,
+		OnEat = DoLine,
     }
 }

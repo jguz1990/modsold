@@ -2,6 +2,16 @@ require 'Items/SuburbsDistributions'
 require "Items/ProceduralDistributions"
 require "Vehicles/VehicleDistributions"
 
+table.insert(ProceduralDistributions.list.PoliceStorageGuns.items, "CheapSpeed")
+table.insert(ProceduralDistributions.list.PoliceStorageGuns.items, 1)
+
+table.insert(SuburbsDistributions.motelroomoccupied.dresser.items, "CheapSpeed")
+table.insert(SuburbsDistributions.motelroomoccupied.dresser.items, 1)
+
+table.insert(SuburbsDistributions.motelroomoccupied.sidetable.items, "CheapSpeed")
+table.insert(SuburbsDistributions.motelroomoccupied.sidetable.items, 1)
+
+
 table.insert(ProceduralDistributions.list.PrisonCellRandom.items, "CheapSpeed")
 table.insert(ProceduralDistributions.list.PrisonCellRandom.items, 1)
 

@@ -52,5 +52,44 @@ module Base
 
 	}
 
+	model akiermacheteergonomic&bleedmod
+	{
+		mesh = weapons/1handed/akiermacheteergonomic&bleedmod,
+                                        texture = weapons/1handed/akiermacheteergonomic&bleedmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model akiermachetebarbedmod
+	{
+		mesh = weapons/1handed/akiermachetebarbedmod,
+                                        texture = weapons/1handed/akiermachetebarbedmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
+	model akiermachetebleedmod
+	{
+		mesh = weapons/1handed/akiermachetebleedmod,
+                                        texture = weapons/1handed/akiermachetebleedmodtexture,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+
+	}
+
 	
 }

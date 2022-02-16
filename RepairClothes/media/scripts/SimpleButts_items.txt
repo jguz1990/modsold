@@ -1,0 +1,29 @@
+module Base
+{
+ 
+	item SimpleButt
+	{
+	    DisplayCategory = Junk,
+		Weight	=	0.001,
+		DisplayName	=	Cigarette Butt,
+		Icon	=	SimpleButt,
+		WorldStaticModel = SimpleButt,
+	}
+	model SimpleButt
+	{
+		mesh = simplebutt_rotated,
+		texture = Cigarette,
+	}
+
+
+	item UsedLighter
+	{
+	    DisplayCategory = Junk,
+		Weight	=	0.1,
+		DisplayName	=	Used Lighter,
+		Icon	=	Lighter,
+		MetalValue = 1,
+		WorldStaticModel = ZippoGround,
+	}
+
+}

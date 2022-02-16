@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <fileGuidTable>
+	<files>
+	<path>media/clothing/clothingItems/WristCompass_Left.xml</path>
+	<guid>3f6649f7-40f9-4183-9f1c-c4e33a7849ba</guid>
+	</files>
+
+	<files>
+	<path>media/clothing/clothingItems/WristCompass_Right.xml</path>
+	<guid>de0a6ecf-c5e1-4347-b145-592e1af8a42c</guid>
+	</files>
+
 
 	<files>
 	<path>media/clothing/clothingItems/CreatureMask.xml</path>

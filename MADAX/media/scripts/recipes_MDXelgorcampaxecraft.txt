@@ -1,0 +1,100 @@
+module Base  
+{
+
+       recipe Add Hammer Mod
+    {
+       elgorcampaxe,
+       WeldingRods=4,
+       ScrapMetal=25,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=2,
+        Result:elgorcampaxehammermod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Hammer Mod  
+    {
+       elgorcampaxehammermod,
+       WeldingRods=2,
+       ScrapMetal=15,
+       BlowTorch=8,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=2,
+        Result:elgorcampaxe,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Pierce Mod
+    {
+       elgorcampaxe,
+       WeldingRods=4,
+       ScrapMetal=25,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=2,
+        Result:elgorcampaxepiercemod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Pierce Mod  
+    {
+       elgorcampaxehammermod,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=2,
+        Result:elgorcampaxe,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+            	    fixing Fix Elgor Camp Axe
+	{
+		Require 	: elgorcampaxe,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Elgor Camp Axe (Hammer Mod)
+	{
+		Require 	: elgorcampaxehammermod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+            	    fixing Fix Elgor Camp Axe (Pierce Mod)
+	{
+		Require 	: elgorcampaxepiercemod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+}

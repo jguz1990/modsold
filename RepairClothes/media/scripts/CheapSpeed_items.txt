@@ -15,24 +15,31 @@ module Base
     PainReduction 	    =	5,
     CustomContextMenu   =	Take,
     CantBeFrozen 		=	TRUE,
+        WorldStaticModel = Antibiotics,
+        UnhappyChange		= -20,
+        BoredomChange		= -20,
     }
 	recipe Lay Out Four Lines
 	{
 		CheapSpeed=10,
 		Base.Mirror,
-		keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+		keep Base.CreditCard/Base.HuntingKnife,	
 		Result:MirrorWith4LinesCheapSpeed,
 		Time:250,
 		Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}	
 	recipe Lay Out Two Lines
 	{
 		CheapSpeed=5,
 		Base.Mirror,
-		keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+		keep Base.CreditCard/Base.HuntingKnife,	
 		Result:MirrorWith2LinesCheapSpeed,
 		Time:125,
 		Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}	
 	item MirrorWith4LinesCheapSpeed
     {
@@ -48,6 +55,10 @@ module Base
 		CustomEatSound 			= CokeSnort,
         ReplaceOnUse    		= MirrorWith3LinesCheapSpeed,
 		CustomContextMenu 		= Snort,
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+        UnhappyChange		= -10,
+        BoredomChange		= -10,
     }
 item MirrorWith3LinesCheapSpeed
     {
@@ -63,6 +74,10 @@ item MirrorWith3LinesCheapSpeed
 		CustomEatSound 			= CokeSnort,
         ReplaceOnUse    		= MirrorWith2LinesCheapSpeed,
 		CustomContextMenu 		= Snort,
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+        UnhappyChange		= -10,
+        BoredomChange		= -10,
     }
 item MirrorWith2LinesCheapSpeed
     {
@@ -78,6 +93,10 @@ item MirrorWith2LinesCheapSpeed
 		CustomEatSound 			= CokeSnort,
         ReplaceOnUse    		= MirrorWith1LineCheapSpeed,
 		CustomContextMenu 		= Snort,
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+        UnhappyChange		= -10,
+        BoredomChange		= -10,
     }
 item MirrorWith1LineCheapSpeed
     {
@@ -93,6 +112,10 @@ item MirrorWith1LineCheapSpeed
 		CustomEatSound 			= CokeSnort,
         ReplaceOnUse    		= Mirror,
 		CustomContextMenu 		= Snort,
+	StaticModel = Mirror,
+	WorldStaticModel = Mirror,
+        UnhappyChange		= -10,
+        BoredomChange		= -10,
     }
 }
 

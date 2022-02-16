@@ -6,60 +6,141 @@ module Base
 	recipe Lay Out One Line
 	{
 	CokeBaggie=2,
-	Base.Mirror,
-	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Mirror,
+	keep CreditCard/HuntingKnife,	
 	Result:MirrorWith1Line,
     	Time:100,
 	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}
 
 	recipe Lay Out Two Lines
 	{
 	CokeBaggie=4,
-	Base.Mirror,
-	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Mirror,
+	keep CreditCard/HuntingKnife,	
 	Result:MirrorWith2Lines,
     	Time:150,
 	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}
 
 	recipe Lay Out Three Lines
 	{
 	CokeBaggie=6,
-	Base.Mirror,
-	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Mirror,
+	keep CreditCard/HuntingKnife,	
 	Result:MirrorWith3Lines,
     	Time:200,
 	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}
 	recipe Lay Out Four Lines
 	{
 	CokeBaggie=8,
-	Base.Mirror,
-	keep Base.CreditCard/Base.HuntingKnife/Hydrocraft.HCRazorblade,	
+	Mirror,
+	keep CreditCard/HuntingKnife,	
 	Result:MirrorWith4Lines,
     	Time:250,
 	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
 	}
 
 	recipe Do A Bump
 	{
-	CokeBaggie=1,
+	pa_CokeBrick/CokeBaggie,
     	Time:50,
       	OnCreate:DoBump,
 	Result:CokeBaggie,
     	RemoveResultItem:true,
 	Sound:CokeSnort,
+	Prop1:Source=1,
+	Prop2:Source=1,
 	}
 
 	recipe Do A Key Bump
 	{
-	CokeBaggie=1,
-	keep Base.Key1/Base.Key2/Base.Key3/Base.Key4/Base.Key5,
+	pa_CokeBrick/CokeBaggie,
+	keep Key1/Key2/Key3/Key4/Key5,
     	Time:25,
       	OnCreate:DoKeyBump,
 	Result:CokeBaggie,
     	RemoveResultItem:true,
-	Sound:CokeSnort,	
+	Sound:CokeSnort,
+	Prop1:Source=2,
+	Prop2:Source=1,	
 	}
+	recipe Open Package
+	{
+	pa_CokeBrick2,
+    	Time:25,
+	Result:pa_CokeBrick,
+	Prop2:Source=1,	
+	}
+	
+	recipe Pack a Baggie
+	{
+	pa_CokeBrick=8,
+	keep Mirror,
+	EmptyCokeBaggie,
+	keep CreditCard/HuntingKnife,	
+	Result:CokeBaggie,
+    	Time:250,
+	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
+	}
+	
+	recipe Lay Out One Line
+	{
+	pa_CokeBrick=2,
+	Mirror,
+	keep CreditCard/HuntingKnife,	
+	Result:MirrorWith1Line,
+    	Time:100,
+	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
+	}
+
+	recipe Lay Out Two Lines
+	{
+	pa_CokeBrick=4,
+	Mirror,
+	keep CreditCard/HuntingKnife,	
+	Result:MirrorWith2Lines,
+    	Time:150,
+	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
+	}
+
+	recipe Lay Out Three Lines
+	{
+	pa_CokeBrick=6,
+	Mirror,
+	keep CreditCard/HuntingKnife,	
+	Result:MirrorWith3Lines,
+    	Time:200,
+	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
+	}
+	recipe Lay Out Four Lines
+	{
+	pa_CokeBrick=8,
+	Mirror,
+	keep CreditCard/HuntingKnife,	
+	Result:MirrorWith4Lines,
+    	Time:250,
+	Sound:AddItemInRecipe,
+	Prop1:Source=3,
+	Prop2:Source=2,
+	}
+
+	
 }

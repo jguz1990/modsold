@@ -84,17 +84,6 @@ function Accept_Envelope(container, item)
 	or iType == "PZCF_BoosterPack"
 	or (iType:contains("PZCF") and iType:contains("TGC"))
 end 
-function PA_Money_NothingInside(item)
-	-- print("Stuff test " .. tostring(item:getType()))
-	local cat = item:getCategory()
-	-- print("Category " .. tostring(cat))
-	if item:getCategory() == "Container" and (item:getInventory():getItems():size()) > 0 then
-		print("Container " .. tostring(item:getInventory():getItems()))
-		return false
-	end
-	-- and item:getContainer():getItems() then return false end	
-	return true
-end
 function Bills_1_100_OnCreate(items, result, player)
 	player:getInventory():AddItems("Base.1_DollarBill", 100)
 end

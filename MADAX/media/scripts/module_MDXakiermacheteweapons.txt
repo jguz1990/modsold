@@ -1,5 +1,6 @@
 module Base
 {
+/**************************Akier Machete*****************************/
     item akiermachete
     {
         DisplayCategory = Weapon,
@@ -17,7 +18,7 @@ module Base
         SwingAmountBeforeImpact	=	0.02,
         Categories	=	LongBlade,
         ConditionLowerChanceOneIn	=	20,
-        Weight	=	1.4,
+        Weight	=	0.7,
         SplatNumber	=	2,
         PushBackMod	=	0.3,
         SubCategory	=	Swinging,
@@ -36,7 +37,7 @@ module Base
         CritDmgMultiplier = 3,
         MinDamage	=	1,
         MaxDamage	=	2.4,
-        BaseSpeed = 1.2,
+        BaseSpeed = 1,
         WeaponLength = 0.3,
         DamageCategory = Slash,
         DamageMakeHole = TRUE,
@@ -49,6 +50,9 @@ module Base
 		SwingSound = MacheteSwing,
      }
 
+
+
+/**************************Akier Machete (Short Mod)*****************************/
     item akiermacheteshortmod
 	{
 	    DisplayCategory = Weapon,
@@ -61,7 +65,7 @@ module Base
 		SwingAmountBeforeImpact	=	0.02,
 		Categories	=	SmallBlade,
 		ConditionLowerChanceOneIn	=	15,
-		Weight	=	0.8,
+		Weight	=	0.5,
 		SplatNumber	=	4,
 		PushBackMod	=	0.3,
 		SubCategory	=	Stab,
@@ -100,8 +104,8 @@ module Base
         Tags = CutPlant,
     }
 
-
-    item akiermacheteergonomicmod
+/**************************Akier Machete (Ergonomic Mod)*****************************/
+    item akiermacheteergonomicmod 
     {
         DisplayCategory = Weapon,
         MaxRange	=	1.23,
@@ -150,6 +154,12 @@ module Base
 		SwingSound = MacheteSwing,
      }
 
+
+
+
+
+
+/**************************Akier Machete (Ergonomic&Short Mod)*****************************/
     item akiermacheteergonomic&shortmod
 	{
 	    DisplayCategory = Weapon,
@@ -200,5 +210,163 @@ module Base
 		AttachmentType = Knife,
         Tags = CutPlant,
     }
+
+
+
+/**************************Akier Machete (Barbed Mod)*****************************/
+    item akiermachetebarbedmod
+    {
+        DisplayCategory = Weapon,
+        MaxRange	=	1.23,
+        WeaponSprite	=	akiermachetebarbedmod,
+        MinAngle	=	0.7,
+        Type	=	Weapon,
+		SwingSound = MacheteSwing,
+        HitFloorSound	=	MacheteHit,
+		ImpactSound	=	MacheteHit,
+        DoorHitSound = MacheteHit,
+		HitSound	=	MacheteHit,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	LongBlade,
+        ConditionLowerChanceOneIn	=	20,
+        Weight	=	1.4,
+        SplatNumber	=	2,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	10,
+        MaxHitCount	=	2,
+        DoorDamage	=	5,
+        SwingAnim	=	Bat,
+        DisplayName	=	Akier Machete (Barbed Mod),
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	1.5,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	akiermachetebarbedmodicon,
+        TreeDamage  =   8,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 3,
+        MinDamage	=	1,
+        MaxDamage	=	2.4,
+        BaseSpeed = 1.2,
+        WeaponLength = 0.3,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        AttachmentType = Knife,
+        Tags = CutPlant,
+        DoorHitSound = MacheteHit,
+		HitSound = MacheteHit,
+		HitFloorSound = MacheteHit,
+        BreakSound  =   MacheteBreak,
+		SwingSound = MacheteSwing,
+     }
+
+
+
+
+/**************************Akier Machete (Bleed Mod)*****************************/
+    item akiermachetebleedmod
+    {
+        DisplayCategory = Weapon,
+        MaxRange	=	1.23,
+        WeaponSprite	=	akiermachetebleedmod,
+        MinAngle	=	0.7,
+        Type	=	Weapon,
+		SwingSound = MacheteSwing,
+        HitFloorSound	=	MacheteHit,
+		ImpactSound	=	MacheteHit,
+        DoorHitSound = MacheteHit,
+		HitSound	=	MacheteHit,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	LongBlade,
+        ConditionLowerChanceOneIn	=	20,
+        Weight	=	1.4,
+        SplatNumber	=	2,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	10,
+        MaxHitCount	=	2,
+        DoorDamage	=	5,
+        SwingAnim	=	Bat,
+        DisplayName	=	Akier Machete (Bleed Mod),
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	1.5,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	akiermachetebleedmodicon,
+        TreeDamage  =   8,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 3,
+        MinDamage	=	1,
+        MaxDamage	=	2.4,
+        BaseSpeed = 1.2,
+        WeaponLength = 0.3,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        AttachmentType = Knife,
+        Tags = CutPlant,
+        DoorHitSound = MacheteHit,
+		HitSound = MacheteHit,
+		HitFloorSound = MacheteHit,
+        BreakSound  =   MacheteBreak,
+		SwingSound = MacheteSwing,
+     }
+
+
+
+/**************************Akier Machete (Ergonomic&Bleed Mod)*****************************/
+    item akiermacheteergonomic&bleedmod
+    {
+        DisplayCategory = Weapon,
+        MaxRange	=	1.23,
+        WeaponSprite	=	akiermacheteergonomic&bleedmod,
+        MinAngle	=	0.7,
+        Type	=	Weapon,
+		SwingSound = MacheteSwing,
+        HitFloorSound	=	MacheteHit,
+		ImpactSound	=	MacheteHit,
+        DoorHitSound = MacheteHit,
+		HitSound	=	MacheteHit,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	LongBlade,
+        ConditionLowerChanceOneIn	=	20,
+        Weight	=	1.7,
+        SplatNumber	=	2,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	12,
+        MaxHitCount	=	2,
+        DoorDamage	=	10,
+        SwingAnim	=	Bat,
+        DisplayName	=	Akier Machete (Ergonomic & Bleed Mod),
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	1.8,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	akiermacheteergonomic&bleedmodicon,
+        TreeDamage  =   10,
+        CriticalChance	=	20,
+        CritDmgMultiplier = 2,
+        MinDamage	=	1.5,
+        MaxDamage	=	2.4,
+        BaseSpeed = 1.1,
+        WeaponLength = 0.3,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        AttachmentType = Knife,
+        Tags = CutPlant,
+        DoorHitSound = MacheteHit,
+		HitSound = MacheteHit,
+		HitFloorSound = MacheteHit,
+        BreakSound  =   MacheteBreak,
+		SwingSound = MacheteSwing,
+     }
+
 
 }

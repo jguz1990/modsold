@@ -2,6 +2,134 @@ module Base
 {
 
 
+      /***************************** Bleed Mod **********************************/
+       recipe Add Bleed Mod
+    {
+       akiermachete,
+       WeldingRods=5,
+       SheetMetal=1,
+       ScrapMetal=4,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=3,
+        Result:akiermachetebleedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Bleed Mod
+    {
+       akiermachetebleedmod,
+       keep [Recipe.GetItemTypes.Hammer],	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+
+     /***************************** Ergonomic Mod **********************************/
+       recipe Add Ergonomic Mod
+    {
+       akiermachete,
+       Plank=2,
+       LeatherStrips=2,
+       SmallSheetMetal=1,
+       Screws=2,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:akiermacheteergonomicmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Ergonomic Mod
+    {
+       akiermacheteergonomicmod,
+       keep [Recipe.GetItemTypes.Hammer],	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+
+      /***************************** Ergonomic&Bleed Mod **********************************/
+       recipe Add Ergonomic Mod
+    {
+       akiermachetebleedmod,
+       Plank=2,
+       LeatherStrips=2,
+       SmallSheetMetal=1,
+       Screws=2,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+        SkillRequired:Maintenance=2,
+        Result:akiermacheteergonomic&bleedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Add Bleed Mod
+    {
+       akiermacheteergonomicmod,
+       WeldingRods=5,
+       SheetMetal=1,
+       ScrapMetal=4,
+       BlowTorch=10,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=3,
+        Result:akiermacheteergonomic&bleedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
+
+       recipe Remove Ergonomic Mod
+    {
+       akiermacheteergonomic&bleedmod,
+       keep [Recipe.GetItemTypes.Hammer],	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermachetebleedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+       recipe Remove Bleed Mod
+    {
+       akiermacheteergonomic&bleedmod,
+       keep [Recipe.GetItemTypes.Hammer],	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermacheteergonomicmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+
+      /***************************** Short Mod **********************************/
        recipe Add Short Modification
     {
        akiermachete,
@@ -13,6 +141,9 @@ module Base
         Category:Weapons,
      }
 
+
+
+      /***************************** Ergonomic&Short Mod **********************************/
        recipe Add Short Modification
     {
        akiermacheteergonomicmod,
@@ -32,6 +163,7 @@ module Base
        SmallSheetMetal=1,
        Screws=2,
        keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Hammer],
        keep [Recipe.GetItemTypes.Screwdriver],		 
         SkillRequired:Maintenance=2,
         Result:akiermacheteergonomic&shortmod,
@@ -40,37 +172,10 @@ module Base
         Category:Weapons,
      }
 
-       recipe Add Ergonomic Mod
-    {
-       akiermachete,
-       Plank=2,
-       LeatherStrips=2,
-       SmallSheetMetal=1,
-       Screws=2,
-       keep [Recipe.GetItemTypes.Saw],
-       keep [Recipe.GetItemTypes.Screwdriver],		 
-        SkillRequired:Maintenance=2,
-        Result:akiermacheteergonomicmod,
-        Sound:PutItemInBag,
-        Time:1500.0,
-        Category:Weapons,
-     }
-
-
-       recipe Remove Ergonomic Modification
-    {
-       akiermacheteergonomicmod,
-       keep [Recipe.GetItemTypes.Screwdriver],
-       keep [Recipe.GetItemTypes.Saw],		 
-        Result:akiermachete,
-        Sound:PutItemInBag,
-        Time:1500.0,
-        Category:Weapons,
-}
-
-       recipe Remove Ergonomic Modification
+       recipe Remove Ergonomic Mod
     {
        akiermacheteergonomic&shortmod,
+       keep [Recipe.GetItemTypes.Hammer],	
        keep [Recipe.GetItemTypes.Screwdriver],
        keep [Recipe.GetItemTypes.Saw],		 
         Result:akiermacheteshortmod,
@@ -81,7 +186,39 @@ module Base
 
 
 
+/****************************Barbed Mod******************************/
+       recipe Add Barbed Mod
+    {
+       akiermachete,
+       WeldingRods=4,
+       ScrapMetal=30,
+       BlowTorch=15,
+       keep WeldingMask,
+       keep [Recipe.GetItemTypes.Saw],
+       keep [Recipe.GetItemTypes.Screwdriver],		 
+       keep [Recipe.GetItemTypes.Hammer],
+        SkillRequired:Maintenance=3,
+        Result:akiermachetebarbedmod,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+     }
 
+       recipe Remove Barbed Mod
+    {
+       akiermachetebarbedmod,
+       keep [Recipe.GetItemTypes.Hammer],	
+       keep [Recipe.GetItemTypes.Screwdriver],
+       keep [Recipe.GetItemTypes.Saw],		 
+        Result:akiermachete,
+        Sound:PutItemInBag,
+        Time:1500.0,
+        Category:Weapons,
+}
+
+
+
+/******************************* FIXING **********************************/
 
         	    fixing Fix Akier Machete
 	{
@@ -120,6 +257,39 @@ module Base
         	    fixing Fix Akier Machete (Ergonomic&Short Mod)
 	{
 		Require 	: akiermacheteergonomic&shortmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+        	    fixing Fix Akier Machete (Ergonomic&sBleed Mod)
+	{
+		Require 	: akiermacheteergonomic&bleedmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+        	    fixing Fix Akier Machete (Barbed Mod)
+	{
+		Require 	: akiermachetebarbedmod,
+                                        Fixer : Woodglue=2; Woodwork=2,
+		Fixer 	: DuctTape=2,
+		Fixer 	: Glue=5,
+		Fixer 	: Scotchtape=4,
+		
+
+	}
+
+        	    fixing Fix Akier Machete (Bleed Mod)
+	{
+		Require 	: akiermachetebleedmod,
                                         Fixer : Woodglue=2; Woodwork=2,
 		Fixer 	: DuctTape=2,
 		Fixer 	: Glue=5,

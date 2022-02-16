@@ -28,7 +28,7 @@ function Compass_context2 (player, context, items)
             -- editItem = v
         end
 		if ( testItem:getType():contains("Compass")  ) then
-			print("Compass!")
+			-- print("Compass!")
 			compass = testItem
 		end
         c = c + 1;
