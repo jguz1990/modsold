@@ -1,0 +1,16 @@
+module KingsmouthKY
+{ 
+ 	imports
+	{
+	Base
+	}
+
+ 	item KingsmouthMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    Map of Kingsmouth,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map					=           media/ui/LootableMaps/kingsmouth_map_large.png,
+    }
+}
