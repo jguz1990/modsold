@@ -1,12 +1,12 @@
-KI5 = KI5 or {};
+--***********************************************************
+--**                    bikinihorst                        **
+--***********************************************************
 
+KI5 = KI5 or {};
 KI5.Commands = KI5.Commands or {};
 
-
--- moddata fuckery because vehicle moddata is currently wonky
-
 function KI5.Commands.setVehicleData(playerObj, args)
-	print("KI5.Commands.setVehicleData(" .. playerObj:getUsername() .. ", " .. args["_vehicleId"] .. ")");
+	--print("KI5.Commands.setVehicleData(" .. playerObj:getUsername() .. ", " .. args["_vehicleId"] .. ")");
 
 	local vehicle = getVehicleById(args["_vehicleId"]);
 
@@ -16,7 +16,7 @@ function KI5.Commands.setVehicleData(playerObj, args)
 
 		if part
 		then
-			print("setting mod data");
+			--print("setting mod data");
 
 			local modData = part:getModData();
 
@@ -24,23 +24,20 @@ function KI5.Commands.setVehicleData(playerObj, args)
 			do
 				if k ~= "_vehicleId" and k ~= "contentAmount"
 				then
-					print("- setting " .. tostring(k) .. " = " .. tostring(v));
+					--print("- setting " .. tostring(k) .. " = " .. tostring(v));
 
 					modData[k] = v;
 				end
 			end
 
 			vehicle:transmitPartModData(part);
-		else
-			print("unable to find mule part");
+		--else
+		--print("unable to find mule part");
 		end
-	else
-		print("unable to find vehicle");
+	--else
+	--print("unable to find vehicle");
 	end
 end
-
-
--- install parts
 
 function KI5.Commands.silentPartInstall(playerObj, args)
 	local vehicle = getVehicleById(args["_vehicleId"]);
@@ -49,7 +46,7 @@ function KI5.Commands.silentPartInstall(playerObj, args)
 
 	if vehicle and part and item
 	then
-		print("KI5.Commands.silentPartInstall(" .. playerObj:getUsername() .. ", " .. part .. ", " .. item .. ")");
+		--print("KI5.Commands.silentPartInstall(" .. playerObj:getUsername() .. ", " .. part .. ", " .. item .. ")");
 
 		item = InventoryItemFactory.CreateItem(item);
 		part = vehicle:getPartById(part);
@@ -65,21 +62,18 @@ function KI5.Commands.silentPartInstall(playerObj, args)
 			then
 				VehicleUtils.callLua(installTable.complete, vehicle, part);
 			end
-		else
-			print("no item generated");
+		--else
+		--print("no item generated");
 		end
-	else
-		print("vehicle, part or item missing");
+	--else
+	--print("vehicle, part or item missing");
 	end
 end
-
-
--- listen for commands
 
 Events.OnClientCommand.Add(function(moduleName, command, playerObj, args)
 	if moduleName == "ki5_lib" and KI5.Commands[command]
 	then
-		print(moduleName .. " -> " .. command .. " | " .. playerObj:getUsername());
+		--print(moduleName .. " -> " .. command .. " | " .. playerObj:getUsername());
 
 		KI5.Commands[command](playerObj, args);
 	end

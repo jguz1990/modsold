@@ -1,11 +1,11 @@
 if VehicleZoneDistribution then
 
 VehicleZoneDistribution.parkingstall.vehicles["Base.92amgeneralM998"] = {index = -1, spawnChance = 1};
-VehicleZoneDistribution.parkingstall.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 2};
+VehicleZoneDistribution.parkingstall.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 0};
 
 VehicleZoneDistribution.trailerpark.vehicles["Base.92amgeneralM998"] = {index = 4, spawnChance = 2};
 VehicleZoneDistribution.trailerpark.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 1};
-VehicleZoneDistribution.trailerpark.vehicles["Base.TrailerM101A3cargo"] = {index = 4, spawnChance = 5};
+VehicleZoneDistribution.trailerpark.vehicles["Base.TrailerM101A3cargo"] = {index = 4, spawnChance = 2};
 
 VehicleZoneDistribution.bad.vehicles["Base.92amgeneralM998"] = {index = 0, spawnChance = 1};
 VehicleZoneDistribution.bad.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 1};
@@ -14,7 +14,7 @@ VehicleZoneDistribution.junkyard.vehicles["Base.92amgeneralM998"] = {index = -1,
 VehicleZoneDistribution.junkyard.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 2};
 
 VehicleZoneDistribution.ranger.vehicles["Base.92amgeneralM998"] = {index = 0, spawnChance = 1};
-VehicleZoneDistribution.ranger.vehicles["Base.TrailerM101A3cargo"] = {index = 0, spawnChance = 2};
+VehicleZoneDistribution.ranger.vehicles["Base.TrailerM101A3cargo"] = {index = 0, spawnChance = 0};
 
 -- Trafficjam spawns --
 
@@ -23,7 +23,7 @@ VehicleZoneDistribution.trafficjamw.vehicles["Base.92amgeneralM998Burnt"] = {ind
 
 VehicleZoneDistribution.trafficjame.vehicles["Base.92amgeneralM998"] = {index = -1, spawnChance = 0};
 VehicleZoneDistribution.trafficjame.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 2};
-VehicleZoneDistribution.trafficjame.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 4};
+VehicleZoneDistribution.trafficjame.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 1};
 
 VehicleZoneDistribution.trafficjamn.vehicles["Base.92amgeneralM998"] = {index = -1, spawnChance = 1};
 VehicleZoneDistribution.trafficjamn.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 3};
@@ -40,6 +40,6 @@ VehicleZoneDistribution.military.vehicles["Base.92amgeneralM998"] = {index = -1,
 
 VehicleZoneDistribution.military.vehicles["Base.92amgeneralM998Burnt"] = {index = -1, spawnChance = 10};
 
-VehicleZoneDistribution.military.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 25};
+VehicleZoneDistribution.military.vehicles["Base.TrailerM101A3cargo"] = {index = -1, spawnChance = 15};
 
 end

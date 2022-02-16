@@ -21,6 +21,12 @@ module Base
 		static = FALSE,
 		scale = 0.1,
 	}
+	model 92amgeneralM998battery
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|TIS_CarBattery,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
 	model 92amgeneralM998frontwheelleft
 	{
 		mesh = vehicles/Vehicles_92amgeneralM998_Wheel,
@@ -257,9 +263,19 @@ module Base
 			xywh = 0.0000 -2.5667 1.3778 0.6667,
 		}
 
+		area Roofrack
+		{
+			xywh = 0.0000 -0.9333 3.2222 3.7111,
+		}
+
 		area SpareTire
 		{
 			xywh = -0.3222 -3.0000 0.4222 0.4222,
+		}
+
+		area Mudflaps
+		{
+			xywh = 0.4778 -2.6889 0.4222 0.4222,
 		}
 
 		area SeatFrontLeft
@@ -308,7 +324,9 @@ module Base
 		}
 
 		template = M998TrunkCompartment,
+		template = M998RoofrackCompartment/part/M998Roofrack,
 		template = M998SpareTire/part/M998SpareTire,
+		template = M998Mudflaps/part/M998Mudflaps,
 		template = M998TrunkDoor/part/TrunkDoor,
 		template = M998TrunkBarriers/part/M998TrunkBarrier,
 		template = M998BackCovers/part/M998BackCover,
@@ -316,11 +334,16 @@ module Base
 		template = M998Mufflers/part/M998Muffler,
 		template = M998EngineDoor/part/EngineDoor,
 		template = M998Windshield/part/Windshield,
+		template = M998WindshieldArmors/part/M998WindshieldArmor,
 		template = M998Windows,
-		template = M998Door/part/DoorFrontLeft,
-		template = M998Door/part/DoorFrontRight,
-		template = M998Door/part/DoorRearLeft,
-		template = M998Door/part/DoorRearRight,
+		template = M998Doors/part/DoorFrontLeft,
+		template = M998DoorArmors/part/M998DoorFrontLeftArmor,
+		template = M998Doors/part/DoorFrontRight,
+		template = M998DoorArmors/part/M998DoorFrontRightArmor,
+		template = M998Doors/part/DoorRearLeft,
+		template = M998DoorArmors/part/M998DoorRearLeftArmor,
+		template = M998Doors/part/DoorRearRight,
+		template = M998DoorArmors/part/M998DoorRearRightArmor,
 		template = M998Bullbars/part/M998Bullbar,
 		template = TireV101M998,
 
@@ -374,6 +397,18 @@ module Base
 		}
 
 		template = Battery,
+
+		part Battery
+		{
+			model M998BatteryTIS
+			{
+				file = 92amgeneralM998battery,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+		}
+
 		template = Engine,
 
 		part Heater

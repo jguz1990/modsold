@@ -22,7 +22,7 @@ module Base
         Type	=	Normal,
         DisplayName	=	Extra,
         Icon	=	na,
-        MaxCapacity = 1.00,
+        MaxCapacity = 1,
         ConditionAffectsCapacity = false,
         ConditionMax = 100,
         ChanceToSpawnDamaged = 20,
@@ -42,6 +42,7 @@ module Base
         ConditionMax = 100,
         MechanicsItem = TRUE,
         WorldStaticModel = M101A3_trunkdoorWI,
+	Tooltip = Tooltip_item_M101A3TrunkDoor,
     }
 
     item M101A3TrunkDoorTwo2
@@ -61,26 +62,28 @@ module Base
 
 	item M101A3Cover1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	30.0,
-          Type	=	Normal,
-          DisplayName	=	M101A3 Hard Cover,
-          Icon	=	hardcoverM101,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M101A3_coverWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	M101A3 Hard Cover,
+        Icon	=	hardcoverM101,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M101A3_coverWI,
+	Tooltip = Tooltip_item_M101A3Cover1,
       }
 
 	item M101A3Tarp1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	7.0,
-          Type	=	Normal,
-          DisplayName	=	M101A3 Tarp,
-          Icon	=	tarpM101,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M101A3_tarpWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	7.0,
+        Type	=	Normal,
+        DisplayName	=	M101A3 Tarp,
+        Icon	=	tarpM101,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M101A3_tarpWI,
+	Tooltip = Tooltip_item_M101A3Tarp1,
       }
 
      /************************ Kinda sus ************************/

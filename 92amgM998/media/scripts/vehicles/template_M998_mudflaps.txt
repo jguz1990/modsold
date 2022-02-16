@@ -1,39 +1,33 @@
 module Base
 {
-	model 92amgeneralM998bullbar1
+	model 92amgeneralM998mudflaps1
 	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_smallbullbar,
-		shader = vehicle_noreflect,
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_mudflaps,
+		texture = Vehicles/Vehicles_92amgeneralM998_Interior_Wheel,
+		shader = vehiclewheel,
 		scale = 0.1,
 	}
 
-	model 92amgeneralM998bullbar2
-	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_bigbullbar,
-		shader = vehicle_noreflect,
-		scale = 0.1,
-	}
-
-	template vehicle M998Bullbars
+	template vehicle M998Mudflaps
 		{
-		part M998Bullbar
+		part M998Mudflaps
         	{
 
-			model Bullbar1
+			model Mudflaps1
 				{
-                		file = 92amgeneralM998bullbar1,
+                		file = 92amgeneralM998mudflaps1,
 				}
 
-			model Bullbar2
-				{
-                		file = 92amgeneralM998bullbar2,
-				}
-
-			area = Engine,
 			category = Other,
+			area = Mudflaps,
 			specificItem = false,
-			itemType = Base.M998Bullbar1_Item;Base.M998Bullbar2_Item,
+			itemType = Base.M998Mudflaps1_Item,
 			mechanicRequireKey = false,
+
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
 
 			table install
 			{
@@ -48,11 +42,10 @@ module Base
                     		}
                 	}
 
-                	time = 1500,
-                	skills = Mechanics:4,
+                	time = 800,
+                	skills = Mechanics:1,
                 	recipes = Intermediate Mechanics,
                 	test = Vehicles.InstallTest.Default,
-                	complete = M998.InstallComplete.Bullbar,
             		}
 
             		table uninstall
@@ -68,17 +61,18 @@ module Base
                     		}
                 	}
 
-			time = 1500,
-			skills = Mechanics:4,
+			time = 750,
+			skills = Mechanics:1,
 			recipes = Intermediate Mechanics,
-                	test = Vehicles.UninstallTest.Default,
-			complete = M998.UninstallComplete.Bullbar,
+            		test = Vehicles.UninstallTest.Default,
+			complete = M998.UninstallComplete.Mudflaps,
+
             		}
 
             		lua
             		{
-			create = M998.Create.Bullbar,
-			init = M998.Init.Bullbar,
+			create = M998.Create.Mudflaps,
+			init = M998.Init.Mudflaps,
 			}
 		}
 	}

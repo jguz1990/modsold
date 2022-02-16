@@ -28,6 +28,13 @@ module Base
 		scale   = 0.6,
 	}
 
+	model RunFlatWI
+	{
+		mesh    = vehicles/WorldItems_RunFlat_Wheel,
+		texture = Vehicles/Vehicles_67commando_Wheel,
+		scale   = 0.85,
+	}
+
 	model M998WheelWI
 	{
 		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_wheelWI,
@@ -45,6 +52,13 @@ module Base
 	model M998SpareMountWI
 	{
 		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_mountWI,
+		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
+		scale   = 0.6,
+	}
+
+	model M998MudflapsWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_MudflapsWI,
 		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
 		scale   = 0.6,
 	}
@@ -116,6 +130,38 @@ module Base
 	{
 		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_barrier2WI,
 		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
+		scale   = 0.6,
+	}
+
+	model M998RoofrackWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_roofrackWI,
+		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
+		scale   = 0.6,
+	}
+
+	model M998WindArmorOneWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_windshield_aWI,
+		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
+		scale   = 0.6,
+	}
+	model M998WindArmorTwoWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|HMMWV_windshield_aaWI,
+		texture = Vehicles/Objects_92amgeneralM998_Interior_Wheel,
+		scale   = 0.6,
+	}
+	model M998FrontDoorArmorWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|door_fl_aWI,
+		texture = Vehicles/Objects_92amgeneralM998_Shell_USMCgreen,
+		scale   = 0.6,
+	}
+	model M998RearDoorArmorWI
+	{
+		mesh    = vehicles/Vehicles_92amgeneralM998_Objects|door_rl_aWI,
+		texture = Vehicles/Objects_92amgeneralM998_Shell_USMCgreen,
 		scale   = 0.6,
 	}
 }

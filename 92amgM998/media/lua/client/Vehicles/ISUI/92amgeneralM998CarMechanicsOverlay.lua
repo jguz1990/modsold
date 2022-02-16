@@ -1,5 +1,3 @@
-local function info()
-
 ISCarMechanicsOverlay.CarList["Base.92amgeneralM998"] = {imgPrefix = "92amgeneralM998_", x=10,y=0};
 --
 ISCarMechanicsOverlay.PartList["Battery"].vehicles = ISCarMechanicsOverlay.PartList["Battery"].vehicles or {};
@@ -7,7 +5,7 @@ ISCarMechanicsOverlay.PartList["Battery"].vehicles["92amgeneralM998_"] = {img="b
 --
 ISCarMechanicsOverlay.PartList["Radio"] = {img="radio", vehicles = {"92amgeneralM998_"}};
 ISCarMechanicsOverlay.PartList["Radio"].vehicles = ISCarMechanicsOverlay.PartList["Radio"].vehicles or {};
-ISCarMechanicsOverlay.PartList["Radio"].vehicles["92amgeneralM998_"] = {x=225,y=225,x2=270,y2=260};
+ISCarMechanicsOverlay.PartList["Radio"].vehicles["92amgeneralM998_"] = {x=71,y=427,x2=81,y2=439};
 --
 ISCarMechanicsOverlay.PartList["SuspensionFrontLeft"].vehicles = ISCarMechanicsOverlay.PartList["SuspensionFrontLeft"].vehicles or {};
 ISCarMechanicsOverlay.PartList["SuspensionFrontLeft"].vehicles["92amgeneralM998_"] = {img="suspension_front_left", x=14,y=133,x2=55,y2=170};
@@ -79,7 +77,26 @@ ISCarMechanicsOverlay.PartList["Windshield"].vehicles["92amgeneralM998_"] = {x=7
 ISCarMechanicsOverlay.PartList["GasTank"].vehicles = ISCarMechanicsOverlay.PartList["GasTank"].vehicles or {};
 ISCarMechanicsOverlay.PartList["GasTank"].vehicles["92amgeneralM998_"] = {img="gastank", x=158,y=470,x2=246,y2=527};
 --
-end
-
-
-Events.OnInitWorld.Add(info);
+ISCarMechanicsOverlay.PartList["M998Bullbar"] = {img="bullbar", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998Bullbar"].vehicles = ISCarMechanicsOverlay.PartList["M998Bullbar"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998Bullbar"].vehicles["92amgeneralM998_"] = {x=13,y=557,x2=56,y2=595};
+--
+ISCarMechanicsOverlay.PartList["M998WindshieldArmor"] = {img="windshield_armor", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998WindshieldArmor"].vehicles = ISCarMechanicsOverlay.PartList["M998WindshieldArmor"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998WindshieldArmor"].vehicles["92amgeneralM998_"] = {x=56,y=557,x2=98,y2=595};
+--
+ISCarMechanicsOverlay.PartList["M998DoorFrontLeftArmor"] = {img="door_front_left_armor", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998DoorFrontLeftArmor"].vehicles = ISCarMechanicsOverlay.PartList["M998DoorFrontLeftArmor"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998DoorFrontLeftArmor"].vehicles["92amgeneralM998_"] = {x=98,y=557,x2=142,y2=595};
+--
+ISCarMechanicsOverlay.PartList["M998DoorFrontRightArmor"] = {img="door_front_right_armor", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998DoorFrontRightArmor"].vehicles = ISCarMechanicsOverlay.PartList["M998DoorFrontRightArmor"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998DoorFrontRightArmor"].vehicles["92amgeneralM998_"] = {x=142,y=557,x2=185,y2=595};
+--
+ISCarMechanicsOverlay.PartList["M998DoorRearLeftArmor"] = {img="door_rear_left_armor", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998DoorRearLeftArmor"].vehicles = ISCarMechanicsOverlay.PartList["M998DoorRearLeftArmor"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998DoorRearLeftArmor"].vehicles["92amgeneralM998_"] = {x=185,y=557,x2=228,y2=595};
+--
+ISCarMechanicsOverlay.PartList["M998DoorRearRightArmor"] = {img="door_rear_right_armor", vehicles = {"92amgeneralM998_"}};
+ISCarMechanicsOverlay.PartList["M998DoorRearRightArmor"].vehicles = ISCarMechanicsOverlay.PartList["M998DoorRearRightArmor"].vehicles or {};
+ISCarMechanicsOverlay.PartList["M998DoorRearRightArmor"].vehicles["92amgeneralM998_"] = {x=228,y=557,x2=270,y2=595};

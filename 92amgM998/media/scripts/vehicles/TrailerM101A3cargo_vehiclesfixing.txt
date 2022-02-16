@@ -1,0 +1,50 @@
+module Base
+{
+	fixing Fix M101A3Tarp
+	{
+	   Require : M101A3Tarp1_Item,
+	   ConditionModifier : 0.8,
+
+       Fixer : DuctTape=2;Mechanics=1,
+	}
+	
+	fixing Fix M101A3Trunk Welding
+	{
+	   Require : M101A3Trunk2,
+	   GlobalItem : BlowTorch=7,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+       Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix M998Trunk Lid Welding
+    {
+       Require : M998TrunkDoor2,
+       GlobalItem : BlowTorch=7,
+       ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=1;Mechanics=2,
+       Fixer : SmallSheetMetal=2; MetalWelding=1;Mechanics=2,
+    }
+
+    fixing Fix M101A3Trunk Lid
+	{
+       Require : M101A3TrunkDoor2;M101A3TrunkDoorTwo2,
+	   GlobalItem : Screws=8,
+	   ConditionModifier : 0.5,
+
+       Fixer : SheetMetal; Mechanics=2,
+	}
+
+	fixing Fix M101A3Cover Welding
+    {
+       Require : M101A3Cover1_Item,
+       GlobalItem : BlowTorch=6,
+       ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=1;Mechanics=2,
+       Fixer : SmallSheetMetal=2; MetalWelding=1;Mechanics=2,
+    }
+
+}

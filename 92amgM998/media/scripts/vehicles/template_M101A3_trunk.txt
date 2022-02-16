@@ -7,7 +7,7 @@ module Base
 			category = bodywork,
 			area = TruckBed,
 			itemType = Base.M101A3Trunk,
-			mechanicRequireKey = true,
+			mechanicRequireKey = false,
 			repairMechanic = true,
 			container
 			{
@@ -25,7 +25,7 @@ module Base
 			category = nodisplay,
 			area = TruckBed,
 			itemType = Base.M101A3Extra,
-			mechanicRequireKey = true,
+			mechanicRequireKey = false,
 			repairMechanic = true,
 			container
 			{

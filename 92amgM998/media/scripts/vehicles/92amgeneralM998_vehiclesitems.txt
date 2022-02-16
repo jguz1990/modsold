@@ -1,6 +1,25 @@
 module Base
 {
 
+	/*******************Legacy Tires ************************/  
+
+	item V100Tire2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	RunFlat Tire,
+        Icon	=	runflatTire,
+        MaxCapacity = 35,
+        ChanceToSpawnDamaged = 20,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+	WorldStaticModel = RunFlatWI,
+	Tooltip = Tooltip_item_runflats,
+    }
+
 	/************************ Tires ************************/  
 
 	item V101Tire2
@@ -18,6 +37,7 @@ module Base
         ConditionLowerOffroad = 0.0,
         MechanicsItem = TRUE,
 	WorldStaticModel = M998WheelWI,
+	Tooltip = Tooltip_item_M998runflats,
     }
 
 	/************************ Trunks ************************/
@@ -49,30 +69,48 @@ module Base
         MechanicsItem = TRUE,
     }
 
+	item M998Roofrack1_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	35.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Roofrack,
+        Icon	=	roofrackM998,
+        MaxCapacity = 100,
+        ConditionAffectsCapacity = false,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+	WorldStaticModel = M998RoofrackWI,
+	Tooltip = Tooltip_item_M998Roofrack1,
+    }
+
      /************************ Trunk Barriers ************************/
 
 	item M998TrunkBarrier1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	10.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Metal Trunk Barrier,
-          Icon	=	metalbarrierM998,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998MetalBarrierWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Metal Trunk Barrier,
+        Icon	=	metalbarrierM998,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998MetalBarrierWI,
+	Tooltip = Tooltip_item_M998TrunkBarrier1,
       }
 
 	item M998TrunkBarrier2_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	3.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Net Trunk Barrier,
-          Icon	=	netbarrierM998,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998NetBarrierWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Net Trunk Barrier,
+        Icon	=	netbarrierM998,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998NetBarrierWI,
+	Tooltip = Tooltip_item_M998TrunkBarrier2,
       }
 
 	/************************ Spare tire ************************/
@@ -90,6 +128,7 @@ module Base
         ChanceToSpawnDamaged = 20,
         MechanicsItem = TRUE,
 	WorldStaticModel = M998SpareMountWI,
+	Tooltip = Tooltip_item_M998SpareMount,
     }
 
     item M998SpareTireMount_Item
@@ -105,11 +144,12 @@ module Base
         ChanceToSpawnDamaged = 20,
         MechanicsItem = TRUE,
 	WorldStaticModel = M998SpareTireWI,
+	Tooltip = Tooltip_item_M998SpareTireMount,
     }
 
 
 
-    /************************ Doors ************************/
+	/************************* Doors ************************/
 
     item M998CarFrontDoor2
     {
@@ -135,6 +175,64 @@ module Base
         ConditionMax = 100,
         MechanicsItem = TRUE,
         WorldStaticModel = M998RearDoorWI,
+    }
+
+	/************************ Armor ************************/
+
+	item M998CarFrontDoorArmor1_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Front Armored Door,
+        Icon	=	fdoor_aM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998FrontDoorArmorWI,
+	Tooltip = Tooltip_item_M998FrontDoorArmor1,
+    }
+
+	item M998CarRearDoorArmor1_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Rear Armored Door,
+        Icon	=	rdoor_aM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998RearDoorArmorWI,
+	Tooltip = Tooltip_item_M998RearDoorArmor1,
+    }
+
+	item M998WindshieldArmor1_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Makeshift Windshield Armor,
+        Icon	=	windshield_aM998,
+        ChanceToSpawnDamaged = 30,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998WindArmorOneWI,
+	Tooltip = Tooltip_item_M998WindshieldArmor1,
+    }
+
+	item M998WindshieldArmor2_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Windshield Armor,
+        Icon	=	windshield_aaM998,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998WindArmorTwoWI,
+	Tooltip = Tooltip_item_M998WindshieldArmor2,
     }
 
     /************************ Hood ************************/
@@ -165,20 +263,22 @@ module Base
         ConditionMax = 100,
         MechanicsItem = TRUE,
         WorldStaticModel = M998TrunkDoorWI,
+	Tooltip = Tooltip_item_M998TrunkDoor,
     }
 
      /************************ Back Covers ************************/
 
 	item M998BackCover1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	30.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Sloped Back Cover,
-          Icon	=	slopedcover,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998SlopedBackWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Sloped Back Cover,
+        Icon	=	slopedcover,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998SlopedBackWI,
+	Tooltip = Tooltip_item_M998BackCover1,
       }
 
     /************************ Seats ************************/
@@ -201,58 +301,62 @@ module Base
 
       item M998Muffler1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	4.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Small Muffler,
-          Icon	=	smallmuff,
-          EngineLoudness = 80,
-          ConditionMax = 100,
-          ConditionLowerStandard = 0.02,
-          ConditionLowerOffroad = 0.04,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998SmallMufflerWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	4.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Small Muffler,
+        Icon	=	smallmuff,
+        EngineLoudness = 80,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.02,
+        ConditionLowerOffroad = 0.04,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998SmallMufflerWI,
+	Tooltip = Tooltip_item_M998Muffler1,
       }
 
       item M998Muffler2_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	10.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Big Muffler,
-          Icon	=	bigmuff,
-          EngineLoudness = 120,
-          ConditionMax = 100,
-          ConditionLowerStandard = 0.01,
-          ConditionLowerOffroad = 0.02,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998BigMufflerWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Big Muffler,
+        Icon	=	bigmuff,
+        EngineLoudness = 120,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.01,
+        ConditionLowerOffroad = 0.02,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998BigMufflerWI,
+	Tooltip = Tooltip_item_M998Muffler2,
       }
 
      /************************ Bullbar ************************/
 
 	item M998Bullbar1_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	10.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Small Bullbar,
-          Icon	=	smallbull,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998SmallBullbarWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Small Bullbar,
+        Icon	=	smallbull,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998SmallBullbarWI,
+	Tooltip = Tooltip_item_M998Bullbar1,
       }
 
 	item M998Bullbar2_Item
       {
-	  DisplayCategory = VehicleMaintenance,
-          Weight	=	15.0,
-          Type	=	Normal,
-          DisplayName	=	M998 Big Bullbar,
-          Icon	=	bigbull,
-          ConditionMax = 100,
-          MechanicsItem = TRUE,
-          WorldStaticModel = M998BigBullbarWI,
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Big Bullbar,
+        Icon	=	bigbull,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = M998BigBullbarWI,
+	Tooltip = Tooltip_item_M998Bullbar2,
       }
 
      /************************ Interiors ************************/
@@ -281,6 +385,7 @@ module Base
         ConditionMax = 100,
         MechanicsItem = TRUE,
         WorldStaticModel = M998WindshieldWI,
+	Tooltip = Tooltip_item_M998Windshield2,
     }
 
 	item M998SideWindow2
@@ -294,6 +399,23 @@ module Base
         ConditionMax = 100,
         MechanicsItem = TRUE,
         WorldStaticModel = M998WindowWI,
+	Tooltip = Tooltip_item_M998SideWindow2,
+    }
+
+	/************************ Mudflaps ************************/
+
+    item M998Mudflaps1_Item
+    {
+	DisplayCategory = VehicleMaintenance,
+        Weight	=	10.0,
+        Type	=	Normal,
+        DisplayName	=	M998 Mudflaps,
+        Icon	=	mudflapsM998,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 20,
+        MechanicsItem = TRUE,
+	WorldStaticModel = M998MudflapsWI,
+	Tooltip = Tooltip_item_M998Mudflaps1,
     }
 
 }

@@ -2,12 +2,7 @@
 --**                      bikinihorst                      **
 --***********************************************************
 
-
 KI5 = KI5 or {};
-
-
--- create vehicle from config
-
 KI5.loadedParts = KI5.loadedParts or {};
 
 function KI5:createVehicleConfig(rootNS)
@@ -89,9 +84,6 @@ function KI5:createVehicleConfig(rootNS)
 	end
 end
 
-
--- process default parts
-
 function KI5:checkDefaultParts(vehicle, part, default)
 	local partId = part:getId();
 	local modData = KI5:getModData(vehicle);
@@ -127,35 +119,25 @@ function KI5:checkDefaultParts(vehicle, part, default)
 				["defaultPartSet_" .. partId] = "true"
 			});
 
-			if KI5:partIsMissing(part)
-			then
-				print("part " .. partId .. " still missing");
-			end
+			--if KI5:partIsMissing(part)
+			--then
+			--print("part " .. partId .. " still missing");
+			--end
 		end
 	end
 end
-
-
--- check if part exists
 
 function KI5:partIsMissing(part)
 	return part:getItemType() and not part:getItemType():isEmpty() and not part:getInventoryItem();
 end
 
-
--- silently install item in part slot
-
 function KI5:silentPartInstall(part, itemId)
-	print("silently installing " .. itemId .. " for " .. part:getId());
-
+	--print("silently installing " .. itemId .. " for " .. part:getId());
 	KI5:sendClientCommand("ki5_lib", "silentPartInstall", {
 		part = part:getId(),
 		item = itemId
 	}, part:getVehicle());
 end
-
-
--- set container amounts (tires, gas tank, ...)
 
 function KI5:setContainerAmount(part, amount)
 	KI5:sendClientCommand("vehicle", "setContainerContentAmount", {
@@ -164,9 +146,6 @@ function KI5:setContainerAmount(part, amount)
 		amount = amount
 	});
 end
-
-
--- replace old tire type with new one
 
 function KI5:checkLegacyTires(vehicle)
 	for i = 0, vehicle:getPartCount() -1
@@ -179,7 +158,7 @@ function KI5:checkLegacyTires(vehicle)
 
 			if inventoryItem and inventoryItem:getFullType() == "Base.V100Tire2"
 			then
-				print("replacing " .. inventoryItem:getFullType() .. " on vehicle " .. tostring(vehicle:getSqlId()));
+				--print("replacing " .. inventoryItem:getFullType() .. " on vehicle " .. tostring(vehicle:getSqlId()));
 
 				KI5:silentPartInstall(part, "Base.V101Tire2");
 				KI5:setContainerAmount(part, 35);
@@ -187,9 +166,6 @@ function KI5:checkLegacyTires(vehicle)
 		end
 	end
 end
-
-
--- moddata fuckery because vehicle moddata is currently wonky
 
 KI5.muleParts = KI5.muleParts or {
 	"M101A3Trunk",
@@ -213,9 +189,9 @@ function KI5:getMulePart(vehicle)
 			end
 		end
 
-		print("mule part not found");
-	else
-		print("vehicle not found");
+		--print("mule part not found");
+	--else
+	--print("vehicle not found");
 	end
 
 	return nil;
@@ -227,9 +203,8 @@ function KI5:getModData(vehicle)
 	if part
 	then
 		return part:getModData();
-	else
-		print("data mule part NOT found");
-
+		else
+		--print("data mule part NOT found");
 		return {};
 	end
 end
@@ -237,9 +212,6 @@ end
 function KI5:saveModData(vehicle, data)
 	KI5:sendClientCommand("ki5_lib", "setVehicleData", data, vehicle);
 end
-
-
--- shortcut for client command
 
 function KI5:sendClientCommand(moduleName, methodName, args, vehicle)
 	if vehicle

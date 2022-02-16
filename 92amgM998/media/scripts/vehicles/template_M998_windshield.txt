@@ -1,35 +1,35 @@
 module Base
 {
 
-        model 92amgeneralM998windshield
+    model 92amgeneralM998windshield
     {
         mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_windshield,
         shader = vehicle,
-        static = FALSE,
         scale = 0.1,
     }
 
 	template vehicle M998Windshield
 	{
-		part Windshield
+
+        part Windshield
         {
-
- 	    model windshieldFront
-		{
-			file = 92amgeneralM998windshield,
-			offset = 0 0 0,
-			rotate = 0 0 0,
-			scale = 1.0,
-		}	
-
-            area = Engine,
-            category = bodywork,
-            itemType = Base.M998Windshield,
-            mechanicRequireKey = true,
+            model windshieldFront
+            {
+            file = 92amgeneralM998windshield,
+            }
             window
             {
-                openable = false,
+            openable = false,
             }
+            table uninstall
+                {
+                    requireUninstalled = M998WindshieldArmor,
+                }
+                
+            itemType = Base.M998Windshield,
+            area = Engine,
+            category = bodywork,
+            mechanicRequireKey = false,
             table install
             {
                 items
@@ -39,10 +39,10 @@ module Base
                         type = Base.Screwdriver,
                         count = 1,
                         keep = true,
-						equip = primary,
+			equip = primary,
                     }
                 }
-                time = 500,
+                time = 700,
                 skills = Mechanics:5,
                 recipes = Intermediate Mechanics,
                 test = Vehicles.InstallTest.Default,
@@ -60,7 +60,7 @@ module Base
 						equip = primary,
                     }
                 }
-                time = 500,
+                time = 700,
                   skills = Mechanics:5,
                   recipes = Intermediate Mechanics,
                 test = Vehicles.UninstallTest.Default,
@@ -71,5 +71,5 @@ module Base
             }
         }
 
-	}
+        }
 }

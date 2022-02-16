@@ -1,57 +1,59 @@
 module Base
 {
 
-	model 92amgeneralM998doorfl
+	model 92amgeneralM998doorfla
 	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_fl,
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_fl_a,
 		shader = vehicle_noreflect,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fl_bone 1.0,
 	}
 
-	model 92amgeneralM998doorfr
+	model 92amgeneralM998doorfra
 	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_fr,
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_fr_a,
 		shader = vehicle_noreflect,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fr_bone 1.0,
 	}
 
-	model 92amgeneralM998doorrl
+	model 92amgeneralM998doorrla
 	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_rl,
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_rl_a,
 		shader = vehicle_noreflect,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_rl_bone 1.0,
 	}
 
-	model 92amgeneralM998doorrr
+	model 92amgeneralM998doorrra
 	{
-		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_rr,
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|door_rr_a,
 		shader = vehicle_noreflect,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_rr_bone 1.0,
 	}
 
-	template vehicle M998Doors
+	template vehicle M998DoorArmors
 	{
 
-		part DoorFrontLeft
+		part M998DoorFrontLeftArmor
 		{
-			model DoorFrontLeft
+			model DoorFrontLeftArmor1
 				{
-				file = 92amgeneralM998doorfl,
+				file = 92amgeneralM998doorfla,
 				}
-				itemType = Base.M998CarFrontDoor,
-				table uninstall
-				{
-				requireUninstalled = WindowFrontLeft,
-				}
+				parent = DoorFrontLeft,
+				itemType = Base.M998CarFrontDoorArmor1_Item,
+				specificItem = false,
 				area = SeatFrontLeft,
+				table install
+					{
+						requireInstalled = WindowFrontLeft,
+					}
 				anim ActorOpen
 				{
 					angle = 0.0 270.0 0.0,
@@ -88,24 +90,25 @@ module Base
 				}
 				lua
 				{
-					create = Vehicles.Create.Door,
-					init = Vehicles.Init.Door,
-					use = Vehicles.Use.Door,
+					create = M998.Create.DoorFrontLeftArmor,
+					init = M998.Init.DoorFrontLeftArmor,
 				}
 		}
 
-		part DoorFrontRight
+		part M998DoorFrontRightArmor
 		{
-			model DoorFrontRight
+			model DoorFrontRightArmor1
 				{
-				file = 92amgeneralM998doorfr,
+				file = 92amgeneralM998doorfra,
 				}
-				itemType = Base.M998CarFrontDoor,
-				table uninstall
-				{
-				requireUninstalled = WindowFrontRight,
-				}
+				parent = DoorFrontRight,
+				itemType = Base.M998CarFrontDoorArmor1_Item,
+				specificItem = false,
 				area = SeatFrontRight,
+				table install
+					{
+						requireInstalled = WindowFrontRight,
+					}
 				anim ActorOpen
 				{
 					angle = 0.0 90.0 0.0,
@@ -142,24 +145,25 @@ module Base
 				}
 				lua
 				{
-					create = Vehicles.Create.Door,
-					init = Vehicles.Init.Door,
-					use = Vehicles.Use.Door,
+					create = M998.Create.DoorFrontRightArmor,
+					init = M998.Init.DoorFrontRightArmor,
 				}
 		}
 
-		part DoorRearLeft
+		part M998DoorRearLeftArmor
 		{
-			model DoorRearLeft
+			model DoorRearLeftArmor1
 				{
-				file = 92amgeneralM998doorrl,
+				file = 92amgeneralM998doorrla,
 				}
-				itemType = Base.M998CarRearDoor,
-				table uninstall
-				{
-				requireUninstalled = WindowRearLeft,
-				}
+				parent = DoorRearLeft,
+				itemType = Base.M998CarRearDoorArmor1_Item,
+				specificItem = false,
 				area = SeatRearLeft,
+				table install
+					{
+						requireInstalled = WindowRearLeft,
+					}
 				anim ActorOpen
 				{
 					angle = 0.0 270.0 0.0,
@@ -196,24 +200,25 @@ module Base
 				}
 				lua
 				{
-					create = Vehicles.Create.Door,
-					init = Vehicles.Init.Door,
-					use = Vehicles.Use.Door,
+					create = M998.Create.DoorRearLeftArmor,
+					init = M998.Init.DoorRearLeftArmor,
 				}
 		}
 
-		part DoorRearRight
+		part M998DoorRearRightArmor
 		{
-			model DoorRearRight
+			model DoorRearRightArmor1
 				{
-				file = 92amgeneralM998doorrr,
+				file = 92amgeneralM998doorrra,
 				}
-				itemType = Base.M998CarRearDoor,
-				table uninstall
-				{
-				requireUninstalled = WindowRearRight,
-				}
+				parent = DoorRearRight,
+				itemType = Base.M998CarRearDoorArmor1_Item,
+				specificItem = false,
 				area = SeatRearRight,
+				table install
+					{
+						requireInstalled = WindowRearRight,
+					}
 				anim ActorOpen
 				{
 					angle = 0.0 90.0 0.0,
@@ -250,13 +255,12 @@ module Base
 				}
 				lua
 				{
-					create = Vehicles.Create.Door,
-					init = Vehicles.Init.Door,
-					use = Vehicles.Use.Door,
+					create = M998.Create.DoorRearRightArmor,
+					init = M998.Init.DoorRearRightArmor,
 				}
 		}
 
-		part Door*
+		part M998Door*
 		{
 			category = door,
 			door
@@ -305,7 +309,7 @@ module Base
 							equip = primary,
 						}
 					}
-					time = 700,
+					time = 1200,
 					skills = Mechanics:4,
 					recipes = Intermediate Mechanics,
 					test = Vehicles.InstallTest.Default,
@@ -323,7 +327,7 @@ module Base
 							equip = primary,
 						}
 					}
-					time = 700,
+					time = 1200,
 					skills = Mechanics:4,
 					recipes = Intermediate Mechanics,
 					test = Vehicles.UninstallTest.Default,

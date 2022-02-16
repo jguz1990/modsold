@@ -59,6 +59,10 @@ module Base
 			{
 				requireInstalled = DoorFrontLeft,
 			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorFrontLeftArmor,
+				}
 		}
 
 		part WindowFrontRight
@@ -81,6 +85,10 @@ module Base
 			{
 				requireInstalled = DoorFrontRight,
 			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorFrontRightArmor,
+				}
 		}
 
 		part WindowRearLeft
@@ -104,6 +112,10 @@ module Base
 			{
 				requireInstalled = DoorRearLeft,
 			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorRearLeftArmor,
+				}
 		}
 
 		part WindowRearRight
@@ -126,6 +138,10 @@ module Base
 			{
 				requireInstalled = DoorRearRight,
 			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorRearRightArmor,
+				}
 		}
 
 		part Window*
