@@ -390,6 +390,12 @@ module Base
 		texture = weapons/parts/Bayonet_M1917,
 		scale = 0.01,
 	}
+	model W_Bayonet_Type30
+	{
+		mesh = WorldItems/W_Bayonet_Type30,
+		texture = weapons/parts/Bayonet_Type30,
+		scale = 0.01,
+	}
 	model W_Bayonet_AK
 	{
 		mesh = WorldItems/W_Bayonet_AK,

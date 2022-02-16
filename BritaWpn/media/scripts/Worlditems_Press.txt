@@ -1,0 +1,16 @@
+module Base
+{
+
+	model W_Lee_LoadMaster
+	{
+		mesh = WorldItems/W_Lee_LoadMaster,
+		texture = WorldItems/W_Lee_LoadMaster,
+		scale = 0.01,
+	}
+	model W_Lyman_TMag
+	{
+		mesh = WorldItems/W_Lyman_TMag,
+		texture = WorldItems/W_Lyman_TMag,
+		scale = 0.01,
+	}
+}

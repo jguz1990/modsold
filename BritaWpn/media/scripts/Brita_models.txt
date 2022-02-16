@@ -93,6 +93,11 @@ module Base
 		mesh = Weapons/parts/Bayonet_M1917,
 		texture = Weapons/parts/Bayonet_M1917,
 	}
+	model Bayonet_Type30
+	{
+		mesh = Weapons/parts/Bayonet_Type30,
+		texture = Weapons/parts/Bayonet_Type30,
+	}
 	model Bayonet_M4
 	{
 		mesh = Weapons/parts/Bayonet_M4,
@@ -546,12 +551,12 @@ module Base
 	model Standard_Mag_9x39
 	{
 		mesh = Weapons/parts/Standard_Mag_9x39,
-		texture = Weapons/parts/Mag_9x39,
+		texture = Weapons/firearm/VSS,
 	}
 	model Extended_Mag_9x39
 	{
 		mesh = Weapons/parts/Extended_Mag_9x39,
-		texture = Weapons/parts/Mag_9x39ext,
+		texture = Weapons/firearm/ASVAL,
 	}
 	model Standard_Mag_M249
 	{
@@ -677,6 +682,116 @@ module Base
 	{
 		mesh = Weapons/parts/Standard_Mag_PKM,
 		texture = Weapons/firearm/PKM,
+	}
+	model Standard_Mag_Ots14
+	{
+		mesh = Weapons/parts/Standard_Mag_Ots14,
+		texture = Weapons/firearm/Ots14,
+	}
+	model Standard_Mag_M200
+	{
+		mesh = Weapons/parts/Standard_Mag_M200,
+		texture = Weapons/firearm/CheyTac50,
+	}
+	model Standard_Mag_G11
+	{
+		mesh = Weapons/parts/Standard_Mag_G11,
+		texture = Weapons/firearm/G11,
+	}
+	model Standard_Mag_OSV96
+	{
+		mesh = Weapons/parts/Standard_Mag_OSV96,
+		texture = Weapons/firearm/OSV_96,
+	}
+	model Standard_Mag_Ots03
+	{
+		mesh = Weapons/parts/Standard_Mag_Ots03,
+		texture = Weapons/firearm/OTS_03_SVU,
+	}
+	model Standard_Mag_Gepard
+	{
+		mesh = Weapons/parts/Standard_Mag_Gepard,
+		texture = Weapons/firearm/Gepard_M6,
+	}
+	model Standard_Mag_G36
+	{
+		mesh = Weapons/parts/Standard_Mag_G36,
+		texture = Weapons/firearm/G36,
+	}
+	model Standard_Mag_M468
+	{
+		mesh = Weapons/parts/Standard_Mag_M468,
+		texture = Weapons/firearm/M468,
+	}
+	model Standard_Mag_PSG1
+	{
+		mesh = Weapons/parts/Standard_Mag_PSG1,
+		texture = Weapons/firearm/PSG1,
+	}
+	model Standard_Mag_VSSK
+	{
+		mesh = Weapons/parts/Standard_Mag_VSSK,
+		texture = Weapons/firearm/VSSK,
+	}
+	model Standard_Mag_Mini14
+	{
+		mesh = Weapons/parts/Standard_Mag_Mini14,
+		texture = Weapons/firearm/MINI14,
+	}
+	model Standard_Mag_Mini14_Short
+	{
+		mesh = Weapons/parts/Standard_Mag_Mini14_Short,
+		texture = Weapons/firearm/MINI14,
+	}
+	model Standard_Mag_MOE
+	{
+		mesh = Weapons/parts/Standard_Mag_MOE,
+		texture = Weapons/firearm/Bush_AR15_MOE,
+	}
+	model Standard_Mag_Taran_AR15
+	{
+		mesh = Weapons/parts/Standard_Mag_Taran_AR15,
+		texture = Weapons/firearm/TR1_UltraLight,
+	}
+	model Standard_Mag_TTI_MPX
+	{
+		mesh = Weapons/parts/Standard_Mag_TTI_MPX,
+		texture = Weapons/firearm/JW3_TTI_MPX,
+	}
+	model Extended_Mag_TTI_MPX
+	{
+		mesh = Weapons/parts/Extended_Mag_TTI_MPX,
+		texture = Weapons/firearm/JW3_TTI_MPX,
+	}
+	model Standard_Mag_XM15
+	{
+		mesh = Weapons/parts/Standard_Mag_XM15,
+		texture = Weapons/firearm/Bush_XM15,
+	}
+	model Standard_Mag_XM15_2
+	{
+		mesh = Weapons/parts/Standard_Mag_XM15_2,
+		texture = Weapons/firearm/Bush_XM15_Custom,
+	}
+	model Standard_Mag_Type97
+	{
+		mesh = Weapons/parts/Standard_Mag_Type97,
+		texture = Weapons/firearm/Carbon15_97,
+	}
+	model Standard_Mag_AK5C
+	{
+		mesh = Weapons/parts/Standard_Mag_AK5C,
+		texture = Weapons/firearm/AK5C,
+	}
+	model Standard_Mag_MCX_V
+	{
+		mesh = Weapons/parts/Standard_Mag_MCX_V,
+		texture = Weapons/firearm/MCX_Virtus,
+	}
+	model Standard_Mag_SV_98
+	{
+		mesh = Weapons/parts/Standard_Mag_SV_98,
+		texture = Weapons/firearm/SV_98,
 	}
 
 
