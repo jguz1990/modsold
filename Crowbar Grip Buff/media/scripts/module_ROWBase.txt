@@ -1,0 +1,26 @@
+module Base
+{
+	fixing Fix CrowbarGripBuff
+	{
+		Require 		: CrowbarGripBuff,
+		Fixer 		: DuctTape=3,
+		Fixer 		: BlowTorch=2,
+		Fixer 		: Scotchtape=5,
+	}
+	fixing Fix CrowbarGripBuffInaBonk
+	{
+		Require 		: CrowbarGripBuffInaBonk,
+		Fixer 		: DuctTape=3,
+		Fixer 		: BlowTorch=2,
+		Fixer 		: Scotchtape=5,
+	}  
+	model CrowbarGripBuff
+	{
+	        mesh = weapons/1handed/CrowbarGripBuff,
+	}
+	
+	model CrowbarGripBuffInaBonk
+	{
+		mesh = weapons/1handed/CrowbarGripBuffInaBonk,
+	}	
+}

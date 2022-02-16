@@ -1,0 +1,4 @@
+Items_CH {
+	DisplayName_CrowbarGripBuffInaBonk = "ÅK¼À(InaµP´¤§â¤É¯Å)",
+	DisplayName_CrowbarGripBuff = "ÅK¼À(´¤§â¤É¯Å)",
+}

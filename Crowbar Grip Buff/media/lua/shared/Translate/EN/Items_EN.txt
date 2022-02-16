@@ -1,0 +1,4 @@
+Items_EN {
+	DisplayName_CrowbarGripBuffInaBonk = "Crowbar Grip Buff Ina Bonk",
+	DisplayName_CrowbarGripBuff = "Crowbar Grip Buff",
+}

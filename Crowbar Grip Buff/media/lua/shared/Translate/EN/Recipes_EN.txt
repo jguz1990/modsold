@@ -1,0 +1,4 @@
+Recipe_EN = {
+	Recipe_CrowbarGripBuffInaBonk = "Crowbar Grip Buff Ina Bonk",
+	Recipe_CrowbarGripBuff = "Crowbar Grip Buff",
+}
